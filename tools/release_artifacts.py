@@ -116,6 +116,7 @@ def main():
     p.add_argument('--install', action='store_true')
     p.add_argument('--backend', choices=['cpu', 'auto', 'gpu'], action='append')
     args = p.parse_args()
+    args.out = args.out.resolve()
     args.out.mkdir(parents=True, exist_ok=False)
     result = verify(args.wheel, args.sdist)
     if args.install:

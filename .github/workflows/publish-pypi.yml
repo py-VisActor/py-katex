@@ -41,6 +41,27 @@ jobs:
         run: python tools/release_github.py download --tag "$RELEASE_TAG" --manifest-sha256 "$MANIFEST_SHA" --dist dist --out test-runs/release-download
       - name: Verify payload and clean external wheel and sdist installations
         run: python tools/release_artifacts.py --wheel dist/py_katex-0.1.0-py3-none-any.whl --sdist dist/py_katex-0.1.0.tar.gz --install --backend cpu --out test-runs/release-validation
+      - name: Collect actual render files from the isolated working directories
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import json, shutil
+          for mode in ('wheel', 'sdist'):
+              destination = Path('test-runs/release-validation') / mode
+              receipt = json.loads((destination / 'installation.json').read_text())
+              for command in receipt['commands']:
+                  flag = '--out' if command['name'].startswith('smoke-') else '-o' if command['name'] in ('module-cli', 'installed-console-cli') else None
+                  if not flag:
+                      continue
+                  source = Path(command['argv'][command['argv'].index(flag) + 1])
+                  if not source.is_absolute():
+                      source = Path(command['cwd']) / source
+                  target = (destination / source.name).resolve()
+                  assert source.exists(), source
+                  if source.resolve() != target:
+                      if source.is_dir(): shutil.copytree(source, target)
+                      else: shutil.copy2(source, target)
+          PY
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         if: always()
         with:
