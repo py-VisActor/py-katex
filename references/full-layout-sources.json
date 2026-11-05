@@ -1,0 +1,1047 @@
+{
+  "schema": "py-katex-full-layout-sources/v1",
+  "phase": "P1",
+  "status": "code_complete_unverified",
+  "upstream": {
+    "version": "0.18.11",
+    "commit": "d5bed9f38a8d747b9c4a12e18897a514707e1c26",
+    "sourceRoot": ".local/katex-0.18.11/package/src",
+    "runtimeSourceAccess": false
+  },
+  "denominator": {
+    "registry": "references/full-runtime-registry.json",
+    "functions": 312,
+    "environments": 33,
+    "totalRegisteredControls": 345,
+    "macros": 339,
+    "note": "Registry includes parser-only/internal controls; 345 controls are not 345 independent paint algorithms. All 45 registry function types are projected or explicitly delegated below. All 33 environments flow through parser normalization and the array/CD layout provider."
+  },
+  "implementation": [
+    {
+      "path": "src/py_katex/layout.py",
+      "sha256": "3210d4e71d0325f4992180a1eb0195c664a927236ae86d4f8a433da997016cc6"
+    },
+    {
+      "path": "src/py_katex/_layout_paths.py",
+      "sha256": "5d390360023d8188d27c969d4f2925f1d7e8b7367f53a0df4e772b4925c5ce98"
+    },
+    {
+      "path": "src/py_katex/layout_display.py",
+      "sha256": "c849daf37b18a826b3af9aa5820958cc5568ead6a8e56649b4fcf344a583b3cd"
+    },
+    {
+      "path": "src/py_katex/layout_metrics.py",
+      "sha256": "d47276a9a14978d2809f597f65950263f60a574768a72e27f3d1d3e4bd11c11f"
+    }
+  ],
+  "frozenContracts": [
+    {
+      "path": "docs/AST.md",
+      "sha256": "af27ca03a34db1635ce062eb45b2a1385cd94f9df70df53bbb7839dd96d00d64"
+    },
+    {
+      "path": "src/py_katex/model.py",
+      "sha256": "137689921fe50dd0b53bfd35bc93ab51321e02970836a4b90f2a78e2b99cc652"
+    }
+  ],
+  "registeredTypeProjection": [
+    {
+      "upstreamType": "accent",
+      "registeredControlCount": 35,
+      "nativeProjection": "accent -> _accent; character accents delegate script attachment to nucleus",
+      "status": "source_implemented_behavior_unverified"
+    },
+    {
+      "upstreamType": "accentUnder",
+      "registeredControlCount": 6,
+      "nativeProjection": "accent -> _accent with noncramped body and utilde .12em kern",
+      "status": "source_implemented_behavior_unverified"
+    },
+    {
+      "upstreamType": "cdlabel",
+      "registeredControlCount": 2,
+      "nativeProjection": "cdlabel -> _cdlabel absolute source annotation with zero advance/height/depth",
+      "status": "source_implemented_behavior_unverified"
+    },
+    {
+      "upstreamType": "cdlabelparent",
+      "registeredControlCount": 1,
+      "nativeProjection": "group(cd_parent=True) -> source-relative wrapper and labels",
+      "status": "source_implemented_behavior_unverified"
+    },
+    {
+      "upstreamType": "color",
+      "registeredControlCount": 2,
+      "nativeProjection": "color -> _fragments context; preserves cross-fragment atom spacing",
+      "status": "source_implemented_behavior_unverified"
+    },
+    {
+      "upstreamType": "cr",
+      "registeredControlCount": 1,
+      "nativeProjection": "linebreak -> _row/_flow_root; source optional vertical gap",
+      "status": "source_implemented_behavior_unverified"
+    },
+    {
+      "upstreamType": "delimsizing",
+      "registeredControlCount": 16,
+      "nativeProjection": "sized_delimiter -> literal size font or stack-always construction",
+      "status": "source_implemented_behavior_unverified"
+    },
+    {
+      "upstreamType": "enclose",
+      "registeredControlCount": 9,
+      "nativeProjection": "enclose -> _enclose box/cancel/sout/phase/angl",
+      "status": "source_implemented_behavior_unverified"
+    },
+    {
+      "upstreamType": "environment",
+      "registeredControlCount": 2,
+      "nativeProjection": "parser boundaries -> array/CD pure layout; no browser environment host",
+      "status": "source_implemented_behavior_unverified"
+    },
+    {
+      "upstreamType": "font",
+      "registeredControlCount": 20,
+      "nativeProjection": "font -> _FONTS, _char and source per-axis inner-class CSS precedence",
+      "status": "source_implemented_behavior_unverified"
+    },
+    {
+      "upstreamType": "genfrac",
+      "registeredControlCount": 12,
+      "nativeProjection": "frac -> _fraction source numerator/denominator styles, axis, bars, continued struts",
+      "status": "source_implemented_behavior_unverified"
+    },
+    {
+      "upstreamType": "hbox",
+      "registeredControlCount": 1,
+      "nativeProjection": "group(reset_font,no_break) -> reset TeX font, prevent root soft break",
+      "status": "source_implemented_behavior_unverified"
+    },
+    {
+      "upstreamType": "horizBrace",
+      "registeredControlCount": 4,
+      "nativeProjection": "overunder -> _accent and source supsub delegation",
+      "status": "source_implemented_behavior_unverified"
+    },
+    {
+      "upstreamType": "href",
+      "registeredControlCount": 2,
+      "nativeProjection": "parser static label/typewriter URL projection; untrusted command -> unsupported visible text/Diagnostic",
+      "status": "source_implemented_behavior_unverified"
+    },
+    {
+      "upstreamType": "html",
+      "registeredControlCount": 4,
+      "nativeProjection": "html -> C resolve_html_context/apply_html; B resolves inherited CSS axes before building",
+      "status": "source_implemented_behavior_unverified"
+    },
+    {
+      "upstreamType": "htmlmathml",
+      "registeredControlCount": 1,
+      "nativeProjection": "parser selects visual branch; no native HTML/MathML serialization backend",
+      "status": "source_implemented_behavior_unverified"
+    },
+    {
+      "upstreamType": "includegraphics",
+      "registeredControlCount": 1,
+      "nativeProjection": "image -> C layout_image pure resource/dimension provider",
+      "status": "source_implemented_behavior_unverified"
+    },
+    {
+      "upstreamType": "infix",
+      "registeredControlCount": 6,
+      "nativeProjection": "parser normalization -> frac",
+      "status": "source_implemented_behavior_unverified"
+    },
+    {
+      "upstreamType": "internal",
+      "registeredControlCount": 12,
+      "nativeProjection": "parser/macros namespace/state-only controls; no fabricated glyph or layout node",
+      "status": "source_implemented_behavior_unverified"
+    },
+    {
+      "upstreamType": "kern",
+      "registeredControlCount": 4,
+      "nativeProjection": "kern -> source dimension conversion/max_size cap",
+      "status": "source_implemented_behavior_unverified"
+    },
+    {
+      "upstreamType": "lap",
+      "registeredControlCount": 3,
+      "nativeProjection": "lap -> zero advance with real signed paint offsets",
+      "status": "source_implemented_behavior_unverified"
+    },
+    {
+      "upstreamType": "leftright",
+      "registeredControlCount": 1,
+      "nativeProjection": "delimiters -> _delimited with source physical target, null delimiters, right_color",
+      "status": "source_implemented_behavior_unverified"
+    },
+    {
+      "upstreamType": "leftright-right",
+      "registeredControlCount": 1,
+      "nativeProjection": "parser left/right closure -> delimiters.right/right_color",
+      "status": "source_implemented_behavior_unverified"
+    },
+    {
+      "upstreamType": "mathchoice",
+      "registeredControlCount": 1,
+      "nativeProjection": "mathchoice -> current source style branch",
+      "status": "source_implemented_behavior_unverified"
+    },
+    {
+      "upstreamType": "mclass",
+      "registeredControlCount": 13,
+      "nativeProjection": "atom -> explicit source math class around real content",
+      "status": "source_implemented_behavior_unverified"
+    },
+    {
+      "upstreamType": "middle",
+      "registeredControlCount": 1,
+      "nativeProjection": "parser segments -> _delimited uniform physical target and inter-atom glue",
+      "status": "source_implemented_behavior_unverified"
+    },
+    {
+      "upstreamType": "op",
+      "registeredControlCount": 79,
+      "nativeProjection": "operator -> source Size1/2 symbols/roman names, italic correction and limits",
+      "status": "source_implemented_behavior_unverified"
+    },
+    {
+      "upstreamType": "operatorname",
+      "registeredControlCount": 2,
+      "nativeProjection": "operator(roman=True) -> source roman conversion/minus/asterisk and limit flags",
+      "status": "source_implemented_behavior_unverified"
+    },
+    {
+      "upstreamType": "overline",
+      "registeredControlCount": 1,
+      "nativeProjection": "line -> source 3theta clearance + rule + theta external kern",
+      "status": "source_implemented_behavior_unverified"
+    },
+    {
+      "upstreamType": "phantom",
+      "registeredControlCount": 1,
+      "nativeProjection": "phantom -> requested logical dimensions, no paint, diagnostics retained",
+      "status": "source_implemented_behavior_unverified"
+    },
+    {
+      "upstreamType": "pmb",
+      "registeredControlCount": 1,
+      "nativeProjection": "pmb -> glyph-only shifted shadow CommandGroup with blur(0.04px)",
+      "status": "source_implemented_behavior_unverified"
+    },
+    {
+      "upstreamType": "raisebox",
+      "registeredControlCount": 1,
+      "nativeProjection": "raise -> source dimension baseline offset, actual ink exported by C",
+      "status": "source_implemented_behavior_unverified"
+    },
+    {
+      "upstreamType": "reflectbox",
+      "registeredControlCount": 2,
+      "nativeProjection": "reflect -> Glyph reflection or immutable CommandGroup for image/group content",
+      "status": "source_implemented_behavior_unverified"
+    },
+    {
+      "upstreamType": "rule",
+      "registeredControlCount": 1,
+      "nativeProjection": "rule -> signed logical ascent/depth plus actual Rule rectangle",
+      "status": "source_implemented_behavior_unverified"
+    },
+    {
+      "upstreamType": "sizing",
+      "registeredControlCount": 11,
+      "nativeProjection": "size -> source 11 sizes and sizeStyleMap",
+      "status": "source_implemented_behavior_unverified"
+    },
+    {
+      "upstreamType": "smash",
+      "registeredControlCount": 1,
+      "nativeProjection": "smash -> logical extent suppression without dropping paint/diagnostics",
+      "status": "source_implemented_behavior_unverified"
+    },
+    {
+      "upstreamType": "sqrt",
+      "registeredControlCount": 1,
+      "nativeProjection": "sqrt -> original SVG surd paths, extra vinculum, source explicit-empty index semantics",
+      "status": "source_implemented_behavior_unverified"
+    },
+    {
+      "upstreamType": "styling",
+      "registeredControlCount": 6,
+      "nativeProjection": "style -> all eight source styles, reset_font metadata",
+      "status": "source_implemented_behavior_unverified"
+    },
+    {
+      "upstreamType": "text",
+      "registeredControlCount": 14,
+      "nativeProjection": "text -> independent family/weight/shape, text runs shaped as one Glyph",
+      "status": "source_implemented_behavior_unverified"
+    },
+    {
+      "upstreamType": "textord",
+      "registeredControlCount": 1,
+      "nativeProjection": "symbol -> original source metric tuples or explicit Unicode fallback branch",
+      "status": "source_implemented_behavior_unverified"
+    },
+    {
+      "upstreamType": "underline",
+      "registeredControlCount": 1,
+      "nativeProjection": "line -> source underline gap/rule/outer kern",
+      "status": "source_implemented_behavior_unverified"
+    },
+    {
+      "upstreamType": "vcenter",
+      "registeredControlCount": 1,
+      "nativeProjection": "vcenter -> axis-centred baseline shift",
+      "status": "source_implemented_behavior_unverified"
+    },
+    {
+      "upstreamType": "verb",
+      "registeredControlCount": 1,
+      "nativeProjection": "text(verb=True) -> source textstyle/Typewriter, literal content and open-space glyph",
+      "status": "source_implemented_behavior_unverified"
+    },
+    {
+      "upstreamType": "vphantom",
+      "registeredControlCount": 1,
+      "nativeProjection": "phantom(vphantom) -> zero advance with retained ascent/depth",
+      "status": "source_implemented_behavior_unverified"
+    },
+    {
+      "upstreamType": "xArrow",
+      "registeredControlCount": 25,
+      "nativeProjection": "xarrow -> original clipped SVG windows, true head scale, optional empty below box",
+      "status": "source_implemented_behavior_unverified"
+    }
+  ],
+  "consumedAstKinds": [
+    "_fallback_run",
+    "_text_run",
+    "accent",
+    "array",
+    "atom",
+    "cdarrow",
+    "cdlabel",
+    "color",
+    "delimiters",
+    "enclose",
+    "error",
+    "font",
+    "frac",
+    "group",
+    "html",
+    "image",
+    "kern",
+    "lap",
+    "line",
+    "mathchoice",
+    "operator",
+    "overunder",
+    "phantom",
+    "pmb",
+    "raise",
+    "reflect",
+    "rule",
+    "scripts",
+    "size",
+    "sized_delimiter",
+    "smash",
+    "space",
+    "sqrt",
+    "style",
+    "symbol",
+    "tag",
+    "text",
+    "unsupported",
+    "vcenter",
+    "xarrow"
+  ],
+  "rowKind": "row is consumed structurally by array; direct unknown top-level node still errors",
+  "privateSyntheticKinds": {
+    "_fallback_run": "Consecutive same-face ordinary Unicode text, one actual native shaping measurement and one Glyph; never a mathematical expression converted to text",
+    "_text_run": "Source tryCombineChars equivalent for bundled ordinary text; actual native kerning advance and literal source TeX vertical metric maxima"
+  },
+  "completeSourceInventory": [
+    {
+      "path": ".local/katex-0.18.11/package/src/atoms.ts",
+      "sha256": "40194c26464323f3f051d2bd9a816b915fc48acc2782fdfe3c57f0cc51fe7c97"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/buildCommon.ts",
+      "sha256": "0cae9bd3b1dd21b536e8c9a96f11838c87bcbaceaca89927c03b46750a4fba73"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/buildHTML.ts",
+      "sha256": "9b22eee0850fe5fd5cc3bcd5623e11bebcd3d5fe71b66f36e601c7a0f1ece27f"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/buildMathML.ts",
+      "sha256": "62d44dbd244679205607cb26aa1244087ddb9e82ed6a982a5827c1243fb5f480"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/buildTree.ts",
+      "sha256": "9fe930d15e72c5b44aebd194eb0c30d574cb189fbda7c67828f8a83b2932084e"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/defineEnvironment.ts",
+      "sha256": "63bb6de51837e0de268153e40e67dc0c0899fa2a69cfedb967f90c12df47238b"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/defineFunction.ts",
+      "sha256": "2faf11239fcaacb757711e261a16c13b95b239a1ae302e22647cd0aac823422e"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/defineMacro.ts",
+      "sha256": "c0655fa3d75a8da2b7afc0c37663c38df50dd7a8f304622b3f58320e93727322"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/delimiter.ts",
+      "sha256": "19dfa0c2cd26d82b41cc7eaf3b3819945fca257d77bf762f9b9fec0571239e1a"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/domTree.ts",
+      "sha256": "8bfeab3612a83098133013e85fe2da0ea245b8c87aef9f990879ffc8e89df6eb"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/environments/array.ts",
+      "sha256": "623b540461126519249547e39e7da7a148ff86efd3552b02292ee57ed9a17f60"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/environments/cd.ts",
+      "sha256": "432889c62cb7bfb0fd971d9deea20f822ea78cd92aded20e6439559a89466533"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/environments.ts",
+      "sha256": "9dbbb6a46788b399f62f233f477ab469b400f64f04d6eee31557290eb53821ec"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/fontMetrics.ts",
+      "sha256": "1f2de1fc56f080ba284b5f90753fa5bfb63c7dcb00a226f8e4453c422506a5c2"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/fontMetricsData.d.ts",
+      "sha256": "82cf62b554b398bf101ee3f5105ec1f6914a8050775c46db3e73a82f7d07dc3a"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/functions/accent.ts",
+      "sha256": "dda6b456e07c6e06b74dcacc7a5dbb07131ae6fc0e7bece477518cb632ff43ff"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/functions/accentunder.ts",
+      "sha256": "71203e0e43e43cf85633afab70a788c386ff4e39f6da32f630c070174dfe7333"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/functions/arrow.ts",
+      "sha256": "5c56a8a89b19e9d7b8c29563fc3e266a5fcd880d7b49e113d3a627bc3a4af89d"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/functions/char.ts",
+      "sha256": "66fc6783c6bde698033b3205de180224f6495ee972453f0d867b8b792a2cf0da"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/functions/color.ts",
+      "sha256": "f984e013b3e9971e8007b8dade637f5c09c42b810df0dbb65bf9d25fc3d641d4"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/functions/cr.ts",
+      "sha256": "ec4934b1c96458df9752a0dd7d49b8190fe5cc85daf5a95369ebca1876dd6a49"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/functions/def.ts",
+      "sha256": "e1b9227b9e436968a0776f95596d0713d2f655465fabdade7f48940a7e6289e5"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/functions/delimsizing.ts",
+      "sha256": "323593436330d3ae57d370955c6ed4467e2eb24f8db3cc04dd810bfca8e45e9e"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/functions/enclose.ts",
+      "sha256": "29a55bbe218a9248a6559a8f094e0acf33cde8b6847b62eb50d343495d71fbb8"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/functions/environment.ts",
+      "sha256": "6a0fe0788b6c8464d52d5a65211125c0ef57fa0695ebbf6ccf7a029b783d6556"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/functions/font.ts",
+      "sha256": "44c87d85ec5c123d315a8e4fb63920ad1edbb763618e84a050a8a8ff88b8d00d"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/functions/genfrac.ts",
+      "sha256": "c461e8a5363a992e67adbe4c1312723c928be836fe47ee851ae9869e48998538"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/functions/hbox.ts",
+      "sha256": "e7aa1cd26792786f88a67631a30494a807a26365d0ec653811fbb0d6ab54fa7c"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/functions/horizBrace.ts",
+      "sha256": "9e20b9a3cb406bf39d83b44aecd153f1f5084f3a11c54affd979130f156326be"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/functions/href.ts",
+      "sha256": "fddf577b3e748f60c9cd3e1fd4d1f640e03877ec185c2964646021e42b08ef93"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/functions/html.ts",
+      "sha256": "4f5fe66b6ce181af459136bcaed9b1655fbe03493f96148d4ee5eddca6829ff5"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/functions/htmlmathml.ts",
+      "sha256": "b41f8267a62e2b668e828d6aeb072a2b6506f69339f8d0194083d98d306d9f1f"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/functions/includegraphics.ts",
+      "sha256": "dd1ea2395ae66d58dc272dd6083d4f6e0551d486b2c779f0a7b618088e35c4e8"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/functions/kern.ts",
+      "sha256": "15ebbb72bf615ef75147e7542961b638f420441335f43af06f562f02b8e29140"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/functions/lap.ts",
+      "sha256": "e8635a2d39b27c3aa195ef6e04ba41259a7af8830d1847e54cee8a7d5a7a6369"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/functions/math.ts",
+      "sha256": "0d69cb2a50bf577e119e366f170f3d2b226c4cbeb1e4fef7f51ff25fe3e53298"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/functions/mathchoice.ts",
+      "sha256": "cc148d0086a9f157ef74c000798f807969de4e123f83095eeac9ef3ff24dceec"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/functions/mclass.ts",
+      "sha256": "1a8c5f5a657bf99737792ddaa0c3a48d7cdacd977c4640554b953d8f6dcbdce1"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/functions/op.ts",
+      "sha256": "a04557b2f14cccd7927b8ea60cdf3f7df649abe52ed3b81748145538deb25a9d"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/functions/operatorname.ts",
+      "sha256": "8ba05f2e8dd6cd239d67c3305dab773ded3dab5cb2a596e99351f3f9c0e01c7b"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/functions/ordgroup.ts",
+      "sha256": "e25553e23f3223eae7e5eac16387241d44002b66e52250bdb71edb2c68713569"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/functions/overline.ts",
+      "sha256": "c1e98a5ecc6747fdeb8c90739d9435319593bd2914e0158dd3bab141c23753b1"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/functions/phantom.ts",
+      "sha256": "0a07fa74d2af167a9d8c86a338b35ab6224937197488e33321a0c5ed498214cf"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/functions/pmb.ts",
+      "sha256": "7e82813c396939c8ff439d44a24564ea2279fa1fcf6600d7d114d750f0fd8eb1"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/functions/raisebox.ts",
+      "sha256": "03188879d689525508c0488b352695e74749fa89e0fdc687fbf92a1d49a224bc"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/functions/reflectbox.ts",
+      "sha256": "468e3fc5ca118f267f0515e1f7de7a138acb7c53757b831b968c29b5d7e9fe78"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/functions/relax.ts",
+      "sha256": "92424c0c9911b1b5e3829933068d7bb5a6a12e1c5549271cdb6115f4e288fe22"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/functions/rule.ts",
+      "sha256": "6653da2a6d19e7088a94e183b58b84613efe52c346eab699f8b53c30310798b9"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/functions/sizing.ts",
+      "sha256": "6bfc375f192a772fa9429a79a59c93cb9fe17c0fb15322f9679384d54d5afbd8"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/functions/smash.ts",
+      "sha256": "d2b066e91dcd8fde540beeffbba5bd0a500852593897face2dac2098d1cafac8"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/functions/sqrt.ts",
+      "sha256": "99347b6bb9d43e5b5a0f3c8462b36b32a9c351ab6325bd90e157cb7b809815fa"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/functions/styling.ts",
+      "sha256": "f5a83e7f147b8d329eebfe681c00157e035b6f39a9592e0bf98d47bb5dd0ce35"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/functions/supsub.ts",
+      "sha256": "678fa75ede89b9590fcdcfbca9da35c377184fe0958506fc3825482d3abd2b1b"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/functions/symbolsOp.ts",
+      "sha256": "78aedc6446df270bd0e3916ecdba0e9b27eb079052bff403d8c9e33637e6e9ed"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/functions/symbolsOrd.ts",
+      "sha256": "07708c52f2ba449467eb80d81cc1040c2eb0a9a19cbd6fb793f0c74794523550"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/functions/symbolsSpacing.ts",
+      "sha256": "28bdc1bce42dbd013491b817c24fd36c56360adbe371fce3091fe2f05b46b3e1"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/functions/tag.ts",
+      "sha256": "281a3cfd5afb46e2f1bd057018c5cd5964cc0a558ab1da05499cc56bb83343c7"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/functions/text.ts",
+      "sha256": "0141e26c0d8251434eb1c1e56324f0b7220fecf11dad9d3f20b4557043ab63e6"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/functions/underline.ts",
+      "sha256": "1f76a0f2b86604387a376bdebba4a384e2e9bd618ea715b97d6617c5a5da607c"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/functions/utils/assembleSupSub.ts",
+      "sha256": "beadd19631feb9bd6ffa3b492e06863bb5f45485f88163d3f282841a585a5f8c"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/functions/vcenter.ts",
+      "sha256": "6274035078e962a53169f590fa66d737fb1e1d0e335eab06a9b979700fa6460f"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/functions/verb.ts",
+      "sha256": "d08b52ef375213aa97cd5a3573b43719e263ac566cb15fc0c89cba331846514d"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/functions.ts",
+      "sha256": "f938d09289ccc2786ff45adbe1c2591474867e122cdbfaa6973e84071a3910aa"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/Lexer.ts",
+      "sha256": "9c783877051619e6a71cf3ed95ce5935ceb869772585d09811f84f57ab5818bb"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/MacroExpander.ts",
+      "sha256": "dca51df6efae6c4f958c2313d566910f4857db7e4930c216c88de6cb3aeb4b27"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/macros.ts",
+      "sha256": "13adf540091b6c4d4a31bcd65fe325b74beffc37f2ddb8017f52d024c73a1fdc"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/mathMLTree.ts",
+      "sha256": "8dbf97cf78c688cee3fd2088aad6433034630e09fd58e418ac74a7b9e92878b1"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/Namespace.ts",
+      "sha256": "ea3e7f8e0aa100c5639120ad4590b7ff7a9592afca8a766badc1f59dfaab4f43"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/Options.ts",
+      "sha256": "e4d3708c1020cbc6135f131e1a44a23f0fc74c73efa7e4c007bc17e28a39c806"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/ParseError.ts",
+      "sha256": "f2329752ea620cc944a089d6f5bd31c1f5a54549cce27aafca04f990cad562f7"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/parseNode.ts",
+      "sha256": "b89a626e79bc78418847966ae00a869ee4537df9b256e2799f4067b8821f5889"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/Parser.ts",
+      "sha256": "c1aed05097bb0c429b7e1b5fe0862a7db515bd1682b014d6775edeb2e8da0e6a"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/parseTree.ts",
+      "sha256": "9e286b351c5296c1d1725783bd0232651f7e7ec6eb18292f7ae35385c4b27ae7"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/Settings.ts",
+      "sha256": "a3b04291805997c2a7f0c7600f78034b4ea79783ce2f238e5ca81ef52265acb1"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/SourceLocation.ts",
+      "sha256": "98c4c479462c5b5d392c806b728e4014749b724b565733d00fa7f5749cf1eccd"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/spacingData.ts",
+      "sha256": "66295c7356ccff1e540a857306708583fcdfe59efaef6fca3818834877f86061"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/stretchy.ts",
+      "sha256": "def0fb27cd6e85825662817d9186c0b341d6f55fe42ef495389b5bae832edce2"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/strict.ts",
+      "sha256": "d1c05bd720e7e3e98b02ee7a14001d8d61febf872da6e4a7759bf5c2af6b0124"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/Style.ts",
+      "sha256": "47b50393468d3e2c3eb1dc7a8502dd3e048f545182adee27a8d7b7b44e8615bf"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/svgGeometry.ts",
+      "sha256": "ef252fb6007a382c47bcd01852c168ad96b577d046872e5b4bc0b18f4a75718f"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/symbols.ts",
+      "sha256": "88bf41a79569d9c860292049e897cbd12019dd43f7e3e0044e39ca5deb356b84"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/Token.ts",
+      "sha256": "ca3910b6cf424805e01ec08f8572c79013b06cc33efd4fc5deb0157a057300e7"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/tree.ts",
+      "sha256": "2c14a99962f5f8c4f336c6325b7da4247fccc5579043d90169f1a0ec71f76043"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/types/fonts.ts",
+      "sha256": "1b86659ea5767c4affe9e4dbdfd6f3a695f5a1557ee97f29545ccb962570779f"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/types/index.ts",
+      "sha256": "921d4ffadfa7bd40841f3c62a0e43e7b5523f2b420d36a42eccb194f9cc77a51"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/types/nodes.ts",
+      "sha256": "2d8e80efa0ed566e58a9c793e8338e09e51cc3ac7f280c11919009876c5493e4"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/unicodeScripts.ts",
+      "sha256": "daa4cbbd11dee174f1d9a1b5ceb23e943647a6bf56e57d901d7aea4f6ee3abe1"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/unicodeSupOrSub.ts",
+      "sha256": "5e2e71ab0ce483ee6e876e75e80785fca176d970276eb7a576b4283a35acc074"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/units.ts",
+      "sha256": "09e9e034abfb99210cdf393ca0c639af0e34b017613a05fca280a76aff12e818"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/utils.ts",
+      "sha256": "4f61e46d448ea5efed1e2c3b5ee097d71eb1708e7a84eab68f32454ee85b5755"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/wide-character.ts",
+      "sha256": "108f968fa87f3a14cf7534c129faec8ed440c27250bcc17d79c0f897df108bcd"
+    },
+    {
+      "path": ".local/katex-0.18.11/package/src/fontMetricsData.js",
+      "sha256": "1e72fc6b451a565e60b1eb7e89f4738eb74f35edfcf3c9c273015700b42ae04d"
+    }
+  ],
+  "layoutOptions": [
+    "display_mode",
+    "font_size",
+    "color",
+    "max_depth",
+    "max_nodes",
+    "leqno",
+    "fleqn",
+    "content_width",
+    "equation_counter",
+    "max_size",
+    "min_rule_thickness",
+    "resources",
+    "html_styles",
+    "fallback_fonts",
+    "error_color"
+  ],
+  "sourceRules": {
+    "styles": "8 styles with source sup/sub/fraction/cramped tables and 11-size style map",
+    "spacing": "atom/bin cancellation, source right-node tight-style glue, source colour/style partial groups",
+    "geometry": "real fractions/scripts/limits/radicals/delimiter stacks/accent arrows/array row-column struts and rules; raw source SVG paths, no Unicode-string formula substitute",
+    "cd": "Source CD 3ex baseline/.25em column gaps, 3em horizontal arrows, Big vertical arrows and absolute superscript-style labels; terminal empty source row retained",
+    "tags": "row Node|bool tags; sequential true values consume request-local equation_counter, no global mutable numbering; explicit top-level tag and leqno/fleqn",
+    "containers": "content_width is an explicit native host width; source logical container may overflow and C ink_bounds expands physical export rather than clipping",
+    "implicitHost": "Without a host width, native intrinsic display/tag rectangle is deterministic; reproducing any particular browser host width requires content_width",
+    "fontFallback": "_source_record preserves fontMetrics.ts 70 extraCharacterMap and supported-script M estimates for TeX vertical geometry; actual Unicode run advance/paint uses C real source-allowed fallback measurement and coverage checks",
+    "fontCss": "Private css_family/css_weight/css_shape inherit outer HTML declarations; source-generated inner font classes override each axis. TeX baseline metrics remain independent of paint overrides. C native measurement/draw/ink use identical face/style/weight",
+    "resources": "Immutable image/font bytes via Options only; no network, browser, DOM or runtime .local reads",
+    "diagnostics": "Visible unsupported/error text retains Diagnostic severity; composition and phantom preserve diagnostic records"
+  },
+  "delegatedOwners": {
+    "A": "parser.py/parser_arrays.py/macros/AST, registry/function normalization, strict/trust/state semantics",
+    "root": "public model/API/options/CLI/data extraction, canonical registry and global phase gates",
+    "C": "layout_html.py/resources.py/canvas.py; HTML CSS parser, images/fonts, native measurement, immutable command drawing/filter and physical ink union"
+  },
+  "behaviorUnverifiedRisks": [
+    "No parser/layout/native measurement/render or tests executed in this P1 task. Source-based independent tests and full official oracle comparisons remain mandatory.",
+    "Nested accent/script, new CD/tag geometry, native text shaping, source implicit-host sizing, CSS inherited axis combinations and min-rule radical paths require independent P2/P3 oracle evidence.",
+    "Static HTML value/available-font/resource constraints are enforced by C with explicit exceptions; this is not a browser DOM/CSS host or interactive backend."
+  ],
+  "previousEvidencePolicy": "Old P1/P2/P3/final61 receipts and PNGs were not edited or presented as FULL evidence.",
+  "mechanicalRun": "test-runs/MATH-FULL-record-20261105T151648Z-bdf40755",
+  "mechanicalExitCode": 0,
+  "behaviorTestsWritten": false,
+  "behaviorTestsRun": false,
+  "installationVerification": "paused per user",
+  "stopWritingSource": true,
+  "p3BatchRepair": {
+    "status": "targeted_pass_global_candidate_pending",
+    "initialEvidence": "test-runs/MATH-batch-20261105T155834Z-e542e4f2",
+    "preservedNewRegressionFailure": "test-runs/MATH-FULL-record-20261105T161202Z-2fec8449",
+    "repairs": [
+      {
+        "id": "B01",
+        "source": "functions/CD.ts; defineFunction.ts normalizeArgument",
+        "change": "Root semantic group flags reach builder, retaining CD parent label anchor geometry."
+      },
+      {
+        "id": "B02",
+        "source": "functions/xArrow.ts htmlBuilder",
+        "change": "Mandatory empty upper group retains its vlist shift and logical height."
+      },
+      {
+        "id": "B03",
+        "source": "functions/genfrac.ts ruleSpacing",
+        "change": "Bar fractions use actual minimum rule thickness as clearance; barless uses default theta."
+      },
+      {
+        "id": "B04",
+        "source": "delimiter.ts 330-350",
+        "change": "Restore four Unicode group/moustache delimiter keys and source Size4 stack parts; skip absent Main metrics before stack traversal. Previous ASCII PowerShell pipeline corrupted these literals; now ASCII Unicode escapes."
+      },
+      {
+        "id": "B05",
+        "source": "functions/supsub.ts HTML lines 37-51; functions/horizBrace.ts",
+        "change": "HTML brace delegation uses !sub, not MathML !!sup; both scripts delegate only underbrace and source selects sup first. operatorname has its own alwaysHandle gate."
+      },
+      {
+        "id": "B06",
+        "source": "styles/katex.scss fleqn/leqno",
+        "change": "Left equation tag origin is relative to 2em padded HTML content when fleqn."
+      },
+      {
+        "id": "B07",
+        "source": "symbols.ts @imath/@jmath; buildCommon.ts makeOrd",
+        "change": "Preserve original source symbol lookup for private-use mathord; requested missing font falls back to source default mathord/textord including AMS digits and accent."
+      },
+      {
+        "id": "B08",
+        "source": "buildCommon.ts makeSymbol; Settings strict",
+        "change": "Missing metrics report symbolNotInFont warning/callback/error before real native fallback."
+      },
+      {
+        "id": "B09",
+        "source": "symbols.ts text accent entries; functions/accent.ts230; defineFunction.ts212",
+        "change": "Use source accent mode, text circumflex/tilde glyphs and normalize singleton accent argument before italic correction."
+      },
+      {
+        "id": "B10",
+        "source": "functions/rule.ts; styles/katex.scss .katex-rule min-height:1px",
+        "change": "Only explicit source rule paint includes extra CSS content pixel; TeX logical signed metrics retained."
+      }
+    ],
+    "sourceAndTestIdentities": [
+      {
+        "path": "src/py_katex/layout.py",
+        "sha256": "0c4e807e3645e76e425ccbbb79ce179b2ac7d82d9c14a053e9f4aa6e4751bb90"
+      },
+      {
+        "path": "src/py_katex/layout_display.py",
+        "sha256": "5920a206a8a3f158b0bdd5534c5a1ac94b8883a565450af7a6d1058dd8874697"
+      },
+      {
+        "path": "src/py_katex/layout_metrics.py",
+        "sha256": "d47276a9a14978d2809f597f65950263f60a574768a72e27f3d1d3e4bd11c11f"
+      },
+      {
+        "path": "src/py_katex/_layout_paths.py",
+        "sha256": "5d390360023d8188d27c969d4f2925f1d7e8b7367f53a0df4e772b4925c5ce98"
+      },
+      {
+        "path": "tests/test_full_layout.py",
+        "sha256": "673ea3a9dec7971bc29c3843c642015d7fdcaf911ddb2df9f8ded80acdbb69bb"
+      },
+      {
+        "path": "tests/test_layout.py",
+        "sha256": "1a8fac400cd88de823bc840f1c84b148c4e0ee809baac3e66f7106f540ae8bc2"
+      }
+    ],
+    "runs": [
+      {
+        "path": "test-runs/MATH-FULL-record-20261105T161108Z-563fd7d6",
+        "exitCode": 0,
+        "methods": 140
+      },
+      {
+        "path": "test-runs/MATH-FULL-record-20261105T161308Z-14c4e72c",
+        "exitCode": 0,
+        "cpuScenes": 17,
+        "artifacts": "test-runs/math-full-b-layout-cpu-repair-1615"
+      },
+      {
+        "path": "test-runs/MATH-FULL-record-20261105T161314Z-efd30d9f",
+        "exitCode": 0,
+        "methods": 142
+      }
+    ],
+    "fullLayoutMethods": 77,
+    "legacyLayoutMethods": 65,
+    "newFixtureCount": 54,
+    "stopWritingSource": true,
+    "globalVerification": "Root pending coordinated freeze/full corpus/full265/three backend matrix; targeted results are not complete compatibility acceptance."
+  },
+  "p3TextLookupRepair": {
+    "status": "targeted_pass",
+    "initialEvidence": "test-runs/MATH-FULL-batch-20261105T161801Z-3fa2e5c3",
+    "sources": [
+      "buildCommon.ts makeOrd Typewriter ligature deconstruction and makeSymbol lookupSymbol",
+      "functions/verb.ts per-character makeSymbol before tryCombineChars",
+      "buildCommon.ts makeSymbol symbolNotInFont strict report"
+    ],
+    "changes": [
+      "Before combining text runs, lookup source replacement glyphs; Typewriter missing multi-character ligature splits source raw token before individual symbol lookup. Math mathtt atom handling unchanged.",
+      "Native fallback run performs missing-metric strict reporting when _char was bypassed; supported-script M estimates keep source vertical metrics without this warning."
+    ],
+    "unitMethods": 145,
+    "fullLayoutMethods": 80,
+    "legacyLayoutMethods": 65,
+    "runs": [
+      {
+        "path": "test-runs/MATH-FULL-record-20261105T162815Z-29b91674",
+        "status": "SUCCESS",
+        "cpuScenes": [
+          "upstream-DashesAndQuotes",
+          "upstream-Verb"
+        ],
+        "artifacts": "test-runs/math-full-b-text-lookup-cpu-1624"
+      },
+      {
+        "path": "test-runs/MATH-FULL-record-20261105T162826Z-4b9be821",
+        "status": "FAILED",
+        "reason": "New test normalized ordinary space only, source text spaces are NBSP; product CPU scene already PASS. Evidence preserved."
+      },
+      {
+        "path": "test-runs/MATH-FULL-record-20261105T162915Z-cbb5838a",
+        "status": "SUCCESS",
+        "methods": 145
+      }
+    ],
+    "identities": [
+      {
+        "path": "src/py_katex/layout.py",
+        "sha256": "9b443c70f3760cf2805ccdd375eb01aae8d8f1eaa68f15ea293261cca822d9d6"
+      },
+      {
+        "path": "tests/test_full_layout.py",
+        "sha256": "925acb68ffbf2d67ec85eca0a6fc744d9d4c4bc6f90cd515b963b2d10c40611b"
+      }
+    ],
+    "emojiPolicyTest": "R10 mocks only native measurement to isolate source warn/error policy. Real platform emoji remains C core-corpus targeted verification.",
+    "stopWritingSource": true,
+    "fullMatrix": "Pending root final coordinated freeze; no full acceptance claim."
+  },
+  "htmlInlineCellRepair": {
+    "schema": "py-katex-html-inline-cell-repair/v1",
+    "status": "targeted_pass_pending_global_freeze",
+    "rejectedCandidate": "test-runs/MATH-FULL-batch-20261105T165046Z-5b13a336",
+    "rootCause": "apply_html incorrectly used inner glyph TeX ink-height for the enclosing inline CSS background/border cell and moved body baseline down by padding+border. Source outer Main font has a much taller hhea inline cell.",
+    "sourceEvidence": {
+      "version": "0.18.11",
+      "files": [
+        "functions/html.ts htmlBuilder creates span.enclosing",
+        "styles/katex.scss .katex font Main and line-height1.2",
+        "bundled Main-Regular.ttf head unitsPerEm1000; hhea ascent903 descent-272 lineGap90",
+        "bundled SansSerif-Regular.ttf head unitsPerEm1000; hhea ascent750 descent-250 lineGap90"
+      ],
+      "independentOracle": "test-runs/MATH-FULL-batch-20261105T170615Z-9072a0d0",
+      "oracleCaseCount": 8,
+      "observed": "Main40 inline source cell47px (ascent36/descent11); 6px padding+2px border gives63px. Inline width/height and line-height do not resize the cell. Inline-block lineheight80 +16px sides gives96px. Main20 cell23+8sides=31; inherited Sans30 cell31+16sides=47."
+    },
+    "implementation": [
+      "Cache stdlib sfnt head/hhea parsing from bundled font bytes. No native glyph ink/fontBoundingBox proxy, network or development-source runtime dependency.",
+      "Pass enclosing CSS family/style/weight and inherited line-height separately from inner TeX glyph font classes. Unitless line-height rescales for children; absolute values remain absolute.",
+      "Keep body baseline fixed; vertical inline padding/border expands frame only. Non-replaced inline width/height/min/max sizing ignored. Inline-block respects dimensions and line-height. Display contents has no own frame; unsupported display values still explicit errors.",
+      "Unpainted inline wrapper preserves child TeX height/depth so font-cell paint extents do not replace source nucleus metrics inside fractions/scripts.",
+      "CSS font-family remains explicitly limited by resolver to bundled source families. FontResource remains Unicode fallback only; unsupported arbitrary CSS family is rejected, not guessed.",
+      "layout_image target box untouched: source includegraphics height+depth is correct, SVG internal preserveAspectRatio viewport belongs to C."
+    ],
+    "tests": {
+      "newMethods": 7,
+      "fullLayoutMethods": 87,
+      "legacyLayoutMethods": 65,
+      "totalLayoutMethods": 152,
+      "sourceAssertions": [
+        "H01 literal Main40 frame63/top-44/bodybaseline0",
+        "H02 inline dimensions/lineheight ignored for paintcell",
+        "H03 inline-block dimensions/lineheight",
+        "H04 font-size20 and nested inherited Sans30",
+        "H05 no-background wrapper keeps TeX metrics",
+        "H06 inherited absolute/unitless lineheight",
+        "H07 actualRGB source red/blue relativepixelbboxes plus shiftedbody8px negativecontrol"
+      ]
+    },
+    "runs": [
+      {
+        "path": "test-runs/MATH-FULL-record-20261105T171001Z-63aa65ff",
+        "status": "SUCCESS",
+        "detail": "html-paint CPU source comparison, actual PNG viewed"
+      },
+      {
+        "path": "test-runs/MATH-FULL-record-20261105T171254Z-bd7d50e4",
+        "status": "FAILED",
+        "detail": "New fontcell logic initially inflated unpainted TeX wrappers; existing F31/F32 caught it. Evidence retained, source logical-metric preservation fixed."
+      },
+      {
+        "path": "test-runs/MATH-FULL-record-20261105T171346Z-4076f93a",
+        "status": "SUCCESS",
+        "methods": 152
+      },
+      {
+        "path": "test-runs/MATH-FULL-record-20261105T171454Z-01ac8f86",
+        "status": "SUCCESS",
+        "detail": "Final exact-source compileall; visibility hidden still applies before display:contents fast path."
+      }
+    ],
+    "actualPixelComparison": {
+      "official": "test-runs/MATH-FULL-batch-20261105T165046Z-5b13a336/artifacts/oracle/html-paint.png",
+      "native": "test-runs/math-full-html-paint-cpu-1711/html-paint.png",
+      "officialBlue": [
+        12,
+        4,
+        51,
+        67
+      ],
+      "officialRed": [
+        22,
+        30,
+        41,
+        48
+      ],
+      "nativeBlue": [
+        10,
+        10,
+        49,
+        73
+      ],
+      "nativeRed": [
+        20,
+        36,
+        39,
+        54
+      ],
+      "finding": "All colored bboxes differ by common translation(-2,+6). Frame63px and red baseline gap match; foreground is fully contained. Original native image actually viewed with view_image."
+    },
+    "identities": [
+      {
+        "path": "src/py_katex/layout.py",
+        "sha256": "011e5af561b6b22b418efd0e4889c334d3cc5f9d3b2aeaa294589fc341348d87"
+      },
+      {
+        "path": "src/py_katex/layout_html.py",
+        "sha256": "94ceb4e8787e75d8d5d21f61e92dcd8a64fe5783632d57321436ac0669aa6d81"
+      },
+      {
+        "path": "tests/test_full_layout.py",
+        "sha256": "87c1206b816843cd36abd5535485d480113dda7fa0689a977b144529873981cf"
+      }
+    ],
+    "sourceStopWriting": true,
+    "globalGate": "Await root joint freeze, all-unit/sourcecorpus/267x3backend and new accepted manual QA. Existing rejected final receipts unchanged."
+  }
+}

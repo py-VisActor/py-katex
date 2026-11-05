@@ -1,0 +1,148 @@
+{
+  "scope": "MATH-FLOWCHART",
+  "upstreamCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "cases": [
+    {
+      "id": "math-flow-basic",
+      "title": "math flow basic",
+      "text": "flowchart LR\nA[\"$$x^2+y^2=z^2$$\"] --> B[\"$$\\\\frac{a+b}{c+d}$$\"]",
+      "maths": [
+        "x^2+y^2=z^2",
+        "\\\\frac{a+b}{c+d}"
+      ],
+      "nodeIds": [
+        "A",
+        "B"
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "glyphs": "xyzabcd"
+    },
+    {
+      "id": "math-flow-mixed",
+      "title": "math flow mixed",
+      "text": "flowchart TD\nA[\"Area $$\\\\pi r^2$$ units\"] --> B[\"Done\"]",
+      "maths": [
+        "\\\\pi r^2"
+      ],
+      "nodeIds": [
+        "A",
+        "B"
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "glyphs": "r2"
+    },
+    {
+      "id": "math-flow-radical",
+      "title": "math flow radical",
+      "text": "flowchart LR\nA[\"$$\\\\sqrt[3]{\\\\frac{x}{y}}$$\"]",
+      "maths": [
+        "\\\\sqrt[3]{\\\\frac{x}{y}}"
+      ],
+      "nodeIds": [
+        "A"
+      ],
+      "edges": [],
+      "glyphs": "3xy"
+    },
+    {
+      "id": "math-flow-edge",
+      "title": "math flow edge",
+      "text": "flowchart LR\nA -->|\"$$\\\\sum_{k=1}^{n}k$$\"| B",
+      "maths": [
+        "\\\\sum_{k=1}^{n}k"
+      ],
+      "nodeIds": [
+        "A",
+        "B"
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "glyphs": "kn1"
+    },
+    {
+      "id": "math-flow-group",
+      "title": "math flow group",
+      "text": "flowchart TD\nsubgraph G[\"$$\\\\mathbf{Group}$$\"]\nA[\"$$\\\\alpha$$\"] --> B[\"$$\\\\beta$$\"]\nend",
+      "maths": [
+        "\\\\mathbf{Group}",
+        "\\\\alpha",
+        "\\\\beta"
+      ],
+      "nodeIds": [
+        "A",
+        "B"
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "glyphs": "Groupαβ"
+    },
+    {
+      "id": "math-flow-matrix",
+      "title": "math flow matrix",
+      "text": "flowchart TD\nA[\"$$\\\\begin{pmatrix}1&2\\\\\\\\3&4\\\\end{pmatrix}$$\"] --> B[\"Matrix\"]",
+      "maths": [
+        "\\\\begin{pmatrix}1&2\\\\\\\\3&4\\\\end{pmatrix}"
+      ],
+      "nodeIds": [
+        "A",
+        "B"
+      ],
+      "edges": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "glyphs": "1234"
+    },
+    {
+      "id": "math-flow-metadata",
+      "title": "math flow metadata",
+      "text": "flowchart TD\nA@{shape: rect, label: \"$$\\\\\\\\nu<y$$\", labelType: text}",
+      "maths": [
+        "\\\\nu<y"
+      ],
+      "nodeIds": [
+        "A"
+      ],
+      "edges": [],
+      "glyphs": "ν<y"
+    },
+    {
+      "id": "math-flow-literal",
+      "title": "math flow literal",
+      "text": "flowchart LR\nA[\"Literal $$x^2$$\"]",
+      "maths": [],
+      "nodeIds": [
+        "A"
+      ],
+      "edges": [],
+      "glyphs": "",
+      "literal": "$$x^2$$",
+      "config": {
+        "htmlLabels": false
+      }
+    }
+  ],
+  "negativeCases": [],
+  "renderErrorCases": [],
+  "unsupportedCases": []
+}

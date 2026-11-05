@@ -1,0 +1,242 @@
+{
+  "schema": "py-katex-change/v1",
+  "taskId": "math-parser",
+  "phase": "P3",
+  "status": "targeted_tests_passed",
+  "sourceMap": "references/parser-sources.json",
+  "astContract": "docs/AST.md",
+  "upstreamCommit": "d5bed9f38a8d747b9c4a12e18897a514707e1c26",
+  "files": [
+    {
+      "path": "src/py_katex/parser.py",
+      "sha256": "8b14f85c69a6f49a2b19f899ebbf71dc4f8b15a3f3ecb90e04cd30134eec5c3d"
+    },
+    {
+      "path": "src/py_katex/macros.py",
+      "sha256": "3e3aa013487e93b152307b2d2f852a3db3fb246b251f2439e6284a3a849842a6"
+    },
+    {
+      "path": "src/py_katex/unicode_scripts.py",
+      "sha256": "e4da87d793f4775d81970f180a2e51861e70bccbfa5bce4ec0ba786611abfacb"
+    },
+    {
+      "path": "docs/AST.md",
+      "sha256": "1bc583745b0ad54fdd85aa4059687e51be91f327328efc52b9d3a1e4564ae187"
+    }
+  ],
+  "mechanicalEvidence": "test-runs/MATH-record-20261105T115031Z-ffd8e51a/run.json",
+  "behaviorExecuted": true,
+  "testsWritten": true,
+  "installationValidation": "deferred_by_user",
+  "unsupportedRegistered": [
+    {
+      "name": "\\\\cdrightarrow",
+      "source": "src/functions/arrow.ts",
+      "note": "CD internal arrow not implemented"
+    },
+    {
+      "name": "\\\\cdleftarrow",
+      "source": "src/functions/arrow.ts",
+      "note": "CD internal arrow not implemented"
+    },
+    {
+      "name": "\\\\cdlongequal",
+      "source": "src/functions/arrow.ts",
+      "note": "CD internal arrow not implemented"
+    },
+    {
+      "name": "\\futurelet",
+      "source": "src/functions/def.ts",
+      "note": "Future-token alias assignment not yet implemented"
+    },
+    {
+      "name": "\\\\globalfuture",
+      "source": "src/functions/def.ts",
+      "note": "Internal futurelet variant not yet implemented"
+    },
+    {
+      "name": "\\htmlClass",
+      "source": "src/functions/html.ts",
+      "note": "CSS selector host not represented by native math styles"
+    },
+    {
+      "name": "\\htmlId",
+      "source": "src/functions/html.ts",
+      "note": "HTML host identity has no native output contract"
+    },
+    {
+      "name": "\\htmlStyle",
+      "source": "src/functions/html.ts",
+      "note": "Arbitrary CSS style is not parsed by native math renderer"
+    },
+    {
+      "name": "\\htmlData",
+      "source": "src/functions/html.ts",
+      "note": "HTML data attributes excluded from native output"
+    },
+    {
+      "name": "\\includegraphics",
+      "source": "src/functions/includegraphics.ts",
+      "note": "External image math command not implemented"
+    },
+    {
+      "name": "\\(",
+      "source": "src/functions/math.ts",
+      "note": "Nested text/math delimiter control sequence not implemented (dollar text/math switch is supported)"
+    },
+    {
+      "name": "\\)",
+      "source": "src/functions/math.ts",
+      "note": "Nested text/math delimiter control sequence not implemented"
+    },
+    {
+      "name": "\\]",
+      "source": "src/functions/math.ts",
+      "note": "Display delimiter control sequence not implemented"
+    },
+    {
+      "name": "CD",
+      "source": "src/environments/array.ts",
+      "note": "Commutative diagram environment not implemented"
+    },
+    {
+      "name": "\\\\cdleft",
+      "source": "src/environments/cd.ts",
+      "note": "CD internal node not implemented"
+    },
+    {
+      "name": "\\\\cdright",
+      "source": "src/environments/cd.ts",
+      "note": "CD internal node not implemented"
+    },
+    {
+      "name": "\\\\cdparent",
+      "source": "src/environments/cd.ts",
+      "note": "CD internal node not implemented"
+    }
+  ],
+  "unsupportedDynamicMacros": [
+    "\\tag@literal",
+    "\\bra@ket",
+    "\\bra@set"
+  ],
+  "limits": [
+    "P1 only compile/import/signature verification. No parse, layout, drawing, oracle or formal behavior tests have run for this parser candidate.",
+    "No full KaTeX compatibility percentage is claimed. Source registration-to-family mapping is not measured branch coverage.",
+    "Unsupported registered names and three pending dynamic macros are preserved in the inventory. Static macros invoking them fail explicitly.",
+    "Macro source-specific corner cases remain unverified: noexpand/expandafter semantics, def parameter-text hash-before-brace special case, active-character definitions, futurelet, and optional macro-group edge cases.",
+    "Array automatic equation numbering/tags and commutative diagrams are not implemented. Array column-count/strict-warning equivalence and all mode restrictions await independent source tests.",
+    "Parser interface currently lacks displayMode/strict/leqno/fleqn options; root layout Options selects visual display style. KaTeX display-only environment restrictions are not asserted equivalent.",
+    "Nested text/math switch supports dollar; explicit parenthesis/bracket mode delimiters remain unsupported.",
+    "HTML class/id/style/data and includegraphics explicitly reject rather than producing misleading success. href/url retain static text only.",
+    "Native parser accepts some direct semantic aliases in addition to source macro rewrites. Complete macro registration inventory beyond main macros.ts is owned by root.",
+    "Unsupported literal symbols/codepoints in downstream font metrics must remain an explicit layout error; parser does not substitute a system font."
+  ],
+  "next": "Root freezes all source owners, then announces P2 independent source tests. No tests or product behavior may run before that handoff.",
+  "p3RepairBatch": {
+    "phase": "P3",
+    "status": "targeted_tests_passed",
+    "initialFailingRun": "test-runs/MATH-batch-20261105T120246Z-de639d13",
+    "officialDiagnostic": "test-runs/MATH-parser-official-diagnostic-20261105T120544Z-93070e85",
+    "modeExtractionEvidence": "C:/code/py-visactor/py-katex/test-runs/MATH-parser-mode-source-map-20261105T120953Z-75d199b8",
+    "originalInputsPreserved": "Initial joint source snapshot and unchanged first-run logs retained in initialFailingRun. No failure evidence overwritten.",
+    "fixes": [
+      {
+        "id": "unicode-script-assignment",
+        "source": "Parser.ts parseAtom Unicode branch assigns previous sub/sup",
+        "change": "Unicode scripts overwrite same-side prior script; explicit duplicate ^/_ still reject."
+      },
+      {
+        "id": "above-zero-rule",
+        "source": "functions/genfrac.ts above handler hasBarLine = barSize.number > 0",
+        "change": "Zero or negative above thickness retains value and omits rule."
+      },
+      {
+        "id": "mode-and-primitive-table",
+        "source": "Parser.ts parseFunction; MacroExpander.ts isExpandable; all296 named function registration objects",
+        "change": "Static pure Python mode/primitive metadata enforces math/text mode and supplies exact primitive distinction for noexpand."
+      },
+      {
+        "id": "array-columns",
+        "source": "environments/array.ts parseArray maxNumCols with singleRow or colSeparationType",
+        "change": "equation limits one column, split two; normal array extra columns remain source nonfatal in default non-strict mode."
+      },
+      {
+        "id": "escaped-hash-count",
+        "source": "MacroExpander.ts _getExpansion strips ## before numbered parameter inference",
+        "change": "Skip escaped hash pairs during literal macro argument-count inference; blue/red/etc no longer spuriously consume color digits as args."
+      },
+      {
+        "id": "newcommand-count",
+        "source": "macros.ts newcommand /^\\s*[0-9]+\\s*$/ and katex-spec.ts explicit count10",
+        "change": "Allow source whitespace/count10; native argument-allocation budget remains max_nodes."
+      },
+      {
+        "id": "active-definition-names",
+        "source": "functions/def.ts checkControlSequence rejects only source reserved single tokens",
+        "change": "Accept ordinary active token names such as0/~, preserving request scope."
+      },
+      {
+        "id": "noexpand-context",
+        "source": "MacroExpander.ts expandNextToken versus expandTokens treatAsRelax behavior; letCommand unexpandable flag",
+        "change": "Keep noexpand token identity when fully expanding edef replacement; relax only normal parser expansion. Preserve primitive let aliases and count expanded output toward budget."
+      },
+      {
+        "id": "neq-test-interpretation",
+        "classification": "test projection error, not product symbol error",
+        "source": "official fixed __parse and source symbols.ts @not Main U+E020",
+        "change": "Handwritten expected native visual glyph stream corrected from U+2260 to U+E020+equal and assert rlap overlay; original first-run failure retained. MathML-only single glyph is not substituted into visual AST."
+      }
+    ],
+    "regressions": [
+      {
+        "path": "tests/test_parser.py",
+        "methodCount": 67,
+        "evidence": "test-runs/MATH-record-20261105T120855Z-f70becc0/run.json"
+      },
+      {
+        "path": "tests/test_macros.py",
+        "methodCount": 53,
+        "evidence": "test-runs/MATH-record-20261105T120855Z-52c14ea4/run.json"
+      }
+    ],
+    "totalTargetedMethods": 120,
+    "fullSuiteExecuted": false,
+    "renderingExecutedByThisWorker": false,
+    "productFiles": [
+      {
+        "path": "src/py_katex/parser.py",
+        "sha256": "a448e66a11439a005c083ffbe3a2f0b08676fc3edb789b59a4b3d27da7f152c4"
+      },
+      {
+        "path": "src/py_katex/macros.py",
+        "sha256": "655bfab3f0d60b55275846eb52267fa0963e5f687d8fb91e15b0b602df55c9ab"
+      },
+      {
+        "path": "src/py_katex/unicode_scripts.py",
+        "sha256": "e4da87d793f4775d81970f180a2e51861e70bccbfa5bce4ec0ba786611abfacb"
+      },
+      {
+        "path": "src/py_katex/function_modes.py",
+        "sha256": "1688d9c54c78c258a1024476fb3e2048bc591202a546da0965b7bfcc14716b8b"
+      },
+      {
+        "path": "docs/AST.md",
+        "sha256": "34e968890b59da17d484971a08d99e09e5a2c85ba6ccf3debb1f60b7f675cc0e"
+      }
+    ],
+    "remainingScope": "Pending registered functions/dynamic macros from P1 remain explicit; targeted tests do not claim full KaTeX compatibility."
+  },
+  "initialPhaseBehaviorExecuted": false,
+  "finalVerification": {
+    "status": "PASS_NATIVE_STATIC_ALPHA_LOCAL",
+    "summary": "references/verification-summary.json",
+    "jointSourceSHA256": {
+      "math": "6e11f0a8f9f88c78fb387faf4429cfea72781a4e961328bf53299625bea2cb80",
+      "mermaid": "6e37306deb59a5eb21a2bcceedd66c128a2367f392b094854e2e9bdb3e0e4088"
+    },
+    "unitRun": "test-runs/MATH-batch-20261105T121812Z-f140829a",
+    "visualRun": "test-runs/MATH-batch-20261105T121812Z-73861ed7",
+    "scopeCaveat": "Earlier phase fields retained as history; no full KaTeX compatibility claim"
+  }
+}

@@ -1,0 +1,731 @@
+{
+  "schema": "py-mermaid-command-plan/v1",
+  "scope": "MATH-FULL",
+  "description": "P3 batch repair complete; recheck complete source corpus, 684 contexts, all old/new unit methods, official visual and CPU on one stable repaired candidate. No installation.",
+  "inputs": [
+    "{repo}/tests/full-parser-cases.json",
+    "{repo}/tests/full-visual-cases.json",
+    "{repo}/tests/full-screenshotter-cases.json"
+  ],
+  "steps": [
+    {
+      "name": "joint-source-snapshot",
+      "argv": [
+        "{python}",
+        "{repo}/tools/joint_candidate.py",
+        "--out",
+        "{run}/artifacts"
+      ],
+      "timeoutSeconds": 120
+    },
+    {
+      "name": "full-registration-source-oracle",
+      "argv": [
+        "node",
+        "{repo}/tools/full_parser_oracle.mjs",
+        "--fixtures",
+        "{repo}/tests/full-parser-cases.json",
+        "--out",
+        "{run}/artifacts/full-parser-oracle.json"
+      ],
+      "timeoutSeconds": 180
+    },
+    {
+      "name": "complete-core-source-corpus",
+      "argv": [
+        "node",
+        "{repo}/tools/capture_core_specs.mjs",
+        "--screenshots",
+        "{repo}/tests/full-screenshotter-cases.json",
+        "--out",
+        "{run}/artifacts/core-source"
+      ],
+      "timeoutSeconds": 240
+    },
+    {
+      "name": "full-official-visual",
+      "argv": [
+        "node",
+        "{repo}/tools/capture_full_visual.cjs",
+        "--fixtures",
+        "{repo}/tests/full-visual-cases.json",
+        "--out",
+        "{run}/artifacts/oracle"
+      ],
+      "timeoutSeconds": 600
+    },
+    {
+      "name": "math-parser",
+      "argv": [
+        "{python}",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "{repo}/tests",
+        "-p",
+        "test_parser.py",
+        "-v"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src;{repo}/../py-mermaid/src;{repo}/../py-mermaid/tools",
+        "PYTHONUTF8": "1",
+        "PYTHONIOENCODING": "utf-8"
+      },
+      "timeoutSeconds": 600
+    },
+    {
+      "name": "math-macros",
+      "argv": [
+        "{python}",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "{repo}/tests",
+        "-p",
+        "test_macros.py",
+        "-v"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src;{repo}/../py-mermaid/src;{repo}/../py-mermaid/tools",
+        "PYTHONUTF8": "1",
+        "PYTHONIOENCODING": "utf-8"
+      },
+      "timeoutSeconds": 600
+    },
+    {
+      "name": "math-layout",
+      "argv": [
+        "{python}",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "{repo}/tests",
+        "-p",
+        "test_layout.py",
+        "-v"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src;{repo}/../py-mermaid/src;{repo}/../py-mermaid/tools",
+        "PYTHONUTF8": "1",
+        "PYTHONIOENCODING": "utf-8"
+      },
+      "timeoutSeconds": 600
+    },
+    {
+      "name": "math-canvas",
+      "argv": [
+        "{python}",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "{repo}/tests",
+        "-p",
+        "test_canvas.py",
+        "-v"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src;{repo}/../py-mermaid/src;{repo}/../py-mermaid/tools",
+        "PYTHONUTF8": "1",
+        "PYTHONIOENCODING": "utf-8"
+      },
+      "timeoutSeconds": 600
+    },
+    {
+      "name": "math-api",
+      "argv": [
+        "{python}",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "{repo}/tests",
+        "-p",
+        "test_api.py",
+        "-v"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src;{repo}/../py-mermaid/src;{repo}/../py-mermaid/tools",
+        "PYTHONUTF8": "1",
+        "PYTHONIOENCODING": "utf-8"
+      },
+      "timeoutSeconds": 600
+    },
+    {
+      "name": "math-evidence",
+      "argv": [
+        "{python}",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "{repo}/tests",
+        "-p",
+        "test_evidence.py",
+        "-v"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src;{repo}/../py-mermaid/src;{repo}/../py-mermaid/tools",
+        "PYTHONUTF8": "1",
+        "PYTHONIOENCODING": "utf-8"
+      },
+      "timeoutSeconds": 600
+    },
+    {
+      "name": "mermaid-math-integration",
+      "argv": [
+        "{python}",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "{repo}/../py-mermaid/tests/math",
+        "-v"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src;{repo}/../py-mermaid/src;{repo}/../py-mermaid/tools",
+        "PYTHONUTF8": "1",
+        "PYTHONIOENCODING": "utf-8"
+      },
+      "timeoutSeconds": 600
+    },
+    {
+      "name": "f011-language",
+      "argv": [
+        "{python}",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "{repo}/../py-mermaid/tests/f011",
+        "-p",
+        "test_language.py",
+        "-v"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src;{repo}/../py-mermaid/src;{repo}/../py-mermaid/tools",
+        "PYTHONUTF8": "1",
+        "PYTHONIOENCODING": "utf-8"
+      },
+      "timeoutSeconds": 600
+    },
+    {
+      "name": "f011-layout",
+      "argv": [
+        "{python}",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "{repo}/../py-mermaid/tests/f011",
+        "-p",
+        "test_layout.py",
+        "-v"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src;{repo}/../py-mermaid/src;{repo}/../py-mermaid/tools",
+        "PYTHONUTF8": "1",
+        "PYTHONIOENCODING": "utf-8"
+      },
+      "timeoutSeconds": 600
+    },
+    {
+      "name": "f011-canvas",
+      "argv": [
+        "{python}",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "{repo}/../py-mermaid/tests/f011",
+        "-p",
+        "test_canvas.py",
+        "-v"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src;{repo}/../py-mermaid/src;{repo}/../py-mermaid/tools",
+        "PYTHONUTF8": "1",
+        "PYTHONIOENCODING": "utf-8"
+      },
+      "timeoutSeconds": 600
+    },
+    {
+      "name": "f011-api",
+      "argv": [
+        "{python}",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "{repo}/../py-mermaid/tests/f011",
+        "-p",
+        "test_api.py",
+        "-v"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src;{repo}/../py-mermaid/src;{repo}/../py-mermaid/tools",
+        "PYTHONUTF8": "1",
+        "PYTHONIOENCODING": "utf-8"
+      },
+      "timeoutSeconds": 600
+    },
+    {
+      "name": "f012-language",
+      "argv": [
+        "{python}",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "{repo}/../py-mermaid/tests/f012",
+        "-p",
+        "test_language.py",
+        "-v"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src;{repo}/../py-mermaid/src;{repo}/../py-mermaid/tools",
+        "PYTHONUTF8": "1",
+        "PYTHONIOENCODING": "utf-8"
+      },
+      "timeoutSeconds": 600
+    },
+    {
+      "name": "f012-layout",
+      "argv": [
+        "{python}",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "{repo}/../py-mermaid/tests/f012",
+        "-p",
+        "test_layout.py",
+        "-v"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src;{repo}/../py-mermaid/src;{repo}/../py-mermaid/tools",
+        "PYTHONUTF8": "1",
+        "PYTHONIOENCODING": "utf-8"
+      },
+      "timeoutSeconds": 600
+    },
+    {
+      "name": "f012-canvas",
+      "argv": [
+        "{python}",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "{repo}/../py-mermaid/tests/f012",
+        "-p",
+        "test_canvas.py",
+        "-v"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src;{repo}/../py-mermaid/src;{repo}/../py-mermaid/tools",
+        "PYTHONUTF8": "1",
+        "PYTHONIOENCODING": "utf-8"
+      },
+      "timeoutSeconds": 600
+    },
+    {
+      "name": "f013-language",
+      "argv": [
+        "{python}",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "{repo}/../py-mermaid/tests/f013",
+        "-p",
+        "test_language.py",
+        "-v"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src;{repo}/../py-mermaid/src;{repo}/../py-mermaid/tools",
+        "PYTHONUTF8": "1",
+        "PYTHONIOENCODING": "utf-8"
+      },
+      "timeoutSeconds": 600
+    },
+    {
+      "name": "f013-layout",
+      "argv": [
+        "{python}",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "{repo}/../py-mermaid/tests/f013",
+        "-p",
+        "test_layout.py",
+        "-v"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src;{repo}/../py-mermaid/src;{repo}/../py-mermaid/tools",
+        "PYTHONUTF8": "1",
+        "PYTHONIOENCODING": "utf-8"
+      },
+      "timeoutSeconds": 600
+    },
+    {
+      "name": "f013-styles",
+      "argv": [
+        "{python}",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "{repo}/../py-mermaid/tests/f013",
+        "-p",
+        "test_styles.py",
+        "-v"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src;{repo}/../py-mermaid/src;{repo}/../py-mermaid/tools",
+        "PYTHONUTF8": "1",
+        "PYTHONIOENCODING": "utf-8"
+      },
+      "timeoutSeconds": 600
+    },
+    {
+      "name": "f013-canvas",
+      "argv": [
+        "{python}",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "{repo}/../py-mermaid/tests/f013",
+        "-p",
+        "test_canvas.py",
+        "-v"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src;{repo}/../py-mermaid/src;{repo}/../py-mermaid/tools",
+        "PYTHONUTF8": "1",
+        "PYTHONIOENCODING": "utf-8"
+      },
+      "timeoutSeconds": 600
+    },
+    {
+      "name": "tooling",
+      "argv": [
+        "{python}",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "{repo}/../py-mermaid/tests/tooling",
+        "-v"
+      ],
+      "timeoutSeconds": 600,
+      "env": {
+        "PYTHONPATH": "{repo}/src;{repo}/../py-mermaid/src;{repo}/../py-mermaid/tools",
+        "PYTHONUTF8": "1",
+        "PYTHONIOENCODING": "utf-8"
+      }
+    },
+    {
+      "name": "f014-language",
+      "argv": [
+        "{python}",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "{repo}/../py-mermaid/tests/f014",
+        "-p",
+        "test_language.py",
+        "-v"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src;{repo}/../py-mermaid/src;{repo}/../py-mermaid/tools",
+        "PYTHONUTF8": "1",
+        "PYTHONIOENCODING": "utf-8"
+      },
+      "timeoutSeconds": 1200
+    },
+    {
+      "name": "f014-layout",
+      "argv": [
+        "{python}",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "{repo}/../py-mermaid/tests/f014",
+        "-p",
+        "test_layout.py",
+        "-v"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src;{repo}/../py-mermaid/src;{repo}/../py-mermaid/tools",
+        "PYTHONUTF8": "1",
+        "PYTHONIOENCODING": "utf-8"
+      },
+      "timeoutSeconds": 1200
+    },
+    {
+      "name": "f014-shapes",
+      "argv": [
+        "{python}",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "{repo}/../py-mermaid/tests/f014",
+        "-p",
+        "test_shapes.py",
+        "-v"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src;{repo}/../py-mermaid/src;{repo}/../py-mermaid/tools",
+        "PYTHONUTF8": "1",
+        "PYTHONIOENCODING": "utf-8"
+      },
+      "timeoutSeconds": 1200
+    },
+    {
+      "name": "f014-styles",
+      "argv": [
+        "{python}",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "{repo}/../py-mermaid/tests/f014",
+        "-p",
+        "test_styles.py",
+        "-v"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src;{repo}/../py-mermaid/src;{repo}/../py-mermaid/tools",
+        "PYTHONUTF8": "1",
+        "PYTHONIOENCODING": "utf-8"
+      },
+      "timeoutSeconds": 1200
+    },
+    {
+      "name": "f014-canvas",
+      "argv": [
+        "{python}",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "{repo}/../py-mermaid/tests/f014",
+        "-p",
+        "test_canvas.py",
+        "-v"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src;{repo}/../py-mermaid/src;{repo}/../py-mermaid/tools",
+        "PYTHONUTF8": "1",
+        "PYTHONIOENCODING": "utf-8"
+      },
+      "timeoutSeconds": 1200
+    },
+    {
+      "name": "full-parser",
+      "argv": [
+        "{python}",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "{repo}/tests",
+        "-p",
+        "test_full_parser.py",
+        "-v"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src;{repo}/../py-mermaid/src;{repo}/../py-mermaid/tools;{repo}/tools",
+        "PYTHONUTF8": "1",
+        "PYTHONIOENCODING": "utf-8",
+        "PY_KATEX_FULL_ORACLE": "{run}/artifacts/full-parser-oracle.json"
+      },
+      "timeoutSeconds": 600
+    },
+    {
+      "name": "full-macros",
+      "argv": [
+        "{python}",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "{repo}/tests",
+        "-p",
+        "test_full_macros.py",
+        "-v"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src;{repo}/../py-mermaid/src;{repo}/../py-mermaid/tools;{repo}/tools",
+        "PYTHONUTF8": "1",
+        "PYTHONIOENCODING": "utf-8",
+        "PY_KATEX_FULL_ORACLE": "{run}/artifacts/full-parser-oracle.json"
+      },
+      "timeoutSeconds": 600
+    },
+    {
+      "name": "full-registry",
+      "argv": [
+        "{python}",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "{repo}/tests",
+        "-p",
+        "test_full_registry.py",
+        "-v"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src;{repo}/../py-mermaid/src;{repo}/../py-mermaid/tools;{repo}/tools",
+        "PYTHONUTF8": "1",
+        "PYTHONIOENCODING": "utf-8",
+        "PY_KATEX_FULL_ORACLE": "{run}/artifacts/full-parser-oracle.json"
+      },
+      "timeoutSeconds": 600
+    },
+    {
+      "name": "full-layout",
+      "argv": [
+        "{python}",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "{repo}/tests",
+        "-p",
+        "test_full_layout.py",
+        "-v"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src;{repo}/../py-mermaid/src;{repo}/../py-mermaid/tools;{repo}/tools",
+        "PYTHONUTF8": "1",
+        "PYTHONIOENCODING": "utf-8",
+        "PY_KATEX_FULL_ORACLE": "{run}/artifacts/full-parser-oracle.json"
+      },
+      "timeoutSeconds": 600
+    },
+    {
+      "name": "full-canvas",
+      "argv": [
+        "{python}",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "{repo}/tests",
+        "-p",
+        "test_full_canvas.py",
+        "-v"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src;{repo}/../py-mermaid/src;{repo}/../py-mermaid/tools;{repo}/tools",
+        "PYTHONUTF8": "1",
+        "PYTHONIOENCODING": "utf-8",
+        "PY_KATEX_FULL_ORACLE": "{run}/artifacts/full-parser-oracle.json"
+      },
+      "timeoutSeconds": 600
+    },
+    {
+      "name": "full-integration",
+      "argv": [
+        "{python}",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "{repo}/tests",
+        "-p",
+        "test_full_integration.py",
+        "-v"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src;{repo}/../py-mermaid/src;{repo}/../py-mermaid/tools;{repo}/tools",
+        "PYTHONUTF8": "1",
+        "PYTHONIOENCODING": "utf-8",
+        "PY_KATEX_FULL_ORACLE": "{run}/artifacts/full-parser-oracle.json"
+      },
+      "timeoutSeconds": 600
+    },
+    {
+      "name": "full-api",
+      "argv": [
+        "{python}",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "{repo}/tests",
+        "-p",
+        "test_full_api.py",
+        "-v"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src;{repo}/../py-mermaid/src;{repo}/../py-mermaid/tools;{repo}/tools",
+        "PYTHONUTF8": "1",
+        "PYTHONIOENCODING": "utf-8",
+        "PY_KATEX_FULL_ORACLE": "{run}/artifacts/full-parser-oracle.json"
+      },
+      "timeoutSeconds": 600
+    },
+    {
+      "name": "core-corpus-native",
+      "argv": [
+        "{python}",
+        "{repo}/tools/validate_core_specs.py",
+        "--corpus",
+        "{run}/artifacts/core-source/corpus.json",
+        "--out",
+        "{run}/artifacts/core-native"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src;{repo}/../py-mermaid/src;{repo}/../py-mermaid/tools;{repo}/tools",
+        "PYTHONUTF8": "1",
+        "PYTHONIOENCODING": "utf-8",
+        "PY_KATEX_FULL_ORACLE": "{run}/artifacts/full-parser-oracle.json"
+      },
+      "timeoutSeconds": 600
+    },
+    {
+      "name": "full-visual-cpu",
+      "argv": [
+        "{python}",
+        "{repo}/tools/validate_full_visual.py",
+        "--fixtures",
+        "{repo}/tests/full-visual-cases.json",
+        "--oracle",
+        "{run}/artifacts/oracle",
+        "--profile",
+        "cpu",
+        "--out",
+        "{run}/artifacts/standalone-cpu"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src;{repo}/../py-mermaid/src;{repo}/../py-mermaid/tools;{repo}/tools",
+        "PYTHONUTF8": "1",
+        "PYTHONIOENCODING": "utf-8",
+        "PY_KATEX_FULL_ORACLE": "{run}/artifacts/full-parser-oracle.json"
+      },
+      "timeoutSeconds": 600
+    },
+    {
+      "name": "joint-source-unchanged",
+      "argv": [
+        "{python}",
+        "{repo}/tools/joint_candidate.py",
+        "--check",
+        "{run}/artifacts/joint-candidate.json"
+      ],
+      "timeoutSeconds": 60
+    }
+  ]
+}

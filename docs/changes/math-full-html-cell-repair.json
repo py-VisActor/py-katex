@@ -1,0 +1,108 @@
+{
+  "schema": "py-katex-html-inline-cell-repair/v1",
+  "status": "targeted_pass_pending_global_freeze",
+  "rejectedCandidate": "test-runs/MATH-FULL-batch-20261105T165046Z-5b13a336",
+  "rootCause": "apply_html incorrectly used inner glyph TeX ink-height for the enclosing inline CSS background/border cell and moved body baseline down by padding+border. Source outer Main font has a much taller hhea inline cell.",
+  "sourceEvidence": {
+    "version": "0.18.11",
+    "files": [
+      "functions/html.ts htmlBuilder creates span.enclosing",
+      "styles/katex.scss .katex font Main and line-height1.2",
+      "bundled Main-Regular.ttf head unitsPerEm1000; hhea ascent903 descent-272 lineGap90",
+      "bundled SansSerif-Regular.ttf head unitsPerEm1000; hhea ascent750 descent-250 lineGap90"
+    ],
+    "independentOracle": "test-runs/MATH-FULL-batch-20261105T170615Z-9072a0d0",
+    "oracleCaseCount": 8,
+    "observed": "Main40 inline source cell47px (ascent36/descent11); 6px padding+2px border gives63px. Inline width/height and line-height do not resize the cell. Inline-block lineheight80 +16px sides gives96px. Main20 cell23+8sides=31; inherited Sans30 cell31+16sides=47."
+  },
+  "implementation": [
+    "Cache stdlib sfnt head/hhea parsing from bundled font bytes. No native glyph ink/fontBoundingBox proxy, network or development-source runtime dependency.",
+    "Pass enclosing CSS family/style/weight and inherited line-height separately from inner TeX glyph font classes. Unitless line-height rescales for children; absolute values remain absolute.",
+    "Keep body baseline fixed; vertical inline padding/border expands frame only. Non-replaced inline width/height/min/max sizing ignored. Inline-block respects dimensions and line-height. Display contents has no own frame; unsupported display values still explicit errors.",
+    "Unpainted inline wrapper preserves child TeX height/depth so font-cell paint extents do not replace source nucleus metrics inside fractions/scripts.",
+    "CSS font-family remains explicitly limited by resolver to bundled source families. FontResource remains Unicode fallback only; unsupported arbitrary CSS family is rejected, not guessed.",
+    "layout_image target box untouched: source includegraphics height+depth is correct, SVG internal preserveAspectRatio viewport belongs to C."
+  ],
+  "tests": {
+    "newMethods": 7,
+    "fullLayoutMethods": 87,
+    "legacyLayoutMethods": 65,
+    "totalLayoutMethods": 152,
+    "sourceAssertions": [
+      "H01 literal Main40 frame63/top-44/bodybaseline0",
+      "H02 inline dimensions/lineheight ignored for paintcell",
+      "H03 inline-block dimensions/lineheight",
+      "H04 font-size20 and nested inherited Sans30",
+      "H05 no-background wrapper keeps TeX metrics",
+      "H06 inherited absolute/unitless lineheight",
+      "H07 actualRGB source red/blue relativepixelbboxes plus shiftedbody8px negativecontrol"
+    ]
+  },
+  "runs": [
+    {
+      "path": "test-runs/MATH-FULL-record-20261105T171001Z-63aa65ff",
+      "status": "SUCCESS",
+      "detail": "html-paint CPU source comparison, actual PNG viewed"
+    },
+    {
+      "path": "test-runs/MATH-FULL-record-20261105T171254Z-bd7d50e4",
+      "status": "FAILED",
+      "detail": "New fontcell logic initially inflated unpainted TeX wrappers; existing F31/F32 caught it. Evidence retained, source logical-metric preservation fixed."
+    },
+    {
+      "path": "test-runs/MATH-FULL-record-20261105T171346Z-4076f93a",
+      "status": "SUCCESS",
+      "methods": 152
+    },
+    {
+      "path": "test-runs/MATH-FULL-record-20261105T171454Z-01ac8f86",
+      "status": "SUCCESS",
+      "detail": "Final exact-source compileall; visibility hidden still applies before display:contents fast path."
+    }
+  ],
+  "actualPixelComparison": {
+    "official": "test-runs/MATH-FULL-batch-20261105T165046Z-5b13a336/artifacts/oracle/html-paint.png",
+    "native": "test-runs/math-full-html-paint-cpu-1711/html-paint.png",
+    "officialBlue": [
+      12,
+      4,
+      51,
+      67
+    ],
+    "officialRed": [
+      22,
+      30,
+      41,
+      48
+    ],
+    "nativeBlue": [
+      10,
+      10,
+      49,
+      73
+    ],
+    "nativeRed": [
+      20,
+      36,
+      39,
+      54
+    ],
+    "finding": "All colored bboxes differ by common translation(-2,+6). Frame63px and red baseline gap match; foreground is fully contained. Original native image actually viewed with view_image."
+  },
+  "identities": [
+    {
+      "path": "src/py_katex/layout.py",
+      "sha256": "011e5af561b6b22b418efd0e4889c334d3cc5f9d3b2aeaa294589fc341348d87"
+    },
+    {
+      "path": "src/py_katex/layout_html.py",
+      "sha256": "94ceb4e8787e75d8d5d21f61e92dcd8a64fe5783632d57321436ac0669aa6d81"
+    },
+    {
+      "path": "tests/test_full_layout.py",
+      "sha256": "87c1206b816843cd36abd5535485d480113dda7fa0689a977b144529873981cf"
+    }
+  ],
+  "sourceStopWriting": true,
+  "globalGate": "Await root joint freeze, all-unit/sourcecorpus/267x3backend and new accepted manual QA. Existing rejected final receipts unchanged."
+}

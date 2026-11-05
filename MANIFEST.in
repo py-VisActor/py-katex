@@ -1,0 +1,15 @@
+include LICENSE THIRD_PARTY_NOTICES.md README.md CHANGELOG.md pyproject.toml
+include references/upstream.lock.json references/full-core-inventory.json
+include references/full-runtime-registry.json references/full-verification-summary.json
+recursive-include references/licenses *
+recursive-include src/py_katex *.py *.json *.ttf py.typed
+recursive-include tests *.py *.json *.png *.svg *.ttf
+recursive-include tools *.py *.cjs *.mjs *.html *.json *.md
+recursive-include docs *.md *.json
+global-exclude __pycache__ *.py[cod]
+prune .local
+prune .github
+prune test-runs
+prune reports
+prune build
+prune dist

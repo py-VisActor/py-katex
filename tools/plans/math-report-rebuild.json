@@ -1,0 +1,25 @@
+{
+  "schema": "py-mermaid-command-plan/v1",
+  "scope": "MATH",
+  "description": "Rebuild HTML only after mobile hash wrap repair; reuse all original PNG/export bytes; no rendering",
+  "steps": [
+    {
+      "name": "verified-html-comparison-report",
+      "argv": [
+        "{python}",
+        "{repo}/tools/report_math.py",
+        "--visual",
+        "{repo}/test-runs/MATH-batch-20261105T121812Z-73861ed7",
+        "--unit",
+        "{repo}/test-runs/MATH-batch-20261105T121812Z-f140829a",
+        "--legacy",
+        "{repo}/test-runs/MATH-batch-20261105T121812Z-85def7ba",
+        "--exports",
+        "{repo}/test-runs/MATH-batch-20261105T122453Z-26698b8b/artifacts/exports",
+        "--out",
+        "{repo}/../py-mermaid/reports/{runid}"
+      ],
+      "timeoutSeconds": 120
+    }
+  ]
+}

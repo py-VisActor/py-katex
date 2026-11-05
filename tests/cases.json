@@ -1,0 +1,430 @@
+{
+  "scope": "MATH",
+  "sourceVersion": "0.18.11",
+  "sourceCommit": "d5bed9f38a8d747b9c4a12e18897a514707e1c26",
+  "origin": "Source grammar and TeX semantic examples, literal glyph/geometry expectations; no native output used to manufacture expected values",
+  "cases": [
+    {
+      "id": "arithmetic",
+      "tex": "a+b=c",
+      "glyphs": "ab+c"
+    },
+    {
+      "id": "superscript",
+      "tex": "x^2+y^2=z^2",
+      "glyphs": "xyz222",
+      "stacked": true
+    },
+    {
+      "id": "subsup",
+      "tex": "a_i^2+b_{ij}^{n+1}",
+      "glyphs": "aibijn12",
+      "stacked": true
+    },
+    {
+      "id": "fraction",
+      "tex": "\\frac{a+b}{c+d}",
+      "glyphs": "abcd++",
+      "minRules": 1,
+      "stacked": true
+    },
+    {
+      "id": "nested-fraction",
+      "tex": "\\frac{1}{1+\\frac{1}{x}}",
+      "glyphs": "11x+",
+      "minRules": 2,
+      "stacked": true
+    },
+    {
+      "id": "quadratic",
+      "tex": "x=\\frac{-b\\pm\\sqrt{b^2-4ac}}{2a}",
+      "glyphs": "xbb24ac2a",
+      "minRules": 1,
+      "minPaths": 1,
+      "stacked": true
+    },
+    {
+      "id": "binomial",
+      "tex": "\\binom{n}{k}",
+      "glyphs": "nk",
+      "stacked": true
+    },
+    {
+      "id": "square-root",
+      "tex": "\\sqrt{x^2+1}",
+      "glyphs": "x21",
+      "minPaths": 1,
+      "stacked": true
+    },
+    {
+      "id": "nth-root",
+      "tex": "\\sqrt[3]{x+y}",
+      "glyphs": "3xy",
+      "minPaths": 1,
+      "stacked": true
+    },
+    {
+      "id": "sum-limits",
+      "tex": "\\sum_{n=1}^{\\infty}\\frac1{n^2}",
+      "glyphs": "nn12",
+      "minRules": 1,
+      "stacked": true
+    },
+    {
+      "id": "integral",
+      "tex": "\\int_0^1 x^2\\,dx",
+      "glyphs": "01x2dx",
+      "stacked": true
+    },
+    {
+      "id": "limit",
+      "tex": "\\lim_{x\\to0}\\frac{\\sin x}{x}=1",
+      "glyphs": "limx0sinxx1",
+      "minRules": 1,
+      "stacked": true
+    },
+    {
+      "id": "euler",
+      "tex": "e^{i\\pi}+1=0",
+      "glyphs": "ei10",
+      "stacked": true
+    },
+    {
+      "id": "greek",
+      "tex": "\\alpha+\\beta=\\gamma\\quad\\Gamma\\Delta\\Omega",
+      "glyphs": "αβγΓΔΩ"
+    },
+    {
+      "id": "font-blackboard",
+      "tex": "\\mathbb{R}+\\mathbb{N}+\\mathbb{Z}",
+      "glyphs": "RNZ",
+      "fonts": [
+        "AMS-Regular"
+      ]
+    },
+    {
+      "id": "font-script",
+      "tex": "\\mathcal{L}+\\mathscr{F}+\\mathfrak{g}",
+      "glyphs": "LFg",
+      "fonts": [
+        "Caligraphic-Regular",
+        "Script-Regular",
+        "Fraktur-Regular"
+      ]
+    },
+    {
+      "id": "bold-symbol",
+      "tex": "\\boldsymbol{x}+\\mathbf{A}",
+      "glyphs": "xA",
+      "fonts": [
+        "Math-BoldItalic",
+        "Main-Bold"
+      ]
+    },
+    {
+      "id": "font-sans-typewriter",
+      "tex": "\\mathsf{ABC}+\\mathtt{xyz}",
+      "glyphs": "ABCxyz",
+      "fonts": [
+        "SansSerif-Regular",
+        "Typewriter-Regular"
+      ]
+    },
+    {
+      "id": "color",
+      "tex": "\\color{red}{x^2}+\\textcolor{blue}{y}",
+      "glyphs": "x2y",
+      "stacked": true
+    },
+    {
+      "id": "text",
+      "tex": "\\text{velocity }v=\\mathrm{d}x/\\mathrm{d}t",
+      "glyphs": "velocityvdxdt"
+    },
+    {
+      "id": "spacing",
+      "tex": "a\\!b\\,c\\;d\\quad e\\qquad f",
+      "glyphs": "abcdef"
+    },
+    {
+      "id": "delimiters",
+      "tex": "\\left(\\frac{a}{b}\\right)",
+      "glyphs": "ab",
+      "minRules": 1,
+      "stacked": true
+    },
+    {
+      "id": "middle-delimiter",
+      "tex": "\\left\\{x\\middle|x>0\\right\\}",
+      "glyphs": "xx0"
+    },
+    {
+      "id": "sized-delimiter",
+      "tex": "\\Bigl[\\frac{x}{y}\\Bigr]",
+      "glyphs": "xy",
+      "minRules": 1,
+      "stacked": true
+    },
+    {
+      "id": "accents",
+      "tex": "\\hat{x}+\\bar{y}+\\dot{z}+\\ddot{a}",
+      "glyphs": "xyza"
+    },
+    {
+      "id": "widehat",
+      "tex": "\\widehat{ABC}",
+      "glyphs": "ABC",
+      "minPaths": 1
+    },
+    {
+      "id": "vector",
+      "tex": "\\overrightarrow{AB}",
+      "glyphs": "AB",
+      "minPaths": 1
+    },
+    {
+      "id": "overline-underline",
+      "tex": "\\overline{AB}+\\underline{CD}",
+      "glyphs": "ABCD",
+      "minRules": 2
+    },
+    {
+      "id": "xarrow",
+      "tex": "A\\xrightarrow[n\\to\\infty]{f}B",
+      "glyphs": "ABnf",
+      "minPaths": 1,
+      "stacked": true
+    },
+    {
+      "id": "overbrace",
+      "tex": "\\overbrace{a+b+c}^{n}",
+      "glyphs": "abcn",
+      "minPaths": 1,
+      "stacked": true
+    },
+    {
+      "id": "underbrace",
+      "tex": "\\underbrace{x+\\cdots+x}_{n}",
+      "glyphs": "xxn",
+      "minPaths": 1,
+      "stacked": true
+    },
+    {
+      "id": "matrix",
+      "tex": "\\begin{matrix}a&b\\\\c&d\\end{matrix}",
+      "glyphs": "abcd",
+      "stacked": true
+    },
+    {
+      "id": "pmatrix",
+      "tex": "\\begin{pmatrix}1&2\\\\3&4\\end{pmatrix}",
+      "glyphs": "1234",
+      "stacked": true
+    },
+    {
+      "id": "determinant",
+      "tex": "\\begin{vmatrix}a&b\\\\c&d\\end{vmatrix}",
+      "glyphs": "abcd",
+      "stacked": true
+    },
+    {
+      "id": "cases",
+      "tex": "f(x)=\\begin{cases}x^2&x\\ge0\\\\-x&x<0\\end{cases}",
+      "glyphs": "fxxx2xx00",
+      "stacked": true
+    },
+    {
+      "id": "aligned",
+      "tex": "\\begin{aligned}a&=b+c\\\\d&=e+f\\end{aligned}",
+      "glyphs": "abcdef",
+      "stacked": true
+    },
+    {
+      "id": "array-rules",
+      "tex": "\\begin{array}{c|r}1&22\\\\\\hline333&4\\end{array}",
+      "glyphs": "1223334",
+      "minRules": 2,
+      "stacked": true
+    },
+    {
+      "id": "smallmatrix",
+      "tex": "\\left[\\begin{smallmatrix}a&b\\\\c&d\\end{smallmatrix}\\right]",
+      "glyphs": "abcd",
+      "stacked": true
+    },
+    {
+      "id": "phantom",
+      "tex": "a+\\phantom{x^2}+b",
+      "glyphs": "ab"
+    },
+    {
+      "id": "horizontal-phantom",
+      "tex": "a\\hphantom{ABC}b",
+      "glyphs": "ab"
+    },
+    {
+      "id": "smash",
+      "tex": "\\smash{x^2}+y",
+      "glyphs": "x2y",
+      "stacked": true
+    },
+    {
+      "id": "lap",
+      "tex": "a\\mathllap{b}c",
+      "glyphs": "abc"
+    },
+    {
+      "id": "rule",
+      "tex": "\\rule{2em}{.15em}",
+      "glyphs": "",
+      "minRules": 1
+    },
+    {
+      "id": "raise",
+      "tex": "a+\\raisebox{.4em}{b}",
+      "glyphs": "ab",
+      "stacked": true
+    },
+    {
+      "id": "reflection",
+      "tex": "\\reflectbox{F}+F",
+      "glyphs": "FF"
+    },
+    {
+      "id": "pmb",
+      "tex": "\\pmb{x}+x",
+      "glyphs": "xx"
+    },
+    {
+      "id": "vcenter",
+      "tex": "a+\\vcenter{\\hbox{X}}",
+      "glyphs": "aX"
+    },
+    {
+      "id": "mathchoice",
+      "tex": "\\mathchoice{D}{T}{S}{Q}",
+      "glyphs": "D"
+    },
+    {
+      "id": "font-size",
+      "tex": "{\\tiny x}+{\\Huge y}",
+      "glyphs": "xy"
+    },
+    {
+      "id": "style-fractions",
+      "tex": "\\dfrac{a}{b}+\\tfrac{c}{d}",
+      "glyphs": "abcd",
+      "minRules": 2,
+      "stacked": true
+    },
+    {
+      "id": "unicode-math",
+      "tex": "𝔸+𝐀",
+      "glyphs": "AA",
+      "fonts": [
+        "AMS-Regular",
+        "Main-Bold"
+      ]
+    },
+    {
+      "id": "primes",
+      "tex": "f'(x)+g''(x)",
+      "glyphs": "fgxx",
+      "stacked": true
+    },
+    {
+      "id": "custom-macro",
+      "tex": "\\RR^2",
+      "glyphs": "R2",
+      "macros": {
+        "\\RR": "\\mathbb{R}"
+      },
+      "fonts": [
+        "AMS-Regular"
+      ],
+      "stacked": true
+    },
+    {
+      "id": "local-definition",
+      "tex": "\\def\\f#1{\\frac{#1}{2}}\\f{x}",
+      "glyphs": "x2",
+      "minRules": 1,
+      "stacked": true
+    },
+    {
+      "id": "new-command",
+      "tex": "\\newcommand{\\sq}[1]{#1^2}\\sq{x}",
+      "glyphs": "x2",
+      "stacked": true
+    },
+    {
+      "id": "source-aliases",
+      "tex": "\\R+\\N+\\Z",
+      "glyphs": "RNZ",
+      "fonts": [
+        "AMS-Regular"
+      ]
+    },
+    {
+      "id": "overset",
+      "tex": "\\overset{!}{=}",
+      "glyphs": "!=",
+      "stacked": true
+    },
+    {
+      "id": "underset",
+      "tex": "\\underset{x\\to0}{f}",
+      "glyphs": "xf0",
+      "stacked": true
+    },
+    {
+      "id": "cancel",
+      "tex": "\\cancel{x}+\\bcancel{y}+\\xcancel{z}",
+      "glyphs": "xyz",
+      "minPaths": 3
+    },
+    {
+      "id": "boxed",
+      "tex": "\\boxed{E=mc^2}",
+      "glyphs": "Emc2",
+      "minRules": 4,
+      "stacked": true
+    },
+    {
+      "id": "colored-box",
+      "tex": "\\fcolorbox{blue}{yellow}{text}",
+      "glyphs": "text",
+      "minRules": 4
+    }
+  ],
+  "negativeCases": [
+    {
+      "id": "unknown-command",
+      "tex": "\\NoSuchMathematicalCommand"
+    },
+    {
+      "id": "unbalanced-group",
+      "tex": "{x"
+    },
+    {
+      "id": "duplicate-script",
+      "tex": "x^2^3"
+    },
+    {
+      "id": "fraction-missing-argument",
+      "tex": "\\frac{a}"
+    },
+    {
+      "id": "unmatched-right",
+      "tex": "\\right)"
+    },
+    {
+      "id": "environment-mismatch",
+      "tex": "\\begin{matrix}1\\end{cases}"
+    },
+    {
+      "id": "recursive-macro",
+      "tex": "\\def\\a{\\a}\\a"
+    }
+  ]
+}

@@ -1,0 +1,233 @@
+{
+  "schema": "math-full-canvas-tests/v1",
+  "stage": "P2",
+  "status": "test_design_complete_unexecuted",
+  "tests": {
+    "tests\\test_full_canvas.py": [
+      "test_real_png_jpeg_webp_svg_decoding_and_four_colors",
+      "test_gif_uses_first_static_frame_not_later_blue_frame",
+      "test_includegraphics_default_height_totalheight_depth_and_width",
+      "test_includegraphics_unitless_bp_and_source_default_alt",
+      "test_datauri_percent_encoded_svg_and_base64_png_offline",
+      "test_explicit_file_factory_does_not_implicit_fetch_formula_url",
+      "test_svg_scripts_events_external_css_entities_and_foreignobject_rejected",
+      "test_resource_budgets_mime_and_descriptor_mismatch",
+      "test_trustfalse_renders_visible_rejection_with_diagnostic",
+      "test_source_unicode_script_families_have_real_shaped_ink",
+      "test_explicit_font_resource_real_coverage_and_owner_transfer",
+      "test_unknown_unicode_missing_glyph_is_not_successful_tofu",
+      "test_text_runs_preserve_source_ligature_kerning_and_brahmic_shaping",
+      "test_invalid_explicit_font_and_font_byte_budget_are_not_ignored",
+      "test_nested_command_depth_count_and_bad_group_parameters_rejected",
+      "test_html_font_axes_obey_generated_inner_classes_with_pixels",
+      "test_htmlclass_inline_precedence_id_data_and_color_background",
+      "test_html_visible_style_properties_native_background_border_spacing_shadow",
+      "test_unknown_visible_css_and_executable_css_have_explicit_errors",
+      "test_html_opacity_display_and_visibility_do_not_silently_paint",
+      "test_group_affine_clip_and_filter_have_actual_spatial_effect",
+      "test_source_pmb_retains_real_blurred_second_layer",
+      "test_logical_width_smash_lap_and_content_width_preserve_overflow_ink",
+      "test_exact_rule_affine_negative_ink_bounds_without_helper_expected",
+      "test_transparent_commands_do_not_invent_extra_export_extent",
+      "test_stroke_and_rotation_overflow_not_cropped_at_physical_edges",
+      "test_resources_and_groups_export_five_formats_with_native_backends",
+      "test_native_owner_guard_for_group_image_and_ink_queries",
+      "test_native_command_noop_image_is_rejected_by_color_oracle"
+    ],
+    "tests\\test_full_integration.py": [
+      "test_unicode_text_mixed_with_math_and_plain_labels",
+      "test_source_trustfalse_keeps_includegraphics_visible_rejection",
+      "test_source_trustfalse_htmlstyle_does_not_execute_inline_css",
+      "test_repeated_pure_cache_keeps_per_request_diagnostics",
+      "test_lap_overflow_extends_real_viewport_without_changing_logical_node",
+      "test_smash_vertical_ink_is_inside_export_for_node_edge_group",
+      "test_cd_tag_new_groups_keep_nested_glyph_trace_and_pixels",
+      "test_pmb_command_group_is_drawn_and_traced_recursively",
+      "test_htmlfalse_remains_literal_even_for_promoted_static_commands",
+      "test_formula_math_run_paint_and_visibility_noop_negative_control",
+      "test_unicode_math_state_remains_owner_thread_only",
+      "test_five_export_formats_keep_new_group_content"
+    ]
+  },
+  "methodCount": 41,
+  "files": {
+    "tests\\test_full_canvas.py": "7dd644bb927dc2199784e167dde192978b589a8d21e74e3cda178463f69a703f",
+    "tests\\test_full_integration.py": "9d3bec12d82eb50412776269e4028e6f4fca95a23d0c16424d52a3ab0909bacb",
+    "tests\\full-resource-cases.json": "5284bcba9dc58a45e22fb91b1adba32279c1e3d3ec3552c05d16f90aeb863218"
+  },
+  "assertions": "references/full-canvas-assertions.json",
+  "fixture": "tests/full-resource-cases.json",
+  "mechanicalRun": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-canvas-p2-compile-collect-20261105T153046Z-e9a68919",
+  "mechanicalExitCode": 0,
+  "nativeExecuted": false,
+  "imagesGenerated": false,
+  "productionSourceModified": false,
+  "argv": [
+    [
+      "C:/venvs/pymmd-20261102/Scripts/python.exe",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_full_canvas.py",
+      "-v"
+    ],
+    [
+      "C:/venvs/pymmd-20261102/Scripts/python.exe",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_full_integration.py",
+      "-v"
+    ]
+  ],
+  "cwd": "C:\\code\\py-visactor\\py-katex",
+  "env": {
+    "PYTHONPATH": "C:\\code\\py-visactor\\py-katex\\src;C:\\code\\py-visactor\\py-mermaid\\src",
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "resourceFixtureEncoding": "PNG/JPEG/WebP/GIF runtime Pillowencodingofindependenthandwrittenquad;selfcontainedSVGbase64alreadytextonly;noP2imagegeneration",
+  "knownStaticSuspicionsForP3": [
+    "Invalid/oversizedexplicitFontResourcecurrentlymayfallthroughtoplatformwithoutvalidation;testretainsrejectionexpectation",
+    "Nativefontsyntheticweight/stylemustmatchindependentfamilyreference,notonlytrace",
+    "Clip/filter/overflowandparsertrustedimagebranchesareunexecuteduntilP3"
+  ],
+  "historicalMethodsChanged": [],
+  "sourceOracleToolAdded": false,
+  "P3CanvasRepairs": {
+    "status": "targeted_checks_passed_full_acceptance_pending",
+    "priorFailures": "test-runs/MATH-batch-20261105T155834Z-e542e4f2",
+    "targetedRuns": [
+      {
+        "run": "MATH-FULL-record-20261105T161352Z-8ccfbd1e",
+        "status": "SUCCESS",
+        "sourceUnchanged": true
+      },
+      {
+        "run": "MATH-FULL-record-20261105T161402Z-5ef948a7",
+        "status": "SUCCESS",
+        "sourceUnchanged": true
+      }
+    ],
+    "compileRun": "MATH-FULL-record-20261105T161345Z-54495e80",
+    "preservedIntermediateFailure": "MATH-FULL-record-20261105T161236Z-fe60d461 (test string escaping syntax; corrected before functional rerun)",
+    "latestSourceFiles": {
+      "C:\\code\\py-visactor\\py-katex\\src\\py_katex\\canvas.py": "319f88635cf1551cc906e63942771f08e6d5dd9ba7c53ac9f2216e1ba305aebc",
+      "C:\\code\\py-visactor\\py-katex\\src\\py_katex\\resources.py": "98804265d043d15ab3c7a82b638610b3f10e2a3884c6cf6453787ea24f32366a",
+      "C:\\code\\py-visactor\\py-katex\\src\\py_katex\\layout_html.py": "b474c5657556ce31663461c3c885c00d82158ae0749e7738f12f210ce86a080c",
+      "C:\\code\\py-visactor\\py-mermaid\\src\\py_mermaid\\rendering\\skia\\session.py": "9ad6e38a6a5daf060664121b91ffe5dddff80bad8f64ba379f11d0e2df0cf5de",
+      "C:\\code\\py-visactor\\py-mermaid\\src\\py_mermaid\\rendering\\labels\\math.py": "21303bbbffbc8d64c8437f08cc08313d71299e0e8b86d4f77d6a037495326280"
+    },
+    "sourceAtStop": {
+      "math": "6dceee0e1bff88da567eb7b89cbc779d6225fbe322281de39e1e0bdfbce61924",
+      "mermaid": "6094d419ff3c50d2c64fdd00051af2be087b25a7a239cb1dae0e9e09209fdff1"
+    },
+    "changes": [
+      "Validate every explicit fallback font budget/header/directory and native decode before cmap coverage/fallback selection",
+      "Use complete bundled family registration for CSS font style/weight overrides; same face assembly for measure/draw/ink; original20 file aliases remain for default drawing",
+      "Validate htmlData attribute names at source build boundary using domTree regex; preserve parse acceptance",
+      "Trace actual bundled family alias for override glyphs; visual tool native glyphROI uses same documented alias namespace",
+      "Correct SVG/PDF test probe to accept retained vector paint; test both vectorSVG and rasterPNG resources over5formats/3backends, SVG native roundtrip pixels and PDF actual color streams",
+      "Correct html-paint fixture glyph requirement from rawCSS px letters to visible x"
+    ],
+    "sourceEvidence": [
+      "KaTeX styles/fonts.scss20-facefamily inventory, styles/katex.scss class axes",
+      "KaTeX domTree.ts invalidAttributeNameRegex (build-time rejection)",
+      "Canvas public FontLibrary.use(alias, paths) and Image(SVG) vector replay demonstrated by original failed export bytes",
+      "Actual original A/CPU full-layout-absolute-units.png showed source2sp rule visible; no pixel guard weakened; source rule CSS fix delegated B"
+    ],
+    "tests": {
+      "fullCanvasMethods": 30,
+      "fullIntegrationMethods": 12,
+      "total": 42,
+      "newMethod": "test_html_data_attribute_name_is_rejected_only_at_source_build_boundary"
+    },
+    "nativeImagesGeneratedByTests": true,
+    "fullVisualRunByC": false,
+    "limitations": [
+      "Only targeted42 methods verified here; unified root full corpus/matrix acceptance pending",
+      "No source glyph normalization aliases or unknown-check skips added to hide missing glyphs",
+      "No final PASS claimed from the earlier frozen candidate"
+    ]
+  },
+  "P3ColorGlyphCoverage": {
+    "status": "source_stopped_targeted_checks_passed_final_acceptance_pending",
+    "priorFailureRun": "MATH-FULL-batch-20261105T161801Z-3fa2e5c3",
+    "sourceCases": [
+      "core01719 U270C",
+      "core01720 text U270C"
+    ],
+    "beforeProbe": "MATH-FULL-batch-20261105T162932Z-2e8a1eee",
+    "actualBeforeObservation": "Generic serif already paints a colored hand (2024 alpha pixels at64px) but outline is empty. The same-family U10FFFF control has218 pixels and a different raster signature. Segoe UI Symbol has a real outline; Segoe UI Emoji is a color font without outline. All images/metrics retained.",
+    "changes": [
+      "Native raster coverage witness only when public outline is absent/equalto missing; compare actualRGBA and nonempty alpha against samefont missing control",
+      "Permit actual publicly installed family names and select additional installed candidates if primary generic lacks coverage; no formula-triggered file/network access",
+      "Physical ink uses public actualTextMetrics union for full system/external runs, including mixed partial-outline color runs; logicalmetrics unchanged",
+      "Visual helper empty-outline glyphROI falls back to actualTextMetrics rectangle and still requires actual encoded pixels"
+    ],
+    "targetedRuns": [
+      {
+        "run": "MATH-FULL-record-20261105T163709Z-35b35658",
+        "canvasMethods": 31,
+        "status": "PASS"
+      },
+      {
+        "run": "MATH-FULL-record-20261105T163811Z-b27ac9e3",
+        "integrationMethods": 13,
+        "status": "PASS"
+      }
+    ],
+    "actualAfterExports": "MATH-FULL-batch-20261105T164000Z-a92f566b",
+    "afterExportScope": "peace/plaintext/mixedCyrillicsmash nativePNG/JPG/WebP/SVG/PDF; SVG decoded again through public nativeImage and verified ink; known missing still MISSING_GLYPH",
+    "actualViews": [
+      "beforeProbe/artifacts/fallback-probe/serif-peace.png",
+      "afterExports/artifacts/color-glyph-exports/peace.png",
+      "afterExports/artifacts/color-glyph-exports/mixed-smash.png"
+    ],
+    "toolAndNegativeCompileRun": "MATH-FULL-record-20261105T164427Z-970e098e",
+    "newToolNegativeMethod": "test_visual_tool_color_metric_roi_rejects_white_noop_image (written+compiled, unexecuted as root requested; root final suite to run)",
+    "latestMethodCounts": {
+      "fullCanvas": 32,
+      "fullIntegration": 13,
+      "total": 45
+    },
+    "sourceAtStop": {
+      "math": "b658ff6849105e7b35932c9f17219d8662f24d323514fc8d25279ad2d102aa17",
+      "mermaid": "6094d419ff3c50d2c64fdd00051af2be087b25a7a239cb1dae0e9e09209fdff1"
+    },
+    "files": {
+      "C:\\code\\py-visactor\\py-katex\\src\\py_katex\\canvas.py": "2bcbbd8af039f3f600f49caec933e37821742d093d46c072f8dccbf1ccb531f0",
+      "C:\\code\\py-visactor\\py-katex\\tools\\full_visual_support.py": "d8d7ef06691445984817f83d7c8c20b388c7a7f8747241aef1d27d78f939c9f3",
+      "C:\\code\\py-visactor\\py-katex\\tests\\test_full_canvas.py": "7690714e6355c2b338c0cc1d59a2a6696b6ea2d6fef05611da916c55abda24f2",
+      "C:\\code\\py-visactor\\py-katex\\tests\\test_full_integration.py": "96c6612aa85c4bd13739797abd8ca3099d1bfa217ffd5cb1171c9ef603a80dc5"
+    },
+    "srcFurtherChanges": false,
+    "limitations": [
+      "Platform fallback remains a platform-font choice, not an offline universal font library",
+      "Empty native outline is not proof of missing glyph; real color glyphs must have nonempty pixels distinct from the missing control",
+      "No acceptance claim for unexecuted new tool counterexample until root unified final tests"
+    ]
+  },
+  "finalVerification": {
+    "status": "PASS_FULL_CORE_STATIC_LOCAL",
+    "summary": "references/full-verification-summary.json",
+    "jointSourceSHA256": {
+      "math": "334c412c34ef675dbc223405622c8d4e19eb56b1ff3700c251cb663d4afdd445",
+      "mermaid": "6094d419ff3c50d2c64fdd00051af2be087b25a7a239cb1dae0e9e09209fdff1"
+    },
+    "runs": {
+      "unit": "test-runs/MATH-FULL-batch-20261105T171602Z-0d9b6942",
+      "visual": "test-runs/MATH-FULL-batch-20261105T171857Z-5071cad7",
+      "legacy": "test-runs/MATH-FULL-batch-20261105T171629Z-8b5ef28e",
+      "report": "test-runs/MATH-FULL-batch-20261105T172308Z-e0e12af6",
+      "htmlQa": "test-runs/MATH-FULL-batch-20261105T172348Z-4daa587b",
+      "manual1": "test-runs/MATH-FULL-batch-20261105T171936Z-a5ca8881",
+      "manual2": "test-runs/MATH-FULL-batch-20261105T172008Z-7055e775"
+    }
+  }
+}

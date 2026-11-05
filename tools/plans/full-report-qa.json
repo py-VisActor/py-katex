@@ -1,0 +1,28 @@
+{
+  "schema": "py-mermaid-command-plan/v1",
+  "scope": "MATH-FULL",
+  "description": "Read-only final report UI: 825 views, five download SHA checks, desktop/mobile and no external requests.",
+  "steps": [
+    {
+      "name": "report-ui-script-syntax",
+      "argv": [
+        "node",
+        "--check",
+        "{repo}/tools/qa_report.cjs"
+      ],
+      "timeoutSeconds": 60
+    },
+    {
+      "name": "final-full-report-browser-qa",
+      "argv": [
+        "node",
+        "{repo}/tools/qa_report.cjs",
+        "--url",
+        "http://127.0.0.1:8765/MATH-FULL-batch-20261105T172308Z-e0e12af6/index.html",
+        "--out",
+        "{run}/artifacts/qa"
+      ],
+      "timeoutSeconds": 600
+    }
+  ]
+}

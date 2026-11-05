@@ -1,0 +1,5168 @@
+{
+  "schema": "py-katex-full-parser-sources/v1",
+  "scope": "MATH-FULL",
+  "phase": "P3",
+  "status": "batch_repaired_targeted_verified_joint_pending",
+  "version": "0.18.11",
+  "upstreamCommit": "d5bed9f38a8d747b9c4a12e18897a514707e1c26",
+  "registryAuthority": {
+    "path": "references/full-runtime-registry.json",
+    "sha256": "ac98b761f4809453e2068c17a907d7899b68542198b394593af397f22e8e4aa7",
+    "functions": 312,
+    "environments": 33,
+    "registeredTotal": 345,
+    "literalMacros": 319,
+    "dynamicMacros": 20,
+    "macroTotal": 339,
+    "correction": "Former334 static names were incomplete: actual source registry312functions+33environments=345. Macro main-module315literal excludes4function/environment literal registrations; complete339=319literal+20dynamic. Registry extraction is mechanical and not a behavior test."
+  },
+  "registeredFunctions": [
+    {
+      "name": "\\acute",
+      "sourceType": "accent",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\grave",
+      "sourceType": "accent",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\ddot",
+      "sourceType": "accent",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\tilde",
+      "sourceType": "accent",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\bar",
+      "sourceType": "accent",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\breve",
+      "sourceType": "accent",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\check",
+      "sourceType": "accent",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\hat",
+      "sourceType": "accent",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\vec",
+      "sourceType": "accent",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\dot",
+      "sourceType": "accent",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\mathring",
+      "sourceType": "accent",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\widecheck",
+      "sourceType": "accent",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\widehat",
+      "sourceType": "accent",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\widetilde",
+      "sourceType": "accent",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\overrightarrow",
+      "sourceType": "accent",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\overleftarrow",
+      "sourceType": "accent",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\Overrightarrow",
+      "sourceType": "accent",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\overleftrightarrow",
+      "sourceType": "accent",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\overgroup",
+      "sourceType": "accent",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\overlinesegment",
+      "sourceType": "accent",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\overleftharpoon",
+      "sourceType": "accent",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\overrightharpoon",
+      "sourceType": "accent",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\'",
+      "sourceType": "accent",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\`",
+      "sourceType": "accent",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\^",
+      "sourceType": "accent",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\~",
+      "sourceType": "accent",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\=",
+      "sourceType": "accent",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\u",
+      "sourceType": "accent",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\.",
+      "sourceType": "accent",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\\"",
+      "sourceType": "accent",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\c",
+      "sourceType": "accent",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\r",
+      "sourceType": "accent",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\H",
+      "sourceType": "accent",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\v",
+      "sourceType": "accent",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\textcircled",
+      "sourceType": "accent",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\underleftarrow",
+      "sourceType": "accentUnder",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\underrightarrow",
+      "sourceType": "accentUnder",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\underleftrightarrow",
+      "sourceType": "accentUnder",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\undergroup",
+      "sourceType": "accentUnder",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\underlinesegment",
+      "sourceType": "accentUnder",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\utilde",
+      "sourceType": "accentUnder",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\xleftarrow",
+      "sourceType": "xArrow",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\xrightarrow",
+      "sourceType": "xArrow",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\xLeftarrow",
+      "sourceType": "xArrow",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\xRightarrow",
+      "sourceType": "xArrow",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\xleftrightarrow",
+      "sourceType": "xArrow",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\xLeftrightarrow",
+      "sourceType": "xArrow",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\xhookleftarrow",
+      "sourceType": "xArrow",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\xhookrightarrow",
+      "sourceType": "xArrow",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\xmapsto",
+      "sourceType": "xArrow",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\xrightharpoondown",
+      "sourceType": "xArrow",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\xrightharpoonup",
+      "sourceType": "xArrow",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\xleftharpoondown",
+      "sourceType": "xArrow",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\xleftharpoonup",
+      "sourceType": "xArrow",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\xrightleftharpoons",
+      "sourceType": "xArrow",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\xleftrightharpoons",
+      "sourceType": "xArrow",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\xlongequal",
+      "sourceType": "xArrow",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\xtwoheadrightarrow",
+      "sourceType": "xArrow",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\xtwoheadleftarrow",
+      "sourceType": "xArrow",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\xtofrom",
+      "sourceType": "xArrow",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\xrightleftarrows",
+      "sourceType": "xArrow",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\xrightequilibrium",
+      "sourceType": "xArrow",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\xleftequilibrium",
+      "sourceType": "xArrow",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\\\cdrightarrow",
+      "sourceType": "xArrow",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\\\cdleftarrow",
+      "sourceType": "xArrow",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\\\cdlongequal",
+      "sourceType": "xArrow",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\mathord",
+      "sourceType": "mclass",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\mathbin",
+      "sourceType": "mclass",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\mathrel",
+      "sourceType": "mclass",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\mathopen",
+      "sourceType": "mclass",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\mathclose",
+      "sourceType": "mclass",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\mathpunct",
+      "sourceType": "mclass",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\mathinner",
+      "sourceType": "mclass",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\@binrel",
+      "sourceType": "mclass",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\stackrel",
+      "sourceType": "mclass",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\overset",
+      "sourceType": "mclass",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\underset",
+      "sourceType": "mclass",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\pmb",
+      "sourceType": "pmb",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\\\cdleft",
+      "sourceType": "cdlabel",
+      "nativeEntry": "parser.py.command internal CD projection",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\\\cdright",
+      "sourceType": "cdlabel",
+      "nativeEntry": "parser.py.command internal CD projection",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\\\cdparent",
+      "sourceType": "cdlabelparent",
+      "nativeEntry": "parser.py.command internal CD projection",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\@char",
+      "sourceType": "textord",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\textcolor",
+      "sourceType": "color",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\color",
+      "sourceType": "color",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\\\",
+      "sourceType": "cr",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\global",
+      "sourceType": "internal",
+      "nativeEntry": "parser.py.definition / macros.py.dynamic",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\long",
+      "sourceType": "internal",
+      "nativeEntry": "parser.py.definition / macros.py.dynamic",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\\\globallong",
+      "sourceType": "internal",
+      "nativeEntry": "parser.py.definition / macros.py.dynamic",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\def",
+      "sourceType": "internal",
+      "nativeEntry": "parser.py.definition / macros.py.dynamic",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\gdef",
+      "sourceType": "internal",
+      "nativeEntry": "parser.py.definition / macros.py.dynamic",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\edef",
+      "sourceType": "internal",
+      "nativeEntry": "parser.py.definition / macros.py.dynamic",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\xdef",
+      "sourceType": "internal",
+      "nativeEntry": "parser.py.definition / macros.py.dynamic",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\let",
+      "sourceType": "internal",
+      "nativeEntry": "parser.py.definition / macros.py.dynamic",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\\\globallet",
+      "sourceType": "internal",
+      "nativeEntry": "parser.py.definition / macros.py.dynamic",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\futurelet",
+      "sourceType": "internal",
+      "nativeEntry": "parser.py.definition / macros.py.dynamic",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\\\globalfuture",
+      "sourceType": "internal",
+      "nativeEntry": "parser.py.definition / macros.py.dynamic",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\bigl",
+      "sourceType": "delimsizing",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\Bigl",
+      "sourceType": "delimsizing",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\biggl",
+      "sourceType": "delimsizing",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\Biggl",
+      "sourceType": "delimsizing",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\bigr",
+      "sourceType": "delimsizing",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\Bigr",
+      "sourceType": "delimsizing",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\biggr",
+      "sourceType": "delimsizing",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\Biggr",
+      "sourceType": "delimsizing",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\bigm",
+      "sourceType": "delimsizing",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\Bigm",
+      "sourceType": "delimsizing",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\biggm",
+      "sourceType": "delimsizing",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\Biggm",
+      "sourceType": "delimsizing",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\big",
+      "sourceType": "delimsizing",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\Big",
+      "sourceType": "delimsizing",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\bigg",
+      "sourceType": "delimsizing",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\Bigg",
+      "sourceType": "delimsizing",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\right",
+      "sourceType": "leftright-right",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\left",
+      "sourceType": "leftright",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\middle",
+      "sourceType": "middle",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\colorbox",
+      "sourceType": "enclose",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\fcolorbox",
+      "sourceType": "enclose",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\fbox",
+      "sourceType": "enclose",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\cancel",
+      "sourceType": "enclose",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\bcancel",
+      "sourceType": "enclose",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\xcancel",
+      "sourceType": "enclose",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\phase",
+      "sourceType": "enclose",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\sout",
+      "sourceType": "enclose",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\angl",
+      "sourceType": "enclose",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\hline",
+      "sourceType": "text",
+      "nativeEntry": "parser.py.command text/mode/error guards",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\hdashline",
+      "sourceType": "text",
+      "nativeEntry": "parser.py.command text/mode/error guards",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\begin",
+      "sourceType": "environment",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\end",
+      "sourceType": "environment",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\mathrm",
+      "sourceType": "font",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\mathit",
+      "sourceType": "font",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\mathbf",
+      "sourceType": "font",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\mathnormal",
+      "sourceType": "font",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\mathsfit",
+      "sourceType": "font",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\mathbb",
+      "sourceType": "font",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\mathcal",
+      "sourceType": "font",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\mathfrak",
+      "sourceType": "font",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\mathscr",
+      "sourceType": "font",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\mathsf",
+      "sourceType": "font",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\mathtt",
+      "sourceType": "font",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\Bbb",
+      "sourceType": "font",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\bold",
+      "sourceType": "font",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\frak",
+      "sourceType": "font",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\boldsymbol",
+      "sourceType": "mclass",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\bm",
+      "sourceType": "mclass",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\rm",
+      "sourceType": "font",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\sf",
+      "sourceType": "font",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\tt",
+      "sourceType": "font",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\bf",
+      "sourceType": "font",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\it",
+      "sourceType": "font",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\cal",
+      "sourceType": "font",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\cfrac",
+      "sourceType": "genfrac",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\dfrac",
+      "sourceType": "genfrac",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\frac",
+      "sourceType": "genfrac",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\tfrac",
+      "sourceType": "genfrac",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\dbinom",
+      "sourceType": "genfrac",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\binom",
+      "sourceType": "genfrac",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\tbinom",
+      "sourceType": "genfrac",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\\\atopfrac",
+      "sourceType": "genfrac",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\\\bracefrac",
+      "sourceType": "genfrac",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\\\brackfrac",
+      "sourceType": "genfrac",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\over",
+      "sourceType": "infix",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\choose",
+      "sourceType": "infix",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\atop",
+      "sourceType": "infix",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\brace",
+      "sourceType": "infix",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\brack",
+      "sourceType": "infix",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\genfrac",
+      "sourceType": "genfrac",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\above",
+      "sourceType": "infix",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\\\abovefrac",
+      "sourceType": "genfrac",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\overbrace",
+      "sourceType": "horizBrace",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\underbrace",
+      "sourceType": "horizBrace",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\overbracket",
+      "sourceType": "horizBrace",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\underbracket",
+      "sourceType": "horizBrace",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\href",
+      "sourceType": "href",
+      "nativeEntry": "parser_support.py.parse_href",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\url",
+      "sourceType": "href",
+      "nativeEntry": "parser_support.py.parse_href",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\hbox",
+      "sourceType": "hbox",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\htmlClass",
+      "sourceType": "html",
+      "nativeEntry": "parser_support.py.parse_html",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\htmlId",
+      "sourceType": "html",
+      "nativeEntry": "parser_support.py.parse_html",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\htmlStyle",
+      "sourceType": "html",
+      "nativeEntry": "parser_support.py.parse_html",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\htmlData",
+      "sourceType": "html",
+      "nativeEntry": "parser_support.py.parse_html",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\html@mathml",
+      "sourceType": "htmlmathml",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\includegraphics",
+      "sourceType": "includegraphics",
+      "nativeEntry": "parser_support.py.parse_graphics",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\kern",
+      "sourceType": "kern",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\mkern",
+      "sourceType": "kern",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\hskip",
+      "sourceType": "kern",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\mskip",
+      "sourceType": "kern",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\mathllap",
+      "sourceType": "lap",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\mathrlap",
+      "sourceType": "lap",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\mathclap",
+      "sourceType": "lap",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\(",
+      "sourceType": "styling",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "$",
+      "sourceType": "styling",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\)",
+      "sourceType": "text",
+      "nativeEntry": "parser.py.command text/mode/error guards",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\]",
+      "sourceType": "text",
+      "nativeEntry": "parser.py.command text/mode/error guards",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\mathchoice",
+      "sourceType": "mathchoice",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\coprod",
+      "sourceType": "op",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\bigvee",
+      "sourceType": "op",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\bigwedge",
+      "sourceType": "op",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\biguplus",
+      "sourceType": "op",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\bigcap",
+      "sourceType": "op",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\bigcup",
+      "sourceType": "op",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\intop",
+      "sourceType": "op",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\prod",
+      "sourceType": "op",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\sum",
+      "sourceType": "op",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\bigotimes",
+      "sourceType": "op",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\bigoplus",
+      "sourceType": "op",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\bigodot",
+      "sourceType": "op",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\bigsqcup",
+      "sourceType": "op",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\smallint",
+      "sourceType": "op",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "∏",
+      "sourceType": "op",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "∐",
+      "sourceType": "op",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "∑",
+      "sourceType": "op",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "⋀",
+      "sourceType": "op",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "⋁",
+      "sourceType": "op",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "⋂",
+      "sourceType": "op",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "⋃",
+      "sourceType": "op",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "⨀",
+      "sourceType": "op",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "⨁",
+      "sourceType": "op",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "⨂",
+      "sourceType": "op",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "⨄",
+      "sourceType": "op",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "⨆",
+      "sourceType": "op",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\mathop",
+      "sourceType": "op",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\arcsin",
+      "sourceType": "op",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\arccos",
+      "sourceType": "op",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\arctan",
+      "sourceType": "op",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\arctg",
+      "sourceType": "op",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\arcctg",
+      "sourceType": "op",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\arg",
+      "sourceType": "op",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\ch",
+      "sourceType": "op",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\cos",
+      "sourceType": "op",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\cosec",
+      "sourceType": "op",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\cosh",
+      "sourceType": "op",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\cot",
+      "sourceType": "op",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\cotg",
+      "sourceType": "op",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\coth",
+      "sourceType": "op",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\csc",
+      "sourceType": "op",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\ctg",
+      "sourceType": "op",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\cth",
+      "sourceType": "op",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\deg",
+      "sourceType": "op",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\dim",
+      "sourceType": "op",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\exp",
+      "sourceType": "op",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\hom",
+      "sourceType": "op",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\ker",
+      "sourceType": "op",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\lg",
+      "sourceType": "op",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\ln",
+      "sourceType": "op",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\log",
+      "sourceType": "op",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\sec",
+      "sourceType": "op",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\sin",
+      "sourceType": "op",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\sinh",
+      "sourceType": "op",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\sh",
+      "sourceType": "op",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\tan",
+      "sourceType": "op",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\tanh",
+      "sourceType": "op",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\tg",
+      "sourceType": "op",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\th",
+      "sourceType": "op",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\det",
+      "sourceType": "op",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\gcd",
+      "sourceType": "op",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\inf",
+      "sourceType": "op",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\lim",
+      "sourceType": "op",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\max",
+      "sourceType": "op",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\min",
+      "sourceType": "op",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\Pr",
+      "sourceType": "op",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\sup",
+      "sourceType": "op",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\int",
+      "sourceType": "op",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\iint",
+      "sourceType": "op",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\iiint",
+      "sourceType": "op",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\oint",
+      "sourceType": "op",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\oiint",
+      "sourceType": "op",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\oiiint",
+      "sourceType": "op",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "∫",
+      "sourceType": "op",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "∬",
+      "sourceType": "op",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "∭",
+      "sourceType": "op",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "∮",
+      "sourceType": "op",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "∯",
+      "sourceType": "op",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "∰",
+      "sourceType": "op",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\operatorname@",
+      "sourceType": "operatorname",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\operatornamewithlimits",
+      "sourceType": "operatorname",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\overline",
+      "sourceType": "overline",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\phantom",
+      "sourceType": "phantom",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\vphantom",
+      "sourceType": "vphantom",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\raisebox",
+      "sourceType": "raisebox",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\reflectbox",
+      "sourceType": "reflectbox",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\mathreflectbox",
+      "sourceType": "reflectbox",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\relax",
+      "sourceType": "internal",
+      "nativeEntry": "parser.py.definition / macros.py.dynamic",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\rule",
+      "sourceType": "rule",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\tiny",
+      "sourceType": "sizing",
+      "nativeEntry": "parser.py.command source11 sizing names",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\sixptsize",
+      "sourceType": "sizing",
+      "nativeEntry": "parser.py.command source11 sizing names",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\scriptsize",
+      "sourceType": "sizing",
+      "nativeEntry": "parser.py.command source11 sizing names",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\footnotesize",
+      "sourceType": "sizing",
+      "nativeEntry": "parser.py.command source11 sizing names",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\small",
+      "sourceType": "sizing",
+      "nativeEntry": "parser.py.command source11 sizing names",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\normalsize",
+      "sourceType": "sizing",
+      "nativeEntry": "parser.py.command source11 sizing names",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\large",
+      "sourceType": "sizing",
+      "nativeEntry": "parser.py.command source11 sizing names",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\Large",
+      "sourceType": "sizing",
+      "nativeEntry": "parser.py.command source11 sizing names",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\LARGE",
+      "sourceType": "sizing",
+      "nativeEntry": "parser.py.command source11 sizing names",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\huge",
+      "sourceType": "sizing",
+      "nativeEntry": "parser.py.command source11 sizing names",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\Huge",
+      "sourceType": "sizing",
+      "nativeEntry": "parser.py.command source11 sizing names",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\smash",
+      "sourceType": "smash",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\sqrt",
+      "sourceType": "sqrt",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\displaystyle",
+      "sourceType": "styling",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\textstyle",
+      "sourceType": "styling",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\scriptstyle",
+      "sourceType": "styling",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\scriptscriptstyle",
+      "sourceType": "styling",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\text",
+      "sourceType": "text",
+      "nativeEntry": "parser.py.command text/mode/error guards",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\textrm",
+      "sourceType": "text",
+      "nativeEntry": "parser.py.command text/mode/error guards",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\textsf",
+      "sourceType": "text",
+      "nativeEntry": "parser.py.command text/mode/error guards",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\texttt",
+      "sourceType": "text",
+      "nativeEntry": "parser.py.command text/mode/error guards",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\textnormal",
+      "sourceType": "text",
+      "nativeEntry": "parser.py.command text/mode/error guards",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\textbf",
+      "sourceType": "text",
+      "nativeEntry": "parser.py.command text/mode/error guards",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\textmd",
+      "sourceType": "text",
+      "nativeEntry": "parser.py.command text/mode/error guards",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\textit",
+      "sourceType": "text",
+      "nativeEntry": "parser.py.command text/mode/error guards",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\textup",
+      "sourceType": "text",
+      "nativeEntry": "parser.py.command text/mode/error guards",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\emph",
+      "sourceType": "text",
+      "nativeEntry": "parser.py.command text/mode/error guards",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\underline",
+      "sourceType": "underline",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\vcenter",
+      "sourceType": "vcenter",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    },
+    {
+      "name": "\\verb",
+      "sourceType": "verb",
+      "nativeEntry": "parser.py.command/atom/symbol",
+      "status": "code_complete_unverified",
+      "sourceModeAndArgumentFlags": "src/py_katex/function_modes.py complete312 registration metadata"
+    }
+  ],
+  "registeredEnvironments": [
+    {
+      "name": "array",
+      "sourceProps": {
+        "type": "array",
+        "numArgs": 1,
+        "allowedInText": false,
+        "numOptionalArgs": 0
+      },
+      "nativeEntry": "parser_arrays.py.environment",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "darray",
+      "sourceProps": {
+        "type": "array",
+        "numArgs": 1,
+        "allowedInText": false,
+        "numOptionalArgs": 0
+      },
+      "nativeEntry": "parser_arrays.py.environment",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "matrix",
+      "sourceProps": {
+        "type": "array",
+        "numArgs": 0,
+        "allowedInText": false,
+        "numOptionalArgs": 0
+      },
+      "nativeEntry": "parser_arrays.py.environment",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "pmatrix",
+      "sourceProps": {
+        "type": "array",
+        "numArgs": 0,
+        "allowedInText": false,
+        "numOptionalArgs": 0
+      },
+      "nativeEntry": "parser_arrays.py.environment",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "bmatrix",
+      "sourceProps": {
+        "type": "array",
+        "numArgs": 0,
+        "allowedInText": false,
+        "numOptionalArgs": 0
+      },
+      "nativeEntry": "parser_arrays.py.environment",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "Bmatrix",
+      "sourceProps": {
+        "type": "array",
+        "numArgs": 0,
+        "allowedInText": false,
+        "numOptionalArgs": 0
+      },
+      "nativeEntry": "parser_arrays.py.environment",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "vmatrix",
+      "sourceProps": {
+        "type": "array",
+        "numArgs": 0,
+        "allowedInText": false,
+        "numOptionalArgs": 0
+      },
+      "nativeEntry": "parser_arrays.py.environment",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "Vmatrix",
+      "sourceProps": {
+        "type": "array",
+        "numArgs": 0,
+        "allowedInText": false,
+        "numOptionalArgs": 0
+      },
+      "nativeEntry": "parser_arrays.py.environment",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "matrix*",
+      "sourceProps": {
+        "type": "array",
+        "numArgs": 0,
+        "allowedInText": false,
+        "numOptionalArgs": 0
+      },
+      "nativeEntry": "parser_arrays.py.environment",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "pmatrix*",
+      "sourceProps": {
+        "type": "array",
+        "numArgs": 0,
+        "allowedInText": false,
+        "numOptionalArgs": 0
+      },
+      "nativeEntry": "parser_arrays.py.environment",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "bmatrix*",
+      "sourceProps": {
+        "type": "array",
+        "numArgs": 0,
+        "allowedInText": false,
+        "numOptionalArgs": 0
+      },
+      "nativeEntry": "parser_arrays.py.environment",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "Bmatrix*",
+      "sourceProps": {
+        "type": "array",
+        "numArgs": 0,
+        "allowedInText": false,
+        "numOptionalArgs": 0
+      },
+      "nativeEntry": "parser_arrays.py.environment",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "vmatrix*",
+      "sourceProps": {
+        "type": "array",
+        "numArgs": 0,
+        "allowedInText": false,
+        "numOptionalArgs": 0
+      },
+      "nativeEntry": "parser_arrays.py.environment",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "Vmatrix*",
+      "sourceProps": {
+        "type": "array",
+        "numArgs": 0,
+        "allowedInText": false,
+        "numOptionalArgs": 0
+      },
+      "nativeEntry": "parser_arrays.py.environment",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "smallmatrix",
+      "sourceProps": {
+        "type": "array",
+        "numArgs": 0,
+        "allowedInText": false,
+        "numOptionalArgs": 0
+      },
+      "nativeEntry": "parser_arrays.py.environment",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "subarray",
+      "sourceProps": {
+        "type": "array",
+        "numArgs": 1,
+        "allowedInText": false,
+        "numOptionalArgs": 0
+      },
+      "nativeEntry": "parser_arrays.py.environment",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "cases",
+      "sourceProps": {
+        "type": "array",
+        "numArgs": 0,
+        "allowedInText": false,
+        "numOptionalArgs": 0
+      },
+      "nativeEntry": "parser_arrays.py.environment",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "dcases",
+      "sourceProps": {
+        "type": "array",
+        "numArgs": 0,
+        "allowedInText": false,
+        "numOptionalArgs": 0
+      },
+      "nativeEntry": "parser_arrays.py.environment",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "rcases",
+      "sourceProps": {
+        "type": "array",
+        "numArgs": 0,
+        "allowedInText": false,
+        "numOptionalArgs": 0
+      },
+      "nativeEntry": "parser_arrays.py.environment",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "drcases",
+      "sourceProps": {
+        "type": "array",
+        "numArgs": 0,
+        "allowedInText": false,
+        "numOptionalArgs": 0
+      },
+      "nativeEntry": "parser_arrays.py.environment",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "align",
+      "sourceProps": {
+        "type": "array",
+        "numArgs": 0,
+        "allowedInText": false,
+        "numOptionalArgs": 0
+      },
+      "nativeEntry": "parser_arrays.py.environment",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "align*",
+      "sourceProps": {
+        "type": "array",
+        "numArgs": 0,
+        "allowedInText": false,
+        "numOptionalArgs": 0
+      },
+      "nativeEntry": "parser_arrays.py.environment",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "aligned",
+      "sourceProps": {
+        "type": "array",
+        "numArgs": 0,
+        "allowedInText": false,
+        "numOptionalArgs": 0
+      },
+      "nativeEntry": "parser_arrays.py.environment",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "split",
+      "sourceProps": {
+        "type": "array",
+        "numArgs": 0,
+        "allowedInText": false,
+        "numOptionalArgs": 0
+      },
+      "nativeEntry": "parser_arrays.py.environment",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "gathered",
+      "sourceProps": {
+        "type": "array",
+        "numArgs": 0,
+        "allowedInText": false,
+        "numOptionalArgs": 0
+      },
+      "nativeEntry": "parser_arrays.py.environment",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "gather",
+      "sourceProps": {
+        "type": "array",
+        "numArgs": 0,
+        "allowedInText": false,
+        "numOptionalArgs": 0
+      },
+      "nativeEntry": "parser_arrays.py.environment",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "gather*",
+      "sourceProps": {
+        "type": "array",
+        "numArgs": 0,
+        "allowedInText": false,
+        "numOptionalArgs": 0
+      },
+      "nativeEntry": "parser_arrays.py.environment",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "alignat",
+      "sourceProps": {
+        "type": "array",
+        "numArgs": 1,
+        "allowedInText": false,
+        "numOptionalArgs": 0
+      },
+      "nativeEntry": "parser_arrays.py.environment",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "alignat*",
+      "sourceProps": {
+        "type": "array",
+        "numArgs": 1,
+        "allowedInText": false,
+        "numOptionalArgs": 0
+      },
+      "nativeEntry": "parser_arrays.py.environment",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "alignedat",
+      "sourceProps": {
+        "type": "array",
+        "numArgs": 1,
+        "allowedInText": false,
+        "numOptionalArgs": 0
+      },
+      "nativeEntry": "parser_arrays.py.environment",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "equation",
+      "sourceProps": {
+        "type": "array",
+        "numArgs": 0,
+        "allowedInText": false,
+        "numOptionalArgs": 0
+      },
+      "nativeEntry": "parser_arrays.py.environment",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "equation*",
+      "sourceProps": {
+        "type": "array",
+        "numArgs": 0,
+        "allowedInText": false,
+        "numOptionalArgs": 0
+      },
+      "nativeEntry": "parser_arrays.py.environment",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "CD",
+      "sourceProps": {
+        "type": "array",
+        "numArgs": 0,
+        "allowedInText": false,
+        "numOptionalArgs": 0
+      },
+      "nativeEntry": "parser_arrays.py.parse_cd",
+      "status": "code_complete_unverified"
+    }
+  ],
+  "registeredMacros": [
+    {
+      "name": "\\nonumber",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\notag",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\operatorname",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\hphantom",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\noexpand",
+      "kind": "function",
+      "nativeEntry": "macros.py.dynamic",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\expandafter",
+      "kind": "function",
+      "nativeEntry": "macros.py.dynamic",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\@firstoftwo",
+      "kind": "function",
+      "nativeEntry": "macros.py.dynamic",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\@secondoftwo",
+      "kind": "function",
+      "nativeEntry": "macros.py.dynamic",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\@ifnextchar",
+      "kind": "function",
+      "nativeEntry": "macros.py.dynamic",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\@ifstar",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\TextOrMath",
+      "kind": "function",
+      "nativeEntry": "macros.py.dynamic",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\char",
+      "kind": "function",
+      "nativeEntry": "macros.py.dynamic",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\newcommand",
+      "kind": "function",
+      "nativeEntry": "macros.py.dynamic",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\renewcommand",
+      "kind": "function",
+      "nativeEntry": "macros.py.dynamic",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\providecommand",
+      "kind": "function",
+      "nativeEntry": "macros.py.dynamic",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\message",
+      "kind": "function",
+      "nativeEntry": "macros.py.dynamic",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\errmessage",
+      "kind": "function",
+      "nativeEntry": "macros.py.dynamic",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\show",
+      "kind": "function",
+      "nativeEntry": "macros.py.dynamic",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\bgroup",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\egroup",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "~",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\lq",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\rq",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\aa",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\AA",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\textcopyright",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\copyright",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\textregistered",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "ℬ",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "ℰ",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "ℱ",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "ℋ",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "ℐ",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "ℒ",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "ℳ",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "ℛ",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "ℭ",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "ℌ",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "ℨ",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\Bbbk",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\llap",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\rlap",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\clap",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\mathstrut",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\underbar",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\not",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\neq",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\ne",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "≠",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\notin",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "∉",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "≘",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "≙",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "≚",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "≛",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "≝",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "≞",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "≟",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "⟂",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "‼",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "∌",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "⌜",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "⌝",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "⌞",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "⌟",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "©",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "®",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\ulcorner",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\urcorner",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\llcorner",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\lrcorner",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\vdots",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "⋮",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\varGamma",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\varDelta",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\varTheta",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\varLambda",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\varXi",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\varPi",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\varSigma",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\varUpsilon",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\varPhi",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\varPsi",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\varOmega",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\substack",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\colon",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\boxed",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\iff",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\implies",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\impliedby",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\dddot",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\ddddot",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\dots",
+      "kind": "function",
+      "nativeEntry": "macros.py.dynamic",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\dotso",
+      "kind": "function",
+      "nativeEntry": "macros.py.dynamic",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\dotsc",
+      "kind": "function",
+      "nativeEntry": "macros.py.dynamic",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\cdots",
+      "kind": "function",
+      "nativeEntry": "macros.py.dynamic",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\dotsb",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\dotsm",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\dotsi",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\dotsx",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\DOTSI",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\DOTSB",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\DOTSX",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\tmspace",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\,",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\thinspace",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\>",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\:",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\medspace",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\;",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\thickspace",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\!",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\negthinspace",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\negmedspace",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\negthickspace",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\enspace",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\enskip",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\quad",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\qquad",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\tag",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\tag@paren",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\tag@literal",
+      "kind": "function",
+      "nativeEntry": "macros.py.dynamic",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\bmod",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\pod",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\pmod",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\mod",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\newline",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\TeX",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\LaTeX",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\KaTeX",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\hspace",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\@hspace",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\@hspacer",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\ordinarycolon",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\vcentcolon",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\dblcolon",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\coloneqq",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\Coloneqq",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\coloneq",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\Coloneq",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\eqqcolon",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\Eqqcolon",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\eqcolon",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\Eqcolon",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\colonapprox",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\Colonapprox",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\colonsim",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\Colonsim",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "∷",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "∹",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "≔",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "≕",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "⩴",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\ratio",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\coloncolon",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\colonequals",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\coloncolonequals",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\equalscolon",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\equalscoloncolon",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\colonminus",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\coloncolonminus",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\minuscolon",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\minuscoloncolon",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\coloncolonapprox",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\coloncolonsim",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\simcolon",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\simcoloncolon",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\approxcolon",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\approxcoloncolon",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\notni",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\limsup",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\liminf",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\injlim",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\projlim",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\varlimsup",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\varliminf",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\varinjlim",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\varprojlim",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\gvertneqq",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\lvertneqq",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\ngeqq",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\ngeqslant",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\nleqq",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\nleqslant",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\nshortmid",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\nshortparallel",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\nsubseteqq",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\nsupseteqq",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\varsubsetneq",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\varsubsetneqq",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\varsupsetneq",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\varsupsetneqq",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\imath",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\jmath",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\llbracket",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\rrbracket",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "⟦",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "⟧",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\lBrace",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\rBrace",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "↤",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\mapsfrom",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "⦃",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "⦄",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\minuso",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "⦵",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\darr",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\dArr",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\Darr",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\lang",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\rang",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\uarr",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\uArr",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\Uarr",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\N",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\R",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\Z",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\alef",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\alefsym",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\Alpha",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\Beta",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\bull",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\Chi",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\clubs",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\cnums",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\Complex",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\Dagger",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\diamonds",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\empty",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\Epsilon",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\Eta",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\exist",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\harr",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\hArr",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\Harr",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\hearts",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\image",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\infin",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\Iota",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\isin",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\Kappa",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\larr",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\lArr",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\Larr",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\lrarr",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\lrArr",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\Lrarr",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\Mu",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\natnums",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\Nu",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\Omicron",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\plusmn",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\rarr",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\rArr",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\Rarr",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\real",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\reals",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\Reals",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\Rho",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\sdot",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\sect",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\spades",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\sub",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\sube",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\supe",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\Tau",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\thetasym",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\weierp",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\Zeta",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\argmin",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\argmax",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\plim",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\bra",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\ket",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\braket",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\Bra",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\Ket",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\bra@ket",
+      "kind": "function",
+      "nativeEntry": "macros.py.dynamic",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\bra@set",
+      "kind": "function",
+      "nativeEntry": "macros.py.dynamic",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\Braket",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\Set",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\set",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\angln",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\blue",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\orange",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\pink",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\red",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\green",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\gray",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\purple",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\blueA",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\blueB",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\blueC",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\blueD",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\blueE",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\tealA",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\tealB",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\tealC",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\tealD",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\tealE",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\greenA",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\greenB",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\greenC",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\greenD",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\greenE",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\goldA",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\goldB",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\goldC",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\goldD",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\goldE",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\redA",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\redB",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\redC",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\redD",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\redE",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\maroonA",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\maroonB",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\maroonC",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\maroonD",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\maroonE",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\purpleA",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\purpleB",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\purpleC",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\purpleD",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\purpleE",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\mintA",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\mintB",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\mintC",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\grayA",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\grayB",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\grayC",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\grayD",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\grayE",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\grayF",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\grayG",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\grayH",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\grayI",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\kaBlue",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    },
+    {
+      "name": "\\kaGreen",
+      "kind": "literal",
+      "nativeEntry": "data/macros.json or native4 extra literal bindings",
+      "status": "code_complete_unverified"
+    }
+  ],
+  "sources": [
+    {
+      "path": "src/functions/accent.ts",
+      "sha256": "dda6b456e07c6e06b74dcacc7a5dbb07131ae6fc0e7bece477518cb632ff43ff"
+    },
+    {
+      "path": "src/functions/accentunder.ts",
+      "sha256": "71203e0e43e43cf85633afab70a788c386ff4e39f6da32f630c070174dfe7333"
+    },
+    {
+      "path": "src/functions/arrow.ts",
+      "sha256": "5c56a8a89b19e9d7b8c29563fc3e266a5fcd880d7b49e113d3a627bc3a4af89d"
+    },
+    {
+      "path": "src/functions/char.ts",
+      "sha256": "66fc6783c6bde698033b3205de180224f6495ee972453f0d867b8b792a2cf0da"
+    },
+    {
+      "path": "src/functions/color.ts",
+      "sha256": "f984e013b3e9971e8007b8dade637f5c09c42b810df0dbb65bf9d25fc3d641d4"
+    },
+    {
+      "path": "src/functions/cr.ts",
+      "sha256": "ec4934b1c96458df9752a0dd7d49b8190fe5cc85daf5a95369ebca1876dd6a49"
+    },
+    {
+      "path": "src/functions/def.ts",
+      "sha256": "e1b9227b9e436968a0776f95596d0713d2f655465fabdade7f48940a7e6289e5"
+    },
+    {
+      "path": "src/functions/delimsizing.ts",
+      "sha256": "323593436330d3ae57d370955c6ed4467e2eb24f8db3cc04dd810bfca8e45e9e"
+    },
+    {
+      "path": "src/functions/enclose.ts",
+      "sha256": "29a55bbe218a9248a6559a8f094e0acf33cde8b6847b62eb50d343495d71fbb8"
+    },
+    {
+      "path": "src/functions/environment.ts",
+      "sha256": "6a0fe0788b6c8464d52d5a65211125c0ef57fa0695ebbf6ccf7a029b783d6556"
+    },
+    {
+      "path": "src/functions/font.ts",
+      "sha256": "44c87d85ec5c123d315a8e4fb63920ad1edbb763618e84a050a8a8ff88b8d00d"
+    },
+    {
+      "path": "src/functions/genfrac.ts",
+      "sha256": "c461e8a5363a992e67adbe4c1312723c928be836fe47ee851ae9869e48998538"
+    },
+    {
+      "path": "src/functions/hbox.ts",
+      "sha256": "e7aa1cd26792786f88a67631a30494a807a26365d0ec653811fbb0d6ab54fa7c"
+    },
+    {
+      "path": "src/functions/horizBrace.ts",
+      "sha256": "9e20b9a3cb406bf39d83b44aecd153f1f5084f3a11c54affd979130f156326be"
+    },
+    {
+      "path": "src/functions/href.ts",
+      "sha256": "fddf577b3e748f60c9cd3e1fd4d1f640e03877ec185c2964646021e42b08ef93"
+    },
+    {
+      "path": "src/functions/html.ts",
+      "sha256": "4f5fe66b6ce181af459136bcaed9b1655fbe03493f96148d4ee5eddca6829ff5"
+    },
+    {
+      "path": "src/functions/htmlmathml.ts",
+      "sha256": "b41f8267a62e2b668e828d6aeb072a2b6506f69339f8d0194083d98d306d9f1f"
+    },
+    {
+      "path": "src/functions/includegraphics.ts",
+      "sha256": "dd1ea2395ae66d58dc272dd6083d4f6e0551d486b2c779f0a7b618088e35c4e8"
+    },
+    {
+      "path": "src/functions/kern.ts",
+      "sha256": "15ebbb72bf615ef75147e7542961b638f420441335f43af06f562f02b8e29140"
+    },
+    {
+      "path": "src/functions/lap.ts",
+      "sha256": "e8635a2d39b27c3aa195ef6e04ba41259a7af8830d1847e54cee8a7d5a7a6369"
+    },
+    {
+      "path": "src/functions/math.ts",
+      "sha256": "0d69cb2a50bf577e119e366f170f3d2b226c4cbeb1e4fef7f51ff25fe3e53298"
+    },
+    {
+      "path": "src/functions/mathchoice.ts",
+      "sha256": "cc148d0086a9f157ef74c000798f807969de4e123f83095eeac9ef3ff24dceec"
+    },
+    {
+      "path": "src/functions/mclass.ts",
+      "sha256": "1a8c5f5a657bf99737792ddaa0c3a48d7cdacd977c4640554b953d8f6dcbdce1"
+    },
+    {
+      "path": "src/functions/op.ts",
+      "sha256": "a04557b2f14cccd7927b8ea60cdf3f7df649abe52ed3b81748145538deb25a9d"
+    },
+    {
+      "path": "src/functions/operatorname.ts",
+      "sha256": "8ba05f2e8dd6cd239d67c3305dab773ded3dab5cb2a596e99351f3f9c0e01c7b"
+    },
+    {
+      "path": "src/functions/ordgroup.ts",
+      "sha256": "e25553e23f3223eae7e5eac16387241d44002b66e52250bdb71edb2c68713569"
+    },
+    {
+      "path": "src/functions/overline.ts",
+      "sha256": "c1e98a5ecc6747fdeb8c90739d9435319593bd2914e0158dd3bab141c23753b1"
+    },
+    {
+      "path": "src/functions/phantom.ts",
+      "sha256": "0a07fa74d2af167a9d8c86a338b35ab6224937197488e33321a0c5ed498214cf"
+    },
+    {
+      "path": "src/functions/pmb.ts",
+      "sha256": "7e82813c396939c8ff439d44a24564ea2279fa1fcf6600d7d114d750f0fd8eb1"
+    },
+    {
+      "path": "src/functions/raisebox.ts",
+      "sha256": "03188879d689525508c0488b352695e74749fa89e0fdc687fbf92a1d49a224bc"
+    },
+    {
+      "path": "src/functions/reflectbox.ts",
+      "sha256": "468e3fc5ca118f267f0515e1f7de7a138acb7c53757b831b968c29b5d7e9fe78"
+    },
+    {
+      "path": "src/functions/relax.ts",
+      "sha256": "92424c0c9911b1b5e3829933068d7bb5a6a12e1c5549271cdb6115f4e288fe22"
+    },
+    {
+      "path": "src/functions/rule.ts",
+      "sha256": "6653da2a6d19e7088a94e183b58b84613efe52c346eab699f8b53c30310798b9"
+    },
+    {
+      "path": "src/functions/sizing.ts",
+      "sha256": "6bfc375f192a772fa9429a79a59c93cb9fe17c0fb15322f9679384d54d5afbd8"
+    },
+    {
+      "path": "src/functions/smash.ts",
+      "sha256": "d2b066e91dcd8fde540beeffbba5bd0a500852593897face2dac2098d1cafac8"
+    },
+    {
+      "path": "src/functions/sqrt.ts",
+      "sha256": "99347b6bb9d43e5b5a0f3c8462b36b32a9c351ab6325bd90e157cb7b809815fa"
+    },
+    {
+      "path": "src/functions/styling.ts",
+      "sha256": "f5a83e7f147b8d329eebfe681c00157e035b6f39a9592e0bf98d47bb5dd0ce35"
+    },
+    {
+      "path": "src/functions/supsub.ts",
+      "sha256": "678fa75ede89b9590fcdcfbca9da35c377184fe0958506fc3825482d3abd2b1b"
+    },
+    {
+      "path": "src/functions/symbolsOp.ts",
+      "sha256": "78aedc6446df270bd0e3916ecdba0e9b27eb079052bff403d8c9e33637e6e9ed"
+    },
+    {
+      "path": "src/functions/symbolsOrd.ts",
+      "sha256": "07708c52f2ba449467eb80d81cc1040c2eb0a9a19cbd6fb793f0c74794523550"
+    },
+    {
+      "path": "src/functions/symbolsSpacing.ts",
+      "sha256": "28bdc1bce42dbd013491b817c24fd36c56360adbe371fce3091fe2f05b46b3e1"
+    },
+    {
+      "path": "src/functions/tag.ts",
+      "sha256": "281a3cfd5afb46e2f1bd057018c5cd5964cc0a558ab1da05499cc56bb83343c7"
+    },
+    {
+      "path": "src/functions/text.ts",
+      "sha256": "0141e26c0d8251434eb1c1e56324f0b7220fecf11dad9d3f20b4557043ab63e6"
+    },
+    {
+      "path": "src/functions/underline.ts",
+      "sha256": "1f76a0f2b86604387a376bdebba4a384e2e9bd618ea715b97d6617c5a5da607c"
+    },
+    {
+      "path": "src/functions/vcenter.ts",
+      "sha256": "6274035078e962a53169f590fa66d737fb1e1d0e335eab06a9b979700fa6460f"
+    },
+    {
+      "path": "src/functions/verb.ts",
+      "sha256": "d08b52ef375213aa97cd5a3573b43719e263ac566cb15fc0c89cba331846514d"
+    },
+    {
+      "path": "src/environments/array.ts",
+      "sha256": "623b540461126519249547e39e7da7a148ff86efd3552b02292ee57ed9a17f60"
+    },
+    {
+      "path": "src/environments/cd.ts",
+      "sha256": "432889c62cb7bfb0fd971d9deea20f822ea78cd92aded20e6439559a89466533"
+    },
+    {
+      "path": "src/Lexer.ts",
+      "sha256": "9c783877051619e6a71cf3ed95ce5935ceb869772585d09811f84f57ab5818bb"
+    },
+    {
+      "path": "src/Parser.ts",
+      "sha256": "c1aed05097bb0c429b7e1b5fe0862a7db515bd1682b014d6775edeb2e8da0e6a"
+    },
+    {
+      "path": "src/MacroExpander.ts",
+      "sha256": "dca51df6efae6c4f958c2313d566910f4857db7e4930c216c88de6cb3aeb4b27"
+    },
+    {
+      "path": "src/Namespace.ts",
+      "sha256": "ea3e7f8e0aa100c5639120ad4590b7ff7a9592afca8a766badc1f59dfaab4f43"
+    },
+    {
+      "path": "src/Settings.ts",
+      "sha256": "a3b04291805997c2a7f0c7600f78034b4ea79783ce2f238e5ca81ef52265acb1"
+    },
+    {
+      "path": "src/strict.ts",
+      "sha256": "d1c05bd720e7e3e98b02ee7a14001d8d61febf872da6e4a7759bf5c2af6b0124"
+    },
+    {
+      "path": "src/parseTree.ts",
+      "sha256": "9e286b351c5296c1d1725783bd0232651f7e7ec6eb18292f7ae35385c4b27ae7"
+    },
+    {
+      "path": "src/defineMacro.ts",
+      "sha256": "c0655fa3d75a8da2b7afc0c37663c38df50dd7a8f304622b3f58320e93727322"
+    },
+    {
+      "path": "src/defineFunction.ts",
+      "sha256": "2faf11239fcaacb757711e261a16c13b95b239a1ae302e22647cd0aac823422e"
+    },
+    {
+      "path": "src/defineEnvironment.ts",
+      "sha256": "63bb6de51837e0de268153e40e67dc0c0899fa2a69cfedb967f90c12df47238b"
+    },
+    {
+      "path": "src/macros.ts",
+      "sha256": "13adf540091b6c4d4a31bcd65fe325b74beffc37f2ddb8017f52d024c73a1fdc"
+    },
+    {
+      "path": "src/symbols.ts",
+      "sha256": "88bf41a79569d9c860292049e897cbd12019dd43f7e3e0044e39ca5deb356b84"
+    },
+    {
+      "path": "src/unicodeSymbols.js",
+      "sha256": "9c16656286cc5575a3e250b6e47c900802a24fe0a59c1cb0e3bb5c5d51f1f27e"
+    },
+    {
+      "path": "src/unicodeAccents.js",
+      "sha256": "f3c3358ad79c0cc26a96f2741bfbe0e494ba4f075a0fb400758dc204097a3c55"
+    },
+    {
+      "path": "src/unicodeScripts.ts",
+      "sha256": "daa4cbbd11dee174f1d9a1b5ceb23e943647a6bf56e57d901d7aea4f6ee3abe1"
+    },
+    {
+      "path": "src/unicodeSupOrSub.ts",
+      "sha256": "5e2e71ab0ce483ee6e876e75e80785fca176d970276eb7a576b4283a35acc074"
+    },
+    {
+      "path": "src/wide-character.ts",
+      "sha256": "108f968fa87f3a14cf7534c129faec8ed440c27250bcc17d79c0f897df108bcd"
+    },
+    {
+      "path": "src/units.ts",
+      "sha256": "09e9e034abfb99210cdf393ca0c639af0e34b017613a05fca280a76aff12e818"
+    }
+  ],
+  "productFiles": [
+    {
+      "path": "src/py_katex/parser.py",
+      "sha256": "882a6453abce511e2620cc41a55a559bea3bd4fb7c5a8cc3dd88953fac038893"
+    },
+    {
+      "path": "src/py_katex/macros.py",
+      "sha256": "db83af02868d7c9abd99d52ae8c05906ba775ef83e5c6b3787265e584e633d28"
+    },
+    {
+      "path": "src/py_katex/function_modes.py",
+      "sha256": "009f91c422b2509c9b6295f082745957fa1f51adfe295722d5dccd2ee8fc98c3"
+    },
+    {
+      "path": "src/py_katex/unicode_scripts.py",
+      "sha256": "e4da87d793f4775d81970f180a2e51861e70bccbfa5bce4ec0ba786611abfacb"
+    },
+    {
+      "path": "src/py_katex/parser_support.py",
+      "sha256": "d40c04570870af99fab6374e37b953cf3b995550704d3f6e13db59636edc2b07"
+    },
+    {
+      "path": "src/py_katex/parser_arrays.py",
+      "sha256": "428b98a75857dae77249cfac6f87d84d38c1a1d622386c8589f2aa9bdccc54c1"
+    },
+    {
+      "path": "src/py_katex/parser_unicode.py",
+      "sha256": "9abfb10a9edfb59311244e1893a89fcbe0b11ad997a0ebadc60a96151009e3c5"
+    },
+    {
+      "path": "src/py_katex/macro_context.py",
+      "sha256": "62ef2b474c796dc583a68ca54d5b27b25c529a706dfe6240aa75f5ef8872976d"
+    },
+    {
+      "path": "docs/AST.md",
+      "sha256": "af27ca03a34db1635ce062eb45b2a1385cd94f9df70df53bbb7839dd96d00d64"
+    }
+  ],
+  "astContract": "docs/AST.md#math-full-contract-v2-current",
+  "parseParameters": [
+    "macros",
+    "max_expand",
+    "max_depth",
+    "max_nodes",
+    "trust",
+    "display_mode",
+    "strict",
+    "color_is_text_color",
+    "global_group",
+    "error_color",
+    "macro_state",
+    "leqno",
+    "throw_on_error"
+  ],
+  "sourceWork": {
+    "fullMacroScope": "Separated builtins and current namespace, explicit MacroState persistence, global_group, cleanup/currentcolor/tag, local/global def/gdef/edef/xdef/let/futurelet/globalfuture, hash-before-brace parameter text and exact delimited argument matching.",
+    "all20ContextMacros": "All source context names now have native implementations including bra@ket/bra@set temporary active bars, tag@literal, newcommand context execution during expansion, noexpand and expandOnce return semantics.",
+    "userMacroAPI": "String, native Macro, source reversed-token expansion dictionary, pure Python callback with documented MacroContext methods and validated/budgeted results. Native Macro.tokens/numArgs/get expose source expansion conventions.",
+    "sourceArguments": "Ordinary raw token argument isolation versus primitive/group/script parsing; unexpanded optional lookahead; complete mode flags and allowedInArgument data; source color and unanchored measurement regex; cfrac has no optional alignment per fixedsource.",
+    "environmentBranches": "All33 fixed environments. Per-cell namespaces, ams display context, row tag flags/manual tags/nonumber, cell styles, source col gaps, alignat counts, subarray restrictions, hlines, optional rowgap whitespace, trailing empty rows and CD implicit cell/arrows.",
+    "staticHTMLAndImages": "All htmlClass/htmlId/htmlStyle/htmlData and includegraphics source arguments/trust contexts become pure AST. URL category handling preserves percent/tilde and source trust-protocol validation; rejection is visible unsupported node, not silent content loss. Native provider owned by C.",
+    "settings": "Display/tag restriction, strict warn/error/ignore/Python callbacks, source report=False behavior, colorIsTextColor, fractional/infinite/clamped expansion budgets, noThrow unknown continuation, codepoint plus UTF16 error provenance including lexer construction.",
+    "unicode": "344 source-generated precomposed mappings,12 combining accent commands,dotless i/j,10supported script ranges,102Unicode superscript/subscript mappings,wide-alphabet original identity and text ligatures."
+  },
+  "staticSourceAnomaliesPreserved": [
+    {
+      "id": "cfrac-alignment",
+      "source": "functions/genfrac.ts lacks numOptionalArgs; [l]/[r] are normal source tokens, not native optional syntax."
+    },
+    {
+      "id": "cd-terminal-empty-row",
+      "source": "environments/cd.ts appends an empty row after each parsed row; final empty row retained and cols length follows first row."
+    },
+    {
+      "id": "unanchored-size-regex",
+      "source": "Parser.parseSizeGroup finds the first measurement substring; native does not invent anchored rejection for source-accepted trailing text."
+    },
+    {
+      "id": "unicode-script-overwrite",
+      "source": "Unicode script assignment overwrites a prior matching explicit script; explicit duplicate ^/_ still errors."
+    }
+  ],
+  "stillUnimplementedRetainedRegisteredEntries": [],
+  "limitations": [
+    "No new P1 parser/layout/render behavior tests or image/oracle probes executed. Existing alpha success is not evidence for this full candidate.",
+    "Native AST projection does not recreate HTML/MathML hosts, JS object identity/prototypes, navigation handlers or external script execution. Static style/image layout/paint verification is owned by B/C and remains unverified.",
+    "Documented native MacroContext aliases preserve source token conventions; namespace.current is an inspection snapshot, mutations use set or explicit MacroState. Python callables replace explicitly supplied source macro/trust/strict callbacks; no source JS strings are executed.",
+    "Node/depth/token bounds and finite-geometry checks remain native safety constraints independent of maxExpandInfinity. They can explicitly reject pathological source inputs instead of attempting invalid infinite geometry.",
+    "All345 registered source names and339macros having dispatch is a source completeness statement, not measured branch coverage or full compatibility proof. Exhaustive source/spec behavior and errors remain P2/P3 responsibilities.",
+    "Installation validation and publishing/commit/push remain deferred."
+  ],
+  "behaviorExecuted": true,
+  "testsWritten": true,
+  "mechanicalEvidence": "test-runs/MATH-FULL-record-20261105T150726Z-e4c9f2ba/run.json",
+  "p1Snapshot": {
+    "phase": "P1",
+    "status": "code_complete_unverified",
+    "files": [
+      {
+        "path": "src/py_katex/parser.py",
+        "sha256": "9df310a5be84912f2b8ddfa1a88d54edd66e0840282f61a5353d734321c9a3f1"
+      },
+      {
+        "path": "src/py_katex/macros.py",
+        "sha256": "db83af02868d7c9abd99d52ae8c05906ba775ef83e5c6b3787265e584e633d28"
+      },
+      {
+        "path": "src/py_katex/function_modes.py",
+        "sha256": "009f91c422b2509c9b6295f082745957fa1f51adfe295722d5dccd2ee8fc98c3"
+      },
+      {
+        "path": "src/py_katex/unicode_scripts.py",
+        "sha256": "e4da87d793f4775d81970f180a2e51861e70bccbfa5bce4ec0ba786611abfacb"
+      },
+      {
+        "path": "src/py_katex/parser_support.py",
+        "sha256": "d40c04570870af99fab6374e37b953cf3b995550704d3f6e13db59636edc2b07"
+      },
+      {
+        "path": "src/py_katex/parser_arrays.py",
+        "sha256": "428b98a75857dae77249cfac6f87d84d38c1a1d622386c8589f2aa9bdccc54c1"
+      },
+      {
+        "path": "src/py_katex/parser_unicode.py",
+        "sha256": "9abfb10a9edfb59311244e1893a89fcbe0b11ad997a0ebadc60a96151009e3c5"
+      },
+      {
+        "path": "src/py_katex/macro_context.py",
+        "sha256": "62ef2b474c796dc583a68ca54d5b27b25c529a706dfe6240aa75f5ef8872976d"
+      },
+      {
+        "path": "docs/AST.md",
+        "sha256": "af27ca03a34db1635ce062eb45b2a1385cd94f9df70df53bbb7839dd96d00d64"
+      }
+    ]
+  },
+  "repairs": [
+    {
+      "id": "color-lex-import",
+      "source": [
+        "src/functions/color.ts",
+        "src/Parser.ts"
+      ],
+      "change": "Import existing pure lexer for current-color and colorIsTextColor definitions; remove NameError.",
+      "sourceFingerprints": [
+        {
+          "path": ".local/upstream-katex/src/functions/color.ts",
+          "sha256": "d1e8834894dd380410cf6a21a2a33b24a61e74b852aa5c346976f3638828c746"
+        },
+        {
+          "path": ".local/upstream-katex/src/Parser.ts",
+          "sha256": "7765dcf4a928d0c553e754ab40c963bbb609c7b980a97248cb8d4b3cc9ffc225"
+        }
+      ]
+    },
+    {
+      "id": "text-quotes-and-font-identity",
+      "source": [
+        "src/Parser.ts",
+        "src/functions/font.ts",
+        "src/functions/text.ts"
+      ],
+      "change": "Apostrophe is a text nucleus outside math; bm normalizes boldsymbol; emph retains dynamic text-shape identity; implicit Unicode accents retain source mode.",
+      "sourceFingerprints": [
+        {
+          "path": ".local/upstream-katex/src/Parser.ts",
+          "sha256": "7765dcf4a928d0c553e754ab40c963bbb609c7b980a97248cb8d4b3cc9ffc225"
+        },
+        {
+          "path": ".local/upstream-katex/src/functions/font.ts",
+          "sha256": "f05965a7b04f94b976552525b8ac90e45cbcb870375da76a6d5117b27410906c"
+        },
+        {
+          "path": ".local/upstream-katex/src/functions/text.ts",
+          "sha256": "f0b5cfb045752dc221cb83dd18819330de53b6c8be8694bfee34634081853c2c"
+        }
+      ]
+    },
+    {
+      "id": "primitive-root-and-expanded-scripts",
+      "source": [
+        "src/Parser.ts"
+      ],
+      "change": "Absent root index selects primitive parsing after expansion, consuming one group; Unicode mapped scripts use subparse so macros and expansion budgets apply.",
+      "sourceFingerprints": [
+        {
+          "path": ".local/upstream-katex/src/Parser.ts",
+          "sha256": "7765dcf4a928d0c553e754ab40c963bbb609c7b980a97248cb8d4b3cc9ffc225"
+        }
+      ]
+    },
+    {
+      "id": "dynamic-namespace-and-callback-order",
+      "source": [
+        "src/MacroExpander.ts",
+        "src/Namespace.ts",
+        "src/macros.ts"
+      ],
+      "change": "Register all dynamic macros as callable builtin definitions, exposing lookup/let/macros.get; callback evaluated before expansion-count check.",
+      "sourceFingerprints": [
+        {
+          "path": ".local/upstream-katex/src/MacroExpander.ts",
+          "sha256": "e59802256bd5d8c30bc2600154bd1f1f843f6ed6725d884a86882e4b446b5365"
+        },
+        {
+          "path": ".local/upstream-katex/src/Namespace.ts",
+          "sha256": "a86fefb389ebf6764b52a843ad4eef9e47edffcf4cc8c5c5f27ffe2691f01baf"
+        },
+        {
+          "path": ".local/upstream-katex/src/macros.ts",
+          "sha256": "a5979d76536f3d0dd0b561f96f714243b8d4da09846c69875c70db80219798be"
+        }
+      ]
+    },
+    {
+      "id": "raw-boundaries",
+      "source": [
+        "src/Parser.ts",
+        "src/functions/delimsizing.ts",
+        "src/functions/def.ts",
+        "src/environments/array.ts"
+      ],
+      "change": "Normalize one braced sized delimiter; retain regex size lookahead at next raw argument; reject missing nonbraced size and empty explicit matrix alignment; expand global prefix alias; do not scan newline optional gap across space.",
+      "sourceFingerprints": [
+        {
+          "path": ".local/upstream-katex/src/Parser.ts",
+          "sha256": "7765dcf4a928d0c553e754ab40c963bbb609c7b980a97248cb8d4b3cc9ffc225"
+        },
+        {
+          "path": ".local/upstream-katex/src/functions/delimsizing.ts",
+          "sha256": "5eab5c5adb8ad53bca498b550a47816220cae889212f87e497e9bef496aaed6d"
+        },
+        {
+          "path": ".local/upstream-katex/src/functions/def.ts",
+          "sha256": "41e2df9c7153ff4f3b89a42509029104f69a996859bdb12908b08be6badbfa81"
+        },
+        {
+          "path": ".local/upstream-katex/src/environments/array.ts",
+          "sha256": "943419d9b4cd83e848890931a7247fedc01a9b012f2637074538e0621fcf1a98"
+        }
+      ]
+    },
+    {
+      "id": "validation-and-diagnostics",
+      "source": [
+        "src/functions/htmlmathml.ts",
+        "src/functions/enclose.ts",
+        "src/Parser.ts"
+      ],
+      "change": "Parse nonvisual htmlmathml alternative; unknown control length uses token size; source mathVsSout strict report preserved.",
+      "sourceFingerprints": [
+        {
+          "path": ".local/upstream-katex/src/functions/htmlmathml.ts",
+          "sha256": "eed2dc25afd7fee2618cd779b0cb89bee1279fa808341c59539b5188f8a0c0d5"
+        },
+        {
+          "path": ".local/upstream-katex/src/functions/enclose.ts",
+          "sha256": "934cf800ecc3f5fea28788c41510a14e2d1944b2388098cca55cf1889e48f66b"
+        },
+        {
+          "path": ".local/upstream-katex/src/Parser.ts",
+          "sha256": "7765dcf4a928d0c553e754ab40c963bbb609c7b980a97248cb8d4b3cc9ffc225"
+        }
+      ]
+    }
+  ],
+  "firstFailureEvidence": "test-runs/MATH-batch-20261105T155834Z-e542e4f2",
+  "targetedEvidence": [
+    "test-runs/MATH-FULL-record-20261105T160608Z-d4daf71f/run.json",
+    "test-runs/MATH-FULL-record-20261105T160746Z-7fdce362/run.json",
+    "test-runs/MATH-FULL-record-20261105T161024Z-0dab6976/run.json",
+    "test-runs/MATH-FULL-record-20261105T161048Z-ac647a20/run.json",
+    "test-runs/MATH-FULL-record-20261105T161046Z-766e6e38/run.json",
+    "test-runs/MATH-FULL-record-20261105T161135Z-05290267/run.json",
+    "test-runs/MATH-FULL-record-20261105T161135Z-e9a3bc8c/run.json",
+    "test-runs/MATH-FULL-record-20261105T162711Z-032579aa/run.json"
+  ],
+  "targetedResult": {
+    "parserMethods": 124,
+    "macroMethods": 104,
+    "registryMethods": 9,
+    "registrySourceContexts": 684,
+    "sourceRegisteredEntries": 345,
+    "sourceMacroEntries": 339,
+    "initialFailingParserCorpusSubset": 34,
+    "status": "PASS",
+    "fullJointCandidate": "pending root unified validation"
+  },
+  "finalPrimitiveArgumentRepair": {
+    "sourceEvidence": "test-runs/MATH-FULL-batch-20261105T161801Z-3fa2e5c3/artifacts/core-source/corpus.json#core-00401",
+    "source": "Parser.parseGroup/parseGroupOfType primitive",
+    "change": "Reject ^/_ tokens when a primitive root argument has no nucleus; retain error at codepoint/UTF16 position5. Top-level/script empty bases keep their existing source semantics.",
+    "regression": "RawArgumentAndModeSourceTests.test_primitive_root_argument_cannot_begin_with_a_script_marker",
+    "newParserMethods": 124,
+    "status": "PASS"
+  }
+}

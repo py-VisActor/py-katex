@@ -1,0 +1,251 @@
+{
+  "schema": "py-katex-full-change/v1",
+  "owner": "geometry_elk",
+  "phase": "P2",
+  "status": "test_design_complete_unexecuted",
+  "newMethods": 70,
+  "newFixtures": 54,
+  "files": [
+    {
+      "path": "tests/test_full_layout.py",
+      "sha256": "11d4213597fcf4c45b25bdc40d8311c01cc7c88045b5b2049c16f7b795315510"
+    },
+    {
+      "path": "tests/full-layout-cases.json",
+      "sha256": "967c669ebce38b5eacd436f04716312baf8e4f327c19969ec99e49ce9a265dc4"
+    },
+    {
+      "path": "tests/test_layout.py",
+      "sha256": "40c8548403645a82902122c208c91882d1c333dbc0565d7e12afde540f5cf187"
+    }
+  ],
+  "assertionMap": "references/full-layout-assertions.json",
+  "mechanicalRun": "test-runs/MATH-FULL-record-20261105T154307Z-b4205ee5",
+  "mechanicalExitCode": 0,
+  "nativeTestsOrOracleRun": false,
+  "productSourceModified": false,
+  "legacyMethodMigrations": [
+    {
+      "methodId": "L54",
+      "method": "test_l54_pmb_keeps_source_offset_duplicate",
+      "source": "functions/pmb.ts literal text-shadow 0.02em 0.01em 0.04px",
+      "before": "Initial native slice explicitly omitted .04px blur and emitted raw shifted glyph copies. That limited-contract evidence is preserved.",
+      "after": "Require real CommandGroup blur(.04px), original .02/.01 offsets, source glyph content and advance; no relaxation of content/position checks."
+    },
+    {
+      "methodId": "L56",
+      "method": "test_l56_unknown_kind_font_and_missing_metric_fail_explicitly",
+      "source": "Parser.ts Unicode text fallback; fontMetrics.ts getCharacterMetrics; new frozen AST unsupported node",
+      "before": "Treated kind unsupported as unknown and required a missing emoji character metric to reject.",
+      "after": "Use genuinely unknown AST kind and nonexistent source font metric family. FULL source-allowed Unicode fallback may render with explicit/covered font; missing bundled character metric alone is no longer rejection. Existing font-command negative remains."
+    }
+  ],
+  "p3Argv": [
+    "C:/venvs/pymmd-20261102/Scripts/python.exe",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-p",
+    "test_full_layout.py",
+    "-v"
+  ],
+  "stopWritingTests": true,
+  "inputEncodingCorrection": {
+    "type": "P2_input_encoding_correction",
+    "cause": "PowerShell default ASCII stdout encoding replaced Unicode in a development Python here-string with question marks; a Python adjacent single-quoted literal also dropped the closing text quote pair. Product execution was not involved.",
+    "oldFixtureSha256": "91bb2efdd5f42a3aa02ef020b9610bbb484e2e5880572ed24cfda3b9b6ee139c",
+    "newFixtureSha256": "967c669ebce38b5eacd436f04716312baf8e4f327c19969ec99e49ce9a265dc4",
+    "testFileAudit": "30 genuine non-ASCII literals, zero question-mark literals; apply_patch-written test input/expected values were not damaged",
+    "testSha256": "11d4213597fcf4c45b25bdc40d8311c01cc7c88045b5b2049c16f7b795315510",
+    "changedCases": [
+      "full-layout-unicode-cyrillic-estimates",
+      "full-layout-unicode-combining-run",
+      "full-layout-unicode-arabic-run",
+      "full-layout-unicode-cjk-estimates",
+      "full-layout-source-text-kerning"
+    ],
+    "encodingPolicy": "Fixture written with ASCII-only Python source and JSON ensure_ascii=True; actual parsed Unicode ord lists audited.",
+    "auditArtifact": "test-runs/math-full-p2-unicode-input-audit.json",
+    "oldMechanicalRunPreserved": "test-runs/MATH-FULL-record-20261105T154307Z-b4205ee5",
+    "sourceModified": false,
+    "sourceRiskReadOnly": [
+      "Frozen layout.py _DELIMS new group/moustache aliases contain ?",
+      "Frozen layout.py _STACK new group/moustache Unicode entries collapse to ? key; preserve first P3 failure, fix only after authorization"
+    ]
+  },
+  "p3BatchRepair": {
+    "status": "targeted_pass_global_candidate_pending",
+    "initialEvidence": "test-runs/MATH-batch-20261105T155834Z-e542e4f2",
+    "preservedNewRegressionFailure": "test-runs/MATH-FULL-record-20261105T161202Z-2fec8449",
+    "repairs": [
+      {
+        "id": "B01",
+        "source": "functions/CD.ts; defineFunction.ts normalizeArgument",
+        "change": "Root semantic group flags reach builder, retaining CD parent label anchor geometry."
+      },
+      {
+        "id": "B02",
+        "source": "functions/xArrow.ts htmlBuilder",
+        "change": "Mandatory empty upper group retains its vlist shift and logical height."
+      },
+      {
+        "id": "B03",
+        "source": "functions/genfrac.ts ruleSpacing",
+        "change": "Bar fractions use actual minimum rule thickness as clearance; barless uses default theta."
+      },
+      {
+        "id": "B04",
+        "source": "delimiter.ts 330-350",
+        "change": "Restore four Unicode group/moustache delimiter keys and source Size4 stack parts; skip absent Main metrics before stack traversal. Previous ASCII PowerShell pipeline corrupted these literals; now ASCII Unicode escapes."
+      },
+      {
+        "id": "B05",
+        "source": "functions/supsub.ts HTML lines 37-51; functions/horizBrace.ts",
+        "change": "HTML brace delegation uses !sub, not MathML !!sup; both scripts delegate only underbrace and source selects sup first. operatorname has its own alwaysHandle gate."
+      },
+      {
+        "id": "B06",
+        "source": "styles/katex.scss fleqn/leqno",
+        "change": "Left equation tag origin is relative to 2em padded HTML content when fleqn."
+      },
+      {
+        "id": "B07",
+        "source": "symbols.ts @imath/@jmath; buildCommon.ts makeOrd",
+        "change": "Preserve original source symbol lookup for private-use mathord; requested missing font falls back to source default mathord/textord including AMS digits and accent."
+      },
+      {
+        "id": "B08",
+        "source": "buildCommon.ts makeSymbol; Settings strict",
+        "change": "Missing metrics report symbolNotInFont warning/callback/error before real native fallback."
+      },
+      {
+        "id": "B09",
+        "source": "symbols.ts text accent entries; functions/accent.ts230; defineFunction.ts212",
+        "change": "Use source accent mode, text circumflex/tilde glyphs and normalize singleton accent argument before italic correction."
+      },
+      {
+        "id": "B10",
+        "source": "functions/rule.ts; styles/katex.scss .katex-rule min-height:1px",
+        "change": "Only explicit source rule paint includes extra CSS content pixel; TeX logical signed metrics retained."
+      }
+    ],
+    "sourceAndTestIdentities": [
+      {
+        "path": "src/py_katex/layout.py",
+        "sha256": "0c4e807e3645e76e425ccbbb79ce179b2ac7d82d9c14a053e9f4aa6e4751bb90"
+      },
+      {
+        "path": "src/py_katex/layout_display.py",
+        "sha256": "5920a206a8a3f158b0bdd5534c5a1ac94b8883a565450af7a6d1058dd8874697"
+      },
+      {
+        "path": "src/py_katex/layout_metrics.py",
+        "sha256": "d47276a9a14978d2809f597f65950263f60a574768a72e27f3d1d3e4bd11c11f"
+      },
+      {
+        "path": "src/py_katex/_layout_paths.py",
+        "sha256": "5d390360023d8188d27c969d4f2925f1d7e8b7367f53a0df4e772b4925c5ce98"
+      },
+      {
+        "path": "tests/test_full_layout.py",
+        "sha256": "673ea3a9dec7971bc29c3843c642015d7fdcaf911ddb2df9f8ded80acdbb69bb"
+      },
+      {
+        "path": "tests/test_layout.py",
+        "sha256": "1a8fac400cd88de823bc840f1c84b148c4e0ee809baac3e66f7106f540ae8bc2"
+      }
+    ],
+    "runs": [
+      {
+        "path": "test-runs/MATH-FULL-record-20261105T161108Z-563fd7d6",
+        "exitCode": 0,
+        "methods": 140
+      },
+      {
+        "path": "test-runs/MATH-FULL-record-20261105T161308Z-14c4e72c",
+        "exitCode": 0,
+        "cpuScenes": 17,
+        "artifacts": "test-runs/math-full-b-layout-cpu-repair-1615"
+      },
+      {
+        "path": "test-runs/MATH-FULL-record-20261105T161314Z-efd30d9f",
+        "exitCode": 0,
+        "methods": 142
+      }
+    ],
+    "fullLayoutMethods": 77,
+    "legacyLayoutMethods": 65,
+    "newFixtureCount": 54,
+    "stopWritingSource": true,
+    "globalVerification": "Root pending coordinated freeze/full corpus/full265/three backend matrix; targeted results are not complete compatibility acceptance."
+  },
+  "p3TextLookupRepair": {
+    "status": "targeted_pass",
+    "initialEvidence": "test-runs/MATH-FULL-batch-20261105T161801Z-3fa2e5c3",
+    "sources": [
+      "buildCommon.ts makeOrd Typewriter ligature deconstruction and makeSymbol lookupSymbol",
+      "functions/verb.ts per-character makeSymbol before tryCombineChars",
+      "buildCommon.ts makeSymbol symbolNotInFont strict report"
+    ],
+    "changes": [
+      "Before combining text runs, lookup source replacement glyphs; Typewriter missing multi-character ligature splits source raw token before individual symbol lookup. Math mathtt atom handling unchanged.",
+      "Native fallback run performs missing-metric strict reporting when _char was bypassed; supported-script M estimates keep source vertical metrics without this warning."
+    ],
+    "unitMethods": 145,
+    "fullLayoutMethods": 80,
+    "legacyLayoutMethods": 65,
+    "runs": [
+      {
+        "path": "test-runs/MATH-FULL-record-20261105T162815Z-29b91674",
+        "status": "SUCCESS",
+        "cpuScenes": [
+          "upstream-DashesAndQuotes",
+          "upstream-Verb"
+        ],
+        "artifacts": "test-runs/math-full-b-text-lookup-cpu-1624"
+      },
+      {
+        "path": "test-runs/MATH-FULL-record-20261105T162826Z-4b9be821",
+        "status": "FAILED",
+        "reason": "New test normalized ordinary space only, source text spaces are NBSP; product CPU scene already PASS. Evidence preserved."
+      },
+      {
+        "path": "test-runs/MATH-FULL-record-20261105T162915Z-cbb5838a",
+        "status": "SUCCESS",
+        "methods": 145
+      }
+    ],
+    "identities": [
+      {
+        "path": "src/py_katex/layout.py",
+        "sha256": "9b443c70f3760cf2805ccdd375eb01aae8d8f1eaa68f15ea293261cca822d9d6"
+      },
+      {
+        "path": "tests/test_full_layout.py",
+        "sha256": "925acb68ffbf2d67ec85eca0a6fc744d9d4c4bc6f90cd515b963b2d10c40611b"
+      }
+    ],
+    "emojiPolicyTest": "R10 mocks only native measurement to isolate source warn/error policy. Real platform emoji remains C core-corpus targeted verification.",
+    "stopWritingSource": true,
+    "fullMatrix": "Pending root final coordinated freeze; no full acceptance claim."
+  },
+  "finalVerification": {
+    "status": "PASS_FULL_CORE_STATIC_LOCAL",
+    "summary": "references/full-verification-summary.json",
+    "jointSourceSHA256": {
+      "math": "334c412c34ef675dbc223405622c8d4e19eb56b1ff3700c251cb663d4afdd445",
+      "mermaid": "6094d419ff3c50d2c64fdd00051af2be087b25a7a239cb1dae0e9e09209fdff1"
+    },
+    "runs": {
+      "unit": "test-runs/MATH-FULL-batch-20261105T171602Z-0d9b6942",
+      "visual": "test-runs/MATH-FULL-batch-20261105T171857Z-5071cad7",
+      "legacy": "test-runs/MATH-FULL-batch-20261105T171629Z-8b5ef28e",
+      "report": "test-runs/MATH-FULL-batch-20261105T172308Z-e0e12af6",
+      "htmlQa": "test-runs/MATH-FULL-batch-20261105T172348Z-4daa587b",
+      "manual1": "test-runs/MATH-FULL-batch-20261105T171936Z-a5ca8881",
+      "manual2": "test-runs/MATH-FULL-batch-20261105T172008Z-7055e775"
+    }
+  }
+}

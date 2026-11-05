@@ -1,0 +1,74 @@
+{
+  "schema": "py-mermaid-command-plan/v1",
+  "scope": "MATH",
+  "description": "All 207 report views, desktop/mobile, export bytes, no external requests and evidence integrity",
+  "steps": [
+    {
+      "name": "html-browser-download-qa",
+      "argv": [
+        "node",
+        "{repo}/tools/qa_report.cjs",
+        "--url",
+        "http://127.0.0.1:8765/MATH-batch-20261105T122804Z-878bf5d4/index.html",
+        "--out",
+        "{run}/artifacts/html-qa"
+      ],
+      "timeoutSeconds": 180
+    },
+    {
+      "name": "integrity-MATH-batch-20261105T121812Z-f140829a",
+      "argv": [
+        "{python}",
+        "{repo}/tools/workflow.py",
+        "verify",
+        "--run",
+        "{repo}/test-runs/MATH-batch-20261105T121812Z-f140829a"
+      ],
+      "timeoutSeconds": 180
+    },
+    {
+      "name": "integrity-MATH-batch-20261105T121812Z-73861ed7",
+      "argv": [
+        "{python}",
+        "{repo}/tools/workflow.py",
+        "verify",
+        "--run",
+        "{repo}/test-runs/MATH-batch-20261105T121812Z-73861ed7"
+      ],
+      "timeoutSeconds": 180
+    },
+    {
+      "name": "integrity-MATH-batch-20261105T121812Z-85def7ba",
+      "argv": [
+        "{python}",
+        "{repo}/tools/workflow.py",
+        "verify",
+        "--run",
+        "{repo}/test-runs/MATH-batch-20261105T121812Z-85def7ba"
+      ],
+      "timeoutSeconds": 180
+    },
+    {
+      "name": "integrity-MATH-batch-20261105T122453Z-26698b8b",
+      "argv": [
+        "{python}",
+        "{repo}/tools/workflow.py",
+        "verify",
+        "--run",
+        "{repo}/test-runs/MATH-batch-20261105T122453Z-26698b8b"
+      ],
+      "timeoutSeconds": 180
+    },
+    {
+      "name": "integrity-final-report-rebuild",
+      "argv": [
+        "{python}",
+        "{repo}/tools/workflow.py",
+        "verify",
+        "--run",
+        "{repo}/test-runs/MATH-batch-20261105T122804Z-878bf5d4"
+      ],
+      "timeoutSeconds": 120
+    }
+  ]
+}

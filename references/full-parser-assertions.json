@@ -1,0 +1,2886 @@
+{
+  "schema": "py-katex-full-parser-assertions/v1",
+  "scope": "MATH-FULL",
+  "phase": "P3",
+  "status": "batch_repaired_targeted_verified_joint_pending",
+  "version": "0.18.11",
+  "upstreamCommit": "d5bed9f38a8d747b9c4a12e18897a514707e1c26",
+  "freeze": "test-runs/MATH-FULL-p1-freeze-20261105T151929Z-e4650f5e",
+  "frozenMathSourceSha256": "09c8fae67b3b8ffea333d3fdf9c1fdc9ec2a5e218bb5523f91f881d109822904",
+  "denominator": {
+    "functions": 312,
+    "environments": 33,
+    "macros": 339,
+    "registered": 345,
+    "totalCases": 684,
+    "sourceErrorOnlyRegisteredFunctions": [
+      "\\]"
+    ]
+  },
+  "testMethodCounts": {
+    "tests/test_full_parser.py": 57,
+    "tests/test_full_macros.py": 51,
+    "tests/test_full_registry.py": 9
+  },
+  "testMethodsTotal": 117,
+  "assertionGroups": {
+    "RawArgumentAndModeSourceTests": {
+      "path": "tests/test_full_parser.py",
+      "methods": [
+        "test_primitive_root_argument_cannot_begin_with_a_script_marker",
+        "test_root_without_optional_index_expands_then_takes_one_primitive_group",
+        "test_sized_delimiter_normalizes_one_braced_symbol",
+        "test_text_accent_primitive_preserves_literal_space",
+        "test_emphasis_keeps_dynamic_font_shape_instead_of_forcing_italic",
+        "test_ordinary_argument_expands_only_inside_its_scanned_boundary",
+        "test_unbraced_function_cannot_steal_its_argument_from_next_parent_argument",
+        "test_primitive_script_allows_frac_but_requires_braces_around_sqrt",
+        "test_optional_lookahead_does_not_expand_a_macro_into_an_opener",
+        "test_empty_optional_root_index_is_distinct_from_absent",
+        "test_source_cfrac_has_no_optional_alignment_argument",
+        "test_hbox_command_resets_font_without_forcing_textstyle",
+        "test_hbox_argument_type_for_fbox_and_raisebox_is_textstyle",
+        "test_text_math_parentheses_switch_and_restore_mode",
+        "test_closing_math_delimiters_are_syntax_guards_even_without_throw_on_error",
+        "test_math_only_unicode_operators_are_not_accepted_in_text",
+        "test_text_ligatures_are_source_sequences_not_ascii_glyphs",
+        "test_dotless_i_and_j_under_unicode_accents",
+        "test_cedilla_and_double_acute_unicode_text_are_supported",
+        "test_unknown_nonmath_unicode_is_marked_as_text_for_native_font_runs"
+      ],
+      "methodCount": 20,
+      "sourceRefs": [
+        "src/Parser.ts",
+        "src/MacroExpander.ts",
+        "src/functions/genfrac.ts",
+        "src/functions/hbox.ts",
+        "src/functions/math.ts",
+        "src/unicodeAccents.js",
+        "src/unicodeSymbols.js",
+        "src/unicodeScripts.ts",
+        "test/katex-spec.ts",
+        "test/unicode-spec.ts"
+      ]
+    },
+    "SourceMeasurementsAndDeclarations": {
+      "path": "tests/test_full_parser.py",
+      "methods": [
+        "test_missing_size_and_unbraced_raise_retain_source_failure_boundaries",
+        "test_newline_size_optional_is_not_scanned_across_literal_space",
+        "test_empty_matrix_alignment_is_not_the_absent_default",
+        "test_unanchored_source_size_regex_retains_first_valid_measurement",
+        "test_empty_mandatory_measurement_means_zero_but_empty_optional_rejects",
+        "test_smash_optional_letters_empty_and_unknown_are_source_flags",
+        "test_genfrac_non_delimiter_arguments_are_ignored_as_source",
+        "test_color_argument_whitespace_is_not_silently_trimmed",
+        "test_color_is_text_color_option_does_not_consume_rest_of_formula",
+        "test_current_color_is_retained_at_right_delimiter",
+        "test_font_declaration_breaks_at_infix_fraction"
+      ],
+      "methodCount": 11,
+      "sourceRefs": [
+        "src/Parser.ts",
+        "src/functions/smash.ts",
+        "src/functions/genfrac.ts",
+        "src/functions/color.ts",
+        "src/functions/font.ts",
+        "test/katex-spec.ts"
+      ]
+    },
+    "FullArrayAndTagSourceTests": {
+      "path": "tests/test_full_parser.py",
+      "methods": [
+        "test_display_only_ams_environments_reject_inline_context",
+        "test_each_cell_has_its_own_local_namespace",
+        "test_top_level_tag_parentheses_and_star",
+        "test_tag_rejects_duplicate_or_inline_context",
+        "test_automatic_manual_and_suppressed_row_tags",
+        "test_starred_ams_rows_allow_manual_but_do_not_auto_number",
+        "test_regular_array_tag_remains_a_formula_tag",
+        "test_alignat_explicit_column_limit_and_source_gaps",
+        "test_subarray_only_l_c_and_first_row_single_column",
+        "test_row_gap_space_after_cr_disables_optional_scanning",
+        "test_cd_arrows_and_fixed_terminal_empty_row",
+        "test_cd_unlabelled_symbols_equal_pipe_and_dot",
+        "test_cd_invalid_marker_or_missing_label_terminator_rejects"
+      ],
+      "methodCount": 13,
+      "sourceRefs": [
+        "src/environments/array.ts",
+        "src/environments/cd.ts",
+        "src/parseTree.ts",
+        "src/macros.ts",
+        "test/katex-spec.ts"
+      ]
+    },
+    "TrustStrictAndErrorSourceTests": {
+      "path": "tests/test_full_parser.py",
+      "methods": [
+        "test_untrusted_command_is_visible_and_does_not_hide_rest_of_formula",
+        "test_python_trust_callback_receives_validated_url_protocol",
+        "test_encoded_or_invalid_protocol_is_rejected_before_callback",
+        "test_html_data_escaped_comma_and_expanded_raw_style",
+        "test_image_dimensions_unitless_bp_alt_and_url_percent",
+        "test_unknown_command_no_throw_preserves_formula_and_error_color",
+        "test_nonvisual_htmlmathml_alternative_is_still_parsed_and_validated",
+        "test_strict_html_extension_error_precedes_trust_callback",
+        "test_strict_warn_ignore_error_and_python_callback",
+        "test_strict_report_false_callback_failure_selects_no_newline",
+        "test_strict_report_true_callback_failure_propagates",
+        "test_lexical_and_parser_errors_also_report_utf16_positions",
+        "test_unknown_control_error_token_length_is_source_control_word_length"
+      ],
+      "methodCount": 13,
+      "sourceRefs": [
+        "src/strict.ts",
+        "src/Settings.ts",
+        "src/utils.ts",
+        "src/ParseError.ts",
+        "src/Parser.ts",
+        "src/Lexer.ts",
+        "src/functions/href.ts",
+        "src/functions/html.ts",
+        "src/functions/htmlmathml.ts",
+        "src/functions/includegraphics.ts",
+        "test/errors-spec.ts",
+        "test/katex-spec.ts"
+      ]
+    },
+    "FullPersistentNamespaceTests": {
+      "path": "tests/test_full_macros.py",
+      "methods": [
+        "test_ordinary_macro_mapping_stays_immutable_under_native_contract",
+        "test_explicit_state_persists_global_but_not_local_definitions",
+        "test_global_group_persists_top_level_definitions_in_explicit_state",
+        "test_state_does_not_implicitly_become_global_process_state",
+        "test_global_assignment_survives_source_parse_error_but_local_undo_closes",
+        "test_color_and_tag_internal_flags_are_cleaned_at_job_boundary",
+        "test_state_initial_string_definition_and_clear"
+      ],
+      "methodCount": 7,
+      "sourceRefs": [
+        "src/Namespace.ts",
+        "src/parseTree.ts",
+        "src/Parser.ts",
+        "src/functions/def.ts",
+        "test/katex-spec.ts",
+        "native:docs/AST.md"
+      ]
+    },
+    "FullDefinitionBoundaryTests": {
+      "path": "tests/test_full_macros.py",
+      "methods": [
+        "test_macro_prefix_expands_alias_before_matching_definition",
+        "test_let_open_brace_can_supply_primitive_root_group",
+        "test_futurelet_captures_third_token_and_reinserts_middle_and_third",
+        "test_futurelet_captures_macro_meaning_before_middle_redefines_it",
+        "test_global_futurelet_and_global_let_survive_group",
+        "test_prefix_combinations_global_long_preserve_definition_scope",
+        "test_def_hash_before_left_brace_is_copied_to_replacement_end",
+        "test_def_delimited_arguments_preserve_source_brace_matching",
+        "test_string_macro_parameter_count_requires_contiguous_numbers",
+        "test_newcommand_dynamic_expands_during_edef_context",
+        "test_newcommand_definition_must_see_all_function_and_text_symbol_names",
+        "test_newcommand_ten_arguments_and_whitespace_count",
+        "test_source_noexpand_difference_normal_parse_versus_edef",
+        "test_let_unexpandable_alias_not_expanded_inside_edef",
+        "test_let_can_capture_a_builtin_dynamic_macro_function",
+        "test_braket_replaces_all_bars_but_set_only_the_first",
+        "test_braket_double_bars_and_previous_active_bar_restore",
+        "test_reentrant_active_bar_in_internal_braket_middle_hits_expansion_budget"
+      ],
+      "methodCount": 18,
+      "sourceRefs": [
+        "src/MacroExpander.ts",
+        "src/functions/def.ts",
+        "src/macros.ts",
+        "test/katex-spec.ts"
+      ]
+    },
+    "FullMacroExpansionObjectAndCallbackTests": {
+      "path": "tests/test_full_macros.py",
+      "methods": [
+        "test_native_macro_forward_order_and_source_dictionary_reverse_order",
+        "test_source_dictionary_numbered_arguments_and_delimiters",
+        "test_expansion_object_unexpandable_is_preserved_during_edef",
+        "test_callback_may_return_string_native_macro_or_expansion_dictionary",
+        "test_consume_args_returns_source_reverse_stack_order",
+        "test_delimited_consume_arg_retains_leading_space_after_control_symbol",
+        "test_future_is_unexpanded_and_expand_after_future_performs_one_step",
+        "test_expand_once_distinguishes_empty_success_from_false",
+        "test_expand_once_reports_number_of_replacement_tokens",
+        "test_expand_tokens_accepts_reverse_input_and_returns_forward_output",
+        "test_pop_token_does_not_expand_and_push_token_precedes_remaining_input",
+        "test_push_tokens_uses_source_reverse_stack_convention",
+        "test_consume_spaces_does_not_eat_next_nonspace_token",
+        "test_expand_next_token_recurses_and_removes_first_expanded_token",
+        "test_expand_macro_as_text_and_undefined_macro",
+        "test_is_defined_and_is_expandable_use_source_symbol_function_and_primitive_rules",
+        "test_namespace_context_get_set_local_and_global_definitions",
+        "test_namespace_exposes_registered_builtin_dynamic_macro_definitions",
+        "test_callback_sees_math_or_text_mode",
+        "test_callback_exception_propagates_without_becoming_empty_success",
+        "test_callback_is_evaluated_before_source_expansion_count_check",
+        "test_callback_result_and_declared_token_budgets_are_validated"
+      ],
+      "methodCount": 22,
+      "sourceRefs": [
+        "src/defineMacro.ts",
+        "src/MacroExpander.ts",
+        "src/Namespace.ts",
+        "src/macros.ts",
+        "test/katex-spec.ts",
+        "native:docs/AST.md"
+      ]
+    },
+    "FullMacroBudgetAndValidationTests": {
+      "path": "tests/test_full_macros.py",
+      "methods": [
+        "test_zero_fractional_infinite_and_negative_clamped_max_expand",
+        "test_node_and_depth_bounds_remain_when_expansion_limit_is_infinite",
+        "test_edef_output_counts_prevent_exponential_expansion",
+        "test_invalid_macro_state_or_nonnumeric_threshold_is_explicit"
+      ],
+      "methodCount": 4,
+      "sourceRefs": [
+        "src/Settings.ts",
+        "src/MacroExpander.ts",
+        "test/katex-spec.ts",
+        "native:docs/AST.md"
+      ]
+    },
+    "FullRegistryInventoryTests": {
+      "path": "tests/test_full_registry.py",
+      "methods": [
+        "test_complete_locked_registration_and_macro_denominators",
+        "test_no_registration_dropped_or_replaced_by_native_inventory",
+        "test_each_entry_has_concrete_unique_case_and_legitimate_context",
+        "test_intrinsically_error_only_source_registration_is_explicit",
+        "test_all_twenty_dynamic_macro_names_have_argument_contexts"
+      ],
+      "methodCount": 5,
+      "sourceRefs": [
+        "registry:full-runtime",
+        "src/defineFunction.ts",
+        "src/defineEnvironment.ts",
+        "src/defineMacro.ts",
+        "src/functions/math.ts"
+      ]
+    },
+    "FullRegistryFixedSourceOracleTests": {
+      "path": "tests/test_full_registry.py",
+      "methods": [
+        "test_all_312_functions_in_source_context_have_expected_semantics",
+        "test_all_33_environments_have_source_rows_and_semantics",
+        "test_all_339_macros_have_source_expansion_semantics",
+        "test_source_oracle_registry_and_case_count_match_frozen_inputs"
+      ],
+      "methodCount": 4,
+      "sourceRefs": [
+        "registry:full-runtime",
+        "src/parseTree.ts",
+        "src/Parser.ts",
+        "src/symbols.ts",
+        "src/environments/array.ts"
+      ]
+    }
+  },
+  "criticalSourceBindings": [
+    {
+      "id": "ordinary-vs-primitive-arguments",
+      "sourceRef": "src/Parser.ts",
+      "symbolOrStatement": "parseGroupOfType",
+      "line": 546,
+      "tests": "RawArgumentAndModeSourceTests"
+    },
+    {
+      "id": "cfrac-no-optional-alignment",
+      "sourceRef": "src/functions/genfrac.ts",
+      "symbolOrStatement": "numArgs: 2",
+      "line": 242,
+      "tests": "RawArgumentAndModeSourceTests.test_source_cfrac_has_no_optional_alignment_argument"
+    },
+    {
+      "id": "size-unanchored-match",
+      "sourceRef": "src/Parser.ts",
+      "symbolOrStatement": "const match = (/([-+]?)",
+      "line": 729,
+      "tests": "SourceMeasurementsAndDeclarations.test_unanchored_source_size_regex_retains_first_valid_measurement"
+    },
+    {
+      "id": "smash-option-flags",
+      "sourceRef": "src/functions/smash.ts",
+      "symbolOrStatement": "let smashHeight = false",
+      "line": 18,
+      "tests": "SourceMeasurementsAndDeclarations.test_smash_optional_letters_empty_and_unknown_are_source_flags"
+    },
+    {
+      "id": "automatic-tag-tristate",
+      "sourceRef": "src/environments/array.ts",
+      "symbolOrStatement": "function getAutoTag",
+      "line": 81,
+      "tests": "FullArrayAndTagSourceTests"
+    },
+    {
+      "id": "cd-terminal-empty-row",
+      "sourceRef": "src/environments/cd.ts",
+      "symbolOrStatement": "body.push(row)",
+      "line": 212,
+      "tests": "FullArrayAndTagSourceTests.test_cd_arrows_and_fixed_terminal_empty_row"
+    },
+    {
+      "id": "tag-job-cleanup",
+      "sourceRef": "src/parseTree.ts",
+      "symbolOrStatement": "delete parser.gullet.macros.current",
+      "line": 21,
+      "tests": "FullPersistentNamespaceTests.test_color_and_tag_internal_flags_are_cleaned_at_job_boundary"
+    },
+    {
+      "id": "futurelet-three-tokens",
+      "sourceRef": "src/functions/def.ts",
+      "symbolOrStatement": "const middle = parser.gullet.popToken",
+      "line": 198,
+      "tests": "FullDefinitionBoundaryTests.test_futurelet_captures_third_token_and_reinserts_middle_and_third"
+    },
+    {
+      "id": "def-hash-brace",
+      "sourceRef": "src/functions/def.ts",
+      "symbolOrStatement": "insert = parser.gullet.future",
+      "line": 112,
+      "tests": "FullDefinitionBoundaryTests.test_def_hash_before_left_brace_is_copied_to_replacement_end"
+    },
+    {
+      "id": "callback-source-before-budget",
+      "sourceRef": "src/MacroExpander.ts",
+      "symbolOrStatement": "const expansion = !topToken.noexpand",
+      "line": 282,
+      "tests": "FullMacroExpansionObjectAndCallbackTests.test_callback_is_evaluated_before_source_expansion_count_check"
+    },
+    {
+      "id": "macro-object-public-shape",
+      "sourceRef": "src/defineMacro.ts",
+      "symbolOrStatement": "export type MacroExpansion",
+      "line": 103,
+      "tests": "FullMacroExpansionObjectAndCallbackTests"
+    },
+    {
+      "id": "dynamic-macro-namespace",
+      "sourceRef": "src/Namespace.ts",
+      "symbolOrStatement": "this.builtins[name]",
+      "line": 85,
+      "tests": "FullMacroExpansionObjectAndCallbackTests.test_namespace_exposes_registered_builtin_dynamic_macro_definitions"
+    },
+    {
+      "id": "noThrow-unknown-continuation",
+      "sourceRef": "src/Parser.ts",
+      "symbolOrStatement": "result = this.formatUnsupportedCmd(text)",
+      "line": 852,
+      "tests": "TrustStrictAndErrorSourceTests.test_unknown_command_no_throw_preserves_formula_and_error_color"
+    },
+    {
+      "id": "nonvisual-branch-validation",
+      "sourceRef": "src/functions/htmlmathml.ts",
+      "symbolOrStatement": "numArgs: 2",
+      "line": 10,
+      "tests": "TrustStrictAndErrorSourceTests.test_nonvisual_htmlmathml_alternative_is_still_parsed_and_validated"
+    },
+    {
+      "id": "strict-report-false",
+      "sourceRef": "src/strict.ts",
+      "symbolOrStatement": "if (report)",
+      "line": 43,
+      "tests": "TrustStrictAndErrorSourceTests.test_strict_report_false_callback_failure_selects_no_newline"
+    },
+    {
+      "id": "error-UTF16-position-length",
+      "sourceRef": "src/ParseError.ts",
+      "symbolOrStatement": "this.length = end - start",
+      "line": 70,
+      "tests": "TrustStrictAndErrorSourceTests.test_unknown_control_error_token_length_is_source_control_word_length"
+    }
+  ],
+  "sources": [
+    {
+      "id": "native:docs/AST.md",
+      "path": "docs/AST.md",
+      "sha256": "af27ca03a34db1635ce062eb45b2a1385cd94f9df70df53bbb7839dd96d00d64"
+    },
+    {
+      "id": "registry:full-runtime",
+      "path": "references/full-runtime-registry.json",
+      "sha256": "ac98b761f4809453e2068c17a907d7899b68542198b394593af397f22e8e4aa7"
+    },
+    {
+      "id": "src/Lexer.ts",
+      "path": ".local/upstream-katex/src/Lexer.ts",
+      "sha256": "eb3b38c63f065241496447ca1182004b3ae0748b1837ff49a7dac4649e22287e"
+    },
+    {
+      "id": "src/MacroExpander.ts",
+      "path": ".local/upstream-katex/src/MacroExpander.ts",
+      "sha256": "e59802256bd5d8c30bc2600154bd1f1f843f6ed6725d884a86882e4b446b5365"
+    },
+    {
+      "id": "src/Namespace.ts",
+      "path": ".local/upstream-katex/src/Namespace.ts",
+      "sha256": "a86fefb389ebf6764b52a843ad4eef9e47edffcf4cc8c5c5f27ffe2691f01baf"
+    },
+    {
+      "id": "src/ParseError.ts",
+      "path": ".local/upstream-katex/src/ParseError.ts",
+      "sha256": "5b06ca8bd31dd91dd892ce8f8b0cfd0a27fd2c8ba4d118efda0527077ac34866"
+    },
+    {
+      "id": "src/Parser.ts",
+      "path": ".local/upstream-katex/src/Parser.ts",
+      "sha256": "7765dcf4a928d0c553e754ab40c963bbb609c7b980a97248cb8d4b3cc9ffc225"
+    },
+    {
+      "id": "src/Settings.ts",
+      "path": ".local/upstream-katex/src/Settings.ts",
+      "sha256": "c8b49b05c28b2731cbdcaada00db94bfdf86f37eefb681ac4bffafc7f1c2575e"
+    },
+    {
+      "id": "src/defineEnvironment.ts",
+      "path": ".local/upstream-katex/src/defineEnvironment.ts",
+      "sha256": "3db3b8fa865f9c1b238365eed252506ed00108ceb42676e10446bad47f8fb492"
+    },
+    {
+      "id": "src/defineFunction.ts",
+      "path": ".local/upstream-katex/src/defineFunction.ts",
+      "sha256": "0883d28f20b1ae456686bfa8326aba3ef967f169a5795f4adcee87d14284c307"
+    },
+    {
+      "id": "src/defineMacro.ts",
+      "path": ".local/upstream-katex/src/defineMacro.ts",
+      "sha256": "cf14136aabc33938bedbb977581604302888be091ded1b33cf3b5a5ccbdfeecb"
+    },
+    {
+      "id": "src/environments/array.ts",
+      "path": ".local/upstream-katex/src/environments/array.ts",
+      "sha256": "943419d9b4cd83e848890931a7247fedc01a9b012f2637074538e0621fcf1a98"
+    },
+    {
+      "id": "src/environments/cd.ts",
+      "path": ".local/upstream-katex/src/environments/cd.ts",
+      "sha256": "163121e5c09d8ce3f9389898fef1556e369abfd31381cdb55b2c5ac4b54e1fcb"
+    },
+    {
+      "id": "src/functions/color.ts",
+      "path": ".local/upstream-katex/src/functions/color.ts",
+      "sha256": "d1e8834894dd380410cf6a21a2a33b24a61e74b852aa5c346976f3638828c746"
+    },
+    {
+      "id": "src/functions/def.ts",
+      "path": ".local/upstream-katex/src/functions/def.ts",
+      "sha256": "41e2df9c7153ff4f3b89a42509029104f69a996859bdb12908b08be6badbfa81"
+    },
+    {
+      "id": "src/functions/font.ts",
+      "path": ".local/upstream-katex/src/functions/font.ts",
+      "sha256": "f05965a7b04f94b976552525b8ac90e45cbcb870375da76a6d5117b27410906c"
+    },
+    {
+      "id": "src/functions/genfrac.ts",
+      "path": ".local/upstream-katex/src/functions/genfrac.ts",
+      "sha256": "932c8dcd3fec9fc00b87b99a315990ea2620e109accc8c4219e62fc6d8dea9fd"
+    },
+    {
+      "id": "src/functions/hbox.ts",
+      "path": ".local/upstream-katex/src/functions/hbox.ts",
+      "sha256": "1a8083d6fbaa70006a50031ea2aeefcf7285427e40816b46448ca3b42e395813"
+    },
+    {
+      "id": "src/functions/href.ts",
+      "path": ".local/upstream-katex/src/functions/href.ts",
+      "sha256": "0b14efd8544955bd59193065b734c2acf0bd3464e5d9db4daf45057bc1e6f23c"
+    },
+    {
+      "id": "src/functions/html.ts",
+      "path": ".local/upstream-katex/src/functions/html.ts",
+      "sha256": "1d84618eaad37ffb75545ba4b81674a0d5176cdeb030ff3c96b8abc1e5cf0e85"
+    },
+    {
+      "id": "src/functions/htmlmathml.ts",
+      "path": ".local/upstream-katex/src/functions/htmlmathml.ts",
+      "sha256": "eed2dc25afd7fee2618cd779b0cb89bee1279fa808341c59539b5188f8a0c0d5"
+    },
+    {
+      "id": "src/functions/includegraphics.ts",
+      "path": ".local/upstream-katex/src/functions/includegraphics.ts",
+      "sha256": "241e88fc62eea2982b7c78c270032306cfffafda5fbf98233b5616af96c97d12"
+    },
+    {
+      "id": "src/functions/math.ts",
+      "path": ".local/upstream-katex/src/functions/math.ts",
+      "sha256": "88953bce840d6a48b90018f27e674cea34d6ec32f72517474a6ee51ecf5ed27a"
+    },
+    {
+      "id": "src/functions/smash.ts",
+      "path": ".local/upstream-katex/src/functions/smash.ts",
+      "sha256": "3f2995de1a7a0969799021a2d9c648bb64002b60ba3d00a4b9953bd543740994"
+    },
+    {
+      "id": "src/macros.ts",
+      "path": ".local/upstream-katex/src/macros.ts",
+      "sha256": "a5979d76536f3d0dd0b561f96f714243b8d4da09846c69875c70db80219798be"
+    },
+    {
+      "id": "src/parseTree.ts",
+      "path": ".local/upstream-katex/src/parseTree.ts",
+      "sha256": "30326a25cc96e6e56ee4d9563d3afa85d6df68f15656a1980542a454cc2f51a6"
+    },
+    {
+      "id": "src/strict.ts",
+      "path": ".local/upstream-katex/src/strict.ts",
+      "sha256": "9c41e2137d69169e05af01de40fe624f89bb6c63b762eb68017b0e0a251ac441"
+    },
+    {
+      "id": "src/symbols.ts",
+      "path": ".local/upstream-katex/src/symbols.ts",
+      "sha256": "c95784b8f79b54d60b15cae94b2d7f0681b63c26ea59fb1d498794143a1f266b"
+    },
+    {
+      "id": "src/unicodeAccents.js",
+      "path": ".local/upstream-katex/src/unicodeAccents.js",
+      "sha256": "09c8ca01bf29ae84350a7f70c63b8d61311335106963d9035e2ef9efee467733"
+    },
+    {
+      "id": "src/unicodeScripts.ts",
+      "path": ".local/upstream-katex/src/unicodeScripts.ts",
+      "sha256": "16eba48b9143ae56ab9abd1bc6c53c3755810aa9baf531c3fff8f8c1ff54659a"
+    },
+    {
+      "id": "src/unicodeSymbols.js",
+      "path": ".local/upstream-katex/src/unicodeSymbols.js",
+      "sha256": "1fde694a83716f3a553430a68f982e45a5b4946a799cb949b1ddcc1df7e16a54"
+    },
+    {
+      "id": "src/utils.ts",
+      "path": ".local/upstream-katex/src/utils.ts",
+      "sha256": "663340542bdd20baca53442690644a1b25714ad873c3e029a644b0ebe254bdb1"
+    },
+    {
+      "id": "test/errors-spec.ts",
+      "path": ".local/upstream-katex/test/errors-spec.ts",
+      "sha256": "de94024a7affb7334325ec488a3d8f1c024d35a136fc940415e95c498c807898"
+    },
+    {
+      "id": "test/katex-spec.ts",
+      "path": ".local/upstream-katex/test/katex-spec.ts",
+      "sha256": "a06a541b496a3d52afa2fc25ebc076e671fa702c6aae9a81ba9bf99df4cbfd66"
+    },
+    {
+      "id": "test/unicode-spec.ts",
+      "path": ".local/upstream-katex/test/unicode-spec.ts",
+      "sha256": "0fdebab0d2fc0f9df780294cbf51100a71cd01a3c2a518dac43e15bc98e9ccc4"
+    }
+  ],
+  "coverage": {
+    "functions": {
+      "\\acute": [
+        "function-000"
+      ],
+      "\\grave": [
+        "function-001"
+      ],
+      "\\ddot": [
+        "function-002"
+      ],
+      "\\tilde": [
+        "function-003"
+      ],
+      "\\bar": [
+        "function-004"
+      ],
+      "\\breve": [
+        "function-005"
+      ],
+      "\\check": [
+        "function-006"
+      ],
+      "\\hat": [
+        "function-007"
+      ],
+      "\\vec": [
+        "function-008"
+      ],
+      "\\dot": [
+        "function-009"
+      ],
+      "\\mathring": [
+        "function-010"
+      ],
+      "\\widecheck": [
+        "function-011"
+      ],
+      "\\widehat": [
+        "function-012"
+      ],
+      "\\widetilde": [
+        "function-013"
+      ],
+      "\\overrightarrow": [
+        "function-014"
+      ],
+      "\\overleftarrow": [
+        "function-015"
+      ],
+      "\\Overrightarrow": [
+        "function-016"
+      ],
+      "\\overleftrightarrow": [
+        "function-017"
+      ],
+      "\\overgroup": [
+        "function-018"
+      ],
+      "\\overlinesegment": [
+        "function-019"
+      ],
+      "\\overleftharpoon": [
+        "function-020"
+      ],
+      "\\overrightharpoon": [
+        "function-021"
+      ],
+      "\\'": [
+        "function-022"
+      ],
+      "\\`": [
+        "function-023"
+      ],
+      "\\^": [
+        "function-024"
+      ],
+      "\\~": [
+        "function-025"
+      ],
+      "\\=": [
+        "function-026"
+      ],
+      "\\u": [
+        "function-027"
+      ],
+      "\\.": [
+        "function-028"
+      ],
+      "\\\"": [
+        "function-029"
+      ],
+      "\\c": [
+        "function-030"
+      ],
+      "\\r": [
+        "function-031"
+      ],
+      "\\H": [
+        "function-032"
+      ],
+      "\\v": [
+        "function-033"
+      ],
+      "\\textcircled": [
+        "function-034"
+      ],
+      "\\underleftarrow": [
+        "function-035"
+      ],
+      "\\underrightarrow": [
+        "function-036"
+      ],
+      "\\underleftrightarrow": [
+        "function-037"
+      ],
+      "\\undergroup": [
+        "function-038"
+      ],
+      "\\underlinesegment": [
+        "function-039"
+      ],
+      "\\utilde": [
+        "function-040"
+      ],
+      "\\xleftarrow": [
+        "function-041"
+      ],
+      "\\xrightarrow": [
+        "function-042"
+      ],
+      "\\xLeftarrow": [
+        "function-043"
+      ],
+      "\\xRightarrow": [
+        "function-044"
+      ],
+      "\\xleftrightarrow": [
+        "function-045"
+      ],
+      "\\xLeftrightarrow": [
+        "function-046"
+      ],
+      "\\xhookleftarrow": [
+        "function-047"
+      ],
+      "\\xhookrightarrow": [
+        "function-048"
+      ],
+      "\\xmapsto": [
+        "function-049"
+      ],
+      "\\xrightharpoondown": [
+        "function-050"
+      ],
+      "\\xrightharpoonup": [
+        "function-051"
+      ],
+      "\\xleftharpoondown": [
+        "function-052"
+      ],
+      "\\xleftharpoonup": [
+        "function-053"
+      ],
+      "\\xrightleftharpoons": [
+        "function-054"
+      ],
+      "\\xleftrightharpoons": [
+        "function-055"
+      ],
+      "\\xlongequal": [
+        "function-056"
+      ],
+      "\\xtwoheadrightarrow": [
+        "function-057"
+      ],
+      "\\xtwoheadleftarrow": [
+        "function-058"
+      ],
+      "\\xtofrom": [
+        "function-059"
+      ],
+      "\\xrightleftarrows": [
+        "function-060"
+      ],
+      "\\xrightequilibrium": [
+        "function-061"
+      ],
+      "\\xleftequilibrium": [
+        "function-062"
+      ],
+      "\\\\cdrightarrow": [
+        "function-063"
+      ],
+      "\\\\cdleftarrow": [
+        "function-064"
+      ],
+      "\\\\cdlongequal": [
+        "function-065"
+      ],
+      "\\mathord": [
+        "function-066"
+      ],
+      "\\mathbin": [
+        "function-067"
+      ],
+      "\\mathrel": [
+        "function-068"
+      ],
+      "\\mathopen": [
+        "function-069"
+      ],
+      "\\mathclose": [
+        "function-070"
+      ],
+      "\\mathpunct": [
+        "function-071"
+      ],
+      "\\mathinner": [
+        "function-072"
+      ],
+      "\\@binrel": [
+        "function-073"
+      ],
+      "\\stackrel": [
+        "function-074"
+      ],
+      "\\overset": [
+        "function-075"
+      ],
+      "\\underset": [
+        "function-076"
+      ],
+      "\\pmb": [
+        "function-077"
+      ],
+      "\\\\cdleft": [
+        "function-078"
+      ],
+      "\\\\cdright": [
+        "function-079"
+      ],
+      "\\\\cdparent": [
+        "function-080"
+      ],
+      "\\@char": [
+        "function-081"
+      ],
+      "\\textcolor": [
+        "function-082"
+      ],
+      "\\color": [
+        "function-083"
+      ],
+      "\\\\": [
+        "function-084"
+      ],
+      "\\global": [
+        "function-085"
+      ],
+      "\\long": [
+        "function-086"
+      ],
+      "\\\\globallong": [
+        "function-087"
+      ],
+      "\\def": [
+        "function-088"
+      ],
+      "\\gdef": [
+        "function-089"
+      ],
+      "\\edef": [
+        "function-090"
+      ],
+      "\\xdef": [
+        "function-091"
+      ],
+      "\\let": [
+        "function-092"
+      ],
+      "\\\\globallet": [
+        "function-093"
+      ],
+      "\\futurelet": [
+        "function-094"
+      ],
+      "\\\\globalfuture": [
+        "function-095"
+      ],
+      "\\bigl": [
+        "function-096"
+      ],
+      "\\Bigl": [
+        "function-097"
+      ],
+      "\\biggl": [
+        "function-098"
+      ],
+      "\\Biggl": [
+        "function-099"
+      ],
+      "\\bigr": [
+        "function-100"
+      ],
+      "\\Bigr": [
+        "function-101"
+      ],
+      "\\biggr": [
+        "function-102"
+      ],
+      "\\Biggr": [
+        "function-103"
+      ],
+      "\\bigm": [
+        "function-104"
+      ],
+      "\\Bigm": [
+        "function-105"
+      ],
+      "\\biggm": [
+        "function-106"
+      ],
+      "\\Biggm": [
+        "function-107"
+      ],
+      "\\big": [
+        "function-108"
+      ],
+      "\\Big": [
+        "function-109"
+      ],
+      "\\bigg": [
+        "function-110"
+      ],
+      "\\Bigg": [
+        "function-111"
+      ],
+      "\\right": [
+        "function-112"
+      ],
+      "\\left": [
+        "function-113"
+      ],
+      "\\middle": [
+        "function-114"
+      ],
+      "\\colorbox": [
+        "function-115"
+      ],
+      "\\fcolorbox": [
+        "function-116"
+      ],
+      "\\fbox": [
+        "function-117"
+      ],
+      "\\cancel": [
+        "function-118"
+      ],
+      "\\bcancel": [
+        "function-119"
+      ],
+      "\\xcancel": [
+        "function-120"
+      ],
+      "\\phase": [
+        "function-121"
+      ],
+      "\\sout": [
+        "function-122"
+      ],
+      "\\angl": [
+        "function-123"
+      ],
+      "\\hline": [
+        "function-124"
+      ],
+      "\\hdashline": [
+        "function-125"
+      ],
+      "\\begin": [
+        "function-126"
+      ],
+      "\\end": [
+        "function-127"
+      ],
+      "\\mathrm": [
+        "function-128"
+      ],
+      "\\mathit": [
+        "function-129"
+      ],
+      "\\mathbf": [
+        "function-130"
+      ],
+      "\\mathnormal": [
+        "function-131"
+      ],
+      "\\mathsfit": [
+        "function-132"
+      ],
+      "\\mathbb": [
+        "function-133"
+      ],
+      "\\mathcal": [
+        "function-134"
+      ],
+      "\\mathfrak": [
+        "function-135"
+      ],
+      "\\mathscr": [
+        "function-136"
+      ],
+      "\\mathsf": [
+        "function-137"
+      ],
+      "\\mathtt": [
+        "function-138"
+      ],
+      "\\Bbb": [
+        "function-139"
+      ],
+      "\\bold": [
+        "function-140"
+      ],
+      "\\frak": [
+        "function-141"
+      ],
+      "\\boldsymbol": [
+        "function-142"
+      ],
+      "\\bm": [
+        "function-143"
+      ],
+      "\\rm": [
+        "function-144"
+      ],
+      "\\sf": [
+        "function-145"
+      ],
+      "\\tt": [
+        "function-146"
+      ],
+      "\\bf": [
+        "function-147"
+      ],
+      "\\it": [
+        "function-148"
+      ],
+      "\\cal": [
+        "function-149"
+      ],
+      "\\cfrac": [
+        "function-150"
+      ],
+      "\\dfrac": [
+        "function-151"
+      ],
+      "\\frac": [
+        "function-152"
+      ],
+      "\\tfrac": [
+        "function-153"
+      ],
+      "\\dbinom": [
+        "function-154"
+      ],
+      "\\binom": [
+        "function-155"
+      ],
+      "\\tbinom": [
+        "function-156"
+      ],
+      "\\\\atopfrac": [
+        "function-157"
+      ],
+      "\\\\bracefrac": [
+        "function-158"
+      ],
+      "\\\\brackfrac": [
+        "function-159"
+      ],
+      "\\over": [
+        "function-160"
+      ],
+      "\\choose": [
+        "function-161"
+      ],
+      "\\atop": [
+        "function-162"
+      ],
+      "\\brace": [
+        "function-163"
+      ],
+      "\\brack": [
+        "function-164"
+      ],
+      "\\genfrac": [
+        "function-165"
+      ],
+      "\\above": [
+        "function-166"
+      ],
+      "\\\\abovefrac": [
+        "function-167"
+      ],
+      "\\overbrace": [
+        "function-168"
+      ],
+      "\\underbrace": [
+        "function-169"
+      ],
+      "\\overbracket": [
+        "function-170"
+      ],
+      "\\underbracket": [
+        "function-171"
+      ],
+      "\\href": [
+        "function-172"
+      ],
+      "\\url": [
+        "function-173"
+      ],
+      "\\hbox": [
+        "function-174"
+      ],
+      "\\htmlClass": [
+        "function-175"
+      ],
+      "\\htmlId": [
+        "function-176"
+      ],
+      "\\htmlStyle": [
+        "function-177"
+      ],
+      "\\htmlData": [
+        "function-178"
+      ],
+      "\\html@mathml": [
+        "function-179"
+      ],
+      "\\includegraphics": [
+        "function-180"
+      ],
+      "\\kern": [
+        "function-181"
+      ],
+      "\\mkern": [
+        "function-182"
+      ],
+      "\\hskip": [
+        "function-183"
+      ],
+      "\\mskip": [
+        "function-184"
+      ],
+      "\\mathllap": [
+        "function-185"
+      ],
+      "\\mathrlap": [
+        "function-186"
+      ],
+      "\\mathclap": [
+        "function-187"
+      ],
+      "\\(": [
+        "function-188"
+      ],
+      "$": [
+        "function-189"
+      ],
+      "\\)": [
+        "function-190"
+      ],
+      "\\]": [
+        "function-191"
+      ],
+      "\\mathchoice": [
+        "function-192"
+      ],
+      "\\coprod": [
+        "function-193"
+      ],
+      "\\bigvee": [
+        "function-194"
+      ],
+      "\\bigwedge": [
+        "function-195"
+      ],
+      "\\biguplus": [
+        "function-196"
+      ],
+      "\\bigcap": [
+        "function-197"
+      ],
+      "\\bigcup": [
+        "function-198"
+      ],
+      "\\intop": [
+        "function-199"
+      ],
+      "\\prod": [
+        "function-200"
+      ],
+      "\\sum": [
+        "function-201"
+      ],
+      "\\bigotimes": [
+        "function-202"
+      ],
+      "\\bigoplus": [
+        "function-203"
+      ],
+      "\\bigodot": [
+        "function-204"
+      ],
+      "\\bigsqcup": [
+        "function-205"
+      ],
+      "\\smallint": [
+        "function-206"
+      ],
+      "∏": [
+        "function-207"
+      ],
+      "∐": [
+        "function-208"
+      ],
+      "∑": [
+        "function-209"
+      ],
+      "⋀": [
+        "function-210"
+      ],
+      "⋁": [
+        "function-211"
+      ],
+      "⋂": [
+        "function-212"
+      ],
+      "⋃": [
+        "function-213"
+      ],
+      "⨀": [
+        "function-214"
+      ],
+      "⨁": [
+        "function-215"
+      ],
+      "⨂": [
+        "function-216"
+      ],
+      "⨄": [
+        "function-217"
+      ],
+      "⨆": [
+        "function-218"
+      ],
+      "\\mathop": [
+        "function-219"
+      ],
+      "\\arcsin": [
+        "function-220"
+      ],
+      "\\arccos": [
+        "function-221"
+      ],
+      "\\arctan": [
+        "function-222"
+      ],
+      "\\arctg": [
+        "function-223"
+      ],
+      "\\arcctg": [
+        "function-224"
+      ],
+      "\\arg": [
+        "function-225"
+      ],
+      "\\ch": [
+        "function-226"
+      ],
+      "\\cos": [
+        "function-227"
+      ],
+      "\\cosec": [
+        "function-228"
+      ],
+      "\\cosh": [
+        "function-229"
+      ],
+      "\\cot": [
+        "function-230"
+      ],
+      "\\cotg": [
+        "function-231"
+      ],
+      "\\coth": [
+        "function-232"
+      ],
+      "\\csc": [
+        "function-233"
+      ],
+      "\\ctg": [
+        "function-234"
+      ],
+      "\\cth": [
+        "function-235"
+      ],
+      "\\deg": [
+        "function-236"
+      ],
+      "\\dim": [
+        "function-237"
+      ],
+      "\\exp": [
+        "function-238"
+      ],
+      "\\hom": [
+        "function-239"
+      ],
+      "\\ker": [
+        "function-240"
+      ],
+      "\\lg": [
+        "function-241"
+      ],
+      "\\ln": [
+        "function-242"
+      ],
+      "\\log": [
+        "function-243"
+      ],
+      "\\sec": [
+        "function-244"
+      ],
+      "\\sin": [
+        "function-245"
+      ],
+      "\\sinh": [
+        "function-246"
+      ],
+      "\\sh": [
+        "function-247"
+      ],
+      "\\tan": [
+        "function-248"
+      ],
+      "\\tanh": [
+        "function-249"
+      ],
+      "\\tg": [
+        "function-250"
+      ],
+      "\\th": [
+        "function-251"
+      ],
+      "\\det": [
+        "function-252"
+      ],
+      "\\gcd": [
+        "function-253"
+      ],
+      "\\inf": [
+        "function-254"
+      ],
+      "\\lim": [
+        "function-255"
+      ],
+      "\\max": [
+        "function-256"
+      ],
+      "\\min": [
+        "function-257"
+      ],
+      "\\Pr": [
+        "function-258"
+      ],
+      "\\sup": [
+        "function-259"
+      ],
+      "\\int": [
+        "function-260"
+      ],
+      "\\iint": [
+        "function-261"
+      ],
+      "\\iiint": [
+        "function-262"
+      ],
+      "\\oint": [
+        "function-263"
+      ],
+      "\\oiint": [
+        "function-264"
+      ],
+      "\\oiiint": [
+        "function-265"
+      ],
+      "∫": [
+        "function-266"
+      ],
+      "∬": [
+        "function-267"
+      ],
+      "∭": [
+        "function-268"
+      ],
+      "∮": [
+        "function-269"
+      ],
+      "∯": [
+        "function-270"
+      ],
+      "∰": [
+        "function-271"
+      ],
+      "\\operatorname@": [
+        "function-272"
+      ],
+      "\\operatornamewithlimits": [
+        "function-273"
+      ],
+      "\\overline": [
+        "function-274"
+      ],
+      "\\phantom": [
+        "function-275"
+      ],
+      "\\vphantom": [
+        "function-276"
+      ],
+      "\\raisebox": [
+        "function-277"
+      ],
+      "\\reflectbox": [
+        "function-278"
+      ],
+      "\\mathreflectbox": [
+        "function-279"
+      ],
+      "\\relax": [
+        "function-280"
+      ],
+      "\\rule": [
+        "function-281"
+      ],
+      "\\tiny": [
+        "function-282"
+      ],
+      "\\sixptsize": [
+        "function-283"
+      ],
+      "\\scriptsize": [
+        "function-284"
+      ],
+      "\\footnotesize": [
+        "function-285"
+      ],
+      "\\small": [
+        "function-286"
+      ],
+      "\\normalsize": [
+        "function-287"
+      ],
+      "\\large": [
+        "function-288"
+      ],
+      "\\Large": [
+        "function-289"
+      ],
+      "\\LARGE": [
+        "function-290"
+      ],
+      "\\huge": [
+        "function-291"
+      ],
+      "\\Huge": [
+        "function-292"
+      ],
+      "\\smash": [
+        "function-293"
+      ],
+      "\\sqrt": [
+        "function-294"
+      ],
+      "\\displaystyle": [
+        "function-295"
+      ],
+      "\\textstyle": [
+        "function-296"
+      ],
+      "\\scriptstyle": [
+        "function-297"
+      ],
+      "\\scriptscriptstyle": [
+        "function-298"
+      ],
+      "\\text": [
+        "function-299"
+      ],
+      "\\textrm": [
+        "function-300"
+      ],
+      "\\textsf": [
+        "function-301"
+      ],
+      "\\texttt": [
+        "function-302"
+      ],
+      "\\textnormal": [
+        "function-303"
+      ],
+      "\\textbf": [
+        "function-304"
+      ],
+      "\\textmd": [
+        "function-305"
+      ],
+      "\\textit": [
+        "function-306"
+      ],
+      "\\textup": [
+        "function-307"
+      ],
+      "\\emph": [
+        "function-308"
+      ],
+      "\\underline": [
+        "function-309"
+      ],
+      "\\vcenter": [
+        "function-310"
+      ],
+      "\\verb": [
+        "function-311"
+      ]
+    },
+    "environments": {
+      "array": [
+        "environment-00"
+      ],
+      "darray": [
+        "environment-01"
+      ],
+      "matrix": [
+        "environment-02"
+      ],
+      "pmatrix": [
+        "environment-03"
+      ],
+      "bmatrix": [
+        "environment-04"
+      ],
+      "Bmatrix": [
+        "environment-05"
+      ],
+      "vmatrix": [
+        "environment-06"
+      ],
+      "Vmatrix": [
+        "environment-07"
+      ],
+      "matrix*": [
+        "environment-08"
+      ],
+      "pmatrix*": [
+        "environment-09"
+      ],
+      "bmatrix*": [
+        "environment-10"
+      ],
+      "Bmatrix*": [
+        "environment-11"
+      ],
+      "vmatrix*": [
+        "environment-12"
+      ],
+      "Vmatrix*": [
+        "environment-13"
+      ],
+      "smallmatrix": [
+        "environment-14"
+      ],
+      "subarray": [
+        "environment-15"
+      ],
+      "cases": [
+        "environment-16"
+      ],
+      "dcases": [
+        "environment-17"
+      ],
+      "rcases": [
+        "environment-18"
+      ],
+      "drcases": [
+        "environment-19"
+      ],
+      "align": [
+        "environment-20"
+      ],
+      "align*": [
+        "environment-21"
+      ],
+      "aligned": [
+        "environment-22"
+      ],
+      "split": [
+        "environment-23"
+      ],
+      "gathered": [
+        "environment-24"
+      ],
+      "gather": [
+        "environment-25"
+      ],
+      "gather*": [
+        "environment-26"
+      ],
+      "alignat": [
+        "environment-27"
+      ],
+      "alignat*": [
+        "environment-28"
+      ],
+      "alignedat": [
+        "environment-29"
+      ],
+      "equation": [
+        "environment-30"
+      ],
+      "equation*": [
+        "environment-31"
+      ],
+      "CD": [
+        "environment-32"
+      ]
+    },
+    "macros": {
+      "\\nonumber": [
+        "macro-000"
+      ],
+      "\\notag": [
+        "macro-001"
+      ],
+      "\\operatorname": [
+        "macro-002"
+      ],
+      "\\hphantom": [
+        "macro-003"
+      ],
+      "\\noexpand": [
+        "macro-004"
+      ],
+      "\\expandafter": [
+        "macro-005"
+      ],
+      "\\@firstoftwo": [
+        "macro-006"
+      ],
+      "\\@secondoftwo": [
+        "macro-007"
+      ],
+      "\\@ifnextchar": [
+        "macro-008"
+      ],
+      "\\@ifstar": [
+        "macro-009"
+      ],
+      "\\TextOrMath": [
+        "macro-010"
+      ],
+      "\\char": [
+        "macro-011"
+      ],
+      "\\newcommand": [
+        "macro-012"
+      ],
+      "\\renewcommand": [
+        "macro-013"
+      ],
+      "\\providecommand": [
+        "macro-014"
+      ],
+      "\\message": [
+        "macro-015"
+      ],
+      "\\errmessage": [
+        "macro-016"
+      ],
+      "\\show": [
+        "macro-017"
+      ],
+      "\\bgroup": [
+        "macro-018"
+      ],
+      "\\egroup": [
+        "macro-019"
+      ],
+      "~": [
+        "macro-020"
+      ],
+      "\\lq": [
+        "macro-021"
+      ],
+      "\\rq": [
+        "macro-022"
+      ],
+      "\\aa": [
+        "macro-023"
+      ],
+      "\\AA": [
+        "macro-024"
+      ],
+      "\\textcopyright": [
+        "macro-025"
+      ],
+      "\\copyright": [
+        "macro-026"
+      ],
+      "\\textregistered": [
+        "macro-027"
+      ],
+      "ℬ": [
+        "macro-028"
+      ],
+      "ℰ": [
+        "macro-029"
+      ],
+      "ℱ": [
+        "macro-030"
+      ],
+      "ℋ": [
+        "macro-031"
+      ],
+      "ℐ": [
+        "macro-032"
+      ],
+      "ℒ": [
+        "macro-033"
+      ],
+      "ℳ": [
+        "macro-034"
+      ],
+      "ℛ": [
+        "macro-035"
+      ],
+      "ℭ": [
+        "macro-036"
+      ],
+      "ℌ": [
+        "macro-037"
+      ],
+      "ℨ": [
+        "macro-038"
+      ],
+      "\\Bbbk": [
+        "macro-039"
+      ],
+      "\\llap": [
+        "macro-040"
+      ],
+      "\\rlap": [
+        "macro-041"
+      ],
+      "\\clap": [
+        "macro-042"
+      ],
+      "\\mathstrut": [
+        "macro-043"
+      ],
+      "\\underbar": [
+        "macro-044"
+      ],
+      "\\not": [
+        "macro-045"
+      ],
+      "\\neq": [
+        "macro-046"
+      ],
+      "\\ne": [
+        "macro-047"
+      ],
+      "≠": [
+        "macro-048"
+      ],
+      "\\notin": [
+        "macro-049"
+      ],
+      "∉": [
+        "macro-050"
+      ],
+      "≘": [
+        "macro-051"
+      ],
+      "≙": [
+        "macro-052"
+      ],
+      "≚": [
+        "macro-053"
+      ],
+      "≛": [
+        "macro-054"
+      ],
+      "≝": [
+        "macro-055"
+      ],
+      "≞": [
+        "macro-056"
+      ],
+      "≟": [
+        "macro-057"
+      ],
+      "⟂": [
+        "macro-058"
+      ],
+      "‼": [
+        "macro-059"
+      ],
+      "∌": [
+        "macro-060"
+      ],
+      "⌜": [
+        "macro-061"
+      ],
+      "⌝": [
+        "macro-062"
+      ],
+      "⌞": [
+        "macro-063"
+      ],
+      "⌟": [
+        "macro-064"
+      ],
+      "©": [
+        "macro-065"
+      ],
+      "®": [
+        "macro-066"
+      ],
+      "\\ulcorner": [
+        "macro-067"
+      ],
+      "\\urcorner": [
+        "macro-068"
+      ],
+      "\\llcorner": [
+        "macro-069"
+      ],
+      "\\lrcorner": [
+        "macro-070"
+      ],
+      "\\vdots": [
+        "macro-071"
+      ],
+      "⋮": [
+        "macro-072"
+      ],
+      "\\varGamma": [
+        "macro-073"
+      ],
+      "\\varDelta": [
+        "macro-074"
+      ],
+      "\\varTheta": [
+        "macro-075"
+      ],
+      "\\varLambda": [
+        "macro-076"
+      ],
+      "\\varXi": [
+        "macro-077"
+      ],
+      "\\varPi": [
+        "macro-078"
+      ],
+      "\\varSigma": [
+        "macro-079"
+      ],
+      "\\varUpsilon": [
+        "macro-080"
+      ],
+      "\\varPhi": [
+        "macro-081"
+      ],
+      "\\varPsi": [
+        "macro-082"
+      ],
+      "\\varOmega": [
+        "macro-083"
+      ],
+      "\\substack": [
+        "macro-084"
+      ],
+      "\\colon": [
+        "macro-085"
+      ],
+      "\\boxed": [
+        "macro-086"
+      ],
+      "\\iff": [
+        "macro-087"
+      ],
+      "\\implies": [
+        "macro-088"
+      ],
+      "\\impliedby": [
+        "macro-089"
+      ],
+      "\\dddot": [
+        "macro-090"
+      ],
+      "\\ddddot": [
+        "macro-091"
+      ],
+      "\\dots": [
+        "macro-092"
+      ],
+      "\\dotso": [
+        "macro-093"
+      ],
+      "\\dotsc": [
+        "macro-094"
+      ],
+      "\\cdots": [
+        "macro-095"
+      ],
+      "\\dotsb": [
+        "macro-096"
+      ],
+      "\\dotsm": [
+        "macro-097"
+      ],
+      "\\dotsi": [
+        "macro-098"
+      ],
+      "\\dotsx": [
+        "macro-099"
+      ],
+      "\\DOTSI": [
+        "macro-100"
+      ],
+      "\\DOTSB": [
+        "macro-101"
+      ],
+      "\\DOTSX": [
+        "macro-102"
+      ],
+      "\\tmspace": [
+        "macro-103"
+      ],
+      "\\,": [
+        "macro-104"
+      ],
+      "\\thinspace": [
+        "macro-105"
+      ],
+      "\\>": [
+        "macro-106"
+      ],
+      "\\:": [
+        "macro-107"
+      ],
+      "\\medspace": [
+        "macro-108"
+      ],
+      "\\;": [
+        "macro-109"
+      ],
+      "\\thickspace": [
+        "macro-110"
+      ],
+      "\\!": [
+        "macro-111"
+      ],
+      "\\negthinspace": [
+        "macro-112"
+      ],
+      "\\negmedspace": [
+        "macro-113"
+      ],
+      "\\negthickspace": [
+        "macro-114"
+      ],
+      "\\enspace": [
+        "macro-115"
+      ],
+      "\\enskip": [
+        "macro-116"
+      ],
+      "\\quad": [
+        "macro-117"
+      ],
+      "\\qquad": [
+        "macro-118"
+      ],
+      "\\tag": [
+        "macro-119"
+      ],
+      "\\tag@paren": [
+        "macro-120"
+      ],
+      "\\tag@literal": [
+        "macro-121"
+      ],
+      "\\bmod": [
+        "macro-122"
+      ],
+      "\\pod": [
+        "macro-123"
+      ],
+      "\\pmod": [
+        "macro-124"
+      ],
+      "\\mod": [
+        "macro-125"
+      ],
+      "\\newline": [
+        "macro-126"
+      ],
+      "\\TeX": [
+        "macro-127"
+      ],
+      "\\LaTeX": [
+        "macro-128"
+      ],
+      "\\KaTeX": [
+        "macro-129"
+      ],
+      "\\hspace": [
+        "macro-130"
+      ],
+      "\\@hspace": [
+        "macro-131"
+      ],
+      "\\@hspacer": [
+        "macro-132"
+      ],
+      "\\ordinarycolon": [
+        "macro-133"
+      ],
+      "\\vcentcolon": [
+        "macro-134"
+      ],
+      "\\dblcolon": [
+        "macro-135"
+      ],
+      "\\coloneqq": [
+        "macro-136"
+      ],
+      "\\Coloneqq": [
+        "macro-137"
+      ],
+      "\\coloneq": [
+        "macro-138"
+      ],
+      "\\Coloneq": [
+        "macro-139"
+      ],
+      "\\eqqcolon": [
+        "macro-140"
+      ],
+      "\\Eqqcolon": [
+        "macro-141"
+      ],
+      "\\eqcolon": [
+        "macro-142"
+      ],
+      "\\Eqcolon": [
+        "macro-143"
+      ],
+      "\\colonapprox": [
+        "macro-144"
+      ],
+      "\\Colonapprox": [
+        "macro-145"
+      ],
+      "\\colonsim": [
+        "macro-146"
+      ],
+      "\\Colonsim": [
+        "macro-147"
+      ],
+      "∷": [
+        "macro-148"
+      ],
+      "∹": [
+        "macro-149"
+      ],
+      "≔": [
+        "macro-150"
+      ],
+      "≕": [
+        "macro-151"
+      ],
+      "⩴": [
+        "macro-152"
+      ],
+      "\\ratio": [
+        "macro-153"
+      ],
+      "\\coloncolon": [
+        "macro-154"
+      ],
+      "\\colonequals": [
+        "macro-155"
+      ],
+      "\\coloncolonequals": [
+        "macro-156"
+      ],
+      "\\equalscolon": [
+        "macro-157"
+      ],
+      "\\equalscoloncolon": [
+        "macro-158"
+      ],
+      "\\colonminus": [
+        "macro-159"
+      ],
+      "\\coloncolonminus": [
+        "macro-160"
+      ],
+      "\\minuscolon": [
+        "macro-161"
+      ],
+      "\\minuscoloncolon": [
+        "macro-162"
+      ],
+      "\\coloncolonapprox": [
+        "macro-163"
+      ],
+      "\\coloncolonsim": [
+        "macro-164"
+      ],
+      "\\simcolon": [
+        "macro-165"
+      ],
+      "\\simcoloncolon": [
+        "macro-166"
+      ],
+      "\\approxcolon": [
+        "macro-167"
+      ],
+      "\\approxcoloncolon": [
+        "macro-168"
+      ],
+      "\\notni": [
+        "macro-169"
+      ],
+      "\\limsup": [
+        "macro-170"
+      ],
+      "\\liminf": [
+        "macro-171"
+      ],
+      "\\injlim": [
+        "macro-172"
+      ],
+      "\\projlim": [
+        "macro-173"
+      ],
+      "\\varlimsup": [
+        "macro-174"
+      ],
+      "\\varliminf": [
+        "macro-175"
+      ],
+      "\\varinjlim": [
+        "macro-176"
+      ],
+      "\\varprojlim": [
+        "macro-177"
+      ],
+      "\\gvertneqq": [
+        "macro-178"
+      ],
+      "\\lvertneqq": [
+        "macro-179"
+      ],
+      "\\ngeqq": [
+        "macro-180"
+      ],
+      "\\ngeqslant": [
+        "macro-181"
+      ],
+      "\\nleqq": [
+        "macro-182"
+      ],
+      "\\nleqslant": [
+        "macro-183"
+      ],
+      "\\nshortmid": [
+        "macro-184"
+      ],
+      "\\nshortparallel": [
+        "macro-185"
+      ],
+      "\\nsubseteqq": [
+        "macro-186"
+      ],
+      "\\nsupseteqq": [
+        "macro-187"
+      ],
+      "\\varsubsetneq": [
+        "macro-188"
+      ],
+      "\\varsubsetneqq": [
+        "macro-189"
+      ],
+      "\\varsupsetneq": [
+        "macro-190"
+      ],
+      "\\varsupsetneqq": [
+        "macro-191"
+      ],
+      "\\imath": [
+        "macro-192"
+      ],
+      "\\jmath": [
+        "macro-193"
+      ],
+      "\\llbracket": [
+        "macro-194"
+      ],
+      "\\rrbracket": [
+        "macro-195"
+      ],
+      "⟦": [
+        "macro-196"
+      ],
+      "⟧": [
+        "macro-197"
+      ],
+      "\\lBrace": [
+        "macro-198"
+      ],
+      "\\rBrace": [
+        "macro-199"
+      ],
+      "↤": [
+        "macro-200"
+      ],
+      "\\mapsfrom": [
+        "macro-201"
+      ],
+      "⦃": [
+        "macro-202"
+      ],
+      "⦄": [
+        "macro-203"
+      ],
+      "\\minuso": [
+        "macro-204"
+      ],
+      "⦵": [
+        "macro-205"
+      ],
+      "\\darr": [
+        "macro-206"
+      ],
+      "\\dArr": [
+        "macro-207"
+      ],
+      "\\Darr": [
+        "macro-208"
+      ],
+      "\\lang": [
+        "macro-209"
+      ],
+      "\\rang": [
+        "macro-210"
+      ],
+      "\\uarr": [
+        "macro-211"
+      ],
+      "\\uArr": [
+        "macro-212"
+      ],
+      "\\Uarr": [
+        "macro-213"
+      ],
+      "\\N": [
+        "macro-214"
+      ],
+      "\\R": [
+        "macro-215"
+      ],
+      "\\Z": [
+        "macro-216"
+      ],
+      "\\alef": [
+        "macro-217"
+      ],
+      "\\alefsym": [
+        "macro-218"
+      ],
+      "\\Alpha": [
+        "macro-219"
+      ],
+      "\\Beta": [
+        "macro-220"
+      ],
+      "\\bull": [
+        "macro-221"
+      ],
+      "\\Chi": [
+        "macro-222"
+      ],
+      "\\clubs": [
+        "macro-223"
+      ],
+      "\\cnums": [
+        "macro-224"
+      ],
+      "\\Complex": [
+        "macro-225"
+      ],
+      "\\Dagger": [
+        "macro-226"
+      ],
+      "\\diamonds": [
+        "macro-227"
+      ],
+      "\\empty": [
+        "macro-228"
+      ],
+      "\\Epsilon": [
+        "macro-229"
+      ],
+      "\\Eta": [
+        "macro-230"
+      ],
+      "\\exist": [
+        "macro-231"
+      ],
+      "\\harr": [
+        "macro-232"
+      ],
+      "\\hArr": [
+        "macro-233"
+      ],
+      "\\Harr": [
+        "macro-234"
+      ],
+      "\\hearts": [
+        "macro-235"
+      ],
+      "\\image": [
+        "macro-236"
+      ],
+      "\\infin": [
+        "macro-237"
+      ],
+      "\\Iota": [
+        "macro-238"
+      ],
+      "\\isin": [
+        "macro-239"
+      ],
+      "\\Kappa": [
+        "macro-240"
+      ],
+      "\\larr": [
+        "macro-241"
+      ],
+      "\\lArr": [
+        "macro-242"
+      ],
+      "\\Larr": [
+        "macro-243"
+      ],
+      "\\lrarr": [
+        "macro-244"
+      ],
+      "\\lrArr": [
+        "macro-245"
+      ],
+      "\\Lrarr": [
+        "macro-246"
+      ],
+      "\\Mu": [
+        "macro-247"
+      ],
+      "\\natnums": [
+        "macro-248"
+      ],
+      "\\Nu": [
+        "macro-249"
+      ],
+      "\\Omicron": [
+        "macro-250"
+      ],
+      "\\plusmn": [
+        "macro-251"
+      ],
+      "\\rarr": [
+        "macro-252"
+      ],
+      "\\rArr": [
+        "macro-253"
+      ],
+      "\\Rarr": [
+        "macro-254"
+      ],
+      "\\real": [
+        "macro-255"
+      ],
+      "\\reals": [
+        "macro-256"
+      ],
+      "\\Reals": [
+        "macro-257"
+      ],
+      "\\Rho": [
+        "macro-258"
+      ],
+      "\\sdot": [
+        "macro-259"
+      ],
+      "\\sect": [
+        "macro-260"
+      ],
+      "\\spades": [
+        "macro-261"
+      ],
+      "\\sub": [
+        "macro-262"
+      ],
+      "\\sube": [
+        "macro-263"
+      ],
+      "\\supe": [
+        "macro-264"
+      ],
+      "\\Tau": [
+        "macro-265"
+      ],
+      "\\thetasym": [
+        "macro-266"
+      ],
+      "\\weierp": [
+        "macro-267"
+      ],
+      "\\Zeta": [
+        "macro-268"
+      ],
+      "\\argmin": [
+        "macro-269"
+      ],
+      "\\argmax": [
+        "macro-270"
+      ],
+      "\\plim": [
+        "macro-271"
+      ],
+      "\\bra": [
+        "macro-272"
+      ],
+      "\\ket": [
+        "macro-273"
+      ],
+      "\\braket": [
+        "macro-274"
+      ],
+      "\\Bra": [
+        "macro-275"
+      ],
+      "\\Ket": [
+        "macro-276"
+      ],
+      "\\bra@ket": [
+        "macro-277"
+      ],
+      "\\bra@set": [
+        "macro-278"
+      ],
+      "\\Braket": [
+        "macro-279"
+      ],
+      "\\Set": [
+        "macro-280"
+      ],
+      "\\set": [
+        "macro-281"
+      ],
+      "\\angln": [
+        "macro-282"
+      ],
+      "\\blue": [
+        "macro-283"
+      ],
+      "\\orange": [
+        "macro-284"
+      ],
+      "\\pink": [
+        "macro-285"
+      ],
+      "\\red": [
+        "macro-286"
+      ],
+      "\\green": [
+        "macro-287"
+      ],
+      "\\gray": [
+        "macro-288"
+      ],
+      "\\purple": [
+        "macro-289"
+      ],
+      "\\blueA": [
+        "macro-290"
+      ],
+      "\\blueB": [
+        "macro-291"
+      ],
+      "\\blueC": [
+        "macro-292"
+      ],
+      "\\blueD": [
+        "macro-293"
+      ],
+      "\\blueE": [
+        "macro-294"
+      ],
+      "\\tealA": [
+        "macro-295"
+      ],
+      "\\tealB": [
+        "macro-296"
+      ],
+      "\\tealC": [
+        "macro-297"
+      ],
+      "\\tealD": [
+        "macro-298"
+      ],
+      "\\tealE": [
+        "macro-299"
+      ],
+      "\\greenA": [
+        "macro-300"
+      ],
+      "\\greenB": [
+        "macro-301"
+      ],
+      "\\greenC": [
+        "macro-302"
+      ],
+      "\\greenD": [
+        "macro-303"
+      ],
+      "\\greenE": [
+        "macro-304"
+      ],
+      "\\goldA": [
+        "macro-305"
+      ],
+      "\\goldB": [
+        "macro-306"
+      ],
+      "\\goldC": [
+        "macro-307"
+      ],
+      "\\goldD": [
+        "macro-308"
+      ],
+      "\\goldE": [
+        "macro-309"
+      ],
+      "\\redA": [
+        "macro-310"
+      ],
+      "\\redB": [
+        "macro-311"
+      ],
+      "\\redC": [
+        "macro-312"
+      ],
+      "\\redD": [
+        "macro-313"
+      ],
+      "\\redE": [
+        "macro-314"
+      ],
+      "\\maroonA": [
+        "macro-315"
+      ],
+      "\\maroonB": [
+        "macro-316"
+      ],
+      "\\maroonC": [
+        "macro-317"
+      ],
+      "\\maroonD": [
+        "macro-318"
+      ],
+      "\\maroonE": [
+        "macro-319"
+      ],
+      "\\purpleA": [
+        "macro-320"
+      ],
+      "\\purpleB": [
+        "macro-321"
+      ],
+      "\\purpleC": [
+        "macro-322"
+      ],
+      "\\purpleD": [
+        "macro-323"
+      ],
+      "\\purpleE": [
+        "macro-324"
+      ],
+      "\\mintA": [
+        "macro-325"
+      ],
+      "\\mintB": [
+        "macro-326"
+      ],
+      "\\mintC": [
+        "macro-327"
+      ],
+      "\\grayA": [
+        "macro-328"
+      ],
+      "\\grayB": [
+        "macro-329"
+      ],
+      "\\grayC": [
+        "macro-330"
+      ],
+      "\\grayD": [
+        "macro-331"
+      ],
+      "\\grayE": [
+        "macro-332"
+      ],
+      "\\grayF": [
+        "macro-333"
+      ],
+      "\\grayG": [
+        "macro-334"
+      ],
+      "\\grayH": [
+        "macro-335"
+      ],
+      "\\grayI": [
+        "macro-336"
+      ],
+      "\\kaBlue": [
+        "macro-337"
+      ],
+      "\\kaGreen": [
+        "macro-338"
+      ]
+    }
+  },
+  "expectedValuePolicy": {
+    "handwritten": "Deep semantic/state/callback/trust/strict/error expectations derive from source handler/spec statements and approved native AST/state contract. Candidate is never invoked to create expected data.",
+    "oracle": "tools/full_parser_oracle.mjs imports real pinned upstream TS using root upstream_loader; P3 emits raw source parse trees, semantic glyph stream (HTML visual branch), selected retained structural feature counts, array row/column shapes and image measurements. Native projection only inspects actual Node values.",
+    "mandatoryOracleIdentity": "PY_KATEX_FULL_ORACLE must name a result with matching full-parser-cases SHA. Missing/mismatched evidence errors, never skips or native-generated fallback.",
+    "denominatorMeaning": "345 registered functions/environments and339macros each map to concrete source context. Intrinsically error-only \\] remains classified/verified, not falsely counted as successful functionality. 684cases are unexecuted source-driven fixture designs until P3.",
+    "bounds": "106 methods (including registry iteration) and684source contexts are not measured branch coverage or a claim of all possible TeX input equivalence."
+  },
+  "sourceErrorOnly": {
+    "registeredName": "\\]",
+    "reason": "functions/math.ts contains only a mismatched closer error handler; no core \\[ opener exists. Source root explicitly approved separate error-only classification."
+  },
+  "oldTestMigrationProposals": [
+    {
+      "file": "tests/test_parser.py",
+      "methodId": "test_cfrac_continued_flag_and_alignment",
+      "sourceRef": "src/functions/genfrac.ts",
+      "sourceReason": "Fixed cfrac numOptionalArgs absent/0; [l] becomes normal numerator/denominator tokens, no align option.",
+      "newCoverage": "RawArgumentAndModeSourceTests.test_source_cfrac_has_no_optional_alignment_argument"
+    },
+    {
+      "file": "tests/test_parser.py",
+      "methodId": "test_operatorname_mathop_and_builtin_operator",
+      "sourceRef": "src/functions/operatorname.ts",
+      "sourceReason": "Starred operatorname uses alwaysHandleSupSub=true with limits=false, not direct limits=true.",
+      "newCoverage": "FullRegistryFixedSourceOracleTests source tree + macro operatorname context"
+    },
+    {
+      "file": "tests/test_parser.py",
+      "methodId": "test_align_gather_equation_family_environment_identity",
+      "sourceRef": "src/environments/array.ts",
+      "sourceReason": "Top-level AMS environments require displayMode; new registry cases explicitly provide legal display context.",
+      "newCoverage": "FullArrayAndTagSourceTests.test_display_only_ams_environments_reject_inline_context"
+    },
+    {
+      "file": "tests/test_parser.py",
+      "methodId": "test_href_discards_navigation_and_preserves_static_label",
+      "sourceRef": "src/functions/href.ts",
+      "sourceReason": "trust=false returns visible red command, not inner label. Static trusted case still removes navigation host.",
+      "newCoverage": "TrustStrictAndErrorSourceTests.test_untrusted_command_is_visible_and_does_not_hide_rest_of_formula"
+    },
+    {
+      "file": "tests/test_parser.py",
+      "methodId": "test_url_is_typewriter_static_text",
+      "sourceRef": "src/functions/href.ts",
+      "sourceReason": "Trusted URL is typewriter; default trust=false is visible red command.",
+      "newCoverage": "FullRegistryFixedSourceOracleTests trusted url case"
+    },
+    {
+      "file": "tests/test_parser.py",
+      "methodId": "test_valid_source_commands_outside_native_contract_fail_explicitly",
+      "sourceRef": "registry:full-runtime",
+      "sourceReason": "FULL now retains all former pending HTML/image/CD/Braket/tag; no longer a native unsupported denominator.",
+      "newCoverage": "684 source registry contexts + trust/HTML/image/CD/tag tests"
+    },
+    {
+      "file": "tests/test_parser.py",
+      "methodId": "test_invalid_limits_and_input_are_explicit",
+      "sourceRef": "src/Settings.ts",
+      "sourceReason": "maxExpand accepts number including1.5 and Infinity; processor clamps negatives0.",
+      "newCoverage": "FullMacroBudgetAndValidationTests.test_zero_fractional_infinite_and_negative_clamped_max_expand"
+    },
+    {
+      "file": "tests/test_parser.py",
+      "methodId": "test_dimension_units_and_invalid_unit",
+      "sourceRef": "src/Parser.ts",
+      "sourceReason": "Unanchored size regex reads first unit substring; 2invalid contains valid2in and is not a true source invalid unit.",
+      "newCoverage": "SourceMeasurementsAndDeclarations.test_unanchored_source_size_regex_retains_first_valid_measurement"
+    }
+  ],
+  "oldTestsModified": true,
+  "execution": {
+    "sourceOracleArgv": [
+      "node",
+      "tools/full_parser_oracle.mjs",
+      "--fixtures",
+      "tests/full-parser-cases.json",
+      "--out",
+      "<run>/artifacts/full-parser-oracle.json"
+    ],
+    "nativeEnvironment": {
+      "PYTHONPATH": "src",
+      "PY_KATEX_FULL_ORACLE": "<run>/artifacts/full-parser-oracle.json"
+    },
+    "nativeArgv": [
+      "python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_full_*.py",
+      "-v"
+    ],
+    "recommendedOrder": "P3 source oracle first; keep-going records all independent native groups even if a fixture/source mismatch is reported. Source tool exit1 indicates unexpected source acceptance, not a native verdict."
+  },
+  "files": [
+    {
+      "path": "tests/test_full_parser.py",
+      "sha256": "cd640e128bc109716d4e5da5462a0b065569112c1bc9e1edd88672abd73eb14b",
+      "testMethods": 57
+    },
+    {
+      "path": "tests/test_full_macros.py",
+      "sha256": "39d9b74b5fd22e48e4a6bdac6d33c205efdd9c54f1822b88867bc3fb751e9bb6",
+      "testMethods": 51
+    },
+    {
+      "path": "tests/test_full_registry.py",
+      "sha256": "bbbffc34c0f8247e749638497d1af31949cd1cfef766e68bdd11cde882c39e91",
+      "testMethods": 9
+    },
+    {
+      "path": "tests/full-parser-cases.json",
+      "sha256": "f1d90851a0b6c57f49e1d8f0be7b5ea9e7cd4e884856d03da6b2abb2b473fd72",
+      "testMethods": null
+    },
+    {
+      "path": "tools/full_parser_oracle.mjs",
+      "sha256": "733d19838fe8ea6fea37ab9d6299fb0b3d3d17f870a8a6bab0ef14907d5f0fb5",
+      "testMethods": null
+    }
+  ],
+  "mechanicalEvidence": [
+    "test-runs/MATH-FULL-record-20261105T153823Z-581f6ead/run.json",
+    "test-runs/MATH-FULL-record-20261105T153824Z-4cbd85a5/run.json",
+    "test-runs/MATH-FULL-record-20261105T154415Z-9f520577/run.json",
+    "test-runs/MATH-FULL-record-20261105T154736Z-a483fb51/run.json",
+    "test-runs/MATH-FULL-record-20261105T154737Z-1b1e58d0/run.json",
+    "test-runs/MATH-FULL-record-20261105T155148Z-27b4b8f5/run.json",
+    "test-runs/MATH-FULL-record-20261105T155150Z-fe9bd3d2/run.json"
+  ],
+  "behaviorExecuted": true,
+  "productSourceModified": true,
+  "installationValidation": "deferred_by_user",
+  "sourceSemanticProjection": "Source AST glyphs, retained family counts, array row/column shapes, fraction bar flags, source font identity, operator limits/identity and image measurements. No native-derived expected values.",
+  "p2InitialCounts": {
+    "tests/test_full_parser.py": 49,
+    "tests/test_full_macros.py": 48,
+    "tests/test_full_registry.py": 9
+  },
+  "firstFailureEvidence": "test-runs/MATH-batch-20261105T155834Z-e542e4f2",
+  "targetedEvidence": [
+    "test-runs/MATH-FULL-record-20261105T160608Z-d4daf71f/run.json",
+    "test-runs/MATH-FULL-record-20261105T160746Z-7fdce362/run.json",
+    "test-runs/MATH-FULL-record-20261105T161024Z-0dab6976/run.json",
+    "test-runs/MATH-FULL-record-20261105T161048Z-ac647a20/run.json",
+    "test-runs/MATH-FULL-record-20261105T161046Z-766e6e38/run.json",
+    "test-runs/MATH-FULL-record-20261105T161135Z-05290267/run.json",
+    "test-runs/MATH-FULL-record-20261105T161135Z-e9a3bc8c/run.json",
+    "test-runs/MATH-FULL-record-20261105T162711Z-032579aa/run.json"
+  ],
+  "testCorrections": [
+    {
+      "id": "macro-277",
+      "reason": "Old internal braket middle contained active |, recursively reentering itself. Fixed using source Braket literal middle vert; original self recursion preserved as explicit MAX_EXPAND regression. Source macros.ts braketHelper and Braket registration; 683 other initial acceptances unchanged."
+    },
+    {
+      "id": "braket-double-bar",
+      "reason": "Fixed macros.ts Braket middle and middleDouble both use vert. Source probe confirms native expected middle is single |; do not invent Vert."
+    },
+    {
+      "id": "macro-queue-budget-constructor",
+      "reason": "Native extra token bound validates user macro definitions at constructor before expansion; assertion now covers both construction and expansion while keeping original method ID."
+    }
+  ],
+  "oldTestMigrationsApplied": [
+    {
+      "file": "tests/test_parser.py",
+      "methodId": "test_cfrac_continued_flag_and_alignment",
+      "sourceRef": "src/functions/genfrac.ts",
+      "sourceReason": "Fixed cfrac numOptionalArgs absent/0; [l] becomes normal numerator/denominator tokens, no align option.",
+      "newCoverage": "RawArgumentAndModeSourceTests.test_source_cfrac_has_no_optional_alignment_argument",
+      "sourceEvidence": "test-runs/MATH-FULL-record-20261105T160608Z-d4daf71f/run.json"
+    },
+    {
+      "file": "tests/test_parser.py",
+      "methodId": "test_operatorname_mathop_and_builtin_operator",
+      "sourceRef": "src/functions/operatorname.ts",
+      "sourceReason": "Starred operatorname uses alwaysHandleSupSub=true with limits=false, not direct limits=true.",
+      "newCoverage": "FullRegistryFixedSourceOracleTests source tree + macro operatorname context",
+      "sourceEvidence": "test-runs/MATH-FULL-record-20261105T160608Z-d4daf71f/run.json"
+    },
+    {
+      "file": "tests/test_parser.py",
+      "methodId": "test_align_gather_equation_family_environment_identity",
+      "sourceRef": "src/environments/array.ts",
+      "sourceReason": "Top-level AMS environments require displayMode; new registry cases explicitly provide legal display context.",
+      "newCoverage": "FullArrayAndTagSourceTests.test_display_only_ams_environments_reject_inline_context",
+      "sourceEvidence": "test-runs/MATH-FULL-record-20261105T160608Z-d4daf71f/run.json"
+    },
+    {
+      "file": "tests/test_parser.py",
+      "methodId": "test_href_discards_navigation_and_preserves_static_label",
+      "sourceRef": "src/functions/href.ts",
+      "sourceReason": "trust=false returns visible red command, not inner label. Static trusted case still removes navigation host.",
+      "newCoverage": "TrustStrictAndErrorSourceTests.test_untrusted_command_is_visible_and_does_not_hide_rest_of_formula",
+      "sourceEvidence": "test-runs/MATH-FULL-record-20261105T160608Z-d4daf71f/run.json"
+    },
+    {
+      "file": "tests/test_parser.py",
+      "methodId": "test_url_is_typewriter_static_text",
+      "sourceRef": "src/functions/href.ts",
+      "sourceReason": "Trusted URL is typewriter; default trust=false is visible red command.",
+      "newCoverage": "FullRegistryFixedSourceOracleTests trusted url case",
+      "sourceEvidence": "test-runs/MATH-FULL-record-20261105T160608Z-d4daf71f/run.json"
+    },
+    {
+      "file": "tests/test_parser.py",
+      "methodId": "test_valid_source_commands_outside_native_contract_fail_explicitly",
+      "sourceRef": "registry:full-runtime",
+      "sourceReason": "FULL now retains all former pending HTML/image/CD/Braket/tag; no longer a native unsupported denominator.",
+      "newCoverage": "684 source registry contexts + trust/HTML/image/CD/tag tests",
+      "sourceEvidence": "test-runs/MATH-FULL-record-20261105T160608Z-d4daf71f/run.json"
+    },
+    {
+      "file": "tests/test_parser.py",
+      "methodId": "test_invalid_limits_and_input_are_explicit",
+      "sourceRef": "src/Settings.ts",
+      "sourceReason": "maxExpand accepts number including1.5 and Infinity; processor clamps negatives0.",
+      "newCoverage": "FullMacroBudgetAndValidationTests.test_zero_fractional_infinite_and_negative_clamped_max_expand",
+      "sourceEvidence": "test-runs/MATH-FULL-record-20261105T160608Z-d4daf71f/run.json"
+    },
+    {
+      "file": "tests/test_parser.py",
+      "methodId": "test_dimension_units_and_invalid_unit",
+      "sourceRef": "src/Parser.ts",
+      "sourceReason": "Unanchored size regex reads first unit substring; 2invalid contains valid2in and is not a true source invalid unit.",
+      "newCoverage": "SourceMeasurementsAndDeclarations.test_unanchored_source_size_regex_retains_first_valid_measurement",
+      "sourceEvidence": "test-runs/MATH-FULL-record-20261105T160608Z-d4daf71f/run.json"
+    }
+  ],
+  "knownStaticIssuesForFirstRunResolved": [
+    "Source callbacks execute in _getExpansion before expansionCount check; frozen candidate checks limit earlier. Keep first failure before product repair.",
+    "Source built-in dynamic macro functions belong to namespace builtins and can be captured by let; frozen candidate separates dynamic dispatch from lookup.",
+    "Source htmlmathml parses both arguments even though only one visual backend branch is selected; frozen candidate skips the alternative tree.",
+    "Long unknown-control error token length source may differ from native default1.",
+    "Potential fixture/tool issues must be classified against fresh source oracle evidence; no expected output may be weakened merely to match native."
+  ],
+  "finalPrimitiveArgumentRepair": {
+    "sourceEvidence": "test-runs/MATH-FULL-batch-20261105T161801Z-3fa2e5c3/artifacts/core-source/corpus.json#core-00401",
+    "source": "Parser.parseGroup/parseGroupOfType primitive",
+    "change": "Reject ^/_ tokens when a primitive root argument has no nucleus; retain error at codepoint/UTF16 position5. Top-level/script empty bases keep their existing source semantics.",
+    "regression": "RawArgumentAndModeSourceTests.test_primitive_root_argument_cannot_begin_with_a_script_marker",
+    "newParserMethods": 124,
+    "status": "PASS"
+  }
+}

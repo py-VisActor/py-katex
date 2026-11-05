@@ -1,0 +1,1686 @@
+{
+  "schema": "py-katex-full-layout-cases/v1",
+  "scope": "MATH-FULL",
+  "sourceVersion": "0.18.11",
+  "sourceCommit": "d5bed9f38a8d747b9c4a12e18897a514707e1c26",
+  "origin": "Source-only static examples and independent literal metric/geometry assertions; no candidate execution/output used",
+  "candidateFreeze": "test-runs/MATH-FULL-p1-freeze-20261105T151929Z-e4650f5e",
+  "requiredValidatorBehavior": "options/oracleOptions/oracleHost and all declared geometryChecks/pixelChecks must be consumed or explicitly TOOL_ERROR, never ignored",
+  "cases": [
+    {
+      "id": "full-layout-cd-cycle",
+      "tex": "\\begin{CD}X @>u>> Y\\\\ @VvVV @AAwA\\\\ Z @<t<< W\\end{CD}",
+      "requiredGlyphs": "XYZWuvwt",
+      "options": {
+        "font_size": 20,
+        "display_mode": true
+      },
+      "oracleOptions": {
+        "displayMode": true
+      },
+      "oracleHost": {
+        "fontSize": 20
+      },
+      "geometryChecks": [],
+      "pixelChecks": [
+        {
+          "kind": "ink_present"
+        },
+        {
+          "kind": "border_margin",
+          "pixels": 1
+        }
+      ],
+      "minPaths": 2,
+      "stacked": true,
+      "source": "environments/cd.ts: all labelled vertical and both horizontal arrow directions"
+    },
+    {
+      "id": "full-layout-cd-equal-bar-dot",
+      "tex": "\\begin{CD}P @= Q\\\\ @| @.\\\\ R @>>> S\\end{CD}",
+      "requiredGlyphs": "PQRS",
+      "options": {
+        "font_size": 20,
+        "display_mode": true
+      },
+      "oracleOptions": {
+        "displayMode": true
+      },
+      "oracleHost": {
+        "fontSize": 20
+      },
+      "geometryChecks": [],
+      "pixelChecks": [
+        {
+          "kind": "ink_present"
+        },
+        {
+          "kind": "border_margin",
+          "pixels": 1
+        }
+      ],
+      "minPaths": 3,
+      "source": "environments/cd.ts: =, | and . non-labelled projections"
+    },
+    {
+      "id": "full-layout-cd-long-labels",
+      "tex": "\\begin{CD}A @>{a+b+c+d+e+f}>> B\\end{CD}",
+      "requiredGlyphs": "ABabcdef+++++",
+      "options": {
+        "font_size": 20,
+        "display_mode": true
+      },
+      "oracleOptions": {
+        "displayMode": true
+      },
+      "oracleHost": {
+        "fontSize": 20
+      },
+      "geometryChecks": [
+        {
+          "kind": "path_scale",
+          "x": 0.02,
+          "y": 0.02
+        }
+      ],
+      "pixelChecks": [
+        {
+          "kind": "ink_present"
+        },
+        {
+          "kind": "border_margin",
+          "pixels": 1
+        }
+      ],
+      "minPaths": 1,
+      "source": "CD min-width 3em; label width may enlarge shaft without scaling head"
+    },
+    {
+      "id": "full-layout-cd-fraction-label",
+      "tex": "\\begin{CD}A @>{\\frac{u}{v}}>> B\\end{CD}",
+      "requiredGlyphs": "ABuv",
+      "options": {
+        "font_size": 20,
+        "display_mode": true
+      },
+      "oracleOptions": {
+        "displayMode": true
+      },
+      "oracleHost": {
+        "fontSize": 20
+      },
+      "geometryChecks": [],
+      "pixelChecks": [
+        {
+          "kind": "ink_present"
+        },
+        {
+          "kind": "border_margin",
+          "pixels": 1
+        }
+      ],
+      "minRules": 1,
+      "minPaths": 1,
+      "stacked": true
+    },
+    {
+      "id": "full-layout-cd-empty-labels",
+      "tex": "\\begin{CD}1 @>>> 2\\end{CD}",
+      "requiredGlyphs": "12",
+      "options": {
+        "font_size": 20,
+        "display_mode": true
+      },
+      "oracleOptions": {
+        "displayMode": true
+      },
+      "oracleHost": {
+        "fontSize": 20
+      },
+      "geometryChecks": [],
+      "pixelChecks": [
+        {
+          "kind": "ink_present"
+        },
+        {
+          "kind": "border_margin",
+          "pixels": 1
+        }
+      ],
+      "minPaths": 1,
+      "source": "Empty mandatory above label still contributes xArrow clearance strut"
+    },
+    {
+      "id": "full-layout-tag-right",
+      "tex": "a=b\\tag{T}",
+      "requiredGlyphs": "ab=(T)",
+      "options": {
+        "font_size": 20,
+        "display_mode": true,
+        "content_width": 200
+      },
+      "oracleOptions": {
+        "displayMode": true
+      },
+      "oracleHost": {
+        "fontSize": 20,
+        "contentWidth": 200
+      },
+      "geometryChecks": [
+        {
+          "kind": "logical_width",
+          "value": 200
+        }
+      ],
+      "pixelChecks": [
+        {
+          "kind": "ink_present"
+        },
+        {
+          "kind": "border_margin",
+          "pixels": 1
+        }
+      ],
+      "expectedTagTexts": [
+        "(T)"
+      ]
+    },
+    {
+      "id": "full-layout-tag-star-left",
+      "tex": "a=b\\tag*{Q}",
+      "requiredGlyphs": "ab=Q",
+      "options": {
+        "font_size": 20,
+        "display_mode": true,
+        "content_width": 200,
+        "leqno": true
+      },
+      "oracleOptions": {
+        "displayMode": true,
+        "leqno": true
+      },
+      "oracleHost": {
+        "fontSize": 20,
+        "contentWidth": 200
+      },
+      "geometryChecks": [
+        {
+          "kind": "logical_width",
+          "value": 200
+        },
+        {
+          "kind": "glyph_x",
+          "text": "Q",
+          "value": 0
+        }
+      ],
+      "pixelChecks": [
+        {
+          "kind": "ink_present"
+        },
+        {
+          "kind": "border_margin",
+          "pixels": 1
+        }
+      ],
+      "expectedTagTexts": [
+        "Q"
+      ]
+    },
+    {
+      "id": "full-layout-tag-fleqn",
+      "tex": "x=y\\tag*{2}",
+      "requiredGlyphs": "xy=2",
+      "options": {
+        "font_size": 20,
+        "display_mode": true,
+        "content_width": 240,
+        "fleqn": true
+      },
+      "oracleOptions": {
+        "displayMode": true,
+        "fleqn": true
+      },
+      "oracleHost": {
+        "fontSize": 20,
+        "contentWidth": 240
+      },
+      "geometryChecks": [
+        {
+          "kind": "logical_width",
+          "value": 240
+        },
+        {
+          "kind": "glyph_x",
+          "text": "x",
+          "value": 40
+        },
+        {
+          "kind": "glyph_x",
+          "text": "2",
+          "value": 230
+        }
+      ],
+      "pixelChecks": [
+        {
+          "kind": "ink_present"
+        },
+        {
+          "kind": "border_margin",
+          "pixels": 1
+        }
+      ]
+    },
+    {
+      "id": "full-layout-tag-leqno-fleqn",
+      "tex": "1\\tag*{2}",
+      "requiredGlyphs": "12",
+      "options": {
+        "font_size": 20,
+        "display_mode": true,
+        "content_width": 200,
+        "fleqn": true,
+        "leqno": true
+      },
+      "oracleOptions": {
+        "displayMode": true,
+        "fleqn": true,
+        "leqno": true
+      },
+      "oracleHost": {
+        "fontSize": 20,
+        "contentWidth": 200
+      },
+      "geometryChecks": [
+        {
+          "kind": "glyph_x",
+          "text": "1",
+          "value": 40
+        },
+        {
+          "kind": "glyph_x",
+          "text": "2",
+          "value": 40
+        }
+      ],
+      "pixelChecks": [
+        {
+          "kind": "ink_present"
+        },
+        {
+          "kind": "border_margin",
+          "pixels": 1
+        }
+      ],
+      "source": "katex.scss positioned .katex-html content starts after 2em fleqn padding; source overlap is not silently relocated"
+    },
+    {
+      "id": "full-layout-row-auto-manual-notag",
+      "tex": "\\begin{align}a&=b\\tag{Q}\\\\c&=d\\notag\\\\e&=f\\end{align}",
+      "requiredGlyphs": "abcdef===(Q)(1)",
+      "options": {
+        "font_size": 20,
+        "display_mode": true,
+        "content_width": 320
+      },
+      "oracleOptions": {
+        "displayMode": true
+      },
+      "oracleHost": {
+        "fontSize": 20,
+        "contentWidth": 320
+      },
+      "geometryChecks": [],
+      "pixelChecks": [
+        {
+          "kind": "ink_present"
+        },
+        {
+          "kind": "border_margin",
+          "pixels": 1
+        }
+      ],
+      "expectedTagTexts": [
+        "(Q)",
+        "(1)"
+      ],
+      "autoTagCount": 1,
+      "stacked": true
+    },
+    {
+      "id": "full-layout-row-counter-offset",
+      "tex": "\\begin{gather}u=v\\\\w=x\\end{gather}",
+      "requiredGlyphs": "uvwx==(4)(5)",
+      "options": {
+        "font_size": 20,
+        "display_mode": true,
+        "content_width": 300,
+        "equation_counter": 3
+      },
+      "oracleOptions": {
+        "displayMode": true
+      },
+      "oracleHost": {
+        "fontSize": 20,
+        "contentWidth": 300,
+        "equationCounter": 3
+      },
+      "geometryChecks": [],
+      "pixelChecks": [
+        {
+          "kind": "ink_present"
+        },
+        {
+          "kind": "border_margin",
+          "pixels": 1
+        }
+      ],
+      "expectedTagTexts": [
+        "(4)",
+        "(5)"
+      ],
+      "autoTagCount": 2,
+      "stacked": true
+    },
+    {
+      "id": "full-layout-row-number-suppressed",
+      "tex": "\\begin{align}a&=b\\nonumber\\\\c&=d\\notag\\end{align}",
+      "requiredGlyphs": "abcd==",
+      "options": {
+        "font_size": 20,
+        "display_mode": true,
+        "content_width": 250
+      },
+      "oracleOptions": {
+        "displayMode": true
+      },
+      "oracleHost": {
+        "fontSize": 20,
+        "contentWidth": 250
+      },
+      "geometryChecks": [],
+      "pixelChecks": [
+        {
+          "kind": "ink_present"
+        },
+        {
+          "kind": "border_margin",
+          "pixels": 1
+        }
+      ],
+      "autoTagCount": 0,
+      "expectedTagTexts": [],
+      "stacked": true
+    },
+    {
+      "id": "full-layout-array-rule-padding",
+      "tex": "\\begin{array}{c|r}1&22\\\\\\hline333&4\\end{array}",
+      "requiredGlyphs": "1223334",
+      "options": {
+        "font_size": 20,
+        "display_mode": true
+      },
+      "oracleOptions": {
+        "displayMode": true
+      },
+      "oracleHost": {
+        "fontSize": 20
+      },
+      "geometryChecks": [
+        {
+          "kind": "logical_width",
+          "value": 90
+        }
+      ],
+      "pixelChecks": [
+        {
+          "kind": "ink_present"
+        },
+        {
+          "kind": "border_margin",
+          "pixels": 1
+        }
+      ],
+      "minRules": 2,
+      "source": "Postgap before zero-advance separator; exact source literal digit widths .5em"
+    },
+    {
+      "id": "full-layout-array-double-rule",
+      "tex": "\\begin{array}{c||r}1&2\\end{array}",
+      "requiredGlyphs": "12",
+      "options": {
+        "font_size": 20,
+        "display_mode": true
+      },
+      "oracleOptions": {
+        "displayMode": true
+      },
+      "oracleHost": {
+        "fontSize": 20
+      },
+      "geometryChecks": [
+        {
+          "kind": "logical_width",
+          "value": 64
+        }
+      ],
+      "pixelChecks": [
+        {
+          "kind": "ink_present"
+        },
+        {
+          "kind": "border_margin",
+          "pixels": 1
+        }
+      ],
+      "minRules": 2,
+      "source": "Two separators add only source .2em doubleRuleSep, each border net advance zero"
+    },
+    {
+      "id": "full-layout-array-dashed-rules",
+      "tex": "\\begin{array}{c:r}u&v\\\\\\hdashline w&x\\end{array}",
+      "requiredGlyphs": "uvwx",
+      "options": {
+        "font_size": 20,
+        "display_mode": true
+      },
+      "oracleOptions": {
+        "displayMode": true
+      },
+      "oracleHost": {
+        "fontSize": 20
+      },
+      "geometryChecks": [],
+      "pixelChecks": [
+        {
+          "kind": "ink_present"
+        },
+        {
+          "kind": "border_margin",
+          "pixels": 1
+        }
+      ],
+      "minRules": 4,
+      "stacked": true
+    },
+    {
+      "id": "full-layout-arraystretch-jot",
+      "tex": "\\def\\arraystretch{1.7}\\begin{array}{cc}1&2\\\\3&4\\end{array}",
+      "requiredGlyphs": "1234",
+      "options": {
+        "font_size": 20,
+        "display_mode": true
+      },
+      "oracleOptions": {
+        "displayMode": true
+      },
+      "oracleHost": {
+        "fontSize": 20
+      },
+      "geometryChecks": [],
+      "pixelChecks": [
+        {
+          "kind": "ink_present"
+        },
+        {
+          "kind": "border_margin",
+          "pixels": 1
+        }
+      ],
+      "stacked": true,
+      "source": "arraystretch affects 12pt struts while hlines and glyph sizes remain independent"
+    },
+    {
+      "id": "full-layout-alignedat-gaps",
+      "tex": "\\begin{alignedat}{2}a&=b&c&=d\\\\u&=v&w&=x\\end{alignedat}",
+      "requiredGlyphs": "abcduvwx====",
+      "options": {
+        "font_size": 20,
+        "display_mode": true
+      },
+      "oracleOptions": {
+        "displayMode": true
+      },
+      "oracleHost": {
+        "fontSize": 20
+      },
+      "geometryChecks": [],
+      "pixelChecks": [
+        {
+          "kind": "ink_present"
+        },
+        {
+          "kind": "border_margin",
+          "pixels": 1
+        }
+      ],
+      "stacked": true
+    },
+    {
+      "id": "full-layout-smallmatrix-style",
+      "tex": "\\begin{smallmatrix}a&b\\\\c&d\\end{smallmatrix}",
+      "requiredGlyphs": "abcd",
+      "options": {
+        "font_size": 20,
+        "display_mode": true
+      },
+      "oracleOptions": {
+        "displayMode": true
+      },
+      "oracleHost": {
+        "fontSize": 20
+      },
+      "geometryChecks": [],
+      "pixelChecks": [
+        {
+          "kind": "ink_present"
+        },
+        {
+          "kind": "border_margin",
+          "pixels": 1
+        }
+      ],
+      "stacked": true
+    },
+    {
+      "id": "full-layout-minrule-fraction-clearance",
+      "tex": "\\frac{1}{2}",
+      "requiredGlyphs": "12",
+      "options": {
+        "font_size": 20,
+        "display_mode": false,
+        "min_rule_thickness": 0.5
+      },
+      "oracleOptions": {
+        "displayMode": false,
+        "minRuleThickness": 0.5
+      },
+      "oracleHost": {
+        "fontSize": 20
+      },
+      "geometryChecks": [
+        {
+          "kind": "glyph_y",
+          "text": "1",
+          "value": -20
+        },
+        {
+          "kind": "glyph_y",
+          "text": "2",
+          "value": 19.02216
+        }
+      ],
+      "pixelChecks": [
+        {
+          "kind": "ink_present"
+        },
+        {
+          "kind": "border_margin",
+          "pixels": 1
+        },
+        {
+          "kind": "rule_ink",
+          "minimumFraction": 0.2
+        }
+      ],
+      "minRules": 1
+    },
+    {
+      "id": "full-layout-minrule-overline",
+      "tex": "\\overline{x}+\\underline{y}",
+      "requiredGlyphs": "xy+",
+      "options": {
+        "font_size": 20,
+        "display_mode": true,
+        "min_rule_thickness": 0.12
+      },
+      "oracleOptions": {
+        "displayMode": true,
+        "minRuleThickness": 0.12
+      },
+      "oracleHost": {
+        "fontSize": 20
+      },
+      "geometryChecks": [
+        {
+          "kind": "min_rule_thickness",
+          "value": 2.4
+        }
+      ],
+      "pixelChecks": [
+        {
+          "kind": "ink_present"
+        },
+        {
+          "kind": "border_margin",
+          "pixels": 1
+        }
+      ],
+      "minRules": 2
+    },
+    {
+      "id": "full-layout-minrule-root",
+      "tex": "\\sqrt{x+1}",
+      "requiredGlyphs": "x1+",
+      "options": {
+        "font_size": 20,
+        "display_mode": true,
+        "min_rule_thickness": 0.12
+      },
+      "oracleOptions": {
+        "displayMode": true,
+        "minRuleThickness": 0.12
+      },
+      "oracleHost": {
+        "fontSize": 20
+      },
+      "geometryChecks": [],
+      "pixelChecks": [
+        {
+          "kind": "ink_present"
+        },
+        {
+          "kind": "border_margin",
+          "pixels": 1
+        }
+      ],
+      "minPaths": 1
+    },
+    {
+      "id": "full-layout-minrule-array",
+      "tex": "\\begin{array}{c|c}1&2\\\\\\hline3&4\\end{array}",
+      "requiredGlyphs": "1234",
+      "options": {
+        "font_size": 20,
+        "display_mode": true,
+        "min_rule_thickness": 0.12
+      },
+      "oracleOptions": {
+        "displayMode": true,
+        "minRuleThickness": 0.12
+      },
+      "oracleHost": {
+        "fontSize": 20
+      },
+      "geometryChecks": [
+        {
+          "kind": "min_rule_thickness",
+          "value": 2.4
+        }
+      ],
+      "pixelChecks": [
+        {
+          "kind": "ink_present"
+        },
+        {
+          "kind": "border_margin",
+          "pixels": 1
+        }
+      ],
+      "minRules": 2
+    },
+    {
+      "id": "full-layout-max-size-rule",
+      "tex": "x\\rule{100em}{.3em}y",
+      "requiredGlyphs": "xy",
+      "options": {
+        "font_size": 20,
+        "display_mode": true,
+        "max_size": 1.5
+      },
+      "oracleOptions": {
+        "displayMode": true,
+        "maxSize": 1.5
+      },
+      "oracleHost": {
+        "fontSize": 20
+      },
+      "geometryChecks": [],
+      "pixelChecks": [
+        {
+          "kind": "ink_present"
+        },
+        {
+          "kind": "border_margin",
+          "pixels": 1
+        }
+      ],
+      "minRules": 1
+    },
+    {
+      "id": "full-layout-script-mu-em-units",
+      "tex": "\\scriptstyle x\\,x\\quad x",
+      "requiredGlyphs": "xxx",
+      "options": {
+        "font_size": 20,
+        "display_mode": true
+      },
+      "oracleOptions": {
+        "displayMode": true
+      },
+      "oracleHost": {
+        "fontSize": 20
+      },
+      "geometryChecks": [
+        {
+          "kind": "glyph_x",
+          "text": "x",
+          "occurrence": 1,
+          "value": 10.733753333333333
+        }
+      ],
+      "pixelChecks": [
+        {
+          "kind": "ink_present"
+        },
+        {
+          "kind": "border_margin",
+          "pixels": 1
+        }
+      ]
+    },
+    {
+      "id": "full-layout-absolute-units",
+      "tex": "\\rule{2mm}{1pt}+\\rule{3bp}{2sp}",
+      "requiredGlyphs": "+",
+      "options": {
+        "font_size": 20,
+        "display_mode": true
+      },
+      "oracleOptions": {
+        "displayMode": true
+      },
+      "oracleHost": {
+        "fontSize": 20
+      },
+      "geometryChecks": [],
+      "pixelChecks": [
+        {
+          "kind": "ink_present"
+        },
+        {
+          "kind": "border_margin",
+          "pixels": 1
+        }
+      ],
+      "minRules": 2
+    },
+    {
+      "id": "full-layout-css-mathnormal-axes",
+      "tex": "\\htmlStyle{font-family:KaTeX_SansSerif;font-style:normal;font-weight:bold}{x}",
+      "requiredGlyphs": "x",
+      "options": {
+        "font_size": 20,
+        "display_mode": true,
+        "trust": true
+      },
+      "oracleOptions": {
+        "displayMode": true,
+        "trust": true
+      },
+      "oracleHost": {
+        "fontSize": 20
+      },
+      "geometryChecks": [
+        {
+          "kind": "font_axes",
+          "text": "x",
+          "family": "Math",
+          "style": "italic",
+          "weight": "700"
+        }
+      ],
+      "pixelChecks": [
+        {
+          "kind": "ink_present"
+        },
+        {
+          "kind": "border_margin",
+          "pixels": 1
+        }
+      ]
+    },
+    {
+      "id": "full-layout-css-digit-axes",
+      "tex": "\\htmlStyle{font-family:KaTeX_SansSerif;font-style:italic;font-weight:bold}{1}",
+      "requiredGlyphs": "1",
+      "options": {
+        "font_size": 20,
+        "display_mode": true,
+        "trust": true
+      },
+      "oracleOptions": {
+        "displayMode": true,
+        "trust": true
+      },
+      "oracleHost": {
+        "fontSize": 20
+      },
+      "geometryChecks": [
+        {
+          "kind": "font_axes",
+          "text": "1",
+          "family": "SansSerif",
+          "style": "italic",
+          "weight": "700"
+        }
+      ],
+      "pixelChecks": [
+        {
+          "kind": "ink_present"
+        },
+        {
+          "kind": "border_margin",
+          "pixels": 1
+        }
+      ]
+    },
+    {
+      "id": "full-layout-css-mathrm-axes",
+      "tex": "\\htmlStyle{font-family:KaTeX_SansSerif;font-style:italic;font-weight:bold}{\\mathrm{x}}",
+      "requiredGlyphs": "x",
+      "options": {
+        "font_size": 20,
+        "display_mode": true,
+        "trust": true
+      },
+      "oracleOptions": {
+        "displayMode": true,
+        "trust": true
+      },
+      "oracleHost": {
+        "fontSize": 20
+      },
+      "geometryChecks": [
+        {
+          "kind": "font_axes",
+          "text": "x",
+          "family": "SansSerif",
+          "style": "normal",
+          "weight": "700"
+        }
+      ],
+      "pixelChecks": [
+        {
+          "kind": "ink_present"
+        },
+        {
+          "kind": "border_margin",
+          "pixels": 1
+        }
+      ]
+    },
+    {
+      "id": "full-layout-css-mathbf-axes",
+      "tex": "\\htmlStyle{font-family:KaTeX_SansSerif;font-style:italic;font-weight:normal}{\\mathbf{x}}",
+      "requiredGlyphs": "x",
+      "options": {
+        "font_size": 20,
+        "display_mode": true,
+        "trust": true
+      },
+      "oracleOptions": {
+        "displayMode": true,
+        "trust": true
+      },
+      "oracleHost": {
+        "fontSize": 20
+      },
+      "geometryChecks": [
+        {
+          "kind": "font_axes",
+          "text": "x",
+          "family": "Main",
+          "style": "italic",
+          "weight": "700"
+        }
+      ],
+      "pixelChecks": [
+        {
+          "kind": "ink_present"
+        },
+        {
+          "kind": "border_margin",
+          "pixels": 1
+        }
+      ]
+    },
+    {
+      "id": "full-layout-css-mathbb-axes",
+      "tex": "\\htmlStyle{font-family:KaTeX_SansSerif;font-style:italic;font-weight:bold}{\\mathbb{R}}",
+      "requiredGlyphs": "R",
+      "options": {
+        "font_size": 20,
+        "display_mode": true,
+        "trust": true
+      },
+      "oracleOptions": {
+        "displayMode": true,
+        "trust": true
+      },
+      "oracleHost": {
+        "fontSize": 20
+      },
+      "geometryChecks": [
+        {
+          "kind": "font_axes",
+          "text": "R",
+          "family": "AMS",
+          "style": "italic",
+          "weight": "700"
+        }
+      ],
+      "pixelChecks": [
+        {
+          "kind": "ink_present"
+        },
+        {
+          "kind": "border_margin",
+          "pixels": 1
+        }
+      ]
+    },
+    {
+      "id": "full-layout-mathbb-lowercase-fallback",
+      "tex": "\\mathbb{a}+\\mathbb{R}",
+      "requiredGlyphs": "aR+",
+      "options": {
+        "font_size": 20,
+        "display_mode": true
+      },
+      "oracleOptions": {
+        "displayMode": true
+      },
+      "oracleHost": {
+        "fontSize": 20
+      },
+      "geometryChecks": [],
+      "pixelChecks": [
+        {
+          "kind": "ink_present"
+        },
+        {
+          "kind": "border_margin",
+          "pixels": 1
+        }
+      ],
+      "fonts": [
+        "Math-Italic",
+        "AMS-Regular"
+      ]
+    },
+    {
+      "id": "full-layout-mathsym-alphabet-vs-boldsymbol",
+      "tex": "\\mathbf{x+y}+\\boldsymbol{x+y}",
+      "requiredGlyphs": "xyxy+++",
+      "options": {
+        "font_size": 20,
+        "display_mode": true
+      },
+      "oracleOptions": {
+        "displayMode": true
+      },
+      "oracleHost": {
+        "fontSize": 20
+      },
+      "geometryChecks": [],
+      "pixelChecks": [
+        {
+          "kind": "ink_present"
+        },
+        {
+          "kind": "border_margin",
+          "pixels": 1
+        }
+      ],
+      "source": "mathsym ignores alphabet-only mathbf for plus but honors boldsymbol"
+    },
+    {
+      "id": "full-layout-hbox-reset",
+      "tex": "\\mathbf{x+\\hbox{$x$}+x}",
+      "requiredGlyphs": "xxx++",
+      "options": {
+        "font_size": 20,
+        "display_mode": true
+      },
+      "oracleOptions": {
+        "displayMode": true
+      },
+      "oracleHost": {
+        "fontSize": 20
+      },
+      "geometryChecks": [],
+      "pixelChecks": [
+        {
+          "kind": "ink_present"
+        },
+        {
+          "kind": "border_margin",
+          "pixels": 1
+        }
+      ],
+      "source": "hbox resets TeX math font; embedded math enters textstyle"
+    },
+    {
+      "id": "full-layout-verb-script-textstyle",
+      "tex": "x^{\\verb|ABC|}+x^{\\texttt{ABC}}",
+      "requiredGlyphs": "xxABCABC+",
+      "options": {
+        "font_size": 20,
+        "display_mode": true
+      },
+      "oracleOptions": {
+        "displayMode": true
+      },
+      "oracleHost": {
+        "fontSize": 20
+      },
+      "geometryChecks": [],
+      "pixelChecks": [
+        {
+          "kind": "ink_present"
+        },
+        {
+          "kind": "border_margin",
+          "pixels": 1
+        }
+      ],
+      "source": "verb textstyle versus ordinary texttt sizing inside script"
+    },
+    {
+      "id": "full-layout-source-text-kerning",
+      "tex": "\\text{AVATAR office -- ``quoted''}",
+      "requiredGlyphs": "AVATARoffice\u2013\u201cquoted\u201d",
+      "options": {
+        "font_size": 20,
+        "display_mode": true
+      },
+      "oracleOptions": {
+        "displayMode": true
+      },
+      "oracleHost": {
+        "fontSize": 20
+      },
+      "geometryChecks": [],
+      "pixelChecks": [
+        {
+          "kind": "ink_present"
+        },
+        {
+          "kind": "border_margin",
+          "pixels": 1
+        }
+      ],
+      "source": "Source formLigatures and tryCombineChars, actual text shaping, not a formula-to-text substitute"
+    },
+    {
+      "id": "full-layout-unicode-cyrillic-estimates",
+      "tex": "\\text{\u0410\u0411\u0412 \u0430\u0431\u0432}",
+      "requiredGlyphs": "\u0410\u0411\u0412\u0430\u0431\u0432",
+      "options": {
+        "font_size": 20,
+        "display_mode": true
+      },
+      "oracleOptions": {
+        "displayMode": true
+      },
+      "oracleHost": {
+        "fontSize": 20
+      },
+      "geometryChecks": [
+        {
+          "kind": "glyph_run",
+          "text": "\u0410\u0411\u0412 \u0430\u0431\u0432",
+          "count": 1
+        }
+      ],
+      "pixelChecks": [
+        {
+          "kind": "ink_present"
+        },
+        {
+          "kind": "border_margin",
+          "pixels": 1
+        }
+      ],
+      "source": "fontMetrics extraCharacterMap estimates plus actual whole-run native width"
+    },
+    {
+      "id": "full-layout-unicode-combining-run",
+      "tex": "\\text{\u0928\u092e\u0938\u094d\u0924\u0947}",
+      "requiredGlyphs": "\u0928\u092e\u0938\u094d\u0924\u0947",
+      "options": {
+        "font_size": 20,
+        "display_mode": true
+      },
+      "oracleOptions": {
+        "displayMode": true
+      },
+      "oracleHost": {
+        "fontSize": 20
+      },
+      "geometryChecks": [
+        {
+          "kind": "glyph_run",
+          "text": "\u0928\u092e\u0938\u094d\u0924\u0947",
+          "count": 1
+        }
+      ],
+      "pixelChecks": [
+        {
+          "kind": "ink_present"
+        },
+        {
+          "kind": "border_margin",
+          "pixels": 1
+        }
+      ],
+      "source": "Brahmic cluster must not be fragmented per codepoint"
+    },
+    {
+      "id": "full-layout-unicode-arabic-run",
+      "tex": "\\text{\u0627\u0644\u0639\u0631\u0628\u064a\u0629 \u0627\u0644\u0639\u0631\u0628\u064a\u0629}",
+      "requiredGlyphs": "\u0627\u0644\u0639\u0631\u0628\u064a\u0629\u0627\u0644\u0639\u0631\u0628\u064a\u0629",
+      "options": {
+        "font_size": 20,
+        "display_mode": true
+      },
+      "oracleOptions": {
+        "displayMode": true
+      },
+      "oracleHost": {
+        "fontSize": 20
+      },
+      "geometryChecks": [
+        {
+          "kind": "glyph_run",
+          "text": "\u0627\u0644\u0639\u0631\u0628\u064a\u0629 \u0627\u0644\u0639\u0631\u0628\u064a\u0629",
+          "count": 1
+        }
+      ],
+      "pixelChecks": [
+        {
+          "kind": "ink_present"
+        },
+        {
+          "kind": "border_margin",
+          "pixels": 1
+        }
+      ],
+      "source": "Actual complete same-face fallback run preserves Arabic joining and Bidi across spaces"
+    },
+    {
+      "id": "full-layout-unicode-cjk-estimates",
+      "tex": "\\text{\u4e2d\u6587\u516c\u5f0f}",
+      "requiredGlyphs": "\u4e2d\u6587\u516c\u5f0f",
+      "options": {
+        "font_size": 20,
+        "display_mode": true
+      },
+      "oracleOptions": {
+        "displayMode": true
+      },
+      "oracleHost": {
+        "fontSize": 20
+      },
+      "geometryChecks": [
+        {
+          "kind": "glyph_run",
+          "text": "\u4e2d\u6587\u516c\u5f0f",
+          "count": 1
+        }
+      ],
+      "pixelChecks": [
+        {
+          "kind": "ink_present"
+        },
+        {
+          "kind": "border_margin",
+          "pixels": 1
+        }
+      ],
+      "source": "Supported-script M logical height is distinct from actual fallback glyph ink"
+    },
+    {
+      "id": "full-layout-root-explicit-empty-index",
+      "tex": "\\sqrt[]{x}+\\sqrt{x}",
+      "requiredGlyphs": "xx+",
+      "options": {
+        "font_size": 20,
+        "display_mode": true
+      },
+      "oracleOptions": {
+        "displayMode": true
+      },
+      "oracleHost": {
+        "fontSize": 20
+      },
+      "geometryChecks": [],
+      "pixelChecks": [
+        {
+          "kind": "ink_present"
+        },
+        {
+          "kind": "border_margin",
+          "pixels": 1
+        }
+      ],
+      "minPaths": 2,
+      "source": "Explicit empty optional root index retains source 5mu/-10mu margins"
+    },
+    {
+      "id": "full-layout-arrow-empty-labels",
+      "tex": "A\\xrightarrow[]{}B",
+      "requiredGlyphs": "AB",
+      "options": {
+        "font_size": 20,
+        "display_mode": true
+      },
+      "oracleOptions": {
+        "displayMode": true
+      },
+      "oracleHost": {
+        "fontSize": 20
+      },
+      "geometryChecks": [
+        {
+          "kind": "path_scale",
+          "x": 0.02,
+          "y": 0.02
+        }
+      ],
+      "pixelChecks": [
+        {
+          "kind": "ink_present"
+        },
+        {
+          "kind": "border_margin",
+          "pixels": 1
+        }
+      ],
+      "minPaths": 1,
+      "source": "Empty above/below groups retain source vlist clearance"
+    },
+    {
+      "id": "full-layout-delimiter-scoped-color",
+      "tex": "\\left(x\\color{red}+y\\right)",
+      "requiredGlyphs": "xy+",
+      "options": {
+        "font_size": 20,
+        "display_mode": true
+      },
+      "oracleOptions": {
+        "displayMode": true
+      },
+      "oracleHost": {
+        "fontSize": 20
+      },
+      "geometryChecks": [],
+      "pixelChecks": [
+        {
+          "kind": "ink_present"
+        },
+        {
+          "kind": "border_margin",
+          "pixels": 1
+        }
+      ],
+      "source": "Right delimiter current color is captured before left/right scope closes"
+    },
+    {
+      "id": "full-layout-moustache-stacks",
+      "tex": "\\left\\lmoustache\\frac{\\frac{a}{b}}{\\frac{c}{d}}\\right\\rmoustache",
+      "requiredGlyphs": "abcd",
+      "options": {
+        "font_size": 20,
+        "display_mode": true
+      },
+      "oracleOptions": {
+        "displayMode": true
+      },
+      "oracleHost": {
+        "fontSize": 20
+      },
+      "geometryChecks": [],
+      "pixelChecks": [
+        {
+          "kind": "ink_present"
+        },
+        {
+          "kind": "border_margin",
+          "pixels": 1
+        }
+      ],
+      "minRules": 3,
+      "stacked": true
+    },
+    {
+      "id": "full-layout-accent-script-nucleus",
+      "tex": "\\hat{x}^1+\\hat{f}_i^2",
+      "requiredGlyphs": "x1fi2+^",
+      "options": {
+        "font_size": 20,
+        "display_mode": true
+      },
+      "oracleOptions": {
+        "displayMode": true
+      },
+      "oracleHost": {
+        "fontSize": 20
+      },
+      "geometryChecks": [],
+      "pixelChecks": [
+        {
+          "kind": "ink_present"
+        },
+        {
+          "kind": "border_margin",
+          "pixels": 1
+        }
+      ],
+      "stacked": true,
+      "source": "Source delegates accent scripts to nucleus rather than elevated accent height"
+    },
+    {
+      "id": "full-layout-utilde-clearance",
+      "tex": "\\utilde{x}+\\underrightarrow{ab}",
+      "requiredGlyphs": "xab+",
+      "options": {
+        "font_size": 20,
+        "display_mode": true
+      },
+      "oracleOptions": {
+        "displayMode": true
+      },
+      "oracleHost": {
+        "fontSize": 20
+      },
+      "geometryChecks": [],
+      "pixelChecks": [
+        {
+          "kind": "ink_present"
+        },
+        {
+          "kind": "border_margin",
+          "pixels": 1
+        }
+      ],
+      "minPaths": 2
+    },
+    {
+      "id": "full-layout-overbrace-both-scripts",
+      "tex": "\\overbrace{x+x}^{n}_{m}",
+      "requiredGlyphs": "xx+nm",
+      "options": {
+        "font_size": 20,
+        "display_mode": true
+      },
+      "oracleOptions": {
+        "displayMode": true
+      },
+      "oracleHost": {
+        "fontSize": 20
+      },
+      "geometryChecks": [],
+      "pixelChecks": [
+        {
+          "kind": "ink_present"
+        },
+        {
+          "kind": "border_margin",
+          "pixels": 1
+        }
+      ],
+      "stacked": true,
+      "source": "supsub delegate isSup=!group.sub; both scripts stay ordinary for overbrace"
+    },
+    {
+      "id": "full-layout-underbrace-both-source-quirk",
+      "tex": "\\underbrace{x+x}^{n}_{m}",
+      "requiredGlyphs": "xx+n",
+      "options": {
+        "font_size": 20,
+        "display_mode": true
+      },
+      "oracleOptions": {
+        "displayMode": true
+      },
+      "oracleHost": {
+        "fontSize": 20
+      },
+      "geometryChecks": [
+        {
+          "kind": "no_glyph",
+          "text": "m"
+        }
+      ],
+      "pixelChecks": [
+        {
+          "kind": "ink_present"
+        },
+        {
+          "kind": "border_margin",
+          "pixels": 1
+        }
+      ],
+      "stacked": true,
+      "sourceDefect": {
+        "id": "fixed-underbrace-both-script-delegation",
+        "source": "supsub.ts htmlBuilderDelegate uses !group.sub; horizBrace.ts selects grp.sup",
+        "expected": "Both-scripts underbrace delegates, renders superscript n as lower annotation, and omits opposite m. Preserve fixed source paint behavior; source AST still contains m."
+      }
+    },
+    {
+      "id": "full-layout-operatorname-starred-display",
+      "tex": "\\operatorname*{L}_{i=0}^{n} x",
+      "requiredGlyphs": "Linx=0",
+      "options": {
+        "font_size": 20,
+        "display_mode": true
+      },
+      "oracleOptions": {
+        "displayMode": true
+      },
+      "oracleHost": {
+        "fontSize": 20
+      },
+      "geometryChecks": [],
+      "pixelChecks": [
+        {
+          "kind": "ink_present"
+        },
+        {
+          "kind": "border_margin",
+          "pixels": 1
+        }
+      ],
+      "stacked": true,
+      "source": "operatorname alwaysHandleSupSub differs from ordinary op.limits logic"
+    },
+    {
+      "id": "full-layout-display-unbreakable-overflow",
+      "tex": "\\frac{123456789}{1}",
+      "requiredGlyphs": "1234567891",
+      "options": {
+        "font_size": 20,
+        "display_mode": true,
+        "content_width": 40
+      },
+      "oracleOptions": {
+        "displayMode": true
+      },
+      "oracleHost": {
+        "fontSize": 20,
+        "contentWidth": 40
+      },
+      "geometryChecks": [
+        {
+          "kind": "logical_width",
+          "value": 40
+        }
+      ],
+      "pixelChecks": [
+        {
+          "kind": "ink_present"
+        },
+        {
+          "kind": "border_margin",
+          "pixels": 1
+        }
+      ],
+      "minRules": 1,
+      "oracleCapture": "Capture union of visible overflow, not host locator rectangle; offset host away from viewport left to preserve centred negative-x ink"
+    },
+    {
+      "id": "full-layout-inline-softbreak",
+      "tex": "a+b+c+d+e+f",
+      "requiredGlyphs": "abcdef+++++",
+      "options": {
+        "font_size": 20,
+        "display_mode": false,
+        "content_width": 60
+      },
+      "oracleOptions": {
+        "displayMode": false
+      },
+      "oracleHost": {
+        "fontSize": 20,
+        "contentWidth": 60
+      },
+      "geometryChecks": [
+        {
+          "kind": "min_baselines",
+          "value": 2
+        }
+      ],
+      "pixelChecks": [
+        {
+          "kind": "ink_present"
+        },
+        {
+          "kind": "border_margin",
+          "pixels": 1
+        }
+      ]
+    },
+    {
+      "id": "full-layout-inline-nobreak",
+      "tex": "a+\\nobreak b+c+d",
+      "requiredGlyphs": "abcd+++",
+      "options": {
+        "font_size": 20,
+        "display_mode": false,
+        "content_width": 60
+      },
+      "oracleOptions": {
+        "displayMode": false
+      },
+      "oracleHost": {
+        "fontSize": 20,
+        "contentWidth": 60
+      },
+      "geometryChecks": [],
+      "pixelChecks": [
+        {
+          "kind": "ink_present"
+        },
+        {
+          "kind": "border_margin",
+          "pixels": 1
+        }
+      ],
+      "source": "First source operator postglue and nobreak stay in same unbreakable chunk"
+    },
+    {
+      "id": "full-layout-explicit-newline-gap",
+      "tex": "a+b\\\\[1em]c+d",
+      "requiredGlyphs": "abcd++",
+      "options": {
+        "font_size": 20,
+        "display_mode": true
+      },
+      "oracleOptions": {
+        "displayMode": true
+      },
+      "oracleHost": {
+        "fontSize": 20
+      },
+      "geometryChecks": [
+        {
+          "kind": "min_baselines",
+          "value": 2
+        }
+      ],
+      "pixelChecks": [
+        {
+          "kind": "ink_present"
+        },
+        {
+          "kind": "border_margin",
+          "pixels": 1
+        }
+      ],
+      "stacked": true
+    },
+    {
+      "id": "full-layout-pmb-shadow-rule",
+      "tex": "\\pmb{\\frac{1}{2}}",
+      "requiredGlyphs": "12",
+      "options": {
+        "font_size": 20,
+        "display_mode": true
+      },
+      "oracleOptions": {
+        "displayMode": true
+      },
+      "oracleHost": {
+        "fontSize": 20
+      },
+      "geometryChecks": [],
+      "pixelChecks": [
+        {
+          "kind": "ink_present"
+        },
+        {
+          "kind": "border_margin",
+          "pixels": 1
+        }
+      ],
+      "minRules": 1,
+      "source": "Literal .02em/.01em text-only shadow with .04px blur, no duplicate rule"
+    },
+    {
+      "id": "full-layout-unsupported-visible",
+      "tex": "\\notAFunction+a",
+      "requiredGlyphs": "notAFunctiona+",
+      "options": {
+        "font_size": 20,
+        "display_mode": true,
+        "throw_on_error": false
+      },
+      "oracleOptions": {
+        "displayMode": true,
+        "throwOnError": false
+      },
+      "oracleHost": {
+        "fontSize": 20
+      },
+      "geometryChecks": [],
+      "pixelChecks": [
+        {
+          "kind": "ink_present"
+        },
+        {
+          "kind": "border_margin",
+          "pixels": 1
+        }
+      ],
+      "expectedDiagnostic": {
+        "code": "UNKNOWN_COMMAND",
+        "severity": "warning"
+      },
+      "source": "Source throwOnError=false undefined control is visible red command plus remaining expression, not empty success"
+    }
+  ],
+  "negativeCases": []
+}

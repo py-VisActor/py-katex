@@ -1,0 +1,73 @@
+{
+  "schema": "py-katex-change-receipt/v1",
+  "owner": "/root",
+  "status": "complete_local_native_static_alpha",
+  "sourceBefore": "test-runs/MATH-p1-freeze-20261105T115339Z-ecac6fdf",
+  "sourceAfter": {
+    "math": "6e11f0a8f9f88c78fb387faf4429cfea72781a4e961328bf53299625bea2cb80",
+    "mermaid": "6e37306deb59a5eb21a2bcceedd66c128a2367f392b094854e2e9bdb3e0e4088"
+  },
+  "finalVerification": "references/verification-summary.json",
+  "productFiles": {
+    "src/py_katex/model.py": "e670d9951fa66f85ca06dcfdb22ae1d54dacf5c8b799b2ec27c7739818218982",
+    "src/py_katex/__init__.py": "379e39e7000b7e87cf165ad1892026518a4f8a47dec2d856bbe11df0250f09e0",
+    "src/py_katex/__main__.py": "d8bbe4948856d34b19af448c6ca9302db73395a05e3bd4788878c489cec53cfd",
+    "pyproject.toml": "6c99abd78be8366da840792b243000c240865ddce7d0748b1976343c9a97e93f",
+    "THIRD_PARTY_NOTICES.md": "c4086b6b62d078ef02612a97c9c4f711a512aaa876aa3f9f7d39e3ff4de74e1c"
+  },
+  "rootChanges": [
+    "Immutable pure Python model, source-derived data extraction and fonts, public APIs/CLI, package metadata and attribution",
+    "Fixed repeated typeset public layout function being replaced by imported module",
+    "Removed historical deferred-math guards and protected TeX through Mermaid sanitization",
+    "Promoted old deferred fixture IDs with native glyph/baseline/pixel assertions; retained original denominators",
+    "Joint source candidates, immutable evidence, real oracle/native comparison, actual five exports and self-contained HTML QA"
+  ],
+  "firstFailure": "test-runs/MATH-batch-20261105T120246Z-de639d13",
+  "firstVisualFailureSummary": "Native CPU 1/61 before public layout namespace repair; full first failure retained",
+  "testCorrections": [
+    "Fraction null-delimiter source padding assertion",
+    "Script source-independent outer band pixel probe",
+    "Metadata YAML actual double-backslash fixture",
+    "Colored glyph non-background pixel probe retains color assertion",
+    "Arrow float tolerance only, no product arrow modification"
+  ],
+  "additionalProductRepairs": [
+    "Parser macro/mode branches recorded by A",
+    "Supsub/boxed geometry and array gap/separator/double-rule/delimiter repairs recorded by B"
+  ],
+  "finalRuns": {
+    "unit": "test-runs/MATH-batch-20261105T121812Z-f140829a",
+    "visual": "test-runs/MATH-batch-20261105T121812Z-73861ed7",
+    "legacy": "test-runs/MATH-batch-20261105T121812Z-85def7ba",
+    "exports": "test-runs/MATH-batch-20261105T122453Z-26698b8b",
+    "report": "test-runs/MATH-batch-20261105T122804Z-878bf5d4",
+    "htmlQa": "test-runs/MATH-batch-20261105T122948Z-8bf16e51"
+  },
+  "knownSourceDifferences": [
+    {
+      "case": "math-flow-metadata",
+      "classification": "source_exception",
+      "description": "官方 Mermaid 元数据预处理将反斜杠 n 破坏为换行，A 图显示残缺的字面公式；本实现保留 TeX 并绘制 ν<y，属于明确修正源异常，不能声称与该异常图相同。"
+    },
+    {
+      "case": "math-flow-group",
+      "classification": "host_font_difference",
+      "description": "官方 MathML 宿主显示斜体 Unicode Group；原生 TeX 使用 Main-Bold 正体粗体。"
+    },
+    {
+      "case": "math-flow-mixed",
+      "classification": "host_whitespace_difference",
+      "description": "官方 flex/MathML 合并公式边界空格；原生保留 Area πr² units 的边界空格。"
+    }
+  ],
+  "evidenceCorrections": [
+    "Mobile report hash wrapping repaired, HTML regenerated without changing images or product source",
+    "Five unindexed derived contact sheets moved after SHA validation to their own MATH-qa-contact-relocation-20261105T122947Z-061728af run; originals unchanged; final integrity passes"
+  ],
+  "externalActions": {
+    "commit": false,
+    "push": false,
+    "publish": false
+  },
+  "installationValidation": "deferred_by_user_not_executed"
+}

@@ -1,0 +1,452 @@
+{
+  "schema": "py-katex-math-full-layout-visual-qa/v1",
+  "status": "PASS",
+  "candidateRun": "test-runs/MATH-FULL-batch-20261105T171602Z-0d9b6942",
+  "manualReviewRun": "test-runs/MATH-FULL-batch-20261105T171936Z-a5ca8881",
+  "candidateJointSha256": "f67b7f82539b9d199c85cdfdbe2e3e9397bf91f155b44f839dcba374f922604d",
+  "candidateSourceTreeSha256": "334c412c34ef675dbc223405622c8d4e19eb56b1ff3700c251cb663d4afdd445",
+  "scope": "Read-only human QA of current CPU/oracle PNGs. Seven pairs actually re-viewed; previous fifteen pairs reused only after all thirty original PNG byte hashes matched. Global backend matrix remains root-owned.",
+  "actualViewingTool": "tools.view_image emitted contact sheets1/2/3; all shown images visually inspected",
+  "newlyViewedPairCount": 7,
+  "newlyViewedOriginals": [
+    {
+      "id": "html-paint",
+      "kind": "oracle",
+      "path": "test-runs\\MATH-FULL-batch-20261105T171602Z-0d9b6942\\artifacts\\oracle\\html-paint.png",
+      "sha256": "fa8cf8daa2e4aed53a7080da39e0c36600135a7ac782f185c6bc5badf5db4a13",
+      "size": [
+        63,
+        74
+      ]
+    },
+    {
+      "id": "html-paint",
+      "kind": "standalone-cpu",
+      "path": "test-runs\\MATH-FULL-batch-20261105T171602Z-0d9b6942\\artifacts\\standalone-cpu\\html-paint.png",
+      "sha256": "2857e0cf3a3c326e097d9c56f036853a7ce6b4d8660de43e155f485a1ea205b9",
+      "size": [
+        59,
+        83
+      ]
+    },
+    {
+      "id": "full-layout-css-digit-axes",
+      "kind": "oracle",
+      "path": "test-runs\\MATH-FULL-batch-20261105T171602Z-0d9b6942\\artifacts\\oracle\\full-layout-css-digit-axes.png",
+      "sha256": "6eba8eaa3ac3658ca1c5f2f8fcdf52d0d663d67f05e29eee6bab37d86a39aa14",
+      "size": [
+        34,
+        48
+      ]
+    },
+    {
+      "id": "full-layout-css-digit-axes",
+      "kind": "standalone-cpu",
+      "path": "test-runs\\MATH-FULL-batch-20261105T171602Z-0d9b6942\\artifacts\\standalone-cpu\\full-layout-css-digit-axes.png",
+      "sha256": "34afd0515bd68f72d5508d7935ede6cbbce92e6d23bb014703535921ae7f30dc",
+      "size": [
+        30,
+        35
+      ]
+    },
+    {
+      "id": "html-font-axes",
+      "kind": "oracle",
+      "path": "test-runs\\MATH-FULL-batch-20261105T171602Z-0d9b6942\\artifacts\\oracle\\html-font-axes.png",
+      "sha256": "92c445443d78d93e40f1845726bc816115697be75d4e4ff2cfa81b3267e834f5",
+      "size": [
+        124,
+        72
+      ]
+    },
+    {
+      "id": "html-font-axes",
+      "kind": "standalone-cpu",
+      "path": "test-runs\\MATH-FULL-batch-20261105T171602Z-0d9b6942\\artifacts\\standalone-cpu\\html-font-axes.png",
+      "sha256": "dc02ccbcb9dcd88ff20ecbb01dce96b13acf68416aa5626b6c3c146e15ea950e",
+      "size": [
+        123,
+        49
+      ]
+    },
+    {
+      "id": "full-layout-cd-cycle",
+      "kind": "oracle",
+      "path": "test-runs\\MATH-FULL-batch-20261105T171602Z-0d9b6942\\artifacts\\oracle\\full-layout-cd-cycle.png",
+      "sha256": "e81468cae4236b75622e8cbd4e2511bca5b4264f131f6399f7d96febdaae385a",
+      "size": [
+        151,
+        138
+      ]
+    },
+    {
+      "id": "full-layout-cd-cycle",
+      "kind": "standalone-cpu",
+      "path": "test-runs\\MATH-FULL-batch-20261105T171602Z-0d9b6942\\artifacts\\standalone-cpu\\full-layout-cd-cycle.png",
+      "sha256": "463870c931ce08861d47aff13e5a61338d403113ce995f50f7d2dd7fda5a5109",
+      "size": [
+        145,
+        156
+      ]
+    },
+    {
+      "id": "full-layout-tag-leqno-fleqn",
+      "kind": "oracle",
+      "path": "test-runs\\MATH-FULL-batch-20261105T171602Z-0d9b6942\\artifacts\\oracle\\full-layout-tag-leqno-fleqn.png",
+      "sha256": "2402bc5e25f73bf0884b0cf5355d78bb110800afc08b32710e25299175df5ef2",
+      "size": [
+        224,
+        48
+      ]
+    },
+    {
+      "id": "full-layout-tag-leqno-fleqn",
+      "kind": "standalone-cpu",
+      "path": "test-runs\\MATH-FULL-batch-20261105T171602Z-0d9b6942\\artifacts\\standalone-cpu\\full-layout-tag-leqno-fleqn.png",
+      "sha256": "7d713e69865a91131548b09e2c182da25670f2480d4483b32a1523863401c6b7",
+      "size": [
+        220,
+        34
+      ]
+    },
+    {
+      "id": "full-layout-array-rule-padding",
+      "kind": "oracle",
+      "path": "test-runs\\MATH-FULL-batch-20261105T171602Z-0d9b6942\\artifacts\\oracle\\full-layout-array-rule-padding.png",
+      "sha256": "d70a4365ce1c987d6dcbb5cec543c11cf15dd5465534a59359574a522579ad7d",
+      "size": [
+        117,
+        74
+      ]
+    },
+    {
+      "id": "full-layout-array-rule-padding",
+      "kind": "standalone-cpu",
+      "path": "test-runs\\MATH-FULL-batch-20261105T171602Z-0d9b6942\\artifacts\\standalone-cpu\\full-layout-array-rule-padding.png",
+      "sha256": "e466ece851c1f546d974fb56d1137638dc5c11158992ac97bbfaaacf3f11f0e6",
+      "size": [
+        110,
+        68
+      ]
+    },
+    {
+      "id": "upstream-DashesAndQuotes",
+      "kind": "oracle",
+      "path": "test-runs\\MATH-FULL-batch-20261105T171602Z-0d9b6942\\artifacts\\oracle\\upstream-DashesAndQuotes.png",
+      "sha256": "d6e7d739e41a3f2d46a141cfdf4ba521eea40cf671da81979b9c9c0fec33ff4a",
+      "size": [
+        359,
+        127
+      ]
+    },
+    {
+      "id": "upstream-DashesAndQuotes",
+      "kind": "standalone-cpu",
+      "path": "test-runs\\MATH-FULL-batch-20261105T171602Z-0d9b6942\\artifacts\\standalone-cpu\\upstream-DashesAndQuotes.png",
+      "sha256": "a9bef0b26e2765e1675b8336a243b2504ae2b4a779fb273f40542f7019e000f8",
+      "size": [
+        355,
+        121
+      ]
+    }
+  ],
+  "contactSheets": [
+    {
+      "path": "test-runs/MATH-FULL-batch-20261105T171936Z-a5ca8881/artifacts/contact/sheet-1.png",
+      "sha256": "51fddd44565bdcf0c7ac385f79fcacda9acca4fdbb86c8d6a2c0cd713399b897"
+    },
+    {
+      "path": "test-runs/MATH-FULL-batch-20261105T171936Z-a5ca8881/artifacts/contact/sheet-2.png",
+      "sha256": "193ab27cdbf451157041410a665620e625d4f8f239c887f30f997547c6f85fbf"
+    },
+    {
+      "path": "test-runs/MATH-FULL-batch-20261105T171936Z-a5ca8881/artifacts/contact/sheet-3.png",
+      "sha256": "22a8242ecda639de7b7e42b0797f762ab5f906e4540c76e110b33cdbfa241cb3"
+    }
+  ],
+  "priorReviewReceipt": "docs/changes/math-full-layout-visual-qa-final.json",
+  "priorImageContinuity": {
+    "priorCandidateRun": "test-runs/MATH-FULL-batch-20261105T165046Z-5b13a336",
+    "priorPairCount": 15,
+    "matchedOriginalCount": 30,
+    "allOriginalsByteIdentical": true,
+    "records": [
+      {
+        "id": "full-layout-cd-cycle",
+        "kind": "oracle",
+        "oldSha": "e81468cae4236b75622e8cbd4e2511bca5b4264f131f6399f7d96febdaae385a",
+        "newSha": "e81468cae4236b75622e8cbd4e2511bca5b4264f131f6399f7d96febdaae385a",
+        "same": true
+      },
+      {
+        "id": "full-layout-cd-cycle",
+        "kind": "standalone-cpu",
+        "oldSha": "463870c931ce08861d47aff13e5a61338d403113ce995f50f7d2dd7fda5a5109",
+        "newSha": "463870c931ce08861d47aff13e5a61338d403113ce995f50f7d2dd7fda5a5109",
+        "same": true
+      },
+      {
+        "id": "full-layout-cd-fraction-label",
+        "kind": "oracle",
+        "oldSha": "ec6d5cd45d23076707733c144146f13bd52b9b71208f8f25f3cb8936e9ec3eff",
+        "newSha": "ec6d5cd45d23076707733c144146f13bd52b9b71208f8f25f3cb8936e9ec3eff",
+        "same": true
+      },
+      {
+        "id": "full-layout-cd-fraction-label",
+        "kind": "standalone-cpu",
+        "oldSha": "406d4205e8f5c6e8b32777e6215343e58dc1c18c8c4bd69f536c38eb2e9135e7",
+        "newSha": "406d4205e8f5c6e8b32777e6215343e58dc1c18c8c4bd69f536c38eb2e9135e7",
+        "same": true
+      },
+      {
+        "id": "full-layout-cd-long-labels",
+        "kind": "oracle",
+        "oldSha": "823aa47ad3a5da927d7bd8cf21c810817b64c3a36958791a09a8278406a66d89",
+        "newSha": "823aa47ad3a5da927d7bd8cf21c810817b64c3a36958791a09a8278406a66d89",
+        "same": true
+      },
+      {
+        "id": "full-layout-cd-long-labels",
+        "kind": "standalone-cpu",
+        "oldSha": "8168f6ee774c30a26b130ce3e8c88d16d67a2d5f562e731d81ea2f2ecfe72ae1",
+        "newSha": "8168f6ee774c30a26b130ce3e8c88d16d67a2d5f562e731d81ea2f2ecfe72ae1",
+        "same": true
+      },
+      {
+        "id": "full-layout-tag-right",
+        "kind": "oracle",
+        "oldSha": "b19eff35993e866250f702e43484e60c34073d622f79e1a8d792a7d573850b27",
+        "newSha": "b19eff35993e866250f702e43484e60c34073d622f79e1a8d792a7d573850b27",
+        "same": true
+      },
+      {
+        "id": "full-layout-tag-right",
+        "kind": "standalone-cpu",
+        "oldSha": "b0450f02c94f64217fa3e786d95bec8b774fde594c575eef7dc2088069d59c83",
+        "newSha": "b0450f02c94f64217fa3e786d95bec8b774fde594c575eef7dc2088069d59c83",
+        "same": true
+      },
+      {
+        "id": "full-layout-tag-leqno-fleqn",
+        "kind": "oracle",
+        "oldSha": "2402bc5e25f73bf0884b0cf5355d78bb110800afc08b32710e25299175df5ef2",
+        "newSha": "2402bc5e25f73bf0884b0cf5355d78bb110800afc08b32710e25299175df5ef2",
+        "same": true
+      },
+      {
+        "id": "full-layout-tag-leqno-fleqn",
+        "kind": "standalone-cpu",
+        "oldSha": "7d713e69865a91131548b09e2c182da25670f2480d4483b32a1523863401c6b7",
+        "newSha": "7d713e69865a91131548b09e2c182da25670f2480d4483b32a1523863401c6b7",
+        "same": true
+      },
+      {
+        "id": "full-layout-row-auto-manual-notag",
+        "kind": "oracle",
+        "oldSha": "ea5a9e6b48c8bb352363cbbc8574602e18c73c0259aea5eb50edb08b4a3a9edb",
+        "newSha": "ea5a9e6b48c8bb352363cbbc8574602e18c73c0259aea5eb50edb08b4a3a9edb",
+        "same": true
+      },
+      {
+        "id": "full-layout-row-auto-manual-notag",
+        "kind": "standalone-cpu",
+        "oldSha": "72d06d2cb180bd854e13f1cd62929636ce8faaba55ce0a3021127e8d17c48ff9",
+        "newSha": "72d06d2cb180bd854e13f1cd62929636ce8faaba55ce0a3021127e8d17c48ff9",
+        "same": true
+      },
+      {
+        "id": "full-layout-row-counter-offset",
+        "kind": "oracle",
+        "oldSha": "131c17976fbe42fbc3d03ab7737628db70d877b3e536424fbaf2d6b064c3c106",
+        "newSha": "131c17976fbe42fbc3d03ab7737628db70d877b3e536424fbaf2d6b064c3c106",
+        "same": true
+      },
+      {
+        "id": "full-layout-row-counter-offset",
+        "kind": "standalone-cpu",
+        "oldSha": "0cccbbda46ec347c892bb2c4da7ed543215bd86c0b1704aec79de051f9187b81",
+        "newSha": "0cccbbda46ec347c892bb2c4da7ed543215bd86c0b1704aec79de051f9187b81",
+        "same": true
+      },
+      {
+        "id": "full-layout-array-dashed-rules",
+        "kind": "oracle",
+        "oldSha": "fd9eafdff64b0d910f092669dc1684794b7fe0f0c770c4b2a63809333508c4a4",
+        "newSha": "fd9eafdff64b0d910f092669dc1684794b7fe0f0c770c4b2a63809333508c4a4",
+        "same": true
+      },
+      {
+        "id": "full-layout-array-dashed-rules",
+        "kind": "standalone-cpu",
+        "oldSha": "14975dec481f52c5e167f1585d34259c757ee4df693cf94dd3dcd97e9f50def1",
+        "newSha": "14975dec481f52c5e167f1585d34259c757ee4df693cf94dd3dcd97e9f50def1",
+        "same": true
+      },
+      {
+        "id": "full-layout-array-rule-padding",
+        "kind": "oracle",
+        "oldSha": "d70a4365ce1c987d6dcbb5cec543c11cf15dd5465534a59359574a522579ad7d",
+        "newSha": "d70a4365ce1c987d6dcbb5cec543c11cf15dd5465534a59359574a522579ad7d",
+        "same": true
+      },
+      {
+        "id": "full-layout-array-rule-padding",
+        "kind": "standalone-cpu",
+        "oldSha": "e466ece851c1f546d974fb56d1137638dc5c11158992ac97bbfaaacf3f11f0e6",
+        "newSha": "e466ece851c1f546d974fb56d1137638dc5c11158992ac97bbfaaacf3f11f0e6",
+        "same": true
+      },
+      {
+        "id": "full-layout-moustache-stacks",
+        "kind": "oracle",
+        "oldSha": "1e6da0df4c28dd93974caf4bdb9115cf7b0468e0b92756bad523065e6bdc131e",
+        "newSha": "1e6da0df4c28dd93974caf4bdb9115cf7b0468e0b92756bad523065e6bdc131e",
+        "same": true
+      },
+      {
+        "id": "full-layout-moustache-stacks",
+        "kind": "standalone-cpu",
+        "oldSha": "040c06e33f0750fbeeb3532b944be014980632c5b3f7368f2fc5930920df851e",
+        "newSha": "040c06e33f0750fbeeb3532b944be014980632c5b3f7368f2fc5930920df851e",
+        "same": true
+      },
+      {
+        "id": "full-layout-overbrace-both-scripts",
+        "kind": "oracle",
+        "oldSha": "2d100ac533b8af5c4b5ff4ca19e1196030b25b8104594aae4daf334e3d4400ed",
+        "newSha": "2d100ac533b8af5c4b5ff4ca19e1196030b25b8104594aae4daf334e3d4400ed",
+        "same": true
+      },
+      {
+        "id": "full-layout-overbrace-both-scripts",
+        "kind": "standalone-cpu",
+        "oldSha": "2a1c44ccc1b8d74a873ca3cda6d0473d43f481c372b7351f2608898a2b1c37dd",
+        "newSha": "2a1c44ccc1b8d74a873ca3cda6d0473d43f481c372b7351f2608898a2b1c37dd",
+        "same": true
+      },
+      {
+        "id": "full-layout-underbrace-both-source-quirk",
+        "kind": "oracle",
+        "oldSha": "91b69216818d9503347cd02f13dcb7a46b2c1ea786276dd4c6def56057a8bcd3",
+        "newSha": "91b69216818d9503347cd02f13dcb7a46b2c1ea786276dd4c6def56057a8bcd3",
+        "same": true
+      },
+      {
+        "id": "full-layout-underbrace-both-source-quirk",
+        "kind": "standalone-cpu",
+        "oldSha": "6c84d609f09e053a5b69fdfb7edcdfd8620fd1804fdbb2a45ec52641d7219e24",
+        "newSha": "6c84d609f09e053a5b69fdfb7edcdfd8620fd1804fdbb2a45ec52641d7219e24",
+        "same": true
+      },
+      {
+        "id": "full-layout-inline-softbreak",
+        "kind": "oracle",
+        "oldSha": "60ae73f007522acf936b457f5412c5d02bb9ea6fdeb05a0cfea3bc61d14ca1c7",
+        "newSha": "60ae73f007522acf936b457f5412c5d02bb9ea6fdeb05a0cfea3bc61d14ca1c7",
+        "same": true
+      },
+      {
+        "id": "full-layout-inline-softbreak",
+        "kind": "standalone-cpu",
+        "oldSha": "3803a3992204773068f49e5ec308d0038310b271e5bbdc3757c9ff2053e7c36c",
+        "newSha": "3803a3992204773068f49e5ec308d0038310b271e5bbdc3757c9ff2053e7c36c",
+        "same": true
+      },
+      {
+        "id": "upstream-DashesAndQuotes",
+        "kind": "oracle",
+        "oldSha": "d6e7d739e41a3f2d46a141cfdf4ba521eea40cf671da81979b9c9c0fec33ff4a",
+        "newSha": "d6e7d739e41a3f2d46a141cfdf4ba521eea40cf671da81979b9c9c0fec33ff4a",
+        "same": true
+      },
+      {
+        "id": "upstream-DashesAndQuotes",
+        "kind": "standalone-cpu",
+        "oldSha": "a9bef0b26e2765e1675b8336a243b2504ae2b4a779fb273f40542f7019e000f8",
+        "newSha": "a9bef0b26e2765e1675b8336a243b2504ae2b4a779fb273f40542f7019e000f8",
+        "same": true
+      },
+      {
+        "id": "upstream-Verb",
+        "kind": "oracle",
+        "oldSha": "6ad8268702adfe13c8a8b010a4486f9ae060dcf1a85cd1914f875f1c5723f455",
+        "newSha": "6ad8268702adfe13c8a8b010a4486f9ae060dcf1a85cd1914f875f1c5723f455",
+        "same": true
+      },
+      {
+        "id": "upstream-Verb",
+        "kind": "standalone-cpu",
+        "oldSha": "9223baff03a8450a4d518dbea15bd49c8ad6d7e02d093416aeff595111330301",
+        "newSha": "9223baff03a8450a4d518dbea15bd49c8ad6d7e02d093416aeff595111330301",
+        "same": true
+      }
+    ]
+  },
+  "findings": [
+    {
+      "ids": [
+        "html-paint"
+      ],
+      "status": "PASS_REPAIRED",
+      "visibleConclusion": "Red x is completely within yellow background and blue frame. Frame is63px tall in both A/B, and foreground/frame have matching relative baseline and padding. The previous compressed33px frame and red crossing bottom border are absent."
+    },
+    {
+      "ids": [
+        "full-layout-css-digit-axes",
+        "html-font-axes"
+      ],
+      "status": "PASS_REPAIRED",
+      "visibleConclusion": "Both native Sans digit1 shapes now visibly lean right and have bold stroke weight like A; they are no longer upright. In composite x1FF, math x remains bold italic, mathrmF is upright Sans and mathbfF is italic Main, matching source per-axis classes."
+    },
+    {
+      "ids": [
+        "full-layout-cd-cycle"
+      ],
+      "status": "PASS",
+      "visibleConclusion": "Four objects, four directed arrows and labels u/v/w/t are present, readable and uncut. Extra native bottom whitespace remains a viewport difference."
+    },
+    {
+      "ids": [
+        "full-layout-array-rule-padding"
+      ],
+      "status": "PASS",
+      "visibleConclusion": "All1/22/333/4 cells and vertical/horizontal separators remain visible with clear gaps; no text touches or clips the rules."
+    },
+    {
+      "ids": [
+        "upstream-DashesAndQuotes"
+      ],
+      "status": "PASS",
+      "visibleConclusion": "All text lines, literal Typewriter dashes, doubled single quotes and mixed script styles remain present and readable. No dropped ligature parts or substitute-font appearance observed."
+    }
+  ],
+  "sourceInherited": [
+    {
+      "id": "full-layout-tag-leqno-fleqn",
+      "status": "SOURCE_INHERITED",
+      "tex": "1\\tag*{2}",
+      "relation": "Both A/B still overlay body1 and explicit lefttag2 at the same baseline x. The images are byte-identical to the independently diagnosed previous review.",
+      "sourceProof": "Source .katex-html positioned containing block, leqno left0 and fleqn2em padding. Real host width200 and font20 are correctly projected; source rectangles coincide at[552,512,562,535], native commands both x40/y0. Explicit starred tag autoTagCount0 means no omitted counter mapping.",
+      "officialSize": [
+        224,
+        48
+      ],
+      "nativeSize": [
+        220,
+        34
+      ],
+      "officialPng": "test-runs/MATH-FULL-batch-20261105T171602Z-0d9b6942/artifacts/oracle/full-layout-tag-leqno-fleqn.png",
+      "nativePng": "test-runs/MATH-FULL-batch-20261105T171602Z-0d9b6942/artifacts/standalone-cpu/full-layout-tag-leqno-fleqn.png",
+      "detailedPriorEvidence": "docs/changes/math-full-layout-visual-qa-final.json sourceInherited"
+    }
+  ],
+  "newSubstantiveDefects": [],
+  "visibleDifferences": [
+    "Browser subpixel antialiasing vs native monochrome antialiasing.",
+    "Canvas viewport padding/whitespace differ while visible mathematical content and relations remain intact."
+  ],
+  "operations": "Only read current original PNGs/metadata, generated contact sheets in a new Run, and wrote this new receipt. No source/test/tool or closed-run edits, parse/layout/render/test executions.",
+  "previousRejectedEvidence": "Previous QA receipts, source font-axis audit, closed failing candidates and followup_required evidence remain unchanged.",
+  "acceptanceLimit": "This manual receipt confirms selected CPU images and exact-image continuity, not pixel equality or independent review of all267 scenes on all backends."
+}

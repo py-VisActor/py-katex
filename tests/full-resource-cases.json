@@ -1,0 +1,324 @@
+{
+  "schema": "math-full-resource-cases/v1",
+  "scope": "MATH-FULL-CANVAS",
+  "origin": "Independent handwritten geometry and fixed KaTeX includegraphics/html/CSS/Unicode contracts, no candidate output",
+  "cases": [
+    {
+      "id": "image-auto-aspect",
+      "title": "image-auto-aspect",
+      "tex": "\\includegraphics[height=1em]{quad}",
+      "display": false,
+      "settings": {
+        "trust": true
+      },
+      "fontSize": 20,
+      "resources": {
+        "images": [
+          {
+            "key": "quad",
+            "id": "quad",
+            "dataBase64": "PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDQwIDIwIj48cGF0aCBmaWxsPSJyZWQiIGQ9Ik0wIDBIMjBWMTBIMFoiLz48cGF0aCBmaWxsPSJsaW1lIiBkPSJNMjAgMEg0MFYxMEgyMFoiLz48cGF0aCBmaWxsPSJibHVlIiBkPSJNMCAxMEgyMFYyMEgwWiIvPjxwYXRoIGZpbGw9InllbGxvdyIgZD0iTTIwIDEwSDQwVjIwSDIwWiIvPjwvc3ZnPg==",
+            "mime": "image/svg+xml",
+            "width": 40,
+            "height": 20
+          }
+        ]
+      },
+      "expectedLogical": {
+        "width": 40,
+        "height": 20,
+        "depth": 0
+      },
+      "colorProbes": [
+        {
+          "x": 0.25,
+          "y": 0.25,
+          "rgb": [
+            255,
+            0,
+            0
+          ]
+        },
+        {
+          "x": 0.75,
+          "y": 0.25,
+          "rgb": [
+            0,
+            255,
+            0
+          ]
+        },
+        {
+          "x": 0.25,
+          "y": 0.75,
+          "rgb": [
+            0,
+            0,
+            255
+          ]
+        },
+        {
+          "x": 0.75,
+          "y": 0.75,
+          "rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "image-totalheight",
+      "title": "image-totalheight",
+      "tex": "\\includegraphics[height=1em,totalheight=1.4em,width=2em,alt=Four colors]{quad}",
+      "display": false,
+      "settings": {
+        "trust": true
+      },
+      "fontSize": 20,
+      "resources": {
+        "images": [
+          {
+            "key": "quad",
+            "id": "quad",
+            "dataBase64": "PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDQwIDIwIj48cGF0aCBmaWxsPSJyZWQiIGQ9Ik0wIDBIMjBWMTBIMFoiLz48cGF0aCBmaWxsPSJsaW1lIiBkPSJNMjAgMEg0MFYxMEgyMFoiLz48cGF0aCBmaWxsPSJibHVlIiBkPSJNMCAxMEgyMFYyMEgwWiIvPjxwYXRoIGZpbGw9InllbGxvdyIgZD0iTTIwIDEwSDQwVjIwSDIwWiIvPjwvc3ZnPg==",
+            "mime": "image/svg+xml",
+            "width": 40,
+            "height": 20
+          }
+        ]
+      },
+      "expectedLogical": {
+        "width": 40,
+        "height": 20,
+        "depth": 8
+      },
+      "colorProbes": [
+        {
+          "x": 0.25,
+          "y": 0.25,
+          "rgb": [
+            255,
+            0,
+            0
+          ]
+        },
+        {
+          "x": 0.75,
+          "y": 0.25,
+          "rgb": [
+            0,
+            255,
+            0
+          ]
+        },
+        {
+          "x": 0.25,
+          "y": 0.75,
+          "rgb": [
+            0,
+            0,
+            255
+          ]
+        },
+        {
+          "x": 0.75,
+          "y": 0.75,
+          "rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "image-datauri",
+      "title": "image-datauri",
+      "tex": "\\includegraphics[height=1em]{data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDQwIDIwIj48cGF0aCBmaWxsPSJyZWQiIGQ9Ik0wIDBIMjBWMTBIMFoiLz48cGF0aCBmaWxsPSJsaW1lIiBkPSJNMjAgMEg0MFYxMEgyMFoiLz48cGF0aCBmaWxsPSJibHVlIiBkPSJNMCAxMEgyMFYyMEgwWiIvPjxwYXRoIGZpbGw9InllbGxvdyIgZD0iTTIwIDEwSDQwVjIwSDIwWiIvPjwvc3ZnPg==}",
+      "display": false,
+      "settings": {
+        "trust": true
+      },
+      "fontSize": 20,
+      "resources": {
+        "images": [
+          {
+            "key": "quad",
+            "id": "quad",
+            "dataBase64": "PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDQwIDIwIj48cGF0aCBmaWxsPSJyZWQiIGQ9Ik0wIDBIMjBWMTBIMFoiLz48cGF0aCBmaWxsPSJsaW1lIiBkPSJNMjAgMEg0MFYxMEgyMFoiLz48cGF0aCBmaWxsPSJibHVlIiBkPSJNMCAxMEgyMFYyMEgwWiIvPjxwYXRoIGZpbGw9InllbGxvdyIgZD0iTTIwIDEwSDQwVjIwSDIwWiIvPjwvc3ZnPg==",
+            "mime": "image/svg+xml",
+            "width": 40,
+            "height": 20
+          }
+        ]
+      },
+      "expectedLogical": {
+        "width": 40,
+        "height": 20,
+        "depth": 0
+      },
+      "colorProbes": [
+        {
+          "x": 0.25,
+          "y": 0.25,
+          "rgb": [
+            255,
+            0,
+            0
+          ]
+        },
+        {
+          "x": 0.75,
+          "y": 0.25,
+          "rgb": [
+            0,
+            255,
+            0
+          ]
+        },
+        {
+          "x": 0.25,
+          "y": 0.75,
+          "rgb": [
+            0,
+            0,
+            255
+          ]
+        },
+        {
+          "x": 0.75,
+          "y": 0.75,
+          "rgb": [
+            255,
+            255,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "html-font-axes",
+      "title": "html-font-axes",
+      "tex": "\\htmlStyle{font-family:KaTeX_SansSerif;font-style:italic;font-weight:bold;}{x1\\mathrm{F}\\mathbf{F}}",
+      "display": false,
+      "settings": {
+        "trust": true
+      },
+      "fontSize": 40,
+      "glyphs": "x1FF"
+    },
+    {
+      "id": "html-paint",
+      "title": "html-paint",
+      "tex": "\\htmlStyle{background-color:yellow;border:2px solid blue;padding:6px;color:red;}{x}",
+      "display": false,
+      "settings": {
+        "trust": true
+      },
+      "fontSize": 40,
+      "glyphs": "x"
+    },
+    {
+      "id": "html-opacity",
+      "title": "html-opacity",
+      "tex": "\\htmlStyle{opacity:0.5;}{\\htmlStyle{opacity:0.5;}{x}}",
+      "display": false,
+      "settings": {
+        "trust": true
+      },
+      "fontSize": 40,
+      "glyphs": "x"
+    },
+    {
+      "id": "pmb-native-blur",
+      "title": "pmb-native-blur",
+      "tex": "\\pmb{F}",
+      "display": false,
+      "settings": {
+        "trust": true
+      },
+      "fontSize": 40,
+      "glyphs": "F"
+    },
+    {
+      "id": "overflow-lap",
+      "title": "overflow-lap",
+      "tex": "\\llap{MMMMMMMM}",
+      "display": false,
+      "settings": {
+        "trust": true
+      },
+      "fontSize": 40,
+      "glyphs": ""
+    },
+    {
+      "id": "overflow-smash",
+      "title": "overflow-smash",
+      "tex": "\\smash{\\frac{1}{2}}",
+      "display": false,
+      "settings": {
+        "trust": true
+      },
+      "fontSize": 40,
+      "glyphs": "1"
+    }
+  ],
+  "resourceEncoding": {
+    "PNG": "Pillow runtime encoding of40x20 independent red/lime/blue/yellow quadrants",
+    "JPEG": "same source raster,quality100/subsampling0",
+    "WebP": "same source raster",
+    "GIF": "first red40x20 frame,second blue40x20 frame; static first-frame expected",
+    "SVG": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"40\" height=\"20\" viewBox=\"0 0 40 20\"><path fill=\"red\" d=\"M0 0H20V10H0Z\"/><path fill=\"lime\" d=\"M20 0H40V10H20Z\"/><path fill=\"blue\" d=\"M0 10H20V20H0Z\"/><path fill=\"yellow\" d=\"M20 10H40V20H20Z\"/></svg>"
+  },
+  "fonts": [
+    {
+      "family": "ExplicitArial",
+      "path": "C:\\Windows\\Fonts\\arial.ttf",
+      "sha256": "b3658eadae55e682b5f69eb64c439c1ecc8f196c0bb8d4756d145d13bc86476a",
+      "scripts": [
+        "cyrillic"
+      ],
+      "copied": false,
+      "license": "Existing caller-local Windows font, no redistribution"
+    }
+  ],
+  "negativeCases": [
+    {
+      "id": "external-network-image",
+      "tex": "\\includegraphics{https://example.com/a.png}",
+      "settings": {
+        "trust": true
+      },
+      "code": "RESOURCE_NOT_FOUND"
+    },
+    {
+      "id": "svg-script",
+      "svg": "<svg><script>x()</script></svg>",
+      "code": "UNSAFE_RESOURCE"
+    },
+    {
+      "id": "svg-external",
+      "svg": "<svg><image href=\"https://example.com/a.png\"/></svg>",
+      "code": "UNSAFE_RESOURCE"
+    },
+    {
+      "id": "unknown-glyph",
+      "tex": "\\text{\udbff\udfff}",
+      "settings": {
+        "strict": "ignore"
+      },
+      "code": "MISSING_GLYPH"
+    }
+  ],
+  "sourceScopeNotes": [
+    "No production remote image fetching or implicit arbitrary file reads",
+    "GIF animation lifecycle excluded, first static frame retained",
+    "System Unicode fallback is source platform behavior, not a universal bundled character library",
+    "Arbitrary host DOM/CSS engine is excluded; finite adapter errors on unknown visible properties",
+    "Core128 screenshotter oracle is coordinated by root and is not duplicated here"
+  ],
+  "productionSourceModified": false,
+  "testExecution": "P2 unexecuted"
+}

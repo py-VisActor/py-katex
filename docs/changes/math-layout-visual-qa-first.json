@@ -1,0 +1,297 @@
+{
+  "schema": "py-katex-visual-qa/v1",
+  "phase": "P3_provisional",
+  "status": "followup_required",
+  "owner": "geometry_elk",
+  "scope": "12 key official/native CPU PNG pairs, actual image viewing; not final candidate acceptance",
+  "officialRun": "test-runs/MATH-batch-20261105T120246Z-de639d13",
+  "officialRunStatus": "FAILED",
+  "nativeRun": "test-runs/MATH-batch-20261105T120626Z-f1da1756",
+  "nativeRunStatus": "FAILED",
+  "officialRunSourceTreeSha256": "0cc0f94eab9f7933590a453460f57e0f7b7a089d9f14efdd02955bcaf38c16a9",
+  "nativeRunSourceTreeSha256": "bceaea523d29b2666f0ea0813ebfd390ac93de92dc4bd24533a746a9cd01c4d4",
+  "candidateNotFinal": true,
+  "reason": "Other owners are still repairing source. Machine61 PASS does not replace manual source visual review. No final same-candidate claim.",
+  "actualViewImageArtifacts": [
+    "test-runs/math-layout-visual-first-contact-20261105T1210/sheet-1.png",
+    "test-runs/math-layout-visual-first-contact-20261105T1210/sheet-2.png",
+    "test-runs/math-layout-visual-first-contact-20261105T1210/sheet-3.png",
+    "test-runs/MATH-batch-20261105T120246Z-de639d13/artifacts/oracle/array-rules.png",
+    "test-runs/MATH-batch-20261105T120626Z-f1da1756/artifacts/compare-cpu/array-rules.png"
+  ],
+  "contactSheets": "Derived white-backed enlarged inspection sheets only; original PNG files untouched",
+  "items": [
+    {
+      "id": "sum-limits",
+      "status": "provisional_visual_clear",
+      "official": {
+        "path": "test-runs/MATH-batch-20261105T120246Z-de639d13/artifacts/oracle/sum-limits.png",
+        "sha256": "f83ac5c3335661eb0bbecc87d2ae8e9165d1ea308b81f87648de47af28194a0a",
+        "dimensions": [
+          100,
+          102
+        ]
+      },
+      "nativeCpu": {
+        "path": "test-runs/MATH-batch-20261105T120626Z-f1da1756/artifacts/compare-cpu/sum-limits.png",
+        "sha256": "613bae69a731786e09c7e25e2af67543dc15686edd8ad48fc82a82ae1161eaba",
+        "dimensions": [
+          100,
+          102
+        ]
+      },
+      "observation": "All symbols present; infinity above sum and n=1 below; adjacent fraction and exponent intact."
+    },
+    {
+      "id": "integral",
+      "status": "provisional_visual_clear",
+      "official": {
+        "path": "test-runs/MATH-batch-20261105T120246Z-de639d13/artifacts/oracle/integral.png",
+        "sha256": "d451142e7a25fd48fa552d4117da3f81f3c5341b1beead111b8ae90de459b58e",
+        "dimensions": [
+          127,
+          90
+        ]
+      },
+      "nativeCpu": {
+        "path": "test-runs/MATH-batch-20261105T120626Z-f1da1756/artifacts/compare-cpu/integral.png",
+        "sha256": "71e6b68bb0d1e59ea38de232a6afa09d033f01fd549d247046c6662521f1c393",
+        "dimensions": [
+          127,
+          90
+        ]
+      },
+      "observation": "Integral, side limits 0/1, exponent and dx all intact; no edge crop."
+    },
+    {
+      "id": "limit",
+      "status": "provisional_visual_clear",
+      "official": {
+        "path": "test-runs/MATH-batch-20261105T120246Z-de639d13/artifacts/oracle/limit.png",
+        "sha256": "18b837b7e698c52e258f8e8acc21fac43efd00159203e7d4f4708d04694b4867",
+        "dimensions": [
+          179,
+          78
+        ]
+      },
+      "nativeCpu": {
+        "path": "test-runs/MATH-batch-20261105T120626Z-f1da1756/artifacts/compare-cpu/limit.png",
+        "sha256": "27ac86feb3b3cf90b22121fec7fb2a793a800e10fa9a43bee948356e763f9135",
+        "dimensions": [
+          179,
+          78
+        ]
+      },
+      "observation": "lim with x?0 below, sine fraction, equality and one intact; readable spacing."
+    },
+    {
+      "id": "square-root",
+      "status": "provisional_visual_clear",
+      "official": {
+        "path": "test-runs/MATH-batch-20261105T120246Z-de639d13/artifacts/oracle/square-root.png",
+        "sha256": "f55ff4b80140d481c1be3a88517c37c524718a3acc12d671b0f9f95f20ded2bc",
+        "dimensions": [
+          124,
+          55
+        ]
+      },
+      "nativeCpu": {
+        "path": "test-runs/MATH-batch-20261105T120626Z-f1da1756/artifacts/compare-cpu/square-root.png",
+        "sha256": "b44d3a2ad6f8e7c9b885f4759feba95e3e7b5950d2a8c1ab640dd10542e1fcb5",
+        "dimensions": [
+          124,
+          54
+        ]
+      },
+      "observation": "Surd, full vinculum, x?+1 intact; no radical/child crop."
+    },
+    {
+      "id": "nth-root",
+      "status": "provisional_visual_clear",
+      "official": {
+        "path": "test-runs/MATH-batch-20261105T120246Z-de639d13/artifacts/oracle/nth-root.png",
+        "sha256": "2e0515f9249929ea59bcee6752fe932ad67f9ed306cef9aca5620f1b1520c40a",
+        "dimensions": [
+          108,
+          50
+        ]
+      },
+      "nativeCpu": {
+        "path": "test-runs/MATH-batch-20261105T120626Z-f1da1756/artifacts/compare-cpu/nth-root.png",
+        "sha256": "bcad4e39f14415102d98d2bc8a1b8903604c7147b9c2bd4a30aa3a10e6e28073",
+        "dimensions": [
+          108,
+          48
+        ]
+      },
+      "observation": "Index 3 visible above radical shoulder; x+y and vinculum intact. Native has tighter vertical frame (48 versus source 50px), without visible clipping."
+    },
+    {
+      "id": "xarrow",
+      "status": "provisional_visual_clear",
+      "official": {
+        "path": "test-runs/MATH-batch-20261105T120246Z-de639d13/artifacts/oracle/xarrow.png",
+        "sha256": "e1c35210a637ca260fd1dd3d64e02e4815110b5677abdf18f0e19a7bd90b5186",
+        "dimensions": [
+          150,
+          63
+        ]
+      },
+      "nativeCpu": {
+        "path": "test-runs/MATH-batch-20261105T120626Z-f1da1756/artifacts/compare-cpu/xarrow.png",
+        "sha256": "1c3c68b07c8562ac57c60cff381bcaf66173d218d63b41496dfa9677d56cb609",
+        "dimensions": [
+          150,
+          63
+        ]
+      },
+      "observation": "A/B endpoints, upper f, lower n?? and arrowhead intact; long shaft/head proportions visually close."
+    },
+    {
+      "id": "overbrace",
+      "status": "provisional_visual_clear",
+      "official": {
+        "path": "test-runs/MATH-batch-20261105T120246Z-de639d13/artifacts/oracle/overbrace.png",
+        "sha256": "ff6c95001216e44d73ff23c6e3d4554908b9eedca716b09906ef077a2dbd9e14",
+        "dimensions": [
+          128,
+          74
+        ]
+      },
+      "nativeCpu": {
+        "path": "test-runs/MATH-batch-20261105T120626Z-f1da1756/artifacts/compare-cpu/overbrace.png",
+        "sha256": "9ee398d07637d449c9f40b513574750f17d4e794d8f0c534607bbd00bc6fd520",
+        "dimensions": [
+          128,
+          74
+        ]
+      },
+      "observation": "All a+b+c and n present; annotation above continuous overbrace. Native shows faint antialias seams at SVG piece joins at enlarged inspection; no lost contour."
+    },
+    {
+      "id": "underbrace",
+      "status": "provisional_visual_clear",
+      "official": {
+        "path": "test-runs/MATH-batch-20261105T120246Z-de639d13/artifacts/oracle/underbrace.png",
+        "sha256": "12117a838f6a7ed0947e3ef39c28220af752b4af2f524875b0a2360ac0fc2aa4",
+        "dimensions": [
+          154,
+          71
+        ]
+      },
+      "nativeCpu": {
+        "path": "test-runs/MATH-batch-20261105T120626Z-f1da1756/artifacts/compare-cpu/underbrace.png",
+        "sha256": "fc8fbc76bc8fa8ca8b07c5760b8929134b3888ece76e8914fc0f7f2c03ea305e",
+        "dimensions": [
+          154,
+          71
+        ]
+      },
+      "observation": "All x+?+x and n present; brace and annotation below with correct orientation."
+    },
+    {
+      "id": "cases",
+      "status": "provisional_visual_clear",
+      "official": {
+        "path": "test-runs/MATH-batch-20261105T120246Z-de639d13/artifacts/oracle/cases.png",
+        "sha256": "76f24cad61900b0833ba7eb35063347e7739ca391cb2d9a0ac0a3e01b1c28bf3",
+        "dimensions": [
+          272,
+          104
+        ]
+      },
+      "nativeCpu": {
+        "path": "test-runs/MATH-batch-20261105T120626Z-f1da1756/artifacts/compare-cpu/cases.png",
+        "sha256": "d3ffccd42d3a9f6f4af9693008781fcfadd31cb5cbe4dbf1db71f86181b94a76",
+        "dimensions": [
+          271,
+          105
+        ]
+      },
+      "observation": "f(x), brace, both rows and inequalities all present; no label crop or row overlap."
+    },
+    {
+      "id": "array-rules",
+      "status": "followup_required",
+      "official": {
+        "path": "test-runs/MATH-batch-20261105T120246Z-de639d13/artifacts/oracle/array-rules.png",
+        "sha256": "1c59572b50051ea637e9eccdf87e2c27d22f1810e8311ff130c48d92dc500d5c",
+        "dimensions": [
+          147,
+          88
+        ]
+      },
+      "nativeCpu": {
+        "path": "test-runs/MATH-batch-20261105T120626Z-f1da1756/artifacts/compare-cpu/array-rules.png",
+        "sha256": "8a1a36f5b5230975400e4e51b7bf9942ee72d92bb3e96ba9ea5e7a87575f129a",
+        "dimensions": [
+          154,
+          88
+        ]
+      },
+      "observation": "SUBSTANTIVE: native vertical divider touches the rightmost 3 in 333; official divider has inner column padding. Native frame154px versus official147px includes additional empty delimiter margins."
+    },
+    {
+      "id": "unicode-math",
+      "status": "provisional_visual_clear",
+      "official": {
+        "path": "test-runs/MATH-batch-20261105T120246Z-de639d13/artifacts/oracle/unicode-math.png",
+        "sha256": "45910c68f83e635caa94fa849ba0800ca9873fd062a8b7e663d7b7a7c69e4475",
+        "dimensions": [
+          99,
+          56
+        ]
+      },
+      "nativeCpu": {
+        "path": "test-runs/MATH-batch-20261105T120626Z-f1da1756/artifacts/compare-cpu/unicode-math.png",
+        "sha256": "875d4978fcea4549ebae3362debc646c2ef46987b4580b99dcda4944f113a3e7",
+        "dimensions": [
+          99,
+          42
+        ]
+      },
+      "observation": "Double-struck A, plus, bold A each visible with correct font identity. Official frame99x56 versus native99x42; native tighter blank vertical extent, no visible glyph loss."
+    },
+    {
+      "id": "boxed",
+      "status": "provisional_visual_clear",
+      "official": {
+        "path": "test-runs/MATH-batch-20261105T120246Z-de639d13/artifacts/oracle/boxed.png",
+        "sha256": "c0d4e80ebd6715e10a1b3d29954418961502b91db9d5b6a5659445846a344563",
+        "dimensions": [
+          145,
+          64
+        ]
+      },
+      "nativeCpu": {
+        "path": "test-runs/MATH-batch-20261105T120626Z-f1da1756/artifacts/compare-cpu/boxed.png",
+        "sha256": "14a44a013576a46f82c0f5d606ba67c8e1a5f9da0b1ea72c08aaaccd9084fd51",
+        "dimensions": [
+          145,
+          64
+        ]
+      },
+      "observation": "E=mc? and all four rectangle sides visible; border and content clear, no crop."
+    }
+  ],
+  "substantiveFindings": [
+    {
+      "id": "array-divider-padding-and-empty-delimiters",
+      "case": "array-rules",
+      "evidence": "Both original PNGs inspected separately after contact sheet. Native JSON: divider x59.36, final 3 glyph x45.36 with 14px advance; divider is at cell edge rather than after postgap. Native width133.84 logical px versus source frame147px including20px image padding; empty delimiter margins add6.72px.",
+      "sourceReview": "environments/array.ts emits each column postgap before the following separator. Current _array loop emits separator before following-column pregap; empty left/right strings are treated as present via is not None.",
+      "reportedToRoot": true,
+      "productEdited": false
+    }
+  ],
+  "minorObservations": [
+    "Native/official raster antialiasing differs at enlarged scale. Faint overbrace piece seams are visible but contour/content remains intact.",
+    "Unicode-math and nth-root blank vertical extents differ; no cropped glyph was observed."
+  ],
+  "sourceOrTestsModified": false,
+  "finalValidationPending": [
+    "Authorized source fix for array rule inner padding and empty delimiter framing",
+    "Root-coordinated global freeze and full matrix",
+    "Same-final-candidate visual recheck after all owners finish"
+  ]
+}

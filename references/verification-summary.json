@@ -1,0 +1,179 @@
+{
+  "schema": "py-katex-verification-summary/v1",
+  "date": "2026-11-05",
+  "status": "PASS_NATIVE_STATIC_ALPHA_LOCAL",
+  "scope": "Independent native Python math renderer and static Mermaid flowchart integration; not full KaTeX compatibility",
+  "repository": "https://github.com/py-VisActor/py-katex",
+  "remoteAlreadyExisted": true,
+  "startingCommit": "e49a9355a1e8e14a93c593388b7ce1c1b8640e8b",
+  "version": "0.1.0a0",
+  "sourceKaTeX": "0.18.11",
+  "sourceCommit": "d5bed9f38a8d747b9c4a12e18897a514707e1c26",
+  "sourceLock": "references/upstream.lock.json",
+  "jointSourceSHA256": {
+    "math": "6e11f0a8f9f88c78fb387faf4429cfea72781a4e961328bf53299625bea2cb80",
+    "mermaid": "6e37306deb59a5eb21a2bcceedd66c128a2367f392b094854e2e9bdb3e0e4088"
+  },
+  "jointCandidate": "test-runs/MATH-batch-20261105T121812Z-73861ed7/artifacts/joint-candidate.json",
+  "runs": {
+    "unit": "test-runs/MATH-batch-20261105T121812Z-f140829a",
+    "visual": "test-runs/MATH-batch-20261105T121812Z-73861ed7",
+    "legacy": "test-runs/MATH-batch-20261105T121812Z-85def7ba",
+    "exports": "test-runs/MATH-batch-20261105T122453Z-26698b8b",
+    "report": "test-runs/MATH-batch-20261105T122804Z-878bf5d4",
+    "htmlQa": "test-runs/MATH-batch-20261105T122948Z-8bf16e51"
+  },
+  "unit": {
+    "status": "PASS",
+    "methods": 712,
+    "product": 676,
+    "tooling": 36,
+    "groups": {
+      "math-parser": 67,
+      "math-macros": 53,
+      "math-layout": 65,
+      "math-canvas": 16,
+      "math-api": 6,
+      "math-evidence": 2,
+      "mermaid-math-integration": 17,
+      "f011-language": 40,
+      "f011-layout": 21,
+      "f011-canvas": 23,
+      "f011-api": 5,
+      "f012-language": 29,
+      "f012-layout": 19,
+      "f012-canvas": 18,
+      "f013-language": 63,
+      "f013-layout": 14,
+      "f013-styles": 16,
+      "f013-canvas": 33,
+      "tooling": 34,
+      "f014-language": 54,
+      "f014-layout": 39,
+      "f014-shapes": 18,
+      "f014-styles": 19,
+      "f014-canvas": 41
+    }
+  },
+  "visual": {
+    "status": "PASS",
+    "standaloneCases": 61,
+    "integrationCases": 8,
+    "profiles": [
+      "cpu",
+      "auto",
+      "gpu"
+    ],
+    "views": 207,
+    "negativePerStandaloneProfile": 7
+  },
+  "legacy": {
+    "status": "PASS",
+    "positiveCases": 297,
+    "positiveBySlice": {
+      "F01.1": 12,
+      "F01.2": 35,
+      "F01.3": 50,
+      "F01.4": 200
+    },
+    "profiles": 3,
+    "views": 891,
+    "denominatorsRetained": true,
+    "historicalMathPromotions": [
+      "F01.3 math",
+      "F01.4 math-separate"
+    ],
+    "negativeSourceErrorAndScopeExclusionCategoriesRetained": true
+  },
+  "exports": {
+    "formats": [
+      "png",
+      "jpg",
+      "webp",
+      "svg",
+      "pdf"
+    ],
+    "manifest": "test-runs/MATH-batch-20261105T122453Z-26698b8b/artifacts/exports/manifest.json"
+  },
+  "report": {
+    "url": "http://127.0.0.1:8765/MATH-batch-20261105T122804Z-878bf5d4/index.html",
+    "path": "py-mermaid/reports/MATH-batch-20261105T122804Z-878bf5d4",
+    "html": {
+      "sha256": "9f7ef845b1a8f495d66824f48208da6206f6b3235d3b9e3f5b7a20bf493e88ee",
+      "bytes": 849853
+    },
+    "qaStatus": "PASS",
+    "qaViews": 207,
+    "desktopAndMobile": true,
+    "externalRequests": 0
+  },
+  "manualQa": [
+    "docs/changes/math-layout-visual-qa-final.json",
+    "docs/changes/math-canvas-visual-qa-final.json"
+  ],
+  "knownSourceDifferences": [
+    {
+      "case": "math-flow-metadata",
+      "classification": "source_exception",
+      "description": "官方 Mermaid 元数据预处理将反斜杠 n 破坏为换行，A 图显示残缺的字面公式；本实现保留 TeX 并绘制 ν<y，属于明确修正源异常，不能声称与该异常图相同。"
+    },
+    {
+      "case": "math-flow-group",
+      "classification": "host_font_difference",
+      "description": "官方 MathML 宿主显示斜体 Unicode Group；原生 TeX 使用 Main-Bold 正体粗体。"
+    },
+    {
+      "case": "math-flow-mixed",
+      "classification": "host_whitespace_difference",
+      "description": "官方 flex/MathML 合并公式边界空格；原生保留 Area πr² units 的边界空格。"
+    }
+  ],
+  "coverageInventory": {
+    "registeredNames": 334,
+    "unsupportedRegisteredNames": [
+      "\\\\cdrightarrow",
+      "\\\\cdleftarrow",
+      "\\\\cdlongequal",
+      "\\futurelet",
+      "\\\\globalfuture",
+      "\\htmlClass",
+      "\\htmlId",
+      "\\htmlStyle",
+      "\\htmlData",
+      "\\includegraphics",
+      "\\(",
+      "\\)",
+      "\\]",
+      "CD",
+      "\\\\cdleft",
+      "\\\\cdright",
+      "\\\\cdparent"
+    ],
+    "unsupportedDynamicMacros": [
+      "\\tag@literal",
+      "\\bra@ket",
+      "\\bra@set"
+    ],
+    "literalMacrosFromMainFile": 315,
+    "dynamicMacrosInMainFile": 20,
+    "bundledTtfFaces": 20,
+    "claim": "Inventory linkage; not exhaustive compatibility or branch coverage"
+  },
+  "limitations": [
+    "不是完整 KaTeX 兼容实现；注册项与功能族映射不等于逐分支覆盖率。",
+    "自动公式编号/tag、CD、部分宏展开边界尚未实现；明确拒绝未支持语法。",
+    "Parser 不暴露 displayMode/strict/leqno/fleqn 全部源选项；Options.display_mode 用于视觉样式。",
+    "HTML class/id/style/data、includegraphics 拒绝；href/url 仅保留静态文本，无交互。",
+    "部分 Unicode 缺少源字体度量时明确报错，不用系统字体伪造数学度量。",
+    "pmb 保留偏移副本，未复刻原实现 0.04px 模糊。",
+    "本轮验证 Windows 本地环境；安装、构建、Linux/no-loader 验证未执行。",
+    "版本 0.1.0a0 未发布；Mermaid 声明依赖版本，开发验证使用两个源码目录 PYTHONPATH，安装解析需后续发布或本地安装阶段验证。"
+  ],
+  "installationValidation": "deferred_by_user_not_executed",
+  "externalActions": {
+    "commit": false,
+    "push": false,
+    "publish": false
+  },
+  "postDocumentationAudit": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-post-documentation-audit-20261105T123707Z-e6208b12\\run.json"
+}

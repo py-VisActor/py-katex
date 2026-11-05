@@ -1,0 +1,386 @@
+{
+  "schema": "math-full-canvas-change/v1",
+  "status": "code_complete_unverified",
+  "stage": "P1",
+  "owner": "canvas_labels",
+  "sourceFiles": {
+    "py-katex\\src\\py_katex\\canvas.py": "b20d62d0a9d4acf8e40f3f6404d0444fabee0ee4a24b71ab2f15d16e2875b7ae",
+    "py-katex\\src\\py_katex\\resources.py": "554cd822934591984d9b4b8960d07676da8bee052c7f60a739b09d48f3cf130c",
+    "py-katex\\src\\py_katex\\layout_html.py": "2cd8774108b52643345fc02f9c3a98aceca87815aac68e0c89cf398a6ceee5a2",
+    "py-mermaid\\src\\py_mermaid\\rendering\\labels\\math.py": "21303bbbffbc8d64c8437f08cc08313d71299e0e8b86d4f77d6a037495326280",
+    "py-mermaid\\src\\py_mermaid\\rendering\\skia\\session.py": "cadba8b2e9c72c3ec4b52dc9050cf1a63728ac62a17823dab6a58c02c091b17a"
+  },
+  "mechanicalRun": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-canvas-p1-final-mechanical-20261105T144706Z-18fe8822",
+  "mechanicalExitCode": 0,
+  "behaviorRun": false,
+  "testsWritten": false,
+  "imagesGenerated": false,
+  "sources": {
+    "C:\\code\\py-visactor\\py-katex\\.local\\upstream-katex\\src\\functions\\includegraphics.ts": "241e88fc62eea2982b7c78c270032306cfffafda5fbf98233b5616af96c97d12",
+    "C:\\code\\py-visactor\\py-katex\\.local\\upstream-katex\\src\\functions\\html.ts": "1d84618eaad37ffb75545ba4b81674a0d5176cdeb030ff3c96b8abc1e5cf0e85",
+    "C:\\code\\py-visactor\\py-katex\\.local\\upstream-katex\\src\\unicodeScripts.ts": "16eba48b9143ae56ab9abd1bc6c53c3755810aa9baf531c3fff8f8c1ff54659a",
+    "C:\\code\\py-visactor\\py-katex\\.local\\upstream-katex\\src\\buildCommon.ts": "032015e0bc32483fde34b79e2a15fde04070137bcaf51bf21ff9987af22522ad",
+    "C:\\code\\py-visactor\\py-katex\\.local\\upstream-katex\\src\\styles\\fonts.scss": "ed69a78b7df60d16d6040677e03d7495e9b1e30fdbc14954db741fd154a55510",
+    "C:\\code\\py-visactor\\py-katex\\.local\\upstream-katex\\src\\styles\\katex.scss": "a690b12e065ce7961a8f5609ee4808ef3bf2f221175deea6ac6dc9f2c7a2e213",
+    "C:\\code\\py-visactor\\py-katex\\.local\\upstream-katex\\test\\unicode-spec.ts": "0fdebab0d2fc0f9df780294cbf51100a71cd01a3c2a518dac43e15bc98e9ccc4",
+    "C:\\code\\py-visactor\\py-katex\\.local\\upstream-katex\\test\\screenshotter\\ss_data.yaml": "e3886dca758b9374153a19352b9fc8edb272150b86f3f9ac4312314a16dba307",
+    "py-skia-canvas\\docs\\ai\\usage\\API_REFERENCE.en.md": "db61936ac68f07029fa05725620d8794c070b0a6f76db3f69a3619b0373148d5"
+  },
+  "providers": {
+    "resolve_html_context": "(attributes,*,font_size,color,font=\"\",class_styles=())->dict(font_size,color,font)",
+    "apply_html": "(box,attributes,*,font_size,color,class_styles=())->MathBox; no duplicate font-size scaling",
+    "layout_image": "(node,*,font_size,color,dimension,resources)->MathBox; dimension is B source unit resolver",
+    "measure_fallback": "(text,options,size,*,font=\"\",style=\"normal\",weight=\"normal\")->dict(width,height,depth,font,font_resource,italic,skew)",
+    "image_resource": "(key,data,mime=None)->ImageResource",
+    "image_resource_from_file": "(key,path,mime=None)->ImageResource"
+  },
+  "implemented": [
+    "ImageResource pure encodedbytes/header dimensions; explicit bundle lookup and dataURI factories; no implicit formulaURL filesystem/network",
+    "Source includegraphics default.9em height, positive width override, totalheight/depth and aspect ratio; ImageCommand native decode/draw",
+    "Nested command groups: owner-native transform/scales/matrix/opacity/rectclip/filter; combined depth/command budgets",
+    "20 bundled mathfontaliases unchanged; allowed missing-metric Unicode uses real publicCanvas measure/outline missing-glyph negative check; explicit fallback sfnt Unicode cmap+byteFont registration preferred, platform serif otherwise",
+    "HTMLcontext font/size/color before B layout, then background/border/padding/margin/box/display/visibility/opacity/affine/clip/decorations/shadows/spacings native static adaptation",
+    "MathBox diagnostic commands visible and Mermaid diagnostics/trace retained; newimage/group/fallback commands recursively traced and shadow-safe",
+    "Mermaid explicit existing images/font bundle converted to pure Math resources, still source trustfalse (no accidental resource execution)"
+  ],
+  "staticImageMimes": [
+    "image/png",
+    "image/jpeg",
+    "image/webp",
+    "image/svg+xml",
+    "image/gif first static frame"
+  ],
+  "security": [
+    "32MiB single/128MiB bundle/64Mdecodedpixels/32768axis",
+    "Encoded bytes/header MIME and descriptor dimension agreement checked",
+    "SVG rejects scripts/events/foreignObject/animation/DOCTYPE/entity/externalURL/CSS imports; local defs and self-contained embedded raster permitted",
+    "Explicit FontResource bytes only; source permitted Unicode fallback cannot replace existing bundled math metrics",
+    "Native Canvas owner checks retained, auto default/CPUsetter/GPUrequired unchanged"
+  ],
+  "notClaimed": [
+    "P1 compile/import does not verify source functionality, actual image decoders, pixels, fallback coverage/shaping or five export results",
+    "Arbitrary DOM/host CSS engine is the documented scope exclusion; unknown visible CSS property/value is explicit error, never silently ignored",
+    "Full static CSS adapter is finite: font/paint/box/rectclip/2Dtransform/decorations/blur-shadow; arbitrary clip-path,3D transforms,unsupported fonts/image encodings and browser controls are not claimed",
+    "HTML font family/style cascade against nested source-generated KaTeX classes needs P3 official probes; platform fallback is intentionally platform-dependent, not an offline universal font collection",
+    "GIF animation lifecycle is excluded; first frame only",
+    "No dependencies installed, no behavior tests/images run, no publication/commit/push"
+  ],
+  "P1StaticInterfaceFollowup": {
+    "reason": "Restore per-request diagnostics for cached pure math boxes after measure resets diagnostic collection",
+    "sourceFile": "C:\\code\\py-visactor\\py-mermaid\\src\\py_mermaid\\rendering\\skia\\session.py",
+    "sha256": "b877a4b67864d6e082b23419265c9082741e7e026a8630c3c91b001db2501b9c",
+    "mechanicalRun": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-cache-diagnostic-p1-mechanical-20261105T144840Z-e5e4bf1c",
+    "mechanicalExitCode": 0,
+    "behaviorRun": false
+  },
+  "P1InkBoundsFollowup": {
+    "status": "code_complete_unverified",
+    "reason": "Source overflow visible must preserve logical TeX metrics while export includes actual command ink",
+    "mechanicalRun": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-ink-bounds-p1-mechanical-20261105T150058Z-d671cc8c",
+    "mechanicalExitCode": 0,
+    "sourceFiles": {
+      "C:\\code\\py-visactor\\py-katex\\src\\py_katex\\canvas.py": "7e5f61da296d38f797bb21dc6a5a0e501a2594d806e5b04ec8d5b7e561f87878",
+      "C:\\code\\py-visactor\\py-mermaid\\src\\py_mermaid\\rendering\\skia\\session.py": "d73748c07ebdaafb353e3759de512134aa4f6872ca2ad3c824ab5b0c06863f40"
+    },
+    "behaviorRun": false,
+    "contract": {
+      "ink_bounds": "(box,context=None)->(left,top,right,bottom)|None in baseline coordinates; pure tuple, native owner-local query",
+      "render_box": "physical union(logicalrect,ink)+padding; baseline=(padding-left,padding-top); original MathBox retained",
+      "Mermaid": "mathrun viewport ink union via cached pure tuple; logical run/node metrics and ELK untouched",
+      "measure_bundled_text": "(text,font,size)->width,height,depth,font,italic,skew; actual source-face native kerning",
+      "fallbackFamilies": "system serif/sans-serif/monospace by source face hint, explicit sfnt resource preferred"
+    },
+    "nativeMethods": [
+      "Context.outlineText",
+      "Path2D.transform",
+      "Path2D.bounds",
+      "Context.measureText"
+    ],
+    "limits": [
+      "Stroke bounds conservatively include native default miterLimit10; filter blur support uses3sigma footprint",
+      "Affine clipping uses transformed conservative rectangular bounds, not a browser CSS layout engine",
+      "No behavior tests or images run in this P1 followup"
+    ]
+  },
+  "P1FontCascadeFollowup": {
+    "status": "code_complete_unverified",
+    "source": "KaTeX src/buildCommon.ts makeOrd/mathsym/fontMap and src/styles/katex.scss81-180",
+    "mechanicalRun": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-font-cascade-p1-mechanical-20261105T151019Z-086e6c63",
+    "mechanicalExitCode": 0,
+    "sourceFiles": {
+      "C:\\code\\py-visactor\\py-katex\\src\\py_katex\\canvas.py": "0f0102a446da9792f3d5c6cf84f73c6443b45815b2d1efe7c0c1790455200cfb",
+      "C:\\code\\py-visactor\\py-katex\\src\\py_katex\\layout_html.py": "daec604ce267c1fec29674b2fc201dbce864a76ebdb11faedec7ff0992f16c87",
+      "C:\\code\\py-visactor\\py-mermaid\\src\\py_mermaid\\rendering\\skia\\session.py": "757b0482d91be359f32f3e49085ebd9f11b5485a93e9323525c41108d3925de4"
+    },
+    "behaviorRun": false,
+    "contract": {
+      "resolve_html_context": "adds css_family/css_shape/css_weight independent explicit axes orNone; font_family/font_style/font_weight aliases; oldfontkey compatibility retained",
+      "Glyph": "optionalfont_style/font_weight paintoverride used by draw andinkbounds; same metadata traced",
+      "measure_bundled_text": "(text,font,size,*,style=None,weight=None) same native paintface; B retains appropriate source baseline metrics"
+    },
+    "sourceRules": [
+      "defaultmathnormal locksMathfamily+italic, inheritsweight",
+      "defaultmain textord/digits andmainmathsym inheritallfontaxes unless generatedclass fixesone",
+      "mathrm fixesnormalshapeonly;mathbf fixesMainfamily+boldweight butinheritsshape",
+      "mathit fixesMainfamily+italic;boldsymbol mathord fixesall3;ams/mathbb/cal/frak/scr/tt/sf fixfamilyonly",
+      "textbf/textit eachdeclareonlytheiraxis"
+    ],
+    "limits": [
+      "Native synthesized variants require P3actualpixelverification,notassumed bycompile",
+      "UnknownexternalhostCSSfontsremainoutsidefinitebundledfontadapter"
+    ]
+  },
+  "P3CanvasRepairs": {
+    "status": "targeted_checks_passed_full_acceptance_pending",
+    "priorFailures": "test-runs/MATH-batch-20261105T155834Z-e542e4f2",
+    "targetedRuns": [
+      {
+        "run": "MATH-FULL-record-20261105T161352Z-8ccfbd1e",
+        "status": "SUCCESS",
+        "sourceUnchanged": true
+      },
+      {
+        "run": "MATH-FULL-record-20261105T161402Z-5ef948a7",
+        "status": "SUCCESS",
+        "sourceUnchanged": true
+      }
+    ],
+    "compileRun": "MATH-FULL-record-20261105T161345Z-54495e80",
+    "preservedIntermediateFailure": "MATH-FULL-record-20261105T161236Z-fe60d461 (test string escaping syntax; corrected before functional rerun)",
+    "latestSourceFiles": {
+      "C:\\code\\py-visactor\\py-katex\\src\\py_katex\\canvas.py": "319f88635cf1551cc906e63942771f08e6d5dd9ba7c53ac9f2216e1ba305aebc",
+      "C:\\code\\py-visactor\\py-katex\\src\\py_katex\\resources.py": "98804265d043d15ab3c7a82b638610b3f10e2a3884c6cf6453787ea24f32366a",
+      "C:\\code\\py-visactor\\py-katex\\src\\py_katex\\layout_html.py": "b474c5657556ce31663461c3c885c00d82158ae0749e7738f12f210ce86a080c",
+      "C:\\code\\py-visactor\\py-mermaid\\src\\py_mermaid\\rendering\\skia\\session.py": "9ad6e38a6a5daf060664121b91ffe5dddff80bad8f64ba379f11d0e2df0cf5de",
+      "C:\\code\\py-visactor\\py-mermaid\\src\\py_mermaid\\rendering\\labels\\math.py": "21303bbbffbc8d64c8437f08cc08313d71299e0e8b86d4f77d6a037495326280"
+    },
+    "sourceAtStop": {
+      "math": "6dceee0e1bff88da567eb7b89cbc779d6225fbe322281de39e1e0bdfbce61924",
+      "mermaid": "6094d419ff3c50d2c64fdd00051af2be087b25a7a239cb1dae0e9e09209fdff1"
+    },
+    "changes": [
+      "Validate every explicit fallback font budget/header/directory and native decode before cmap coverage/fallback selection",
+      "Use complete bundled family registration for CSS font style/weight overrides; same face assembly for measure/draw/ink; original20 file aliases remain for default drawing",
+      "Validate htmlData attribute names at source build boundary using domTree regex; preserve parse acceptance",
+      "Trace actual bundled family alias for override glyphs; visual tool native glyphROI uses same documented alias namespace",
+      "Correct SVG/PDF test probe to accept retained vector paint; test both vectorSVG and rasterPNG resources over5formats/3backends, SVG native roundtrip pixels and PDF actual color streams",
+      "Correct html-paint fixture glyph requirement from rawCSS px letters to visible x"
+    ],
+    "sourceEvidence": [
+      "KaTeX styles/fonts.scss20-facefamily inventory, styles/katex.scss class axes",
+      "KaTeX domTree.ts invalidAttributeNameRegex (build-time rejection)",
+      "Canvas public FontLibrary.use(alias, paths) and Image(SVG) vector replay demonstrated by original failed export bytes",
+      "Actual original A/CPU full-layout-absolute-units.png showed source2sp rule visible; no pixel guard weakened; source rule CSS fix delegated B"
+    ],
+    "tests": {
+      "fullCanvasMethods": 30,
+      "fullIntegrationMethods": 12,
+      "total": 42,
+      "newMethod": "test_html_data_attribute_name_is_rejected_only_at_source_build_boundary"
+    },
+    "nativeImagesGeneratedByTests": true,
+    "fullVisualRunByC": false,
+    "limitations": [
+      "Only targeted42 methods verified here; unified root full corpus/matrix acceptance pending",
+      "No source glyph normalization aliases or unknown-check skips added to hide missing glyphs",
+      "No final PASS claimed from the earlier frozen candidate"
+    ]
+  },
+  "P3ColorGlyphCoverage": {
+    "status": "source_stopped_targeted_checks_passed_final_acceptance_pending",
+    "priorFailureRun": "MATH-FULL-batch-20261105T161801Z-3fa2e5c3",
+    "sourceCases": [
+      "core01719 U270C",
+      "core01720 text U270C"
+    ],
+    "beforeProbe": "MATH-FULL-batch-20261105T162932Z-2e8a1eee",
+    "actualBeforeObservation": "Generic serif already paints a colored hand (2024 alpha pixels at64px) but outline is empty. The same-family U10FFFF control has218 pixels and a different raster signature. Segoe UI Symbol has a real outline; Segoe UI Emoji is a color font without outline. All images/metrics retained.",
+    "changes": [
+      "Native raster coverage witness only when public outline is absent/equalto missing; compare actualRGBA and nonempty alpha against samefont missing control",
+      "Permit actual publicly installed family names and select additional installed candidates if primary generic lacks coverage; no formula-triggered file/network access",
+      "Physical ink uses public actualTextMetrics union for full system/external runs, including mixed partial-outline color runs; logicalmetrics unchanged",
+      "Visual helper empty-outline glyphROI falls back to actualTextMetrics rectangle and still requires actual encoded pixels"
+    ],
+    "targetedRuns": [
+      {
+        "run": "MATH-FULL-record-20261105T163709Z-35b35658",
+        "canvasMethods": 31,
+        "status": "PASS"
+      },
+      {
+        "run": "MATH-FULL-record-20261105T163811Z-b27ac9e3",
+        "integrationMethods": 13,
+        "status": "PASS"
+      }
+    ],
+    "actualAfterExports": "MATH-FULL-batch-20261105T164000Z-a92f566b",
+    "afterExportScope": "peace/plaintext/mixedCyrillicsmash nativePNG/JPG/WebP/SVG/PDF; SVG decoded again through public nativeImage and verified ink; known missing still MISSING_GLYPH",
+    "actualViews": [
+      "beforeProbe/artifacts/fallback-probe/serif-peace.png",
+      "afterExports/artifacts/color-glyph-exports/peace.png",
+      "afterExports/artifacts/color-glyph-exports/mixed-smash.png"
+    ],
+    "toolAndNegativeCompileRun": "MATH-FULL-record-20261105T164427Z-970e098e",
+    "newToolNegativeMethod": "test_visual_tool_color_metric_roi_rejects_white_noop_image (written+compiled, unexecuted as root requested; root final suite to run)",
+    "latestMethodCounts": {
+      "fullCanvas": 32,
+      "fullIntegration": 13,
+      "total": 45
+    },
+    "sourceAtStop": {
+      "math": "b658ff6849105e7b35932c9f17219d8662f24d323514fc8d25279ad2d102aa17",
+      "mermaid": "6094d419ff3c50d2c64fdd00051af2be087b25a7a239cb1dae0e9e09209fdff1"
+    },
+    "files": {
+      "C:\\code\\py-visactor\\py-katex\\src\\py_katex\\canvas.py": "2bcbbd8af039f3f600f49caec933e37821742d093d46c072f8dccbf1ccb531f0",
+      "C:\\code\\py-visactor\\py-katex\\tools\\full_visual_support.py": "d8d7ef06691445984817f83d7c8c20b388c7a7f8747241aef1d27d78f939c9f3",
+      "C:\\code\\py-visactor\\py-katex\\tests\\test_full_canvas.py": "7690714e6355c2b338c0cc1d59a2a6696b6ea2d6fef05611da916c55abda24f2",
+      "C:\\code\\py-visactor\\py-katex\\tests\\test_full_integration.py": "96c6612aa85c4bd13739797abd8ca3099d1bfa217ffd5cb1171c9ef603a80dc5"
+    },
+    "srcFurtherChanges": false,
+    "limitations": [
+      "Platform fallback remains a platform-font choice, not an offline universal font library",
+      "Empty native outline is not proof of missing glyph; real color glyphs must have nonempty pixels distinct from the missing control",
+      "No acceptance claim for unexecuted new tool counterexample until root unified final tests"
+    ]
+  },
+  "manualQaRepairs": {
+    "status": "targeted_verified_full_candidate_pending",
+    "manualRejectedCandidateReceipt": "docs/changes/math-full-canvas-visual-qa-final.json",
+    "originalCandidateUnitRun": "MATH-FULL-batch-20261105T165046Z-5b13a336",
+    "originalCandidateMatrixRun": "MATH-FULL-batch-20261105T165338Z-2dc25582",
+    "physicalFontProbe": "MATH-FULL-batch-20261105T171107Z-ce82b575",
+    "firstRepairTestRun": "MATH-FULL-batch-20261105T171327Z-4b9f80c7",
+    "firstRepairFailures": {
+      "svg": "ElementTree ns0 root serialization was not decoded by the public native SVG decoder; register the SVG default namespace before encoding",
+      "fontTest": "1F contains mathord F with source Math face; physical Sans reference now isolates the source-inheriting digit1, preserving the stronger font axes test"
+    },
+    "targetedFinalRun": "MATH-FULL-batch-20261105T171544Z-880e09b0",
+    "targetedMethods": {
+      "canvas": 34,
+      "integration": 13,
+      "total": 47,
+      "added": 2,
+      "status": "PASS"
+    },
+    "targetedVisualRun": "MATH-FULL-batch-20261105T171436Z-6bf2a1f1",
+    "sourceAtStop": {
+      "math": "334c412c34ef675dbc223405622c8d4e19eb56b1ff3700c251cb663d4afdd445",
+      "mermaid": "6094d419ff3c50d2c64fdd00051af2be087b25a7a239cb1dae0e9e09209fdff1",
+      "note": "Mermaid SHA computed with its own tools/run_support.source_identity, not the Math-specific path filter."
+    },
+    "repairs": [
+      {
+        "defect": "Native family matcher selected upright Bold for requested SansSerif Italic700; single-face native matcher ignored missing bold synthesis",
+        "implementation": "Style-first physical bundled face; exact available BoldItalic when present, explicit public strokeText+fillText for missing bold, shear only for missing italic; actual ink includes these paint transforms/stroke",
+        "source": "KaTeX0.18.11 fonts.scss and katex.scss; Skia SkTextFormatParams.h fake-bold interpolation, stroke size/24 below9,size/32 above36, linear in between",
+        "upstreamSkia": "https://skia.googlesource.com/skia/+/3275cf5f8fdd3ef6cf4af9175568854bf5c76c3c/src/core/SkTextFormatParams.h",
+        "negativeControls": "Independent single physical SansSerif-Italic.ttf400 and upright SansSerif-Bold.ttf700; requested italic700 must retain physical slant and increase actual ink mass. No full-family matcher in reference or ROI localization."
+      },
+      {
+        "defect": "SVG Image decoded at intrinsic40x20 then nonuniformly stretched into40x28",
+        "implementation": "Validated safe SVG is decoded in its concrete width/height viewport, preserving viewBox and preserveAspectRatio before public native Image drawing. Raster paths retain their source CSS stretching. Logical TeX dimensions unchanged.",
+        "source": "includegraphics.ts style.height/width/verticalAlign and SVG2 coordinates sections8.2/8.3/8.7",
+        "normative": "https://www.w3.org/TR/SVG2/coords.html#PreserveAspectRatioAttribute",
+        "negativeControls": "Actual colored bbox and white bands for missing/default xMidYMid meet, xMidYMin meet, xMaxYMax meet and none, plus stretched PNG control"
+      },
+      {
+        "defect": "HTML outer frame used inner glyph ink and duplicate padding baseline offset",
+        "implementation": "B owns layout_html/layout fix, C provides native font_ascent/font_descent helper fields; B uses approved source physical hhea font cell for browser inline-box parity",
+        "ownership": "B only; C did not edit layout_html.py"
+      }
+    ],
+    "viewedOriginalPngs": [
+      {
+        "path": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-batch-20261105T165046Z-5b13a336\\artifacts\\oracle\\full-layout-css-digit-axes.png",
+        "sha256": "6eba8eaa3ac3658ca1c5f2f8fcdf52d0d663d67f05e29eee6bab37d86a39aa14"
+      },
+      {
+        "path": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-batch-20261105T171436Z-6bf2a1f1\\artifacts\\repaired-cpu\\full-layout-css-digit-axes.png",
+        "sha256": "34afd0515bd68f72d5508d7935ede6cbbce92e6d23bb014703535921ae7f30dc"
+      },
+      {
+        "path": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-batch-20261105T165046Z-5b13a336\\artifacts\\oracle\\html-font-axes.png",
+        "sha256": "92c445443d78d93e40f1845726bc816115697be75d4e4ff2cfa81b3267e834f5"
+      },
+      {
+        "path": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-batch-20261105T171436Z-6bf2a1f1\\artifacts\\repaired-cpu\\html-font-axes.png",
+        "sha256": "dc02ccbcb9dcd88ff20ecbb01dce96b13acf68416aa5626b6c3c146e15ea950e"
+      },
+      {
+        "path": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-batch-20261105T165046Z-5b13a336\\artifacts\\oracle\\image-totalheight.png",
+        "sha256": "bc5d9440b2b021e405ba5867c27b1bf0fb2dda307977f8bf90d035840d7ef962"
+      },
+      {
+        "path": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-batch-20261105T171436Z-6bf2a1f1\\artifacts\\repaired-cpu\\image-totalheight.png",
+        "sha256": "d96d79b19ad30c3fb5e9ad46aa8927dbcce7264ff4f2dfee3994d27f19be5215"
+      },
+      {
+        "path": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-batch-20261105T165046Z-5b13a336\\artifacts\\oracle\\html-paint.png",
+        "sha256": "fa8cf8daa2e4aed53a7080da39e0c36600135a7ac782f185c6bc5badf5db4a13"
+      },
+      {
+        "path": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-batch-20261105T171436Z-6bf2a1f1\\artifacts\\repaired-cpu\\html-paint.png",
+        "sha256": "2857e0cf3a3c326e097d9c56f036853a7ce6b4d8660de43e155f485a1ea205b9"
+      }
+    ],
+    "actualViewConclusion": "Eight original PNGs viewed with view_image. All four repaired CPU scenes retain source style/content: numeral is italic and bold, SVG colors occupy2:1 content with correct blank bands, HTML red x is contained in63px blue frame. This is targeted QA, not acceptance of the pending final candidate.",
+    "fixtureChanges": false,
+    "input": {
+      "path": "C:\\code\\py-visactor\\py-katex\\tests\\full-visual-cases.json",
+      "sha256": "d3a4dc5abfc9e128bd1727f8b25192856b188709d6145593c643f24d77ad809d"
+    },
+    "physicalFontReferences": [
+      {
+        "path": "C:\\code\\py-visactor\\py-katex\\src\\py_katex\\data\\fonts\\KaTeX_SansSerif-Italic.ttf",
+        "sha256": "3931dd81faed86ba021bb2bbdc36f5bed9a38d6b4f4077aca59b265aa1b02083"
+      },
+      {
+        "path": "C:\\code\\py-visactor\\py-katex\\src\\py_katex\\data\\fonts\\KaTeX_SansSerif-Bold.ttf",
+        "sha256": "1ece03f79f95277d57dc7f6b435a74e1379b0d46104a8530286b60ff49369ea0"
+      },
+      {
+        "path": "C:\\code\\py-visactor\\py-katex\\src\\py_katex\\data\\fonts\\KaTeX_Main-BoldItalic.ttf",
+        "sha256": "70ee1f64a20f2048c21940ef46d0144fd215baa953ca69afd1e31e98544f708f"
+      }
+    ],
+    "files": [
+      {
+        "path": "C:\\code\\py-visactor\\py-katex\\src\\py_katex\\canvas.py",
+        "sha256": "1570dc4bf23cddf9392dbfa8c1eab7d9db6bd4f32c1bcbfb1430ff1024c10fc6"
+      },
+      {
+        "path": "C:\\code\\py-visactor\\py-katex\\tests\\test_full_canvas.py",
+        "sha256": "a87c9a48a20f5c6a0a5bba007eae6eef8e2ac6dd56e5204c063514eed63cafb7"
+      },
+      {
+        "path": "C:\\code\\py-visactor\\py-katex\\tools\\full_visual_support.py",
+        "sha256": "8e140cf62e1d38a35abc76201b896b67e08d2084ef987fa172f2ce2dc46c0e09"
+      }
+    ],
+    "stoppedWriting": [
+      "src",
+      "tests",
+      "tools",
+      "fixtures"
+    ],
+    "fullVerification": "Pending root joint-candidate unit/corpus/matrix/legacy and new positive humanQA receipt; old FOLLOWUP_REQUIRED is retained unchanged."
+  },
+  "finalVerification": {
+    "status": "PASS_FULL_CORE_STATIC_LOCAL",
+    "summary": "references/full-verification-summary.json",
+    "jointSourceSHA256": {
+      "math": "334c412c34ef675dbc223405622c8d4e19eb56b1ff3700c251cb663d4afdd445",
+      "mermaid": "6094d419ff3c50d2c64fdd00051af2be087b25a7a239cb1dae0e9e09209fdff1"
+    },
+    "runs": {
+      "unit": "test-runs/MATH-FULL-batch-20261105T171602Z-0d9b6942",
+      "visual": "test-runs/MATH-FULL-batch-20261105T171857Z-5071cad7",
+      "legacy": "test-runs/MATH-FULL-batch-20261105T171629Z-8b5ef28e",
+      "report": "test-runs/MATH-FULL-batch-20261105T172308Z-e0e12af6",
+      "htmlQa": "test-runs/MATH-FULL-batch-20261105T172348Z-4daa587b",
+      "manual1": "test-runs/MATH-FULL-batch-20261105T171936Z-a5ca8881",
+      "manual2": "test-runs/MATH-FULL-batch-20261105T172008Z-7055e775"
+    }
+  }
+}

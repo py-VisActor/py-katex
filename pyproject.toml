@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools==84.2.1", "wheel==0.48.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "py-katex"
+version = "0.1.0"
+description = "Native Python TeX math layout and static rendering with bundled KaTeX fonts"
+readme = "README.md"
+requires-python = ">=3.13,<3.14"
+license = "MIT"
+license-files = ["LICENSE", "THIRD_PARTY_NOTICES.md", "references/licenses/katex-LICENSE"]
+keywords = ["tex", "latex", "math", "katex", "rendering", "svg", "pdf"]
+classifiers = [
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Topic :: Scientific/Engineering :: Mathematics",
+  "Topic :: Multimedia :: Graphics",
+]
+dependencies = ["py-skia-canvas==0.1.0a18"]
+
+[project.scripts]
+py-katex = "py_katex.__main__:main"
+
+[project.urls]
+Repository = "https://github.com/py-VisActor/py-katex"
+Documentation = "https://github.com/py-VisActor/py-katex/blob/main/README.md"
+Issues = "https://github.com/py-VisActor/py-katex/issues"
+Changelog = "https://github.com/py-VisActor/py-katex/blob/main/CHANGELOG.md"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+py_katex = ["py.typed", "data/*.json", "data/fonts/*.ttf"]

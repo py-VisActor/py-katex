@@ -1,0 +1,121 @@
+{
+  "schema": "py-mermaid-command-plan/v1",
+  "scope": "RELEASE",
+  "description": "0.1.0 exact payload/metadata + clean external wheel/sdist installs on CPU/auto/GPU and affected API tests.",
+  "steps": [
+    {
+      "name": "create-isolated-build-tools",
+      "argv": [
+        "{python}",
+        "-m",
+        "venv",
+        "{repo}/.local/release-tools-0.1.0"
+      ],
+      "timeoutSeconds": 180
+    },
+    {
+      "name": "install-pinned-build-tools",
+      "argv": [
+        "{repo}/.local/release-tools-0.1.0/Scripts/python.exe",
+        "-I",
+        "-m",
+        "pip",
+        "install",
+        "--index-url",
+        "https://pypi.org/simple/",
+        "--no-cache-dir",
+        "build==1.6.1",
+        "setuptools==84.2.1",
+        "wheel==0.48.0",
+        "twine==7.0.0"
+      ],
+      "timeoutSeconds": 600
+    },
+    {
+      "name": "build-wheel-and-sdist",
+      "argv": [
+        "{repo}/.local/release-tools-0.1.0/Scripts/python.exe",
+        "-I",
+        "-m",
+        "build",
+        "--no-isolation",
+        "--outdir",
+        "{run}/artifacts/dist"
+      ],
+      "timeoutSeconds": 300
+    },
+    {
+      "name": "strict-pypi-metadata",
+      "argv": [
+        "{repo}/.local/release-tools-0.1.0/Scripts/python.exe",
+        "-I",
+        "-m",
+        "twine",
+        "check",
+        "--strict",
+        "{run}/artifacts/dist/py_katex-0.1.0-py3-none-any.whl",
+        "{run}/artifacts/dist/py_katex-0.1.0.tar.gz"
+      ],
+      "timeoutSeconds": 120
+    },
+    {
+      "name": "release-runtime-payload-and-external-install",
+      "argv": [
+        "{python}",
+        "{repo}/tools/release_artifacts.py",
+        "--wheel",
+        "{run}/artifacts/dist/py_katex-0.1.0-py3-none-any.whl",
+        "--sdist",
+        "{run}/artifacts/dist/py_katex-0.1.0.tar.gz",
+        "--install",
+        "--backend",
+        "cpu",
+        "--backend",
+        "auto",
+        "--backend",
+        "gpu",
+        "--out",
+        "{run}/artifacts/validation"
+      ],
+      "timeoutSeconds": 1200
+    },
+    {
+      "name": "test-api",
+      "argv": [
+        "{python}",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "{repo}/tests",
+        "-p",
+        "test_api.py",
+        "-v"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src",
+        "PYTHONUTF8": "1"
+      },
+      "timeoutSeconds": 180
+    },
+    {
+      "name": "test-full-api",
+      "argv": [
+        "{python}",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "{repo}/tests",
+        "-p",
+        "test_full_api.py",
+        "-v"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src",
+        "PYTHONUTF8": "1"
+      },
+      "timeoutSeconds": 180
+    }
+  ]
+}

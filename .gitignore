@@ -1,0 +1,12 @@
+.local/
+test-runs/
+reports/
+__pycache__/
+*.pyc
+*.egg-info/
+build/
+dist/
+.venv/
+.env
+.env.*
+.pypirc

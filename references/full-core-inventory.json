@@ -1,0 +1,2017 @@
+{
+  "schema": "py-katex-full-core-scope/v1",
+  "phase": "P1",
+  "status": "inventory_only_not_behavior_verified",
+  "version": "0.18.11",
+  "upstreamCommit": "d5bed9f38a8d747b9c4a12e18897a514707e1c26",
+  "upstreamFiles": {
+    "src/atoms.ts": "f70a2e8410e306aae6f01c8fe0504fd037e82113b9e3fcad69ec0b3f431b9afa",
+    "src/buildCommon.ts": "032015e0bc32483fde34b79e2a15fde04070137bcaf51bf21ff9987af22522ad",
+    "src/buildHTML.ts": "e516e33444dbf2210d364b2f004787c12801c02122c6d213b3f9f5a9abe1457f",
+    "src/buildMathML.ts": "b901c9d7e31150bb35668d871e8217224a30c5aa3069423ee6314f0f2161b61d",
+    "src/buildTree.ts": "3e1f797739771ee3a9033111442ab60b1610eeec0d01ba3cfde6387efdc76c5b",
+    "src/defineEnvironment.ts": "3db3b8fa865f9c1b238365eed252506ed00108ceb42676e10446bad47f8fb492",
+    "src/defineFunction.ts": "0883d28f20b1ae456686bfa8326aba3ef967f169a5795f4adcee87d14284c307",
+    "src/defineMacro.ts": "cf14136aabc33938bedbb977581604302888be091ded1b33cf3b5a5ccbdfeecb",
+    "src/delimiter.ts": "9067159c302327078f07b790e6e14721de7f3dbdab77b6dc5af4af5022f27581",
+    "src/domTree.ts": "ee88d8fca63b614534c6e727c232a2545d9b04447f0bb739bc6c71f15869f0b7",
+    "src/environments/array.ts": "943419d9b4cd83e848890931a7247fedc01a9b012f2637074538e0621fcf1a98",
+    "src/environments/cd.ts": "163121e5c09d8ce3f9389898fef1556e369abfd31381cdb55b2c5ac4b54e1fcb",
+    "src/environments.ts": "8293862844b7d003fb5220df687b5c68d2910bbc81f680f5ee04d0003eb1af24",
+    "src/fontMetrics.ts": "d53af09ed9e8c12e02650ec8c4fa0f53959e818c392be85747c04b1447966777",
+    "src/fontMetricsData.d.ts": "4113f5b43f774234a8bb17aa073699f841d5ad0a11ead7c0aa9d7f2549cfb36d",
+    "src/fontMetricsData.js": "1748e1a015469255307c967e66e90e346df9e5e68a92de0ea6576d7dca4b5ed3",
+    "src/functions/accent.ts": "0440b729995a228039cd870480b6990e5756b5f41ae77de3a803df8dbc674390",
+    "src/functions/accentunder.ts": "9874b7231061df1e3f23c0227735427fb264b20213aedb79f09901ec21625317",
+    "src/functions/arrow.ts": "9cf5ff66dcf6abe508a9400c3f5ccf8a938616bd23cd9f0418e82b8b44910248",
+    "src/functions/char.ts": "3cbda6884d1170ab4c6051138ea506306e9f26c6b2ed5ffd6f4551ee376c6ca9",
+    "src/functions/color.ts": "d1e8834894dd380410cf6a21a2a33b24a61e74b852aa5c346976f3638828c746",
+    "src/functions/cr.ts": "4de4067463ad5b3298a36c8a766c47f7dd3d2a4a85a5f94deba79ec0a4cd64ef",
+    "src/functions/def.ts": "41e2df9c7153ff4f3b89a42509029104f69a996859bdb12908b08be6badbfa81",
+    "src/functions/delimsizing.ts": "5eab5c5adb8ad53bca498b550a47816220cae889212f87e497e9bef496aaed6d",
+    "src/functions/enclose.ts": "934cf800ecc3f5fea28788c41510a14e2d1944b2388098cca55cf1889e48f66b",
+    "src/functions/environment.ts": "024ad22b9d80626bf6e3db4f9a899b65d993cc28c5b50913b1a593a17cbfc419",
+    "src/functions/font.ts": "f05965a7b04f94b976552525b8ac90e45cbcb870375da76a6d5117b27410906c",
+    "src/functions/genfrac.ts": "932c8dcd3fec9fc00b87b99a315990ea2620e109accc8c4219e62fc6d8dea9fd",
+    "src/functions/hbox.ts": "1a8083d6fbaa70006a50031ea2aeefcf7285427e40816b46448ca3b42e395813",
+    "src/functions/horizBrace.ts": "be6d2f6ba4b4394d23b69840a73ee4ef3fbe8edfecdaec836e389ee6328f5b79",
+    "src/functions/href.ts": "0b14efd8544955bd59193065b734c2acf0bd3464e5d9db4daf45057bc1e6f23c",
+    "src/functions/html.ts": "1d84618eaad37ffb75545ba4b81674a0d5176cdeb030ff3c96b8abc1e5cf0e85",
+    "src/functions/htmlmathml.ts": "eed2dc25afd7fee2618cd779b0cb89bee1279fa808341c59539b5188f8a0c0d5",
+    "src/functions/includegraphics.ts": "241e88fc62eea2982b7c78c270032306cfffafda5fbf98233b5616af96c97d12",
+    "src/functions/kern.ts": "571d8e3b2c9d670d7d372fd8701ccfc1f5e65f240facae88efc58adfe127e913",
+    "src/functions/lap.ts": "542463ab8358ba06022b631036ed25ca4c429e6e7d4b9331b73ca10887d970fb",
+    "src/functions/math.ts": "88953bce840d6a48b90018f27e674cea34d6ec32f72517474a6ee51ecf5ed27a",
+    "src/functions/mathchoice.ts": "19430e0d0a2bb80d683013e2080f69c25c3a6c0472be85b53caf242d29c162ae",
+    "src/functions/mclass.ts": "61c40cfa71b3e7a9e9199717c132e53d7690dd679ff79d064f6883f07f22c54d",
+    "src/functions/op.ts": "634fcc1922be541ab984172795977b25a34b34bb78f7e51c2417c578d756d14d",
+    "src/functions/operatorname.ts": "bbb93683238c88150dfe9355b234d84df823817865fa8f9bfcdcd3f1752cb6b5",
+    "src/functions/ordgroup.ts": "baed1f9967223454c46400399a5ef7df3c70c42d1b289ce4da22fc3afdc2be24",
+    "src/functions/overline.ts": "a03d9bf74811a86374db523d9192bedb9e8d9446aaa268f5cd5f4148470465fc",
+    "src/functions/phantom.ts": "2d72993ad5bbde118cccdbb3125d1c4c6540984945c34d7d2f5d059fd2cbd060",
+    "src/functions/pmb.ts": "7e3a586b203a0151574cde3b9c559f69daf64f155f47515fcfb58bfaaf348ebd",
+    "src/functions/raisebox.ts": "1c5f1f1e01253b430ad09e222b4d83a9073655c603c5e2384d590cbb133d3692",
+    "src/functions/reflectbox.ts": "f373c1057a22c3dae13d7c0527de99a7f96616ed975c3c28cde9e593bc561d9c",
+    "src/functions/relax.ts": "54d35b29ef63514b94bccacf80164ad96f1abec237cf8fa2abcc3a5cdbcd847c",
+    "src/functions/rule.ts": "f49f19ea6d5544b7615464cd3e995f2787bf366b9549a56750cc904aed781ea7",
+    "src/functions/sizing.ts": "a9fd109a90c04dce1dbe03da224b5bd4a1ca70877b666020a5e0f50f956d973b",
+    "src/functions/smash.ts": "3f2995de1a7a0969799021a2d9c648bb64002b60ba3d00a4b9953bd543740994",
+    "src/functions/sqrt.ts": "bdba5828a2b9716d3c7197db2480c011ded1b887876b8253f81bbf1d69531492",
+    "src/functions/styling.ts": "7eea084e982cecbe670cf8fa8fc138dcd4c8a29be19f55ada472afbbdc05fd05",
+    "src/functions/supsub.ts": "2a3121e7eb5de0ac193ce00736ee4a2fa9330e0a1d955b9414840ae1f3fc2a4c",
+    "src/functions/symbolsOp.ts": "97d63bca8c66840f5e1293a22926e0cea6c1a2ae57c9cdcbf59e9889730a7253",
+    "src/functions/symbolsOrd.ts": "516c00b6030bdd0cb6e5345a0be06e477d07eac09d7de11245831d67683dd8b3",
+    "src/functions/symbolsSpacing.ts": "42892ac84286eaf760fb84cee4f124ae5216dee1892ce3529b27f18bf19479d3",
+    "src/functions/tag.ts": "42580371421d2a09494a5f4abc1f2c9a059711596a8fa97bc36170b749d1f713",
+    "src/functions/text.ts": "f0b5cfb045752dc221cb83dd18819330de53b6c8be8694bfee34634081853c2c",
+    "src/functions/underline.ts": "767975287ecc26f6387dc6bf4145a52e4efd2392dcf2e96f8a366c614777f108",
+    "src/functions/utils/assembleSupSub.ts": "c8f8b66506ad22ec3dcbd841bf7482ad07563774a54a3a4b5fd7c8cdf77aa3a3",
+    "src/functions/vcenter.ts": "7ee0abe79d843bbe2d29ed25418c318234463eea0547cf7427e26c0ae5838df9",
+    "src/functions/verb.ts": "f7cccd56ccd7cf11627ac99b76218dcab5da4342cf9436365cbaef125c77646c",
+    "src/functions.ts": "4ad2c5a6a08469275a74ea0ce5f3c0891d8f9878c6155e2939139eb6c9ef8444",
+    "src/Lexer.ts": "eb3b38c63f065241496447ca1182004b3ae0748b1837ff49a7dac4649e22287e",
+    "src/MacroExpander.ts": "e59802256bd5d8c30bc2600154bd1f1f843f6ed6725d884a86882e4b446b5365",
+    "src/macros.ts": "a5979d76536f3d0dd0b561f96f714243b8d4da09846c69875c70db80219798be",
+    "src/mathMLTree.ts": "a98aa2b89de73f349b458379e9bb9bf820ae8b5d2eb16618f29d9000ba9689a7",
+    "src/metrics/README.md": "257bea26c71f34dcda534b43d7c19c705e676608ebe0d61baba707f6dc293b85",
+    "src/Namespace.ts": "a86fefb389ebf6764b52a843ad4eef9e47edffcf4cc8c5c5f27ffe2691f01baf",
+    "src/Options.ts": "da46d700357265a3953d87e880be1b889acb97d2badfe6c0b6b26bf0be4937e7",
+    "src/ParseError.ts": "5b06ca8bd31dd91dd892ce8f8b0cfd0a27fd2c8ba4d118efda0527077ac34866",
+    "src/parseNode.ts": "5d62660d70f9dc91c916f5830663d207ea89c1d3498333f4c91b278b5b2e8b6a",
+    "src/Parser.ts": "7765dcf4a928d0c553e754ab40c963bbb609c7b980a97248cb8d4b3cc9ffc225",
+    "src/parseTree.ts": "30326a25cc96e6e56ee4d9563d3afa85d6df68f15656a1980542a454cc2f51a6",
+    "src/Settings.ts": "c8b49b05c28b2731cbdcaada00db94bfdf86f37eefb681ac4bffafc7f1c2575e",
+    "src/SourceLocation.ts": "941ccbf1565d23306d7e06fb8cb77994ae44682559b8c82571441ad1d262d3ec",
+    "src/spacingData.ts": "d74d2f82cc178fc34bc4b49fb3f8cd07e6ce7e4c639f3e639c4255bd5ea8f282",
+    "src/stretchy.ts": "63a27a06e1d03e2d0778271ee1965af65d80744aeb017674efd46af0e8fd58f8",
+    "src/strict.ts": "9c41e2137d69169e05af01de40fe624f89bb6c63b762eb68017b0e0a251ac441",
+    "src/Style.ts": "dc8a3ceafe380777f7a7303b67e260379049afa2541619df079585fa7145dce8",
+    "src/styles/fonts.scss": "ed69a78b7df60d16d6040677e03d7495e9b1e30fdbc14954db741fd154a55510",
+    "src/styles/katex-swap.scss": "e4e2afdb149f0f9ae9f8453c54eeac2fa4227f3a29ec5cf76e7f92e8669962af",
+    "src/styles/katex.scss": "a690b12e065ce7961a8f5609ee4808ef3bf2f221175deea6ac6dc9f2c7a2e213",
+    "src/svgGeometry.ts": "1f6d440611f5df0108ec011435d7e7cd28e905a5741e97ed0f10ae6ab00b3607",
+    "src/symbols.ts": "c95784b8f79b54d60b15cae94b2d7f0681b63c26ea59fb1d498794143a1f266b",
+    "src/Token.ts": "98e9933dbe6aaf15babc92950af99bfaa8113066c8edadb800241b89f5d26108",
+    "src/tree.ts": "63e06985de0fd4dfc8d10ff96ecb021af10c0cf0431220eb94ec325f24cc7100",
+    "src/types/fonts.ts": "ee489e28310eb48a00683b55fb68a99c0a38306f31ec3b50c450313a4a5c72eb",
+    "src/types/index.ts": "d46850256b8411bc6f542689c65e52c85d0a434e70659119c1eb379938689c8c",
+    "src/types/nodes.ts": "f9cf04723fe3d8a3b849b08314c6bc9239b2b0da199356d472ff61b0f75af2a8",
+    "src/unicodeAccents.js": "09c8ca01bf29ae84350a7f70c63b8d61311335106963d9035e2ef9efee467733",
+    "src/unicodeScripts.ts": "16eba48b9143ae56ab9abd1bc6c53c3755810aa9baf531c3fff8f8c1ff54659a",
+    "src/unicodeSupOrSub.ts": "527f0f91e7b59384305d91db2da596a1e8ccf2eedca8cead0268dc177bacb412",
+    "src/unicodeSymbols.js": "1fde694a83716f3a553430a68f982e45a5b4946a799cb949b1ddcc1df7e16a54",
+    "src/units.ts": "1474944a90b49341d74c9ac04c5abe12748ef05b008bc9e05c26349aa1b9ad1d",
+    "src/utils.ts": "663340542bdd20baca53442690644a1b25714ad873c3e029a644b0ebe254bdb1",
+    "src/wide-character.ts": "21069ef71c0958fcf7f90f36ec7f9bc337230a58f591aa2ff7ddbbfc5b53436d",
+    "test/__snapshots__/katex-spec.ts.snap": "957128bd3927a280d63593865ed8b891cc1388f0a97acd6efd6ccaa5f9920141",
+    "test/__snapshots__/mathml-spec.ts.snap": "04e8a2db43126fe90df25219f4a287958929e37392d9f227c8a97e79ab5e1061",
+    "test/contrib-types-no-global.ts": "0c8761d7ac23e0344d376eaa8e10740fd1c4997cb8c5a4a76ef69fbf67958e3c",
+    "test/contrib-types.ts": "e3d5ac350c81f9bc4cfcd4144b63b2f014a5ace3db91d1003a1e905916959bff",
+    "test/dup-spec.ts": "cf7bc5d260f3078e952ec7cdec7efefcf1ba6b016037133808d2699c3b8c781a",
+    "test/errors-spec.ts": "de94024a7affb7334325ec488a3d8f1c024d35a136fc940415e95c498c807898",
+    "test/globals.d.ts": "bf2a2aa88d9f0a0ea006f880f88e29b7dddf337c6e356875e6a9d82a6f32b671",
+    "test/helpers.ts": "05c28e8cffd66905c88ae88381251cdefc160141006aaf09300cd82a8eb72586",
+    "test/katex-spec.ts": "a06a541b496a3d52afa2fc25ebc076e671fa702c6aae9a81ba9bf99df4cbfd66",
+    "test/mathml-spec.ts": "a45891bdb44ab9c5ee9f6276e53b52e9ec3eeea212e52c0a64f73114b645c620",
+    "test/perf-test.ts": "9f44c576fd1344d324f95e413ce7bd7eb6e9021ef6f9da29b5281c0e4eaaca9e",
+    "test/screenshotter/ss_data.js": "678431fe7b619930d0018a9fb5f333180a45fda12f3f1a883543dfabd91ca753",
+    "test/screenshotter/ss_data.yaml": "e3886dca758b9374153a19352b9fc8edb272150b86f3f9ac4312314a16dba307",
+    "test/screenshotter-spec.ts": "2568ecc950086956fd494bbbc7e670953d0946173ef49dd9625ea8251b39528d",
+    "test/setup.ts": "d565fdbcaa71ca63a7c7119c57ada7fb61f830533cb75d4470845a10c9d7229c",
+    "test/symgroups.ts": "e516d9f89c3ae7b91f3ca34001a74993ff995af7d9aca8025e2b68bcf0512316",
+    "test/unicode-spec.ts": "0fdebab0d2fc0f9df780294cbf51100a71cd01a3c2a518dac43e15bc98e9ccc4",
+    "test/verify-build.js": "2cbc43e2ea9ba4ec0b1a1b9261f38fd7f5be19ac008bfe5c9058ee31503cf3de",
+    "docs/api.md": "c50c54e8d5211d470e23b24146292026e49dd54be73a69a91eff4ad5c300a50c",
+    "docs/autorender.md": "37c5c96be3347095524470c3e52dacef5c039759a145f8e64eeec475637920b9",
+    "docs/browser.md": "1f940d44a90617bc00dc87fcd649dc1bb392c0ab8697a9cad078f218ea6fd92c",
+    "docs/error.md": "5374d7ea4bdab7650494cbd7c1a68089c04e679c107ab83071dd54fbc8224bdb",
+    "docs/font.md": "c8ad5afadbff1e23bcd914b224280f037391c5cccc9416705b8b239556be84f4",
+    "docs/issues.md": "ea0803b89a7a2375a7777d1ad947690edced1de0db4dc19540e3376912489145",
+    "docs/libs.md": "a95371f9aec1882ddddf9393ee1ea33994de4e84f424eedb661ed9adbeda220d",
+    "docs/migration.md": "28ed00e693f61ec0a6fdf6ebbd4e7fda1e53c382889f8865954971e11a8a0a8a",
+    "docs/node.md": "0528687751a1933440cd28ff815b2a76e0cf39fc97a1d93f3c70476d46e3d1cb",
+    "docs/options.md": "d1f4e97851b8d710280b4ddd3ecf5071b6d77ecdd4a570fdf1bc35e064304af4",
+    "docs/security.md": "b774fe8aed75206148cc660f1dd996dbb13cbd3762b44d50494239ce8f2dd7cf",
+    "docs/support_table.md": "fb07274205722f11a0c774e06ddb7bc8cf794d49fe2f95751b612ac94450ee74",
+    "docs/supported.md": "7c6c4984eaeac43797d51f067a985a3203256879c2594d39fa65cd0945228145",
+    "contrib/auto-render/auto-render.ts": "790b7e25204658935b72157b7c90d0e149083eeaef24c8707b07ed245cb56f85",
+    "contrib/auto-render/README.md": "c79773bc7b1470c89a70c4455d5237da05676e8ef9fd3410ecefafdac12f2c55",
+    "contrib/auto-render/splitAtDelimiters.ts": "a07dc1b56800ae112763add857a68aa48359441148d419b6c2d97106d2f34175",
+    "contrib/auto-render/test/auto-render-spec.ts": "9ed71910a52ff85e35c79f7fa2071613cfb4f72024a73f3dfb0a60fe5874b877",
+    "contrib/copy-tex/copy-tex.ts": "283e7e460bce55f74e1dd670ae3d5c78c88e955ce4025ff776afaa1179d5081b",
+    "contrib/copy-tex/katex2tex.ts": "41387c3399f85d907aaf64bfb17e696dc90ba9976e8de8cb30dcf550bf64f5d8",
+    "contrib/copy-tex/README.md": "21665119383059dc9d281adfebe4e788e7e03c40bd353501ba7ddb4642b2263a",
+    "contrib/mathtex-script-type/mathtex-script-type.js": "bbf8067ccd68706bfe426b2c72793e0dc933ca2b6e071e5e67d2078ea7d30792",
+    "contrib/mathtex-script-type/README.md": "1e100d65ef53b0d24ae8494a7c5d6dd145b313860107160b5b42a9ac2e0bb7f9",
+    "contrib/mhchem/mhchem.js": "9ba0eb1c0e2afb9ff0005c32572178311d96fa5209e3504f7ae9d7ae1ca4f2c3",
+    "contrib/mhchem/README.md": "8dcd8b233592de5c8bbb17ebd128c65b65d0a247bfefea3122417ec4704927b6",
+    "contrib/render-a11y-string/render-a11y-string.ts": "ae619e1769a549530c3f8c73cce8039e646228814dbb0eb0cc70b9dd43b5754f",
+    "contrib/render-a11y-string/test/render-a11y-string-spec.ts": "8c3176bb5498921671c0692ec7380f2d71591302e1edbc6c6048c553482c3b8b"
+  },
+  "registrations": [
+    {
+      "name": "\\acute",
+      "source": "src/functions/accent.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\grave",
+      "source": "src/functions/accent.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\ddot",
+      "source": "src/functions/accent.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\tilde",
+      "source": "src/functions/accent.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\bar",
+      "source": "src/functions/accent.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\breve",
+      "source": "src/functions/accent.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\check",
+      "source": "src/functions/accent.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\hat",
+      "source": "src/functions/accent.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\vec",
+      "source": "src/functions/accent.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\dot",
+      "source": "src/functions/accent.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\mathring",
+      "source": "src/functions/accent.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\widecheck",
+      "source": "src/functions/accent.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\widehat",
+      "source": "src/functions/accent.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\widetilde",
+      "source": "src/functions/accent.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\overrightarrow",
+      "source": "src/functions/accent.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\overleftarrow",
+      "source": "src/functions/accent.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\Overrightarrow",
+      "source": "src/functions/accent.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\overleftrightarrow",
+      "source": "src/functions/accent.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\overgroup",
+      "source": "src/functions/accent.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\overlinesegment",
+      "source": "src/functions/accent.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\overleftharpoon",
+      "source": "src/functions/accent.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\overrightharpoon",
+      "source": "src/functions/accent.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\'",
+      "source": "src/functions/accent.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\`",
+      "source": "src/functions/accent.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\^",
+      "source": "src/functions/accent.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\~",
+      "source": "src/functions/accent.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\=",
+      "source": "src/functions/accent.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\u",
+      "source": "src/functions/accent.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\.",
+      "source": "src/functions/accent.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\\"",
+      "source": "src/functions/accent.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\c",
+      "source": "src/functions/accent.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\r",
+      "source": "src/functions/accent.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\H",
+      "source": "src/functions/accent.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\v",
+      "source": "src/functions/accent.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\textcircled",
+      "source": "src/functions/accent.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\underleftarrow",
+      "source": "src/functions/accentunder.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\underrightarrow",
+      "source": "src/functions/accentunder.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\underleftrightarrow",
+      "source": "src/functions/accentunder.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\undergroup",
+      "source": "src/functions/accentunder.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\underlinesegment",
+      "source": "src/functions/accentunder.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\utilde",
+      "source": "src/functions/accentunder.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\xleftarrow",
+      "source": "src/functions/arrow.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\xrightarrow",
+      "source": "src/functions/arrow.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\xLeftarrow",
+      "source": "src/functions/arrow.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\xRightarrow",
+      "source": "src/functions/arrow.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\xleftrightarrow",
+      "source": "src/functions/arrow.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\xLeftrightarrow",
+      "source": "src/functions/arrow.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\xhookleftarrow",
+      "source": "src/functions/arrow.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\xhookrightarrow",
+      "source": "src/functions/arrow.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\xmapsto",
+      "source": "src/functions/arrow.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\xrightharpoondown",
+      "source": "src/functions/arrow.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\xrightharpoonup",
+      "source": "src/functions/arrow.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\xleftharpoondown",
+      "source": "src/functions/arrow.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\xleftharpoonup",
+      "source": "src/functions/arrow.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\xrightleftharpoons",
+      "source": "src/functions/arrow.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\xleftrightharpoons",
+      "source": "src/functions/arrow.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\xlongequal",
+      "source": "src/functions/arrow.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\xtwoheadrightarrow",
+      "source": "src/functions/arrow.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\xtwoheadleftarrow",
+      "source": "src/functions/arrow.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\xtofrom",
+      "source": "src/functions/arrow.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\xrightleftarrows",
+      "source": "src/functions/arrow.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\xrightequilibrium",
+      "source": "src/functions/arrow.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\xleftequilibrium",
+      "source": "src/functions/arrow.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\\\cdrightarrow",
+      "source": "src/functions/arrow.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\\\cdleftarrow",
+      "source": "src/functions/arrow.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\\\cdlongequal",
+      "source": "src/functions/arrow.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\@char",
+      "source": "src/functions/char.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\textcolor",
+      "source": "src/functions/color.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\color",
+      "source": "src/functions/color.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\\\",
+      "source": "src/functions/cr.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\global",
+      "source": "src/functions/def.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\long",
+      "source": "src/functions/def.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\\\globallong",
+      "source": "src/functions/def.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\def",
+      "source": "src/functions/def.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\gdef",
+      "source": "src/functions/def.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\edef",
+      "source": "src/functions/def.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\xdef",
+      "source": "src/functions/def.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\let",
+      "source": "src/functions/def.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\\\globallet",
+      "source": "src/functions/def.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\futurelet",
+      "source": "src/functions/def.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\\\globalfuture",
+      "source": "src/functions/def.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\bigl",
+      "source": "src/functions/delimsizing.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\Bigl",
+      "source": "src/functions/delimsizing.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\biggl",
+      "source": "src/functions/delimsizing.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\Biggl",
+      "source": "src/functions/delimsizing.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\bigr",
+      "source": "src/functions/delimsizing.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\Bigr",
+      "source": "src/functions/delimsizing.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\biggr",
+      "source": "src/functions/delimsizing.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\Biggr",
+      "source": "src/functions/delimsizing.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\bigm",
+      "source": "src/functions/delimsizing.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\Bigm",
+      "source": "src/functions/delimsizing.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\biggm",
+      "source": "src/functions/delimsizing.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\Biggm",
+      "source": "src/functions/delimsizing.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\big",
+      "source": "src/functions/delimsizing.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\Big",
+      "source": "src/functions/delimsizing.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\bigg",
+      "source": "src/functions/delimsizing.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\Bigg",
+      "source": "src/functions/delimsizing.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\right",
+      "source": "src/functions/delimsizing.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\left",
+      "source": "src/functions/delimsizing.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\middle",
+      "source": "src/functions/delimsizing.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\colorbox",
+      "source": "src/functions/enclose.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\fcolorbox",
+      "source": "src/functions/enclose.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\fbox",
+      "source": "src/functions/enclose.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\cancel",
+      "source": "src/functions/enclose.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\bcancel",
+      "source": "src/functions/enclose.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\xcancel",
+      "source": "src/functions/enclose.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\phase",
+      "source": "src/functions/enclose.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\sout",
+      "source": "src/functions/enclose.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\angl",
+      "source": "src/functions/enclose.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\begin",
+      "source": "src/functions/environment.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\end",
+      "source": "src/functions/environment.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\mathrm",
+      "source": "src/functions/font.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\mathit",
+      "source": "src/functions/font.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\mathbf",
+      "source": "src/functions/font.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\mathnormal",
+      "source": "src/functions/font.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\mathsfit",
+      "source": "src/functions/font.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\mathbb",
+      "source": "src/functions/font.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\mathcal",
+      "source": "src/functions/font.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\mathfrak",
+      "source": "src/functions/font.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\mathscr",
+      "source": "src/functions/font.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\mathsf",
+      "source": "src/functions/font.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\mathtt",
+      "source": "src/functions/font.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\Bbb",
+      "source": "src/functions/font.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\bold",
+      "source": "src/functions/font.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\frak",
+      "source": "src/functions/font.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\boldsymbol",
+      "source": "src/functions/font.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\bm",
+      "source": "src/functions/font.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\rm",
+      "source": "src/functions/font.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\sf",
+      "source": "src/functions/font.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\tt",
+      "source": "src/functions/font.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\bf",
+      "source": "src/functions/font.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\it",
+      "source": "src/functions/font.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\cal",
+      "source": "src/functions/font.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\cfrac",
+      "source": "src/functions/genfrac.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\dfrac",
+      "source": "src/functions/genfrac.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\frac",
+      "source": "src/functions/genfrac.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\tfrac",
+      "source": "src/functions/genfrac.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\dbinom",
+      "source": "src/functions/genfrac.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\binom",
+      "source": "src/functions/genfrac.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\tbinom",
+      "source": "src/functions/genfrac.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\\\atopfrac",
+      "source": "src/functions/genfrac.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\\\bracefrac",
+      "source": "src/functions/genfrac.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\\\brackfrac",
+      "source": "src/functions/genfrac.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\over",
+      "source": "src/functions/genfrac.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\choose",
+      "source": "src/functions/genfrac.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\atop",
+      "source": "src/functions/genfrac.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\brace",
+      "source": "src/functions/genfrac.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\brack",
+      "source": "src/functions/genfrac.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\genfrac",
+      "source": "src/functions/genfrac.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\above",
+      "source": "src/functions/genfrac.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\\\abovefrac",
+      "source": "src/functions/genfrac.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\hbox",
+      "source": "src/functions/hbox.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\overbrace",
+      "source": "src/functions/horizBrace.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\underbrace",
+      "source": "src/functions/horizBrace.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\overbracket",
+      "source": "src/functions/horizBrace.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\underbracket",
+      "source": "src/functions/horizBrace.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\href",
+      "source": "src/functions/href.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\url",
+      "source": "src/functions/href.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\htmlClass",
+      "source": "src/functions/html.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\htmlId",
+      "source": "src/functions/html.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\htmlStyle",
+      "source": "src/functions/html.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\htmlData",
+      "source": "src/functions/html.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\html@mathml",
+      "source": "src/functions/htmlmathml.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\includegraphics",
+      "source": "src/functions/includegraphics.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\kern",
+      "source": "src/functions/kern.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\mkern",
+      "source": "src/functions/kern.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\hskip",
+      "source": "src/functions/kern.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\mskip",
+      "source": "src/functions/kern.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\mathllap",
+      "source": "src/functions/lap.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\mathrlap",
+      "source": "src/functions/lap.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\mathclap",
+      "source": "src/functions/lap.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\(",
+      "source": "src/functions/math.ts",
+      "category": "functions"
+    },
+    {
+      "name": "$",
+      "source": "src/functions/math.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\)",
+      "source": "src/functions/math.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\]",
+      "source": "src/functions/math.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\mathchoice",
+      "source": "src/functions/mathchoice.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\mathord",
+      "source": "src/functions/mclass.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\mathbin",
+      "source": "src/functions/mclass.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\mathrel",
+      "source": "src/functions/mclass.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\mathopen",
+      "source": "src/functions/mclass.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\mathclose",
+      "source": "src/functions/mclass.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\mathpunct",
+      "source": "src/functions/mclass.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\mathinner",
+      "source": "src/functions/mclass.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\@binrel",
+      "source": "src/functions/mclass.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\stackrel",
+      "source": "src/functions/mclass.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\overset",
+      "source": "src/functions/mclass.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\underset",
+      "source": "src/functions/mclass.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\coprod",
+      "source": "src/functions/op.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\bigvee",
+      "source": "src/functions/op.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\bigwedge",
+      "source": "src/functions/op.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\biguplus",
+      "source": "src/functions/op.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\bigcap",
+      "source": "src/functions/op.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\bigcup",
+      "source": "src/functions/op.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\intop",
+      "source": "src/functions/op.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\prod",
+      "source": "src/functions/op.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\sum",
+      "source": "src/functions/op.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\bigotimes",
+      "source": "src/functions/op.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\bigoplus",
+      "source": "src/functions/op.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\bigodot",
+      "source": "src/functions/op.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\bigsqcup",
+      "source": "src/functions/op.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\smallint",
+      "source": "src/functions/op.ts",
+      "category": "functions"
+    },
+    {
+      "name": "∏",
+      "source": "src/functions/op.ts",
+      "category": "functions"
+    },
+    {
+      "name": "∐",
+      "source": "src/functions/op.ts",
+      "category": "functions"
+    },
+    {
+      "name": "∑",
+      "source": "src/functions/op.ts",
+      "category": "functions"
+    },
+    {
+      "name": "⋀",
+      "source": "src/functions/op.ts",
+      "category": "functions"
+    },
+    {
+      "name": "⋁",
+      "source": "src/functions/op.ts",
+      "category": "functions"
+    },
+    {
+      "name": "⋂",
+      "source": "src/functions/op.ts",
+      "category": "functions"
+    },
+    {
+      "name": "⋃",
+      "source": "src/functions/op.ts",
+      "category": "functions"
+    },
+    {
+      "name": "⨀",
+      "source": "src/functions/op.ts",
+      "category": "functions"
+    },
+    {
+      "name": "⨁",
+      "source": "src/functions/op.ts",
+      "category": "functions"
+    },
+    {
+      "name": "⨂",
+      "source": "src/functions/op.ts",
+      "category": "functions"
+    },
+    {
+      "name": "⨄",
+      "source": "src/functions/op.ts",
+      "category": "functions"
+    },
+    {
+      "name": "⨆",
+      "source": "src/functions/op.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\mathop",
+      "source": "src/functions/op.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\arcsin",
+      "source": "src/functions/op.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\arccos",
+      "source": "src/functions/op.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\arctan",
+      "source": "src/functions/op.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\arctg",
+      "source": "src/functions/op.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\arcctg",
+      "source": "src/functions/op.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\arg",
+      "source": "src/functions/op.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\ch",
+      "source": "src/functions/op.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\cos",
+      "source": "src/functions/op.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\cosec",
+      "source": "src/functions/op.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\cosh",
+      "source": "src/functions/op.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\cot",
+      "source": "src/functions/op.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\cotg",
+      "source": "src/functions/op.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\coth",
+      "source": "src/functions/op.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\csc",
+      "source": "src/functions/op.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\ctg",
+      "source": "src/functions/op.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\cth",
+      "source": "src/functions/op.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\deg",
+      "source": "src/functions/op.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\dim",
+      "source": "src/functions/op.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\exp",
+      "source": "src/functions/op.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\hom",
+      "source": "src/functions/op.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\ker",
+      "source": "src/functions/op.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\lg",
+      "source": "src/functions/op.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\ln",
+      "source": "src/functions/op.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\log",
+      "source": "src/functions/op.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\sec",
+      "source": "src/functions/op.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\sin",
+      "source": "src/functions/op.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\sinh",
+      "source": "src/functions/op.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\sh",
+      "source": "src/functions/op.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\tan",
+      "source": "src/functions/op.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\tanh",
+      "source": "src/functions/op.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\tg",
+      "source": "src/functions/op.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\th",
+      "source": "src/functions/op.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\det",
+      "source": "src/functions/op.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\gcd",
+      "source": "src/functions/op.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\inf",
+      "source": "src/functions/op.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\lim",
+      "source": "src/functions/op.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\max",
+      "source": "src/functions/op.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\min",
+      "source": "src/functions/op.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\Pr",
+      "source": "src/functions/op.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\sup",
+      "source": "src/functions/op.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\int",
+      "source": "src/functions/op.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\iint",
+      "source": "src/functions/op.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\iiint",
+      "source": "src/functions/op.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\oint",
+      "source": "src/functions/op.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\oiint",
+      "source": "src/functions/op.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\oiiint",
+      "source": "src/functions/op.ts",
+      "category": "functions"
+    },
+    {
+      "name": "∫",
+      "source": "src/functions/op.ts",
+      "category": "functions"
+    },
+    {
+      "name": "∬",
+      "source": "src/functions/op.ts",
+      "category": "functions"
+    },
+    {
+      "name": "∭",
+      "source": "src/functions/op.ts",
+      "category": "functions"
+    },
+    {
+      "name": "∮",
+      "source": "src/functions/op.ts",
+      "category": "functions"
+    },
+    {
+      "name": "∯",
+      "source": "src/functions/op.ts",
+      "category": "functions"
+    },
+    {
+      "name": "∰",
+      "source": "src/functions/op.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\operatorname@",
+      "source": "src/functions/operatorname.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\operatornamewithlimits",
+      "source": "src/functions/operatorname.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\overline",
+      "source": "src/functions/overline.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\phantom",
+      "source": "src/functions/phantom.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\vphantom",
+      "source": "src/functions/phantom.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\pmb",
+      "source": "src/functions/pmb.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\raisebox",
+      "source": "src/functions/raisebox.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\reflectbox",
+      "source": "src/functions/reflectbox.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\mathreflectbox",
+      "source": "src/functions/reflectbox.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\relax",
+      "source": "src/functions/relax.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\rule",
+      "source": "src/functions/rule.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\smash",
+      "source": "src/functions/smash.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\sqrt",
+      "source": "src/functions/sqrt.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\displaystyle",
+      "source": "src/functions/styling.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\textstyle",
+      "source": "src/functions/styling.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\scriptstyle",
+      "source": "src/functions/styling.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\scriptscriptstyle",
+      "source": "src/functions/styling.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\text",
+      "source": "src/functions/text.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\textrm",
+      "source": "src/functions/text.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\textsf",
+      "source": "src/functions/text.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\texttt",
+      "source": "src/functions/text.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\textnormal",
+      "source": "src/functions/text.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\textbf",
+      "source": "src/functions/text.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\textmd",
+      "source": "src/functions/text.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\textit",
+      "source": "src/functions/text.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\textup",
+      "source": "src/functions/text.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\emph",
+      "source": "src/functions/text.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\underline",
+      "source": "src/functions/underline.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\vcenter",
+      "source": "src/functions/vcenter.ts",
+      "category": "functions"
+    },
+    {
+      "name": "\\verb",
+      "source": "src/functions/verb.ts",
+      "category": "functions"
+    },
+    {
+      "name": "array",
+      "source": "src/environments/array.ts",
+      "category": "environments"
+    },
+    {
+      "name": "darray",
+      "source": "src/environments/array.ts",
+      "category": "environments"
+    },
+    {
+      "name": "matrix",
+      "source": "src/environments/array.ts",
+      "category": "environments"
+    },
+    {
+      "name": "pmatrix",
+      "source": "src/environments/array.ts",
+      "category": "environments"
+    },
+    {
+      "name": "bmatrix",
+      "source": "src/environments/array.ts",
+      "category": "environments"
+    },
+    {
+      "name": "Bmatrix",
+      "source": "src/environments/array.ts",
+      "category": "environments"
+    },
+    {
+      "name": "vmatrix",
+      "source": "src/environments/array.ts",
+      "category": "environments"
+    },
+    {
+      "name": "Vmatrix",
+      "source": "src/environments/array.ts",
+      "category": "environments"
+    },
+    {
+      "name": "matrix*",
+      "source": "src/environments/array.ts",
+      "category": "environments"
+    },
+    {
+      "name": "pmatrix*",
+      "source": "src/environments/array.ts",
+      "category": "environments"
+    },
+    {
+      "name": "bmatrix*",
+      "source": "src/environments/array.ts",
+      "category": "environments"
+    },
+    {
+      "name": "Bmatrix*",
+      "source": "src/environments/array.ts",
+      "category": "environments"
+    },
+    {
+      "name": "vmatrix*",
+      "source": "src/environments/array.ts",
+      "category": "environments"
+    },
+    {
+      "name": "Vmatrix*",
+      "source": "src/environments/array.ts",
+      "category": "environments"
+    },
+    {
+      "name": "smallmatrix",
+      "source": "src/environments/array.ts",
+      "category": "environments"
+    },
+    {
+      "name": "subarray",
+      "source": "src/environments/array.ts",
+      "category": "environments"
+    },
+    {
+      "name": "cases",
+      "source": "src/environments/array.ts",
+      "category": "environments"
+    },
+    {
+      "name": "dcases",
+      "source": "src/environments/array.ts",
+      "category": "environments"
+    },
+    {
+      "name": "rcases",
+      "source": "src/environments/array.ts",
+      "category": "environments"
+    },
+    {
+      "name": "drcases",
+      "source": "src/environments/array.ts",
+      "category": "environments"
+    },
+    {
+      "name": "align",
+      "source": "src/environments/array.ts",
+      "category": "environments"
+    },
+    {
+      "name": "align*",
+      "source": "src/environments/array.ts",
+      "category": "environments"
+    },
+    {
+      "name": "aligned",
+      "source": "src/environments/array.ts",
+      "category": "environments"
+    },
+    {
+      "name": "split",
+      "source": "src/environments/array.ts",
+      "category": "environments"
+    },
+    {
+      "name": "gathered",
+      "source": "src/environments/array.ts",
+      "category": "environments"
+    },
+    {
+      "name": "gather",
+      "source": "src/environments/array.ts",
+      "category": "environments"
+    },
+    {
+      "name": "gather*",
+      "source": "src/environments/array.ts",
+      "category": "environments"
+    },
+    {
+      "name": "alignat",
+      "source": "src/environments/array.ts",
+      "category": "environments"
+    },
+    {
+      "name": "alignat*",
+      "source": "src/environments/array.ts",
+      "category": "environments"
+    },
+    {
+      "name": "alignedat",
+      "source": "src/environments/array.ts",
+      "category": "environments"
+    },
+    {
+      "name": "equation",
+      "source": "src/environments/array.ts",
+      "category": "environments"
+    },
+    {
+      "name": "equation*",
+      "source": "src/environments/array.ts",
+      "category": "environments"
+    },
+    {
+      "name": "CD",
+      "source": "src/environments/array.ts",
+      "category": "environments"
+    },
+    {
+      "name": "\\hline",
+      "source": "src/environments/array.ts",
+      "category": "environments"
+    },
+    {
+      "name": "\\hdashline",
+      "source": "src/environments/array.ts",
+      "category": "environments"
+    },
+    {
+      "name": "\\\\cdleft",
+      "source": "src/environments/cd.ts",
+      "category": "environments"
+    },
+    {
+      "name": "\\\\cdright",
+      "source": "src/environments/cd.ts",
+      "category": "environments"
+    },
+    {
+      "name": "\\\\cdparent",
+      "source": "src/environments/cd.ts",
+      "category": "environments"
+    },
+    {
+      "name": "\\tiny",
+      "source": "src/functions/sizing.ts",
+      "category": "functions",
+      "discovery": "runtime_source_registry_dynamic_names"
+    },
+    {
+      "name": "\\sixptsize",
+      "source": "src/functions/sizing.ts",
+      "category": "functions",
+      "discovery": "runtime_source_registry_dynamic_names"
+    },
+    {
+      "name": "\\scriptsize",
+      "source": "src/functions/sizing.ts",
+      "category": "functions",
+      "discovery": "runtime_source_registry_dynamic_names"
+    },
+    {
+      "name": "\\footnotesize",
+      "source": "src/functions/sizing.ts",
+      "category": "functions",
+      "discovery": "runtime_source_registry_dynamic_names"
+    },
+    {
+      "name": "\\small",
+      "source": "src/functions/sizing.ts",
+      "category": "functions",
+      "discovery": "runtime_source_registry_dynamic_names"
+    },
+    {
+      "name": "\\normalsize",
+      "source": "src/functions/sizing.ts",
+      "category": "functions",
+      "discovery": "runtime_source_registry_dynamic_names"
+    },
+    {
+      "name": "\\large",
+      "source": "src/functions/sizing.ts",
+      "category": "functions",
+      "discovery": "runtime_source_registry_dynamic_names"
+    },
+    {
+      "name": "\\Large",
+      "source": "src/functions/sizing.ts",
+      "category": "functions",
+      "discovery": "runtime_source_registry_dynamic_names"
+    },
+    {
+      "name": "\\LARGE",
+      "source": "src/functions/sizing.ts",
+      "category": "functions",
+      "discovery": "runtime_source_registry_dynamic_names"
+    },
+    {
+      "name": "\\huge",
+      "source": "src/functions/sizing.ts",
+      "category": "functions",
+      "discovery": "runtime_source_registry_dynamic_names"
+    },
+    {
+      "name": "\\Huge",
+      "source": "src/functions/sizing.ts",
+      "category": "functions",
+      "discovery": "runtime_source_registry_dynamic_names"
+    }
+  ],
+  "uniqueRegistrationNames": 345,
+  "historicalStaticScannerNames": 334,
+  "runtimeRegistry": "references/full-runtime-registry.json",
+  "runtimeMacros": {
+    "total": 339,
+    "literal": 319,
+    "dynamic": 20
+  },
+  "functionLocalMacroRegistrations": [
+    {
+      "name": "\\operatorname",
+      "source": "src/functions/operatorname.ts"
+    },
+    {
+      "name": "\\hphantom",
+      "source": "src/functions/phantom.ts"
+    },
+    {
+      "name": "\\nonumber",
+      "source": "src/environments/array.ts"
+    },
+    {
+      "name": "\\notag",
+      "source": "src/environments/array.ts"
+    }
+  ],
+  "mainLiteralMacros": 315,
+  "mainDynamicMacros": [
+    "\\noexpand",
+    "\\expandafter",
+    "\\@firstoftwo",
+    "\\@secondoftwo",
+    "\\@ifnextchar",
+    "\\TextOrMath",
+    "\\char",
+    "\\newcommand",
+    "\\renewcommand",
+    "\\providecommand",
+    "\\message",
+    "\\errmessage",
+    "\\show",
+    "\\dots",
+    "\\dotso",
+    "\\dotsc",
+    "\\cdots",
+    "\\tag@literal",
+    "\\bra@ket",
+    "\\bra@set"
+  ],
+  "settings": [
+    {
+      "name": "displayMode",
+      "scope": "retained_static_with_explicit_content_width"
+    },
+    {
+      "name": "output",
+      "scope": "excluded_markup_backend_use_native_formats"
+    },
+    {
+      "name": "leqno",
+      "scope": "retained_static"
+    },
+    {
+      "name": "fleqn",
+      "scope": "retained_static"
+    },
+    {
+      "name": "throwOnError",
+      "scope": "retained_static"
+    },
+    {
+      "name": "errorColor",
+      "scope": "retained_static"
+    },
+    {
+      "name": "macros",
+      "scope": "retained_static"
+    },
+    {
+      "name": "minRuleThickness",
+      "scope": "retained_static"
+    },
+    {
+      "name": "colorIsTextColor",
+      "scope": "retained_static"
+    },
+    {
+      "name": "strict",
+      "scope": "retained_static"
+    },
+    {
+      "name": "trust",
+      "scope": "retained_boolean_or_python_callback_offline_resources_only"
+    },
+    {
+      "name": "maxSize",
+      "scope": "retained_static"
+    },
+    {
+      "name": "maxExpand",
+      "scope": "retained_static"
+    },
+    {
+      "name": "globalGroup",
+      "scope": "retained_with_explicit_MacroState"
+    }
+  ],
+  "sourceSpecs": [
+    "test/dup-spec.ts",
+    "test/errors-spec.ts",
+    "test/katex-spec.ts",
+    "test/mathml-spec.ts",
+    "test/screenshotter-spec.ts",
+    "test/unicode-spec.ts"
+  ],
+  "screenshotter": "test/screenshotter/ss_data.yaml",
+  "contribClassification": {
+    "auto-render": "DOM_host_integration_outside_native_core",
+    "copy-tex": "clipboard_interaction_excluded_by_user",
+    "mathtex-script-type": "DOM_host_integration_outside_native_core",
+    "render-a11y-string": "accessibility_outside_requested_static_rendering",
+    "mhchem": "separate_optional_extension_not_in_original_core_registration_scope"
+  },
+  "claim": "All input files and denominators retained. Neither registration linkage nor this inventory is proof of compatibility.",
+  "finalVerification": {
+    "status": "PASS_FULL_CORE_STATIC_LOCAL",
+    "summary": "references/full-verification-summary.json"
+  }
+}

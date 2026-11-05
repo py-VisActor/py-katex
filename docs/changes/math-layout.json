@@ -1,0 +1,94 @@
+{
+  "schema": "py-katex-change/v1",
+  "owner": "geometry_elk",
+  "phase": "P3",
+  "status": "targeted_layout_65_pass_awaiting_global_freeze",
+  "scope": "Native two-dimensional TeX box layout only",
+  "files": [
+    {
+      "path": "src/py_katex/layout.py",
+      "sha256": "fa4fe83883fcdc56fe16093fa27d9860a09d42aa606f850fa15e39847948b628"
+    },
+    {
+      "path": "src/py_katex/_layout_paths.py",
+      "sha256": "5d390360023d8188d27c969d4f2925f1d7e8b7367f53a0df4e772b4925c5ce98"
+    }
+  ],
+  "sourceMap": "references/layout-sources.json",
+  "mechanicalRun": "test-runs/MATH-record-20261105T115223Z-c7fff1a9",
+  "mechanicalExitCode": 0,
+  "behaviorTestsRun": true,
+  "behaviorTestsWritten": true,
+  "runtimeJavaScript": false,
+  "nativeCanvasImportedByLayout": false,
+  "knownDifferences": [
+    "pmb 0.04px shadow blur omitted; source offset copied exactly, accepted by root"
+  ],
+  "pending": "Root coordinated freeze/full matrix and actual new-candidate image recheck; first provisional QA finding retained unchanged.",
+  "stopWritingSource": true,
+  "repairs": [
+    {
+      "id": "L21",
+      "classification": "product-defect",
+      "source": "functions/supsub.ts rule18e",
+      "cause": "psi adjustment incorrectly ran even when the four-rule clearance was already satisfied",
+      "change": "Move psi into the source gap-deficit branch; retained source numerical test unchanged"
+    },
+    {
+      "id": "L51",
+      "classification": "product-defect",
+      "source": "functions/enclose.ts and styles/katex.scss .boxpad/.fbox",
+      "cause": "Overlaid border-box width was incorrectly added to horizontal TeX advance",
+      "change": "Only .3em horizontal padding per side; retain vertical sep+rule and inward border paint; retained test unchanged"
+    },
+    {
+      "id": "L33",
+      "classification": "test-numerical-comparison-defect",
+      "source": "stretchy.ts and styles/katex.scss .x-arrow-pad .5em per side",
+      "cause": "Strict >= compared different accumulation orders: 94.01419999999997 versus source arithmetic 94.0142 (2.84e-14)",
+      "change": "Use existing seven-decimal assertNear against the same literal source formula; head scale and clipping checks unchanged; no arrow product change"
+    }
+  ],
+  "initialFailureEvidence": "test-runs/MATH-batch-20261105T120246Z-de639d13",
+  "targetedRun": "test-runs/MATH-record-20261105T121114Z-ab6be6c3",
+  "targetedExitCode": 0,
+  "targetedMethodCount": 65,
+  "additionalRepairs": [
+    {
+      "id": "manual-array-divider-padding",
+      "classification": "product-defect",
+      "firstVisualEvidence": "docs/changes/math-layout-visual-qa-first.json",
+      "beforeFixRun": "test-runs/MATH-record-20261105T121042Z-c9f93beb",
+      "beforeFixExitCode": 1,
+      "beforeFixMethods": 3,
+      "beforeFixFailures": 3,
+      "fixedSourceRules": [
+        "Column postgap precedes following separator and next pregap",
+        "Separator border .04em with -.02em margins has zero net advance, centred on the intercolumn position",
+        "Consecutive rules add source doubleRuleSep .2em",
+        "Absent empty delimiter string does not create a source null delimiter; explicit dot still does"
+      ],
+      "source": "environments/array.ts column loop and .vertical-separator inline CSS; explicit source array versus leftright wrappers",
+      "regressions": [
+        "L63",
+        "L64",
+        "L65"
+      ],
+      "targetedRun": "test-runs/MATH-record-20261105T121114Z-ab6be6c3",
+      "targetedExitCode": 0,
+      "targetedMethodCount": 65,
+      "testExpectationsOrigin": "Independent source literal .5em colsep/.04em rule/.2em doubleRuleSep and 0.5em Main-Regular digit advances; never candidate coordinates"
+    }
+  ],
+  "finalVerification": {
+    "status": "PASS_NATIVE_STATIC_ALPHA_LOCAL",
+    "summary": "references/verification-summary.json",
+    "jointSourceSHA256": {
+      "math": "6e11f0a8f9f88c78fb387faf4429cfea72781a4e961328bf53299625bea2cb80",
+      "mermaid": "6e37306deb59a5eb21a2bcceedd66c128a2367f392b094854e2e9bdb3e0e4088"
+    },
+    "unitRun": "test-runs/MATH-batch-20261105T121812Z-f140829a",
+    "visualRun": "test-runs/MATH-batch-20261105T121812Z-73861ed7",
+    "scopeCaveat": "Earlier phase fields retained as history; no full KaTeX compatibility claim"
+  }
+}

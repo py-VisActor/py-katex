@@ -1,0 +1,40 @@
+{
+  "schema": "py-mermaid-command-plan/v1",
+  "scope": "MATH",
+  "description": "Native export samples and saved same-candidate report, never rerender during HTML generation or install",
+  "steps": [
+    {
+      "name": "native-five-format-deliverables",
+      "argv": [
+        "{python}",
+        "{repo}/tools/export_samples.py",
+        "--out",
+        "{run}/artifacts/exports"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src;{repo}/../py-mermaid/src",
+        "PYTHONUTF8": "1",
+        "PYTHONIOENCODING": "utf-8"
+      },
+      "timeoutSeconds": 120
+    },
+    {
+      "name": "verified-html-comparison-report",
+      "argv": [
+        "{python}",
+        "{repo}/tools/report_math.py",
+        "--visual",
+        "{repo}/test-runs/MATH-batch-20261105T121812Z-73861ed7",
+        "--unit",
+        "{repo}/test-runs/MATH-batch-20261105T121812Z-f140829a",
+        "--legacy",
+        "{repo}/test-runs/MATH-batch-20261105T121812Z-85def7ba",
+        "--exports",
+        "{run}/artifacts/exports",
+        "--out",
+        "{repo}/../py-mermaid/reports/{runid}"
+      ],
+      "timeoutSeconds": 120
+    }
+  ]
+}

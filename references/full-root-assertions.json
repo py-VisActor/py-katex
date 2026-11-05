@@ -1,0 +1,40 @@
+{
+  "schema": "py-katex-full-root-assertions/v1",
+  "phase": "P2",
+  "status": "written_unexecuted",
+  "sources": [
+    "src/Settings.ts",
+    "src/parseTree.ts",
+    "src/Parser.ts",
+    "test/katex-spec.ts",
+    "test/errors-spec.ts",
+    "test/unicode-spec.ts",
+    "test/mathml-spec.ts",
+    "test/dup-spec.ts",
+    "test/screenshotter-spec.ts",
+    "test/screenshotter/ss_data.yaml"
+  ],
+  "sourceCommit": "d5bed9f38a8d747b9c4a12e18897a514707e1c26",
+  "tests": {
+    "tests/test_full_api.py": 10
+  },
+  "corpusTools": [
+    "tools/capture_core_specs.mjs",
+    "tools/validate_core_specs.py"
+  ],
+  "visualTools": [
+    "tools/import_screenshotter.py",
+    "tools/build_full_visual_cases.py",
+    "tools/capture_full_visual.cjs",
+    "tools/validate_full_visual.py"
+  ],
+  "scope": "Source-derived functional corpus, independent native API/CLI contracts and full source screenshotter; not original Jest snapshot/markup assertion parity",
+  "sourceFixtures": {
+    "screenshotter": 128,
+    "registrationContexts": 684,
+    "canonicalVisual": 265
+  },
+  "sourceCallbacks": "Recorded source decisions/actions replayed through explicit Python callbacks; never eval JS/string source in native implementation",
+  "P2Execution": "compile/import/data fixture extraction only; no math formula/oracle/native execution",
+  "firstExecution": "references/full-first-execution.json"
+}

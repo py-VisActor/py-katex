@@ -1,0 +1,2538 @@
+{
+  "schema": "py-katex-upstream-screenshotter/v1",
+  "sourceVersion": "0.18.11",
+  "sourceCommit": "d5bed9f38a8d747b9c4a12e18897a514707e1c26",
+  "sourceSha256": "e3886dca758b9374153a19352b9fc8edb272150b86f3f9ac4312314a16dba307",
+  "count": 128,
+  "cases": [
+    {
+      "id": "upstream-Accents",
+      "name": "Accents",
+      "tex": "\\vec{A}\\vec{x}\\vec x^2\\vec{x}_2^2\\vec{A}^2\\vec{xA}^2\\; \\underbar{X}",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 16,
+      "host": {},
+      "sourceInputSha256": "0b937191bceea8947ae352af6189469b077b9b348380685bb4b9d75da2850900",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-AccentsText",
+      "name": "AccentsText",
+      "tex": "\\begin{array}{lccccc}\n\\text{\\'\\i} & \\text{\\.\\i} & \\text{\\`\\i} & \\text{\\\"\\i} & \\text{\\H\\i} & \\text{\\r\\i} \\\\\n\\text{\\'\\j} & \\text{\\.\\j} & \\text{\\`\\j} & \\text{\\\"\\j} & \\text{\\H\\j} & \\text{\\r\\j} \\\\\n\\text{\\'a} & \\text{\\.a} & \\text{\\`a} & \\text{\\\"a} & \\text{\\H{a}} & \\text{\\r{a}} \\\\\n\\text{\\'A} & \\text{\\.A} & \\text{\\`A} & \\text{\\\"A} & \\text{\\H{A}} & \\text{\\r{A}} \\\\\n\\text{\\.I İ} & \\text{\\H e e̋} & \\text{\\i ı}\n\\end{array}\n",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 17,
+      "host": {},
+      "sourceInputSha256": "c7dec7272406b06abd971ea1ff8f0444be22279c651e8059f1d1de87a14a0895",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-Align",
+      "name": "Align",
+      "tex": "\\begin{align}\n  a &= 1 & b &= 2 \\\\\n  3a &= 3 & 17b &= 34 \\\\\n  \\tag{$\\ast$} a &\\neq b \\\\\n  \\nonumber a &={}? & b &={}? \\\\\n\\end{align}\n",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": true,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 25,
+      "host": {},
+      "sourceInputSha256": "fd196e18b9b6efcbf1e01a9004ba66d4f69c71269e5c71494e1f657eec690882",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-Aligned",
+      "name": "Aligned",
+      "tex": "\\begin{aligned}\n    a &= 1 & b &= 2 \\\\\n    3a &= 3 & 17b &= 34\n\\end{aligned}\n",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 34,
+      "host": {},
+      "sourceInputSha256": "873a247a536a90cb4144e6008bd30d22f9a8a4a93f92321fe1b6b01e0d98f6e2",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-Alignedat",
+      "name": "Alignedat",
+      "tex": "\\begin{alignedat}{3}\n    a &= 1 & b &= 2 &\\quad c &= 3\\\\\n    3a &= 3 & 17b &= 34 &\\quad 400c &= 1200\n\\end{alignedat}\n",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 39,
+      "host": {},
+      "sourceInputSha256": "9f9f4bfa5c1bb46046c1cd7315d3582cc30a9ffc66856f7e31a7f05261c1e301",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-Arrays",
+      "name": "Arrays",
+      "tex": "\\left(\\begin{array}{|rl:c||}\n    1&2&3\\\\ \\hline\n    1+1&2+1&3+1\\cr1\\over2&\\scriptstyle 1/2&\\frac12\\\\[1ex] \\hline \\hdashline\n    \\begin{pmatrix}x\\\\y\\end{pmatrix}&0&\\begin{vmatrix}a&b\\\\c&d\\end{vmatrix}\n\\end{array}\\right] \\\\\n\\begin{smallmatrix} a & b \\\\ c & d \\end{smallmatrix} \\;\\;\n\\begin{subarray}{c}a \\\\ b\\end{subarray}\n",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 44,
+      "host": {},
+      "sourceInputSha256": "fa8ca78e019b3134b06508936e41d7a648e8ec83ded32faac0ca7c19a83d4b90",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-ArrayMode",
+      "name": "ArrayMode",
+      "tex": "\\begin{matrix}\n    \\frac{\\partial^2 f}{\\partial x_1^2} & \\frac{\\partial^2 f}{\\partial x_1\\,\\partial x_2} & \\cdots & \\frac{\\partial^2 f}{\\partial x_1\\,\\partial x_n} \\\\\n    \\frac{\\partial^2 f}{\\partial x_2\\,\\partial x_1} & \\frac{\\partial^2 f}{\\partial x_2^2} & \\cdots & \\frac{\\partial^2 f}{\\partial x_2\\,\\partial x_n} \\\\\n    \\vdots & \\vdots & \\ddots & \\vdots \\\\\n    \\frac{\\partial^2 f}{\\partial x_n\\,\\partial x_1} & \\frac{\\partial^2 f}{\\partial x_n\\,\\partial x_2} & \\cdots & \\frac{\\partial^2 f}{\\partial x_n^2}\n\\end{matrix}\n",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": true,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 52,
+      "host": {},
+      "sourceInputSha256": "b9aa388ef6335cfc3e554fa11e684b47adf42bd39c4f78f3b4b2acd06fa90aaf",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-ArrayType",
+      "name": "ArrayType",
+      "tex": "1\\begin{array}{c}2\\\\3\\end{array}4",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 61,
+      "host": {},
+      "sourceInputSha256": "cffb1384eb8fb1157e149f7886d26718ee6ec4af2e1b2d32db5928c9520d6360",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-ArrayRemoveEmptyLine",
+      "name": "ArrayRemoveEmptyLine",
+      "tex": "\\begin{pmatrix}\n    1 \\\\\n    2 \\\\\n\\end{pmatrix}\n",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 62,
+      "host": {},
+      "sourceInputSha256": "bf32713427025c0ee9137abfd05bbe2fbef944dd91aebf941018f0010701ccf3",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-Baseline",
+      "name": "Baseline",
+      "tex": "a+b-c\\cdot d/e",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 67,
+      "host": {},
+      "sourceInputSha256": "adbee47774472292cfac320a2c1de8f964a0e2445683a4a4afd1f8b1bd052e5c",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-BasicTest",
+      "name": "BasicTest",
+      "tex": "a",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 68,
+      "host": {},
+      "sourceInputSha256": "ca978112ca1bbdcafac231b39a23dc4da786eff8147c4e72b9807785afee48bb",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-BinCancellation",
+      "name": "BinCancellation",
+      "tex": "\\begin{array}{cccc}\n    +1 & 1+ & 1+1 & (,) \\\\\n    1++1 & 3\\times) & 1+, & \\left(,\\right)\n\\end{array}\n",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 69,
+      "host": {},
+      "sourceInputSha256": "1e8b5ec114b2cd9a000f51d483091a67fc74ee5cc3bb4f48298cfefa107470c0",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-BinomTest",
+      "name": "BinomTest",
+      "tex": "\\dbinom{a}{b}\\tbinom{a}{b}^{\\binom{a}{b}+17}{\\scriptscriptstyle \\binom a b}",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 74,
+      "host": {},
+      "sourceInputSha256": "2d6aeadc5766719cdc95fb542f29eab695bb10f4591d4b0932796de3ae530bd7",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-BoldSpacing",
+      "name": "BoldSpacing",
+      "tex": "\\mathbf{A}^2+\\mathbf{B}_3*\\mathscr{C}'",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 75,
+      "host": {},
+      "sourceInputSha256": "54d196658b595348689102e8fb4b61a21cc90306abc7bac6fdc413af1a9ce16a",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-BoldSymbol",
+      "name": "BoldSymbol",
+      "tex": "\\sum_{\\boldsymbol{\\alpha}}^{\\boldsymbol{\\beta}} \\boldsymbol{\\omega}+ \\boldsymbol{\\int_\\alpha^\\beta} \\boldsymbol{\\Omega + {}} \\\\\n\\boldsymbol{\\lim_{x \\to \\infty} \\log Ax2k\\omega\\Omega\\imath+} \\\\\nx \\boldsymbol{+} y \\boldsymbol{=} z\n",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 76,
+      "host": {},
+      "sourceInputSha256": "a5b623be8b9faf5b418facf63a28a70d00e2960a2baccc1d64f365d5f7bd61fb",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-Boxed",
+      "name": "Boxed",
+      "tex": "\\begin{array}{l}\n  \\boxed{F=ma} \\quad \\boxed{ac}\\color{magenta}{\\boxed{F}}\\boxed{F=mg} \\\\[2em]\n  A_{\\angl n} + B_{\\angl g} + C_\\angln\n\\end{array}\n",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 80,
+      "host": {},
+      "sourceInputSha256": "8886b45aeea8c7208023342cb7dfac0eb15f16cd91455d80caeacc7f0e2eba19",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-Cases",
+      "name": "Cases",
+      "tex": "f(a,b)=\\begin{cases}\n    a+1&\\text{if }b\\text{ is odd} \\\\\n    a&\\text{if }b=0 \\\\\n    a-1&\\text{otherwise}\n\\end{cases} \\\\\n\\begin{rcases}\n    a &\\text{if } b \\\\\n    c &\\text{if } d\n\\end{rcases}⇒…\n",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 85,
+      "host": {},
+      "sourceInputSha256": "d5bdbfb6f7a83e5ffd15326c24754d83b8afe767dd309c73e490cbb0bc2a2bdd",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-CD",
+      "name": "CD",
+      "tex": "\\begin{CD} A @<a<< B @>>b> C \\\\ @| @AcAA @VVdV \\\\ D @= E @>>> F \\end{CD}",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": true,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 95,
+      "host": {},
+      "sourceInputSha256": "e6c339c4742c2e42cafc475da33a1a2815eb21fb6ab6e60e3299039aa4f59ae9",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-Colors",
+      "name": "Colors",
+      "tex": "\\blue{a}\\textcolor{#0f0}{b}\\textcolor{red}{c}",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 98,
+      "host": {
+        "nolatex": "different syntax and different scope"
+      },
+      "sourceInputSha256": "cc56e68c0efce47dc72c748e96d383cce196c5f60272dc1eb82623446f264e5a",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-ColorImplicit",
+      "name": "ColorImplicit",
+      "tex": "\\begin{array}{l} bl{ack\\color{red}red\\textcolor{green}{green}red\\color{blue}blue}black \\\\ black\\left(black\\color{red}red\\right)black \\end{array}",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 101,
+      "host": {},
+      "sourceInputSha256": "67897cb676b3f712308374f549a0ec415eaa5873338298de12fba9715b93fc5b",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-ColorSpacing",
+      "name": "ColorSpacing",
+      "tex": "\\textcolor{red}{\\displaystyle \\int x} + 1",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 106,
+      "host": {},
+      "sourceInputSha256": "8eb8e11a4b2057f7ea6b42624561dd64ca633fa4c4a18ad557000f0f8ee43018",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-Colorbox",
+      "name": "Colorbox",
+      "tex": "a \\colorbox{teal} B \\fcolorbox{blue}{red}{C} e+\\colorbox{teal}x",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 107,
+      "host": {},
+      "sourceInputSha256": "83ae6e028fb41354d9561f775d6589d965f2e558b9c02f29ddb87ed7d5c4d2b0",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-DashesAndQuotes",
+      "name": "DashesAndQuotes",
+      "tex": "\\begin{array}{l}\n    \\text{``a'' b---c -- d----`e'-{-}-f} -- \\\\\n    \\text{\\it ``a'' b---c -- d----`e'-{-}-f} ``x'' \\\\\n    \\text{\\tt ``a''---} \\texttt{``a''---} \\mathtt{--} \\\\\n\\end{array}\n",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 108,
+      "host": {},
+      "sourceInputSha256": "f75b5580a8a4bc33aead9da2b87319b2d925917e1ca55e542c054fc822f63d64",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-DeepFontSizing",
+      "name": "DeepFontSizing",
+      "tex": "a^{\\big| x^{\\big(}}_{\\Big\\uparrow} +\ni^{i^{\\Huge x}_y}_{\\Huge z} +\n\\dfrac{\\Huge x}{y}\n",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 114,
+      "host": {
+        "nolatex": "\\Huge inside \\dfrac doesn't work, needs an extra {…}"
+      },
+      "sourceInputSha256": "b952c5bc6ed0cd6887384edde7a48a9c4a39b2267ec87a8751ceaebbf14f0cd9",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-DelimiterSizing",
+      "name": "DelimiterSizing",
+      "tex": "\\bigl\\uparrow\\Bigl\\downarrow\\biggl\\updownarrow\n\\Biggl\\Uparrow\\Biggr\\Downarrow\\biggr\\langle\\Bigr\\}\\bigr\\rfloor\\; \\Set{ x | x<\\frac 1 2 } \\\\\n\\begin{pmatrix}\n    a & b & c\\\\\n    a & b & c\\\\\n    a & b & c\\\\\n\\end{pmatrix}\\; \\begin{bmatrix}\n    a & b & c\\\\\n    a & b & c\\\\\n    a & b & c\\\\\n\\end{bmatrix} \\\\\n\\Braket{ ϕ | \\frac{∂^2}{∂ t^2} | ψ } \\\\\n",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 120,
+      "host": {},
+      "sourceInputSha256": "b5f6af53e4789fcd6bab6e03f25b78c02be7aa49953f7241dc797f328ca13248",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-DisplayMode",
+      "name": "DisplayMode",
+      "tex": "\\sum_{i=0}^\\infty \\frac{1}{i}",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": true,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 133,
+      "host": {
+        "pre": "pre",
+        "post": "post"
+      },
+      "sourceInputSha256": "c67e181bd0d45e4649611d2f8b409bba39aaf612b9c62c3be190f9e02b0799cf",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-DisplayStyle",
+      "name": "DisplayStyle",
+      "tex": "{\\displaystyle\\sqrt{x}}{\\sqrt{x}}\n{\\displaystyle \\frac12}{\\frac12}{\\displaystyle x^1_2}{x^1_2}\n",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 138,
+      "host": {},
+      "sourceInputSha256": "018b3ad451941844e4e6601a6d53f8170336c74660294e693d392115c540af34",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-Dots",
+      "name": "Dots",
+      "tex": "\\begin{array}{l}\n  \\cdots;\\dots+\\dots\\int\\dots,\\dots \\\\\n  \\cdots{};\\ldots+\\ldots\\int\\ldots,\\ldots\n\\end{array}\n",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 141,
+      "host": {},
+      "sourceInputSha256": "e98dd3ee6dc704bf4e82c169fdd3007a92dc96bb401d08a3423a81d48edfed39",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-Equation",
+      "name": "Equation",
+      "tex": "\\begin{equation}\\begin{split}a& =b+c-d \\\\ & \\quad +e-f \\\\ & =g+h \\\\ & =i \\end{split}\\end{equation}",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": true,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 146,
+      "host": {},
+      "sourceInputSha256": "46fabc6aea8c7e0c7ca05bdbaf646b030ee95eae590474820278f240d8d716f0",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-Exponents",
+      "name": "Exponents",
+      "tex": "a^{a^a_a}_{a^a_a}",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 149,
+      "host": {},
+      "sourceInputSha256": "9db3a36a7feb4b5735e355b43279ecce13341e96e00bc95ff9591b80fa02f472",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-ExtensibleArrows",
+      "name": "ExtensibleArrows",
+      "tex": "\\begin{array}{l}\n    \\xrightarrow[ab]{ABC} + \\xRightarrow{ABC} \\\\\n    \\xrightleftharpoons[ab]{ABC} + \\xhookrightarrow[ab]{ABC} \\\\\n    \\xtwoheadrightarrow{ABC} + \\frac{\\xrightarrow[ab]{ABC}}{\\xrightarrow[ab]{ABC}} + \\left\\lvert\\xrightarrow[ab]{ABC}\\right\\rvert\n\\end{array}\n",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 150,
+      "host": {},
+      "sourceInputSha256": "627b1a20ee5f4a1ae2573d8e82f08be5930a31c84779570a36b4fa3ee5fc6ac4",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-FractionTest",
+      "name": "FractionTest",
+      "tex": "\\begin{array}{l}\n    \\dfrac{a}{b}\\frac{a}{b}\\tfrac{a}{b}\\;-\\dfrac12\\;1\\tfrac12\\;{1 \\atop 2} \n    \\; {a \\brace b} \\; {a \\brack b} \\\\[1em]\n    \\genfrac \\{ ]{0.8pt}{0}{a}{b} \\; {a \\above1.0pt b} \\; \\cfrac{1}{1+\\cfrac{1}{x}} \n     \\xrightarrow[\\dfrac g h]{\\displaystyle\\frac g h} \\; \\xrightarrow [2.\\, \\dfrac c d] {1.\\, \\displaystyle\\frac c d}\n\\end{array}\n",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 156,
+      "host": {},
+      "sourceInputSha256": "bba606bc5dd548daceefed74cea3996eb27744266ba0870278dda44ae452aff8",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-Functions",
+      "name": "Functions",
+      "tex": "\\sin\\cos\\tan\\ln\\log",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 163,
+      "host": {},
+      "sourceInputSha256": "6517a65a65153132a970ce8435bf09b6d0f6bcad4d2ebca7a22c0ff21e1f9146",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-Gather",
+      "name": "Gather",
+      "tex": "\\begin{gather} a=\\frac 1 2 \\\\ e=b+c \\end{gather}",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": true,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 164,
+      "host": {},
+      "sourceInputSha256": "eb5bd560c05261e7bce11f4a04942268456638243b87bed2eeae89226878a210",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-Gathered",
+      "name": "Gathered",
+      "tex": "\\begin{gathered}\n  x = \\frac{1}{2} \\\\\n  y = \\sum_{i=1}^n i\n\\end{gathered} \\approx\n\\begin{array}{c}\n  x = \\frac{1}{2} \\\\\n  y = \\sum_{i=1}^n i\n\\end{array}\n",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 167,
+      "host": {},
+      "sourceInputSha256": "21d2da9fea78f9e356f3d233992a603495d57f5d09f0199c983de6d0c208089b",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-GreekLetters",
+      "name": "GreekLetters",
+      "tex": "\\alpha\\beta\\gamma\\omega",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 176,
+      "host": {},
+      "sourceInputSha256": "8573c2ee88c4255b1176bfd67da52d567788dbc0840721e81f94f6b1e4d1cb1c",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-GreekUnicode",
+      "name": "GreekUnicode",
+      "tex": "\\frac{αβγδεϵζηθϑικλμνξοπϖρϱςστυφϕχψω}{ΓΔΘΞΠΣΦΨΩϝ\\mathbf{Ω}\\mathbf{\\Omega}}",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 177,
+      "host": {},
+      "sourceInputSha256": "27213de83cb6c32ac1a8e2e8e1e62f36ded1499bf61aec2b111d9e9281f77a83",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-GroupMacros",
+      "name": "GroupMacros",
+      "tex": "\\startExp a+b\\endExp",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true,
+        "macros": {
+          "\\startExp": "e^\\bgroup",
+          "\\endExp": "\\egroup"
+        }
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 178,
+      "host": {},
+      "sourceInputSha256": "df90634321de69563e353c95da60509cbce037be7076fcbf88289f6b5ef1caf0",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-HorizontalBraces",
+      "name": "HorizontalBraces",
+      "tex": "\\overbrace{\\displaystyle{\\oint_S{\\vec E\\cdot\\hat n\\,\\mathrm d a}}}^\\text{emf} = \\underbrace{\\frac{q_{\\text{enc}}}{\\varepsilon_0}}_{\\text{charge}}",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 183,
+      "host": {},
+      "sourceInputSha256": "d8a965f42fc59ad7512a67025b835af449ab4503ceaeda6ac306aa494957c7bb",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-HorizontalBrackets",
+      "name": "HorizontalBrackets",
+      "tex": "\\overbracket{\\displaystyle{a+b+c}}^{\\text{note}} = \\underbracket{x+y+z}_{\\text{label}}",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 184,
+      "host": {},
+      "sourceInputSha256": "05b36171c177617a3d0f79a30c9ec89b524034e57e4b23e95b2418bc49bd0edb",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-HTML",
+      "name": "HTML",
+      "tex": "\\htmlId{a}{a+}b\\htmlStyle{color:red;}{+c}",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 185,
+      "host": {
+        "nolatex": "HTML extension not supported by LaTeX"
+      },
+      "sourceInputSha256": "c21ab560f4f1a525e4f9baf6e93b6cabbc7c8ce57a6a14115319ab38727b790a",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-Includegraphics",
+      "name": "Includegraphics",
+      "tex": "\\def\\logo{\\includegraphics[height=0.8em, totalheight=0.9em, width=0.9em, alt=KA logo]{../../website/static/img/khan-academy.png}}\n\\def\\logoB{\\includegraphics[height=0.4em, totalheight=0.9em, width=0.9em, alt=KA logo]{../../website/static/img/khan-academy.png}}\n\\begin{array}{l}\n    \\underline{A\\logo} + \\sqrt{\\logo} + \\tfrac{A\\logo}{\\logo}\\\\[1em]\n    \\underline{A\\logoB} + \\sqrt{x\\logoB} + \\tfrac{A\\logoB}{\\logoB}\n\\end{array}\n",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 188,
+      "host": {},
+      "sourceInputSha256": "fc8f37707b18df331b039d1a7e13b0790dc419e433ef4e2e23608216fb1e3fb1",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-Integrands",
+      "name": "Integrands",
+      "tex": "\\begin{array}{l}\n    \\displaystyle \\int + \\oint + \\iint + \\oiint_i^n \\\\[0.6em]\n    \\displaystyle \\iiint + \\oiiint + \\textstyle \\int + \\oint_i^n \\\\[0.6em]\n    \\iint + \\oiint + \\iiint + \\oiiint \\\\[0.6em]\n    \\int\\limits^x_{y + 4 - a} \\int\\limits^x_{y + 4 - a}\n\\end{array}\n",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 195,
+      "host": {},
+      "sourceInputSha256": "b898d384781b1467748749505558ee8879d4f76ee69c1e8568e13bf6559f93fc",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-KaTeX",
+      "name": "KaTeX",
+      "tex": "\\KaTeX, \\large \\KaTeX",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 202,
+      "host": {
+        "nolatex": "\\KaTeX not supported by LaTeX"
+      },
+      "sourceInputSha256": "2b6f38c37f685aacbe19d632fd4fec877030d6a1f7acb82281cd86534af5a3f1",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-Kern",
+      "name": "Kern",
+      "tex": "\\frac{a\\kern{1em}b}{c}a\\kern{1em}b\\kern{1ex}c\\kern{-0.25em}d",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 205,
+      "host": {
+        "nolatex": "LaTeX fails to typeset this, “Missing number, treated as zero.”"
+      },
+      "sourceInputSha256": "5e859962dc47172ba85973504ec6da6cebc272f6ba5674d39d3b6c49f3329dae",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-Lap",
+      "name": "Lap",
+      "tex": "\\begin{array}{l}\n    ab\\mathllap{f}cd\\mathrlap{g}hij\\mathclap{k}lm \\; ab\\llap{f}cd\\rlap{g}hij\\clap{k}lm \\\\\n    \\mathrlap{\\frac a b} \\frac a b \\\\\n    \\mathrlap{\\overbrace{\\phantom{a_0+a_1+a_2}}^m}a_0+a_1+a_2\n\\end{array}\n",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 208,
+      "host": {},
+      "sourceInputSha256": "ab399b252271fe104dc71183bdef1bec25dac2c1fccfa53f5aa534ed571a4f3e",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-LargeRuleNumerator",
+      "name": "LargeRuleNumerator",
+      "tex": "\\frac{\\textcolor{blue}{\\rule{1em}{2em}}}{x}",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 214,
+      "host": {},
+      "sourceInputSha256": "b8e1dc5646338c1b98b9e75eafd7635cf6d75d9c591bf63f2ccb0284e3a10c78",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-LaTeX",
+      "name": "LaTeX",
+      "tex": "\\text{\\LaTeX}, \\text{\\TeX}, \\large \\text{\\LaTeX}, \\text{\\TeX}",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 215,
+      "host": {},
+      "sourceInputSha256": "ff0a34abd958db356a7cf4af2c7ea5a2f0b8b57bb51c479f79e8e6a0f62b0792",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-LeftRight",
+      "name": "LeftRight",
+      "tex": "\\left( x^2 \\right) \\left\\{ x^{x^{x^{x^x}}} \\right.",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 216,
+      "host": {},
+      "sourceInputSha256": "fb470967d23b4c148b24b0f1480d41dc6e139f755a52c268148962a52f4a02c0",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-LeftRightListStyling",
+      "name": "LeftRightListStyling",
+      "tex": "a+\\left(x+y\\right)-x",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 217,
+      "host": {},
+      "sourceInputSha256": "a114396d9051ca6ea175423ec8c5f2cee6e9be6ee3235c8e982f129adef88638",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-LeftRightMiddle",
+      "name": "LeftRightMiddle",
+      "tex": "\\left( x^2 \\middle/ \\right) \\left\\{ x^{x^{x^{x^x}}} \\middle/ y \\right.\\left(x\\middle|y\\,\\middle|\\,z\\right)",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 218,
+      "host": {},
+      "sourceInputSha256": "80c59f9ee00f8b22d3d4964dad70404b4e7c7476ee50d5c3b87c4a9df69eda58",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-LeftRightStyleSizing",
+      "name": "LeftRightStyleSizing",
+      "tex": "+\\left\\{\\rule{0.1em}{1em}\\right.\nx^{+\\left\\{\\rule{0.1em}{1em}\\right.\nx^{+\\left\\{\\rule{0.1em}{1em}\\right.}}\n",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 219,
+      "host": {},
+      "sourceInputSha256": "805b9342209298d3f15c6cf85197c0634b7ce7c878bf70e3d4f115d276d6075e",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-LimitControls",
+      "name": "LimitControls",
+      "tex": "\\displaystyle\\int\\limits_2^3 3x^2\\,dx + \\sum\\nolimits^n_{i=1}i +\n\\textstyle\\int\\limits_x^y z\n",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 223,
+      "host": {},
+      "sourceInputSha256": "a47b1b6c45f3d9155683769a6cd0b26e82d4cc9ec10da187bc91bf18c0f6bd66",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-LineBreak",
+      "name": "LineBreak",
+      "tex": "\\frac{x^2}{y^2} + z^2 =\nz^2 + \\frac{x^2}{y^2} =\n\\frac{x^2}{y^2} +\\nobreak z^2 =\nz^2 + \\frac{x^2}{y^2} =\n\\frac{x^2}{y^2} + ~ z^2 =\nz^2 + \\frac{x^2}{y^2} =\n\\frac{x^2}{y^2} + \\hspace{1em} z^2 =\nz^2 + \\frac{x^2}{y^2} =\n\\frac{x^2}{y^2} + z^2 = \\hspace*{1em}\nz^2 + \\frac{x^2}{y^2} =\n\\frac{x^2}{y^2} + z^2 =\nhi \\allowbreak there =\nhi \\allowbreak there\n",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 226,
+      "host": {},
+      "sourceInputSha256": "aef852bb97253de50af646cfdd66f3b2dc1a19e7aeb63cc00cacc3353b6c4edd",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-LowerAccent",
+      "name": "LowerAccent",
+      "tex": "\\begin{matrix}\n    \\underleftarrow{AB} \\quad \\underrightarrow{AB} \\quad \\underleftrightarrow{AB} \\quad \\undergroup{AB} \\\\\n    \\underlinesegment{AB} \\quad \\utilde{AB}  \\quad \\color{green}{\\underrightarrow{AB}} \\\\\n    \\underrightarrow{F} + \\underrightarrow{AB} + \\underrightarrow{AB}^2 + \\underrightarrow{AB}_2 \\\\\n    \\frac{\\underrightarrow{AB}}{\\underrightarrow{AB}} + \\sqrt{\\underrightarrow{AB}} + \\left\\lvert\\underrightarrow{AB}\\right\\rvert \\\\\n    \\text{\\underline{text}}\n\\end{matrix}\n",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 240,
+      "host": {},
+      "sourceInputSha256": "b877906351f6136bd4872f3164c09feffeb97228f3d65fea21b455d7c9898e7a",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-Mapsfrom",
+      "name": "Mapsfrom",
+      "tex": "\\begin{gathered}\n    a \\mapsfrom b \\quad c ↤ d \\quad \\mapsfrom -x \\\\\n    x_{a \\mapsfrom b} \\quad x_{y_{a \\mapsfrom b}}\n\\end{gathered}\n",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 248,
+      "host": {},
+      "sourceInputSha256": "b32e1ccad656cf14d11fb729fb4583b94bea70fb49cf367c3c858f31adbd271c",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-MathAtom",
+      "name": "MathAtom",
+      "tex": "a\\mathrel{\\mathop{=}\\limits^{\\blue ?}}b",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 253,
+      "host": {},
+      "sourceInputSha256": "293fdb4cbdb408a2f335b3243781c06aab4f325cf04a57bd90026f6e4e9ffff5",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-MathAtom2",
+      "name": "MathAtom2",
+      "tex": "\\mathop{\\overline{\\mathrm{lim}}}\\limits_{x\\to\\infty}f(x)",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 254,
+      "host": {},
+      "sourceInputSha256": "9d984251dd5e0ec38852befcf578850afd623b6f63feca6aa10c29c472d7ede2",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-MathChoice",
+      "name": "MathChoice",
+      "tex": "{\\displaystyle\\mathchoice{D}{T}{S}{SS}} {\\textstyle\\mathchoice{D}{T}{S}{SS}} {\\scriptstyle \\mathchoice{D}{T}{S}{SS}} {\\scriptscriptstyle\\mathchoice{D}{T}{S}{SS}} \\displaystyle X_{\\mathchoice{D}{T}{S}{SS}_{\\mathchoice{D}{T}{S}{SS}}}\n",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 255,
+      "host": {},
+      "sourceInputSha256": "f620e7cef74a0a4fe269bee901189de0a61ce219dff58b793540316306a60bb4",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-MathDefaultFonts",
+      "name": "MathDefaultFonts",
+      "tex": "Ax2k\\breve{a}\\omega\\Omega\\imath+\\KaTeX",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 257,
+      "host": {},
+      "sourceInputSha256": "2dcc5441fa2f1d847c2302f35e4972cde8f9f324cbcd7728f27c13508a9d407c",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-MathBb",
+      "name": "MathBb",
+      "tex": "\\mathbb{Ax2k\\breve{a}\\omega\\Omega\\imath+\\KaTeX}",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 258,
+      "host": {},
+      "sourceInputSha256": "54e0cb15f62f91ea4b90a93d9b63464f65391a6dba90c84a22a5344a19fb9416",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-MathBf",
+      "name": "MathBf",
+      "tex": "\\mathbf{Ax2k\\breve{a}\\omega\\Omega\\imath+\\KaTeX}",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 259,
+      "host": {},
+      "sourceInputSha256": "c3c3056efc7aa83fefdf5a0ffdbe4f9088b361f80fd4e95327ce4d80f842827f",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-MathCal",
+      "name": "MathCal",
+      "tex": "\\mathcal{Ax2k\\breve{a}\\omega\\Omega\\imath+\\KaTeX}",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 260,
+      "host": {},
+      "sourceInputSha256": "dc120717e0904fc98f529782aa733266bcab94ce3fd674190209c0b946720519",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-MathFrak",
+      "name": "MathFrak",
+      "tex": "\\mathfrak{Ax2k\\breve{a}\\omega\\Omega\\imath+\\KaTeX}",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 261,
+      "host": {},
+      "sourceInputSha256": "41cef5fcee3fef1637b54abb03d04f6fb75ce4483a5fd68a432581de8e60c231",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-MathIt",
+      "name": "MathIt",
+      "tex": "\\mathit{Ax2k\\breve{a}\\omega\\Omega\\imath+\\KaTeX}",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 262,
+      "host": {},
+      "sourceInputSha256": "eee42dd4fcc5a75f8e27da5c87d0fb60040bc2de2dae951ffd959bdba1ad3a10",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-MathNormal",
+      "name": "MathNormal",
+      "tex": "\\mathnormal{Ax2k\\breve{a}\\omega\\Omega\\imath+\\KaTeX}",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 263,
+      "host": {},
+      "sourceInputSha256": "c15767cc1ee697858e643b7f5901ee4aa6785cc823b11ee7cba84921b90e28e9",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-MathOp",
+      "name": "MathOp",
+      "tex": "a\\mathop+b\\mathop:c\\mathop{\\delta}e\\mathop{\\textrm{and}}f\\mathrel{\\mathop{:}}=g\\sin h",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 264,
+      "host": {},
+      "sourceInputSha256": "951fce432eb131a38e91ed5a42222b04b3edf86f05b58dfd57e592faa38655a1",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-MathRm",
+      "name": "MathRm",
+      "tex": "\\mathrm{Ax2k\\breve{a}\\omega\\Omega\\imath+\\KaTeX}",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 265,
+      "host": {},
+      "sourceInputSha256": "6da41e07a2b966bc342c6422bb00920ed5971ff3da6f2bbefbd889a08339f915",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-MathSf",
+      "name": "MathSf",
+      "tex": "\\mathsf{Ax2k\\breve{a}\\omega\\Omega\\imath+\\KaTeX}",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 266,
+      "host": {},
+      "sourceInputSha256": "86d009b1e27a205b1ae3070a65926fbf5ae3b04225183549c39a6f3feb95051a",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-MathSfIt",
+      "name": "MathSfIt",
+      "tex": "\\mathsfit{Ax2k\\breve{a}\\omega\\Omega\\imath+\\KaTeX}",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 267,
+      "host": {},
+      "sourceInputSha256": "0a5df3b7eb0623f12ceb632a26f51a75ab3d478b39b7d2c32e3f56cf7d4f3392",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-MathScr",
+      "name": "MathScr",
+      "tex": "\\mathscr{Ax2k\\breve{a}\\omega\\Omega\\imath+\\KaTeX}",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 268,
+      "host": {},
+      "sourceInputSha256": "bac2cee8339c7bad749d14b91de176c6657bbb12ae6c47c6b06d3d56991f21b2",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-MathtoolsMatrix",
+      "name": "MathtoolsMatrix",
+      "tex": "\\begin{matrix*}[l] a & -1 \\\\ -1 & d \\end{matrix*} \\; \\begin{pmatrix*}[r] a & -1 \\\\ -1 & d \\end{pmatrix*}",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 269,
+      "host": {},
+      "sourceInputSha256": "23cda2a3d232e70bffda0db4cdb38c4c761f8250bb67728c684dafc82f868d68",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-MathTt",
+      "name": "MathTt",
+      "tex": "\\mathtt{Ax2k\\breve{a}\\omega\\Omega\\imath+\\KaTeX}",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 270,
+      "host": {},
+      "sourceInputSha256": "2b28b063bbec0f72a03506a70a8daa22dd58aaf89ec02f1462192f0fb34fa77a",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-Mod",
+      "name": "Mod",
+      "tex": "\\begin{array}{cc}\n    a \\bmod 2 & b \\pod 3 \\\\\n    c \\pmod{4} & d \\mod{56} \\\\\n    \\displaystyle a\\bmod 2 & \\displaystyle b \\pod 3 \\\\\n    \\displaystyle c\\pmod{4} & \\displaystyle d \\mod{56}\n\\end{array}\n",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 271,
+      "host": {},
+      "sourceInputSha256": "5187bccb486956a649556dd8d9f8ef36a7e3b998e63ee9216df0f1bfcc3acb33",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-ModScript",
+      "name": "ModScript",
+      "tex": "\\begin{array}{cc}\n    \\scriptstyle a\\bmod 2 & \\scriptstyle b \\pod 3 \\\\\n    \\scriptstyle c\\pmod{4} & \\scriptstyle d \\mod{56}\n\\end{array}\n",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 278,
+      "host": {},
+      "sourceInputSha256": "dea2800048065b03738cf7e83722ca2e53fd9da703f768f3bf7502661794cc75",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-ModSpacing",
+      "name": "ModSpacing",
+      "tex": "\\begin{array}{l}\n    (a \\cdot b) \\bmod 257 \\\\\n    (a \\cdot b) \\mkern1mu\\mathbin{\\mathrm{mod}}\\mkern1mu 257 \\\\\n    (a \\cdot b) \\mathbin{\\mathrm{mod}} 257\n\\end{array}\n",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 283,
+      "host": {},
+      "sourceInputSha256": "8cdd4e79f93d22746a2b80eddb7c992c28f79b6d003d43e2e2500938d78d80f7",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-NegativeSpaceBetweenRel",
+      "name": "NegativeSpaceBetweenRel",
+      "tex": "A =\\!= B",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 289,
+      "host": {},
+      "sourceInputSha256": "9b54e75e5d56fc7d66d86c0a305a6605540f6a8c3abdf5ea2f0ce6de8a03f8d5",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-NegativeSpace",
+      "name": "NegativeSpace",
+      "tex": "\\boxed{\\$1,\\!000,\\!000}\\KaTeX",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 290,
+      "host": {
+        "post": "."
+      },
+      "sourceInputSha256": "4b380218a53a8b8284315ee010d7298337ded53ce84202b8c02bdb388c0d9bdf",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-NestedFractions",
+      "name": "NestedFractions",
+      "tex": "\\dfrac{\\frac{a}{b}}{\\frac{c}{d}}\\dfrac{\\dfrac{a}{b}}\n{\\dfrac{c}{d}}\\frac{\\frac{a}{b}}{\\frac{c}{d}}\n",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 293,
+      "host": {},
+      "sourceInputSha256": "aa2877a6cafb98eeb0a004f1e9854f16989bb72afb00952cd8c03cb7faa6d532",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-NewLine",
+      "name": "NewLine",
+      "tex": "\\frac{a^2+b^2}{c^2} \\newline\n\\frac{a^2+b^2}{c^2} \\\\[1ex]\n\\begin{pmatrix}\n    a & b \\\\\n    c & d \\cr\n\\end{pmatrix} \\\\\na+b+c+{d+\\\\e}+f+g\n",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 296,
+      "host": {},
+      "sourceInputSha256": "8b83a241b3b67bfa65a41d86a4552f29e28543d8203b43378f3c8713a02f9739",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-Not",
+      "name": "Not",
+      "tex": "\\begin{array}{l}\n    \\not=\\not>\\not\\geq\\not\\in\\not<\\not\\leq\\not{abc} \\\\\n    \\not xy + ab \\not xy \\\\\n    a \\neq b \\notin c\n\\end{array}\n",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 304,
+      "host": {},
+      "sourceInputSha256": "f6e1a9d7ffe1f6ef0b8bf2605b518ec21ff9931381e6099e563f7afdd558962a",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-NullDelimiterInteraction",
+      "name": "NullDelimiterInteraction",
+      "tex": "a \\bigl. + 2 \\quad \\left. + a \\right)",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 310,
+      "host": {},
+      "sourceInputSha256": "a1e41a5a5d56983b113d6d36ee1cff9b7970160cc5e6d3647325d7810d660699",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-OldFont",
+      "name": "OldFont",
+      "tex": "\\begin{matrix}\n  \\rm rm & it & \\it it & \\bf bf & \\sf sf & \\tt tt \\\\\n  \\text{\\rm rm} & \\text{rm} & \\text{\\it it} & \\text{\\bf bf} & \\text{\\sf sf} & \\text{\\tt tt} \\\\\n  i\\rm r\\it i & \\text{r\\it i\\rm r}\n\\end{matrix}\n",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 311,
+      "host": {},
+      "sourceInputSha256": "5e393d396c50a398c50f1a767b169bc20ae5d1f34a970df4ecde8ebacb0080a7",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-OperatorName",
+      "name": "OperatorName",
+      "tex": "\\begin{matrix}\n    \\operatorname g (z) + 5\\operatorname{g}z + \\operatorname{Gam-ma}(z) \\\\\n    \\operatorname{Gam ma}(z) + \\operatorname{\\Gamma}(z) + \\operatorname{}x \\\\\n    \\operatorname*{asin} x + \\operatorname*{asin}_y x + \\operatorname*{asin}\\limits_y x \\\\[0.3em]\n    {\\displaystyle \\operatorname*{asin}_y x}\n\\end{matrix}\n",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 317,
+      "host": {},
+      "sourceInputSha256": "19e0715e5df79b94cbc33116f480f89b4c153b0e3f14c46c76828fc3ace6192f",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-OpLimits",
+      "name": "OpLimits",
+      "tex": "\\begin{matrix}\n    {\\sin_2^2 \\lim_2^2 \\int_2^2 \\sum_2^2}\n    {\\displaystyle \\lim_2^2 \\int_2^2 \\intop_2^2 \\sum_2^2} \\\\\n    \\limsup_{x \\rightarrow \\infty} x \\stackrel{?}= \\liminf_{x \\rightarrow \\infty} x \\\\\n    {\\displaystyle \\limsup_{x \\rightarrow \\infty} x\\:\\: \\sum_{\\substack{0<i<m\\\\0<j<n}}}\n\\end{matrix}\n",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 324,
+      "host": {},
+      "sourceInputSha256": "6709fbcf14412872f77f03a72d15f3075ea7e5b8d26e7ca0fb1b4d285615e5a7",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-OverUnderline",
+      "name": "OverUnderline",
+      "tex": "x\\underline{x}\\underline{\\underline{x}}\\underline{x_{x_{x_x}}}\\underline{x^{x^{x^x}}}\\overline{x}\\overline{x}\\overline{x^{x^{x^x}}} \\blue{\\overline{\\underline{x}}\\underline{\\overline{x}}}",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 331,
+      "host": {},
+      "sourceInputSha256": "441de93e8fd3a020c9a6a2fc298219e0b71e6a7e3a38cb32fc67201ae6d5e34e",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-OverUnderset",
+      "name": "OverUnderset",
+      "tex": "\\begin{array}{l}\nx\\overset?=1 \\quad \\underset{*}{x}^2 \\quad \\overset{a}{b}b\\underset{a}{b}b \\\\\n{\\displaystyle\\lim_{t\\underset{>0}\\to0}}\\\\\na+b+c+d\\overset{b+c=0}\\longrightarrow a+d\\\\\n\\overset { x = y } { \\sqrt { a b } }\n\\end{array}\n",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 332,
+      "host": {},
+      "sourceInputSha256": "eb99512d1a2700854d7ad51bcf74eb9b3d62ed6acc6b15194b001090203a3540",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-Phantom",
+      "name": "Phantom",
+      "tex": "\\begin{array}{l} \\dfrac{1+\\phantom{x^{\\blue{2}}} = x}{1+x^{\\blue{2}} = x} \\left(\\vphantom{\\int_t} zzz \\right) \\left( X \\hphantom{\\frac{\\frac X X}{X}} \\right)\\\\ \\text{a \\phantom{123}} b \\hphantom{\\frac{1}{2}}=c \\vphantom{101112} d \\\\ \\sqrt{\\mathstrut a} + \\sqrt{\\mathstrut d} \\end{array}",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 339,
+      "host": {},
+      "sourceInputSha256": "824264ad3f13f5e985d32a802c38c0906fb9a871c75d2c3d972a5867699368ef",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-Phase",
+      "name": "Phase",
+      "tex": "120\\text{V}\\phase{-78.2^\\circ}\\;\\Large\\phase{78.2^\\circ}",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 344,
+      "host": {},
+      "sourceInputSha256": "29409ab5f0f93fb3d7cb913173479d128e3dc7a466d2be1d1cb56c63e19dffd3",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-Pmb",
+      "name": "Pmb",
+      "tex": "\\mu\\pmb{\\mu}\\pmb{=}\\mu\\pmb{+}\\mu",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 345,
+      "host": {},
+      "sourceInputSha256": "3902ff1a2c62961f691b4fb0a9a04cc7c503625e7b762c8d3a44df598d925da4",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-PrimeSpacing",
+      "name": "PrimeSpacing",
+      "tex": "f'+f_2'+f^{f'}",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 346,
+      "host": {},
+      "sourceInputSha256": "bef26ec516e7972fdd60459d7fe4c44cf2a7ad9783075c7cb257a1cf9cb0d31e",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-PrimeSuper",
+      "name": "PrimeSuper",
+      "tex": "x'^2+x'''^2+x'^2_3+x_3'^2",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 347,
+      "host": {},
+      "sourceInputSha256": "3bf64dd9f0c68c4409285bbe9631dbb8b2caa3f4f45c359138a2f02ae0c4afde",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-Raisebox",
+      "name": "Raisebox",
+      "tex": "\\begin{matrix} \\frac{a}{a\\raisebox{0.5em}{b}} \\cdot \\frac{a\\raisebox{-0.5em}{b}}{a} \\cdot \\sqrt{a\\raisebox{0.5em}{b}} \\cdot \\sqrt{a\\raisebox{-0.5em}{b}} \\cdot \\sqrt{a\\raisebox{0.5em}{b}\\raisebox{-0.5em}{b}} \\\\[2em] a + \\left(\\vcenter{\\hbox{$\\frac{a+b}{\\dfrac{c}{d}}$}}\\right) \\end {matrix}",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 348,
+      "host": {},
+      "sourceInputSha256": "1ab0a56802199aeb1677bf2bb563bd38826e5ffee99c91de2a0f9216b52addc9",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-ReactionArrows",
+      "name": "ReactionArrows",
+      "tex": "\\begin{matrix}\n    A \\xrightleftarrows{} B \\xrightequilibrium{} C \\xleftequilibrium{} D \\\\\n    A \\xrightleftarrows{over} B \\xrightequilibrium{over} C \\xleftequilibrium{over} D\n\\end{matrix}\n",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 353,
+      "host": {},
+      "sourceInputSha256": "62dc0088e4ba9816a003053607ac3bb8b4582737bdb69d52c8b8eeb714447c8d",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-Reflectbox",
+      "name": "Reflectbox",
+      "tex": "\\begin{gathered}\n    a + \\reflectbox{abc} = b \\\\\n    \\reflectbox{$x^2 + \\frac{a}{b}$}\n    \\quad \\mathreflectbox{x^2 + \\frac{a}{b}} \\\\\n    x_{\\mathreflectbox{\\frac{a}{b}}} \\quad x_{\\frac{a}{b}}\n\\end{gathered}\n",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 358,
+      "host": {},
+      "sourceInputSha256": "4f746a9c6afa1d328407bb82315277658aed5731f77e581ba66daf554d191d59",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-RelativeUnits",
+      "name": "RelativeUnits",
+      "tex": "\\begin{array}{ll}\n    a\\kern1emb^{a\\kern1emb^{a\\kern1emb}} &\n    {\\footnotesize a\\kern1emb^{a\\kern1emb^{a\\kern1emb}}} \\\\\n    a\\mkern18mub^{a\\mkern18mub^{a\\mkern18mub}} &\n    {\\footnotesize a\\mkern18mub^{a\\mkern18mub^{a\\mkern18mub}}} \\\\\n    \\rule{1em}{1em}^{\\rule{1em}{1em}}\\rule{18mu}{18mu}^{\\rule{18mu}{18mu}} &\n    {\\footnotesize\\rule{1em}{1em}^{\\rule{1em}{1em}}\\rule{18mu}{18mu}^{\\rule{18mu}{18mu}}}\n\\end{array}\n",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 365,
+      "host": {},
+      "sourceInputSha256": "0960fe2657fec15b053c0e37eba13479bed0416596518824dae679d46eacd4ff",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-RlapBug",
+      "name": "RlapBug",
+      "tex": "\\frac{\\mathrlap{x}}{2}",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 374,
+      "host": {},
+      "sourceInputSha256": "26676409929e8481ef33dd33edced8865b02fbb197d99358eecf7e3ed262600e",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-Rule",
+      "name": "Rule",
+      "tex": "\\rule{1em}{0.5em}\\rule{1ex}{2ex}\\rule{1em}{1ex}\\rule{1em}{0.431ex}",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 375,
+      "host": {},
+      "sourceInputSha256": "b38e01fb78214e32066b59f393c8dd7b49a34370db88dd38d571170af05c5c0f",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-SizingBaseline",
+      "name": "SizingBaseline",
+      "tex": "{\\tiny a+b}a+b{\\Huge a+b}",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 376,
+      "host": {
+        "pre": "x",
+        "post": "M"
+      },
+      "sourceInputSha256": "5159f468a0dc9b170694c83ef778345601e735753821945368da26366c30a885",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-Sizing",
+      "name": "Sizing",
+      "tex": "{\\Huge x}{\\LARGE y}{\\normalsize z}{\\scriptsize w}\\sqrt[\\small 3]{x+1}\n",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 380,
+      "host": {},
+      "sourceInputSha256": "84a3d69e171224e055c112790633c6f272abf11303ca73b666934c40bf61fd03",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-Smash",
+      "name": "Smash",
+      "tex": "\\left( X^{\\smash 2} \\right) \\sqrt{\\smash[b]{y=}}",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 382,
+      "host": {},
+      "sourceInputSha256": "497054fa5a75cb8dc57dd175b1454dcbafe360a5857e78c457a302b6e6de00dc",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-Spacing",
+      "name": "Spacing",
+      "tex": "\\begin{matrix}\n    ^3+[-1][1-1]1=1(=1)\\lvert a\\rvert~b \\\\\n    \\scriptstyle{^3+[-1][1-1]1=1(=1)\\lvert a\\rvert~b} \\\\\n    \\scriptscriptstyle{^3+[-1][1-1]1=1(=1)\\lvert a\\rvert~b} \\\\\n    a : a \\colon a \\\\\n\\end{matrix}\n",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 383,
+      "host": {},
+      "sourceInputSha256": "5464275063603009078708d5c49b991e482475f1a6b6c166f01d80dd233e9160",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-Sqrt",
+      "name": "Sqrt",
+      "tex": "\\sqrt{\\sqrt{\\sqrt{x}}}_{\\sqrt{\\sqrt{x}}}^{\\sqrt{\\sqrt{\\sqrt{x}}}\n^{\\sqrt{\\sqrt{\\sqrt{x}}}}} \\\\\n\\sqrt{\\frac{\\frac{A}{B}}{\\frac{A}{B}}} \\;\n\\sqrt{\\frac{\\frac{\\frac{A}{B}}{\\frac{A}{B}}}{\\frac{\\frac{A}{B}}{\\frac{A}{B}}}}\n",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 390,
+      "host": {},
+      "sourceInputSha256": "43e6592d5b8cd9fb0396586a496c0ce74cfc6e052e8fa36f191702466b98cbf2",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-SqrtRoot",
+      "name": "SqrtRoot",
+      "tex": "\\begin{array}{l}\n    1+\\sqrt[3]{2}+\\sqrt[1923^234]{2^{2^{2^{2^{2^{2^{2^{2^{2^{2^{2^2}}}}}}}}}}} \\\\\n    \\Huge \\sqrt[3]{M} + x^{\\sqrt[3] a}\n\\end{array}\n",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 395,
+      "host": {},
+      "sourceInputSha256": "e5086b925979bc4288533d8786b83e32c7cc1e0b52c5586c6bd048399b361f13",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-StackRel",
+      "name": "StackRel",
+      "tex": "a \\stackrel{?}{=} b \\stackrel{\\text{def}}{=} c",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 400,
+      "host": {},
+      "sourceInputSha256": "cb575d41739bfb1030b3708d806841e76aa2f26ebf617f96b29cc82c159ef0b2",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-StretchyAccent",
+      "name": "StretchyAccent",
+      "tex": "\\begin{array}{l}\n    \\overrightarrow{AB} \\quad \\overleftarrow{AB} \\quad \\Overrightarrow{AB} \\quad \\overleftrightarrow{AB} \\quad \\overgroup{AB} \\\\\n    \\overlinesegment{AB} \\quad \\overleftharpoon{AB} \\quad \\overrightharpoon{AB} \\quad \\left(\\underleftarrow{\\frac{value}{j}}\\right)  \\\\\n    \\widecheck{AB} \\quad \\widehat{ABC} \\quad \\widetilde{AB} \\quad \\widetilde{ABC} \\\\\n    \\overrightarrow{F} + \\overrightarrow{AB} + \\overrightarrow{F}^2 + \\overrightarrow{F}_2 + \\overrightarrow{F}_1^2 \\\\\n    \\overrightarrow{AB}^2+\\frac{\\overrightarrow{AB}}{\\overrightarrow{AB}} + \\sqrt{\\overrightarrow{AB}} + \\left\\lvert\\overrightarrow{AB}\\right\\rvert\n\\end{array}\n",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 401,
+      "host": {},
+      "sourceInputSha256": "2b629139fc037e4ab22a0906b54727d7c34c592f9c1cfb98c69d1b4d10aa8b49",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-StretchyAccentColor",
+      "name": "StretchyAccentColor",
+      "tex": "\\red{\\overrightarrow{AB}} \\quad \\color{blue}{\\overleftarrow{AB}} \\quad \\color{blue}{\\green{\\Overrightarrow{AB}}} \\quad \\widehat{\\theta} \\widetilde{A}\n",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 409,
+      "host": {},
+      "sourceInputSha256": "0365e416febefd2386f4804fa2d3e8769616a7aa3c8ea4414119f098c490c6da",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-StrikeThrough",
+      "name": "StrikeThrough",
+      "tex": "\\begin{array}{l}\n    \\cancel x \\quad \\cancel{2B} + \\bcancel 5 +\\bcancel{5ay} \\\\\n    \\text{\\sout{5ab}} + \\text{\\sout{5ABC}} + \\xcancel{\\oint_S{\\vec E\\cdot\\hat n\\,\\mathrm d a}} \\\\[0.3em]\n    \\frac{x+\\cancel B}{x+\\cancel x} + \\frac{x+\\cancel y}{x} + \\cancel{B}_1^2 + \\cancel{B^2} \\\\[0.2em]\n    \\left\\lvert\\cancel{ac}\\right\\rvert\n\\end{array}\n",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 411,
+      "host": {},
+      "sourceInputSha256": "c125c05b22fa23ce34f72d3c3b72db40659316d55e61ff67ffcdac9e050d7145",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-StrikeThroughColor",
+      "name": "StrikeThroughColor",
+      "tex": "\\begin{array}{l}\n    \\red{\\cancel x \\quad \\cancel{2B} + \\bcancel 5 +\\bcancel{5ay}} \\\\\n    \\color{green}{\\text{\\sout{5ab}} + \\text{\\sout{5ABC}} + \\xcancel{\\oint_S{\\vec E\\cdot\\hat n\\,\\mathrm d a}}}\n\\end{array}\n",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 418,
+      "host": {},
+      "sourceInputSha256": "1309b0d09c073f55b45f90f8040eba8e487aebb367e94cd86bc77aad75868351",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-StyleSpacing",
+      "name": "StyleSpacing",
+      "tex": "\\scriptstyle ab\\;cd",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 423,
+      "host": {},
+      "sourceInputSha256": "1377082dc19eb3edbb5b25515111069a397a12fb3d5ae6539efe3a7d97dc88fa",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-StyleSwitching",
+      "name": "StyleSwitching",
+      "tex": "a\\cdot b\\scriptstyle a\\cdot ba\\textstyle\\cdot ba\\scriptstyle\\cdot b",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 424,
+      "host": {},
+      "sourceInputSha256": "40fd83b419e98bb86b5c22c6aeaa3e0f3d1c21acc1676433dec9084c4863a862",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-SupSubCharacterBox",
+      "name": "SupSubCharacterBox",
+      "tex": "a_2f_2{f}_2{aa}_2{af}_2\\mathbf{y}_Ay_A",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 425,
+      "host": {},
+      "sourceInputSha256": "91ab7cc0ae3553510d3aa83342336674eeeb4488d86a147f039a78872778ae1f",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-SupSubHorizSpacing",
+      "name": "SupSubHorizSpacing",
+      "tex": "x^{x^{x}}\\Big|x_{x_{x_{x_{x}}}}\\bigg|x^{x^{x_{x_{x_{x_{x}}}}}}\\bigg|\n",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 426,
+      "host": {},
+      "sourceInputSha256": "c33d74dd349cd7d53f6fe9fa9396e9f92deaa9e4eea38e261454a31800bc557c",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-SupSubLeftAlignReset",
+      "name": "SupSubLeftAlignReset",
+      "tex": "\\omega^8_{888} \\quad \\frac{1}{\\hat{\\omega}^{8}_{888}} \\quad \\displaystyle\\sum_{\\omega^{8}_{888}}\n",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 428,
+      "host": {},
+      "sourceInputSha256": "2b26e6679c77792e838628d0b97731954673ae0ebcaf18990b1d7ea266c8c43f",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-SupSubOffsets",
+      "name": "SupSubOffsets",
+      "tex": "\\displaystyle \\int_{2+3}x f^{2+3}+3\\lim_{2+3+4+5}f",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 430,
+      "host": {},
+      "sourceInputSha256": "13fae83412addbb6e04f1b120c2b872f87fc95892a19999e2a21b40effe8488a",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-SurrogatePairs",
+      "name": "SurrogatePairs",
+      "tex": "\\begin{array}{l}\n    𝐀𝐚𝟎𝐴𝑎𝑨𝒂𝔅𝔞𝔸𝒜 \\\\\n    𝖠𝖺𝟢𝗔𝗮𝟬𝘈𝘢𝙰𝚊𝟶 \\\\\n    \\text{𝐀𝐚𝟎𝐴𝑎𝑨𝒂𝔅𝔞𝔸𝒜} \\\\\n    \\text{𝖠𝖺𝟢𝗔𝗮𝟬𝘈𝘢𝙰𝚊𝟶} \\\\\n    \\mathrm{𝐀𝐚𝑨𝒂𝔅𝔞𝔸𝒜} \\\\\n\\end{array}\n",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 431,
+      "host": {},
+      "sourceInputSha256": "18f83926c33b6a46b846545c0f97091dceca2ff0924a72f787d971805de9234c",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-SvgReset",
+      "name": "SvgReset",
+      "tex": "\\underbrace{\\sqrt{\\vec{x}} + \\sqrt{\\vec{\\color{#f00}y}}}",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 439,
+      "host": {
+        "styles": "display:block; width:500px;border:solid yellow 5px;padding:50px;background:#ccc;color:green;font-size:92px;transform:translate(100px,250px)rotate(-45deg);fill-opacity:0;stroke-width:40;stroke:blue;"
+      },
+      "sourceInputSha256": "e4497a56dcb79dcb7ad05f410a81d0691dc9d134ee27a67ee7277cc70d971519",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-Symbols1",
+      "name": "Symbols1",
+      "tex": "\\maltese\\degree\\pounds\\$\\minuso\n\\text{\\maltese\\degree\\pounds\\textdollar}\n",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 447,
+      "host": {},
+      "sourceInputSha256": "4028c04da3d3b28b0948256467dfa984281fd832e28bcc0933af11da5c683ed3",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-Tag",
+      "name": "Tag",
+      "tex": "\\tag{$+$hi} \\frac{x^2}{y}+x^{2^y}",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": true,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 450,
+      "host": {},
+      "sourceInputSha256": "c4f85c61ca2902ecb6f8718147e615a01acdf8018e4ddfa875a36533dbfae29b",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-Text",
+      "name": "Text",
+      "tex": "\\frac{a}{b}\\text{c~ {ab} \\ e}+fg",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 453,
+      "host": {},
+      "sourceInputSha256": "9c5e69054759b5320afaf11527c11c789c424968fa3e01721fb9a9bbb905ade8",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-TextSpace",
+      "name": "TextSpace",
+      "tex": "\\begin{array}{l} \\texttt{12345678901234} \\\\ \\texttt{A test  1~~2\\ \\ 3} \\\\ \\verb|A test 1  2  3| \\end{array}",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 454,
+      "host": {},
+      "sourceInputSha256": "5ba380694f866f9e6b09ceafffbca9cecd2b9ec04791dd572342abbbe8eb1b08",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-TextStacked",
+      "name": "TextStacked",
+      "tex": "\\begin{matrix} \\textsf{abc123 \\textbf{abc123} \\textit{abc123}}\\\\ \\text{abc123 \\textbf{abc123} \\textit{abc123}}\\\\ \\textrm{abc123 \\textbf{abc123} \\textit{abc123}}\\\\ \\textsf{\\textrm{\\textbf{abc123}} \\textbf{abc123} \\textit{abc123}}\\\\ \\textit{abc123 \\textbf{abc123} \\textsf{abc123}}\\\\ \\end{matrix}",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 460,
+      "host": {},
+      "sourceInputSha256": "0e999d409fb2242e6a6768487ec220dad4235a7f1a9b3056904c51871069d412",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-TextWithMath",
+      "name": "TextWithMath",
+      "tex": "\\begin{matrix} \\text{for $a < b$ and $ c < d $}. \\\\ \\textsf{for $a < b$ and $ c < d $}. \\\\ \\textsf{for $a < b \\textbf{ and } c < d $} \\\\ \\text{\\sf for $a < b$ and $c < d$.} \\end{matrix}",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 468,
+      "host": {},
+      "sourceInputSha256": "adaa0bdc12fd1b1fc5e27aac31e13b6fb69b9fc9f7f971cc3262be94a7c70183",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-Unicode",
+      "name": "Unicode",
+      "tex": "\\begin{matrix}\\text{ÀàÇçÉéÏïÖöÛû} \\\\ \\text{БГДЖЗЙЛФЦШЫЮЯ} \\\\ \\text{여보세요} \\\\ \\text{私はバナナです} \\end{matrix}",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 475,
+      "host": {},
+      "sourceInputSha256": "5932f98eea8e08a3bd0b8b2d2402ae6f450a1c42f9681cb88bc76809d77fc962",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-Units",
+      "name": "Units",
+      "tex": "\\begin{array}{ll}\n  \\mathrm H\\kern 1em\\mathrm H \\text{\\tiny (1em)}\n  & \\mathrm H\\kern 1ex\\mathrm H \\text{\\tiny (1ex)} \\\\\n  \\mathrm H{\\scriptstyle \\kern 1em}\\mathrm H \\text{\\tiny (ss 1em)}\n  & \\mathrm H{\\scriptstyle \\kern 1ex}\\mathrm H \\text{\\tiny (ss 1ex)} \\\\\n  \\mathrm H{\\small \\kern 1em}\\mathrm H \\text{\\tiny (sm 1em)}\n  & \\mathrm H{\\small \\kern 1ex}\\mathrm H \\text{\\tiny (sm 1ex)} \\\\\n  \\mathrm H\\mkern 18mu\\mathrm H \\text{\\tiny (18mu)}\n  & \\mathrm H\\kern 1cm\\mathrm H \\text{\\tiny (1cm)} \\\\\n  \\mathrm H{\\scriptstyle \\mkern 18mu}\\mathrm H \\text{\\tiny (ss 18mu)}\n  & \\mathrm H{\\scriptstyle \\kern 1cm}\\mathrm H \\text{\\tiny (ss 1cm)} \\\\\n  \\mathrm H{\\small \\mkern 18mu}\\mathrm H \\text{\\tiny (sm 18mu)}\n  & \\mathrm H{\\small \\kern 1cm}\\mathrm H \\text{\\tiny (sm 1cm)}\n\\end{array}\n",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 476,
+      "host": {},
+      "sourceInputSha256": "d491d34158fc170c483515432c7010d2a2f8bfdce7ef6cb0b2c0b23cb756de68",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-UnsupportedCmds",
+      "name": "UnsupportedCmds",
+      "tex": "\\err\\,\\frac\\fracerr3\\,2^\\superr_\\suberr\\,\\sqrt\\sqrterr",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": false,
+        "errorColor": "#dd4c4c"
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 491,
+      "host": {
+        "nolatex": "deliberately does not compile"
+      },
+      "sourceInputSha256": "3658cf45977118d2eb9bbff5e78dbee583d245778e8ac4adc01ada8434e12991",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-Verb",
+      "name": "Verb",
+      "tex": "\\begin{array}{ll}\n  \\verb \\verb ,   & \\verb|\\verb  |, \\\\\n  \\verb* \\verb* , & \\verb*|\\verb* |, \\\\\n  \\verb!<x> & </y>! & \\scriptstyle\\verb|ss verb| \\\\\n  \\verb*!<x> & </y>! & \\small\\verb|sm verb| \\\\\n  \\verb|``---''~|\n\\end{array}\n",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 496,
+      "host": {},
+      "sourceInputSha256": "be42989467c3a41c8d230c1c0ca9b4d2039cd575fe4e2c251c3c2c981ffe5e62",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    },
+    {
+      "id": "upstream-VerticalSpacing",
+      "name": "VerticalSpacing",
+      "tex": "x^{\\Huge y}z",
+      "options": {
+        "strict": false,
+        "trust": true,
+        "displayMode": false,
+        "throwOnError": true
+      },
+      "source": "test/screenshotter/ss_data.yaml",
+      "sourceLine": 504,
+      "host": {
+        "pre": "potato<br>blah",
+        "post": "<br>moo"
+      },
+      "sourceInputSha256": "a8fdebf6bd207e8c605fd3d278587da990e32cec882245d8aee70d3859516f72",
+      "hostProjection": "Core math is compared independently; original pre/post and outer CSS remain inventoried host context, not silently applied to TeX inputs."
+    }
+  ],
+  "sourceItems": {
+    "Accents": {
+      "tex": "\\vec{A}\\vec{x}\\vec x^2\\vec{x}_2^2\\vec{A}^2\\vec{xA}^2\\; \\underbar{X}"
+    },
+    "AccentsText": {
+      "tex": "\\begin{array}{lccccc}\n\\text{\\'\\i} & \\text{\\.\\i} & \\text{\\`\\i} & \\text{\\\"\\i} & \\text{\\H\\i} & \\text{\\r\\i} \\\\\n\\text{\\'\\j} & \\text{\\.\\j} & \\text{\\`\\j} & \\text{\\\"\\j} & \\text{\\H\\j} & \\text{\\r\\j} \\\\\n\\text{\\'a} & \\text{\\.a} & \\text{\\`a} & \\text{\\\"a} & \\text{\\H{a}} & \\text{\\r{a}} \\\\\n\\text{\\'A} & \\text{\\.A} & \\text{\\`A} & \\text{\\\"A} & \\text{\\H{A}} & \\text{\\r{A}} \\\\\n\\text{\\.I İ} & \\text{\\H e e̋} & \\text{\\i ı}\n\\end{array}\n"
+    },
+    "Align": {
+      "tex": "\\begin{align}\n  a &= 1 & b &= 2 \\\\\n  3a &= 3 & 17b &= 34 \\\\\n  \\tag{$\\ast$} a &\\neq b \\\\\n  \\nonumber a &={}? & b &={}? \\\\\n\\end{align}\n",
+      "display": 1
+    },
+    "Aligned": {
+      "tex": "\\begin{aligned}\n    a &= 1 & b &= 2 \\\\\n    3a &= 3 & 17b &= 34\n\\end{aligned}\n"
+    },
+    "Alignedat": {
+      "tex": "\\begin{alignedat}{3}\n    a &= 1 & b &= 2 &\\quad c &= 3\\\\\n    3a &= 3 & 17b &= 34 &\\quad 400c &= 1200\n\\end{alignedat}\n"
+    },
+    "Arrays": {
+      "tex": "\\left(\\begin{array}{|rl:c||}\n    1&2&3\\\\ \\hline\n    1+1&2+1&3+1\\cr1\\over2&\\scriptstyle 1/2&\\frac12\\\\[1ex] \\hline \\hdashline\n    \\begin{pmatrix}x\\\\y\\end{pmatrix}&0&\\begin{vmatrix}a&b\\\\c&d\\end{vmatrix}\n\\end{array}\\right] \\\\\n\\begin{smallmatrix} a & b \\\\ c & d \\end{smallmatrix} \\;\\;\n\\begin{subarray}{c}a \\\\ b\\end{subarray}\n"
+    },
+    "ArrayMode": {
+      "tex": "\\begin{matrix}\n    \\frac{\\partial^2 f}{\\partial x_1^2} & \\frac{\\partial^2 f}{\\partial x_1\\,\\partial x_2} & \\cdots & \\frac{\\partial^2 f}{\\partial x_1\\,\\partial x_n} \\\\\n    \\frac{\\partial^2 f}{\\partial x_2\\,\\partial x_1} & \\frac{\\partial^2 f}{\\partial x_2^2} & \\cdots & \\frac{\\partial^2 f}{\\partial x_2\\,\\partial x_n} \\\\\n    \\vdots & \\vdots & \\ddots & \\vdots \\\\\n    \\frac{\\partial^2 f}{\\partial x_n\\,\\partial x_1} & \\frac{\\partial^2 f}{\\partial x_n\\,\\partial x_2} & \\cdots & \\frac{\\partial^2 f}{\\partial x_n^2}\n\\end{matrix}\n",
+      "display": 1
+    },
+    "ArrayType": {
+      "tex": "1\\begin{array}{c}2\\\\3\\end{array}4"
+    },
+    "ArrayRemoveEmptyLine": {
+      "tex": "\\begin{pmatrix}\n    1 \\\\\n    2 \\\\\n\\end{pmatrix}\n"
+    },
+    "Baseline": {
+      "tex": "a+b-c\\cdot d/e"
+    },
+    "BasicTest": {
+      "tex": "a"
+    },
+    "BinCancellation": {
+      "tex": "\\begin{array}{cccc}\n    +1 & 1+ & 1+1 & (,) \\\\\n    1++1 & 3\\times) & 1+, & \\left(,\\right)\n\\end{array}\n"
+    },
+    "BinomTest": {
+      "tex": "\\dbinom{a}{b}\\tbinom{a}{b}^{\\binom{a}{b}+17}{\\scriptscriptstyle \\binom a b}"
+    },
+    "BoldSpacing": {
+      "tex": "\\mathbf{A}^2+\\mathbf{B}_3*\\mathscr{C}'"
+    },
+    "BoldSymbol": {
+      "tex": "\\sum_{\\boldsymbol{\\alpha}}^{\\boldsymbol{\\beta}} \\boldsymbol{\\omega}+ \\boldsymbol{\\int_\\alpha^\\beta} \\boldsymbol{\\Omega + {}} \\\\\n\\boldsymbol{\\lim_{x \\to \\infty} \\log Ax2k\\omega\\Omega\\imath+} \\\\\nx \\boldsymbol{+} y \\boldsymbol{=} z\n"
+    },
+    "Boxed": {
+      "tex": "\\begin{array}{l}\n  \\boxed{F=ma} \\quad \\boxed{ac}\\color{magenta}{\\boxed{F}}\\boxed{F=mg} \\\\[2em]\n  A_{\\angl n} + B_{\\angl g} + C_\\angln\n\\end{array}\n"
+    },
+    "Cases": {
+      "tex": "f(a,b)=\\begin{cases}\n    a+1&\\text{if }b\\text{ is odd} \\\\\n    a&\\text{if }b=0 \\\\\n    a-1&\\text{otherwise}\n\\end{cases} \\\\\n\\begin{rcases}\n    a &\\text{if } b \\\\\n    c &\\text{if } d\n\\end{rcases}⇒…\n"
+    },
+    "CD": {
+      "tex": "\\begin{CD} A @<a<< B @>>b> C \\\\ @| @AcAA @VVdV \\\\ D @= E @>>> F \\end{CD}",
+      "display": 1
+    },
+    "Colors": {
+      "tex": "\\blue{a}\\textcolor{#0f0}{b}\\textcolor{red}{c}",
+      "nolatex": "different syntax and different scope"
+    },
+    "ColorImplicit": {
+      "tex": "\\begin{array}{l} bl{ack\\color{red}red\\textcolor{green}{green}red\\color{blue}blue}black \\\\ black\\left(black\\color{red}red\\right)black \\end{array}"
+    },
+    "ColorSpacing": {
+      "tex": "\\textcolor{red}{\\displaystyle \\int x} + 1"
+    },
+    "Colorbox": {
+      "tex": "a \\colorbox{teal} B \\fcolorbox{blue}{red}{C} e+\\colorbox{teal}x"
+    },
+    "DashesAndQuotes": {
+      "tex": "\\begin{array}{l}\n    \\text{``a'' b---c -- d----`e'-{-}-f} -- \\\\\n    \\text{\\it ``a'' b---c -- d----`e'-{-}-f} ``x'' \\\\\n    \\text{\\tt ``a''---} \\texttt{``a''---} \\mathtt{--} \\\\\n\\end{array}\n"
+    },
+    "DeepFontSizing": {
+      "tex": "a^{\\big| x^{\\big(}}_{\\Big\\uparrow} +\ni^{i^{\\Huge x}_y}_{\\Huge z} +\n\\dfrac{\\Huge x}{y}\n",
+      "nolatex": "\\Huge inside \\dfrac doesn't work, needs an extra {…}"
+    },
+    "DelimiterSizing": {
+      "tex": "\\bigl\\uparrow\\Bigl\\downarrow\\biggl\\updownarrow\n\\Biggl\\Uparrow\\Biggr\\Downarrow\\biggr\\langle\\Bigr\\}\\bigr\\rfloor\\; \\Set{ x | x<\\frac 1 2 } \\\\\n\\begin{pmatrix}\n    a & b & c\\\\\n    a & b & c\\\\\n    a & b & c\\\\\n\\end{pmatrix}\\; \\begin{bmatrix}\n    a & b & c\\\\\n    a & b & c\\\\\n    a & b & c\\\\\n\\end{bmatrix} \\\\\n\\Braket{ ϕ | \\frac{∂^2}{∂ t^2} | ψ } \\\\\n"
+    },
+    "DisplayMode": {
+      "tex": "\\sum_{i=0}^\\infty \\frac{1}{i}",
+      "pre": "pre",
+      "post": "post",
+      "display": 1
+    },
+    "DisplayStyle": {
+      "tex": "{\\displaystyle\\sqrt{x}}{\\sqrt{x}}\n{\\displaystyle \\frac12}{\\frac12}{\\displaystyle x^1_2}{x^1_2}\n"
+    },
+    "Dots": {
+      "tex": "\\begin{array}{l}\n  \\cdots;\\dots+\\dots\\int\\dots,\\dots \\\\\n  \\cdots{};\\ldots+\\ldots\\int\\ldots,\\ldots\n\\end{array}\n"
+    },
+    "Equation": {
+      "tex": "\\begin{equation}\\begin{split}a& =b+c-d \\\\ & \\quad +e-f \\\\ & =g+h \\\\ & =i \\end{split}\\end{equation}",
+      "display": 1
+    },
+    "Exponents": {
+      "tex": "a^{a^a_a}_{a^a_a}"
+    },
+    "ExtensibleArrows": {
+      "tex": "\\begin{array}{l}\n    \\xrightarrow[ab]{ABC} + \\xRightarrow{ABC} \\\\\n    \\xrightleftharpoons[ab]{ABC} + \\xhookrightarrow[ab]{ABC} \\\\\n    \\xtwoheadrightarrow{ABC} + \\frac{\\xrightarrow[ab]{ABC}}{\\xrightarrow[ab]{ABC}} + \\left\\lvert\\xrightarrow[ab]{ABC}\\right\\rvert\n\\end{array}\n"
+    },
+    "FractionTest": {
+      "tex": "\\begin{array}{l}\n    \\dfrac{a}{b}\\frac{a}{b}\\tfrac{a}{b}\\;-\\dfrac12\\;1\\tfrac12\\;{1 \\atop 2} \n    \\; {a \\brace b} \\; {a \\brack b} \\\\[1em]\n    \\genfrac \\{ ]{0.8pt}{0}{a}{b} \\; {a \\above1.0pt b} \\; \\cfrac{1}{1+\\cfrac{1}{x}} \n     \\xrightarrow[\\dfrac g h]{\\displaystyle\\frac g h} \\; \\xrightarrow [2.\\, \\dfrac c d] {1.\\, \\displaystyle\\frac c d}\n\\end{array}\n"
+    },
+    "Functions": {
+      "tex": "\\sin\\cos\\tan\\ln\\log"
+    },
+    "Gather": {
+      "tex": "\\begin{gather} a=\\frac 1 2 \\\\ e=b+c \\end{gather}",
+      "display": 1
+    },
+    "Gathered": {
+      "tex": "\\begin{gathered}\n  x = \\frac{1}{2} \\\\\n  y = \\sum_{i=1}^n i\n\\end{gathered} \\approx\n\\begin{array}{c}\n  x = \\frac{1}{2} \\\\\n  y = \\sum_{i=1}^n i\n\\end{array}\n"
+    },
+    "GreekLetters": {
+      "tex": "\\alpha\\beta\\gamma\\omega"
+    },
+    "GreekUnicode": {
+      "tex": "\\frac{αβγδεϵζηθϑικλμνξοπϖρϱςστυφϕχψω}{ΓΔΘΞΠΣΦΨΩϝ\\mathbf{Ω}\\mathbf{\\Omega}}"
+    },
+    "GroupMacros": {
+      "macros": {
+        "\\startExp": "e^\\bgroup",
+        "\\endExp": "\\egroup"
+      },
+      "tex": "\\startExp a+b\\endExp"
+    },
+    "HorizontalBraces": {
+      "tex": "\\overbrace{\\displaystyle{\\oint_S{\\vec E\\cdot\\hat n\\,\\mathrm d a}}}^\\text{emf} = \\underbrace{\\frac{q_{\\text{enc}}}{\\varepsilon_0}}_{\\text{charge}}"
+    },
+    "HorizontalBrackets": {
+      "tex": "\\overbracket{\\displaystyle{a+b+c}}^{\\text{note}} = \\underbracket{x+y+z}_{\\text{label}}"
+    },
+    "HTML": {
+      "tex": "\\htmlId{a}{a+}b\\htmlStyle{color:red;}{+c}",
+      "nolatex": "HTML extension not supported by LaTeX"
+    },
+    "Includegraphics": {
+      "tex": "\\def\\logo{\\includegraphics[height=0.8em, totalheight=0.9em, width=0.9em, alt=KA logo]{../../website/static/img/khan-academy.png}}\n\\def\\logoB{\\includegraphics[height=0.4em, totalheight=0.9em, width=0.9em, alt=KA logo]{../../website/static/img/khan-academy.png}}\n\\begin{array}{l}\n    \\underline{A\\logo} + \\sqrt{\\logo} + \\tfrac{A\\logo}{\\logo}\\\\[1em]\n    \\underline{A\\logoB} + \\sqrt{x\\logoB} + \\tfrac{A\\logoB}{\\logoB}\n\\end{array}\n"
+    },
+    "Integrands": {
+      "tex": "\\begin{array}{l}\n    \\displaystyle \\int + \\oint + \\iint + \\oiint_i^n \\\\[0.6em]\n    \\displaystyle \\iiint + \\oiiint + \\textstyle \\int + \\oint_i^n \\\\[0.6em]\n    \\iint + \\oiint + \\iiint + \\oiiint \\\\[0.6em]\n    \\int\\limits^x_{y + 4 - a} \\int\\limits^x_{y + 4 - a}\n\\end{array}\n"
+    },
+    "KaTeX": {
+      "tex": "\\KaTeX, \\large \\KaTeX",
+      "nolatex": "\\KaTeX not supported by LaTeX"
+    },
+    "Kern": {
+      "tex": "\\frac{a\\kern{1em}b}{c}a\\kern{1em}b\\kern{1ex}c\\kern{-0.25em}d",
+      "nolatex": "LaTeX fails to typeset this, “Missing number, treated as zero.”"
+    },
+    "Lap": {
+      "tex": "\\begin{array}{l}\n    ab\\mathllap{f}cd\\mathrlap{g}hij\\mathclap{k}lm \\; ab\\llap{f}cd\\rlap{g}hij\\clap{k}lm \\\\\n    \\mathrlap{\\frac a b} \\frac a b \\\\\n    \\mathrlap{\\overbrace{\\phantom{a_0+a_1+a_2}}^m}a_0+a_1+a_2\n\\end{array}\n"
+    },
+    "LargeRuleNumerator": {
+      "tex": "\\frac{\\textcolor{blue}{\\rule{1em}{2em}}}{x}"
+    },
+    "LaTeX": {
+      "tex": "\\text{\\LaTeX}, \\text{\\TeX}, \\large \\text{\\LaTeX}, \\text{\\TeX}"
+    },
+    "LeftRight": {
+      "tex": "\\left( x^2 \\right) \\left\\{ x^{x^{x^{x^x}}} \\right."
+    },
+    "LeftRightListStyling": {
+      "tex": "a+\\left(x+y\\right)-x"
+    },
+    "LeftRightMiddle": {
+      "tex": "\\left( x^2 \\middle/ \\right) \\left\\{ x^{x^{x^{x^x}}} \\middle/ y \\right.\\left(x\\middle|y\\,\\middle|\\,z\\right)"
+    },
+    "LeftRightStyleSizing": {
+      "tex": "+\\left\\{\\rule{0.1em}{1em}\\right.\nx^{+\\left\\{\\rule{0.1em}{1em}\\right.\nx^{+\\left\\{\\rule{0.1em}{1em}\\right.}}\n"
+    },
+    "LimitControls": {
+      "tex": "\\displaystyle\\int\\limits_2^3 3x^2\\,dx + \\sum\\nolimits^n_{i=1}i +\n\\textstyle\\int\\limits_x^y z\n"
+    },
+    "LineBreak": {
+      "tex": "\\frac{x^2}{y^2} + z^2 =\nz^2 + \\frac{x^2}{y^2} =\n\\frac{x^2}{y^2} +\\nobreak z^2 =\nz^2 + \\frac{x^2}{y^2} =\n\\frac{x^2}{y^2} + ~ z^2 =\nz^2 + \\frac{x^2}{y^2} =\n\\frac{x^2}{y^2} + \\hspace{1em} z^2 =\nz^2 + \\frac{x^2}{y^2} =\n\\frac{x^2}{y^2} + z^2 = \\hspace*{1em}\nz^2 + \\frac{x^2}{y^2} =\n\\frac{x^2}{y^2} + z^2 =\nhi \\allowbreak there =\nhi \\allowbreak there\n"
+    },
+    "LowerAccent": {
+      "tex": "\\begin{matrix}\n    \\underleftarrow{AB} \\quad \\underrightarrow{AB} \\quad \\underleftrightarrow{AB} \\quad \\undergroup{AB} \\\\\n    \\underlinesegment{AB} \\quad \\utilde{AB}  \\quad \\color{green}{\\underrightarrow{AB}} \\\\\n    \\underrightarrow{F} + \\underrightarrow{AB} + \\underrightarrow{AB}^2 + \\underrightarrow{AB}_2 \\\\\n    \\frac{\\underrightarrow{AB}}{\\underrightarrow{AB}} + \\sqrt{\\underrightarrow{AB}} + \\left\\lvert\\underrightarrow{AB}\\right\\rvert \\\\\n    \\text{\\underline{text}}\n\\end{matrix}\n"
+    },
+    "Mapsfrom": {
+      "tex": "\\begin{gathered}\n    a \\mapsfrom b \\quad c ↤ d \\quad \\mapsfrom -x \\\\\n    x_{a \\mapsfrom b} \\quad x_{y_{a \\mapsfrom b}}\n\\end{gathered}\n"
+    },
+    "MathAtom": {
+      "tex": "a\\mathrel{\\mathop{=}\\limits^{\\blue ?}}b"
+    },
+    "MathAtom2": {
+      "tex": "\\mathop{\\overline{\\mathrm{lim}}}\\limits_{x\\to\\infty}f(x)"
+    },
+    "MathChoice": {
+      "tex": "{\\displaystyle\\mathchoice{D}{T}{S}{SS}} {\\textstyle\\mathchoice{D}{T}{S}{SS}} {\\scriptstyle \\mathchoice{D}{T}{S}{SS}} {\\scriptscriptstyle\\mathchoice{D}{T}{S}{SS}} \\displaystyle X_{\\mathchoice{D}{T}{S}{SS}_{\\mathchoice{D}{T}{S}{SS}}}\n"
+    },
+    "MathDefaultFonts": {
+      "tex": "Ax2k\\breve{a}\\omega\\Omega\\imath+\\KaTeX"
+    },
+    "MathBb": {
+      "tex": "\\mathbb{Ax2k\\breve{a}\\omega\\Omega\\imath+\\KaTeX}"
+    },
+    "MathBf": {
+      "tex": "\\mathbf{Ax2k\\breve{a}\\omega\\Omega\\imath+\\KaTeX}"
+    },
+    "MathCal": {
+      "tex": "\\mathcal{Ax2k\\breve{a}\\omega\\Omega\\imath+\\KaTeX}"
+    },
+    "MathFrak": {
+      "tex": "\\mathfrak{Ax2k\\breve{a}\\omega\\Omega\\imath+\\KaTeX}"
+    },
+    "MathIt": {
+      "tex": "\\mathit{Ax2k\\breve{a}\\omega\\Omega\\imath+\\KaTeX}"
+    },
+    "MathNormal": {
+      "tex": "\\mathnormal{Ax2k\\breve{a}\\omega\\Omega\\imath+\\KaTeX}"
+    },
+    "MathOp": {
+      "tex": "a\\mathop+b\\mathop:c\\mathop{\\delta}e\\mathop{\\textrm{and}}f\\mathrel{\\mathop{:}}=g\\sin h"
+    },
+    "MathRm": {
+      "tex": "\\mathrm{Ax2k\\breve{a}\\omega\\Omega\\imath+\\KaTeX}"
+    },
+    "MathSf": {
+      "tex": "\\mathsf{Ax2k\\breve{a}\\omega\\Omega\\imath+\\KaTeX}"
+    },
+    "MathSfIt": {
+      "tex": "\\mathsfit{Ax2k\\breve{a}\\omega\\Omega\\imath+\\KaTeX}"
+    },
+    "MathScr": {
+      "tex": "\\mathscr{Ax2k\\breve{a}\\omega\\Omega\\imath+\\KaTeX}"
+    },
+    "MathtoolsMatrix": {
+      "tex": "\\begin{matrix*}[l] a & -1 \\\\ -1 & d \\end{matrix*} \\; \\begin{pmatrix*}[r] a & -1 \\\\ -1 & d \\end{pmatrix*}"
+    },
+    "MathTt": {
+      "tex": "\\mathtt{Ax2k\\breve{a}\\omega\\Omega\\imath+\\KaTeX}"
+    },
+    "Mod": {
+      "tex": "\\begin{array}{cc}\n    a \\bmod 2 & b \\pod 3 \\\\\n    c \\pmod{4} & d \\mod{56} \\\\\n    \\displaystyle a\\bmod 2 & \\displaystyle b \\pod 3 \\\\\n    \\displaystyle c\\pmod{4} & \\displaystyle d \\mod{56}\n\\end{array}\n"
+    },
+    "ModScript": {
+      "tex": "\\begin{array}{cc}\n    \\scriptstyle a\\bmod 2 & \\scriptstyle b \\pod 3 \\\\\n    \\scriptstyle c\\pmod{4} & \\scriptstyle d \\mod{56}\n\\end{array}\n"
+    },
+    "ModSpacing": {
+      "tex": "\\begin{array}{l}\n    (a \\cdot b) \\bmod 257 \\\\\n    (a \\cdot b) \\mkern1mu\\mathbin{\\mathrm{mod}}\\mkern1mu 257 \\\\\n    (a \\cdot b) \\mathbin{\\mathrm{mod}} 257\n\\end{array}\n"
+    },
+    "NegativeSpaceBetweenRel": {
+      "tex": "A =\\!= B"
+    },
+    "NegativeSpace": {
+      "tex": "\\boxed{\\$1,\\!000,\\!000}\\KaTeX",
+      "post": "."
+    },
+    "NestedFractions": {
+      "tex": "\\dfrac{\\frac{a}{b}}{\\frac{c}{d}}\\dfrac{\\dfrac{a}{b}}\n{\\dfrac{c}{d}}\\frac{\\frac{a}{b}}{\\frac{c}{d}}\n"
+    },
+    "NewLine": {
+      "tex": "\\frac{a^2+b^2}{c^2} \\newline\n\\frac{a^2+b^2}{c^2} \\\\[1ex]\n\\begin{pmatrix}\n    a & b \\\\\n    c & d \\cr\n\\end{pmatrix} \\\\\na+b+c+{d+\\\\e}+f+g\n"
+    },
+    "Not": {
+      "tex": "\\begin{array}{l}\n    \\not=\\not>\\not\\geq\\not\\in\\not<\\not\\leq\\not{abc} \\\\\n    \\not xy + ab \\not xy \\\\\n    a \\neq b \\notin c\n\\end{array}\n"
+    },
+    "NullDelimiterInteraction": {
+      "tex": "a \\bigl. + 2 \\quad \\left. + a \\right)"
+    },
+    "OldFont": {
+      "tex": "\\begin{matrix}\n  \\rm rm & it & \\it it & \\bf bf & \\sf sf & \\tt tt \\\\\n  \\text{\\rm rm} & \\text{rm} & \\text{\\it it} & \\text{\\bf bf} & \\text{\\sf sf} & \\text{\\tt tt} \\\\\n  i\\rm r\\it i & \\text{r\\it i\\rm r}\n\\end{matrix}\n"
+    },
+    "OperatorName": {
+      "tex": "\\begin{matrix}\n    \\operatorname g (z) + 5\\operatorname{g}z + \\operatorname{Gam-ma}(z) \\\\\n    \\operatorname{Gam ma}(z) + \\operatorname{\\Gamma}(z) + \\operatorname{}x \\\\\n    \\operatorname*{asin} x + \\operatorname*{asin}_y x + \\operatorname*{asin}\\limits_y x \\\\[0.3em]\n    {\\displaystyle \\operatorname*{asin}_y x}\n\\end{matrix}\n"
+    },
+    "OpLimits": {
+      "tex": "\\begin{matrix}\n    {\\sin_2^2 \\lim_2^2 \\int_2^2 \\sum_2^2}\n    {\\displaystyle \\lim_2^2 \\int_2^2 \\intop_2^2 \\sum_2^2} \\\\\n    \\limsup_{x \\rightarrow \\infty} x \\stackrel{?}= \\liminf_{x \\rightarrow \\infty} x \\\\\n    {\\displaystyle \\limsup_{x \\rightarrow \\infty} x\\:\\: \\sum_{\\substack{0<i<m\\\\0<j<n}}}\n\\end{matrix}\n"
+    },
+    "OverUnderline": {
+      "tex": "x\\underline{x}\\underline{\\underline{x}}\\underline{x_{x_{x_x}}}\\underline{x^{x^{x^x}}}\\overline{x}\\overline{x}\\overline{x^{x^{x^x}}} \\blue{\\overline{\\underline{x}}\\underline{\\overline{x}}}"
+    },
+    "OverUnderset": {
+      "tex": "\\begin{array}{l}\nx\\overset?=1 \\quad \\underset{*}{x}^2 \\quad \\overset{a}{b}b\\underset{a}{b}b \\\\\n{\\displaystyle\\lim_{t\\underset{>0}\\to0}}\\\\\na+b+c+d\\overset{b+c=0}\\longrightarrow a+d\\\\\n\\overset { x = y } { \\sqrt { a b } }\n\\end{array}\n"
+    },
+    "Phantom": {
+      "tex": "\\begin{array}{l} \\dfrac{1+\\phantom{x^{\\blue{2}}} = x}{1+x^{\\blue{2}} = x} \\left(\\vphantom{\\int_t} zzz \\right) \\left( X \\hphantom{\\frac{\\frac X X}{X}} \\right)\\\\ \\text{a \\phantom{123}} b \\hphantom{\\frac{1}{2}}=c \\vphantom{101112} d \\\\ \\sqrt{\\mathstrut a} + \\sqrt{\\mathstrut d} \\end{array}"
+    },
+    "Phase": {
+      "tex": "120\\text{V}\\phase{-78.2^\\circ}\\;\\Large\\phase{78.2^\\circ}"
+    },
+    "Pmb": {
+      "tex": "\\mu\\pmb{\\mu}\\pmb{=}\\mu\\pmb{+}\\mu"
+    },
+    "PrimeSpacing": {
+      "tex": "f'+f_2'+f^{f'}"
+    },
+    "PrimeSuper": {
+      "tex": "x'^2+x'''^2+x'^2_3+x_3'^2"
+    },
+    "Raisebox": {
+      "tex": "\\begin{matrix} \\frac{a}{a\\raisebox{0.5em}{b}} \\cdot \\frac{a\\raisebox{-0.5em}{b}}{a} \\cdot \\sqrt{a\\raisebox{0.5em}{b}} \\cdot \\sqrt{a\\raisebox{-0.5em}{b}} \\cdot \\sqrt{a\\raisebox{0.5em}{b}\\raisebox{-0.5em}{b}} \\\\[2em] a + \\left(\\vcenter{\\hbox{$\\frac{a+b}{\\dfrac{c}{d}}$}}\\right) \\end {matrix}"
+    },
+    "ReactionArrows": {
+      "tex": "\\begin{matrix}\n    A \\xrightleftarrows{} B \\xrightequilibrium{} C \\xleftequilibrium{} D \\\\\n    A \\xrightleftarrows{over} B \\xrightequilibrium{over} C \\xleftequilibrium{over} D\n\\end{matrix}\n"
+    },
+    "Reflectbox": {
+      "tex": "\\begin{gathered}\n    a + \\reflectbox{abc} = b \\\\\n    \\reflectbox{$x^2 + \\frac{a}{b}$}\n    \\quad \\mathreflectbox{x^2 + \\frac{a}{b}} \\\\\n    x_{\\mathreflectbox{\\frac{a}{b}}} \\quad x_{\\frac{a}{b}}\n\\end{gathered}\n"
+    },
+    "RelativeUnits": {
+      "tex": "\\begin{array}{ll}\n    a\\kern1emb^{a\\kern1emb^{a\\kern1emb}} &\n    {\\footnotesize a\\kern1emb^{a\\kern1emb^{a\\kern1emb}}} \\\\\n    a\\mkern18mub^{a\\mkern18mub^{a\\mkern18mub}} &\n    {\\footnotesize a\\mkern18mub^{a\\mkern18mub^{a\\mkern18mub}}} \\\\\n    \\rule{1em}{1em}^{\\rule{1em}{1em}}\\rule{18mu}{18mu}^{\\rule{18mu}{18mu}} &\n    {\\footnotesize\\rule{1em}{1em}^{\\rule{1em}{1em}}\\rule{18mu}{18mu}^{\\rule{18mu}{18mu}}}\n\\end{array}\n"
+    },
+    "RlapBug": {
+      "tex": "\\frac{\\mathrlap{x}}{2}"
+    },
+    "Rule": {
+      "tex": "\\rule{1em}{0.5em}\\rule{1ex}{2ex}\\rule{1em}{1ex}\\rule{1em}{0.431ex}"
+    },
+    "SizingBaseline": {
+      "tex": "{\\tiny a+b}a+b{\\Huge a+b}",
+      "pre": "x",
+      "post": "M"
+    },
+    "Sizing": {
+      "tex": "{\\Huge x}{\\LARGE y}{\\normalsize z}{\\scriptsize w}\\sqrt[\\small 3]{x+1}\n"
+    },
+    "Smash": {
+      "tex": "\\left( X^{\\smash 2} \\right) \\sqrt{\\smash[b]{y=}}"
+    },
+    "Spacing": {
+      "tex": "\\begin{matrix}\n    ^3+[-1][1-1]1=1(=1)\\lvert a\\rvert~b \\\\\n    \\scriptstyle{^3+[-1][1-1]1=1(=1)\\lvert a\\rvert~b} \\\\\n    \\scriptscriptstyle{^3+[-1][1-1]1=1(=1)\\lvert a\\rvert~b} \\\\\n    a : a \\colon a \\\\\n\\end{matrix}\n"
+    },
+    "Sqrt": {
+      "tex": "\\sqrt{\\sqrt{\\sqrt{x}}}_{\\sqrt{\\sqrt{x}}}^{\\sqrt{\\sqrt{\\sqrt{x}}}\n^{\\sqrt{\\sqrt{\\sqrt{x}}}}} \\\\\n\\sqrt{\\frac{\\frac{A}{B}}{\\frac{A}{B}}} \\;\n\\sqrt{\\frac{\\frac{\\frac{A}{B}}{\\frac{A}{B}}}{\\frac{\\frac{A}{B}}{\\frac{A}{B}}}}\n"
+    },
+    "SqrtRoot": {
+      "tex": "\\begin{array}{l}\n    1+\\sqrt[3]{2}+\\sqrt[1923^234]{2^{2^{2^{2^{2^{2^{2^{2^{2^{2^{2^2}}}}}}}}}}} \\\\\n    \\Huge \\sqrt[3]{M} + x^{\\sqrt[3] a}\n\\end{array}\n"
+    },
+    "StackRel": {
+      "tex": "a \\stackrel{?}{=} b \\stackrel{\\text{def}}{=} c"
+    },
+    "StretchyAccent": {
+      "tex": "\\begin{array}{l}\n    \\overrightarrow{AB} \\quad \\overleftarrow{AB} \\quad \\Overrightarrow{AB} \\quad \\overleftrightarrow{AB} \\quad \\overgroup{AB} \\\\\n    \\overlinesegment{AB} \\quad \\overleftharpoon{AB} \\quad \\overrightharpoon{AB} \\quad \\left(\\underleftarrow{\\frac{value}{j}}\\right)  \\\\\n    \\widecheck{AB} \\quad \\widehat{ABC} \\quad \\widetilde{AB} \\quad \\widetilde{ABC} \\\\\n    \\overrightarrow{F} + \\overrightarrow{AB} + \\overrightarrow{F}^2 + \\overrightarrow{F}_2 + \\overrightarrow{F}_1^2 \\\\\n    \\overrightarrow{AB}^2+\\frac{\\overrightarrow{AB}}{\\overrightarrow{AB}} + \\sqrt{\\overrightarrow{AB}} + \\left\\lvert\\overrightarrow{AB}\\right\\rvert\n\\end{array}\n"
+    },
+    "StretchyAccentColor": {
+      "tex": "\\red{\\overrightarrow{AB}} \\quad \\color{blue}{\\overleftarrow{AB}} \\quad \\color{blue}{\\green{\\Overrightarrow{AB}}} \\quad \\widehat{\\theta} \\widetilde{A}\n"
+    },
+    "StrikeThrough": {
+      "tex": "\\begin{array}{l}\n    \\cancel x \\quad \\cancel{2B} + \\bcancel 5 +\\bcancel{5ay} \\\\\n    \\text{\\sout{5ab}} + \\text{\\sout{5ABC}} + \\xcancel{\\oint_S{\\vec E\\cdot\\hat n\\,\\mathrm d a}} \\\\[0.3em]\n    \\frac{x+\\cancel B}{x+\\cancel x} + \\frac{x+\\cancel y}{x} + \\cancel{B}_1^2 + \\cancel{B^2} \\\\[0.2em]\n    \\left\\lvert\\cancel{ac}\\right\\rvert\n\\end{array}\n"
+    },
+    "StrikeThroughColor": {
+      "tex": "\\begin{array}{l}\n    \\red{\\cancel x \\quad \\cancel{2B} + \\bcancel 5 +\\bcancel{5ay}} \\\\\n    \\color{green}{\\text{\\sout{5ab}} + \\text{\\sout{5ABC}} + \\xcancel{\\oint_S{\\vec E\\cdot\\hat n\\,\\mathrm d a}}}\n\\end{array}\n"
+    },
+    "StyleSpacing": {
+      "tex": "\\scriptstyle ab\\;cd"
+    },
+    "StyleSwitching": {
+      "tex": "a\\cdot b\\scriptstyle a\\cdot ba\\textstyle\\cdot ba\\scriptstyle\\cdot b"
+    },
+    "SupSubCharacterBox": {
+      "tex": "a_2f_2{f}_2{aa}_2{af}_2\\mathbf{y}_Ay_A"
+    },
+    "SupSubHorizSpacing": {
+      "tex": "x^{x^{x}}\\Big|x_{x_{x_{x_{x}}}}\\bigg|x^{x^{x_{x_{x_{x_{x}}}}}}\\bigg|\n"
+    },
+    "SupSubLeftAlignReset": {
+      "tex": "\\omega^8_{888} \\quad \\frac{1}{\\hat{\\omega}^{8}_{888}} \\quad \\displaystyle\\sum_{\\omega^{8}_{888}}\n"
+    },
+    "SupSubOffsets": {
+      "tex": "\\displaystyle \\int_{2+3}x f^{2+3}+3\\lim_{2+3+4+5}f"
+    },
+    "SurrogatePairs": {
+      "tex": "\\begin{array}{l}\n    𝐀𝐚𝟎𝐴𝑎𝑨𝒂𝔅𝔞𝔸𝒜 \\\\\n    𝖠𝖺𝟢𝗔𝗮𝟬𝘈𝘢𝙰𝚊𝟶 \\\\\n    \\text{𝐀𝐚𝟎𝐴𝑎𝑨𝒂𝔅𝔞𝔸𝒜} \\\\\n    \\text{𝖠𝖺𝟢𝗔𝗮𝟬𝘈𝘢𝙰𝚊𝟶} \\\\\n    \\mathrm{𝐀𝐚𝑨𝒂𝔅𝔞𝔸𝒜} \\\\\n\\end{array}\n"
+    },
+    "SvgReset": {
+      "tex": "\\underbrace{\\sqrt{\\vec{x}} + \\sqrt{\\vec{\\color{#f00}y}}}",
+      "styles": "display:block; width:500px;border:solid yellow 5px;padding:50px;background:#ccc;color:green;font-size:92px;transform:translate(100px,250px)rotate(-45deg);fill-opacity:0;stroke-width:40;stroke:blue;"
+    },
+    "Symbols1": {
+      "tex": "\\maltese\\degree\\pounds\\$\\minuso\n\\text{\\maltese\\degree\\pounds\\textdollar}\n"
+    },
+    "Tag": {
+      "tex": "\\tag{$+$hi} \\frac{x^2}{y}+x^{2^y}",
+      "display": 1
+    },
+    "Text": {
+      "tex": "\\frac{a}{b}\\text{c~ {ab} \\ e}+fg"
+    },
+    "TextSpace": {
+      "tex": "\\begin{array}{l} \\texttt{12345678901234} \\\\ \\texttt{A test  1~~2\\ \\ 3} \\\\ \\verb|A test 1  2  3| \\end{array}"
+    },
+    "TextStacked": {
+      "tex": "\\begin{matrix} \\textsf{abc123 \\textbf{abc123} \\textit{abc123}}\\\\ \\text{abc123 \\textbf{abc123} \\textit{abc123}}\\\\ \\textrm{abc123 \\textbf{abc123} \\textit{abc123}}\\\\ \\textsf{\\textrm{\\textbf{abc123}} \\textbf{abc123} \\textit{abc123}}\\\\ \\textit{abc123 \\textbf{abc123} \\textsf{abc123}}\\\\ \\end{matrix}"
+    },
+    "TextWithMath": {
+      "tex": "\\begin{matrix} \\text{for $a < b$ and $ c < d $}. \\\\ \\textsf{for $a < b$ and $ c < d $}. \\\\ \\textsf{for $a < b \\textbf{ and } c < d $} \\\\ \\text{\\sf for $a < b$ and $c < d$.} \\end{matrix}"
+    },
+    "Unicode": {
+      "tex": "\\begin{matrix}\\text{ÀàÇçÉéÏïÖöÛû} \\\\ \\text{БГДЖЗЙЛФЦШЫЮЯ} \\\\ \\text{여보세요} \\\\ \\text{私はバナナです} \\end{matrix}"
+    },
+    "Units": {
+      "tex": "\\begin{array}{ll}\n  \\mathrm H\\kern 1em\\mathrm H \\text{\\tiny (1em)}\n  & \\mathrm H\\kern 1ex\\mathrm H \\text{\\tiny (1ex)} \\\\\n  \\mathrm H{\\scriptstyle \\kern 1em}\\mathrm H \\text{\\tiny (ss 1em)}\n  & \\mathrm H{\\scriptstyle \\kern 1ex}\\mathrm H \\text{\\tiny (ss 1ex)} \\\\\n  \\mathrm H{\\small \\kern 1em}\\mathrm H \\text{\\tiny (sm 1em)}\n  & \\mathrm H{\\small \\kern 1ex}\\mathrm H \\text{\\tiny (sm 1ex)} \\\\\n  \\mathrm H\\mkern 18mu\\mathrm H \\text{\\tiny (18mu)}\n  & \\mathrm H\\kern 1cm\\mathrm H \\text{\\tiny (1cm)} \\\\\n  \\mathrm H{\\scriptstyle \\mkern 18mu}\\mathrm H \\text{\\tiny (ss 18mu)}\n  & \\mathrm H{\\scriptstyle \\kern 1cm}\\mathrm H \\text{\\tiny (ss 1cm)} \\\\\n  \\mathrm H{\\small \\mkern 18mu}\\mathrm H \\text{\\tiny (sm 18mu)}\n  & \\mathrm H{\\small \\kern 1cm}\\mathrm H \\text{\\tiny (sm 1cm)}\n\\end{array}\n"
+    },
+    "UnsupportedCmds": {
+      "tex": "\\err\\,\\frac\\fracerr3\\,2^\\superr_\\suberr\\,\\sqrt\\sqrterr",
+      "noThrow": 1,
+      "errorColor": "#dd4c4c",
+      "nolatex": "deliberately does not compile"
+    },
+    "Verb": {
+      "tex": "\\begin{array}{ll}\n  \\verb \\verb ,   & \\verb|\\verb  |, \\\\\n  \\verb* \\verb* , & \\verb*|\\verb* |, \\\\\n  \\verb!<x> & </y>! & \\scriptstyle\\verb|ss verb| \\\\\n  \\verb*!<x> & </y>! & \\small\\verb|sm verb| \\\\\n  \\verb|``---''~|\n\\end{array}\n"
+    },
+    "VerticalSpacing": {
+      "pre": "potato<br>blah",
+      "tex": "x^{\\Huge y}z",
+      "post": "<br>moo"
+    }
+  },
+  "plainScalarRewrites": [
+    {
+      "name": "ColorImplicit",
+      "firstLine": 101,
+      "lastLine": 105,
+      "kind": "YAML_plain_scalar_line_folding"
+    },
+    {
+      "name": "Phantom",
+      "firstLine": 339,
+      "lastLine": 343,
+      "kind": "YAML_plain_scalar_line_folding"
+    },
+    {
+      "name": "Raisebox",
+      "firstLine": 348,
+      "lastLine": 352,
+      "kind": "YAML_plain_scalar_line_folding"
+    },
+    {
+      "name": "TextSpace",
+      "firstLine": 454,
+      "lastLine": 459,
+      "kind": "YAML_plain_scalar_line_folding"
+    },
+    {
+      "name": "TextStacked",
+      "firstLine": 460,
+      "lastLine": 467,
+      "kind": "YAML_plain_scalar_line_folding"
+    },
+    {
+      "name": "TextWithMath",
+      "firstLine": 468,
+      "lastLine": 474,
+      "kind": "YAML_plain_scalar_line_folding"
+    }
+  ]
+}

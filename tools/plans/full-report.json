@@ -1,0 +1,41 @@
+{
+  "schema": "py-mermaid-command-plan/v1",
+  "scope": "MATH-FULL",
+  "description": "Saved same-candidate full-core evidence into offline A/B viewer; preserve HTML/manifest bytes in closed report run.",
+  "steps": [
+    {
+      "name": "verified-full-html-report",
+      "argv": [
+        "{python}",
+        "{repo}/tools/report_full.py",
+        "--unit",
+        "{repo}/test-runs/MATH-FULL-batch-20261105T171602Z-0d9b6942",
+        "--visual",
+        "{repo}/test-runs/MATH-FULL-batch-20261105T171857Z-5071cad7",
+        "--legacy",
+        "{repo}/test-runs/MATH-FULL-batch-20261105T171629Z-8b5ef28e",
+        "--manual-receipt",
+        "{repo}/docs/changes/math-full-layout-visual-qa-accepted.json",
+        "--manual-receipt",
+        "{repo}/docs/changes/math-full-canvas-visual-qa-accepted.json",
+        "--out",
+        "{repo}/../py-mermaid/reports/{runid}"
+      ],
+      "timeoutSeconds": 240
+    },
+    {
+      "name": "preserve-report-bytes",
+      "argv": [
+        "{python}",
+        "-c",
+        "import shutil,sys;from pathlib import Path;root=Path(sys.argv[1]);shutil.copytree(Path('../py-mermaid/reports')/root.name,root/'artifacts/report')",
+        "{run}"
+      ],
+      "timeoutSeconds": 120
+    }
+  ],
+  "inputs": [
+    "{repo}/docs/changes/math-full-layout-visual-qa-accepted.json",
+    "{repo}/docs/changes/math-full-canvas-visual-qa-accepted.json"
+  ]
+}

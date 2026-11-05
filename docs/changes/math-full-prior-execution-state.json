@@ -1,0 +1,115 @@
+{
+  "scope": "MATH",
+  "phase": "MATH-FULL-P3",
+  "status": "first_grouped_execution",
+  "plan": "docs/EXECUTION_PLAN.md",
+  "interface": "docs/INTERFACES.md",
+  "sourceVersion": "0.18.11",
+  "sourceCommit": "d5bed9f38a8d747b9c4a12e18897a514707e1c26",
+  "startingEvidence": "test-runs/math-execution-start-20261105",
+  "owners": {
+    "root": [
+      "src/py_katex/model.py",
+      "src/py_katex/__init__.py",
+      "src/py_katex/data/**",
+      "tools/**",
+      "pyproject.toml",
+      "docs/execution-state.json"
+    ],
+    "parser_config": [
+      "src/py_katex/parser.py",
+      "src/py_katex/macros.py",
+      "docs/AST.md"
+    ],
+    "geometry_elk": [
+      "src/py_katex/layout.py",
+      "src/py_katex/layout_*.py"
+    ],
+    "canvas_labels": [
+      "src/py_katex/canvas.py",
+      "../py-mermaid/src/py_mermaid/rendering/labels/**",
+      "../py-mermaid/src/py_mermaid/rendering/skia/session.py"
+    ]
+  },
+  "installationValidation": "deferred_by_user",
+  "externalActions": {
+    "commit": false,
+    "push": false,
+    "publish": false
+  },
+  "p1Freeze": {
+    "run": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-p1-freeze-20261105T115339Z-ecac6fdf",
+    "mathSource": "0cc0f94eab9f7933590a453460f57e0f7b7a089d9f14efdd02955bcaf38c16a9",
+    "mermaidSource": "20262e96b8955a168159bab23fd81931028ac3460fdfa6c49e2f8fcac085fc47"
+  },
+  "p2": {
+    "unitMethods": 218,
+    "mathVisualCases": 61,
+    "negativeCases": 7,
+    "preservedLegacyUnitMethods": 486,
+    "sourceTests": [
+      "references/parser-assertions.json",
+      "references/layout-assertions.json",
+      "references/canvas-assertions.json",
+      "../py-mermaid/references/math-canvas-assertions.json"
+    ],
+    "knownStaticFindings": [
+      "Legacy Mermaid deferred-math parser guards remain, must be exposed by real public API integration tests before batch repair"
+    ]
+  },
+  "finalVerification": "references/verification-summary.json",
+  "jointSourceSHA256": {
+    "math": "6e11f0a8f9f88c78fb387faf4429cfea72781a4e961328bf53299625bea2cb80",
+    "mermaid": "6e37306deb59a5eb21a2bcceedd66c128a2367f392b094854e2e9bdb3e0e4088"
+  },
+  "runs": {
+    "unit": "test-runs/MATH-batch-20261105T121812Z-f140829a",
+    "visual": "test-runs/MATH-batch-20261105T121812Z-73861ed7",
+    "legacy": "test-runs/MATH-batch-20261105T121812Z-85def7ba",
+    "exports": "test-runs/MATH-batch-20261105T122453Z-26698b8b",
+    "report": "test-runs/MATH-batch-20261105T122804Z-878bf5d4",
+    "htmlQa": "test-runs/MATH-batch-20261105T122948Z-8bf16e51"
+  },
+  "report": {
+    "url": "http://127.0.0.1:8765/MATH-batch-20261105T122804Z-878bf5d4/index.html",
+    "path": "py-mermaid/reports/MATH-batch-20261105T122804Z-878bf5d4",
+    "html": {
+      "sha256": "9f7ef845b1a8f495d66824f48208da6206f6b3235d3b9e3f5b7a20bf493e88ee",
+      "bytes": 849853
+    },
+    "qaStatus": "PASS",
+    "qaViews": 207,
+    "desktopAndMobile": true,
+    "externalRequests": 0,
+    "historicalCandidate": true,
+    "currentSourceMatches": false
+  },
+  "workerStatus": {
+    "root": "P3_targeted_pass_stopped_source",
+    "parser_config": "P3_targeted_pass_stopped_source",
+    "geometry_elk": "P3_targeted_pass_stopped_source",
+    "canvas_labels": "P3_manual_findings_batch_repair"
+  },
+  "remainingScope": [
+    "不是完整 KaTeX 兼容实现；注册项与功能族映射不等于逐分支覆盖率。",
+    "自动公式编号/tag、CD、部分宏展开边界尚未实现；明确拒绝未支持语法。",
+    "Parser 不暴露 displayMode/strict/leqno/fleqn 全部源选项；Options.display_mode 用于视觉样式。",
+    "HTML class/id/style/data、includegraphics 拒绝；href/url 仅保留静态文本，无交互。",
+    "部分 Unicode 缺少源字体度量时明确报错，不用系统字体伪造数学度量。",
+    "pmb 保留偏移副本，未复刻原实现 0.04px 模糊。",
+    "本轮验证 Windows 本地环境；安装、构建、Linux/no-loader 验证未执行。",
+    "版本 0.1.0a0 未发布；Mermaid 声明依赖版本，开发验证使用两个源码目录 PYTHONPATH，安装解析需后续发布或本地安装阶段验证。"
+  ],
+  "fullKaTeXCompatibility": false,
+  "postDocumentationAudit": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-post-documentation-audit-20261105T123707Z-e6208b12\\run.json",
+  "currentScopeStatus": "manual_visual_findings_batch_repair",
+  "functionalStatus": "FOLLOWUP_REQUIRED",
+  "activePlan": "docs/FULL_STATIC_MIGRATION.md",
+  "fullStaticStartingRun": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-start-20261105T143333Z-c2e58342",
+  "activeLeases": [],
+  "fullStaticScope": "references/full-core-inventory.json",
+  "fullStaticP1Freeze": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-p1-freeze-20261105T151929Z-e4650f5e",
+  "fullFirstPlan": "tools/plans/full-first.json",
+  "fullFirstExecution": "test-runs/MATH-batch-20261105T155834Z-e542e4f2",
+  "manualRejectedCandidate": "../py-katex/references/full-manual-rejected-candidate.json"
+}

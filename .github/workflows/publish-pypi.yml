@@ -1,0 +1,108 @@
+name: Publish reviewed py-katex release
+on:
+  workflow_dispatch:
+    inputs:
+      release_tag:
+        description: Reviewed GitHub release tag
+        type: choice
+        options: [v0.1.0]
+        default: v0.1.0
+      manifest_sha256:
+        description: SHA256 of the reviewed release-manifest.json asset
+        type: string
+        required: true
+permissions:
+  contents: read
+concurrency:
+  group: py-katex-release-${{ inputs.release_tag }}
+  cancel-in-progress: false
+defaults:
+  run:
+    shell: bash
+jobs:
+  validate:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-24.04, windows-2025]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: ${{ inputs.release_tag }}
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.13'
+      - name: Download exact reviewed distributions
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ inputs.release_tag }}
+          MANIFEST_SHA: ${{ inputs.manifest_sha256 }}
+        run: python tools/release_github.py download --tag "$RELEASE_TAG" --manifest-sha256 "$MANIFEST_SHA" --dist dist --out test-runs/release-download
+      - name: Verify payload and clean external wheel and sdist installations
+        run: python tools/release_artifacts.py --wheel dist/py_katex-0.1.0-py3-none-any.whl --sdist dist/py_katex-0.1.0.tar.gz --install --backend cpu --out test-runs/release-validation
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: release-validation-${{ matrix.os }}
+          path: test-runs/
+          if-no-files-found: error
+  publish:
+    needs: validate
+    runs-on: ubuntu-24.04
+    environment:
+      name: pypi
+      url: https://pypi.org/project/py-katex/0.1.0/
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: ${{ inputs.release_tag }}
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.13'
+      - name: Recheck original release bytes
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ inputs.release_tag }}
+          MANIFEST_SHA: ${{ inputs.manifest_sha256 }}
+        run: python tools/release_github.py download --tag "$RELEASE_TAG" --manifest-sha256 "$MANIFEST_SHA" --dist dist --out test-runs/release-download
+      - name: Upload reviewed artifacts with PyPI Trusted Publishing
+        uses: pypa/gh-action-pypi-publish@7245906fb61fa33a13554f9d5fb856fe61758086
+        with:
+          packages-dir: dist/
+  verify-and-promote:
+    needs: publish
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: ${{ inputs.release_tag }}
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.13'
+      - name: Recheck reviewed manifest
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ inputs.release_tag }}
+          MANIFEST_SHA: ${{ inputs.manifest_sha256 }}
+        run: python tools/release_github.py download --tag "$RELEASE_TAG" --manifest-sha256 "$MANIFEST_SHA" --dist dist --out test-runs/release-download
+      - name: Verify actual PyPI download and external installation
+        run: |
+          python tools/release_pypi.py --manifest test-runs/release-download/release-manifest.json --out test-runs/pypi-download
+          python tools/release_artifacts.py --wheel test-runs/pypi-download/py_katex-0.1.0-py3-none-any.whl --sdist test-runs/pypi-download/py_katex-0.1.0.tar.gz --install --backend cpu --out test-runs/pypi-validation
+      - name: Promote the verified stable GitHub Release
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ inputs.release_tag }}
+        run: python tools/release_github.py promote --tag "$RELEASE_TAG" --notes docs/releases/0.1.0-published.md --out test-runs/github-promoted
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: published-download-installation-evidence
+          path: test-runs/
+          if-no-files-found: error

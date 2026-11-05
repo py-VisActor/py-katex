@@ -1,0 +1,633 @@
+{
+  "schema": "py-katex-parser-assertions/v1",
+  "phase": "P3",
+  "status": "targeted_tests_passed",
+  "version": "0.18.11",
+  "upstreamCommit": "d5bed9f38a8d747b9c4a12e18897a514707e1c26",
+  "sourceFreeze": "test-runs/MATH-p1-freeze-20261105T115339Z-ecac6fdf",
+  "expectedValuePolicy": "Expected AST projections are hand-written from pinned parser/function/macro/spec source and frozen native AST contract; candidate parse is never invoked to generate expected values. Tree helpers merely inspect actual results. Data tables are not imported to synthesize expected values.",
+  "files": [
+    {
+      "path": "tests/test_parser.py",
+      "sha256": "04bf9d45bf99670d32311c0885583561907e98d11bdca8ba5048f2dccc9511bb",
+      "methods": 67
+    },
+    {
+      "path": "tests/test_macros.py",
+      "sha256": "f75ca16cafe857891b3b95de3cc48c53da6728028101bb0ea8e6d1b6266b90b3",
+      "methods": 53
+    }
+  ],
+  "totalMethods": 120,
+  "assertionGroups": {
+    "SourceAtomsAndModes": {
+      "file": "tests/test_parser.py",
+      "methods": [
+        "test_empty_input_and_empty_group",
+        "test_math_whitespace_comments_and_nested_group_order",
+        "test_symbol_table_atom_classes_are_source_categories",
+        "test_source_ams_relation_symbol_is_not_plain_control_text",
+        "test_source_wide_alphabet_original_identity_survives_replacement",
+        "test_unicode_combining_and_precomposed_accents",
+        "test_unicode_source_position_is_codepoint_not_utf16",
+        "test_unterminated_group_reports_error",
+        "test_undefined_control_does_not_succeed_as_literal_text",
+        "test_text_mode_retains_spaces_and_literal_font_group",
+        "test_text_mode_rejects_math_fraction_command",
+        "test_source_function_mode_flags_cover_roots_and_math_fonts",
+        "test_embedded_math_in_text_switches_symbol_mode_back",
+        "test_verb_preserves_control_characters_without_expansion",
+        "test_verb_star_shows_spaces",
+        "test_unknown_environment_and_mismatched_closing_environment"
+      ],
+      "methodCount": 16,
+      "sources": [
+        "src/Lexer.ts",
+        "src/Parser.ts",
+        "src/symbols.ts",
+        "src/wide-character.ts",
+        "src/functions/text.ts",
+        "test/katex-spec.ts",
+        "test/unicode-spec.ts"
+      ]
+    },
+    "SourceScriptsAndFractions": {
+      "file": "tests/test_parser.py",
+      "methods": [
+        "test_subscript_superscript_order_independent",
+        "test_scripts_on_empty_base",
+        "test_repeated_primes_and_following_superscript_combine",
+        "test_duplicate_explicit_scripts_and_missing_argument_reject",
+        "test_unicode_script_runs_use_normal_glyphs",
+        "test_source_unicode_script_replaces_prior_matching_script",
+        "test_unicode_superscript_replaces_explicit_but_explicit_duplicate_still_rejects",
+        "test_fraction_numerators_denominators_and_style",
+        "test_primitive_fraction_arguments_are_single_tokens",
+        "test_binomial_has_parentheses_and_no_bar",
+        "test_infix_fraction_scope_and_brace_brack_choose",
+        "test_multiple_infix_fractions_in_same_group_reject",
+        "test_above_zero_thickness_omits_fraction_bar",
+        "test_genfrac_empty_thickness_means_default_and_zero_means_no_bar",
+        "test_cfrac_continued_flag_and_alignment",
+        "test_sqrt_optional_index_is_not_part_of_radicand"
+      ],
+      "methodCount": 16,
+      "sources": [
+        "src/Parser.ts",
+        "src/unicodeSupOrSub.ts",
+        "src/functions/genfrac.ts",
+        "src/functions/sqrt.ts",
+        "test/katex-spec.ts"
+      ]
+    },
+    "SourceFunctionsAndArrays": {
+      "file": "tests/test_parser.py",
+      "methods": [
+        "test_large_operators_limits_and_integrals",
+        "test_smallint_preserves_identity",
+        "test_limit_controls_only_follow_operators",
+        "test_operatorname_mathop_and_builtin_operator",
+        "test_delimiter_segments_middle_and_null_delimiter",
+        "test_sized_delimiters_sizes_and_atom_classes",
+        "test_invalid_or_unpaired_delimiters_reject",
+        "test_font_families_keep_source_font_names",
+        "test_declaration_style_and_color_end_at_group_boundary",
+        "test_source_color_grammar_hex_alpha_and_unprefixed_hex",
+        "test_source_dimensions_are_parsed_separately_from_following_letters",
+        "test_dimension_units_and_invalid_unit",
+        "test_accent_line_brace_and_annotation_family",
+        "test_extensible_arrow_has_separate_above_and_below",
+        "test_phantom_smash_lap_rule_raise_and_enclose_family",
+        "test_fcolorbox_argument_order_is_border_then_background",
+        "test_boxed_source_macro_keeps_math_body_inside_text_box",
+        "test_mathchoice_retains_all_four_style_alternatives",
+        "test_matrix_row_cell_order_and_delimiter_variants",
+        "test_array_alignments_vertical_horizontal_rules_and_row_gap",
+        "test_matrix_star_and_cases_alignment",
+        "test_nested_environments_keep_rows_separate",
+        "test_align_gather_equation_family_environment_identity",
+        "test_split_and_equation_reject_extra_alignment_tabs",
+        "test_source_array_excess_columns_are_nonfatal_without_strict_mode",
+        "test_explicit_arraystretch_macro_is_retained",
+        "test_top_level_newline_is_a_static_break",
+        "test_reflection_pmb_and_vcenter_do_not_become_plain_groups"
+      ],
+      "methodCount": 28,
+      "sources": [
+        "src/functions/op.ts",
+        "src/functions/operatorname.ts",
+        "src/functions/delimsizing.ts",
+        "src/functions/color.ts",
+        "src/functions/font.ts",
+        "src/functions/accent.ts",
+        "src/functions/arrow.ts",
+        "src/functions/phantom.ts",
+        "src/functions/smash.ts",
+        "src/functions/lap.ts",
+        "src/functions/rule.ts",
+        "src/functions/raisebox.ts",
+        "src/functions/enclose.ts",
+        "src/functions/reflectbox.ts",
+        "src/functions/pmb.ts",
+        "src/functions/vcenter.ts",
+        "src/functions/mathchoice.ts",
+        "src/functions/cr.ts",
+        "src/units.ts",
+        "src/environments/array.ts",
+        "test/katex-spec.ts"
+      ]
+    },
+    "NativeSafetyAndBudgetContract": {
+      "file": "tests/test_parser.py",
+      "methods": [
+        "test_href_discards_navigation_and_preserves_static_label",
+        "test_url_is_typewriter_static_text",
+        "test_visual_htmlmathml_macro_selects_visual_branch_without_host",
+        "test_valid_source_commands_outside_native_contract_fail_explicitly",
+        "test_depth_and_node_budgets_raise_named_parse_errors",
+        "test_invalid_limits_and_input_are_explicit",
+        "test_results_are_immutable_and_requests_are_isolated"
+      ],
+      "methodCount": 7,
+      "sources": [
+        "src/Parser.ts",
+        "src/functions/href.ts",
+        "src/functions/htmlmathml.ts",
+        "test/errors-spec.ts",
+        "native:AGENTS.md",
+        "native:docs/INTERFACES.md",
+        "native:docs/AST.md"
+      ]
+    },
+    "SourceLexerTests": {
+      "file": "tests/test_macros.py",
+      "methods": [
+        "test_control_word_consumes_trailing_space",
+        "test_control_symbols_do_not_consume_following_space",
+        "test_comments_discard_newline_without_inserting_space",
+        "test_whitespace_collapses_and_escaped_space_has_own_token",
+        "test_combining_marks_are_in_same_source_token",
+        "test_wide_character_uses_python_codepoint_position",
+        "test_control_word_includes_at_sign",
+        "test_verb_is_single_token_even_with_percent_and_braces",
+        "test_lexical_invalid_characters_and_bare_backslash_reject",
+        "test_unterminated_verb_rejects"
+      ],
+      "methodCount": 10,
+      "sources": [
+        "src/Lexer.ts",
+        "test/katex-spec.ts"
+      ]
+    },
+    "SourceMacroDefinitionTests": {
+      "file": "tests/test_macros.py",
+      "methods": [
+        "test_user_macros_substitute_numbered_balanced_arguments",
+        "test_user_macros_do_not_mutate_input_mapping",
+        "test_nested_macro_expansion_is_lazy_and_numbered",
+        "test_empty_macro_is_defined_not_missing",
+        "test_def_local_namespace_restores_outer_definition",
+        "test_def_does_not_escape_group_when_previously_undefined",
+        "test_gdef_survives_group_but_not_another_request",
+        "test_global_definition_overrides_all_nested_undo_levels",
+        "test_explicit_global_prefix_and_long_prefix",
+        "test_def_replacement_is_not_expanded_until_invocation",
+        "test_edef_expands_replacement_at_definition_time",
+        "test_xdef_has_expansion_and_global_scope",
+        "test_def_delimited_parameters_include_nested_groups",
+        "test_def_literal_parameter_prefix_must_match",
+        "test_def_parameters_must_be_sequential_and_at_most_nine",
+        "test_macro_argument_missing_or_unbalanced_rejects",
+        "test_newcommand_renewcommand_and_providecommand",
+        "test_newcommand_optional_count_allows_surrounding_whitespace",
+        "test_source_newcommand_count_ten_consumes_ten_arguments",
+        "test_source_def_can_define_noncontrol_active_tokens",
+        "test_newcommand_and_renewcommand_existence_validation",
+        "test_newcommand_optional_default_is_source_unsupported",
+        "test_let_captures_existing_macro_meaning",
+        "test_let_captures_primitive_function_without_late_macro_expansion",
+        "test_explicit_begingroup_and_endgroup_scope",
+        "test_environment_namespace_restores_local_definitions",
+        "test_invalid_macro_configuration_types_reject"
+      ],
+      "methodCount": 27,
+      "sources": [
+        "src/MacroExpander.ts",
+        "src/Namespace.ts",
+        "src/functions/def.ts",
+        "src/macros.ts",
+        "test/katex-spec.ts"
+      ]
+    },
+    "SourceContextMacroTests": {
+      "file": "tests/test_macros.py",
+      "methods": [
+        "test_first_second_and_ifnextchar_context_branches",
+        "test_text_or_math_uses_current_mode",
+        "test_expandafter_expands_second_token_before_first",
+        "test_noexpand_prevents_edef_replacement_expansion",
+        "test_noexpand_normal_parse_relaxes_but_edef_preserves_original_token",
+        "test_unexpandable_let_alias_survives_edef_with_late_name_lookup",
+        "test_char_decimal_octal_hex_and_backtick",
+        "test_literal_hash_in_builtin_color_macro_is_not_parameter",
+        "test_source_static_aliases_have_nonliteral_symbol_results",
+        "test_dots_selects_centered_for_binary_and_low_for_comma",
+        "test_terminal_context_commands_have_no_static_output",
+        "test_recursive_and_mutually_recursive_expansion_budgets",
+        "test_macro_expansion_budget_includes_context_helpers",
+        "test_queue_budget_limits_exponential_replacement",
+        "test_macro_invocation_and_substitution_keep_original_source_positions",
+        "test_scope_removal_is_not_confused_with_an_empty_macro"
+      ],
+      "methodCount": 16,
+      "sources": [
+        "src/macros.ts",
+        "src/MacroExpander.ts",
+        "src/Namespace.ts",
+        "test/katex-spec.ts",
+        "native:docs/AST.md"
+      ]
+    }
+  },
+  "sources": [
+    {
+      "id": "src/Lexer.ts",
+      "path": ".local/katex-0.18.11/package/src/Lexer.ts",
+      "sha256": "9c783877051619e6a71cf3ed95ce5935ceb869772585d09811f84f57ab5818bb"
+    },
+    {
+      "id": "src/Parser.ts",
+      "path": ".local/katex-0.18.11/package/src/Parser.ts",
+      "sha256": "c1aed05097bb0c429b7e1b5fe0862a7db515bd1682b014d6775edeb2e8da0e6a"
+    },
+    {
+      "id": "src/MacroExpander.ts",
+      "path": ".local/katex-0.18.11/package/src/MacroExpander.ts",
+      "sha256": "dca51df6efae6c4f958c2313d566910f4857db7e4930c216c88de6cb3aeb4b27"
+    },
+    {
+      "id": "src/Namespace.ts",
+      "path": ".local/katex-0.18.11/package/src/Namespace.ts",
+      "sha256": "ea3e7f8e0aa100c5639120ad4590b7ff7a9592afca8a766badc1f59dfaab4f43"
+    },
+    {
+      "id": "src/macros.ts",
+      "path": ".local/katex-0.18.11/package/src/macros.ts",
+      "sha256": "13adf540091b6c4d4a31bcd65fe325b74beffc37f2ddb8017f52d024c73a1fdc"
+    },
+    {
+      "id": "src/unicodeSupOrSub.ts",
+      "path": ".local/katex-0.18.11/package/src/unicodeSupOrSub.ts",
+      "sha256": "5e2e71ab0ce483ee6e876e75e80785fca176d970276eb7a576b4283a35acc074"
+    },
+    {
+      "id": "src/wide-character.ts",
+      "path": ".local/katex-0.18.11/package/src/wide-character.ts",
+      "sha256": "108f968fa87f3a14cf7534c129faec8ed440c27250bcc17d79c0f897df108bcd"
+    },
+    {
+      "id": "src/symbols.ts",
+      "path": ".local/katex-0.18.11/package/src/symbols.ts",
+      "sha256": "88bf41a79569d9c860292049e897cbd12019dd43f7e3e0044e39ca5deb356b84"
+    },
+    {
+      "id": "src/units.ts",
+      "path": ".local/katex-0.18.11/package/src/units.ts",
+      "sha256": "09e9e034abfb99210cdf393ca0c639af0e34b017613a05fca280a76aff12e818"
+    },
+    {
+      "id": "src/functions/genfrac.ts",
+      "path": ".local/katex-0.18.11/package/src/functions/genfrac.ts",
+      "sha256": "c461e8a5363a992e67adbe4c1312723c928be836fe47ee851ae9869e48998538"
+    },
+    {
+      "id": "src/functions/sqrt.ts",
+      "path": ".local/katex-0.18.11/package/src/functions/sqrt.ts",
+      "sha256": "99347b6bb9d43e5b5a0f3c8462b36b32a9c351ab6325bd90e157cb7b809815fa"
+    },
+    {
+      "id": "src/functions/op.ts",
+      "path": ".local/katex-0.18.11/package/src/functions/op.ts",
+      "sha256": "a04557b2f14cccd7927b8ea60cdf3f7df649abe52ed3b81748145538deb25a9d"
+    },
+    {
+      "id": "src/functions/operatorname.ts",
+      "path": ".local/katex-0.18.11/package/src/functions/operatorname.ts",
+      "sha256": "8ba05f2e8dd6cd239d67c3305dab773ded3dab5cb2a596e99351f3f9c0e01c7b"
+    },
+    {
+      "id": "src/functions/delimsizing.ts",
+      "path": ".local/katex-0.18.11/package/src/functions/delimsizing.ts",
+      "sha256": "323593436330d3ae57d370955c6ed4467e2eb24f8db3cc04dd810bfca8e45e9e"
+    },
+    {
+      "id": "src/functions/color.ts",
+      "path": ".local/katex-0.18.11/package/src/functions/color.ts",
+      "sha256": "f984e013b3e9971e8007b8dade637f5c09c42b810df0dbb65bf9d25fc3d641d4"
+    },
+    {
+      "id": "src/functions/font.ts",
+      "path": ".local/katex-0.18.11/package/src/functions/font.ts",
+      "sha256": "44c87d85ec5c123d315a8e4fb63920ad1edbb763618e84a050a8a8ff88b8d00d"
+    },
+    {
+      "id": "src/functions/text.ts",
+      "path": ".local/katex-0.18.11/package/src/functions/text.ts",
+      "sha256": "0141e26c0d8251434eb1c1e56324f0b7220fecf11dad9d3f20b4557043ab63e6"
+    },
+    {
+      "id": "src/functions/accent.ts",
+      "path": ".local/katex-0.18.11/package/src/functions/accent.ts",
+      "sha256": "dda6b456e07c6e06b74dcacc7a5dbb07131ae6fc0e7bece477518cb632ff43ff"
+    },
+    {
+      "id": "src/functions/accentunder.ts",
+      "path": ".local/katex-0.18.11/package/src/functions/accentunder.ts",
+      "sha256": "71203e0e43e43cf85633afab70a788c386ff4e39f6da32f630c070174dfe7333"
+    },
+    {
+      "id": "src/functions/horizBrace.ts",
+      "path": ".local/katex-0.18.11/package/src/functions/horizBrace.ts",
+      "sha256": "9e20b9a3cb406bf39d83b44aecd153f1f5084f3a11c54affd979130f156326be"
+    },
+    {
+      "id": "src/functions/arrow.ts",
+      "path": ".local/katex-0.18.11/package/src/functions/arrow.ts",
+      "sha256": "5c56a8a89b19e9d7b8c29563fc3e266a5fcd880d7b49e113d3a627bc3a4af89d"
+    },
+    {
+      "id": "src/functions/phantom.ts",
+      "path": ".local/katex-0.18.11/package/src/functions/phantom.ts",
+      "sha256": "0a07fa74d2af167a9d8c86a338b35ab6224937197488e33321a0c5ed498214cf"
+    },
+    {
+      "id": "src/functions/smash.ts",
+      "path": ".local/katex-0.18.11/package/src/functions/smash.ts",
+      "sha256": "d2b066e91dcd8fde540beeffbba5bd0a500852593897face2dac2098d1cafac8"
+    },
+    {
+      "id": "src/functions/lap.ts",
+      "path": ".local/katex-0.18.11/package/src/functions/lap.ts",
+      "sha256": "e8635a2d39b27c3aa195ef6e04ba41259a7af8830d1847e54cee8a7d5a7a6369"
+    },
+    {
+      "id": "src/functions/rule.ts",
+      "path": ".local/katex-0.18.11/package/src/functions/rule.ts",
+      "sha256": "6653da2a6d19e7088a94e183b58b84613efe52c346eab699f8b53c30310798b9"
+    },
+    {
+      "id": "src/functions/raisebox.ts",
+      "path": ".local/katex-0.18.11/package/src/functions/raisebox.ts",
+      "sha256": "03188879d689525508c0488b352695e74749fa89e0fdc687fbf92a1d49a224bc"
+    },
+    {
+      "id": "src/functions/enclose.ts",
+      "path": ".local/katex-0.18.11/package/src/functions/enclose.ts",
+      "sha256": "29a55bbe218a9248a6559a8f094e0acf33cde8b6847b62eb50d343495d71fbb8"
+    },
+    {
+      "id": "src/functions/reflectbox.ts",
+      "path": ".local/katex-0.18.11/package/src/functions/reflectbox.ts",
+      "sha256": "468e3fc5ca118f267f0515e1f7de7a138acb7c53757b831b968c29b5d7e9fe78"
+    },
+    {
+      "id": "src/functions/pmb.ts",
+      "path": ".local/katex-0.18.11/package/src/functions/pmb.ts",
+      "sha256": "7e82813c396939c8ff439d44a24564ea2279fa1fcf6600d7d114d750f0fd8eb1"
+    },
+    {
+      "id": "src/functions/vcenter.ts",
+      "path": ".local/katex-0.18.11/package/src/functions/vcenter.ts",
+      "sha256": "6274035078e962a53169f590fa66d737fb1e1d0e335eab06a9b979700fa6460f"
+    },
+    {
+      "id": "src/functions/mathchoice.ts",
+      "path": ".local/katex-0.18.11/package/src/functions/mathchoice.ts",
+      "sha256": "cc148d0086a9f157ef74c000798f807969de4e123f83095eeac9ef3ff24dceec"
+    },
+    {
+      "id": "src/functions/def.ts",
+      "path": ".local/katex-0.18.11/package/src/functions/def.ts",
+      "sha256": "e1b9227b9e436968a0776f95596d0713d2f655465fabdade7f48940a7e6289e5"
+    },
+    {
+      "id": "src/functions/href.ts",
+      "path": ".local/katex-0.18.11/package/src/functions/href.ts",
+      "sha256": "fddf577b3e748f60c9cd3e1fd4d1f640e03877ec185c2964646021e42b08ef93"
+    },
+    {
+      "id": "src/functions/htmlmathml.ts",
+      "path": ".local/katex-0.18.11/package/src/functions/htmlmathml.ts",
+      "sha256": "b41f8267a62e2b668e828d6aeb072a2b6506f69339f8d0194083d98d306d9f1f"
+    },
+    {
+      "id": "src/functions/cr.ts",
+      "path": ".local/katex-0.18.11/package/src/functions/cr.ts",
+      "sha256": "ec4934b1c96458df9752a0dd7d49b8190fe5cc85daf5a95369ebca1876dd6a49"
+    },
+    {
+      "id": "src/environments/array.ts",
+      "path": ".local/katex-0.18.11/package/src/environments/array.ts",
+      "sha256": "623b540461126519249547e39e7da7a148ff86efd3552b02292ee57ed9a17f60"
+    },
+    {
+      "id": "test/katex-spec.ts",
+      "path": ".local/upstream-katex/test/katex-spec.ts",
+      "sha256": "a06a541b496a3d52afa2fc25ebc076e671fa702c6aae9a81ba9bf99df4cbfd66"
+    },
+    {
+      "id": "test/unicode-spec.ts",
+      "path": ".local/upstream-katex/test/unicode-spec.ts",
+      "sha256": "0fdebab0d2fc0f9df780294cbf51100a71cd01a3c2a518dac43e15bc98e9ccc4"
+    },
+    {
+      "id": "test/errors-spec.ts",
+      "path": ".local/upstream-katex/test/errors-spec.ts",
+      "sha256": "de94024a7affb7334325ec488a3d8f1c024d35a136fc940415e95c498c807898"
+    },
+    {
+      "id": "native:AGENTS.md",
+      "path": "AGENTS.md",
+      "sha256": "8c56d0c77ff9d4e481f5849d3652174c58361aed0544b750aff977aef7527b94"
+    },
+    {
+      "id": "native:docs/INTERFACES.md",
+      "path": "docs/INTERFACES.md",
+      "sha256": "ddee6f71b2ca8e822a7de3435b3c19497a25133f3f0a322dd897e56eaf7308ff"
+    },
+    {
+      "id": "native:docs/AST.md",
+      "path": "docs/AST.md",
+      "sha256": "1bc583745b0ad54fdd85aa4059687e51be91f327328efc52b9d3a1e4564ae187"
+    }
+  ],
+  "sourceSymbols": {
+    "src/Lexer.ts": [
+      "lex/tokenRegexString/category codes/comments/combining accents/verb"
+    ],
+    "src/Parser.ts": [
+      "parseExpression/parseAtom/parseFunction/parseGroup/parseSymbol/parseColorGroup/parseSizeGroup"
+    ],
+    "src/MacroExpander.ts": [
+      "consumeArg/consumeArgs/expandOnce/expandNextToken/expandTokens/expandMacroAsText"
+    ],
+    "src/Namespace.ts": [
+      "beginGroup/endGroup/get/set/global undo handling"
+    ],
+    "src/functions/def.ts": [
+      "def/gdef/edef/xdef/let/global/long"
+    ],
+    "src/macros.ts": [
+      "newcommand/renewcommand/providecommand/noexpand/expandafter/firstoftwo/secondoftwo/ifnextchar/TextOrMath/char/dots/console tools"
+    ],
+    "src/environments/array.ts": [
+      "parseArray/array/matrix*/subarray/cases/aligned/gather/equation/arraystretch"
+    ],
+    "test/katex-spec.ts": [
+      "A subscript and superscript parser",
+      "A genfrac builder",
+      "A text parser",
+      "A color parser",
+      "A delimiter sizing parser",
+      "A begin/end parser",
+      "A TeX-compliant parser",
+      "Macro expansion and definitions/newcommand/let/noexpand/edef specs"
+    ]
+  },
+  "scopeDistinctions": {
+    "sourcePositiveSemantics": "Mathematical grammar and source function/macro values mapped to native AST kinds. Display environments are checked at grammar level; display-mode rendering restrictions belong to root option/layout oracle tests.",
+    "sourceNegativeSemantics": "Illegal groups, unknown commands/environments, missing arguments, duplicate explicit scripts, invalid delimiters, invalid dimensions/colors and invalid definition syntax.",
+    "nativePolicy": "No host/network/navigation, immutable AST, request isolation, explicit unsupported known-valid source branches, native max_depth/max_nodes/token bounds and original codepoint provenance. These are not falsely labelled official KaTeX parse errors.",
+    "pendingSourceValidBranches": [
+      "htmlClass/htmlStyle/includegraphics",
+      "CD",
+      "Braket dynamic helper",
+      "explicit tag macro"
+    ],
+    "knownStaticSuspicionsForFirstRun": [
+      "Parser.ts Unicode script branch overwrites earlier script without duplicate check; P1 rejects it. Preserve first-run result before any change.",
+      "genfrac.ts above bar size zero must omit bar; P1 hasBar handling may differ.",
+      "Source newcommand accepts whitespace count and count ten; P1 uses tighter validation.",
+      "functions/def.ts permits non-control active tokens such as 0/~; P1 requires backslash command names.",
+      "Source parseFunction rejects math-only fraction in text; P1 mode restrictions may be too permissive.",
+      "equation/split must reject extra alignment tabs; P1 environment validation may be incomplete.",
+      "Source noexpand preserves edef token for later expansion; P1 noexpand implementation requires first-run verification."
+    ]
+  },
+  "limitations": [
+    "No behavior test, parse/layout/render, test collection invoking imports, official oracle or pixel comparison executed by this P2 work.",
+    "115 test methods and their subtest matrices are neither full command compatibility nor measured branch coverage.",
+    "Known source-valid unsupported cases remain separate native-boundary assertions; they must not become oracle syntax-negative fixtures.",
+    "No production, data, layout, API, Canvas, Mermaid or tool file modified.",
+    "Installation validation, commit and push remain outside authorization."
+  ],
+  "behaviorExecuted": true,
+  "productSourceChanged": true,
+  "mechanicalEvidence": "test-runs/MATH-record-20261105T115815Z-4042ff8d/run.json",
+  "p3RepairBatch": {
+    "phase": "P3",
+    "status": "targeted_tests_passed",
+    "initialFailingRun": "test-runs/MATH-batch-20261105T120246Z-de639d13",
+    "officialDiagnostic": "test-runs/MATH-parser-official-diagnostic-20261105T120544Z-93070e85",
+    "modeExtractionEvidence": "C:/code/py-visactor/py-katex/test-runs/MATH-parser-mode-source-map-20261105T120953Z-75d199b8",
+    "originalInputsPreserved": "Initial joint source snapshot and unchanged first-run logs retained in initialFailingRun. No failure evidence overwritten.",
+    "fixes": [
+      {
+        "id": "unicode-script-assignment",
+        "source": "Parser.ts parseAtom Unicode branch assigns previous sub/sup",
+        "change": "Unicode scripts overwrite same-side prior script; explicit duplicate ^/_ still reject."
+      },
+      {
+        "id": "above-zero-rule",
+        "source": "functions/genfrac.ts above handler hasBarLine = barSize.number > 0",
+        "change": "Zero or negative above thickness retains value and omits rule."
+      },
+      {
+        "id": "mode-and-primitive-table",
+        "source": "Parser.ts parseFunction; MacroExpander.ts isExpandable; all296 named function registration objects",
+        "change": "Static pure Python mode/primitive metadata enforces math/text mode and supplies exact primitive distinction for noexpand."
+      },
+      {
+        "id": "array-columns",
+        "source": "environments/array.ts parseArray maxNumCols with singleRow or colSeparationType",
+        "change": "equation limits one column, split two; normal array extra columns remain source nonfatal in default non-strict mode."
+      },
+      {
+        "id": "escaped-hash-count",
+        "source": "MacroExpander.ts _getExpansion strips ## before numbered parameter inference",
+        "change": "Skip escaped hash pairs during literal macro argument-count inference; blue/red/etc no longer spuriously consume color digits as args."
+      },
+      {
+        "id": "newcommand-count",
+        "source": "macros.ts newcommand /^\\s*[0-9]+\\s*$/ and katex-spec.ts explicit count10",
+        "change": "Allow source whitespace/count10; native argument-allocation budget remains max_nodes."
+      },
+      {
+        "id": "active-definition-names",
+        "source": "functions/def.ts checkControlSequence rejects only source reserved single tokens",
+        "change": "Accept ordinary active token names such as0/~, preserving request scope."
+      },
+      {
+        "id": "noexpand-context",
+        "source": "MacroExpander.ts expandNextToken versus expandTokens treatAsRelax behavior; letCommand unexpandable flag",
+        "change": "Keep noexpand token identity when fully expanding edef replacement; relax only normal parser expansion. Preserve primitive let aliases and count expanded output toward budget."
+      },
+      {
+        "id": "neq-test-interpretation",
+        "classification": "test projection error, not product symbol error",
+        "source": "official fixed __parse and source symbols.ts @not Main U+E020",
+        "change": "Handwritten expected native visual glyph stream corrected from U+2260 to U+E020+equal and assert rlap overlay; original first-run failure retained. MathML-only single glyph is not substituted into visual AST."
+      }
+    ],
+    "regressions": [
+      {
+        "path": "tests/test_parser.py",
+        "methodCount": 67,
+        "evidence": "test-runs/MATH-record-20261105T120855Z-f70becc0/run.json"
+      },
+      {
+        "path": "tests/test_macros.py",
+        "methodCount": 53,
+        "evidence": "test-runs/MATH-record-20261105T120855Z-52c14ea4/run.json"
+      }
+    ],
+    "totalTargetedMethods": 120,
+    "fullSuiteExecuted": false,
+    "renderingExecutedByThisWorker": false,
+    "productFiles": [
+      {
+        "path": "src/py_katex/parser.py",
+        "sha256": "a448e66a11439a005c083ffbe3a2f0b08676fc3edb789b59a4b3d27da7f152c4"
+      },
+      {
+        "path": "src/py_katex/macros.py",
+        "sha256": "655bfab3f0d60b55275846eb52267fa0963e5f687d8fb91e15b0b602df55c9ab"
+      },
+      {
+        "path": "src/py_katex/unicode_scripts.py",
+        "sha256": "e4da87d793f4775d81970f180a2e51861e70bccbfa5bce4ec0ba786611abfacb"
+      },
+      {
+        "path": "src/py_katex/function_modes.py",
+        "sha256": "1688d9c54c78c258a1024476fb3e2048bc591202a546da0965b7bfcc14716b8b"
+      },
+      {
+        "path": "docs/AST.md",
+        "sha256": "34e968890b59da17d484971a08d99e09e5a2c85ba6ccf3debb1f60b7f675cc0e"
+      }
+    ],
+    "remainingScope": "Pending registered functions/dynamic macros from P1 remain explicit; targeted tests do not claim full KaTeX compatibility."
+  },
+  "initialPhaseBehaviorExecuted": false,
+  "finalVerification": {
+    "status": "PASS_NATIVE_STATIC_ALPHA_LOCAL",
+    "summary": "references/verification-summary.json",
+    "jointSourceSHA256": {
+      "math": "6e11f0a8f9f88c78fb387faf4429cfea72781a4e961328bf53299625bea2cb80",
+      "mermaid": "6e37306deb59a5eb21a2bcceedd66c128a2367f392b094854e2e9bdb3e0e4088"
+    },
+    "unitRun": "test-runs/MATH-batch-20261105T121812Z-f140829a",
+    "visualRun": "test-runs/MATH-batch-20261105T121812Z-73861ed7",
+    "scopeCaveat": "Earlier phase fields retained as history; no full KaTeX compatibility claim"
+  }
+}

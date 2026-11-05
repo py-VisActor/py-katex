@@ -1,0 +1,3297 @@
+{
+  "schema": "py-katex-parser-sources/v1",
+  "version": "0.18.11",
+  "upstreamCommit": "d5bed9f38a8d747b9c4a12e18897a514707e1c26",
+  "phase": "P3",
+  "status": "targeted_tests_passed",
+  "contract": "docs/AST.md",
+  "sources": [
+    {
+      "path": "src/functions/accent.ts",
+      "sha256": "dda6b456e07c6e06b74dcacc7a5dbb07131ae6fc0e7bece477518cb632ff43ff",
+      "symbols": [
+        "\\acute",
+        "\\grave",
+        "\\ddot",
+        "\\tilde",
+        "\\bar",
+        "\\breve",
+        "\\check",
+        "\\hat",
+        "\\vec",
+        "\\dot",
+        "\\mathring",
+        "\\widecheck",
+        "\\widehat",
+        "\\widetilde",
+        "\\overrightarrow",
+        "\\overleftarrow",
+        "\\Overrightarrow",
+        "\\overleftrightarrow",
+        "\\overgroup",
+        "\\overlinesegment",
+        "\\overleftharpoon",
+        "\\overrightharpoon",
+        "\\'",
+        "\\`",
+        "\\^",
+        "\\~",
+        "\\=",
+        "\\u",
+        "\\.",
+        "\\\"",
+        "\\c",
+        "\\r",
+        "\\H",
+        "\\v",
+        "\\textcircled"
+      ]
+    },
+    {
+      "path": "src/functions/accentunder.ts",
+      "sha256": "71203e0e43e43cf85633afab70a788c386ff4e39f6da32f630c070174dfe7333",
+      "symbols": [
+        "\\underleftarrow",
+        "\\underrightarrow",
+        "\\underleftrightarrow",
+        "\\undergroup",
+        "\\underlinesegment",
+        "\\utilde"
+      ]
+    },
+    {
+      "path": "src/functions/arrow.ts",
+      "sha256": "5c56a8a89b19e9d7b8c29563fc3e266a5fcd880d7b49e113d3a627bc3a4af89d",
+      "symbols": [
+        "\\xleftarrow",
+        "\\xrightarrow",
+        "\\xLeftarrow",
+        "\\xRightarrow",
+        "\\xleftrightarrow",
+        "\\xLeftrightarrow",
+        "\\xhookleftarrow",
+        "\\xhookrightarrow",
+        "\\xmapsto",
+        "\\xrightharpoondown",
+        "\\xrightharpoonup",
+        "\\xleftharpoondown",
+        "\\xleftharpoonup",
+        "\\xrightleftharpoons",
+        "\\xleftrightharpoons",
+        "\\xlongequal",
+        "\\xtwoheadrightarrow",
+        "\\xtwoheadleftarrow",
+        "\\xtofrom",
+        "\\xrightleftarrows",
+        "\\xrightequilibrium",
+        "\\xleftequilibrium",
+        "\\\\cdrightarrow",
+        "\\\\cdleftarrow",
+        "\\\\cdlongequal"
+      ]
+    },
+    {
+      "path": "src/functions/char.ts",
+      "sha256": "66fc6783c6bde698033b3205de180224f6495ee972453f0d867b8b792a2cf0da",
+      "symbols": [
+        "\\@char"
+      ]
+    },
+    {
+      "path": "src/functions/color.ts",
+      "sha256": "f984e013b3e9971e8007b8dade637f5c09c42b810df0dbb65bf9d25fc3d641d4",
+      "symbols": [
+        "\\textcolor",
+        "\\color"
+      ]
+    },
+    {
+      "path": "src/functions/cr.ts",
+      "sha256": "ec4934b1c96458df9752a0dd7d49b8190fe5cc85daf5a95369ebca1876dd6a49",
+      "symbols": [
+        "\\\\"
+      ]
+    },
+    {
+      "path": "src/functions/def.ts",
+      "sha256": "e1b9227b9e436968a0776f95596d0713d2f655465fabdade7f48940a7e6289e5",
+      "symbols": [
+        "\\global",
+        "\\long",
+        "\\\\globallong",
+        "\\def",
+        "\\gdef",
+        "\\edef",
+        "\\xdef",
+        "\\let",
+        "\\\\globallet",
+        "\\futurelet",
+        "\\\\globalfuture"
+      ]
+    },
+    {
+      "path": "src/functions/delimsizing.ts",
+      "sha256": "323593436330d3ae57d370955c6ed4467e2eb24f8db3cc04dd810bfca8e45e9e",
+      "symbols": [
+        "\\bigl",
+        "\\Bigl",
+        "\\biggl",
+        "\\Biggl",
+        "\\bigr",
+        "\\Bigr",
+        "\\biggr",
+        "\\Biggr",
+        "\\bigm",
+        "\\Bigm",
+        "\\biggm",
+        "\\Biggm",
+        "\\big",
+        "\\Big",
+        "\\bigg",
+        "\\Bigg",
+        "\\right",
+        "\\left",
+        "\\middle"
+      ]
+    },
+    {
+      "path": "src/functions/enclose.ts",
+      "sha256": "29a55bbe218a9248a6559a8f094e0acf33cde8b6847b62eb50d343495d71fbb8",
+      "symbols": [
+        "\\colorbox",
+        "\\fcolorbox",
+        "\\fbox",
+        "\\cancel",
+        "\\bcancel",
+        "\\xcancel",
+        "\\phase",
+        "\\sout",
+        "\\angl"
+      ]
+    },
+    {
+      "path": "src/functions/environment.ts",
+      "sha256": "6a0fe0788b6c8464d52d5a65211125c0ef57fa0695ebbf6ccf7a029b783d6556",
+      "symbols": [
+        "\\begin",
+        "\\end"
+      ]
+    },
+    {
+      "path": "src/functions/font.ts",
+      "sha256": "44c87d85ec5c123d315a8e4fb63920ad1edbb763618e84a050a8a8ff88b8d00d",
+      "symbols": [
+        "\\mathrm",
+        "\\mathit",
+        "\\mathbf",
+        "\\mathnormal",
+        "\\mathsfit",
+        "\\mathbb",
+        "\\mathcal",
+        "\\mathfrak",
+        "\\mathscr",
+        "\\mathsf",
+        "\\mathtt",
+        "\\Bbb",
+        "\\bold",
+        "\\frak",
+        "\\boldsymbol",
+        "\\bm",
+        "\\rm",
+        "\\sf",
+        "\\tt",
+        "\\bf",
+        "\\it",
+        "\\cal"
+      ]
+    },
+    {
+      "path": "src/functions/genfrac.ts",
+      "sha256": "c461e8a5363a992e67adbe4c1312723c928be836fe47ee851ae9869e48998538",
+      "symbols": [
+        "\\cfrac",
+        "\\dfrac",
+        "\\frac",
+        "\\tfrac",
+        "\\dbinom",
+        "\\binom",
+        "\\tbinom",
+        "\\\\atopfrac",
+        "\\\\bracefrac",
+        "\\\\brackfrac",
+        "\\over",
+        "\\choose",
+        "\\atop",
+        "\\brace",
+        "\\brack",
+        "\\genfrac",
+        "\\above",
+        "\\\\abovefrac"
+      ]
+    },
+    {
+      "path": "src/functions/hbox.ts",
+      "sha256": "e7aa1cd26792786f88a67631a30494a807a26365d0ec653811fbb0d6ab54fa7c",
+      "symbols": [
+        "\\hbox"
+      ]
+    },
+    {
+      "path": "src/functions/horizBrace.ts",
+      "sha256": "9e20b9a3cb406bf39d83b44aecd153f1f5084f3a11c54affd979130f156326be",
+      "symbols": [
+        "\\overbrace",
+        "\\underbrace",
+        "\\overbracket",
+        "\\underbracket"
+      ]
+    },
+    {
+      "path": "src/functions/href.ts",
+      "sha256": "fddf577b3e748f60c9cd3e1fd4d1f640e03877ec185c2964646021e42b08ef93",
+      "symbols": [
+        "\\href",
+        "\\url"
+      ]
+    },
+    {
+      "path": "src/functions/html.ts",
+      "sha256": "4f5fe66b6ce181af459136bcaed9b1655fbe03493f96148d4ee5eddca6829ff5",
+      "symbols": [
+        "\\htmlClass",
+        "\\htmlId",
+        "\\htmlStyle",
+        "\\htmlData"
+      ]
+    },
+    {
+      "path": "src/functions/htmlmathml.ts",
+      "sha256": "b41f8267a62e2b668e828d6aeb072a2b6506f69339f8d0194083d98d306d9f1f",
+      "symbols": [
+        "\\html@mathml"
+      ]
+    },
+    {
+      "path": "src/functions/includegraphics.ts",
+      "sha256": "dd1ea2395ae66d58dc272dd6083d4f6e0551d486b2c779f0a7b618088e35c4e8",
+      "symbols": [
+        "\\includegraphics"
+      ]
+    },
+    {
+      "path": "src/functions/kern.ts",
+      "sha256": "15ebbb72bf615ef75147e7542961b638f420441335f43af06f562f02b8e29140",
+      "symbols": [
+        "\\kern",
+        "\\mkern",
+        "\\hskip",
+        "\\mskip"
+      ]
+    },
+    {
+      "path": "src/functions/lap.ts",
+      "sha256": "e8635a2d39b27c3aa195ef6e04ba41259a7af8830d1847e54cee8a7d5a7a6369",
+      "symbols": [
+        "\\mathllap",
+        "\\mathrlap",
+        "\\mathclap"
+      ]
+    },
+    {
+      "path": "src/functions/math.ts",
+      "sha256": "0d69cb2a50bf577e119e366f170f3d2b226c4cbeb1e4fef7f51ff25fe3e53298",
+      "symbols": [
+        "\\(",
+        "$",
+        "\\)",
+        "\\]"
+      ]
+    },
+    {
+      "path": "src/functions/mathchoice.ts",
+      "sha256": "cc148d0086a9f157ef74c000798f807969de4e123f83095eeac9ef3ff24dceec",
+      "symbols": [
+        "\\mathchoice"
+      ]
+    },
+    {
+      "path": "src/functions/mclass.ts",
+      "sha256": "1a8c5f5a657bf99737792ddaa0c3a48d7cdacd977c4640554b953d8f6dcbdce1",
+      "symbols": [
+        "\\mathord",
+        "\\mathbin",
+        "\\mathrel",
+        "\\mathopen",
+        "\\mathclose",
+        "\\mathpunct",
+        "\\mathinner",
+        "\\@binrel",
+        "\\stackrel",
+        "\\overset",
+        "\\underset"
+      ]
+    },
+    {
+      "path": "src/functions/op.ts",
+      "sha256": "a04557b2f14cccd7927b8ea60cdf3f7df649abe52ed3b81748145538deb25a9d",
+      "symbols": [
+        "\\coprod",
+        "\\bigvee",
+        "\\bigwedge",
+        "\\biguplus",
+        "\\bigcap",
+        "\\bigcup",
+        "\\intop",
+        "\\prod",
+        "\\sum",
+        "\\bigotimes",
+        "\\bigoplus",
+        "\\bigodot",
+        "\\bigsqcup",
+        "\\smallint",
+        "∏",
+        "∐",
+        "∑",
+        "⋀",
+        "⋁",
+        "⋂",
+        "⋃",
+        "⨀",
+        "⨁",
+        "⨂",
+        "⨄",
+        "⨆",
+        "\\mathop",
+        "\\arcsin",
+        "\\arccos",
+        "\\arctan",
+        "\\arctg",
+        "\\arcctg",
+        "\\arg",
+        "\\ch",
+        "\\cos",
+        "\\cosec",
+        "\\cosh",
+        "\\cot",
+        "\\cotg",
+        "\\coth",
+        "\\csc",
+        "\\ctg",
+        "\\cth",
+        "\\deg",
+        "\\dim",
+        "\\exp",
+        "\\hom",
+        "\\ker",
+        "\\lg",
+        "\\ln",
+        "\\log",
+        "\\sec",
+        "\\sin",
+        "\\sinh",
+        "\\sh",
+        "\\tan",
+        "\\tanh",
+        "\\tg",
+        "\\th",
+        "\\det",
+        "\\gcd",
+        "\\inf",
+        "\\lim",
+        "\\max",
+        "\\min",
+        "\\Pr",
+        "\\sup",
+        "\\int",
+        "\\iint",
+        "\\iiint",
+        "\\oint",
+        "\\oiint",
+        "\\oiiint",
+        "∫",
+        "∬",
+        "∭",
+        "∮",
+        "∯",
+        "∰"
+      ]
+    },
+    {
+      "path": "src/functions/operatorname.ts",
+      "sha256": "8ba05f2e8dd6cd239d67c3305dab773ded3dab5cb2a596e99351f3f9c0e01c7b",
+      "symbols": [
+        "\\operatorname@",
+        "\\operatornamewithlimits"
+      ]
+    },
+    {
+      "path": "src/functions/ordgroup.ts",
+      "sha256": "e25553e23f3223eae7e5eac16387241d44002b66e52250bdb71edb2c68713569",
+      "symbols": []
+    },
+    {
+      "path": "src/functions/overline.ts",
+      "sha256": "c1e98a5ecc6747fdeb8c90739d9435319593bd2914e0158dd3bab141c23753b1",
+      "symbols": [
+        "\\overline"
+      ]
+    },
+    {
+      "path": "src/functions/phantom.ts",
+      "sha256": "0a07fa74d2af167a9d8c86a338b35ab6224937197488e33321a0c5ed498214cf",
+      "symbols": [
+        "\\phantom",
+        "\\vphantom"
+      ]
+    },
+    {
+      "path": "src/functions/pmb.ts",
+      "sha256": "7e82813c396939c8ff439d44a24564ea2279fa1fcf6600d7d114d750f0fd8eb1",
+      "symbols": [
+        "\\pmb"
+      ]
+    },
+    {
+      "path": "src/functions/raisebox.ts",
+      "sha256": "03188879d689525508c0488b352695e74749fa89e0fdc687fbf92a1d49a224bc",
+      "symbols": [
+        "\\raisebox"
+      ]
+    },
+    {
+      "path": "src/functions/reflectbox.ts",
+      "sha256": "468e3fc5ca118f267f0515e1f7de7a138acb7c53757b831b968c29b5d7e9fe78",
+      "symbols": [
+        "\\reflectbox",
+        "\\mathreflectbox"
+      ]
+    },
+    {
+      "path": "src/functions/relax.ts",
+      "sha256": "92424c0c9911b1b5e3829933068d7bb5a6a12e1c5549271cdb6115f4e288fe22",
+      "symbols": [
+        "\\relax"
+      ]
+    },
+    {
+      "path": "src/functions/rule.ts",
+      "sha256": "6653da2a6d19e7088a94e183b58b84613efe52c346eab699f8b53c30310798b9",
+      "symbols": [
+        "\\rule"
+      ]
+    },
+    {
+      "path": "src/functions/sizing.ts",
+      "sha256": "6bfc375f192a772fa9429a79a59c93cb9fe17c0fb15322f9679384d54d5afbd8",
+      "symbols": []
+    },
+    {
+      "path": "src/functions/smash.ts",
+      "sha256": "d2b066e91dcd8fde540beeffbba5bd0a500852593897face2dac2098d1cafac8",
+      "symbols": [
+        "\\smash"
+      ]
+    },
+    {
+      "path": "src/functions/sqrt.ts",
+      "sha256": "99347b6bb9d43e5b5a0f3c8462b36b32a9c351ab6325bd90e157cb7b809815fa",
+      "symbols": [
+        "\\sqrt"
+      ]
+    },
+    {
+      "path": "src/functions/styling.ts",
+      "sha256": "f5a83e7f147b8d329eebfe681c00157e035b6f39a9592e0bf98d47bb5dd0ce35",
+      "symbols": [
+        "\\displaystyle",
+        "\\textstyle",
+        "\\scriptstyle",
+        "\\scriptscriptstyle"
+      ]
+    },
+    {
+      "path": "src/functions/supsub.ts",
+      "sha256": "678fa75ede89b9590fcdcfbca9da35c377184fe0958506fc3825482d3abd2b1b",
+      "symbols": []
+    },
+    {
+      "path": "src/functions/symbolsOp.ts",
+      "sha256": "78aedc6446df270bd0e3916ecdba0e9b27eb079052bff403d8c9e33637e6e9ed",
+      "symbols": []
+    },
+    {
+      "path": "src/functions/symbolsOrd.ts",
+      "sha256": "07708c52f2ba449467eb80d81cc1040c2eb0a9a19cbd6fb793f0c74794523550",
+      "symbols": []
+    },
+    {
+      "path": "src/functions/symbolsSpacing.ts",
+      "sha256": "28bdc1bce42dbd013491b817c24fd36c56360adbe371fce3091fe2f05b46b3e1",
+      "symbols": []
+    },
+    {
+      "path": "src/functions/tag.ts",
+      "sha256": "281a3cfd5afb46e2f1bd057018c5cd5964cc0a558ab1da05499cc56bb83343c7",
+      "symbols": []
+    },
+    {
+      "path": "src/functions/text.ts",
+      "sha256": "0141e26c0d8251434eb1c1e56324f0b7220fecf11dad9d3f20b4557043ab63e6",
+      "symbols": [
+        "\\text",
+        "\\textrm",
+        "\\textsf",
+        "\\texttt",
+        "\\textnormal",
+        "\\textbf",
+        "\\textmd",
+        "\\textit",
+        "\\textup",
+        "\\emph"
+      ]
+    },
+    {
+      "path": "src/functions/underline.ts",
+      "sha256": "1f76a0f2b86604387a376bdebba4a384e2e9bd618ea715b97d6617c5a5da607c",
+      "symbols": [
+        "\\underline"
+      ]
+    },
+    {
+      "path": "src/functions/vcenter.ts",
+      "sha256": "6274035078e962a53169f590fa66d737fb1e1d0e335eab06a9b979700fa6460f",
+      "symbols": [
+        "\\vcenter"
+      ]
+    },
+    {
+      "path": "src/functions/verb.ts",
+      "sha256": "d08b52ef375213aa97cd5a3573b43719e263ac566cb15fc0c89cba331846514d",
+      "symbols": [
+        "\\verb"
+      ]
+    },
+    {
+      "path": "src/environments/array.ts",
+      "sha256": "623b540461126519249547e39e7da7a148ff86efd3552b02292ee57ed9a17f60",
+      "symbols": [
+        "array",
+        "darray",
+        "matrix",
+        "pmatrix",
+        "bmatrix",
+        "Bmatrix",
+        "vmatrix",
+        "Vmatrix",
+        "matrix*",
+        "pmatrix*",
+        "bmatrix*",
+        "Bmatrix*",
+        "vmatrix*",
+        "Vmatrix*",
+        "smallmatrix",
+        "subarray",
+        "cases",
+        "dcases",
+        "rcases",
+        "drcases",
+        "align",
+        "align*",
+        "aligned",
+        "split",
+        "gathered",
+        "gather",
+        "gather*",
+        "alignat",
+        "alignat*",
+        "alignedat",
+        "equation",
+        "equation*",
+        "CD",
+        "\\hline",
+        "\\hdashline"
+      ]
+    },
+    {
+      "path": "src/environments/cd.ts",
+      "sha256": "432889c62cb7bfb0fd971d9deea20f822ea78cd92aded20e6439559a89466533",
+      "symbols": [
+        "\\\\cdleft",
+        "\\\\cdright",
+        "\\\\cdparent"
+      ]
+    },
+    {
+      "path": "src/Lexer.ts",
+      "sha256": "9c783877051619e6a71cf3ed95ce5935ceb869772585d09811f84f57ab5818bb"
+    },
+    {
+      "path": "src/Parser.ts",
+      "sha256": "c1aed05097bb0c429b7e1b5fe0862a7db515bd1682b014d6775edeb2e8da0e6a"
+    },
+    {
+      "path": "src/MacroExpander.ts",
+      "sha256": "dca51df6efae6c4f958c2313d566910f4857db7e4930c216c88de6cb3aeb4b27"
+    },
+    {
+      "path": "src/Namespace.ts",
+      "sha256": "ea3e7f8e0aa100c5639120ad4590b7ff7a9592afca8a766badc1f59dfaab4f43"
+    },
+    {
+      "path": "src/macros.ts",
+      "sha256": "13adf540091b6c4d4a31bcd65fe325b74beffc37f2ddb8017f52d024c73a1fdc"
+    },
+    {
+      "path": "src/units.ts",
+      "sha256": "09e9e034abfb99210cdf393ca0c639af0e34b017613a05fca280a76aff12e818"
+    },
+    {
+      "path": "src/unicodeSupOrSub.ts",
+      "sha256": "5e2e71ab0ce483ee6e876e75e80785fca176d970276eb7a576b4283a35acc074"
+    },
+    {
+      "path": "src/symbols.ts",
+      "sha256": "88bf41a79569d9c860292049e897cbd12019dd43f7e3e0044e39ca5deb356b84"
+    }
+  ],
+  "inventory": {
+    "registeredNameEntries": 334,
+    "uniqueRegisteredNames": 334,
+    "sourceEntries": [
+      {
+        "name": "\\acute",
+        "source": "src/functions/accent.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\grave",
+        "source": "src/functions/accent.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\ddot",
+        "source": "src/functions/accent.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\tilde",
+        "source": "src/functions/accent.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\bar",
+        "source": "src/functions/accent.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\breve",
+        "source": "src/functions/accent.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\check",
+        "source": "src/functions/accent.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\hat",
+        "source": "src/functions/accent.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\vec",
+        "source": "src/functions/accent.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\dot",
+        "source": "src/functions/accent.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\mathring",
+        "source": "src/functions/accent.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\widecheck",
+        "source": "src/functions/accent.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\widehat",
+        "source": "src/functions/accent.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\widetilde",
+        "source": "src/functions/accent.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\overrightarrow",
+        "source": "src/functions/accent.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\overleftarrow",
+        "source": "src/functions/accent.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\Overrightarrow",
+        "source": "src/functions/accent.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\overleftrightarrow",
+        "source": "src/functions/accent.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\overgroup",
+        "source": "src/functions/accent.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\overlinesegment",
+        "source": "src/functions/accent.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\overleftharpoon",
+        "source": "src/functions/accent.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\overrightharpoon",
+        "source": "src/functions/accent.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\'",
+        "source": "src/functions/accent.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\`",
+        "source": "src/functions/accent.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\^",
+        "source": "src/functions/accent.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\~",
+        "source": "src/functions/accent.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\=",
+        "source": "src/functions/accent.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\u",
+        "source": "src/functions/accent.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\.",
+        "source": "src/functions/accent.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\\"",
+        "source": "src/functions/accent.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\c",
+        "source": "src/functions/accent.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\r",
+        "source": "src/functions/accent.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\H",
+        "source": "src/functions/accent.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\v",
+        "source": "src/functions/accent.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\textcircled",
+        "source": "src/functions/accent.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\underleftarrow",
+        "source": "src/functions/accentunder.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\underrightarrow",
+        "source": "src/functions/accentunder.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\underleftrightarrow",
+        "source": "src/functions/accentunder.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\undergroup",
+        "source": "src/functions/accentunder.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\underlinesegment",
+        "source": "src/functions/accentunder.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\utilde",
+        "source": "src/functions/accentunder.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\xleftarrow",
+        "source": "src/functions/arrow.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\xrightarrow",
+        "source": "src/functions/arrow.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\xLeftarrow",
+        "source": "src/functions/arrow.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\xRightarrow",
+        "source": "src/functions/arrow.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\xleftrightarrow",
+        "source": "src/functions/arrow.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\xLeftrightarrow",
+        "source": "src/functions/arrow.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\xhookleftarrow",
+        "source": "src/functions/arrow.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\xhookrightarrow",
+        "source": "src/functions/arrow.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\xmapsto",
+        "source": "src/functions/arrow.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\xrightharpoondown",
+        "source": "src/functions/arrow.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\xrightharpoonup",
+        "source": "src/functions/arrow.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\xleftharpoondown",
+        "source": "src/functions/arrow.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\xleftharpoonup",
+        "source": "src/functions/arrow.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\xrightleftharpoons",
+        "source": "src/functions/arrow.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\xleftrightharpoons",
+        "source": "src/functions/arrow.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\xlongequal",
+        "source": "src/functions/arrow.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\xtwoheadrightarrow",
+        "source": "src/functions/arrow.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\xtwoheadleftarrow",
+        "source": "src/functions/arrow.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\xtofrom",
+        "source": "src/functions/arrow.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\xrightleftarrows",
+        "source": "src/functions/arrow.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\xrightequilibrium",
+        "source": "src/functions/arrow.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\xleftequilibrium",
+        "source": "src/functions/arrow.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\\\cdrightarrow",
+        "source": "src/functions/arrow.ts",
+        "category": "functions",
+        "status": "unsupported_explicit_error",
+        "note": "CD internal arrow not implemented"
+      },
+      {
+        "name": "\\\\cdleftarrow",
+        "source": "src/functions/arrow.ts",
+        "category": "functions",
+        "status": "unsupported_explicit_error",
+        "note": "CD internal arrow not implemented"
+      },
+      {
+        "name": "\\\\cdlongequal",
+        "source": "src/functions/arrow.ts",
+        "category": "functions",
+        "status": "unsupported_explicit_error",
+        "note": "CD internal arrow not implemented"
+      },
+      {
+        "name": "\\@char",
+        "source": "src/functions/char.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\textcolor",
+        "source": "src/functions/color.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\color",
+        "source": "src/functions/color.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\\\",
+        "source": "src/functions/cr.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\global",
+        "source": "src/functions/def.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\long",
+        "source": "src/functions/def.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\\\globallong",
+        "source": "src/functions/def.ts",
+        "category": "functions",
+        "status": "internal_semantic_rewrite",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\def",
+        "source": "src/functions/def.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\gdef",
+        "source": "src/functions/def.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\edef",
+        "source": "src/functions/def.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\xdef",
+        "source": "src/functions/def.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\let",
+        "source": "src/functions/def.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\\\globallet",
+        "source": "src/functions/def.ts",
+        "category": "functions",
+        "status": "internal_semantic_rewrite",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\futurelet",
+        "source": "src/functions/def.ts",
+        "category": "functions",
+        "status": "unsupported_explicit_error",
+        "note": "Future-token alias assignment not yet implemented"
+      },
+      {
+        "name": "\\\\globalfuture",
+        "source": "src/functions/def.ts",
+        "category": "functions",
+        "status": "unsupported_explicit_error",
+        "note": "Internal futurelet variant not yet implemented"
+      },
+      {
+        "name": "\\bigl",
+        "source": "src/functions/delimsizing.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\Bigl",
+        "source": "src/functions/delimsizing.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\biggl",
+        "source": "src/functions/delimsizing.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\Biggl",
+        "source": "src/functions/delimsizing.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\bigr",
+        "source": "src/functions/delimsizing.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\Bigr",
+        "source": "src/functions/delimsizing.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\biggr",
+        "source": "src/functions/delimsizing.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\Biggr",
+        "source": "src/functions/delimsizing.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\bigm",
+        "source": "src/functions/delimsizing.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\Bigm",
+        "source": "src/functions/delimsizing.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\biggm",
+        "source": "src/functions/delimsizing.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\Biggm",
+        "source": "src/functions/delimsizing.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\big",
+        "source": "src/functions/delimsizing.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\Big",
+        "source": "src/functions/delimsizing.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\bigg",
+        "source": "src/functions/delimsizing.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\Bigg",
+        "source": "src/functions/delimsizing.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\right",
+        "source": "src/functions/delimsizing.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\left",
+        "source": "src/functions/delimsizing.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\middle",
+        "source": "src/functions/delimsizing.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\colorbox",
+        "source": "src/functions/enclose.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\fcolorbox",
+        "source": "src/functions/enclose.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\fbox",
+        "source": "src/functions/enclose.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\cancel",
+        "source": "src/functions/enclose.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\bcancel",
+        "source": "src/functions/enclose.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\xcancel",
+        "source": "src/functions/enclose.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\phase",
+        "source": "src/functions/enclose.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\sout",
+        "source": "src/functions/enclose.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\angl",
+        "source": "src/functions/enclose.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\begin",
+        "source": "src/functions/environment.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\end",
+        "source": "src/functions/environment.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\mathrm",
+        "source": "src/functions/font.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\mathit",
+        "source": "src/functions/font.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\mathbf",
+        "source": "src/functions/font.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\mathnormal",
+        "source": "src/functions/font.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\mathsfit",
+        "source": "src/functions/font.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\mathbb",
+        "source": "src/functions/font.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\mathcal",
+        "source": "src/functions/font.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\mathfrak",
+        "source": "src/functions/font.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\mathscr",
+        "source": "src/functions/font.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\mathsf",
+        "source": "src/functions/font.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\mathtt",
+        "source": "src/functions/font.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\Bbb",
+        "source": "src/functions/font.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\bold",
+        "source": "src/functions/font.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\frak",
+        "source": "src/functions/font.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\boldsymbol",
+        "source": "src/functions/font.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\bm",
+        "source": "src/functions/font.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\rm",
+        "source": "src/functions/font.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\sf",
+        "source": "src/functions/font.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\tt",
+        "source": "src/functions/font.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\bf",
+        "source": "src/functions/font.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\it",
+        "source": "src/functions/font.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\cal",
+        "source": "src/functions/font.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\cfrac",
+        "source": "src/functions/genfrac.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\dfrac",
+        "source": "src/functions/genfrac.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\frac",
+        "source": "src/functions/genfrac.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\tfrac",
+        "source": "src/functions/genfrac.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\dbinom",
+        "source": "src/functions/genfrac.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\binom",
+        "source": "src/functions/genfrac.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\tbinom",
+        "source": "src/functions/genfrac.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\\\atopfrac",
+        "source": "src/functions/genfrac.ts",
+        "category": "functions",
+        "status": "internal_semantic_rewrite",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\\\bracefrac",
+        "source": "src/functions/genfrac.ts",
+        "category": "functions",
+        "status": "internal_semantic_rewrite",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\\\brackfrac",
+        "source": "src/functions/genfrac.ts",
+        "category": "functions",
+        "status": "internal_semantic_rewrite",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\over",
+        "source": "src/functions/genfrac.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\choose",
+        "source": "src/functions/genfrac.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\atop",
+        "source": "src/functions/genfrac.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\brace",
+        "source": "src/functions/genfrac.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\brack",
+        "source": "src/functions/genfrac.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\genfrac",
+        "source": "src/functions/genfrac.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\above",
+        "source": "src/functions/genfrac.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\\\abovefrac",
+        "source": "src/functions/genfrac.ts",
+        "category": "functions",
+        "status": "internal_semantic_rewrite",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\hbox",
+        "source": "src/functions/hbox.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\overbrace",
+        "source": "src/functions/horizBrace.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\underbrace",
+        "source": "src/functions/horizBrace.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\overbracket",
+        "source": "src/functions/horizBrace.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\underbracket",
+        "source": "src/functions/horizBrace.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\href",
+        "source": "src/functions/href.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\url",
+        "source": "src/functions/href.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\htmlClass",
+        "source": "src/functions/html.ts",
+        "category": "functions",
+        "status": "unsupported_explicit_error",
+        "note": "CSS selector host not represented by native math styles"
+      },
+      {
+        "name": "\\htmlId",
+        "source": "src/functions/html.ts",
+        "category": "functions",
+        "status": "unsupported_explicit_error",
+        "note": "HTML host identity has no native output contract"
+      },
+      {
+        "name": "\\htmlStyle",
+        "source": "src/functions/html.ts",
+        "category": "functions",
+        "status": "unsupported_explicit_error",
+        "note": "Arbitrary CSS style is not parsed by native math renderer"
+      },
+      {
+        "name": "\\htmlData",
+        "source": "src/functions/html.ts",
+        "category": "functions",
+        "status": "unsupported_explicit_error",
+        "note": "HTML data attributes excluded from native output"
+      },
+      {
+        "name": "\\html@mathml",
+        "source": "src/functions/htmlmathml.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\includegraphics",
+        "source": "src/functions/includegraphics.ts",
+        "category": "functions",
+        "status": "unsupported_explicit_error",
+        "note": "External image math command not implemented"
+      },
+      {
+        "name": "\\kern",
+        "source": "src/functions/kern.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\mkern",
+        "source": "src/functions/kern.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\hskip",
+        "source": "src/functions/kern.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\mskip",
+        "source": "src/functions/kern.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\mathllap",
+        "source": "src/functions/lap.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\mathrlap",
+        "source": "src/functions/lap.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\mathclap",
+        "source": "src/functions/lap.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\(",
+        "source": "src/functions/math.ts",
+        "category": "functions",
+        "status": "unsupported_explicit_error",
+        "note": "Nested text/math delimiter control sequence not implemented (dollar text/math switch is supported)"
+      },
+      {
+        "name": "$",
+        "source": "src/functions/math.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\)",
+        "source": "src/functions/math.ts",
+        "category": "functions",
+        "status": "unsupported_explicit_error",
+        "note": "Nested text/math delimiter control sequence not implemented"
+      },
+      {
+        "name": "\\]",
+        "source": "src/functions/math.ts",
+        "category": "functions",
+        "status": "unsupported_explicit_error",
+        "note": "Display delimiter control sequence not implemented"
+      },
+      {
+        "name": "\\mathchoice",
+        "source": "src/functions/mathchoice.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\mathord",
+        "source": "src/functions/mclass.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\mathbin",
+        "source": "src/functions/mclass.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\mathrel",
+        "source": "src/functions/mclass.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\mathopen",
+        "source": "src/functions/mclass.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\mathclose",
+        "source": "src/functions/mclass.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\mathpunct",
+        "source": "src/functions/mclass.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\mathinner",
+        "source": "src/functions/mclass.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\@binrel",
+        "source": "src/functions/mclass.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\stackrel",
+        "source": "src/functions/mclass.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\overset",
+        "source": "src/functions/mclass.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\underset",
+        "source": "src/functions/mclass.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\coprod",
+        "source": "src/functions/op.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\bigvee",
+        "source": "src/functions/op.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\bigwedge",
+        "source": "src/functions/op.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\biguplus",
+        "source": "src/functions/op.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\bigcap",
+        "source": "src/functions/op.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\bigcup",
+        "source": "src/functions/op.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\intop",
+        "source": "src/functions/op.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\prod",
+        "source": "src/functions/op.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\sum",
+        "source": "src/functions/op.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\bigotimes",
+        "source": "src/functions/op.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\bigoplus",
+        "source": "src/functions/op.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\bigodot",
+        "source": "src/functions/op.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\bigsqcup",
+        "source": "src/functions/op.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\smallint",
+        "source": "src/functions/op.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "∏",
+        "source": "src/functions/op.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "∐",
+        "source": "src/functions/op.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "∑",
+        "source": "src/functions/op.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "⋀",
+        "source": "src/functions/op.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "⋁",
+        "source": "src/functions/op.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "⋂",
+        "source": "src/functions/op.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "⋃",
+        "source": "src/functions/op.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "⨀",
+        "source": "src/functions/op.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "⨁",
+        "source": "src/functions/op.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "⨂",
+        "source": "src/functions/op.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "⨄",
+        "source": "src/functions/op.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "⨆",
+        "source": "src/functions/op.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\mathop",
+        "source": "src/functions/op.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\arcsin",
+        "source": "src/functions/op.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\arccos",
+        "source": "src/functions/op.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\arctan",
+        "source": "src/functions/op.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\arctg",
+        "source": "src/functions/op.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\arcctg",
+        "source": "src/functions/op.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\arg",
+        "source": "src/functions/op.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\ch",
+        "source": "src/functions/op.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\cos",
+        "source": "src/functions/op.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\cosec",
+        "source": "src/functions/op.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\cosh",
+        "source": "src/functions/op.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\cot",
+        "source": "src/functions/op.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\cotg",
+        "source": "src/functions/op.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\coth",
+        "source": "src/functions/op.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\csc",
+        "source": "src/functions/op.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\ctg",
+        "source": "src/functions/op.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\cth",
+        "source": "src/functions/op.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\deg",
+        "source": "src/functions/op.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\dim",
+        "source": "src/functions/op.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\exp",
+        "source": "src/functions/op.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\hom",
+        "source": "src/functions/op.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\ker",
+        "source": "src/functions/op.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\lg",
+        "source": "src/functions/op.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\ln",
+        "source": "src/functions/op.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\log",
+        "source": "src/functions/op.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\sec",
+        "source": "src/functions/op.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\sin",
+        "source": "src/functions/op.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\sinh",
+        "source": "src/functions/op.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\sh",
+        "source": "src/functions/op.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\tan",
+        "source": "src/functions/op.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\tanh",
+        "source": "src/functions/op.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\tg",
+        "source": "src/functions/op.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\th",
+        "source": "src/functions/op.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\det",
+        "source": "src/functions/op.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\gcd",
+        "source": "src/functions/op.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\inf",
+        "source": "src/functions/op.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\lim",
+        "source": "src/functions/op.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\max",
+        "source": "src/functions/op.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\min",
+        "source": "src/functions/op.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\Pr",
+        "source": "src/functions/op.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\sup",
+        "source": "src/functions/op.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\int",
+        "source": "src/functions/op.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\iint",
+        "source": "src/functions/op.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\iiint",
+        "source": "src/functions/op.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\oint",
+        "source": "src/functions/op.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\oiint",
+        "source": "src/functions/op.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\oiiint",
+        "source": "src/functions/op.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "∫",
+        "source": "src/functions/op.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "∬",
+        "source": "src/functions/op.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "∭",
+        "source": "src/functions/op.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "∮",
+        "source": "src/functions/op.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "∯",
+        "source": "src/functions/op.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "∰",
+        "source": "src/functions/op.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\operatorname@",
+        "source": "src/functions/operatorname.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\operatornamewithlimits",
+        "source": "src/functions/operatorname.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\overline",
+        "source": "src/functions/overline.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\phantom",
+        "source": "src/functions/phantom.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\vphantom",
+        "source": "src/functions/phantom.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\pmb",
+        "source": "src/functions/pmb.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\raisebox",
+        "source": "src/functions/raisebox.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\reflectbox",
+        "source": "src/functions/reflectbox.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\mathreflectbox",
+        "source": "src/functions/reflectbox.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\relax",
+        "source": "src/functions/relax.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\rule",
+        "source": "src/functions/rule.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\smash",
+        "source": "src/functions/smash.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\sqrt",
+        "source": "src/functions/sqrt.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\displaystyle",
+        "source": "src/functions/styling.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\textstyle",
+        "source": "src/functions/styling.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\scriptstyle",
+        "source": "src/functions/styling.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\scriptscriptstyle",
+        "source": "src/functions/styling.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\text",
+        "source": "src/functions/text.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\textrm",
+        "source": "src/functions/text.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\textsf",
+        "source": "src/functions/text.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\texttt",
+        "source": "src/functions/text.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\textnormal",
+        "source": "src/functions/text.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\textbf",
+        "source": "src/functions/text.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\textmd",
+        "source": "src/functions/text.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\textit",
+        "source": "src/functions/text.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\textup",
+        "source": "src/functions/text.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\emph",
+        "source": "src/functions/text.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\underline",
+        "source": "src/functions/underline.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\vcenter",
+        "source": "src/functions/vcenter.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\verb",
+        "source": "src/functions/verb.ts",
+        "category": "functions",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "array",
+        "source": "src/environments/array.ts",
+        "category": "environments",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "darray",
+        "source": "src/environments/array.ts",
+        "category": "environments",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "matrix",
+        "source": "src/environments/array.ts",
+        "category": "environments",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "pmatrix",
+        "source": "src/environments/array.ts",
+        "category": "environments",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "bmatrix",
+        "source": "src/environments/array.ts",
+        "category": "environments",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "Bmatrix",
+        "source": "src/environments/array.ts",
+        "category": "environments",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "vmatrix",
+        "source": "src/environments/array.ts",
+        "category": "environments",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "Vmatrix",
+        "source": "src/environments/array.ts",
+        "category": "environments",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "matrix*",
+        "source": "src/environments/array.ts",
+        "category": "environments",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "pmatrix*",
+        "source": "src/environments/array.ts",
+        "category": "environments",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "bmatrix*",
+        "source": "src/environments/array.ts",
+        "category": "environments",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "Bmatrix*",
+        "source": "src/environments/array.ts",
+        "category": "environments",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "vmatrix*",
+        "source": "src/environments/array.ts",
+        "category": "environments",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "Vmatrix*",
+        "source": "src/environments/array.ts",
+        "category": "environments",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "smallmatrix",
+        "source": "src/environments/array.ts",
+        "category": "environments",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "subarray",
+        "source": "src/environments/array.ts",
+        "category": "environments",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "cases",
+        "source": "src/environments/array.ts",
+        "category": "environments",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "dcases",
+        "source": "src/environments/array.ts",
+        "category": "environments",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "rcases",
+        "source": "src/environments/array.ts",
+        "category": "environments",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "drcases",
+        "source": "src/environments/array.ts",
+        "category": "environments",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "align",
+        "source": "src/environments/array.ts",
+        "category": "environments",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "align*",
+        "source": "src/environments/array.ts",
+        "category": "environments",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "aligned",
+        "source": "src/environments/array.ts",
+        "category": "environments",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "split",
+        "source": "src/environments/array.ts",
+        "category": "environments",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "gathered",
+        "source": "src/environments/array.ts",
+        "category": "environments",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "gather",
+        "source": "src/environments/array.ts",
+        "category": "environments",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "gather*",
+        "source": "src/environments/array.ts",
+        "category": "environments",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "alignat",
+        "source": "src/environments/array.ts",
+        "category": "environments",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "alignat*",
+        "source": "src/environments/array.ts",
+        "category": "environments",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "alignedat",
+        "source": "src/environments/array.ts",
+        "category": "environments",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "equation",
+        "source": "src/environments/array.ts",
+        "category": "environments",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "equation*",
+        "source": "src/environments/array.ts",
+        "category": "environments",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "CD",
+        "source": "src/environments/array.ts",
+        "category": "environments",
+        "status": "unsupported_explicit_error",
+        "note": "Commutative diagram environment not implemented"
+      },
+      {
+        "name": "\\hline",
+        "source": "src/environments/array.ts",
+        "category": "environments",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\hdashline",
+        "source": "src/environments/array.ts",
+        "category": "environments",
+        "status": "source_family_implemented_unverified",
+        "note": "Inventory linkage only; not a parser/render acceptance claim."
+      },
+      {
+        "name": "\\\\cdleft",
+        "source": "src/environments/cd.ts",
+        "category": "environments",
+        "status": "unsupported_explicit_error",
+        "note": "CD internal node not implemented"
+      },
+      {
+        "name": "\\\\cdright",
+        "source": "src/environments/cd.ts",
+        "category": "environments",
+        "status": "unsupported_explicit_error",
+        "note": "CD internal node not implemented"
+      },
+      {
+        "name": "\\\\cdparent",
+        "source": "src/environments/cd.ts",
+        "category": "environments",
+        "status": "unsupported_explicit_error",
+        "note": "CD internal node not implemented"
+      }
+    ],
+    "literalMacroCount": 315,
+    "literalMacroScope": "Main src/macros.ts only, not all defineMacro registrations in functions/environments. Native functions directly implement semantic handlers after eliminating HTML/MathML wrappers. A packaged macro can still expand to an unsupported branch; loading a macro is not proof of successful compatibility.",
+    "dynamicMacros": [
+      {
+        "name": "\\noexpand",
+        "status": "implemented_unverified",
+        "note": ""
+      },
+      {
+        "name": "\\expandafter",
+        "status": "implemented_unverified",
+        "note": ""
+      },
+      {
+        "name": "\\@firstoftwo",
+        "status": "implemented_unverified",
+        "note": ""
+      },
+      {
+        "name": "\\@secondoftwo",
+        "status": "implemented_unverified",
+        "note": ""
+      },
+      {
+        "name": "\\@ifnextchar",
+        "status": "implemented_unverified",
+        "note": ""
+      },
+      {
+        "name": "\\TextOrMath",
+        "status": "implemented_unverified",
+        "note": ""
+      },
+      {
+        "name": "\\char",
+        "status": "implemented_unverified",
+        "note": ""
+      },
+      {
+        "name": "\\newcommand",
+        "status": "implemented_unverified",
+        "note": "newcommand/renewcommand/providecommand are parser namespace definitions; terminal diagnostics consume input without invoking a host"
+      },
+      {
+        "name": "\\renewcommand",
+        "status": "implemented_unverified",
+        "note": "newcommand/renewcommand/providecommand are parser namespace definitions; terminal diagnostics consume input without invoking a host"
+      },
+      {
+        "name": "\\providecommand",
+        "status": "implemented_unverified",
+        "note": "newcommand/renewcommand/providecommand are parser namespace definitions; terminal diagnostics consume input without invoking a host"
+      },
+      {
+        "name": "\\message",
+        "status": "implemented_unverified",
+        "note": "newcommand/renewcommand/providecommand are parser namespace definitions; terminal diagnostics consume input without invoking a host"
+      },
+      {
+        "name": "\\errmessage",
+        "status": "implemented_unverified",
+        "note": "newcommand/renewcommand/providecommand are parser namespace definitions; terminal diagnostics consume input without invoking a host"
+      },
+      {
+        "name": "\\show",
+        "status": "implemented_unverified",
+        "note": "newcommand/renewcommand/providecommand are parser namespace definitions; terminal diagnostics consume input without invoking a host"
+      },
+      {
+        "name": "\\dots",
+        "status": "implemented_unverified",
+        "note": ""
+      },
+      {
+        "name": "\\dotso",
+        "status": "implemented_unverified",
+        "note": ""
+      },
+      {
+        "name": "\\dotsc",
+        "status": "implemented_unverified",
+        "note": ""
+      },
+      {
+        "name": "\\cdots",
+        "status": "implemented_unverified",
+        "note": ""
+      },
+      {
+        "name": "\\tag@literal",
+        "status": "unsupported_explicit_error",
+        "note": ""
+      },
+      {
+        "name": "\\bra@ket",
+        "status": "unsupported_explicit_error",
+        "note": ""
+      },
+      {
+        "name": "\\bra@set",
+        "status": "unsupported_explicit_error",
+        "note": ""
+      }
+    ],
+    "symbols": "Root-provided complete math/text defineSymbol source data; original token preserved for wide mathematical alphabet font selection.",
+    "unicodeScriptEntries": 102,
+    "dotsByTokenEntries": 47
+  },
+  "semantics": {
+    "lexer": "Control words [A-Za-z@]+ consume following whitespace; control symbols, escaped space, TeX comments, verb delimiters, combining characters and source offsets retained. Invalid characters explicitly rejected.",
+    "macros": "Lazy token queue, request-local stacked namespace, numbered/delimited arguments, local/global def/gdef/edef/xdef, newcommand/renewcommand/providecommand, let, selected context expansion. Macro invocations inherit original position and substituted arguments retain theirs.",
+    "mathFamilies": [
+      "symbols and wide-Unicode identity",
+      "scripts, primes and 102 Unicode scripts",
+      "fractions, infix fractions and genfrac",
+      "roots and indices",
+      "operators, explicit limits and operator names",
+      "automatic/sized/middle delimiters",
+      "fonts, text with embedded math, four styles and sizes, mathchoice",
+      "source color grammar and spacing/dimensions",
+      "accents and horizontal over/under annotations",
+      "phantom/smash/lap/rule/raise/vcenter/reflection/pmb",
+      "arrays, matrix variants, align/gather/equation/cases families, row gaps/rules and arraystretch",
+      "box/cancel/static enclosure effects",
+      "href static content/url text, without interactive metadata"
+    ],
+    "budgets": [
+      "max_expand",
+      "max_depth",
+      "max_nodes",
+      "queued/initial token bound derived from max_nodes"
+    ],
+    "units": "Source 15 absolute/relative TeX units; native dimensions require finite numeric values.",
+    "security": "No eval, exec, JS interpreter, HTML/DOM or network/resource fetching. Unknown controls and environments raise ParseError. Trust does not authorize execution.",
+    "positions": "Python codepoint input offsets; no claim that offsets are UTF16 indices."
+  },
+  "limitations": [
+    "P1 was compile/import/signature only. Current P3 parser/macros targeted tests passed; no full-suite/render acceptance claimed.",
+    "No full KaTeX compatibility percentage is claimed. Source registration-to-family mapping is not measured branch coverage.",
+    "Unsupported registered names and three pending dynamic macros are preserved in the inventory. Static macros invoking them fail explicitly.",
+    "Remaining macro corners: def parameter-text hash-before-brace special case, futurelet and exhaustive optional/group cases. Scoped active definitions and ordinary/edef noexpand branches now have targeted source regressions.",
+    "Automatic equation numbering/tags and CD remain unimplemented. Source equation/split tab bounds and default non-strict array warning behavior have targeted tests; exhaustive strict/mode combinations remain unverified.",
+    "Parser interface currently lacks displayMode/strict/leqno/fleqn options; root layout Options selects visual display style. KaTeX display-only environment restrictions are not asserted equivalent.",
+    "Nested text/math switch supports dollar; explicit parenthesis/bracket mode delimiters remain unsupported.",
+    "HTML class/id/style/data and includegraphics explicitly reject rather than producing misleading success. href/url retain static text only.",
+    "Native parser accepts some direct semantic aliases in addition to source macro rewrites. Complete macro registration inventory beyond main macros.ts is owned by root.",
+    "Unsupported literal symbols/codepoints in downstream font metrics must remain an explicit layout error; parser does not substitute a system font."
+  ],
+  "productFiles": [
+    {
+      "path": "src/py_katex/parser.py",
+      "sha256": "8b14f85c69a6f49a2b19f899ebbf71dc4f8b15a3f3ecb90e04cd30134eec5c3d"
+    },
+    {
+      "path": "src/py_katex/macros.py",
+      "sha256": "3e3aa013487e93b152307b2d2f852a3db3fb246b251f2439e6284a3a849842a6"
+    },
+    {
+      "path": "src/py_katex/unicode_scripts.py",
+      "sha256": "e4da87d793f4775d81970f180a2e51861e70bccbfa5bce4ec0ba786611abfacb"
+    },
+    {
+      "path": "docs/AST.md",
+      "sha256": "1bc583745b0ad54fdd85aa4059687e51be91f327328efc52b9d3a1e4564ae187"
+    }
+  ],
+  "mechanicalEvidence": "test-runs/MATH-record-20261105T115031Z-ffd8e51a/run.json",
+  "behaviorExecuted": true,
+  "testsWritten": true,
+  "p3RepairBatch": {
+    "phase": "P3",
+    "status": "targeted_tests_passed",
+    "initialFailingRun": "test-runs/MATH-batch-20261105T120246Z-de639d13",
+    "officialDiagnostic": "test-runs/MATH-parser-official-diagnostic-20261105T120544Z-93070e85",
+    "modeExtractionEvidence": "C:/code/py-visactor/py-katex/test-runs/MATH-parser-mode-source-map-20261105T120953Z-75d199b8",
+    "originalInputsPreserved": "Initial joint source snapshot and unchanged first-run logs retained in initialFailingRun. No failure evidence overwritten.",
+    "fixes": [
+      {
+        "id": "unicode-script-assignment",
+        "source": "Parser.ts parseAtom Unicode branch assigns previous sub/sup",
+        "change": "Unicode scripts overwrite same-side prior script; explicit duplicate ^/_ still reject."
+      },
+      {
+        "id": "above-zero-rule",
+        "source": "functions/genfrac.ts above handler hasBarLine = barSize.number > 0",
+        "change": "Zero or negative above thickness retains value and omits rule."
+      },
+      {
+        "id": "mode-and-primitive-table",
+        "source": "Parser.ts parseFunction; MacroExpander.ts isExpandable; all296 named function registration objects",
+        "change": "Static pure Python mode/primitive metadata enforces math/text mode and supplies exact primitive distinction for noexpand."
+      },
+      {
+        "id": "array-columns",
+        "source": "environments/array.ts parseArray maxNumCols with singleRow or colSeparationType",
+        "change": "equation limits one column, split two; normal array extra columns remain source nonfatal in default non-strict mode."
+      },
+      {
+        "id": "escaped-hash-count",
+        "source": "MacroExpander.ts _getExpansion strips ## before numbered parameter inference",
+        "change": "Skip escaped hash pairs during literal macro argument-count inference; blue/red/etc no longer spuriously consume color digits as args."
+      },
+      {
+        "id": "newcommand-count",
+        "source": "macros.ts newcommand /^\\s*[0-9]+\\s*$/ and katex-spec.ts explicit count10",
+        "change": "Allow source whitespace/count10; native argument-allocation budget remains max_nodes."
+      },
+      {
+        "id": "active-definition-names",
+        "source": "functions/def.ts checkControlSequence rejects only source reserved single tokens",
+        "change": "Accept ordinary active token names such as0/~, preserving request scope."
+      },
+      {
+        "id": "noexpand-context",
+        "source": "MacroExpander.ts expandNextToken versus expandTokens treatAsRelax behavior; letCommand unexpandable flag",
+        "change": "Keep noexpand token identity when fully expanding edef replacement; relax only normal parser expansion. Preserve primitive let aliases and count expanded output toward budget."
+      },
+      {
+        "id": "neq-test-interpretation",
+        "classification": "test projection error, not product symbol error",
+        "source": "official fixed __parse and source symbols.ts @not Main U+E020",
+        "change": "Handwritten expected native visual glyph stream corrected from U+2260 to U+E020+equal and assert rlap overlay; original first-run failure retained. MathML-only single glyph is not substituted into visual AST."
+      }
+    ],
+    "regressions": [
+      {
+        "path": "tests/test_parser.py",
+        "methodCount": 67,
+        "evidence": "test-runs/MATH-record-20261105T120855Z-f70becc0/run.json"
+      },
+      {
+        "path": "tests/test_macros.py",
+        "methodCount": 53,
+        "evidence": "test-runs/MATH-record-20261105T120855Z-52c14ea4/run.json"
+      }
+    ],
+    "totalTargetedMethods": 120,
+    "fullSuiteExecuted": false,
+    "renderingExecutedByThisWorker": false,
+    "productFiles": [
+      {
+        "path": "src/py_katex/parser.py",
+        "sha256": "a448e66a11439a005c083ffbe3a2f0b08676fc3edb789b59a4b3d27da7f152c4"
+      },
+      {
+        "path": "src/py_katex/macros.py",
+        "sha256": "655bfab3f0d60b55275846eb52267fa0963e5f687d8fb91e15b0b602df55c9ab"
+      },
+      {
+        "path": "src/py_katex/unicode_scripts.py",
+        "sha256": "e4da87d793f4775d81970f180a2e51861e70bccbfa5bce4ec0ba786611abfacb"
+      },
+      {
+        "path": "src/py_katex/function_modes.py",
+        "sha256": "1688d9c54c78c258a1024476fb3e2048bc591202a546da0965b7bfcc14716b8b"
+      },
+      {
+        "path": "docs/AST.md",
+        "sha256": "34e968890b59da17d484971a08d99e09e5a2c85ba6ccf3debb1f60b7f675cc0e"
+      }
+    ],
+    "remainingScope": "Pending registered functions/dynamic macros from P1 remain explicit; targeted tests do not claim full KaTeX compatibility."
+  },
+  "currentProductFiles": [
+    {
+      "path": "src/py_katex/parser.py",
+      "sha256": "a448e66a11439a005c083ffbe3a2f0b08676fc3edb789b59a4b3d27da7f152c4"
+    },
+    {
+      "path": "src/py_katex/macros.py",
+      "sha256": "655bfab3f0d60b55275846eb52267fa0963e5f687d8fb91e15b0b602df55c9ab"
+    },
+    {
+      "path": "src/py_katex/unicode_scripts.py",
+      "sha256": "e4da87d793f4775d81970f180a2e51861e70bccbfa5bce4ec0ba786611abfacb"
+    },
+    {
+      "path": "src/py_katex/function_modes.py",
+      "sha256": "1688d9c54c78c258a1024476fb3e2048bc591202a546da0965b7bfcc14716b8b"
+    },
+    {
+      "path": "docs/AST.md",
+      "sha256": "34e968890b59da17d484971a08d99e09e5a2c85ba6ccf3debb1f60b7f675cc0e"
+    }
+  ],
+  "initialPhaseBehaviorExecuted": false,
+  "finalVerification": {
+    "status": "PASS_NATIVE_STATIC_ALPHA_LOCAL",
+    "summary": "references/verification-summary.json",
+    "jointSourceSHA256": {
+      "math": "6e11f0a8f9f88c78fb387faf4429cfea72781a4e961328bf53299625bea2cb80",
+      "mermaid": "6e37306deb59a5eb21a2bcceedd66c128a2367f392b094854e2e9bdb3e0e4088"
+    },
+    "unitRun": "test-runs/MATH-batch-20261105T121812Z-f140829a",
+    "visualRun": "test-runs/MATH-batch-20261105T121812Z-73861ed7",
+    "scopeCaveat": "Earlier phase fields retained as history; no full KaTeX compatibility claim"
+  }
+}

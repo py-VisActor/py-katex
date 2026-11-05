@@ -1,0 +1,290 @@
+{
+  "schema": "py-katex-change/v1",
+  "taskId": "math-full-parser",
+  "phase": "P3",
+  "status": "batch_repaired_targeted_verified_joint_pending",
+  "sourceMap": "references/full-parser-sources.json",
+  "astContract": "docs/AST.md",
+  "upstreamCommit": "d5bed9f38a8d747b9c4a12e18897a514707e1c26",
+  "registryDenominator": {
+    "path": "references/full-runtime-registry.json",
+    "sha256": "ac98b761f4809453e2068c17a907d7899b68542198b394593af397f22e8e4aa7",
+    "functions": 312,
+    "environments": 33,
+    "registeredTotal": 345,
+    "literalMacros": 319,
+    "dynamicMacros": 20,
+    "macroTotal": 339,
+    "correction": "Former334 static names were incomplete: actual source registry312functions+33environments=345. Macro main-module315literal excludes4function/environment literal registrations; complete339=319literal+20dynamic. Registry extraction is mechanical and not a behavior test."
+  },
+  "files": [
+    {
+      "path": "src/py_katex/parser.py",
+      "sha256": "882a6453abce511e2620cc41a55a559bea3bd4fb7c5a8cc3dd88953fac038893"
+    },
+    {
+      "path": "src/py_katex/macros.py",
+      "sha256": "db83af02868d7c9abd99d52ae8c05906ba775ef83e5c6b3787265e584e633d28"
+    },
+    {
+      "path": "src/py_katex/function_modes.py",
+      "sha256": "009f91c422b2509c9b6295f082745957fa1f51adfe295722d5dccd2ee8fc98c3"
+    },
+    {
+      "path": "src/py_katex/unicode_scripts.py",
+      "sha256": "e4da87d793f4775d81970f180a2e51861e70bccbfa5bce4ec0ba786611abfacb"
+    },
+    {
+      "path": "src/py_katex/parser_support.py",
+      "sha256": "d40c04570870af99fab6374e37b953cf3b995550704d3f6e13db59636edc2b07"
+    },
+    {
+      "path": "src/py_katex/parser_arrays.py",
+      "sha256": "428b98a75857dae77249cfac6f87d84d38c1a1d622386c8589f2aa9bdccc54c1"
+    },
+    {
+      "path": "src/py_katex/parser_unicode.py",
+      "sha256": "9abfb10a9edfb59311244e1893a89fcbe0b11ad997a0ebadc60a96151009e3c5"
+    },
+    {
+      "path": "src/py_katex/macro_context.py",
+      "sha256": "62ef2b474c796dc583a68ca54d5b27b25c529a706dfe6240aa75f5ef8872976d"
+    },
+    {
+      "path": "docs/AST.md",
+      "sha256": "af27ca03a34db1635ce062eb45b2a1385cd94f9df70df53bbb7839dd96d00d64"
+    }
+  ],
+  "mechanicalEvidence": "test-runs/MATH-FULL-record-20261105T150726Z-e4c9f2ba/run.json",
+  "behaviorExecuted": true,
+  "testsWritten": true,
+  "stillUnimplementedRetainedRegisteredEntries": [],
+  "limits": [
+    "No new P1 parser/layout/render behavior tests or image/oracle probes executed. Existing alpha success is not evidence for this full candidate.",
+    "Native AST projection does not recreate HTML/MathML hosts, JS object identity/prototypes, navigation handlers or external script execution. Static style/image layout/paint verification is owned by B/C and remains unverified.",
+    "Documented native MacroContext aliases preserve source token conventions; namespace.current is an inspection snapshot, mutations use set or explicit MacroState. Python callables replace explicitly supplied source macro/trust/strict callbacks; no source JS strings are executed.",
+    "Node/depth/token bounds and finite-geometry checks remain native safety constraints independent of maxExpandInfinity. They can explicitly reject pathological source inputs instead of attempting invalid infinite geometry.",
+    "All345 registered source names and339macros having dispatch is a source completeness statement, not measured branch coverage or full compatibility proof. Exhaustive source/spec behavior and errors remain P2/P3 responsibilities.",
+    "Installation validation and publishing/commit/push remain deferred."
+  ],
+  "next": "A source and tests stopped; root coordinates same-candidate full validation and B/C paint fixes.",
+  "p1Snapshot": {
+    "phase": "P1",
+    "status": "code_complete_unverified",
+    "files": [
+      {
+        "path": "src/py_katex/parser.py",
+        "sha256": "9df310a5be84912f2b8ddfa1a88d54edd66e0840282f61a5353d734321c9a3f1"
+      },
+      {
+        "path": "src/py_katex/macros.py",
+        "sha256": "db83af02868d7c9abd99d52ae8c05906ba775ef83e5c6b3787265e584e633d28"
+      },
+      {
+        "path": "src/py_katex/function_modes.py",
+        "sha256": "009f91c422b2509c9b6295f082745957fa1f51adfe295722d5dccd2ee8fc98c3"
+      },
+      {
+        "path": "src/py_katex/unicode_scripts.py",
+        "sha256": "e4da87d793f4775d81970f180a2e51861e70bccbfa5bce4ec0ba786611abfacb"
+      },
+      {
+        "path": "src/py_katex/parser_support.py",
+        "sha256": "d40c04570870af99fab6374e37b953cf3b995550704d3f6e13db59636edc2b07"
+      },
+      {
+        "path": "src/py_katex/parser_arrays.py",
+        "sha256": "428b98a75857dae77249cfac6f87d84d38c1a1d622386c8589f2aa9bdccc54c1"
+      },
+      {
+        "path": "src/py_katex/parser_unicode.py",
+        "sha256": "9abfb10a9edfb59311244e1893a89fcbe0b11ad997a0ebadc60a96151009e3c5"
+      },
+      {
+        "path": "src/py_katex/macro_context.py",
+        "sha256": "62ef2b474c796dc583a68ca54d5b27b25c529a706dfe6240aa75f5ef8872976d"
+      },
+      {
+        "path": "docs/AST.md",
+        "sha256": "af27ca03a34db1635ce062eb45b2a1385cd94f9df70df53bbb7839dd96d00d64"
+      }
+    ]
+  },
+  "repairs": [
+    {
+      "id": "color-lex-import",
+      "source": [
+        "src/functions/color.ts",
+        "src/Parser.ts"
+      ],
+      "change": "Import existing pure lexer for current-color and colorIsTextColor definitions; remove NameError.",
+      "sourceFingerprints": [
+        {
+          "path": ".local/upstream-katex/src/functions/color.ts",
+          "sha256": "d1e8834894dd380410cf6a21a2a33b24a61e74b852aa5c346976f3638828c746"
+        },
+        {
+          "path": ".local/upstream-katex/src/Parser.ts",
+          "sha256": "7765dcf4a928d0c553e754ab40c963bbb609c7b980a97248cb8d4b3cc9ffc225"
+        }
+      ]
+    },
+    {
+      "id": "text-quotes-and-font-identity",
+      "source": [
+        "src/Parser.ts",
+        "src/functions/font.ts",
+        "src/functions/text.ts"
+      ],
+      "change": "Apostrophe is a text nucleus outside math; bm normalizes boldsymbol; emph retains dynamic text-shape identity; implicit Unicode accents retain source mode.",
+      "sourceFingerprints": [
+        {
+          "path": ".local/upstream-katex/src/Parser.ts",
+          "sha256": "7765dcf4a928d0c553e754ab40c963bbb609c7b980a97248cb8d4b3cc9ffc225"
+        },
+        {
+          "path": ".local/upstream-katex/src/functions/font.ts",
+          "sha256": "f05965a7b04f94b976552525b8ac90e45cbcb870375da76a6d5117b27410906c"
+        },
+        {
+          "path": ".local/upstream-katex/src/functions/text.ts",
+          "sha256": "f0b5cfb045752dc221cb83dd18819330de53b6c8be8694bfee34634081853c2c"
+        }
+      ]
+    },
+    {
+      "id": "primitive-root-and-expanded-scripts",
+      "source": [
+        "src/Parser.ts"
+      ],
+      "change": "Absent root index selects primitive parsing after expansion, consuming one group; Unicode mapped scripts use subparse so macros and expansion budgets apply.",
+      "sourceFingerprints": [
+        {
+          "path": ".local/upstream-katex/src/Parser.ts",
+          "sha256": "7765dcf4a928d0c553e754ab40c963bbb609c7b980a97248cb8d4b3cc9ffc225"
+        }
+      ]
+    },
+    {
+      "id": "dynamic-namespace-and-callback-order",
+      "source": [
+        "src/MacroExpander.ts",
+        "src/Namespace.ts",
+        "src/macros.ts"
+      ],
+      "change": "Register all dynamic macros as callable builtin definitions, exposing lookup/let/macros.get; callback evaluated before expansion-count check.",
+      "sourceFingerprints": [
+        {
+          "path": ".local/upstream-katex/src/MacroExpander.ts",
+          "sha256": "e59802256bd5d8c30bc2600154bd1f1f843f6ed6725d884a86882e4b446b5365"
+        },
+        {
+          "path": ".local/upstream-katex/src/Namespace.ts",
+          "sha256": "a86fefb389ebf6764b52a843ad4eef9e47edffcf4cc8c5c5f27ffe2691f01baf"
+        },
+        {
+          "path": ".local/upstream-katex/src/macros.ts",
+          "sha256": "a5979d76536f3d0dd0b561f96f714243b8d4da09846c69875c70db80219798be"
+        }
+      ]
+    },
+    {
+      "id": "raw-boundaries",
+      "source": [
+        "src/Parser.ts",
+        "src/functions/delimsizing.ts",
+        "src/functions/def.ts",
+        "src/environments/array.ts"
+      ],
+      "change": "Normalize one braced sized delimiter; retain regex size lookahead at next raw argument; reject missing nonbraced size and empty explicit matrix alignment; expand global prefix alias; do not scan newline optional gap across space.",
+      "sourceFingerprints": [
+        {
+          "path": ".local/upstream-katex/src/Parser.ts",
+          "sha256": "7765dcf4a928d0c553e754ab40c963bbb609c7b980a97248cb8d4b3cc9ffc225"
+        },
+        {
+          "path": ".local/upstream-katex/src/functions/delimsizing.ts",
+          "sha256": "5eab5c5adb8ad53bca498b550a47816220cae889212f87e497e9bef496aaed6d"
+        },
+        {
+          "path": ".local/upstream-katex/src/functions/def.ts",
+          "sha256": "41e2df9c7153ff4f3b89a42509029104f69a996859bdb12908b08be6badbfa81"
+        },
+        {
+          "path": ".local/upstream-katex/src/environments/array.ts",
+          "sha256": "943419d9b4cd83e848890931a7247fedc01a9b012f2637074538e0621fcf1a98"
+        }
+      ]
+    },
+    {
+      "id": "validation-and-diagnostics",
+      "source": [
+        "src/functions/htmlmathml.ts",
+        "src/functions/enclose.ts",
+        "src/Parser.ts"
+      ],
+      "change": "Parse nonvisual htmlmathml alternative; unknown control length uses token size; source mathVsSout strict report preserved.",
+      "sourceFingerprints": [
+        {
+          "path": ".local/upstream-katex/src/functions/htmlmathml.ts",
+          "sha256": "eed2dc25afd7fee2618cd779b0cb89bee1279fa808341c59539b5188f8a0c0d5"
+        },
+        {
+          "path": ".local/upstream-katex/src/functions/enclose.ts",
+          "sha256": "934cf800ecc3f5fea28788c41510a14e2d1944b2388098cca55cf1889e48f66b"
+        },
+        {
+          "path": ".local/upstream-katex/src/Parser.ts",
+          "sha256": "7765dcf4a928d0c553e754ab40c963bbb609c7b980a97248cb8d4b3cc9ffc225"
+        }
+      ]
+    }
+  ],
+  "firstFailureEvidence": "test-runs/MATH-batch-20261105T155834Z-e542e4f2",
+  "targetedEvidence": [
+    "test-runs/MATH-FULL-record-20261105T160608Z-d4daf71f/run.json",
+    "test-runs/MATH-FULL-record-20261105T160746Z-7fdce362/run.json",
+    "test-runs/MATH-FULL-record-20261105T161024Z-0dab6976/run.json",
+    "test-runs/MATH-FULL-record-20261105T161048Z-ac647a20/run.json",
+    "test-runs/MATH-FULL-record-20261105T161046Z-766e6e38/run.json",
+    "test-runs/MATH-FULL-record-20261105T161135Z-05290267/run.json",
+    "test-runs/MATH-FULL-record-20261105T161135Z-e9a3bc8c/run.json",
+    "test-runs/MATH-FULL-record-20261105T162711Z-032579aa/run.json"
+  ],
+  "targetedResult": {
+    "parserMethods": 124,
+    "macroMethods": 104,
+    "registryMethods": 9,
+    "registrySourceContexts": 684,
+    "sourceRegisteredEntries": 345,
+    "sourceMacroEntries": 339,
+    "initialFailingParserCorpusSubset": 34,
+    "status": "PASS",
+    "fullJointCandidate": "pending root unified validation"
+  },
+  "finalPrimitiveArgumentRepair": {
+    "sourceEvidence": "test-runs/MATH-FULL-batch-20261105T161801Z-3fa2e5c3/artifacts/core-source/corpus.json#core-00401",
+    "source": "Parser.parseGroup/parseGroupOfType primitive",
+    "change": "Reject ^/_ tokens when a primitive root argument has no nucleus; retain error at codepoint/UTF16 position5. Top-level/script empty bases keep their existing source semantics.",
+    "regression": "RawArgumentAndModeSourceTests.test_primitive_root_argument_cannot_begin_with_a_script_marker",
+    "newParserMethods": 124,
+    "status": "PASS"
+  },
+  "finalVerification": {
+    "status": "PASS_FULL_CORE_STATIC_LOCAL",
+    "summary": "references/full-verification-summary.json",
+    "jointSourceSHA256": {
+      "math": "334c412c34ef675dbc223405622c8d4e19eb56b1ff3700c251cb663d4afdd445",
+      "mermaid": "6094d419ff3c50d2c64fdd00051af2be087b25a7a239cb1dae0e9e09209fdff1"
+    },
+    "runs": {
+      "unit": "test-runs/MATH-FULL-batch-20261105T171602Z-0d9b6942",
+      "visual": "test-runs/MATH-FULL-batch-20261105T171857Z-5071cad7",
+      "legacy": "test-runs/MATH-FULL-batch-20261105T171629Z-8b5ef28e",
+      "report": "test-runs/MATH-FULL-batch-20261105T172308Z-e0e12af6",
+      "htmlQa": "test-runs/MATH-FULL-batch-20261105T172348Z-4daa587b",
+      "manual1": "test-runs/MATH-FULL-batch-20261105T171936Z-a5ca8881",
+      "manual2": "test-runs/MATH-FULL-batch-20261105T172008Z-7055e775"
+    }
+  }
+}

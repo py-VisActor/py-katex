@@ -1,0 +1,271 @@
+{
+  "schema": "py-katex-change/v1",
+  "taskId": "math-full-parser-tests",
+  "phase": "P3",
+  "status": "batch_repaired_targeted_verified_joint_pending",
+  "sourceAssertions": "references/full-parser-assertions.json",
+  "masterFixture": "tests/full-parser-cases.json",
+  "denominator": {
+    "functions": 312,
+    "environments": 33,
+    "macros": 339,
+    "registered": 345,
+    "totalCases": 684,
+    "sourceErrorOnlyRegisteredFunctions": [
+      "\\]"
+    ]
+  },
+  "testMethodCounts": {
+    "tests/test_full_parser.py": 57,
+    "tests/test_full_macros.py": 51,
+    "tests/test_full_registry.py": 9
+  },
+  "testMethodsTotal": 117,
+  "files": [
+    {
+      "path": "tests/test_full_parser.py",
+      "sha256": "cd640e128bc109716d4e5da5462a0b065569112c1bc9e1edd88672abd73eb14b",
+      "testMethods": 57
+    },
+    {
+      "path": "tests/test_full_macros.py",
+      "sha256": "39d9b74b5fd22e48e4a6bdac6d33c205efdd9c54f1822b88867bc3fb751e9bb6",
+      "testMethods": 51
+    },
+    {
+      "path": "tests/test_full_registry.py",
+      "sha256": "bbbffc34c0f8247e749638497d1af31949cd1cfef766e68bdd11cde882c39e91",
+      "testMethods": 9
+    },
+    {
+      "path": "tests/full-parser-cases.json",
+      "sha256": "f1d90851a0b6c57f49e1d8f0be7b5ea9e7cd4e884856d03da6b2abb2b473fd72",
+      "testMethods": null
+    },
+    {
+      "path": "tools/full_parser_oracle.mjs",
+      "sha256": "733d19838fe8ea6fea37ab9d6299fb0b3d3d17f870a8a6bab0ef14907d5f0fb5",
+      "testMethods": null
+    }
+  ],
+  "execution": {
+    "sourceOracleArgv": [
+      "node",
+      "tools/full_parser_oracle.mjs",
+      "--fixtures",
+      "tests/full-parser-cases.json",
+      "--out",
+      "<run>/artifacts/full-parser-oracle.json"
+    ],
+    "nativeEnvironment": {
+      "PYTHONPATH": "src",
+      "PY_KATEX_FULL_ORACLE": "<run>/artifacts/full-parser-oracle.json"
+    },
+    "nativeArgv": [
+      "python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_full_*.py",
+      "-v"
+    ],
+    "recommendedOrder": "P3 source oracle first; keep-going records all independent native groups even if a fixture/source mismatch is reported. Source tool exit1 indicates unexpected source acceptance, not a native verdict."
+  },
+  "oldTestsModified": true,
+  "oldTestMigrationProposals": [
+    {
+      "file": "tests/test_parser.py",
+      "methodId": "test_cfrac_continued_flag_and_alignment",
+      "sourceRef": "src/functions/genfrac.ts",
+      "sourceReason": "Fixed cfrac numOptionalArgs absent/0; [l] becomes normal numerator/denominator tokens, no align option.",
+      "newCoverage": "RawArgumentAndModeSourceTests.test_source_cfrac_has_no_optional_alignment_argument"
+    },
+    {
+      "file": "tests/test_parser.py",
+      "methodId": "test_operatorname_mathop_and_builtin_operator",
+      "sourceRef": "src/functions/operatorname.ts",
+      "sourceReason": "Starred operatorname uses alwaysHandleSupSub=true with limits=false, not direct limits=true.",
+      "newCoverage": "FullRegistryFixedSourceOracleTests source tree + macro operatorname context"
+    },
+    {
+      "file": "tests/test_parser.py",
+      "methodId": "test_align_gather_equation_family_environment_identity",
+      "sourceRef": "src/environments/array.ts",
+      "sourceReason": "Top-level AMS environments require displayMode; new registry cases explicitly provide legal display context.",
+      "newCoverage": "FullArrayAndTagSourceTests.test_display_only_ams_environments_reject_inline_context"
+    },
+    {
+      "file": "tests/test_parser.py",
+      "methodId": "test_href_discards_navigation_and_preserves_static_label",
+      "sourceRef": "src/functions/href.ts",
+      "sourceReason": "trust=false returns visible red command, not inner label. Static trusted case still removes navigation host.",
+      "newCoverage": "TrustStrictAndErrorSourceTests.test_untrusted_command_is_visible_and_does_not_hide_rest_of_formula"
+    },
+    {
+      "file": "tests/test_parser.py",
+      "methodId": "test_url_is_typewriter_static_text",
+      "sourceRef": "src/functions/href.ts",
+      "sourceReason": "Trusted URL is typewriter; default trust=false is visible red command.",
+      "newCoverage": "FullRegistryFixedSourceOracleTests trusted url case"
+    },
+    {
+      "file": "tests/test_parser.py",
+      "methodId": "test_valid_source_commands_outside_native_contract_fail_explicitly",
+      "sourceRef": "registry:full-runtime",
+      "sourceReason": "FULL now retains all former pending HTML/image/CD/Braket/tag; no longer a native unsupported denominator.",
+      "newCoverage": "684 source registry contexts + trust/HTML/image/CD/tag tests"
+    },
+    {
+      "file": "tests/test_parser.py",
+      "methodId": "test_invalid_limits_and_input_are_explicit",
+      "sourceRef": "src/Settings.ts",
+      "sourceReason": "maxExpand accepts number including1.5 and Infinity; processor clamps negatives0.",
+      "newCoverage": "FullMacroBudgetAndValidationTests.test_zero_fractional_infinite_and_negative_clamped_max_expand"
+    },
+    {
+      "file": "tests/test_parser.py",
+      "methodId": "test_dimension_units_and_invalid_unit",
+      "sourceRef": "src/Parser.ts",
+      "sourceReason": "Unanchored size regex reads first unit substring; 2invalid contains valid2in and is not a true source invalid unit.",
+      "newCoverage": "SourceMeasurementsAndDeclarations.test_unanchored_source_size_regex_retains_first_valid_measurement"
+    }
+  ],
+  "mechanicalEvidence": [
+    "test-runs/MATH-FULL-record-20261105T153823Z-581f6ead/run.json",
+    "test-runs/MATH-FULL-record-20261105T153824Z-4cbd85a5/run.json",
+    "test-runs/MATH-FULL-record-20261105T154415Z-9f520577/run.json",
+    "test-runs/MATH-FULL-record-20261105T154736Z-a483fb51/run.json",
+    "test-runs/MATH-FULL-record-20261105T154737Z-1b1e58d0/run.json",
+    "test-runs/MATH-FULL-record-20261105T155148Z-27b4b8f5/run.json",
+    "test-runs/MATH-FULL-record-20261105T155150Z-fe9bd3d2/run.json"
+  ],
+  "behaviorExecuted": true,
+  "productSourceModified": true,
+  "next": "Stop writes and wait for root P3 unified initial source/native execution. Preserve every first failure and fixture/source anomaly.",
+  "sourceSemanticProjection": "Source AST glyphs, retained family counts, array row/column shapes, fraction bar flags, source font identity, operator limits/identity and image measurements. No native-derived expected values.",
+  "p2InitialCounts": {
+    "tests/test_full_parser.py": 49,
+    "tests/test_full_macros.py": 48,
+    "tests/test_full_registry.py": 9
+  },
+  "firstFailureEvidence": "test-runs/MATH-batch-20261105T155834Z-e542e4f2",
+  "targetedEvidence": [
+    "test-runs/MATH-FULL-record-20261105T160608Z-d4daf71f/run.json",
+    "test-runs/MATH-FULL-record-20261105T160746Z-7fdce362/run.json",
+    "test-runs/MATH-FULL-record-20261105T161024Z-0dab6976/run.json",
+    "test-runs/MATH-FULL-record-20261105T161048Z-ac647a20/run.json",
+    "test-runs/MATH-FULL-record-20261105T161046Z-766e6e38/run.json",
+    "test-runs/MATH-FULL-record-20261105T161135Z-05290267/run.json",
+    "test-runs/MATH-FULL-record-20261105T161135Z-e9a3bc8c/run.json",
+    "test-runs/MATH-FULL-record-20261105T162711Z-032579aa/run.json"
+  ],
+  "testCorrections": [
+    {
+      "id": "macro-277",
+      "reason": "Old internal braket middle contained active |, recursively reentering itself. Fixed using source Braket literal middle vert; original self recursion preserved as explicit MAX_EXPAND regression. Source macros.ts braketHelper and Braket registration; 683 other initial acceptances unchanged."
+    },
+    {
+      "id": "braket-double-bar",
+      "reason": "Fixed macros.ts Braket middle and middleDouble both use vert. Source probe confirms native expected middle is single |; do not invent Vert."
+    },
+    {
+      "id": "macro-queue-budget-constructor",
+      "reason": "Native extra token bound validates user macro definitions at constructor before expansion; assertion now covers both construction and expansion while keeping original method ID."
+    }
+  ],
+  "oldTestMigrationsApplied": [
+    {
+      "file": "tests/test_parser.py",
+      "methodId": "test_cfrac_continued_flag_and_alignment",
+      "sourceRef": "src/functions/genfrac.ts",
+      "sourceReason": "Fixed cfrac numOptionalArgs absent/0; [l] becomes normal numerator/denominator tokens, no align option.",
+      "newCoverage": "RawArgumentAndModeSourceTests.test_source_cfrac_has_no_optional_alignment_argument",
+      "sourceEvidence": "test-runs/MATH-FULL-record-20261105T160608Z-d4daf71f/run.json"
+    },
+    {
+      "file": "tests/test_parser.py",
+      "methodId": "test_operatorname_mathop_and_builtin_operator",
+      "sourceRef": "src/functions/operatorname.ts",
+      "sourceReason": "Starred operatorname uses alwaysHandleSupSub=true with limits=false, not direct limits=true.",
+      "newCoverage": "FullRegistryFixedSourceOracleTests source tree + macro operatorname context",
+      "sourceEvidence": "test-runs/MATH-FULL-record-20261105T160608Z-d4daf71f/run.json"
+    },
+    {
+      "file": "tests/test_parser.py",
+      "methodId": "test_align_gather_equation_family_environment_identity",
+      "sourceRef": "src/environments/array.ts",
+      "sourceReason": "Top-level AMS environments require displayMode; new registry cases explicitly provide legal display context.",
+      "newCoverage": "FullArrayAndTagSourceTests.test_display_only_ams_environments_reject_inline_context",
+      "sourceEvidence": "test-runs/MATH-FULL-record-20261105T160608Z-d4daf71f/run.json"
+    },
+    {
+      "file": "tests/test_parser.py",
+      "methodId": "test_href_discards_navigation_and_preserves_static_label",
+      "sourceRef": "src/functions/href.ts",
+      "sourceReason": "trust=false returns visible red command, not inner label. Static trusted case still removes navigation host.",
+      "newCoverage": "TrustStrictAndErrorSourceTests.test_untrusted_command_is_visible_and_does_not_hide_rest_of_formula",
+      "sourceEvidence": "test-runs/MATH-FULL-record-20261105T160608Z-d4daf71f/run.json"
+    },
+    {
+      "file": "tests/test_parser.py",
+      "methodId": "test_url_is_typewriter_static_text",
+      "sourceRef": "src/functions/href.ts",
+      "sourceReason": "Trusted URL is typewriter; default trust=false is visible red command.",
+      "newCoverage": "FullRegistryFixedSourceOracleTests trusted url case",
+      "sourceEvidence": "test-runs/MATH-FULL-record-20261105T160608Z-d4daf71f/run.json"
+    },
+    {
+      "file": "tests/test_parser.py",
+      "methodId": "test_valid_source_commands_outside_native_contract_fail_explicitly",
+      "sourceRef": "registry:full-runtime",
+      "sourceReason": "FULL now retains all former pending HTML/image/CD/Braket/tag; no longer a native unsupported denominator.",
+      "newCoverage": "684 source registry contexts + trust/HTML/image/CD/tag tests",
+      "sourceEvidence": "test-runs/MATH-FULL-record-20261105T160608Z-d4daf71f/run.json"
+    },
+    {
+      "file": "tests/test_parser.py",
+      "methodId": "test_invalid_limits_and_input_are_explicit",
+      "sourceRef": "src/Settings.ts",
+      "sourceReason": "maxExpand accepts number including1.5 and Infinity; processor clamps negatives0.",
+      "newCoverage": "FullMacroBudgetAndValidationTests.test_zero_fractional_infinite_and_negative_clamped_max_expand",
+      "sourceEvidence": "test-runs/MATH-FULL-record-20261105T160608Z-d4daf71f/run.json"
+    },
+    {
+      "file": "tests/test_parser.py",
+      "methodId": "test_dimension_units_and_invalid_unit",
+      "sourceRef": "src/Parser.ts",
+      "sourceReason": "Unanchored size regex reads first unit substring; 2invalid contains valid2in and is not a true source invalid unit.",
+      "newCoverage": "SourceMeasurementsAndDeclarations.test_unanchored_source_size_regex_retains_first_valid_measurement",
+      "sourceEvidence": "test-runs/MATH-FULL-record-20261105T160608Z-d4daf71f/run.json"
+    }
+  ],
+  "knownStaticIssuesForFirstRunResolved": [],
+  "finalPrimitiveArgumentRepair": {
+    "sourceEvidence": "test-runs/MATH-FULL-batch-20261105T161801Z-3fa2e5c3/artifacts/core-source/corpus.json#core-00401",
+    "source": "Parser.parseGroup/parseGroupOfType primitive",
+    "change": "Reject ^/_ tokens when a primitive root argument has no nucleus; retain error at codepoint/UTF16 position5. Top-level/script empty bases keep their existing source semantics.",
+    "regression": "RawArgumentAndModeSourceTests.test_primitive_root_argument_cannot_begin_with_a_script_marker",
+    "newParserMethods": 124,
+    "status": "PASS"
+  },
+  "finalVerification": {
+    "status": "PASS_FULL_CORE_STATIC_LOCAL",
+    "summary": "references/full-verification-summary.json",
+    "jointSourceSHA256": {
+      "math": "334c412c34ef675dbc223405622c8d4e19eb56b1ff3700c251cb663d4afdd445",
+      "mermaid": "6094d419ff3c50d2c64fdd00051af2be087b25a7a239cb1dae0e9e09209fdff1"
+    },
+    "runs": {
+      "unit": "test-runs/MATH-FULL-batch-20261105T171602Z-0d9b6942",
+      "visual": "test-runs/MATH-FULL-batch-20261105T171857Z-5071cad7",
+      "legacy": "test-runs/MATH-FULL-batch-20261105T171629Z-8b5ef28e",
+      "report": "test-runs/MATH-FULL-batch-20261105T172308Z-e0e12af6",
+      "htmlQa": "test-runs/MATH-FULL-batch-20261105T172348Z-4daa587b",
+      "manual1": "test-runs/MATH-FULL-batch-20261105T171936Z-a5ca8881",
+      "manual2": "test-runs/MATH-FULL-batch-20261105T172008Z-7055e775"
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "schema": "py-mermaid-command-plan/v1",
+  "scope": "MATH-FULL",
+  "description": "Generate full-core current acceptance/state, verify closed evidence and local HTTP original bytes, archive all delivery docs/tools/tests; no install/commit/push.",
+  "steps": [
+    {
+      "name": "delivery-tool-syntax",
+      "argv": [
+        "{python}",
+        "-m",
+        "py_compile",
+        "{repo}/tools/report_full.py",
+        "{repo}/tools/document_full_delivery.py",
+        "{repo}/tools/full_delivery_audit.py"
+      ],
+      "timeoutSeconds": 60
+    },
+    {
+      "name": "joint-final-source-snapshot",
+      "argv": [
+        "{python}",
+        "{repo}/tools/joint_candidate.py",
+        "--out",
+        "{run}/artifacts"
+      ],
+      "timeoutSeconds": 120
+    },
+    {
+      "name": "write-current-full-acceptance",
+      "argv": [
+        "{python}",
+        "{repo}/tools/document_full_delivery.py",
+        "--unit",
+        "MATH-FULL-batch-20261105T171602Z-0d9b6942",
+        "--visual",
+        "MATH-FULL-batch-20261105T171857Z-5071cad7",
+        "--legacy",
+        "MATH-FULL-batch-20261105T171629Z-8b5ef28e",
+        "--report",
+        "MATH-FULL-batch-20261105T172308Z-e0e12af6",
+        "--qa",
+        "MATH-FULL-batch-20261105T172348Z-4daa587b",
+        "--manual-run",
+        "MATH-FULL-batch-20261105T171936Z-a5ca8881",
+        "--manual-run",
+        "MATH-FULL-batch-20261105T172008Z-7055e775",
+        "--audit-run",
+        "{runid}"
+      ],
+      "timeoutSeconds": 240
+    },
+    {
+      "name": "math-git-whitespace",
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "timeoutSeconds": 60
+    },
+    {
+      "name": "mermaid-git-whitespace",
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "cwd": "{repo}/../py-mermaid",
+      "timeoutSeconds": 60
+    },
+    {
+      "name": "post-documentation-integrity-http-archive-audit",
+      "argv": [
+        "{python}",
+        "{repo}/tools/full_delivery_audit.py",
+        "--out",
+        "{run}/artifacts/audit"
+      ],
+      "timeoutSeconds": 300
+    },
+    {
+      "name": "joint-product-source-unchanged",
+      "argv": [
+        "{python}",
+        "{repo}/tools/joint_candidate.py",
+        "--check",
+        "{run}/artifacts/joint-candidate.json"
+      ],
+      "timeoutSeconds": 60
+    }
+  ]
+}

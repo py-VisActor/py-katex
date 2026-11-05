@@ -1,0 +1,126 @@
+{
+  "schema": "math-canvas-assertions/v1",
+  "status": "test_design_complete_unexecuted",
+  "stage": "P2",
+  "sourceDrivenExpected": true,
+  "candidateGoldens": false,
+  "sources": {
+    "C:\\code\\py-visactor\\py-katex\\.local\\upstream-katex\\src\\functions\\genfrac.ts": "932c8dcd3fec9fc00b87b99a315990ea2620e109accc8c4219e62fc6d8dea9fd",
+    "C:\\code\\py-visactor\\py-katex\\.local\\upstream-katex\\src\\functions\\supsub.ts": "2a3121e7eb5de0ac193ce00736ee4a2fa9330e0a1d955b9414840ae1f3fc2a4c",
+    "C:\\code\\py-visactor\\py-katex\\.local\\upstream-katex\\src\\functions\\sqrt.ts": "bdba5828a2b9716d3c7197db2480c011ded1b887876b8253f81bbf1d69531492",
+    "C:\\code\\py-visactor\\py-katex\\.local\\upstream-katex\\src\\styles\\katex.scss": "a690b12e065ce7961a8f5609ee4808ef3bf2f221175deea6ac6dc9f2c7a2e213",
+    "py-mermaid\\.local\\upstream-mermaid\\packages\\mermaid\\src\\diagrams\\common\\common.ts": "b14851667f7d45d101d4e028204babb1628faefe4812a88ae2d8acac72f8e144",
+    "py-mermaid\\.local\\upstream-mermaid\\packages\\mermaid\\src\\rendering-util\\createText.ts": "8a26f2b01b952d2044184d5ad7a4122d37c9b7ab781400fd3bb7ee37c5419865"
+  },
+  "methodInventory": {
+    "C:\\code\\py-visactor\\py-katex\\tests\\test_canvas.py": [
+      "test_all_twenty_bundled_font_aliases_real_pixels",
+      "test_italic_bold_faces_match_independent_public_canvas_reference",
+      "test_fraction_two_dimensional_pixels_and_source_rule",
+      "test_fraction_pixel_oracle_rejects_blank_lost_rule_plain_string",
+      "test_scripts_actual_upper_and_lower_ink_negative_control",
+      "test_square_root_native_path_and_rule_pixels",
+      "test_matrix_actual_four_cells_on_two_rows",
+      "test_public_path_local_clip_preserves_large_viewbox",
+      "test_reflected_glyph_real_mirror_and_normal_negative_control",
+      "test_signed_height_depth_and_baseline_origin",
+      "test_draw_offset_and_context_state_restored",
+      "test_native_five_export_signatures_and_dimensions",
+      "test_cpu_auto_gpu_backend_contract",
+      "test_native_context_cross_thread_rejected",
+      "test_repeat_draw_and_pure_box_owner_transfer",
+      "test_invalid_commands_and_export_budgets_fail_explicitly"
+    ],
+    "C:\\code\\py-visactor\\py-mermaid\\tests\\math\\test_integration.py": [
+      "test_node_mixed_label_real_pixels_and_source_scale",
+      "test_formula_geometry_uses_fixed_bundled_metric_not_plain_text",
+      "test_node_edge_group_math_via_real_public_api",
+      "test_metadata_math_uses_same_safe_formula_pipeline",
+      "test_source_linebreaks_preserve_math_and_plain_rows",
+      "test_htmlfalse_keeps_formula_literal_and_no_math_draw",
+      "test_math_branch_markdown_surroundings_remain_source_literal",
+      "test_math_lines_source_nowrap_despite_small_wrapping_width",
+      "test_tex_less_than_ampersand_and_commands_protected_from_html",
+      "test_mermaid_actual_double_slash_collapses_once_matrix_two_rows",
+      "test_non_dotall_regex_does_not_join_formula_across_real_newline",
+      "test_invalid_formula_returns_explicit_diagnostic_not_text_or_white_success",
+      "test_source_math_font_size_follows_actual_label_css",
+      "test_pixel_oracle_rejects_blank_image_even_with_correct_trace",
+      "test_noop_native_math_draw_is_detected_by_actual_pixels",
+      "test_repeat_session_cache_keeps_formula_and_style_separate",
+      "test_session_owner_thread_guard_including_math_measure"
+    ]
+  },
+  "methodCount": 33,
+  "mechanicalRun": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-canvas-p2-compile-collect-20261105T115747Z-d79e9317",
+  "mechanicalExitCode": 0,
+  "behaviorExecuted": false,
+  "pixelContracts": [
+    "fraction .25em axis/.04em rule with digit ink above+below; blank,removedrule,plainstring must fail",
+    "scripts .7em actual raised/lowered glyph ink; removed script negative",
+    "root visible native radicalpath vs pathdeletion",
+    "matrix four nonempty cells in2axes, oneline negative",
+    "20 explicit packagedfontaliases, glyphpixels; independent publicCanvas numericweight reference for italic/bold/bolditalic",
+    "local400000unitpathclip, reflectedF mirror, signedheight baseline, contextstaterecovery",
+    "native5formatmagic+dimensions, rasterink, pdfMediaBox, CPU/auto/GPU and nativeowner guard",
+    "Mermaid publicELK node/edge/group actualmathpixels, source1.21scale, rawTeX safety, metadata, oncebackslashcollapse",
+    "HTMLfalse literal, nonDotAll delimiters, mathbranchMarkdownliteral/nowrap",
+    "Mermaid blankimage and injectednativeNoop must fail despite validtrace"
+  ],
+  "historicalMigrationOwner": "root",
+  "historicalMigration": [
+    "tests/f011/test_canvas.py:math deferred assertion",
+    "tests/f011/test_language.py:remainingmathboundary",
+    "tests/f013/test_canvas.py:deferred tuple",
+    "tests/f013/test_language.py:unsupportedCases math",
+    "tests/f013/cases.json:math",
+    "tests/f014/test_canvas.py:math/media tuple",
+    "tests/f014/cases.json:math-separate",
+    "tests/f014/language-cases.json:math-separate",
+    "tests/f014/resource-cases.json:scope description"
+  ],
+  "P3": {
+    "priorFailureRun": "MATH-batch-20261105T120626Z-f1da1756",
+    "run": "MATH-canvas-p3-targeted-test-corrections-20261105T120837Z-01e72677",
+    "status": "targeted_pass",
+    "canvasMethods": 16,
+    "mermaidMethods": 17,
+    "sourceUnchanged": true,
+    "productSourceChanged": false,
+    "corrections": [
+      {
+        "test": "fraction_width",
+        "source": "KaTeX src/functions/genfrac.ts144,154 makeNullDelimiter; src/styles/katex.scss188,384",
+        "beforeExpected": 20,
+        "sourceExpected": 29.6,
+        "ruleWidth": 20,
+        "reason": "Main-Regular digit .5em plus two null delimiters each.12em, font40"
+      },
+      {
+        "test": "script_negative_control",
+        "source": "KaTeX Math-Italic x source height.43056/depth0",
+        "reason": "Use exterior pixel bands excluding base glyph ink, retaining raised/lowered positive checks and deletion negative"
+      },
+      {
+        "test": "metadata_fixture",
+        "source": "YAML double-quoted scalar escape rules; source js-yaml decoding",
+        "reason": "Literal backslash+n must encode actual double backslash in YAML; old fixture represented real newline, not nu command"
+      },
+      {
+        "test": "colored_math_visibility",
+        "reason": "Compare each glyph pixel to white background by channel distance, since source red #d02030 intentionally has R208; existing red actualpixels assertion unchanged"
+      }
+    ]
+  },
+  "finalVerification": {
+    "status": "PASS_NATIVE_STATIC_ALPHA_LOCAL",
+    "summary": "references/verification-summary.json",
+    "jointSourceSHA256": {
+      "math": "6e11f0a8f9f88c78fb387faf4429cfea72781a4e961328bf53299625bea2cb80",
+      "mermaid": "6e37306deb59a5eb21a2bcceedd66c128a2367f392b094854e2e9bdb3e0e4088"
+    },
+    "unitRun": "test-runs/MATH-batch-20261105T121812Z-f140829a",
+    "visualRun": "test-runs/MATH-batch-20261105T121812Z-73861ed7",
+    "scopeCaveat": "Earlier phase fields retained as history; no full KaTeX compatibility claim"
+  }
+}

@@ -1,0 +1,205 @@
+{
+  "schema": "math-canvas-visual-qa/v1",
+  "status": "native_visibility_pass_with_recorded_source_host_differences",
+  "scope": "8 integration A/CPU pairs and3 core cases in auto/GPU",
+  "runId": "MATH-batch-20261105T121812Z-73861ed7",
+  "mathSourceSHA256": "6e11f0a8f9f88c78fb387faf4429cfea72781a4e961328bf53299625bea2cb80",
+  "mermaidSourceSHA256": "6e37306deb59a5eb21a2bcceedd66c128a2367f392b094854e2e9bdb3e0e4088",
+  "actualViewedOriginalImages": 22,
+  "actualViewMethod": "functions.view_image emitted five Pillow contact sheets from unchanged actual PNGs; no trace-only visual verdict",
+  "sourceFilesChanged": false,
+  "testsChanged": false,
+  "observations": {
+    "math-flow-basic": "Both nodes contain all terms x squared+y squared=z squared, plus a+b over c+d with visible fraction bar. Arrow A to B, labels contained. Native font/box dimensions differ from browser host.",
+    "math-flow-edge": "A to B relation visible, edge label sum has n above and k=1 below, then k at right. Grey mask contains all glyphs without clipping.",
+    "math-flow-group": "Group frame contains alpha to beta and the math title. All native backends show bold upright Group and italic alpha/beta. Official title is math italic; official JSON confirms visible mathematical italic Unicode, despite original source using mathbf. Difference explicitly recorded.",
+    "math-flow-literal": "HTMLlabelsfalse shows Literal $$x^2$$ as literal text on both sides; no lost dollar signs or accidental superscript interpretation.",
+    "math-flow-matrix": "Both sides show parentheses enclosing 1 2 / 3 4 in two rows and two columns, arrow down to Matrix. Auto/GPU match native CPU content and hierarchy.",
+    "math-flow-metadata": "Native visibly renders nu < y with all three symbols. Official source image instead shows malformed literal dollar/slash text and u on next line; official sourceProjection has embedded newline. This source-host defect is not called pixel equivalence.",
+    "math-flow-mixed": "Area, pi r squared, units and Done are all readable, correct arrow down. Official text joins Area/formula/units without spaces while native preserves spaces; all native backends agree.",
+    "math-flow-radical": "Cube-root index3, radical hook/vinculum and x over y all visible and contained. Native/browser radical geometry differs; no lost radical, fraction rule or numerator/denominator."
+  },
+  "differences": [
+    {
+      "case": "math-flow-metadata",
+      "classification": "official source TeX/newline corruption versus intended native TeX preservation",
+      "nativeResult": "nu < y visible and contained",
+      "officialResult": "malformed literal dollar/backslash and u on separate line"
+    },
+    {
+      "case": "math-flow-group",
+      "classification": "MathML/browser host font variant differs from native KaTeX bundled-font mathbf",
+      "nativeResult": "bold upright Group",
+      "officialResult": "math italic Group, also confirmed by visibleLabel Unicode"
+    },
+    {
+      "case": "math-flow-mixed",
+      "classification": "inline whitespace differs from browser flex-host",
+      "nativeResult": "Area pi r squared units with spaces",
+      "officialResult": "Area/formula/units visibly joined"
+    }
+  ],
+  "nativeDefectsFound": [],
+  "images": [
+    {
+      "path": "py-katex\\test-runs\\MATH-batch-20261105T121812Z-73861ed7\\artifacts\\integration-oracle\\math-flow-basic.png",
+      "sha256": "318e1c56f715672777d392a5b99fc505f1175d5d44489c714479e25386f8f190",
+      "actuallyViewed": true,
+      "viaContactSheet": "py-katex\\test-runs\\MATH-batch-20261105T121812Z-73861ed7\\artifacts\\canvas-visual-qa\\A-CPU-1.png"
+    },
+    {
+      "path": "py-katex\\test-runs\\MATH-batch-20261105T121812Z-73861ed7\\artifacts\\integration-oracle\\math-flow-edge.png",
+      "sha256": "9be06d7dbcafd5b0ebdea491e79bc095c9a2d4c3bf709fb28e874a6ce0eed148",
+      "actuallyViewed": true,
+      "viaContactSheet": "py-katex\\test-runs\\MATH-batch-20261105T121812Z-73861ed7\\artifacts\\canvas-visual-qa\\A-CPU-1.png"
+    },
+    {
+      "path": "py-katex\\test-runs\\MATH-batch-20261105T121812Z-73861ed7\\artifacts\\integration-oracle\\math-flow-group.png",
+      "sha256": "4909923bd762e2f4b31708c5be16f22ab0d944679329c921b5a5ed92219243e2",
+      "actuallyViewed": true,
+      "viaContactSheet": "py-katex\\test-runs\\MATH-batch-20261105T121812Z-73861ed7\\artifacts\\canvas-visual-qa\\A-CPU-1.png"
+    },
+    {
+      "path": "py-katex\\test-runs\\MATH-batch-20261105T121812Z-73861ed7\\artifacts\\integration-oracle\\math-flow-literal.png",
+      "sha256": "d871601f95f9b3b968154e9e69dc479b4ccf43b96fb4311a262205e57111e93c",
+      "actuallyViewed": true,
+      "viaContactSheet": "py-katex\\test-runs\\MATH-batch-20261105T121812Z-73861ed7\\artifacts\\canvas-visual-qa\\A-CPU-1.png"
+    },
+    {
+      "path": "py-katex\\test-runs\\MATH-batch-20261105T121812Z-73861ed7\\artifacts\\integration-oracle\\math-flow-matrix.png",
+      "sha256": "fa0e303d917c5547ed4d3cb9c78895e99eccd5036e721d16242dbe5c1680543b",
+      "actuallyViewed": true,
+      "viaContactSheet": "py-katex\\test-runs\\MATH-batch-20261105T121812Z-73861ed7\\artifacts\\canvas-visual-qa\\A-CPU-2.png"
+    },
+    {
+      "path": "py-katex\\test-runs\\MATH-batch-20261105T121812Z-73861ed7\\artifacts\\integration-oracle\\math-flow-metadata.png",
+      "sha256": "8494026974afe6b3453f94bbe4ec0b8732d21c3932dbf996eefead75702f1282",
+      "actuallyViewed": true,
+      "viaContactSheet": "py-katex\\test-runs\\MATH-batch-20261105T121812Z-73861ed7\\artifacts\\canvas-visual-qa\\A-CPU-2.png"
+    },
+    {
+      "path": "py-katex\\test-runs\\MATH-batch-20261105T121812Z-73861ed7\\artifacts\\integration-oracle\\math-flow-mixed.png",
+      "sha256": "7d0b813a60f42eb97a66134d5b614f89ebc005c40b146c673a8c77cff7be1a83",
+      "actuallyViewed": true,
+      "viaContactSheet": "py-katex\\test-runs\\MATH-batch-20261105T121812Z-73861ed7\\artifacts\\canvas-visual-qa\\A-CPU-2.png"
+    },
+    {
+      "path": "py-katex\\test-runs\\MATH-batch-20261105T121812Z-73861ed7\\artifacts\\integration-oracle\\math-flow-radical.png",
+      "sha256": "9298b1ca98b5de1dd5506fe2002da87faf15e55cea6bece42c912d1bb5c6aba0",
+      "actuallyViewed": true,
+      "viaContactSheet": "py-katex\\test-runs\\MATH-batch-20261105T121812Z-73861ed7\\artifacts\\canvas-visual-qa\\A-CPU-2.png"
+    },
+    {
+      "path": "py-katex\\test-runs\\MATH-batch-20261105T121812Z-73861ed7\\artifacts\\integration-cpu\\math-flow-basic.png",
+      "sha256": "03ed2ede0b08cceed3e3bdc37d1edc73e44e60df9971a72e32e4e22d10d644dc",
+      "actuallyViewed": true,
+      "viaContactSheet": "py-katex\\test-runs\\MATH-batch-20261105T121812Z-73861ed7\\artifacts\\canvas-visual-qa\\A-CPU-1.png"
+    },
+    {
+      "path": "py-katex\\test-runs\\MATH-batch-20261105T121812Z-73861ed7\\artifacts\\integration-cpu\\math-flow-edge.png",
+      "sha256": "339aee0344a87a8421273e9c23c22efe8eabf5160f657c94910147dd4590558d",
+      "actuallyViewed": true,
+      "viaContactSheet": "py-katex\\test-runs\\MATH-batch-20261105T121812Z-73861ed7\\artifacts\\canvas-visual-qa\\A-CPU-1.png"
+    },
+    {
+      "path": "py-katex\\test-runs\\MATH-batch-20261105T121812Z-73861ed7\\artifacts\\integration-cpu\\math-flow-group.png",
+      "sha256": "03a057ed9f68bd327129d9cda50b9eac50b900b37495d63bacb34fe802def38a",
+      "actuallyViewed": true,
+      "viaContactSheet": "py-katex\\test-runs\\MATH-batch-20261105T121812Z-73861ed7\\artifacts\\canvas-visual-qa\\A-CPU-1.png"
+    },
+    {
+      "path": "py-katex\\test-runs\\MATH-batch-20261105T121812Z-73861ed7\\artifacts\\integration-cpu\\math-flow-literal.png",
+      "sha256": "d03afb559f2d304485d6ad4a4ee4038a158f528b64c92b695b685afdb0774358",
+      "actuallyViewed": true,
+      "viaContactSheet": "py-katex\\test-runs\\MATH-batch-20261105T121812Z-73861ed7\\artifacts\\canvas-visual-qa\\A-CPU-1.png"
+    },
+    {
+      "path": "py-katex\\test-runs\\MATH-batch-20261105T121812Z-73861ed7\\artifacts\\integration-cpu\\math-flow-matrix.png",
+      "sha256": "fbd0c1cb5da2d080c6052d76934a09b31616489593868386e56508a672c1c3e8",
+      "actuallyViewed": true,
+      "viaContactSheet": "py-katex\\test-runs\\MATH-batch-20261105T121812Z-73861ed7\\artifacts\\canvas-visual-qa\\A-CPU-2.png"
+    },
+    {
+      "path": "py-katex\\test-runs\\MATH-batch-20261105T121812Z-73861ed7\\artifacts\\integration-cpu\\math-flow-metadata.png",
+      "sha256": "b354c25e6e208f406f40c48d4fb6a5fc9109113374428a0fdf126ba0730cc2f7",
+      "actuallyViewed": true,
+      "viaContactSheet": "py-katex\\test-runs\\MATH-batch-20261105T121812Z-73861ed7\\artifacts\\canvas-visual-qa\\A-CPU-2.png"
+    },
+    {
+      "path": "py-katex\\test-runs\\MATH-batch-20261105T121812Z-73861ed7\\artifacts\\integration-cpu\\math-flow-mixed.png",
+      "sha256": "35c138a4831751a2fb0968a1db1a45915dc290338ef259d4392495e6c884844c",
+      "actuallyViewed": true,
+      "viaContactSheet": "py-katex\\test-runs\\MATH-batch-20261105T121812Z-73861ed7\\artifacts\\canvas-visual-qa\\A-CPU-2.png"
+    },
+    {
+      "path": "py-katex\\test-runs\\MATH-batch-20261105T121812Z-73861ed7\\artifacts\\integration-cpu\\math-flow-radical.png",
+      "sha256": "1d094df655a910ad33b2991b2d78c91cacb70cb936f1ad261189e5529ec2b6c7",
+      "actuallyViewed": true,
+      "viaContactSheet": "py-katex\\test-runs\\MATH-batch-20261105T121812Z-73861ed7\\artifacts\\canvas-visual-qa\\A-CPU-2.png"
+    },
+    {
+      "path": "py-katex\\test-runs\\MATH-batch-20261105T121812Z-73861ed7\\artifacts\\integration-auto\\math-flow-mixed.png",
+      "sha256": "1ce19e2d1ca1efe33d132e85dd121a1f641b9bb57446e286cb002ce6350c9c0e",
+      "actuallyViewed": true,
+      "viaContactSheet": "py-katex\\test-runs\\MATH-batch-20261105T121812Z-73861ed7\\artifacts\\canvas-visual-qa\\math-flow-mixed-auto-GPU.png"
+    },
+    {
+      "path": "py-katex\\test-runs\\MATH-batch-20261105T121812Z-73861ed7\\artifacts\\integration-auto\\math-flow-group.png",
+      "sha256": "30f091940be3fe7d5558387acf85161bc33a9bad015617d296c2bc3c7d123d24",
+      "actuallyViewed": true,
+      "viaContactSheet": "py-katex\\test-runs\\MATH-batch-20261105T121812Z-73861ed7\\artifacts\\canvas-visual-qa\\math-flow-group-auto-GPU.png"
+    },
+    {
+      "path": "py-katex\\test-runs\\MATH-batch-20261105T121812Z-73861ed7\\artifacts\\integration-auto\\math-flow-matrix.png",
+      "sha256": "d3968af58292b5470e44466136b46dcfc70170838c2c6485779cb64037e748ef",
+      "actuallyViewed": true,
+      "viaContactSheet": "py-katex\\test-runs\\MATH-batch-20261105T121812Z-73861ed7\\artifacts\\canvas-visual-qa\\math-flow-matrix-auto-GPU.png"
+    },
+    {
+      "path": "py-katex\\test-runs\\MATH-batch-20261105T121812Z-73861ed7\\artifacts\\integration-gpu\\math-flow-mixed.png",
+      "sha256": "1ce19e2d1ca1efe33d132e85dd121a1f641b9bb57446e286cb002ce6350c9c0e",
+      "actuallyViewed": true,
+      "viaContactSheet": "py-katex\\test-runs\\MATH-batch-20261105T121812Z-73861ed7\\artifacts\\canvas-visual-qa\\math-flow-mixed-auto-GPU.png"
+    },
+    {
+      "path": "py-katex\\test-runs\\MATH-batch-20261105T121812Z-73861ed7\\artifacts\\integration-gpu\\math-flow-group.png",
+      "sha256": "30f091940be3fe7d5558387acf85161bc33a9bad015617d296c2bc3c7d123d24",
+      "actuallyViewed": true,
+      "viaContactSheet": "py-katex\\test-runs\\MATH-batch-20261105T121812Z-73861ed7\\artifacts\\canvas-visual-qa\\math-flow-group-auto-GPU.png"
+    },
+    {
+      "path": "py-katex\\test-runs\\MATH-batch-20261105T121812Z-73861ed7\\artifacts\\integration-gpu\\math-flow-matrix.png",
+      "sha256": "d3968af58292b5470e44466136b46dcfc70170838c2c6485779cb64037e748ef",
+      "actuallyViewed": true,
+      "viaContactSheet": "py-katex\\test-runs\\MATH-batch-20261105T121812Z-73861ed7\\artifacts\\canvas-visual-qa\\math-flow-matrix-auto-GPU.png"
+    }
+  ],
+  "contactSheets": [
+    {
+      "path": "py-katex\\test-runs\\MATH-batch-20261105T121812Z-73861ed7\\artifacts\\canvas-visual-qa\\A-CPU-1.png",
+      "sha256": "f0faf0623b19388aa77dba902daba371b34feeb4b3b99e1b0c72350a4e9d739e"
+    },
+    {
+      "path": "py-katex\\test-runs\\MATH-batch-20261105T121812Z-73861ed7\\artifacts\\canvas-visual-qa\\A-CPU-2.png",
+      "sha256": "60bbc0447af04dd207c0cdb5e76898f089be5829c97e579678cfef15d8ace682"
+    },
+    {
+      "path": "py-katex\\test-runs\\MATH-batch-20261105T121812Z-73861ed7\\artifacts\\canvas-visual-qa\\math-flow-group-auto-GPU.png",
+      "sha256": "683d18b91c393bff5cc01a3ca16b4e4c95ac8ee08b9a7089e2a237e8eed06ce5"
+    },
+    {
+      "path": "py-katex\\test-runs\\MATH-batch-20261105T121812Z-73861ed7\\artifacts\\canvas-visual-qa\\math-flow-matrix-auto-GPU.png",
+      "sha256": "45a5fad5fa99542a95f021a682bc4ef24edc33f802cf94618f3b290ec810a674"
+    },
+    {
+      "path": "py-katex\\test-runs\\MATH-batch-20261105T121812Z-73861ed7\\artifacts\\canvas-visual-qa\\math-flow-mixed-auto-GPU.png",
+      "sha256": "0dbc4f41574efba4996ffea30d056d5eec5d4cd6c780fe257ec4caf0ff2e7628"
+    }
+  ],
+  "limits": [
+    "Visual content/containment/relationship acceptance is not browser pixel identity.",
+    "No standalone61 images reviewed in this assigned integration-only pass.",
+    "Native-bold versus official-italic title and mixed whitespace remain explicitly reported differences, not silently normalized."
+  ],
+  "contactRelocationEvidence": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-qa-contact-relocation-20261105T122947Z-061728af\\artifacts\\relocation.json"
+}

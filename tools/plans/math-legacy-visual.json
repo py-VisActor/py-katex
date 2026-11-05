@@ -1,0 +1,353 @@
+{
+  "schema": "py-mermaid-command-plan/v1",
+  "scope": "MATH",
+  "description": "All 297 historical positive graphs x3 profiles; all negative/source/scope IDs retained. Two historical math exclusions now verify genuine math content/pixels under explicit promotedMath assertion, never skip. No install.",
+  "steps": [
+    {
+      "name": "joint-source-snapshot",
+      "argv": [
+        "{python}",
+        "{repo}/tools/joint_candidate.py",
+        "--out",
+        "{run}/artifacts"
+      ],
+      "timeoutSeconds": 120
+    },
+    {
+      "name": "historical-fixtures-with-explicit-math-promotion",
+      "argv": [
+        "{python}",
+        "-c",
+        "import json,sys;from pathlib import Path;sys.path.insert(0,'tools');from run_support import write_json;root=Path(sys.argv[1])/'artifacts';[(root/name).mkdir() for name in ['f011','f012','f013','f014']];[(write_json(root/name/'cases.json',json.loads((Path('../py-mermaid/tests')/name/'cases.json').read_text('utf-8')))) for name in ['f011','f012','f013','f014']];[( (lambda path,data:( [(c.update(promotedMath={'formulas':['x^2'],'glyphs':['x','2']},scopeDisposition='implemented_by_math_module')) for c in data.get('unsupportedCases',[]) if c['id'] in ['math','math-separate']],write_json(path,data)))(root/name/'cases.json',json.loads((root/name/'cases.json').read_text('utf-8')))) for name in ['f013','f014']]",
+        "{run}"
+      ],
+      "timeoutSeconds": 60
+    },
+    {
+      "name": "f011-verified-source-reuse",
+      "argv": [
+        "{python}",
+        "{repo}/../py-mermaid/tools/reuse_oracle.py",
+        "--source",
+        "{repo}/../py-mermaid/test-runs/F01.4-batch-20261105T111527Z-b69f15af/artifacts/f011/oracle",
+        "--source-fixtures",
+        "{repo}/../py-mermaid/test-runs/F01.4-batch-20261105T111527Z-b69f15af/artifacts/f011/cases.json",
+        "--fixtures",
+        "{run}/artifacts/f011/cases.json",
+        "--out",
+        "{run}/artifacts/f011/oracle"
+      ],
+      "timeoutSeconds": 300
+    },
+    {
+      "name": "f011-cpu",
+      "argv": [
+        "{python}",
+        "{repo}/../py-mermaid/tools/f011_validate.py",
+        "--fixtures",
+        "{run}/artifacts/f011/cases.json",
+        "--oracle",
+        "{run}/artifacts/f011/oracle",
+        "--out",
+        "{run}/artifacts/f011/compare-cpu",
+        "--backend",
+        "cpu"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src;{repo}/../py-mermaid/src",
+        "PYTHONUTF8": "1",
+        "PYTHONIOENCODING": "utf-8"
+      },
+      "timeoutSeconds": 2400
+    },
+    {
+      "name": "f011-auto",
+      "argv": [
+        "{python}",
+        "{repo}/../py-mermaid/tools/f011_validate.py",
+        "--fixtures",
+        "{run}/artifacts/f011/cases.json",
+        "--oracle",
+        "{run}/artifacts/f011/oracle",
+        "--out",
+        "{run}/artifacts/f011/compare-auto",
+        "--backend",
+        "auto"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src;{repo}/../py-mermaid/src",
+        "PYTHONUTF8": "1",
+        "PYTHONIOENCODING": "utf-8"
+      },
+      "timeoutSeconds": 2400
+    },
+    {
+      "name": "f011-gpu",
+      "argv": [
+        "{python}",
+        "{repo}/../py-mermaid/tools/f011_validate.py",
+        "--fixtures",
+        "{run}/artifacts/f011/cases.json",
+        "--oracle",
+        "{run}/artifacts/f011/oracle",
+        "--out",
+        "{run}/artifacts/f011/compare-gpu",
+        "--backend",
+        "gpu"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src;{repo}/../py-mermaid/src",
+        "PYTHONUTF8": "1",
+        "PYTHONIOENCODING": "utf-8"
+      },
+      "timeoutSeconds": 2400
+    },
+    {
+      "name": "f012-verified-source-reuse",
+      "argv": [
+        "{python}",
+        "{repo}/../py-mermaid/tools/reuse_oracle.py",
+        "--source",
+        "{repo}/../py-mermaid/test-runs/F01.4-batch-20261105T111527Z-b69f15af/artifacts/f012/oracle",
+        "--source-fixtures",
+        "{repo}/../py-mermaid/test-runs/F01.4-batch-20261105T111527Z-b69f15af/artifacts/f012/cases.json",
+        "--fixtures",
+        "{run}/artifacts/f012/cases.json",
+        "--out",
+        "{run}/artifacts/f012/oracle"
+      ],
+      "timeoutSeconds": 300
+    },
+    {
+      "name": "f012-cpu",
+      "argv": [
+        "{python}",
+        "{repo}/../py-mermaid/tools/f011_validate.py",
+        "--fixtures",
+        "{run}/artifacts/f012/cases.json",
+        "--oracle",
+        "{run}/artifacts/f012/oracle",
+        "--out",
+        "{run}/artifacts/f012/compare-cpu",
+        "--backend",
+        "cpu"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src;{repo}/../py-mermaid/src",
+        "PYTHONUTF8": "1",
+        "PYTHONIOENCODING": "utf-8"
+      },
+      "timeoutSeconds": 2400
+    },
+    {
+      "name": "f012-auto",
+      "argv": [
+        "{python}",
+        "{repo}/../py-mermaid/tools/f011_validate.py",
+        "--fixtures",
+        "{run}/artifacts/f012/cases.json",
+        "--oracle",
+        "{run}/artifacts/f012/oracle",
+        "--out",
+        "{run}/artifacts/f012/compare-auto",
+        "--backend",
+        "auto"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src;{repo}/../py-mermaid/src",
+        "PYTHONUTF8": "1",
+        "PYTHONIOENCODING": "utf-8"
+      },
+      "timeoutSeconds": 2400
+    },
+    {
+      "name": "f012-gpu",
+      "argv": [
+        "{python}",
+        "{repo}/../py-mermaid/tools/f011_validate.py",
+        "--fixtures",
+        "{run}/artifacts/f012/cases.json",
+        "--oracle",
+        "{run}/artifacts/f012/oracle",
+        "--out",
+        "{run}/artifacts/f012/compare-gpu",
+        "--backend",
+        "gpu"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src;{repo}/../py-mermaid/src",
+        "PYTHONUTF8": "1",
+        "PYTHONIOENCODING": "utf-8"
+      },
+      "timeoutSeconds": 2400
+    },
+    {
+      "name": "f013-verified-source-reuse",
+      "argv": [
+        "{python}",
+        "{repo}/../py-mermaid/tools/reuse_oracle.py",
+        "--source",
+        "{repo}/../py-mermaid/test-runs/F01.4-batch-20261105T111527Z-b69f15af/artifacts/f013/oracle",
+        "--source-fixtures",
+        "{repo}/../py-mermaid/test-runs/F01.4-batch-20261105T111527Z-b69f15af/artifacts/f013/cases.json",
+        "--fixtures",
+        "{run}/artifacts/f013/cases.json",
+        "--out",
+        "{run}/artifacts/f013/oracle"
+      ],
+      "timeoutSeconds": 300
+    },
+    {
+      "name": "f013-cpu",
+      "argv": [
+        "{python}",
+        "{repo}/../py-mermaid/tools/f011_validate.py",
+        "--fixtures",
+        "{run}/artifacts/f013/cases.json",
+        "--oracle",
+        "{run}/artifacts/f013/oracle",
+        "--out",
+        "{run}/artifacts/f013/compare-cpu",
+        "--backend",
+        "cpu"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src;{repo}/../py-mermaid/src",
+        "PYTHONUTF8": "1",
+        "PYTHONIOENCODING": "utf-8"
+      },
+      "timeoutSeconds": 2400
+    },
+    {
+      "name": "f013-auto",
+      "argv": [
+        "{python}",
+        "{repo}/../py-mermaid/tools/f011_validate.py",
+        "--fixtures",
+        "{run}/artifacts/f013/cases.json",
+        "--oracle",
+        "{run}/artifacts/f013/oracle",
+        "--out",
+        "{run}/artifacts/f013/compare-auto",
+        "--backend",
+        "auto"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src;{repo}/../py-mermaid/src",
+        "PYTHONUTF8": "1",
+        "PYTHONIOENCODING": "utf-8"
+      },
+      "timeoutSeconds": 2400
+    },
+    {
+      "name": "f013-gpu",
+      "argv": [
+        "{python}",
+        "{repo}/../py-mermaid/tools/f011_validate.py",
+        "--fixtures",
+        "{run}/artifacts/f013/cases.json",
+        "--oracle",
+        "{run}/artifacts/f013/oracle",
+        "--out",
+        "{run}/artifacts/f013/compare-gpu",
+        "--backend",
+        "gpu"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src;{repo}/../py-mermaid/src",
+        "PYTHONUTF8": "1",
+        "PYTHONIOENCODING": "utf-8"
+      },
+      "timeoutSeconds": 2400
+    },
+    {
+      "name": "f014-verified-source-reuse",
+      "argv": [
+        "{python}",
+        "{repo}/../py-mermaid/tools/reuse_oracle.py",
+        "--source",
+        "{repo}/../py-mermaid/test-runs/F01.4-batch-20261105T111527Z-8d3c0855/artifacts/oracle",
+        "--source-fixtures",
+        "{repo}/../py-mermaid/test-runs/F01.4-batch-20261105T111527Z-8d3c0855/artifacts/cases.json",
+        "--fixtures",
+        "{run}/artifacts/f014/cases.json",
+        "--out",
+        "{run}/artifacts/f014/oracle"
+      ],
+      "timeoutSeconds": 300
+    },
+    {
+      "name": "f014-cpu",
+      "argv": [
+        "{python}",
+        "{repo}/../py-mermaid/tools/f011_validate.py",
+        "--fixtures",
+        "{run}/artifacts/f014/cases.json",
+        "--oracle",
+        "{run}/artifacts/f014/oracle",
+        "--out",
+        "{run}/artifacts/f014/compare-cpu",
+        "--backend",
+        "cpu"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src;{repo}/../py-mermaid/src",
+        "PYTHONUTF8": "1",
+        "PYTHONIOENCODING": "utf-8"
+      },
+      "timeoutSeconds": 2400
+    },
+    {
+      "name": "f014-auto",
+      "argv": [
+        "{python}",
+        "{repo}/../py-mermaid/tools/f011_validate.py",
+        "--fixtures",
+        "{run}/artifacts/f014/cases.json",
+        "--oracle",
+        "{run}/artifacts/f014/oracle",
+        "--out",
+        "{run}/artifacts/f014/compare-auto",
+        "--backend",
+        "auto"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src;{repo}/../py-mermaid/src",
+        "PYTHONUTF8": "1",
+        "PYTHONIOENCODING": "utf-8"
+      },
+      "timeoutSeconds": 2400
+    },
+    {
+      "name": "f014-gpu",
+      "argv": [
+        "{python}",
+        "{repo}/../py-mermaid/tools/f011_validate.py",
+        "--fixtures",
+        "{run}/artifacts/f014/cases.json",
+        "--oracle",
+        "{run}/artifacts/f014/oracle",
+        "--out",
+        "{run}/artifacts/f014/compare-gpu",
+        "--backend",
+        "gpu"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src;{repo}/../py-mermaid/src",
+        "PYTHONUTF8": "1",
+        "PYTHONIOENCODING": "utf-8"
+      },
+      "timeoutSeconds": 2400
+    },
+    {
+      "name": "joint-source-unchanged",
+      "argv": [
+        "{python}",
+        "{repo}/tools/joint_candidate.py",
+        "--check",
+        "{run}/artifacts/joint-candidate.json"
+      ],
+      "timeoutSeconds": 60
+    }
+  ]
+}

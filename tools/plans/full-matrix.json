@@ -1,0 +1,196 @@
+{
+  "schema": "py-mermaid-command-plan/v1",
+  "scope": "MATH-FULL",
+  "description": "Final 267 standalone plus eight real Mermaid graphs on CPU/auto/required GPU, exact fixed A reuse and five exports; no install.",
+  "inputs": [
+    "{repo}/tests/full-visual-cases.json",
+    "{repo}/tests/integration-cases.json"
+  ],
+  "steps": [
+    {
+      "name": "joint-source-snapshot",
+      "argv": [
+        "{python}",
+        "{repo}/tools/joint_candidate.py",
+        "--out",
+        "{run}/artifacts"
+      ],
+      "timeoutSeconds": 120
+    },
+    {
+      "name": "verified-full-official-reuse",
+      "argv": [
+        "{python}",
+        "{repo}/tools/reuse_full_oracle.py",
+        "--source",
+        "{repo}/test-runs/MATH-FULL-batch-20261105T171602Z-0d9b6942/artifacts/oracle",
+        "--fixtures",
+        "{repo}/tests/full-visual-cases.json",
+        "--out",
+        "{run}/artifacts/oracle"
+      ],
+      "timeoutSeconds": 120
+    },
+    {
+      "name": "verified-official-integration-reuse",
+      "argv": [
+        "{python}",
+        "-c",
+        "import json,shutil,sys;from pathlib import Path;sys.path.insert(0,'tools');from run_support import file_identity;root=Path('test-runs/MATH-batch-20261105T121539Z-8cf07304');run=json.loads((root/'run.json').read_text('utf-8'));assert file_identity(Path('tests/integration-cases.json'))==run['inputs'][str(Path('tests/integration-cases.json').resolve())];target=Path(sys.argv[1])/'artifacts/integration-oracle';shutil.copytree(root/'artifacts/integration-oracle',target);assert all(file_identity(target/p.name)==file_identity(p) for p in (root/'artifacts/integration-oracle').iterdir());print('All eight official graph captures reused unchanged with exact fixture input fingerprint')",
+        "{run}"
+      ],
+      "timeoutSeconds": 600
+    },
+    {
+      "name": "full-standalone-cpu",
+      "argv": [
+        "{python}",
+        "{repo}/tools/validate_full_visual.py",
+        "--fixtures",
+        "{repo}/tests/full-visual-cases.json",
+        "--oracle",
+        "{run}/artifacts/oracle",
+        "--profile",
+        "cpu",
+        "--out",
+        "{run}/artifacts/standalone-cpu"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src;{repo}/../py-mermaid/src;{repo}/../py-mermaid/tools",
+        "PYTHONUTF8": "1",
+        "PYTHONIOENCODING": "utf-8"
+      },
+      "timeoutSeconds": 1200
+    },
+    {
+      "name": "math-integration-cpu",
+      "argv": [
+        "{python}",
+        "{repo}/tools/validate_integration.py",
+        "--fixtures",
+        "{repo}/tests/integration-cases.json",
+        "--oracle",
+        "{run}/artifacts/integration-oracle",
+        "--out",
+        "{run}/artifacts/integration-cpu",
+        "--backend",
+        "cpu"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src;{repo}/../py-mermaid/src;{repo}/../py-mermaid/tools",
+        "PYTHONUTF8": "1",
+        "PYTHONIOENCODING": "utf-8"
+      },
+      "timeoutSeconds": 1200
+    },
+    {
+      "name": "full-standalone-auto",
+      "argv": [
+        "{python}",
+        "{repo}/tools/validate_full_visual.py",
+        "--fixtures",
+        "{repo}/tests/full-visual-cases.json",
+        "--oracle",
+        "{run}/artifacts/oracle",
+        "--profile",
+        "auto",
+        "--out",
+        "{run}/artifacts/standalone-auto"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src;{repo}/../py-mermaid/src;{repo}/../py-mermaid/tools",
+        "PYTHONUTF8": "1",
+        "PYTHONIOENCODING": "utf-8"
+      },
+      "timeoutSeconds": 1200
+    },
+    {
+      "name": "math-integration-auto",
+      "argv": [
+        "{python}",
+        "{repo}/tools/validate_integration.py",
+        "--fixtures",
+        "{repo}/tests/integration-cases.json",
+        "--oracle",
+        "{run}/artifacts/integration-oracle",
+        "--out",
+        "{run}/artifacts/integration-auto",
+        "--backend",
+        "auto"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src;{repo}/../py-mermaid/src;{repo}/../py-mermaid/tools",
+        "PYTHONUTF8": "1",
+        "PYTHONIOENCODING": "utf-8"
+      },
+      "timeoutSeconds": 1200
+    },
+    {
+      "name": "full-standalone-gpu",
+      "argv": [
+        "{python}",
+        "{repo}/tools/validate_full_visual.py",
+        "--fixtures",
+        "{repo}/tests/full-visual-cases.json",
+        "--oracle",
+        "{run}/artifacts/oracle",
+        "--profile",
+        "gpu",
+        "--out",
+        "{run}/artifacts/standalone-gpu"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src;{repo}/../py-mermaid/src;{repo}/../py-mermaid/tools",
+        "PYTHONUTF8": "1",
+        "PYTHONIOENCODING": "utf-8"
+      },
+      "timeoutSeconds": 1200
+    },
+    {
+      "name": "math-integration-gpu",
+      "argv": [
+        "{python}",
+        "{repo}/tools/validate_integration.py",
+        "--fixtures",
+        "{repo}/tests/integration-cases.json",
+        "--oracle",
+        "{run}/artifacts/integration-oracle",
+        "--out",
+        "{run}/artifacts/integration-gpu",
+        "--backend",
+        "gpu"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src;{repo}/../py-mermaid/src;{repo}/../py-mermaid/tools",
+        "PYTHONUTF8": "1",
+        "PYTHONIOENCODING": "utf-8"
+      },
+      "timeoutSeconds": 1200
+    },
+    {
+      "name": "five-static-export-formats",
+      "argv": [
+        "{python}",
+        "{repo}/tools/export_samples.py",
+        "--out",
+        "{run}/artifacts/exports"
+      ],
+      "env": {
+        "PYTHONPATH": "{repo}/src;{repo}/../py-mermaid/src;{repo}/../py-mermaid/tools",
+        "PYTHONUTF8": "1",
+        "PYTHONIOENCODING": "utf-8"
+      },
+      "timeoutSeconds": 180
+    },
+    {
+      "name": "joint-source-unchanged",
+      "argv": [
+        "{python}",
+        "{repo}/tools/joint_candidate.py",
+        "--check",
+        "{run}/artifacts/joint-candidate.json"
+      ],
+      "timeoutSeconds": 60
+    }
+  ]
+}

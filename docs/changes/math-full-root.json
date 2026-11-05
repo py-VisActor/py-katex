@@ -1,0 +1,48 @@
+{
+  "schema": "py-katex-change-receipt/v1",
+  "phase": "P1_complete",
+  "status": "code_complete_unverified",
+  "owner": "/root",
+  "scope": "remaining core static KaTeX migration",
+  "startingRun": "test-runs/MATH-FULL-start-20261105T143333Z-c2e58342",
+  "plan": "docs/FULL_STATIC_MIGRATION.md",
+  "inventory": "references/full-core-inventory.json",
+  "sourceCommit": "d5bed9f38a8d747b9c4a12e18897a514707e1c26",
+  "installationValidation": "deferred_by_user",
+  "externalActions": {
+    "commit": false,
+    "push": false,
+    "publish": false
+  },
+  "freezeRun": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-p1-freeze-20261105T151929Z-e4650f5e",
+  "productFiles": [
+    "src/py_katex/model.py",
+    "src/py_katex/__init__.py",
+    "src/py_katex/__main__.py",
+    "README.md"
+  ],
+  "mechanicalOnly": true,
+  "sourceBehaviorExecuted": false,
+  "registryCorrection": {
+    "historical": 334,
+    "actual": 345,
+    "macros": 339
+  },
+  "finalVerification": {
+    "status": "PASS_FULL_CORE_STATIC_LOCAL",
+    "summary": "references/full-verification-summary.json",
+    "jointSourceSHA256": {
+      "math": "334c412c34ef675dbc223405622c8d4e19eb56b1ff3700c251cb663d4afdd445",
+      "mermaid": "6094d419ff3c50d2c64fdd00051af2be087b25a7a239cb1dae0e9e09209fdff1"
+    },
+    "runs": {
+      "unit": "test-runs/MATH-FULL-batch-20261105T171602Z-0d9b6942",
+      "visual": "test-runs/MATH-FULL-batch-20261105T171857Z-5071cad7",
+      "legacy": "test-runs/MATH-FULL-batch-20261105T171629Z-8b5ef28e",
+      "report": "test-runs/MATH-FULL-batch-20261105T172308Z-e0e12af6",
+      "htmlQa": "test-runs/MATH-FULL-batch-20261105T172348Z-4daa587b",
+      "manual1": "test-runs/MATH-FULL-batch-20261105T171936Z-a5ca8881",
+      "manual2": "test-runs/MATH-FULL-batch-20261105T172008Z-7055e775"
+    }
+  }
+}

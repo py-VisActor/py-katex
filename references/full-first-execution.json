@@ -1,0 +1,78 @@
+{
+  "schema": "py-katex-full-first-execution/v1",
+  "run": "test-runs/MATH-batch-20261105T155834Z-e542e4f2",
+  "status": "FAILED",
+  "sourceUnchanged": true,
+  "jointCandidate": "test-runs/MATH-batch-20261105T155834Z-e542e4f2/artifacts/joint-candidate.json",
+  "unitMethods": 939,
+  "unitGroups": {
+    "math-parser": 67,
+    "math-macros": 53,
+    "math-layout": 65,
+    "math-canvas": 16,
+    "math-api": 6,
+    "math-evidence": 2,
+    "mermaid-math-integration": 17,
+    "f011-language": 40,
+    "f011-layout": 21,
+    "f011-canvas": 23,
+    "f011-api": 5,
+    "f012-language": 29,
+    "f012-layout": 19,
+    "f012-canvas": 18,
+    "f013-language": 63,
+    "f013-layout": 14,
+    "f013-styles": 16,
+    "f013-canvas": 33,
+    "tooling": 34,
+    "f014-language": 54,
+    "f014-layout": 39,
+    "f014-shapes": 18,
+    "f014-styles": 19,
+    "f014-canvas": 41,
+    "full-parser": 49,
+    "full-macros": 48,
+    "full-registry": 9,
+    "full-layout": 70,
+    "full-canvas": 29,
+    "full-integration": 12,
+    "full-api": 10
+  },
+  "registrationSource": {
+    "cases": 684,
+    "fixtureContextErrors": [
+      "macro-277"
+    ]
+  },
+  "coreSourceCorpus": {
+    "clauses": 1245,
+    "expressions": 1909,
+    "equivalencePairs": 217,
+    "nativePass": 1840,
+    "nativeFail": 62,
+    "toolError": 7,
+    "pairFail": 14
+  },
+  "officialVisual": {
+    "cases": 265,
+    "sourceErrors": [
+      "image-datauri",
+      "full-css-font-axes"
+    ]
+  },
+  "nativeVisualCpu": {
+    "cases": 265,
+    "pass": 231,
+    "fail": 34
+  },
+  "sourcePreserved": true,
+  "repairPolicy": "First complete grouped execution retained; product, fixture/test and oracle adapter causes separately repaired in new runs",
+  "rootCorrections": {
+    "sourceOracleDataUri": "allow explicitly self-contained data:image URI without fabricated assets",
+    "sourceOracleCss": "150% is a TeX comment; legitimate fixture becomes1.5em preserving illegal first evidence",
+    "sourceCounter": "native explicit equation_counter maps to source host CSS counter-reset",
+    "sourceCoreBoolean": "source screenshotter displayMode numeric1 maps to strict Python bool",
+    "publicStateTest": "source built-in R macros.ts852 cannot test isolation; use unique NativeStateProof",
+    "nativeMaxExpandTest": "source numeric0/negative-clamp/fractional/Infinity accepted; keep other independent budgets"
+  }
+}

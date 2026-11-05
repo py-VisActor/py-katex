@@ -1,0 +1,746 @@
+{
+  "version": "0.18.11",
+  "functions": [
+    {
+      "source": "src/functions/accent.ts",
+      "category": "functions",
+      "names": [
+        "\\acute",
+        "\\grave",
+        "\\ddot",
+        "\\tilde",
+        "\\bar",
+        "\\breve",
+        "\\check",
+        "\\hat",
+        "\\vec",
+        "\\dot",
+        "\\mathring",
+        "\\widecheck",
+        "\\widehat",
+        "\\widetilde",
+        "\\overrightarrow",
+        "\\overleftarrow",
+        "\\Overrightarrow",
+        "\\overleftrightarrow",
+        "\\overgroup",
+        "\\overlinesegment",
+        "\\overleftharpoon",
+        "\\overrightharpoon",
+        "\\'",
+        "\\`",
+        "\\^",
+        "\\~",
+        "\\=",
+        "\\u",
+        "\\.",
+        "\\\"",
+        "\\c",
+        "\\r",
+        "\\H",
+        "\\v",
+        "\\textcircled"
+      ],
+      "macroNames": [],
+      "unresolvedNameSources": []
+    },
+    {
+      "source": "src/functions/accentunder.ts",
+      "category": "functions",
+      "names": [
+        "\\underleftarrow",
+        "\\underrightarrow",
+        "\\underleftrightarrow",
+        "\\undergroup",
+        "\\underlinesegment",
+        "\\utilde"
+      ],
+      "macroNames": [],
+      "unresolvedNameSources": []
+    },
+    {
+      "source": "src/functions/arrow.ts",
+      "category": "functions",
+      "names": [
+        "\\xleftarrow",
+        "\\xrightarrow",
+        "\\xLeftarrow",
+        "\\xRightarrow",
+        "\\xleftrightarrow",
+        "\\xLeftrightarrow",
+        "\\xhookleftarrow",
+        "\\xhookrightarrow",
+        "\\xmapsto",
+        "\\xrightharpoondown",
+        "\\xrightharpoonup",
+        "\\xleftharpoondown",
+        "\\xleftharpoonup",
+        "\\xrightleftharpoons",
+        "\\xleftrightharpoons",
+        "\\xlongequal",
+        "\\xtwoheadrightarrow",
+        "\\xtwoheadleftarrow",
+        "\\xtofrom",
+        "\\xrightleftarrows",
+        "\\xrightequilibrium",
+        "\\xleftequilibrium",
+        "\\\\cdrightarrow",
+        "\\\\cdleftarrow",
+        "\\\\cdlongequal"
+      ],
+      "macroNames": [],
+      "unresolvedNameSources": []
+    },
+    {
+      "source": "src/functions/char.ts",
+      "category": "functions",
+      "names": [
+        "\\@char"
+      ],
+      "macroNames": [],
+      "unresolvedNameSources": []
+    },
+    {
+      "source": "src/functions/color.ts",
+      "category": "functions",
+      "names": [
+        "\\textcolor",
+        "\\color"
+      ],
+      "macroNames": [],
+      "unresolvedNameSources": []
+    },
+    {
+      "source": "src/functions/cr.ts",
+      "category": "functions",
+      "names": [
+        "\\\\"
+      ],
+      "macroNames": [],
+      "unresolvedNameSources": []
+    },
+    {
+      "source": "src/functions/def.ts",
+      "category": "functions",
+      "names": [
+        "\\global",
+        "\\long",
+        "\\\\globallong",
+        "\\def",
+        "\\gdef",
+        "\\edef",
+        "\\xdef",
+        "\\let",
+        "\\\\globallet",
+        "\\futurelet",
+        "\\\\globalfuture"
+      ],
+      "macroNames": [],
+      "unresolvedNameSources": []
+    },
+    {
+      "source": "src/functions/delimsizing.ts",
+      "category": "functions",
+      "names": [
+        "\\bigl",
+        "\\Bigl",
+        "\\biggl",
+        "\\Biggl",
+        "\\bigr",
+        "\\Bigr",
+        "\\biggr",
+        "\\Biggr",
+        "\\bigm",
+        "\\Bigm",
+        "\\biggm",
+        "\\Biggm",
+        "\\big",
+        "\\Big",
+        "\\bigg",
+        "\\Bigg",
+        "\\right",
+        "\\left",
+        "\\middle"
+      ],
+      "macroNames": [],
+      "unresolvedNameSources": []
+    },
+    {
+      "source": "src/functions/enclose.ts",
+      "category": "functions",
+      "names": [
+        "\\colorbox",
+        "\\fcolorbox",
+        "\\fbox",
+        "\\cancel",
+        "\\bcancel",
+        "\\xcancel",
+        "\\phase",
+        "\\sout",
+        "\\angl"
+      ],
+      "macroNames": [],
+      "unresolvedNameSources": []
+    },
+    {
+      "source": "src/functions/environment.ts",
+      "category": "functions",
+      "names": [
+        "\\begin",
+        "\\end"
+      ],
+      "macroNames": [],
+      "unresolvedNameSources": []
+    },
+    {
+      "source": "src/functions/font.ts",
+      "category": "functions",
+      "names": [
+        "\\mathrm",
+        "\\mathit",
+        "\\mathbf",
+        "\\mathnormal",
+        "\\mathsfit",
+        "\\mathbb",
+        "\\mathcal",
+        "\\mathfrak",
+        "\\mathscr",
+        "\\mathsf",
+        "\\mathtt",
+        "\\Bbb",
+        "\\bold",
+        "\\frak",
+        "\\boldsymbol",
+        "\\bm",
+        "\\rm",
+        "\\sf",
+        "\\tt",
+        "\\bf",
+        "\\it",
+        "\\cal"
+      ],
+      "macroNames": [],
+      "unresolvedNameSources": []
+    },
+    {
+      "source": "src/functions/genfrac.ts",
+      "category": "functions",
+      "names": [
+        "\\cfrac",
+        "\\dfrac",
+        "\\frac",
+        "\\tfrac",
+        "\\dbinom",
+        "\\binom",
+        "\\tbinom",
+        "\\\\atopfrac",
+        "\\\\bracefrac",
+        "\\\\brackfrac",
+        "\\over",
+        "\\choose",
+        "\\atop",
+        "\\brace",
+        "\\brack",
+        "\\genfrac",
+        "\\above",
+        "\\\\abovefrac"
+      ],
+      "macroNames": [],
+      "unresolvedNameSources": []
+    },
+    {
+      "source": "src/functions/hbox.ts",
+      "category": "functions",
+      "names": [
+        "\\hbox"
+      ],
+      "macroNames": [],
+      "unresolvedNameSources": []
+    },
+    {
+      "source": "src/functions/horizBrace.ts",
+      "category": "functions",
+      "names": [
+        "\\overbrace",
+        "\\underbrace",
+        "\\overbracket",
+        "\\underbracket"
+      ],
+      "macroNames": [],
+      "unresolvedNameSources": []
+    },
+    {
+      "source": "src/functions/href.ts",
+      "category": "functions",
+      "names": [
+        "\\href",
+        "\\url"
+      ],
+      "macroNames": [],
+      "unresolvedNameSources": []
+    },
+    {
+      "source": "src/functions/html.ts",
+      "category": "functions",
+      "names": [
+        "\\htmlClass",
+        "\\htmlId",
+        "\\htmlStyle",
+        "\\htmlData"
+      ],
+      "macroNames": [],
+      "unresolvedNameSources": []
+    },
+    {
+      "source": "src/functions/htmlmathml.ts",
+      "category": "functions",
+      "names": [
+        "\\html@mathml"
+      ],
+      "macroNames": [],
+      "unresolvedNameSources": []
+    },
+    {
+      "source": "src/functions/includegraphics.ts",
+      "category": "functions",
+      "names": [
+        "\\includegraphics"
+      ],
+      "macroNames": [],
+      "unresolvedNameSources": []
+    },
+    {
+      "source": "src/functions/kern.ts",
+      "category": "functions",
+      "names": [
+        "\\kern",
+        "\\mkern",
+        "\\hskip",
+        "\\mskip"
+      ],
+      "macroNames": [],
+      "unresolvedNameSources": []
+    },
+    {
+      "source": "src/functions/lap.ts",
+      "category": "functions",
+      "names": [
+        "\\mathllap",
+        "\\mathrlap",
+        "\\mathclap"
+      ],
+      "macroNames": [],
+      "unresolvedNameSources": []
+    },
+    {
+      "source": "src/functions/math.ts",
+      "category": "functions",
+      "names": [
+        "\\(",
+        "$",
+        "\\)",
+        "\\]"
+      ],
+      "macroNames": [],
+      "unresolvedNameSources": []
+    },
+    {
+      "source": "src/functions/mathchoice.ts",
+      "category": "functions",
+      "names": [
+        "\\mathchoice"
+      ],
+      "macroNames": [],
+      "unresolvedNameSources": []
+    },
+    {
+      "source": "src/functions/mclass.ts",
+      "category": "functions",
+      "names": [
+        "\\mathord",
+        "\\mathbin",
+        "\\mathrel",
+        "\\mathopen",
+        "\\mathclose",
+        "\\mathpunct",
+        "\\mathinner",
+        "\\@binrel",
+        "\\stackrel",
+        "\\overset",
+        "\\underset"
+      ],
+      "macroNames": [],
+      "unresolvedNameSources": []
+    },
+    {
+      "source": "src/functions/op.ts",
+      "category": "functions",
+      "names": [
+        "\\coprod",
+        "\\bigvee",
+        "\\bigwedge",
+        "\\biguplus",
+        "\\bigcap",
+        "\\bigcup",
+        "\\intop",
+        "\\prod",
+        "\\sum",
+        "\\bigotimes",
+        "\\bigoplus",
+        "\\bigodot",
+        "\\bigsqcup",
+        "\\smallint",
+        "∏",
+        "∐",
+        "∑",
+        "⋀",
+        "⋁",
+        "⋂",
+        "⋃",
+        "⨀",
+        "⨁",
+        "⨂",
+        "⨄",
+        "⨆",
+        "\\mathop",
+        "\\arcsin",
+        "\\arccos",
+        "\\arctan",
+        "\\arctg",
+        "\\arcctg",
+        "\\arg",
+        "\\ch",
+        "\\cos",
+        "\\cosec",
+        "\\cosh",
+        "\\cot",
+        "\\cotg",
+        "\\coth",
+        "\\csc",
+        "\\ctg",
+        "\\cth",
+        "\\deg",
+        "\\dim",
+        "\\exp",
+        "\\hom",
+        "\\ker",
+        "\\lg",
+        "\\ln",
+        "\\log",
+        "\\sec",
+        "\\sin",
+        "\\sinh",
+        "\\sh",
+        "\\tan",
+        "\\tanh",
+        "\\tg",
+        "\\th",
+        "\\det",
+        "\\gcd",
+        "\\inf",
+        "\\lim",
+        "\\max",
+        "\\min",
+        "\\Pr",
+        "\\sup",
+        "\\int",
+        "\\iint",
+        "\\iiint",
+        "\\oint",
+        "\\oiint",
+        "\\oiiint",
+        "∫",
+        "∬",
+        "∭",
+        "∮",
+        "∯",
+        "∰"
+      ],
+      "macroNames": [],
+      "unresolvedNameSources": []
+    },
+    {
+      "source": "src/functions/operatorname.ts",
+      "category": "functions",
+      "names": [
+        "\\operatorname@",
+        "\\operatornamewithlimits"
+      ],
+      "macroNames": [
+        "\\operatorname"
+      ],
+      "unresolvedNameSources": []
+    },
+    {
+      "source": "src/functions/ordgroup.ts",
+      "category": "functions",
+      "names": [],
+      "macroNames": [],
+      "unresolvedNameSources": []
+    },
+    {
+      "source": "src/functions/overline.ts",
+      "category": "functions",
+      "names": [
+        "\\overline"
+      ],
+      "macroNames": [],
+      "unresolvedNameSources": []
+    },
+    {
+      "source": "src/functions/phantom.ts",
+      "category": "functions",
+      "names": [
+        "\\phantom",
+        "\\vphantom"
+      ],
+      "macroNames": [
+        "\\hphantom"
+      ],
+      "unresolvedNameSources": []
+    },
+    {
+      "source": "src/functions/pmb.ts",
+      "category": "functions",
+      "names": [
+        "\\pmb"
+      ],
+      "macroNames": [],
+      "unresolvedNameSources": []
+    },
+    {
+      "source": "src/functions/raisebox.ts",
+      "category": "functions",
+      "names": [
+        "\\raisebox"
+      ],
+      "macroNames": [],
+      "unresolvedNameSources": []
+    },
+    {
+      "source": "src/functions/reflectbox.ts",
+      "category": "functions",
+      "names": [
+        "\\reflectbox",
+        "\\mathreflectbox"
+      ],
+      "macroNames": [],
+      "unresolvedNameSources": []
+    },
+    {
+      "source": "src/functions/relax.ts",
+      "category": "functions",
+      "names": [
+        "\\relax"
+      ],
+      "macroNames": [],
+      "unresolvedNameSources": []
+    },
+    {
+      "source": "src/functions/rule.ts",
+      "category": "functions",
+      "names": [
+        "\\rule"
+      ],
+      "macroNames": [],
+      "unresolvedNameSources": []
+    },
+    {
+      "source": "src/functions/sizing.ts",
+      "category": "functions",
+      "names": [],
+      "macroNames": [],
+      "unresolvedNameSources": []
+    },
+    {
+      "source": "src/functions/smash.ts",
+      "category": "functions",
+      "names": [
+        "\\smash"
+      ],
+      "macroNames": [],
+      "unresolvedNameSources": []
+    },
+    {
+      "source": "src/functions/sqrt.ts",
+      "category": "functions",
+      "names": [
+        "\\sqrt"
+      ],
+      "macroNames": [],
+      "unresolvedNameSources": []
+    },
+    {
+      "source": "src/functions/styling.ts",
+      "category": "functions",
+      "names": [
+        "\\displaystyle",
+        "\\textstyle",
+        "\\scriptstyle",
+        "\\scriptscriptstyle"
+      ],
+      "macroNames": [],
+      "unresolvedNameSources": []
+    },
+    {
+      "source": "src/functions/supsub.ts",
+      "category": "functions",
+      "names": [],
+      "macroNames": [],
+      "unresolvedNameSources": []
+    },
+    {
+      "source": "src/functions/symbolsOp.ts",
+      "category": "functions",
+      "names": [],
+      "macroNames": [],
+      "unresolvedNameSources": []
+    },
+    {
+      "source": "src/functions/symbolsOrd.ts",
+      "category": "functions",
+      "names": [],
+      "macroNames": [],
+      "unresolvedNameSources": []
+    },
+    {
+      "source": "src/functions/symbolsSpacing.ts",
+      "category": "functions",
+      "names": [],
+      "macroNames": [],
+      "unresolvedNameSources": []
+    },
+    {
+      "source": "src/functions/tag.ts",
+      "category": "functions",
+      "names": [],
+      "macroNames": [],
+      "unresolvedNameSources": []
+    },
+    {
+      "source": "src/functions/text.ts",
+      "category": "functions",
+      "names": [
+        "\\text",
+        "\\textrm",
+        "\\textsf",
+        "\\texttt",
+        "\\textnormal",
+        "\\textbf",
+        "\\textmd",
+        "\\textit",
+        "\\textup",
+        "\\emph"
+      ],
+      "macroNames": [],
+      "unresolvedNameSources": []
+    },
+    {
+      "source": "src/functions/underline.ts",
+      "category": "functions",
+      "names": [
+        "\\underline"
+      ],
+      "macroNames": [],
+      "unresolvedNameSources": []
+    },
+    {
+      "source": "src/functions/vcenter.ts",
+      "category": "functions",
+      "names": [
+        "\\vcenter"
+      ],
+      "macroNames": [],
+      "unresolvedNameSources": []
+    },
+    {
+      "source": "src/functions/verb.ts",
+      "category": "functions",
+      "names": [
+        "\\verb"
+      ],
+      "macroNames": [],
+      "unresolvedNameSources": []
+    },
+    {
+      "source": "src/environments/array.ts",
+      "category": "environments",
+      "names": [
+        "array",
+        "darray",
+        "matrix",
+        "pmatrix",
+        "bmatrix",
+        "Bmatrix",
+        "vmatrix",
+        "Vmatrix",
+        "matrix*",
+        "pmatrix*",
+        "bmatrix*",
+        "Bmatrix*",
+        "vmatrix*",
+        "Vmatrix*",
+        "smallmatrix",
+        "subarray",
+        "cases",
+        "dcases",
+        "rcases",
+        "drcases",
+        "align",
+        "align*",
+        "aligned",
+        "split",
+        "gathered",
+        "gather",
+        "gather*",
+        "alignat",
+        "alignat*",
+        "alignedat",
+        "equation",
+        "equation*",
+        "CD",
+        "\\hline",
+        "\\hdashline"
+      ],
+      "macroNames": [
+        "\\nonumber",
+        "\\notag"
+      ],
+      "unresolvedNameSources": []
+    },
+    {
+      "source": "src/environments/cd.ts",
+      "category": "environments",
+      "names": [
+        "\\\\cdleft",
+        "\\\\cdright",
+        "\\\\cdparent"
+      ],
+      "macroNames": [],
+      "unresolvedNameSources": []
+    }
+  ],
+  "dynamicMacros": [
+    "\\noexpand",
+    "\\expandafter",
+    "\\@firstoftwo",
+    "\\@secondoftwo",
+    "\\@ifnextchar",
+    "\\TextOrMath",
+    "\\char",
+    "\\newcommand",
+    "\\renewcommand",
+    "\\providecommand",
+    "\\message",
+    "\\errmessage",
+    "\\show",
+    "\\dots",
+    "\\dotso",
+    "\\dotsc",
+    "\\cdots",
+    "\\tag@literal",
+    "\\bra@ket",
+    "\\bra@set"
+  ],
+  "literalMacroTableScope": "src/macros.ts only; function-local macro responsibilities are inventoried per file and may be native parser handlers"
+}

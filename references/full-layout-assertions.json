@@ -1,0 +1,2314 @@
+{
+  "schema": "py-katex-full-layout-assertions/v1",
+  "phase": "P2",
+  "status": "test_design_complete_unexecuted",
+  "candidateFreeze": "test-runs/MATH-FULL-p1-freeze-20261105T151929Z-e4650f5e",
+  "upstreamVersion": "0.18.11",
+  "upstreamCommit": "d5bed9f38a8d747b9c4a12e18897a514707e1c26",
+  "files": [
+    {
+      "path": "tests/test_full_layout.py",
+      "sha256": "11d4213597fcf4c45b25bdc40d8311c01cc7c88045b5b2049c16f7b795315510"
+    },
+    {
+      "path": "tests/full-layout-cases.json",
+      "sha256": "967c669ebce38b5eacd436f04716312baf8e4f327c19969ec99e49ce9a265dc4"
+    },
+    {
+      "path": "tests/test_layout.py",
+      "sha256": "40c8548403645a82902122c208c91882d1c333dbc0565d7e12afde540f5cf187"
+    }
+  ],
+  "newMethodCount": 70,
+  "newFixtureCount": 54,
+  "oldMethodIdsRetained": [
+    "L54",
+    "L56"
+  ],
+  "legacyTestMigrations": [
+    {
+      "methodId": "L54",
+      "method": "test_l54_pmb_keeps_source_offset_duplicate",
+      "source": "functions/pmb.ts literal text-shadow 0.02em 0.01em 0.04px",
+      "before": "Initial native slice explicitly omitted .04px blur and emitted raw shifted glyph copies. That limited-contract evidence is preserved.",
+      "after": "Require real CommandGroup blur(.04px), original .02/.01 offsets, source glyph content and advance; no relaxation of content/position checks."
+    },
+    {
+      "methodId": "L56",
+      "method": "test_l56_unknown_kind_font_and_missing_metric_fail_explicitly",
+      "source": "Parser.ts Unicode text fallback; fontMetrics.ts getCharacterMetrics; new frozen AST unsupported node",
+      "before": "Treated kind unsupported as unknown and required a missing emoji character metric to reject.",
+      "after": "Use genuinely unknown AST kind and nonexistent source font metric family. FULL source-allowed Unicode fallback may render with explicit/covered font; missing bundled character metric alone is no longer rejection. Existing font-command negative remains."
+    }
+  ],
+  "legacyBeforeSha256": "4a8dc9022659b257826f1bde3863b008839ffd1e66af99ba62b00a339eb74c8f",
+  "assertions": [
+    {
+      "id": "F01",
+      "method": "test_f01_cd_all_horizontal_directions_preserve_labels_and_source_head_scale",
+      "line": 48,
+      "sources": [
+        {
+          "path": ".local/katex-0.18.11/package/src/environments/cd.ts",
+          "sha256": "432889c62cb7bfb0fd971d9deea20f822ea78cd92aded20e6439559a89466533"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/environments/array.ts",
+          "sha256": "623b540461126519249547e39e7da7a148ff86efd3552b02292ee57ed9a17f60"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/arrow.ts",
+          "sha256": "5c56a8a89b19e9d7b8c29563fc3e266a5fcd880d7b49e113d3a627bc3a4af89d"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/styles/katex.scss",
+          "sha256": "b4f458566634e85aab59629c3816790e3d1acbe10a3a235b6d06b36104bcd1b9"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/fontMetricsData.js",
+          "sha256": "1e72fc6b451a565e60b1eb7e89f4738eb74f35edfcf3c9c273015700b42ae04d"
+        }
+      ],
+      "expectedOrigin": "Independent fixed-source literal metrics/TeX builder equations or explicit native API contract; never candidate output/private helper"
+    },
+    {
+      "id": "F02",
+      "method": "test_f02_cd_both_vertical_arrows_have_real_arrow_and_two_script_labels",
+      "line": 59,
+      "sources": [
+        {
+          "path": ".local/katex-0.18.11/package/src/environments/cd.ts",
+          "sha256": "432889c62cb7bfb0fd971d9deea20f822ea78cd92aded20e6439559a89466533"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/environments/array.ts",
+          "sha256": "623b540461126519249547e39e7da7a148ff86efd3552b02292ee57ed9a17f60"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/arrow.ts",
+          "sha256": "5c56a8a89b19e9d7b8c29563fc3e266a5fcd880d7b49e113d3a627bc3a4af89d"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/styles/katex.scss",
+          "sha256": "b4f458566634e85aab59629c3816790e3d1acbe10a3a235b6d06b36104bcd1b9"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/fontMetricsData.js",
+          "sha256": "1e72fc6b451a565e60b1eb7e89f4738eb74f35edfcf3c9c273015700b42ae04d"
+        }
+      ],
+      "expectedOrigin": "Independent fixed-source literal metrics/TeX builder equations or explicit native API contract; never candidate output/private helper"
+    },
+    {
+      "id": "F03",
+      "method": "test_f03_cd_no_arrow_is_source_space_not_an_unknown_empty_stub",
+      "line": 69,
+      "sources": [
+        {
+          "path": ".local/katex-0.18.11/package/src/environments/cd.ts",
+          "sha256": "432889c62cb7bfb0fd971d9deea20f822ea78cd92aded20e6439559a89466533"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/environments/array.ts",
+          "sha256": "623b540461126519249547e39e7da7a148ff86efd3552b02292ee57ed9a17f60"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/arrow.ts",
+          "sha256": "5c56a8a89b19e9d7b8c29563fc3e266a5fcd880d7b49e113d3a627bc3a4af89d"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/styles/katex.scss",
+          "sha256": "b4f458566634e85aab59629c3816790e3d1acbe10a3a235b6d06b36104bcd1b9"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/fontMetricsData.js",
+          "sha256": "1e72fc6b451a565e60b1eb7e89f4738eb74f35edfcf3c9c273015700b42ae04d"
+        }
+      ],
+      "expectedOrigin": "Independent fixed-source literal metrics/TeX builder equations or explicit native API contract; never candidate output/private helper"
+    },
+    {
+      "id": "F04",
+      "method": "test_f04_cd_parallel_bar_uses_source_doublevert_width",
+      "line": 74,
+      "sources": [
+        {
+          "path": ".local/katex-0.18.11/package/src/environments/cd.ts",
+          "sha256": "432889c62cb7bfb0fd971d9deea20f822ea78cd92aded20e6439559a89466533"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/environments/array.ts",
+          "sha256": "623b540461126519249547e39e7da7a148ff86efd3552b02292ee57ed9a17f60"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/arrow.ts",
+          "sha256": "5c56a8a89b19e9d7b8c29563fc3e266a5fcd880d7b49e113d3a627bc3a4af89d"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/styles/katex.scss",
+          "sha256": "b4f458566634e85aab59629c3816790e3d1acbe10a3a235b6d06b36104bcd1b9"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/fontMetricsData.js",
+          "sha256": "1e72fc6b451a565e60b1eb7e89f4738eb74f35edfcf3c9c273015700b42ae04d"
+        }
+      ],
+      "expectedOrigin": "Independent fixed-source literal metrics/TeX builder equations or explicit native API contract; never candidate output/private helper"
+    },
+    {
+      "id": "F05",
+      "method": "test_f05_internal_cdlabel_has_zero_tex_extents_with_visible_label_command",
+      "line": 80,
+      "sources": [
+        {
+          "path": ".local/katex-0.18.11/package/src/environments/cd.ts",
+          "sha256": "432889c62cb7bfb0fd971d9deea20f822ea78cd92aded20e6439559a89466533"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/environments/array.ts",
+          "sha256": "623b540461126519249547e39e7da7a148ff86efd3552b02292ee57ed9a17f60"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/arrow.ts",
+          "sha256": "5c56a8a89b19e9d7b8c29563fc3e266a5fcd880d7b49e113d3a627bc3a4af89d"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/styles/katex.scss",
+          "sha256": "b4f458566634e85aab59629c3816790e3d1acbe10a3a235b6d06b36104bcd1b9"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/fontMetricsData.js",
+          "sha256": "1e72fc6b451a565e60b1eb7e89f4738eb74f35edfcf3c9c273015700b42ae04d"
+        }
+      ],
+      "expectedOrigin": "Independent fixed-source literal metrics/TeX builder equations or explicit native API contract; never candidate output/private helper"
+    },
+    {
+      "id": "F06",
+      "method": "test_f06_internal_cdparent_anchors_labels_to_big_arrow_not_document",
+      "line": 86,
+      "sources": [
+        {
+          "path": ".local/katex-0.18.11/package/src/environments/cd.ts",
+          "sha256": "432889c62cb7bfb0fd971d9deea20f822ea78cd92aded20e6439559a89466533"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/environments/array.ts",
+          "sha256": "623b540461126519249547e39e7da7a148ff86efd3552b02292ee57ed9a17f60"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/arrow.ts",
+          "sha256": "5c56a8a89b19e9d7b8c29563fc3e266a5fcd880d7b49e113d3a627bc3a4af89d"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/styles/katex.scss",
+          "sha256": "b4f458566634e85aab59629c3816790e3d1acbe10a3a235b6d06b36104bcd1b9"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/fontMetricsData.js",
+          "sha256": "1e72fc6b451a565e60b1eb7e89f4738eb74f35edfcf3c9c273015700b42ae04d"
+        }
+      ],
+      "expectedOrigin": "Independent fixed-source literal metrics/TeX builder equations or explicit native API contract; never candidate output/private helper"
+    },
+    {
+      "id": "F07",
+      "method": "test_f07_cd_uses_three_ex_baseline_jot_and_preserves_terminal_empty_row",
+      "line": 93,
+      "sources": [
+        {
+          "path": ".local/katex-0.18.11/package/src/environments/cd.ts",
+          "sha256": "432889c62cb7bfb0fd971d9deea20f822ea78cd92aded20e6439559a89466533"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/environments/array.ts",
+          "sha256": "623b540461126519249547e39e7da7a148ff86efd3552b02292ee57ed9a17f60"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/arrow.ts",
+          "sha256": "5c56a8a89b19e9d7b8c29563fc3e266a5fcd880d7b49e113d3a627bc3a4af89d"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/styles/katex.scss",
+          "sha256": "b4f458566634e85aab59629c3816790e3d1acbe10a3a235b6d06b36104bcd1b9"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/fontMetricsData.js",
+          "sha256": "1e72fc6b451a565e60b1eb7e89f4738eb74f35edfcf3c9c273015700b42ae04d"
+        }
+      ],
+      "expectedOrigin": "Independent fixed-source literal metrics/TeX builder equations or explicit native API contract; never candidate output/private helper"
+    },
+    {
+      "id": "F08",
+      "method": "test_f08_cd_columns_have_quarter_em_pre_and_post_gaps",
+      "line": 99,
+      "sources": [
+        {
+          "path": ".local/katex-0.18.11/package/src/environments/cd.ts",
+          "sha256": "432889c62cb7bfb0fd971d9deea20f822ea78cd92aded20e6439559a89466533"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/environments/array.ts",
+          "sha256": "623b540461126519249547e39e7da7a148ff86efd3552b02292ee57ed9a17f60"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/arrow.ts",
+          "sha256": "5c56a8a89b19e9d7b8c29563fc3e266a5fcd880d7b49e113d3a627bc3a4af89d"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/styles/katex.scss",
+          "sha256": "b4f458566634e85aab59629c3816790e3d1acbe10a3a235b6d06b36104bcd1b9"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/fontMetricsData.js",
+          "sha256": "1e72fc6b451a565e60b1eb7e89f4738eb74f35edfcf3c9c273015700b42ae04d"
+        }
+      ],
+      "expectedOrigin": "Independent fixed-source literal metrics/TeX builder equations or explicit native API contract; never candidate output/private helper"
+    },
+    {
+      "id": "F09",
+      "method": "test_f09_mandatory_empty_arrow_above_still_reserves_source_two_mu_clearance",
+      "line": 103,
+      "sources": [
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/arrow.ts",
+          "sha256": "5c56a8a89b19e9d7b8c29563fc3e266a5fcd880d7b49e113d3a627bc3a4af89d"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/stretchy.ts",
+          "sha256": "def0fb27cd6e85825662817d9186c0b341d6f55fe42ef495389b5bae832edce2"
+        }
+      ],
+      "expectedOrigin": "Independent fixed-source literal metrics/TeX builder equations or explicit native API contract; never candidate output/private helper"
+    },
+    {
+      "id": "F10",
+      "method": "test_f10_explicit_empty_below_label_preserves_source_vlist_baseline",
+      "line": 108,
+      "sources": [
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/arrow.ts",
+          "sha256": "5c56a8a89b19e9d7b8c29563fc3e266a5fcd880d7b49e113d3a627bc3a4af89d"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/stretchy.ts",
+          "sha256": "def0fb27cd6e85825662817d9186c0b341d6f55fe42ef495389b5bae832edce2"
+        }
+      ],
+      "expectedOrigin": "Independent fixed-source literal metrics/TeX builder equations or explicit native API contract; never candidate output/private helper"
+    },
+    {
+      "id": "F11",
+      "method": "test_f11_tag_uses_container_right_edge_and_centred_formula",
+      "line": 113,
+      "sources": [
+        {
+          "path": ".local/katex-0.18.11/package/src/buildHTML.ts",
+          "sha256": "9b22eee0850fe5fd5cc3bcd5623e11bebcd3d5fe71b66f36e601c7a0f1ece27f"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/environments/array.ts",
+          "sha256": "623b540461126519249547e39e7da7a148ff86efd3552b02292ee57ed9a17f60"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/styles/katex.scss",
+          "sha256": "b4f458566634e85aab59629c3816790e3d1acbe10a3a235b6d06b36104bcd1b9"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/tag.ts",
+          "sha256": "281a3cfd5afb46e2f1bd057018c5cd5964cc0a558ab1da05499cc56bb83343c7"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/macros.ts",
+          "sha256": "13adf540091b6c4d4a31bcd65fe325b74beffc37f2ddb8017f52d024c73a1fdc"
+        }
+      ],
+      "expectedOrigin": "Independent fixed-source literal metrics/TeX builder equations or explicit native API contract; never candidate output/private helper"
+    },
+    {
+      "id": "F12",
+      "method": "test_f12_leqno_pins_tag_left_without_shifting_centred_body",
+      "line": 117,
+      "sources": [
+        {
+          "path": ".local/katex-0.18.11/package/src/buildHTML.ts",
+          "sha256": "9b22eee0850fe5fd5cc3bcd5623e11bebcd3d5fe71b66f36e601c7a0f1ece27f"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/environments/array.ts",
+          "sha256": "623b540461126519249547e39e7da7a148ff86efd3552b02292ee57ed9a17f60"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/styles/katex.scss",
+          "sha256": "b4f458566634e85aab59629c3816790e3d1acbe10a3a235b6d06b36104bcd1b9"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/tag.ts",
+          "sha256": "281a3cfd5afb46e2f1bd057018c5cd5964cc0a558ab1da05499cc56bb83343c7"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/macros.ts",
+          "sha256": "13adf540091b6c4d4a31bcd65fe325b74beffc37f2ddb8017f52d024c73a1fdc"
+        }
+      ],
+      "expectedOrigin": "Independent fixed-source literal metrics/TeX builder equations or explicit native API contract; never candidate output/private helper"
+    },
+    {
+      "id": "F13",
+      "method": "test_f13_fleqn_is_two_em_indent_with_right_tag",
+      "line": 121,
+      "sources": [
+        {
+          "path": ".local/katex-0.18.11/package/src/buildHTML.ts",
+          "sha256": "9b22eee0850fe5fd5cc3bcd5623e11bebcd3d5fe71b66f36e601c7a0f1ece27f"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/environments/array.ts",
+          "sha256": "623b540461126519249547e39e7da7a148ff86efd3552b02292ee57ed9a17f60"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/styles/katex.scss",
+          "sha256": "b4f458566634e85aab59629c3816790e3d1acbe10a3a235b6d06b36104bcd1b9"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/tag.ts",
+          "sha256": "281a3cfd5afb46e2f1bd057018c5cd5964cc0a558ab1da05499cc56bb83343c7"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/macros.ts",
+          "sha256": "13adf540091b6c4d4a31bcd65fe325b74beffc37f2ddb8017f52d024c73a1fdc"
+        }
+      ],
+      "expectedOrigin": "Independent fixed-source literal metrics/TeX builder equations or explicit native API contract; never candidate output/private helper"
+    },
+    {
+      "id": "F14",
+      "method": "test_f14_intrinsic_tag_container_is_finite_and_nonoverlapping",
+      "line": 125,
+      "sources": [
+        {
+          "path": ".local/katex-0.18.11/package/src/buildHTML.ts",
+          "sha256": "9b22eee0850fe5fd5cc3bcd5623e11bebcd3d5fe71b66f36e601c7a0f1ece27f"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/environments/array.ts",
+          "sha256": "623b540461126519249547e39e7da7a148ff86efd3552b02292ee57ed9a17f60"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/styles/katex.scss",
+          "sha256": "b4f458566634e85aab59629c3816790e3d1acbe10a3a235b6d06b36104bcd1b9"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/tag.ts",
+          "sha256": "281a3cfd5afb46e2f1bd057018c5cd5964cc0a558ab1da05499cc56bb83343c7"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/macros.ts",
+          "sha256": "13adf540091b6c4d4a31bcd65fe325b74beffc37f2ddb8017f52d024c73a1fdc"
+        }
+      ],
+      "expectedOrigin": "Independent fixed-source literal metrics/TeX builder equations or explicit native API contract; never candidate output/private helper"
+    },
+    {
+      "id": "F15",
+      "method": "test_f15_automatic_numbers_respect_explicit_start_offset_and_false_rows",
+      "line": 131,
+      "sources": [
+        {
+          "path": ".local/katex-0.18.11/package/src/buildHTML.ts",
+          "sha256": "9b22eee0850fe5fd5cc3bcd5623e11bebcd3d5fe71b66f36e601c7a0f1ece27f"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/environments/array.ts",
+          "sha256": "623b540461126519249547e39e7da7a148ff86efd3552b02292ee57ed9a17f60"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/styles/katex.scss",
+          "sha256": "b4f458566634e85aab59629c3816790e3d1acbe10a3a235b6d06b36104bcd1b9"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/tag.ts",
+          "sha256": "281a3cfd5afb46e2f1bd057018c5cd5964cc0a558ab1da05499cc56bb83343c7"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/macros.ts",
+          "sha256": "13adf540091b6c4d4a31bcd65fe325b74beffc37f2ddb8017f52d024c73a1fdc"
+        }
+      ],
+      "expectedOrigin": "Independent fixed-source literal metrics/TeX builder equations or explicit native API contract; never candidate output/private helper"
+    },
+    {
+      "id": "F16",
+      "method": "test_f16_manual_tag_does_not_increment_source_css_counter",
+      "line": 136,
+      "sources": [
+        {
+          "path": ".local/katex-0.18.11/package/src/buildHTML.ts",
+          "sha256": "9b22eee0850fe5fd5cc3bcd5623e11bebcd3d5fe71b66f36e601c7a0f1ece27f"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/environments/array.ts",
+          "sha256": "623b540461126519249547e39e7da7a148ff86efd3552b02292ee57ed9a17f60"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/styles/katex.scss",
+          "sha256": "b4f458566634e85aab59629c3816790e3d1acbe10a3a235b6d06b36104bcd1b9"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/tag.ts",
+          "sha256": "281a3cfd5afb46e2f1bd057018c5cd5964cc0a558ab1da05499cc56bb83343c7"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/macros.ts",
+          "sha256": "13adf540091b6c4d4a31bcd65fe325b74beffc37f2ddb8017f52d024c73a1fdc"
+        }
+      ],
+      "expectedOrigin": "Independent fixed-source literal metrics/TeX builder equations or explicit native API contract; never candidate output/private helper"
+    },
+    {
+      "id": "F17",
+      "method": "test_f17_all_nonumber_flags_draw_only_formula_content",
+      "line": 140,
+      "sources": [
+        {
+          "path": ".local/katex-0.18.11/package/src/buildHTML.ts",
+          "sha256": "9b22eee0850fe5fd5cc3bcd5623e11bebcd3d5fe71b66f36e601c7a0f1ece27f"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/environments/array.ts",
+          "sha256": "623b540461126519249547e39e7da7a148ff86efd3552b02292ee57ed9a17f60"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/styles/katex.scss",
+          "sha256": "b4f458566634e85aab59629c3816790e3d1acbe10a3a235b6d06b36104bcd1b9"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/tag.ts",
+          "sha256": "281a3cfd5afb46e2f1bd057018c5cd5964cc0a558ab1da05499cc56bb83343c7"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/macros.ts",
+          "sha256": "13adf540091b6c4d4a31bcd65fe325b74beffc37f2ddb8017f52d024c73a1fdc"
+        }
+      ],
+      "expectedOrigin": "Independent fixed-source literal metrics/TeX builder equations or explicit native API contract; never candidate output/private helper"
+    },
+    {
+      "id": "F18",
+      "method": "test_f18_array_leqno_row_tags_are_left_aligned",
+      "line": 144,
+      "sources": [
+        {
+          "path": ".local/katex-0.18.11/package/src/buildHTML.ts",
+          "sha256": "9b22eee0850fe5fd5cc3bcd5623e11bebcd3d5fe71b66f36e601c7a0f1ece27f"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/environments/array.ts",
+          "sha256": "623b540461126519249547e39e7da7a148ff86efd3552b02292ee57ed9a17f60"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/styles/katex.scss",
+          "sha256": "b4f458566634e85aab59629c3816790e3d1acbe10a3a235b6d06b36104bcd1b9"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/tag.ts",
+          "sha256": "281a3cfd5afb46e2f1bd057018c5cd5964cc0a558ab1da05499cc56bb83343c7"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/macros.ts",
+          "sha256": "13adf540091b6c4d4a31bcd65fe325b74beffc37f2ddb8017f52d024c73a1fdc"
+        }
+      ],
+      "expectedOrigin": "Independent fixed-source literal metrics/TeX builder equations or explicit native API contract; never candidate output/private helper"
+    },
+    {
+      "id": "F19",
+      "method": "test_f19_equation_counter_is_request_local_and_options_immutable",
+      "line": 149,
+      "sources": [
+        {
+          "path": ".local/katex-0.18.11/package/src/buildHTML.ts",
+          "sha256": "9b22eee0850fe5fd5cc3bcd5623e11bebcd3d5fe71b66f36e601c7a0f1ece27f"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/environments/array.ts",
+          "sha256": "623b540461126519249547e39e7da7a148ff86efd3552b02292ee57ed9a17f60"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/styles/katex.scss",
+          "sha256": "b4f458566634e85aab59629c3816790e3d1acbe10a3a235b6d06b36104bcd1b9"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/tag.ts",
+          "sha256": "281a3cfd5afb46e2f1bd057018c5cd5964cc0a558ab1da05499cc56bb83343c7"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/macros.ts",
+          "sha256": "13adf540091b6c4d4a31bcd65fe325b74beffc37f2ddb8017f52d024c73a1fdc"
+        }
+      ],
+      "expectedOrigin": "Independent fixed-source literal metrics/TeX builder equations or explicit native API contract; never candidate output/private helper"
+    },
+    {
+      "id": "F20",
+      "method": "test_f20_colspec_source_pregap_postgap_separator_order",
+      "line": 155,
+      "sources": [
+        {
+          "path": ".local/katex-0.18.11/package/src/environments/array.ts",
+          "sha256": "623b540461126519249547e39e7da7a148ff86efd3552b02292ee57ed9a17f60"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/fontMetrics.ts",
+          "sha256": "1f2de1fc56f080ba284b5f90753fa5bfb63c7dcb00a226f8e4453c422506a5c2"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/fontMetricsData.js",
+          "sha256": "1e72fc6b451a565e60b1eb7e89f4738eb74f35edfcf3c9c273015700b42ae04d"
+        }
+      ],
+      "expectedOrigin": "Independent fixed-source literal metrics/TeX builder equations or explicit native API contract; never candidate output/private helper"
+    },
+    {
+      "id": "F21",
+      "method": "test_f21_no_outer_hskip_suppresses_only_outer_colspec_gaps",
+      "line": 163,
+      "sources": [
+        {
+          "path": ".local/katex-0.18.11/package/src/environments/array.ts",
+          "sha256": "623b540461126519249547e39e7da7a148ff86efd3552b02292ee57ed9a17f60"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/fontMetrics.ts",
+          "sha256": "1f2de1fc56f080ba284b5f90753fa5bfb63c7dcb00a226f8e4453c422506a5c2"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/fontMetricsData.js",
+          "sha256": "1e72fc6b451a565e60b1eb7e89f4738eb74f35edfcf3c9c273015700b42ae04d"
+        }
+      ],
+      "expectedOrigin": "Independent fixed-source literal metrics/TeX builder equations or explicit native API contract; never candidate output/private helper"
+    },
+    {
+      "id": "F22",
+      "method": "test_f22_explicit_arraystretch_and_jot_are_independent",
+      "line": 168,
+      "sources": [
+        {
+          "path": ".local/katex-0.18.11/package/src/environments/array.ts",
+          "sha256": "623b540461126519249547e39e7da7a148ff86efd3552b02292ee57ed9a17f60"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/fontMetrics.ts",
+          "sha256": "1f2de1fc56f080ba284b5f90753fa5bfb63c7dcb00a226f8e4453c422506a5c2"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/fontMetricsData.js",
+          "sha256": "1e72fc6b451a565e60b1eb7e89f4738eb74f35edfcf3c9c273015700b42ae04d"
+        }
+      ],
+      "expectedOrigin": "Independent fixed-source literal metrics/TeX builder equations or explicit native API contract; never candidate output/private helper"
+    },
+    {
+      "id": "F23",
+      "method": "test_f23_multiple_hlines_use_source_quarter_em_separation",
+      "line": 174,
+      "sources": [
+        {
+          "path": ".local/katex-0.18.11/package/src/environments/array.ts",
+          "sha256": "623b540461126519249547e39e7da7a148ff86efd3552b02292ee57ed9a17f60"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/fontMetrics.ts",
+          "sha256": "1f2de1fc56f080ba284b5f90753fa5bfb63c7dcb00a226f8e4453c422506a5c2"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/fontMetricsData.js",
+          "sha256": "1e72fc6b451a565e60b1eb7e89f4738eb74f35edfcf3c9c273015700b42ae04d"
+        }
+      ],
+      "expectedOrigin": "Independent fixed-source literal metrics/TeX builder equations or explicit native API contract; never candidate output/private helper"
+    },
+    {
+      "id": "F24",
+      "method": "test_f24_array_rules_honor_minimum_rule_thickness",
+      "line": 179,
+      "sources": [
+        {
+          "path": ".local/katex-0.18.11/package/src/environments/array.ts",
+          "sha256": "623b540461126519249547e39e7da7a148ff86efd3552b02292ee57ed9a17f60"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/fontMetrics.ts",
+          "sha256": "1f2de1fc56f080ba284b5f90753fa5bfb63c7dcb00a226f8e4453c422506a5c2"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/fontMetricsData.js",
+          "sha256": "1e72fc6b451a565e60b1eb7e89f4738eb74f35edfcf3c9c273015700b42ae04d"
+        }
+      ],
+      "expectedOrigin": "Independent fixed-source literal metrics/TeX builder equations or explicit native API contract; never candidate output/private helper"
+    },
+    {
+      "id": "F25",
+      "method": "test_f25_all_absolute_source_units_have_literal_pt_factors",
+      "line": 185,
+      "sources": [
+        {
+          "path": ".local/katex-0.18.11/package/src/units.ts",
+          "sha256": "09e9e034abfb99210cdf393ca0c639af0e34b017613a05fca280a76aff12e818"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/Options.ts",
+          "sha256": "e4d3708c1020cbc6135f131e1a44a23f0fc74c73efa7e4c007bc17e28a39c806"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/Settings.ts",
+          "sha256": "a3b04291805997c2a7f0c7600f78034b4ea79783ce2f238e5ca81ef52265acb1"
+        }
+      ],
+      "expectedOrigin": "Independent fixed-source literal metrics/TeX builder equations or explicit native API contract; never candidate output/private helper"
+    },
+    {
+      "id": "F26",
+      "method": "test_f26_maxsize_caps_converted_dimensions_in_current_em",
+      "line": 193,
+      "sources": [
+        {
+          "path": ".local/katex-0.18.11/package/src/units.ts",
+          "sha256": "09e9e034abfb99210cdf393ca0c639af0e34b017613a05fca280a76aff12e818"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/Options.ts",
+          "sha256": "e4d3708c1020cbc6135f131e1a44a23f0fc74c73efa7e4c007bc17e28a39c806"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/Settings.ts",
+          "sha256": "a3b04291805997c2a7f0c7600f78034b4ea79783ce2f238e5ca81ef52265acb1"
+        }
+      ],
+      "expectedOrigin": "Independent fixed-source literal metrics/TeX builder equations or explicit native API contract; never candidate output/private helper"
+    },
+    {
+      "id": "F27",
+      "method": "test_f27_maxsize_does_not_absolute_value_negative_kern",
+      "line": 198,
+      "sources": [
+        {
+          "path": ".local/katex-0.18.11/package/src/units.ts",
+          "sha256": "09e9e034abfb99210cdf393ca0c639af0e34b017613a05fca280a76aff12e818"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/Options.ts",
+          "sha256": "e4d3708c1020cbc6135f131e1a44a23f0fc74c73efa7e4c007bc17e28a39c806"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/Settings.ts",
+          "sha256": "a3b04291805997c2a7f0c7600f78034b4ea79783ce2f238e5ca81ef52265acb1"
+        }
+      ],
+      "expectedOrigin": "Independent fixed-source literal metrics/TeX builder equations or explicit native API contract; never candidate output/private helper"
+    },
+    {
+      "id": "F28",
+      "method": "test_f28_minrule_overline_retains_default_theta_kerns",
+      "line": 204,
+      "sources": [
+        {
+          "path": ".local/katex-0.18.11/package/src/buildCommon.ts",
+          "sha256": "0cae9bd3b1dd21b536e8c9a96f11838c87bcbaceaca89927c03b46750a4fba73"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/genfrac.ts",
+          "sha256": "c461e8a5363a992e67adbe4c1312723c928be836fe47ee851ae9869e48998538"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/overline.ts",
+          "sha256": "c1e98a5ecc6747fdeb8c90739d9435319593bd2914e0158dd3bab141c23753b1"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/sqrt.ts",
+          "sha256": "99347b6bb9d43e5b5a0f3c8462b36b32a9c351ab6325bd90e157cb7b809815fa"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/delimiter.ts",
+          "sha256": "19dfa0c2cd26d82b41cc7eaf3b3819945fca257d77bf762f9b9fec0571239e1a"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/svgGeometry.ts",
+          "sha256": "ef252fb6007a382c47bcd01852c168ad96b577d046872e5b4bc0b18f4a75718f"
+        }
+      ],
+      "expectedOrigin": "Independent fixed-source literal metrics/TeX builder equations or explicit native API contract; never candidate output/private helper"
+    },
+    {
+      "id": "F29",
+      "method": "test_f29_fraction_clearance_uses_actual_minimum_bar_width",
+      "line": 211,
+      "sources": [
+        {
+          "path": ".local/katex-0.18.11/package/src/buildCommon.ts",
+          "sha256": "0cae9bd3b1dd21b536e8c9a96f11838c87bcbaceaca89927c03b46750a4fba73"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/genfrac.ts",
+          "sha256": "c461e8a5363a992e67adbe4c1312723c928be836fe47ee851ae9869e48998538"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/overline.ts",
+          "sha256": "c1e98a5ecc6747fdeb8c90739d9435319593bd2914e0158dd3bab141c23753b1"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/sqrt.ts",
+          "sha256": "99347b6bb9d43e5b5a0f3c8462b36b32a9c351ab6325bd90e157cb7b809815fa"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/delimiter.ts",
+          "sha256": "19dfa0c2cd26d82b41cc7eaf3b3819945fca257d77bf762f9b9fec0571239e1a"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/svgGeometry.ts",
+          "sha256": "ef252fb6007a382c47bcd01852c168ad96b577d046872e5b4bc0b18f4a75718f"
+        }
+      ],
+      "expectedOrigin": "Independent fixed-source literal metrics/TeX builder equations or explicit native API contract; never candidate output/private helper"
+    },
+    {
+      "id": "F30",
+      "method": "test_f30_minrule_radical_vinculum_is_real_source_path_geometry",
+      "line": 219,
+      "sources": [
+        {
+          "path": ".local/katex-0.18.11/package/src/buildCommon.ts",
+          "sha256": "0cae9bd3b1dd21b536e8c9a96f11838c87bcbaceaca89927c03b46750a4fba73"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/genfrac.ts",
+          "sha256": "c461e8a5363a992e67adbe4c1312723c928be836fe47ee851ae9869e48998538"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/overline.ts",
+          "sha256": "c1e98a5ecc6747fdeb8c90739d9435319593bd2914e0158dd3bab141c23753b1"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/sqrt.ts",
+          "sha256": "99347b6bb9d43e5b5a0f3c8462b36b32a9c351ab6325bd90e157cb7b809815fa"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/delimiter.ts",
+          "sha256": "19dfa0c2cd26d82b41cc7eaf3b3819945fca257d77bf762f9b9fec0571239e1a"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/svgGeometry.ts",
+          "sha256": "ef252fb6007a382c47bcd01852c168ad96b577d046872e5b4bc0b18f4a75718f"
+        }
+      ],
+      "expectedOrigin": "Independent fixed-source literal metrics/TeX builder equations or explicit native API contract; never candidate output/private helper"
+    },
+    {
+      "id": "F31",
+      "method": "test_f31_css_mathnormal_locks_math_family_and_italic_not_weight",
+      "line": 226,
+      "sources": [
+        {
+          "path": ".local/katex-0.18.11/package/src/buildCommon.ts",
+          "sha256": "0cae9bd3b1dd21b536e8c9a96f11838c87bcbaceaca89927c03b46750a4fba73"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/font.ts",
+          "sha256": "44c87d85ec5c123d315a8e4fb63920ad1edbb763618e84a050a8a8ff88b8d00d"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/text.ts",
+          "sha256": "0141e26c0d8251434eb1c1e56324f0b7220fecf11dad9d3f20b4557043ab63e6"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/styling.ts",
+          "sha256": "f5a83e7f147b8d329eebfe681c00157e035b6f39a9592e0bf98d47bb5dd0ce35"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/styles/katex.scss",
+          "sha256": "b4f458566634e85aab59629c3816790e3d1acbe10a3a235b6d06b36104bcd1b9"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/fontMetricsData.js",
+          "sha256": "1e72fc6b451a565e60b1eb7e89f4738eb74f35edfcf3c9c273015700b42ae04d"
+        }
+      ],
+      "expectedOrigin": "Independent fixed-source literal metrics/TeX builder equations or explicit native API contract; never candidate output/private helper"
+    },
+    {
+      "id": "F32",
+      "method": "test_f32_css_default_digit_inherits_all_three_font_axes",
+      "line": 232,
+      "sources": [
+        {
+          "path": ".local/katex-0.18.11/package/src/buildCommon.ts",
+          "sha256": "0cae9bd3b1dd21b536e8c9a96f11838c87bcbaceaca89927c03b46750a4fba73"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/font.ts",
+          "sha256": "44c87d85ec5c123d315a8e4fb63920ad1edbb763618e84a050a8a8ff88b8d00d"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/text.ts",
+          "sha256": "0141e26c0d8251434eb1c1e56324f0b7220fecf11dad9d3f20b4557043ab63e6"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/styling.ts",
+          "sha256": "f5a83e7f147b8d329eebfe681c00157e035b6f39a9592e0bf98d47bb5dd0ce35"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/styles/katex.scss",
+          "sha256": "b4f458566634e85aab59629c3816790e3d1acbe10a3a235b6d06b36104bcd1b9"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/fontMetricsData.js",
+          "sha256": "1e72fc6b451a565e60b1eb7e89f4738eb74f35edfcf3c9c273015700b42ae04d"
+        }
+      ],
+      "expectedOrigin": "Independent fixed-source literal metrics/TeX builder equations or explicit native API contract; never candidate output/private helper"
+    },
+    {
+      "id": "F33",
+      "method": "test_f33_css_mathrm_fixes_only_normal_shape",
+      "line": 238,
+      "sources": [
+        {
+          "path": ".local/katex-0.18.11/package/src/buildCommon.ts",
+          "sha256": "0cae9bd3b1dd21b536e8c9a96f11838c87bcbaceaca89927c03b46750a4fba73"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/font.ts",
+          "sha256": "44c87d85ec5c123d315a8e4fb63920ad1edbb763618e84a050a8a8ff88b8d00d"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/text.ts",
+          "sha256": "0141e26c0d8251434eb1c1e56324f0b7220fecf11dad9d3f20b4557043ab63e6"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/styling.ts",
+          "sha256": "f5a83e7f147b8d329eebfe681c00157e035b6f39a9592e0bf98d47bb5dd0ce35"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/styles/katex.scss",
+          "sha256": "b4f458566634e85aab59629c3816790e3d1acbe10a3a235b6d06b36104bcd1b9"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/fontMetricsData.js",
+          "sha256": "1e72fc6b451a565e60b1eb7e89f4738eb74f35edfcf3c9c273015700b42ae04d"
+        }
+      ],
+      "expectedOrigin": "Independent fixed-source literal metrics/TeX builder equations or explicit native API contract; never candidate output/private helper"
+    },
+    {
+      "id": "F34",
+      "method": "test_f34_css_mathbf_locks_main_and_bold_but_inherits_italic",
+      "line": 243,
+      "sources": [
+        {
+          "path": ".local/katex-0.18.11/package/src/buildCommon.ts",
+          "sha256": "0cae9bd3b1dd21b536e8c9a96f11838c87bcbaceaca89927c03b46750a4fba73"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/font.ts",
+          "sha256": "44c87d85ec5c123d315a8e4fb63920ad1edbb763618e84a050a8a8ff88b8d00d"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/text.ts",
+          "sha256": "0141e26c0d8251434eb1c1e56324f0b7220fecf11dad9d3f20b4557043ab63e6"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/styling.ts",
+          "sha256": "f5a83e7f147b8d329eebfe681c00157e035b6f39a9592e0bf98d47bb5dd0ce35"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/styles/katex.scss",
+          "sha256": "b4f458566634e85aab59629c3816790e3d1acbe10a3a235b6d06b36104bcd1b9"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/fontMetricsData.js",
+          "sha256": "1e72fc6b451a565e60b1eb7e89f4738eb74f35edfcf3c9c273015700b42ae04d"
+        }
+      ],
+      "expectedOrigin": "Independent fixed-source literal metrics/TeX builder equations or explicit native API contract; never candidate output/private helper"
+    },
+    {
+      "id": "F35",
+      "method": "test_f35_css_mathit_locks_main_italic_but_inherits_bold",
+      "line": 248,
+      "sources": [
+        {
+          "path": ".local/katex-0.18.11/package/src/buildCommon.ts",
+          "sha256": "0cae9bd3b1dd21b536e8c9a96f11838c87bcbaceaca89927c03b46750a4fba73"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/font.ts",
+          "sha256": "44c87d85ec5c123d315a8e4fb63920ad1edbb763618e84a050a8a8ff88b8d00d"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/text.ts",
+          "sha256": "0141e26c0d8251434eb1c1e56324f0b7220fecf11dad9d3f20b4557043ab63e6"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/styling.ts",
+          "sha256": "f5a83e7f147b8d329eebfe681c00157e035b6f39a9592e0bf98d47bb5dd0ce35"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/styles/katex.scss",
+          "sha256": "b4f458566634e85aab59629c3816790e3d1acbe10a3a235b6d06b36104bcd1b9"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/fontMetricsData.js",
+          "sha256": "1e72fc6b451a565e60b1eb7e89f4738eb74f35edfcf3c9c273015700b42ae04d"
+        }
+      ],
+      "expectedOrigin": "Independent fixed-source literal metrics/TeX builder equations or explicit native API contract; never candidate output/private helper"
+    },
+    {
+      "id": "F36",
+      "method": "test_f36_css_boldsymbol_mathord_locks_all_font_axes",
+      "line": 253,
+      "sources": [
+        {
+          "path": ".local/katex-0.18.11/package/src/buildCommon.ts",
+          "sha256": "0cae9bd3b1dd21b536e8c9a96f11838c87bcbaceaca89927c03b46750a4fba73"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/font.ts",
+          "sha256": "44c87d85ec5c123d315a8e4fb63920ad1edbb763618e84a050a8a8ff88b8d00d"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/text.ts",
+          "sha256": "0141e26c0d8251434eb1c1e56324f0b7220fecf11dad9d3f20b4557043ab63e6"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/styling.ts",
+          "sha256": "f5a83e7f147b8d329eebfe681c00157e035b6f39a9592e0bf98d47bb5dd0ce35"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/styles/katex.scss",
+          "sha256": "b4f458566634e85aab59629c3816790e3d1acbe10a3a235b6d06b36104bcd1b9"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/fontMetricsData.js",
+          "sha256": "1e72fc6b451a565e60b1eb7e89f4738eb74f35edfcf3c9c273015700b42ae04d"
+        }
+      ],
+      "expectedOrigin": "Independent fixed-source literal metrics/TeX builder equations or explicit native API contract; never candidate output/private helper"
+    },
+    {
+      "id": "F37",
+      "method": "test_f37_css_mathbb_locks_ams_family_only",
+      "line": 258,
+      "sources": [
+        {
+          "path": ".local/katex-0.18.11/package/src/buildCommon.ts",
+          "sha256": "0cae9bd3b1dd21b536e8c9a96f11838c87bcbaceaca89927c03b46750a4fba73"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/font.ts",
+          "sha256": "44c87d85ec5c123d315a8e4fb63920ad1edbb763618e84a050a8a8ff88b8d00d"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/text.ts",
+          "sha256": "0141e26c0d8251434eb1c1e56324f0b7220fecf11dad9d3f20b4557043ab63e6"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/styling.ts",
+          "sha256": "f5a83e7f147b8d329eebfe681c00157e035b6f39a9592e0bf98d47bb5dd0ce35"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/styles/katex.scss",
+          "sha256": "b4f458566634e85aab59629c3816790e3d1acbe10a3a235b6d06b36104bcd1b9"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/fontMetricsData.js",
+          "sha256": "1e72fc6b451a565e60b1eb7e89f4738eb74f35edfcf3c9c273015700b42ae04d"
+        }
+      ],
+      "expectedOrigin": "Independent fixed-source literal metrics/TeX builder equations or explicit native API contract; never candidate output/private helper"
+    },
+    {
+      "id": "F38",
+      "method": "test_f38_style_reset_font_removes_outer_tex_alphabet_not_outer_color",
+      "line": 263,
+      "sources": [
+        {
+          "path": ".local/katex-0.18.11/package/src/buildCommon.ts",
+          "sha256": "0cae9bd3b1dd21b536e8c9a96f11838c87bcbaceaca89927c03b46750a4fba73"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/font.ts",
+          "sha256": "44c87d85ec5c123d315a8e4fb63920ad1edbb763618e84a050a8a8ff88b8d00d"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/text.ts",
+          "sha256": "0141e26c0d8251434eb1c1e56324f0b7220fecf11dad9d3f20b4557043ab63e6"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/styling.ts",
+          "sha256": "f5a83e7f147b8d329eebfe681c00157e035b6f39a9592e0bf98d47bb5dd0ce35"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/styles/katex.scss",
+          "sha256": "b4f458566634e85aab59629c3816790e3d1acbe10a3a235b6d06b36104bcd1b9"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/fontMetricsData.js",
+          "sha256": "1e72fc6b451a565e60b1eb7e89f4738eb74f35edfcf3c9c273015700b42ae04d"
+        }
+      ],
+      "expectedOrigin": "Independent fixed-source literal metrics/TeX builder equations or explicit native API contract; never candidate output/private helper"
+    },
+    {
+      "id": "F39",
+      "method": "test_f39_textnormal_changes_family_without_resetting_source_weight",
+      "line": 267,
+      "sources": [
+        {
+          "path": ".local/katex-0.18.11/package/src/buildCommon.ts",
+          "sha256": "0cae9bd3b1dd21b536e8c9a96f11838c87bcbaceaca89927c03b46750a4fba73"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/font.ts",
+          "sha256": "44c87d85ec5c123d315a8e4fb63920ad1edbb763618e84a050a8a8ff88b8d00d"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/text.ts",
+          "sha256": "0141e26c0d8251434eb1c1e56324f0b7220fecf11dad9d3f20b4557043ab63e6"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/styling.ts",
+          "sha256": "f5a83e7f147b8d329eebfe681c00157e035b6f39a9592e0bf98d47bb5dd0ce35"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/styles/katex.scss",
+          "sha256": "b4f458566634e85aab59629c3816790e3d1acbe10a3a235b6d06b36104bcd1b9"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/fontMetricsData.js",
+          "sha256": "1e72fc6b451a565e60b1eb7e89f4738eb74f35edfcf3c9c273015700b42ae04d"
+        }
+      ],
+      "expectedOrigin": "Independent fixed-source literal metrics/TeX builder equations or explicit native API contract; never candidate output/private helper"
+    },
+    {
+      "id": "F40",
+      "method": "test_f40_missing_mathbb_lowercase_uses_source_makeord_mathitalic_fallback",
+      "line": 271,
+      "sources": [
+        {
+          "path": ".local/katex-0.18.11/package/src/buildCommon.ts",
+          "sha256": "0cae9bd3b1dd21b536e8c9a96f11838c87bcbaceaca89927c03b46750a4fba73"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/font.ts",
+          "sha256": "44c87d85ec5c123d315a8e4fb63920ad1edbb763618e84a050a8a8ff88b8d00d"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/text.ts",
+          "sha256": "0141e26c0d8251434eb1c1e56324f0b7220fecf11dad9d3f20b4557043ab63e6"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/styling.ts",
+          "sha256": "f5a83e7f147b8d329eebfe681c00157e035b6f39a9592e0bf98d47bb5dd0ce35"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/styles/katex.scss",
+          "sha256": "b4f458566634e85aab59629c3816790e3d1acbe10a3a235b6d06b36104bcd1b9"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/fontMetricsData.js",
+          "sha256": "1e72fc6b451a565e60b1eb7e89f4738eb74f35edfcf3c9c273015700b42ae04d"
+        }
+      ],
+      "expectedOrigin": "Independent fixed-source literal metrics/TeX builder equations or explicit native API contract; never candidate output/private helper"
+    },
+    {
+      "id": "F41",
+      "method": "test_f41_mathsym_ignores_mathbf_alphabet_but_honors_boldsymbol",
+      "line": 275,
+      "sources": [
+        {
+          "path": ".local/katex-0.18.11/package/src/buildCommon.ts",
+          "sha256": "0cae9bd3b1dd21b536e8c9a96f11838c87bcbaceaca89927c03b46750a4fba73"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/font.ts",
+          "sha256": "44c87d85ec5c123d315a8e4fb63920ad1edbb763618e84a050a8a8ff88b8d00d"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/text.ts",
+          "sha256": "0141e26c0d8251434eb1c1e56324f0b7220fecf11dad9d3f20b4557043ab63e6"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/styling.ts",
+          "sha256": "f5a83e7f147b8d329eebfe681c00157e035b6f39a9592e0bf98d47bb5dd0ce35"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/styles/katex.scss",
+          "sha256": "b4f458566634e85aab59629c3816790e3d1acbe10a3a235b6d06b36104bcd1b9"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/fontMetricsData.js",
+          "sha256": "1e72fc6b451a565e60b1eb7e89f4738eb74f35edfcf3c9c273015700b42ae04d"
+        }
+      ],
+      "expectedOrigin": "Independent fixed-source literal metrics/TeX builder equations or explicit native API contract; never candidate output/private helper"
+    },
+    {
+      "id": "F42",
+      "method": "test_f42_unicode_extra_map_retains_source_vertical_metrics_not_native_ascent",
+      "line": 279,
+      "sources": [
+        {
+          "path": ".local/katex-0.18.11/package/src/fontMetrics.ts",
+          "sha256": "1f2de1fc56f080ba284b5f90753fa5bfb63c7dcb00a226f8e4453c422506a5c2"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/unicodeScripts.ts",
+          "sha256": "daa4cbbd11dee174f1d9a1b5ceb23e943647a6bf56e57d901d7aea4f6ee3abe1"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/buildCommon.ts",
+          "sha256": "0cae9bd3b1dd21b536e8c9a96f11838c87bcbaceaca89927c03b46750a4fba73"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/Parser.ts",
+          "sha256": "c1aed05097bb0c429b7e1b5fe0862a7db515bd1682b014d6775edeb2e8da0e6a"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/fontMetricsData.js",
+          "sha256": "1e72fc6b451a565e60b1eb7e89f4738eb74f35edfcf3c9c273015700b42ae04d"
+        }
+      ],
+      "expectedOrigin": "Independent fixed-source literal metrics/TeX builder equations or explicit native API contract; never candidate output/private helper"
+    },
+    {
+      "id": "F43",
+      "method": "test_f43_unicode_supported_script_retains_m_estimate_and_whole_run",
+      "line": 286,
+      "sources": [
+        {
+          "path": ".local/katex-0.18.11/package/src/fontMetrics.ts",
+          "sha256": "1f2de1fc56f080ba284b5f90753fa5bfb63c7dcb00a226f8e4453c422506a5c2"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/unicodeScripts.ts",
+          "sha256": "daa4cbbd11dee174f1d9a1b5ceb23e943647a6bf56e57d901d7aea4f6ee3abe1"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/buildCommon.ts",
+          "sha256": "0cae9bd3b1dd21b536e8c9a96f11838c87bcbaceaca89927c03b46750a4fba73"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/Parser.ts",
+          "sha256": "c1aed05097bb0c429b7e1b5fe0862a7db515bd1682b014d6775edeb2e8da0e6a"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/fontMetricsData.js",
+          "sha256": "1e72fc6b451a565e60b1eb7e89f4738eb74f35edfcf3c9c273015700b42ae04d"
+        }
+      ],
+      "expectedOrigin": "Independent fixed-source literal metrics/TeX builder equations or explicit native API contract; never candidate output/private helper"
+    },
+    {
+      "id": "F44",
+      "method": "test_f44_real_unicode_run_uses_explicit_font_resource_and_single_native_glyph",
+      "line": 296,
+      "sources": [
+        {
+          "path": ".local/katex-0.18.11/package/src/fontMetrics.ts",
+          "sha256": "1f2de1fc56f080ba284b5f90753fa5bfb63c7dcb00a226f8e4453c422506a5c2"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/unicodeScripts.ts",
+          "sha256": "daa4cbbd11dee174f1d9a1b5ceb23e943647a6bf56e57d901d7aea4f6ee3abe1"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/buildCommon.ts",
+          "sha256": "0cae9bd3b1dd21b536e8c9a96f11838c87bcbaceaca89927c03b46750a4fba73"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/Parser.ts",
+          "sha256": "c1aed05097bb0c429b7e1b5fe0862a7db515bd1682b014d6775edeb2e8da0e6a"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/fontMetricsData.js",
+          "sha256": "1e72fc6b451a565e60b1eb7e89f4738eb74f35edfcf3c9c273015700b42ae04d"
+        }
+      ],
+      "expectedOrigin": "Independent fixed-source literal metrics/TeX builder equations or explicit native API contract; never candidate output/private helper"
+    },
+    {
+      "id": "F45",
+      "method": "test_f45_bundled_text_run_advance_matches_independent_public_canvas_shaping",
+      "line": 303,
+      "sources": [
+        {
+          "path": ".local/katex-0.18.11/package/src/fontMetrics.ts",
+          "sha256": "1f2de1fc56f080ba284b5f90753fa5bfb63c7dcb00a226f8e4453c422506a5c2"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/unicodeScripts.ts",
+          "sha256": "daa4cbbd11dee174f1d9a1b5ceb23e943647a6bf56e57d901d7aea4f6ee3abe1"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/buildCommon.ts",
+          "sha256": "0cae9bd3b1dd21b536e8c9a96f11838c87bcbaceaca89927c03b46750a4fba73"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/Parser.ts",
+          "sha256": "c1aed05097bb0c429b7e1b5fe0862a7db515bd1682b014d6775edeb2e8da0e6a"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/fontMetricsData.js",
+          "sha256": "1e72fc6b451a565e60b1eb7e89f4738eb74f35edfcf3c9c273015700b42ae04d"
+        }
+      ],
+      "expectedOrigin": "Independent fixed-source literal metrics/TeX builder equations or explicit native API contract; never candidate output/private helper"
+    },
+    {
+      "id": "F46",
+      "method": "test_f46_text_color_boundary_is_preserved_across_combined_runs",
+      "line": 314,
+      "sources": [
+        {
+          "path": ".local/katex-0.18.11/package/src/fontMetrics.ts",
+          "sha256": "1f2de1fc56f080ba284b5f90753fa5bfb63c7dcb00a226f8e4453c422506a5c2"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/unicodeScripts.ts",
+          "sha256": "daa4cbbd11dee174f1d9a1b5ceb23e943647a6bf56e57d901d7aea4f6ee3abe1"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/buildCommon.ts",
+          "sha256": "0cae9bd3b1dd21b536e8c9a96f11838c87bcbaceaca89927c03b46750a4fba73"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/Parser.ts",
+          "sha256": "c1aed05097bb0c429b7e1b5fe0862a7db515bd1682b014d6775edeb2e8da0e6a"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/fontMetricsData.js",
+          "sha256": "1e72fc6b451a565e60b1eb7e89f4738eb74f35edfcf3c9c273015700b42ae04d"
+        }
+      ],
+      "expectedOrigin": "Independent fixed-source literal metrics/TeX builder equations or explicit native API contract; never candidate output/private helper"
+    },
+    {
+      "id": "F47",
+      "method": "test_f47_all_eight_style_pairs_retain_source_metric_sizes",
+      "line": 318,
+      "sources": [
+        {
+          "path": ".local/katex-0.18.11/package/src/Style.ts",
+          "sha256": "47b50393468d3e2c3eb1dc7a8502dd3e048f545182adee27a8d7b7b44e8615bf"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/Options.ts",
+          "sha256": "e4d3708c1020cbc6135f131e1a44a23f0fc74c73efa7e4c007bc17e28a39c806"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/verb.ts",
+          "sha256": "d08b52ef375213aa97cd5a3573b43719e263ac566cb15fc0c89cba331846514d"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/sqrt.ts",
+          "sha256": "99347b6bb9d43e5b5a0f3c8462b36b32a9c351ab6325bd90e157cb7b809815fa"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/delimsizing.ts",
+          "sha256": "323593436330d3ae57d370955c6ed4467e2eb24f8db3cc04dd810bfca8e45e9e"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/delimiter.ts",
+          "sha256": "19dfa0c2cd26d82b41cc7eaf3b3819945fca257d77bf762f9b9fec0571239e1a"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/styles/katex.scss",
+          "sha256": "b4f458566634e85aab59629c3816790e3d1acbe10a3a235b6d06b36104bcd1b9"
+        }
+      ],
+      "expectedOrigin": "Independent fixed-source literal metrics/TeX builder equations or explicit native API contract; never candidate output/private helper"
+    },
+    {
+      "id": "F48",
+      "method": "test_f48_verb_enters_textstyle_inside_script_unlike_ordinary_texttt",
+      "line": 324,
+      "sources": [
+        {
+          "path": ".local/katex-0.18.11/package/src/Style.ts",
+          "sha256": "47b50393468d3e2c3eb1dc7a8502dd3e048f545182adee27a8d7b7b44e8615bf"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/Options.ts",
+          "sha256": "e4d3708c1020cbc6135f131e1a44a23f0fc74c73efa7e4c007bc17e28a39c806"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/verb.ts",
+          "sha256": "d08b52ef375213aa97cd5a3573b43719e263ac566cb15fc0c89cba331846514d"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/sqrt.ts",
+          "sha256": "99347b6bb9d43e5b5a0f3c8462b36b32a9c351ab6325bd90e157cb7b809815fa"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/delimsizing.ts",
+          "sha256": "323593436330d3ae57d370955c6ed4467e2eb24f8db3cc04dd810bfca8e45e9e"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/delimiter.ts",
+          "sha256": "19dfa0c2cd26d82b41cc7eaf3b3819945fca257d77bf762f9b9fec0571239e1a"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/styles/katex.scss",
+          "sha256": "b4f458566634e85aab59629c3816790e3d1acbe10a3a235b6d06b36104bcd1b9"
+        }
+      ],
+      "expectedOrigin": "Independent fixed-source literal metrics/TeX builder equations or explicit native API contract; never candidate output/private helper"
+    },
+    {
+      "id": "F49",
+      "method": "test_f49_explicit_empty_root_index_is_not_absent_index",
+      "line": 329,
+      "sources": [
+        {
+          "path": ".local/katex-0.18.11/package/src/Style.ts",
+          "sha256": "47b50393468d3e2c3eb1dc7a8502dd3e048f545182adee27a8d7b7b44e8615bf"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/Options.ts",
+          "sha256": "e4d3708c1020cbc6135f131e1a44a23f0fc74c73efa7e4c007bc17e28a39c806"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/verb.ts",
+          "sha256": "d08b52ef375213aa97cd5a3573b43719e263ac566cb15fc0c89cba331846514d"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/sqrt.ts",
+          "sha256": "99347b6bb9d43e5b5a0f3c8462b36b32a9c351ab6325bd90e157cb7b809815fa"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/delimsizing.ts",
+          "sha256": "323593436330d3ae57d370955c6ed4467e2eb24f8db3cc04dd810bfca8e45e9e"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/delimiter.ts",
+          "sha256": "19dfa0c2cd26d82b41cc7eaf3b3819945fca257d77bf762f9b9fec0571239e1a"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/styles/katex.scss",
+          "sha256": "b4f458566634e85aab59629c3816790e3d1acbe10a3a235b6d06b36104bcd1b9"
+        }
+      ],
+      "expectedOrigin": "Independent fixed-source literal metrics/TeX builder equations or explicit native API contract; never candidate output/private helper"
+    },
+    {
+      "id": "F50",
+      "method": "test_f50_right_delimiter_captures_scoped_source_current_color",
+      "line": 335,
+      "sources": [
+        {
+          "path": ".local/katex-0.18.11/package/src/Style.ts",
+          "sha256": "47b50393468d3e2c3eb1dc7a8502dd3e048f545182adee27a8d7b7b44e8615bf"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/Options.ts",
+          "sha256": "e4d3708c1020cbc6135f131e1a44a23f0fc74c73efa7e4c007bc17e28a39c806"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/verb.ts",
+          "sha256": "d08b52ef375213aa97cd5a3573b43719e263ac566cb15fc0c89cba331846514d"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/sqrt.ts",
+          "sha256": "99347b6bb9d43e5b5a0f3c8462b36b32a9c351ab6325bd90e157cb7b809815fa"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/delimsizing.ts",
+          "sha256": "323593436330d3ae57d370955c6ed4467e2eb24f8db3cc04dd810bfca8e45e9e"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/delimiter.ts",
+          "sha256": "19dfa0c2cd26d82b41cc7eaf3b3819945fca257d77bf762f9b9fec0571239e1a"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/styles/katex.scss",
+          "sha256": "b4f458566634e85aab59629c3816790e3d1acbe10a3a235b6d06b36104bcd1b9"
+        }
+      ],
+      "expectedOrigin": "Independent fixed-source literal metrics/TeX builder equations or explicit native API contract; never candidate output/private helper"
+    },
+    {
+      "id": "F51",
+      "method": "test_f51_group_and_moustache_delimiters_have_source_stack_parts",
+      "line": 340,
+      "sources": [
+        {
+          "path": ".local/katex-0.18.11/package/src/delimiter.ts",
+          "sha256": "19dfa0c2cd26d82b41cc7eaf3b3819945fca257d77bf762f9b9fec0571239e1a"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/delimsizing.ts",
+          "sha256": "323593436330d3ae57d370955c6ed4467e2eb24f8db3cc04dd810bfca8e45e9e"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/svgGeometry.ts",
+          "sha256": "ef252fb6007a382c47bcd01852c168ad96b577d046872e5b4bc0b18f4a75718f"
+        }
+      ],
+      "expectedOrigin": "Independent fixed-source literal metrics/TeX builder equations or explicit native API contract; never candidate output/private helper"
+    },
+    {
+      "id": "F52",
+      "method": "test_f52_never_stacked_angle_delimiter_caps_at_source_size_four",
+      "line": 346,
+      "sources": [
+        {
+          "path": ".local/katex-0.18.11/package/src/delimiter.ts",
+          "sha256": "19dfa0c2cd26d82b41cc7eaf3b3819945fca257d77bf762f9b9fec0571239e1a"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/delimsizing.ts",
+          "sha256": "323593436330d3ae57d370955c6ed4467e2eb24f8db3cc04dd810bfca8e45e9e"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/svgGeometry.ts",
+          "sha256": "ef252fb6007a382c47bcd01852c168ad96b577d046872e5b4bc0b18f4a75718f"
+        }
+      ],
+      "expectedOrigin": "Independent fixed-source literal metrics/TeX builder equations or explicit native API contract; never candidate output/private helper"
+    },
+    {
+      "id": "F53",
+      "method": "test_f53_character_accent_delegates_script_shift_to_nucleus",
+      "line": 350,
+      "sources": [
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/accent.ts",
+          "sha256": "dda6b456e07c6e06b74dcacc7a5dbb07131ae6fc0e7bece477518cb632ff43ff"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/accentunder.ts",
+          "sha256": "71203e0e43e43cf85633afab70a788c386ff4e39f6da32f630c070174dfe7333"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/supsub.ts",
+          "sha256": "678fa75ede89b9590fcdcfbca9da35c377184fe0958506fc3825482d3abd2b1b"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/horizBrace.ts",
+          "sha256": "9e20b9a3cb406bf39d83b44aecd153f1f5084f3a11c54affd979130f156326be"
+        }
+      ],
+      "expectedOrigin": "Independent fixed-source literal metrics/TeX builder equations or explicit native API contract; never candidate output/private helper"
+    },
+    {
+      "id": "F54",
+      "method": "test_f54_utilde_has_source_twelve_hundredths_em_gap_below",
+      "line": 357,
+      "sources": [
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/accent.ts",
+          "sha256": "dda6b456e07c6e06b74dcacc7a5dbb07131ae6fc0e7bece477518cb632ff43ff"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/accentunder.ts",
+          "sha256": "71203e0e43e43cf85633afab70a788c386ff4e39f6da32f630c070174dfe7333"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/supsub.ts",
+          "sha256": "678fa75ede89b9590fcdcfbca9da35c377184fe0958506fc3825482d3abd2b1b"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/horizBrace.ts",
+          "sha256": "9e20b9a3cb406bf39d83b44aecd153f1f5084f3a11c54affd979130f156326be"
+        }
+      ],
+      "expectedOrigin": "Independent fixed-source literal metrics/TeX builder equations or explicit native API contract; never candidate output/private helper"
+    },
+    {
+      "id": "F55",
+      "method": "test_f55_overbrace_with_both_scripts_does_not_delegate_per_not_sub_flag",
+      "line": 361,
+      "sources": [
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/accent.ts",
+          "sha256": "dda6b456e07c6e06b74dcacc7a5dbb07131ae6fc0e7bece477518cb632ff43ff"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/accentunder.ts",
+          "sha256": "71203e0e43e43cf85633afab70a788c386ff4e39f6da32f630c070174dfe7333"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/supsub.ts",
+          "sha256": "678fa75ede89b9590fcdcfbca9da35c377184fe0958506fc3825482d3abd2b1b"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/horizBrace.ts",
+          "sha256": "9e20b9a3cb406bf39d83b44aecd153f1f5084f3a11c54affd979130f156326be"
+        }
+      ],
+      "expectedOrigin": "Independent fixed-source literal metrics/TeX builder equations or explicit native API contract; never candidate output/private helper"
+    },
+    {
+      "id": "F56",
+      "method": "test_f56_underbrace_both_scripts_preserves_fixed_source_delegation_quirk",
+      "line": 370,
+      "sources": [
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/accent.ts",
+          "sha256": "dda6b456e07c6e06b74dcacc7a5dbb07131ae6fc0e7bece477518cb632ff43ff"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/accentunder.ts",
+          "sha256": "71203e0e43e43cf85633afab70a788c386ff4e39f6da32f630c070174dfe7333"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/supsub.ts",
+          "sha256": "678fa75ede89b9590fcdcfbca9da35c377184fe0958506fc3825482d3abd2b1b"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/horizBrace.ts",
+          "sha256": "9e20b9a3cb406bf39d83b44aecd153f1f5084f3a11c54affd979130f156326be"
+        }
+      ],
+      "expectedOrigin": "Independent fixed-source literal metrics/TeX builder equations or explicit native API contract; never candidate output/private helper"
+    },
+    {
+      "id": "F57",
+      "method": "test_f57_operatorname_always_handle_flag_in_display_does_not_require_limits",
+      "line": 379,
+      "sources": [
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/operatorname.ts",
+          "sha256": "8ba05f2e8dd6cd239d67c3305dab773ded3dab5cb2a596e99351f3f9c0e01c7b"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/op.ts",
+          "sha256": "a04557b2f14cccd7927b8ea60cdf3f7df649abe52ed3b81748145538deb25a9d"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/supsub.ts",
+          "sha256": "678fa75ede89b9590fcdcfbca9da35c377184fe0958506fc3825482d3abd2b1b"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/utils/assembleSupSub.ts",
+          "sha256": "beadd19631feb9bd6ffa3b492e06863bb5f45485f88163d3f282841a585a5f8c"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/Options.ts",
+          "sha256": "e4d3708c1020cbc6135f131e1a44a23f0fc74c73efa7e4c007bc17e28a39c806"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/genfrac.ts",
+          "sha256": "c461e8a5363a992e67adbe4c1312723c928be836fe47ee851ae9869e48998538"
+        }
+      ],
+      "expectedOrigin": "Independent fixed-source literal metrics/TeX builder equations or explicit native API contract; never candidate output/private helper"
+    },
+    {
+      "id": "F58",
+      "method": "test_f58_operator_always_handle_true_forces_limits_in_textstyle",
+      "line": 385,
+      "sources": [
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/operatorname.ts",
+          "sha256": "8ba05f2e8dd6cd239d67c3305dab773ded3dab5cb2a596e99351f3f9c0e01c7b"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/op.ts",
+          "sha256": "a04557b2f14cccd7927b8ea60cdf3f7df649abe52ed3b81748145538deb25a9d"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/supsub.ts",
+          "sha256": "678fa75ede89b9590fcdcfbca9da35c377184fe0958506fc3825482d3abd2b1b"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/utils/assembleSupSub.ts",
+          "sha256": "beadd19631feb9bd6ffa3b492e06863bb5f45485f88163d3f282841a585a5f8c"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/Options.ts",
+          "sha256": "e4d3708c1020cbc6135f131e1a44a23f0fc74c73efa7e4c007bc17e28a39c806"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/genfrac.ts",
+          "sha256": "c461e8a5363a992e67adbe4c1312723c928be836fe47ee851ae9869e48998538"
+        }
+      ],
+      "expectedOrigin": "Independent fixed-source literal metrics/TeX builder equations or explicit native API contract; never candidate output/private helper"
+    },
+    {
+      "id": "F59",
+      "method": "test_f59_suppress_base_shift_is_source_flag_not_ignored",
+      "line": 391,
+      "sources": [
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/operatorname.ts",
+          "sha256": "8ba05f2e8dd6cd239d67c3305dab773ded3dab5cb2a596e99351f3f9c0e01c7b"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/op.ts",
+          "sha256": "a04557b2f14cccd7927b8ea60cdf3f7df649abe52ed3b81748145538deb25a9d"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/supsub.ts",
+          "sha256": "678fa75ede89b9590fcdcfbca9da35c377184fe0958506fc3825482d3abd2b1b"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/utils/assembleSupSub.ts",
+          "sha256": "beadd19631feb9bd6ffa3b492e06863bb5f45485f88163d3f282841a585a5f8c"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/Options.ts",
+          "sha256": "e4d3708c1020cbc6135f131e1a44a23f0fc74c73efa7e4c007bc17e28a39c806"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/genfrac.ts",
+          "sha256": "c461e8a5363a992e67adbe4c1312723c928be836fe47ee851ae9869e48998538"
+        }
+      ],
+      "expectedOrigin": "Independent fixed-source literal metrics/TeX builder equations or explicit native API contract; never candidate output/private helper"
+    },
+    {
+      "id": "F60",
+      "method": "test_f60_size_style_fraction_rule_composition_uses_source_size_map",
+      "line": 397,
+      "sources": [
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/operatorname.ts",
+          "sha256": "8ba05f2e8dd6cd239d67c3305dab773ded3dab5cb2a596e99351f3f9c0e01c7b"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/op.ts",
+          "sha256": "a04557b2f14cccd7927b8ea60cdf3f7df649abe52ed3b81748145538deb25a9d"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/supsub.ts",
+          "sha256": "678fa75ede89b9590fcdcfbca9da35c377184fe0958506fc3825482d3abd2b1b"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/utils/assembleSupSub.ts",
+          "sha256": "beadd19631feb9bd6ffa3b492e06863bb5f45485f88163d3f282841a585a5f8c"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/Options.ts",
+          "sha256": "e4d3708c1020cbc6135f131e1a44a23f0fc74c73efa7e4c007bc17e28a39c806"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/genfrac.ts",
+          "sha256": "c461e8a5363a992e67adbe4c1312723c928be836fe47ee851ae9869e48998538"
+        }
+      ],
+      "expectedOrigin": "Independent fixed-source literal metrics/TeX builder equations or explicit native API contract; never candidate output/private helper"
+    },
+    {
+      "id": "F61",
+      "method": "test_f61_unsupported_command_stays_visible_and_diagnostic_through_composition",
+      "line": 403,
+      "sources": [
+        {
+          "path": ".local/katex-0.18.11/package/src/Parser.ts",
+          "sha256": "c1aed05097bb0c429b7e1b5fe0862a7db515bd1682b014d6775edeb2e8da0e6a"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/buildCommon.ts",
+          "sha256": "0cae9bd3b1dd21b536e8c9a96f11838c87bcbaceaca89927c03b46750a4fba73"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/Settings.ts",
+          "sha256": "a3b04291805997c2a7f0c7600f78034b4ea79783ce2f238e5ca81ef52265acb1"
+        }
+      ],
+      "expectedOrigin": "Independent fixed-source literal metrics/TeX builder equations or explicit native API contract; never candidate output/private helper"
+    },
+    {
+      "id": "F62",
+      "method": "test_f62_error_box_is_visible_raw_tex_and_error_diagnostic_not_success_stub",
+      "line": 409,
+      "sources": [
+        {
+          "path": ".local/katex-0.18.11/package/src/Parser.ts",
+          "sha256": "c1aed05097bb0c429b7e1b5fe0862a7db515bd1682b014d6775edeb2e8da0e6a"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/buildCommon.ts",
+          "sha256": "0cae9bd3b1dd21b536e8c9a96f11838c87bcbaceaca89927c03b46750a4fba73"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/Settings.ts",
+          "sha256": "a3b04291805997c2a7f0c7600f78034b4ea79783ce2f238e5ca81ef52265acb1"
+        }
+      ],
+      "expectedOrigin": "Independent fixed-source literal metrics/TeX builder equations or explicit native API contract; never candidate output/private helper"
+    },
+    {
+      "id": "F63",
+      "method": "test_f63_display_host_width_is_logical_and_keeps_unbreakable_overflow_commands",
+      "line": 414,
+      "sources": [
+        {
+          "path": ".local/katex-0.18.11/package/src/buildHTML.ts",
+          "sha256": "9b22eee0850fe5fd5cc3bcd5623e11bebcd3d5fe71b66f36e601c7a0f1ece27f"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/stretchy.ts",
+          "sha256": "def0fb27cd6e85825662817d9186c0b341d6f55fe42ef495389b5bae832edce2"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/styles/katex.scss",
+          "sha256": "b4f458566634e85aab59629c3816790e3d1acbe10a3a235b6d06b36104bcd1b9"
+        }
+      ],
+      "expectedOrigin": "Independent fixed-source literal metrics/TeX builder equations or explicit native API contract; never candidate output/private helper"
+    },
+    {
+      "id": "F64",
+      "method": "test_f64_source_geometry_guard_catches_dropped_tag_and_compressed_cd_head",
+      "line": 421,
+      "sources": [
+        {
+          "path": ".local/katex-0.18.11/package/src/buildHTML.ts",
+          "sha256": "9b22eee0850fe5fd5cc3bcd5623e11bebcd3d5fe71b66f36e601c7a0f1ece27f"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/stretchy.ts",
+          "sha256": "def0fb27cd6e85825662817d9186c0b341d6f55fe42ef495389b5bae832edce2"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/styles/katex.scss",
+          "sha256": "b4f458566634e85aab59629c3816790e3d1acbe10a3a235b6d06b36104bcd1b9"
+        }
+      ],
+      "expectedOrigin": "Independent fixed-source literal metrics/TeX builder equations or explicit native API contract; never candidate output/private helper"
+    },
+    {
+      "id": "F65",
+      "method": "test_f65_regular_source_space_uses_actual_face_metric",
+      "line": 434,
+      "sources": [
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/symbolsSpacing.ts",
+          "sha256": "28bdc1bce42dbd013491b817c24fd36c56360adbe371fce3091fe2f05b46b3e1"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/macros.ts",
+          "sha256": "13adf540091b6c4d4a31bcd65fe325b74beffc37f2ddb8017f52d024c73a1fdc"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/units.ts",
+          "sha256": "09e9e034abfb99210cdf393ca0c639af0e34b017613a05fca280a76aff12e818"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/buildHTML.ts",
+          "sha256": "9b22eee0850fe5fd5cc3bcd5623e11bebcd3d5fe71b66f36e601c7a0f1ece27f"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/hbox.ts",
+          "sha256": "e7aa1cd26792786f88a67631a30494a807a26365d0ec653811fbb0d6ab54fa7c"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/styles/katex.scss",
+          "sha256": "b4f458566634e85aab59629c3816790e3d1acbe10a3a235b6d06b36104bcd1b9"
+        }
+      ],
+      "expectedOrigin": "Independent fixed-source literal metrics/TeX builder equations or explicit native API contract; never candidate output/private helper"
+    },
+    {
+      "id": "F66",
+      "method": "test_f66_public_thinspace_and_quad_macro_keep_source_units_in_script",
+      "line": 440,
+      "sources": [
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/symbolsSpacing.ts",
+          "sha256": "28bdc1bce42dbd013491b817c24fd36c56360adbe371fce3091fe2f05b46b3e1"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/macros.ts",
+          "sha256": "13adf540091b6c4d4a31bcd65fe325b74beffc37f2ddb8017f52d024c73a1fdc"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/units.ts",
+          "sha256": "09e9e034abfb99210cdf393ca0c639af0e34b017613a05fca280a76aff12e818"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/buildHTML.ts",
+          "sha256": "9b22eee0850fe5fd5cc3bcd5623e11bebcd3d5fe71b66f36e601c7a0f1ece27f"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/hbox.ts",
+          "sha256": "e7aa1cd26792786f88a67631a30494a807a26365d0ec653811fbb0d6ab54fa7c"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/styles/katex.scss",
+          "sha256": "b4f458566634e85aab59629c3816790e3d1acbe10a3a235b6d06b36104bcd1b9"
+        }
+      ],
+      "expectedOrigin": "Independent fixed-source literal metrics/TeX builder equations or explicit native API contract; never candidate output/private helper"
+    },
+    {
+      "id": "F67",
+      "method": "test_f67_allowbreak_nobreak_and_root_newline_are_distinct",
+      "line": 447,
+      "sources": [
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/symbolsSpacing.ts",
+          "sha256": "28bdc1bce42dbd013491b817c24fd36c56360adbe371fce3091fe2f05b46b3e1"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/macros.ts",
+          "sha256": "13adf540091b6c4d4a31bcd65fe325b74beffc37f2ddb8017f52d024c73a1fdc"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/units.ts",
+          "sha256": "09e9e034abfb99210cdf393ca0c639af0e34b017613a05fca280a76aff12e818"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/buildHTML.ts",
+          "sha256": "9b22eee0850fe5fd5cc3bcd5623e11bebcd3d5fe71b66f36e601c7a0f1ece27f"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/hbox.ts",
+          "sha256": "e7aa1cd26792786f88a67631a30494a807a26365d0ec653811fbb0d6ab54fa7c"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/styles/katex.scss",
+          "sha256": "b4f458566634e85aab59629c3816790e3d1acbe10a3a235b6d06b36104bcd1b9"
+        }
+      ],
+      "expectedOrigin": "Independent fixed-source literal metrics/TeX builder equations or explicit native API contract; never candidate output/private helper"
+    },
+    {
+      "id": "F68",
+      "method": "test_f68_hbox_prevents_soft_break_but_explicit_newline_remains_root_control",
+      "line": 456,
+      "sources": [
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/symbolsSpacing.ts",
+          "sha256": "28bdc1bce42dbd013491b817c24fd36c56360adbe371fce3091fe2f05b46b3e1"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/macros.ts",
+          "sha256": "13adf540091b6c4d4a31bcd65fe325b74beffc37f2ddb8017f52d024c73a1fdc"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/units.ts",
+          "sha256": "09e9e034abfb99210cdf393ca0c639af0e34b017613a05fca280a76aff12e818"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/buildHTML.ts",
+          "sha256": "9b22eee0850fe5fd5cc3bcd5623e11bebcd3d5fe71b66f36e601c7a0f1ece27f"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/hbox.ts",
+          "sha256": "e7aa1cd26792786f88a67631a30494a807a26365d0ec653811fbb0d6ab54fa7c"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/styles/katex.scss",
+          "sha256": "b4f458566634e85aab59629c3816790e3d1acbe10a3a235b6d06b36104bcd1b9"
+        }
+      ],
+      "expectedOrigin": "Independent fixed-source literal metrics/TeX builder equations or explicit native API contract; never candidate output/private helper"
+    },
+    {
+      "id": "F69",
+      "method": "test_f69_pmb_shadow_blurs_text_but_does_not_duplicate_fraction_rule",
+      "line": 462,
+      "sources": [
+        {
+          "path": ".local/katex-0.18.11/package/src/functions/pmb.ts",
+          "sha256": "7e82813c396939c8ff439d44a24564ea2279fa1fcf6600d7d114d750f0fd8eb1"
+        }
+      ],
+      "expectedOrigin": "Independent fixed-source literal metrics/TeX builder equations or explicit native API contract; never candidate output/private helper"
+    },
+    {
+      "id": "F70",
+      "method": "test_f70_fleqn_leqno_tag_left_is_relative_to_padded_html_content_box",
+      "line": 470,
+      "sources": [
+        {
+          "path": ".local/katex-0.18.11/package/src/styles/katex.scss",
+          "sha256": "b4f458566634e85aab59629c3816790e3d1acbe10a3a235b6d06b36104bcd1b9"
+        },
+        {
+          "path": ".local/katex-0.18.11/package/src/buildHTML.ts",
+          "sha256": "9b22eee0850fe5fd5cc3bcd5623e11bebcd3d5fe71b66f36e601c7a0f1ece27f"
+        }
+      ],
+      "expectedOrigin": "Independent fixed-source literal metrics/TeX builder equations or explicit native API contract; never candidate output/private helper"
+    }
+  ],
+  "independence": {
+    "privateCandidateHelperImports": false,
+    "candidateOutputGolden": false,
+    "candidateMetricTableExpectedValues": false,
+    "literalPinnedMetricValues": true,
+    "sourceNativeTextAdvanceReference": "F45 independently registers the fixed TTF with public Canvas, not py_katex measurement helpers",
+    "unicodeMeasurementSpy": "F42/F43 isolate source vertical estimates/run boundaries using a deliberately contradictory 99/98px native height. F44 separately exercises real supplied native-font coverage and a whole Glyph run.",
+    "mutatedGeometryNegativeControls": [
+      "F64 removes a required right-edge tag and compresses a CD arrow head; independent guards must reject both."
+    ]
+  },
+  "p3RisksDiscoveredIndependently": [
+    {
+      "id": "F09",
+      "finding": "Source xArrow always includes empty mandatory upper group clearance."
+    },
+    {
+      "id": "F29",
+      "finding": "genfrac ruleSpacing is actual bar height including minRuleThickness, not unconditionally default theta."
+    },
+    {
+      "id": "F55/F56",
+      "finding": "supsub htmlBuilderDelegate isSup is !group.sub; full-source P1 receipt had confused the two-script over/under direction with another branch. Source tests follow the fixed HTML builder."
+    },
+    {
+      "id": "F57",
+      "finding": "operatorname alwaysHandleSupSub logic differs from ordinary op.limits condition."
+    },
+    {
+      "id": "F70",
+      "finding": "leqno left0 is relative to fleqn-padded positioned html content; simultaneous settings may preserve fixed source overlap."
+    }
+  ],
+  "fixtureChecks": {
+    "geometryKinds": [
+      "logical_width",
+      "min_baselines",
+      "glyph_x",
+      "glyph_y",
+      "font_axes",
+      "min_rule_thickness",
+      "path_scale",
+      "no_glyph",
+      "glyph_run"
+    ],
+    "pixelKinds": [
+      "ink_present",
+      "border_margin",
+      "rule_ink"
+    ],
+    "optionsPolicy": "Explicit native options and oracleOptions/oracleHost must be consumed or TOOL_ERROR; never silently ignored",
+    "overflowCapture": "Source host locator rectangle alone is insufficient for content_width overflow; offset host away from viewport edge and capture visible overflow union."
+  },
+  "mechanicalRun": "test-runs/MATH-FULL-record-20261105T154307Z-b4205ee5",
+  "mechanicalExitCode": 0,
+  "formalBehaviorExecuted": false,
+  "nativeOrOracleExecuted": false,
+  "p3Argv": [
+    "C:/venvs/pymmd-20261102/Scripts/python.exe",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-p",
+    "test_full_layout.py",
+    "-v"
+  ],
+  "oldLayoutArgv": [
+    "C:/venvs/pymmd-20261102/Scripts/python.exe",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-p",
+    "test_layout.py",
+    "-v"
+  ],
+  "fullDenominatorNote": "These70 methods and54 fixtures supplement root registry345/339 audits and all128 upstream screenshotter examples. They are not by themselves a full compatibility score.",
+  "inputEncodingCorrection": {
+    "type": "P2_input_encoding_correction",
+    "cause": "PowerShell default ASCII stdout encoding replaced Unicode in a development Python here-string with question marks; a Python adjacent single-quoted literal also dropped the closing text quote pair. Product execution was not involved.",
+    "oldFixtureSha256": "91bb2efdd5f42a3aa02ef020b9610bbb484e2e5880572ed24cfda3b9b6ee139c",
+    "newFixtureSha256": "967c669ebce38b5eacd436f04716312baf8e4f327c19969ec99e49ce9a265dc4",
+    "testFileAudit": "30 genuine non-ASCII literals, zero question-mark literals; apply_patch-written test input/expected values were not damaged",
+    "testSha256": "11d4213597fcf4c45b25bdc40d8311c01cc7c88045b5b2049c16f7b795315510",
+    "changedCases": [
+      "full-layout-unicode-cyrillic-estimates",
+      "full-layout-unicode-combining-run",
+      "full-layout-unicode-arabic-run",
+      "full-layout-unicode-cjk-estimates",
+      "full-layout-source-text-kerning"
+    ],
+    "encodingPolicy": "Fixture written with ASCII-only Python source and JSON ensure_ascii=True; actual parsed Unicode ord lists audited.",
+    "auditArtifact": "test-runs/math-full-p2-unicode-input-audit.json",
+    "oldMechanicalRunPreserved": "test-runs/MATH-FULL-record-20261105T154307Z-b4205ee5",
+    "sourceModified": false,
+    "sourceRiskReadOnly": [
+      "Frozen layout.py _DELIMS new group/moustache aliases contain ?",
+      "Frozen layout.py _STACK new group/moustache Unicode entries collapse to ? key; preserve first P3 failure, fix only after authorization"
+    ]
+  },
+  "p3BatchRepair": {
+    "status": "targeted_pass_global_candidate_pending",
+    "initialEvidence": "test-runs/MATH-batch-20261105T155834Z-e542e4f2",
+    "preservedNewRegressionFailure": "test-runs/MATH-FULL-record-20261105T161202Z-2fec8449",
+    "repairs": [
+      {
+        "id": "B01",
+        "source": "functions/CD.ts; defineFunction.ts normalizeArgument",
+        "change": "Root semantic group flags reach builder, retaining CD parent label anchor geometry."
+      },
+      {
+        "id": "B02",
+        "source": "functions/xArrow.ts htmlBuilder",
+        "change": "Mandatory empty upper group retains its vlist shift and logical height."
+      },
+      {
+        "id": "B03",
+        "source": "functions/genfrac.ts ruleSpacing",
+        "change": "Bar fractions use actual minimum rule thickness as clearance; barless uses default theta."
+      },
+      {
+        "id": "B04",
+        "source": "delimiter.ts 330-350",
+        "change": "Restore four Unicode group/moustache delimiter keys and source Size4 stack parts; skip absent Main metrics before stack traversal. Previous ASCII PowerShell pipeline corrupted these literals; now ASCII Unicode escapes."
+      },
+      {
+        "id": "B05",
+        "source": "functions/supsub.ts HTML lines 37-51; functions/horizBrace.ts",
+        "change": "HTML brace delegation uses !sub, not MathML !!sup; both scripts delegate only underbrace and source selects sup first. operatorname has its own alwaysHandle gate."
+      },
+      {
+        "id": "B06",
+        "source": "styles/katex.scss fleqn/leqno",
+        "change": "Left equation tag origin is relative to 2em padded HTML content when fleqn."
+      },
+      {
+        "id": "B07",
+        "source": "symbols.ts @imath/@jmath; buildCommon.ts makeOrd",
+        "change": "Preserve original source symbol lookup for private-use mathord; requested missing font falls back to source default mathord/textord including AMS digits and accent."
+      },
+      {
+        "id": "B08",
+        "source": "buildCommon.ts makeSymbol; Settings strict",
+        "change": "Missing metrics report symbolNotInFont warning/callback/error before real native fallback."
+      },
+      {
+        "id": "B09",
+        "source": "symbols.ts text accent entries; functions/accent.ts230; defineFunction.ts212",
+        "change": "Use source accent mode, text circumflex/tilde glyphs and normalize singleton accent argument before italic correction."
+      },
+      {
+        "id": "B10",
+        "source": "functions/rule.ts; styles/katex.scss .katex-rule min-height:1px",
+        "change": "Only explicit source rule paint includes extra CSS content pixel; TeX logical signed metrics retained."
+      }
+    ],
+    "sourceAndTestIdentities": [
+      {
+        "path": "src/py_katex/layout.py",
+        "sha256": "0c4e807e3645e76e425ccbbb79ce179b2ac7d82d9c14a053e9f4aa6e4751bb90"
+      },
+      {
+        "path": "src/py_katex/layout_display.py",
+        "sha256": "5920a206a8a3f158b0bdd5534c5a1ac94b8883a565450af7a6d1058dd8874697"
+      },
+      {
+        "path": "src/py_katex/layout_metrics.py",
+        "sha256": "d47276a9a14978d2809f597f65950263f60a574768a72e27f3d1d3e4bd11c11f"
+      },
+      {
+        "path": "src/py_katex/_layout_paths.py",
+        "sha256": "5d390360023d8188d27c969d4f2925f1d7e8b7367f53a0df4e772b4925c5ce98"
+      },
+      {
+        "path": "tests/test_full_layout.py",
+        "sha256": "673ea3a9dec7971bc29c3843c642015d7fdcaf911ddb2df9f8ded80acdbb69bb"
+      },
+      {
+        "path": "tests/test_layout.py",
+        "sha256": "1a8fac400cd88de823bc840f1c84b148c4e0ee809baac3e66f7106f540ae8bc2"
+      }
+    ],
+    "runs": [
+      {
+        "path": "test-runs/MATH-FULL-record-20261105T161108Z-563fd7d6",
+        "exitCode": 0,
+        "methods": 140
+      },
+      {
+        "path": "test-runs/MATH-FULL-record-20261105T161308Z-14c4e72c",
+        "exitCode": 0,
+        "cpuScenes": 17,
+        "artifacts": "test-runs/math-full-b-layout-cpu-repair-1615"
+      },
+      {
+        "path": "test-runs/MATH-FULL-record-20261105T161314Z-efd30d9f",
+        "exitCode": 0,
+        "methods": 142
+      }
+    ],
+    "fullLayoutMethods": 77,
+    "legacyLayoutMethods": 65,
+    "newFixtureCount": 54,
+    "stopWritingSource": true,
+    "globalVerification": "Root pending coordinated freeze/full corpus/full265/three backend matrix; targeted results are not complete compatibility acceptance."
+  },
+  "p3TextLookupRepair": {
+    "status": "targeted_pass",
+    "initialEvidence": "test-runs/MATH-FULL-batch-20261105T161801Z-3fa2e5c3",
+    "sources": [
+      "buildCommon.ts makeOrd Typewriter ligature deconstruction and makeSymbol lookupSymbol",
+      "functions/verb.ts per-character makeSymbol before tryCombineChars",
+      "buildCommon.ts makeSymbol symbolNotInFont strict report"
+    ],
+    "changes": [
+      "Before combining text runs, lookup source replacement glyphs; Typewriter missing multi-character ligature splits source raw token before individual symbol lookup. Math mathtt atom handling unchanged.",
+      "Native fallback run performs missing-metric strict reporting when _char was bypassed; supported-script M estimates keep source vertical metrics without this warning."
+    ],
+    "unitMethods": 145,
+    "fullLayoutMethods": 80,
+    "legacyLayoutMethods": 65,
+    "runs": [
+      {
+        "path": "test-runs/MATH-FULL-record-20261105T162815Z-29b91674",
+        "status": "SUCCESS",
+        "cpuScenes": [
+          "upstream-DashesAndQuotes",
+          "upstream-Verb"
+        ],
+        "artifacts": "test-runs/math-full-b-text-lookup-cpu-1624"
+      },
+      {
+        "path": "test-runs/MATH-FULL-record-20261105T162826Z-4b9be821",
+        "status": "FAILED",
+        "reason": "New test normalized ordinary space only, source text spaces are NBSP; product CPU scene already PASS. Evidence preserved."
+      },
+      {
+        "path": "test-runs/MATH-FULL-record-20261105T162915Z-cbb5838a",
+        "status": "SUCCESS",
+        "methods": 145
+      }
+    ],
+    "identities": [
+      {
+        "path": "src/py_katex/layout.py",
+        "sha256": "9b443c70f3760cf2805ccdd375eb01aae8d8f1eaa68f15ea293261cca822d9d6"
+      },
+      {
+        "path": "tests/test_full_layout.py",
+        "sha256": "925acb68ffbf2d67ec85eca0a6fc744d9d4c4bc6f90cd515b963b2d10c40611b"
+      }
+    ],
+    "emojiPolicyTest": "R10 mocks only native measurement to isolate source warn/error policy. Real platform emoji remains C core-corpus targeted verification.",
+    "stopWritingSource": true,
+    "fullMatrix": "Pending root final coordinated freeze; no full acceptance claim."
+  },
+  "htmlInlineCellRepair": {
+    "schema": "py-katex-html-inline-cell-repair/v1",
+    "status": "targeted_pass_pending_global_freeze",
+    "rejectedCandidate": "test-runs/MATH-FULL-batch-20261105T165046Z-5b13a336",
+    "rootCause": "apply_html incorrectly used inner glyph TeX ink-height for the enclosing inline CSS background/border cell and moved body baseline down by padding+border. Source outer Main font has a much taller hhea inline cell.",
+    "sourceEvidence": {
+      "version": "0.18.11",
+      "files": [
+        "functions/html.ts htmlBuilder creates span.enclosing",
+        "styles/katex.scss .katex font Main and line-height1.2",
+        "bundled Main-Regular.ttf head unitsPerEm1000; hhea ascent903 descent-272 lineGap90",
+        "bundled SansSerif-Regular.ttf head unitsPerEm1000; hhea ascent750 descent-250 lineGap90"
+      ],
+      "independentOracle": "test-runs/MATH-FULL-batch-20261105T170615Z-9072a0d0",
+      "oracleCaseCount": 8,
+      "observed": "Main40 inline source cell47px (ascent36/descent11); 6px padding+2px border gives63px. Inline width/height and line-height do not resize the cell. Inline-block lineheight80 +16px sides gives96px. Main20 cell23+8sides=31; inherited Sans30 cell31+16sides=47."
+    },
+    "implementation": [
+      "Cache stdlib sfnt head/hhea parsing from bundled font bytes. No native glyph ink/fontBoundingBox proxy, network or development-source runtime dependency.",
+      "Pass enclosing CSS family/style/weight and inherited line-height separately from inner TeX glyph font classes. Unitless line-height rescales for children; absolute values remain absolute.",
+      "Keep body baseline fixed; vertical inline padding/border expands frame only. Non-replaced inline width/height/min/max sizing ignored. Inline-block respects dimensions and line-height. Display contents has no own frame; unsupported display values still explicit errors.",
+      "Unpainted inline wrapper preserves child TeX height/depth so font-cell paint extents do not replace source nucleus metrics inside fractions/scripts.",
+      "CSS font-family remains explicitly limited by resolver to bundled source families. FontResource remains Unicode fallback only; unsupported arbitrary CSS family is rejected, not guessed.",
+      "layout_image target box untouched: source includegraphics height+depth is correct, SVG internal preserveAspectRatio viewport belongs to C."
+    ],
+    "tests": {
+      "newMethods": 7,
+      "fullLayoutMethods": 87,
+      "legacyLayoutMethods": 65,
+      "totalLayoutMethods": 152,
+      "sourceAssertions": [
+        "H01 literal Main40 frame63/top-44/bodybaseline0",
+        "H02 inline dimensions/lineheight ignored for paintcell",
+        "H03 inline-block dimensions/lineheight",
+        "H04 font-size20 and nested inherited Sans30",
+        "H05 no-background wrapper keeps TeX metrics",
+        "H06 inherited absolute/unitless lineheight",
+        "H07 actualRGB source red/blue relativepixelbboxes plus shiftedbody8px negativecontrol"
+      ]
+    },
+    "runs": [
+      {
+        "path": "test-runs/MATH-FULL-record-20261105T171001Z-63aa65ff",
+        "status": "SUCCESS",
+        "detail": "html-paint CPU source comparison, actual PNG viewed"
+      },
+      {
+        "path": "test-runs/MATH-FULL-record-20261105T171254Z-bd7d50e4",
+        "status": "FAILED",
+        "detail": "New fontcell logic initially inflated unpainted TeX wrappers; existing F31/F32 caught it. Evidence retained, source logical-metric preservation fixed."
+      },
+      {
+        "path": "test-runs/MATH-FULL-record-20261105T171346Z-4076f93a",
+        "status": "SUCCESS",
+        "methods": 152
+      },
+      {
+        "path": "test-runs/MATH-FULL-record-20261105T171454Z-01ac8f86",
+        "status": "SUCCESS",
+        "detail": "Final exact-source compileall; visibility hidden still applies before display:contents fast path."
+      }
+    ],
+    "actualPixelComparison": {
+      "official": "test-runs/MATH-FULL-batch-20261105T165046Z-5b13a336/artifacts/oracle/html-paint.png",
+      "native": "test-runs/math-full-html-paint-cpu-1711/html-paint.png",
+      "officialBlue": [
+        12,
+        4,
+        51,
+        67
+      ],
+      "officialRed": [
+        22,
+        30,
+        41,
+        48
+      ],
+      "nativeBlue": [
+        10,
+        10,
+        49,
+        73
+      ],
+      "nativeRed": [
+        20,
+        36,
+        39,
+        54
+      ],
+      "finding": "All colored bboxes differ by common translation(-2,+6). Frame63px and red baseline gap match; foreground is fully contained. Original native image actually viewed with view_image."
+    },
+    "identities": [
+      {
+        "path": "src/py_katex/layout.py",
+        "sha256": "011e5af561b6b22b418efd0e4889c334d3cc5f9d3b2aeaa294589fc341348d87"
+      },
+      {
+        "path": "src/py_katex/layout_html.py",
+        "sha256": "94ceb4e8787e75d8d5d21f61e92dcd8a64fe5783632d57321436ac0669aa6d81"
+      },
+      {
+        "path": "tests/test_full_layout.py",
+        "sha256": "87c1206b816843cd36abd5535485d480113dda7fa0689a977b144529873981cf"
+      }
+    ],
+    "sourceStopWriting": true,
+    "globalGate": "Await root joint freeze, all-unit/sourcecorpus/267x3backend and new accepted manual QA. Existing rejected final receipts unchanged."
+  }
+}

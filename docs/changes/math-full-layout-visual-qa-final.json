@@ -1,0 +1,473 @@
+{
+  "schema": "py-katex-math-full-layout-visual-qa/v1",
+  "status": "PASS",
+  "scope": "Read-only manual visual review of 15 A/B CPU image pairs; not a three-backend or pixel-equality claim.",
+  "candidateRun": "test-runs/MATH-FULL-batch-20261105T165046Z-5b13a336",
+  "contactRun": "test-runs/MATH-FULL-batch-20261105T165439Z-31f3d643",
+  "operations": "Created new contact sheets only from existing original PNGs; no parse/layout/render/test behavior executed, no source/test/closed-run mutations.",
+  "actualViewingTool": "functions tools.view_image; all five sheets emitted and visually inspected",
+  "selectedCaseCount": 15,
+  "originalImageCount": 30,
+  "viewedSheets": [
+    {
+      "path": "test-runs/MATH-FULL-batch-20261105T165439Z-31f3d643/artifacts/contact/sheet-1.png",
+      "sha256": "e46c58b57f7fcc4aa92a5c4984fb7b4e93a9ca133356e1e969c2d00264df0137"
+    },
+    {
+      "path": "test-runs/MATH-FULL-batch-20261105T165439Z-31f3d643/artifacts/contact/sheet-2.png",
+      "sha256": "cff15f2c35b85cea67fae386b81087d4f256150ea1ded00cdf350d878bd3c62a"
+    },
+    {
+      "path": "test-runs/MATH-FULL-batch-20261105T165439Z-31f3d643/artifacts/contact/sheet-3.png",
+      "sha256": "2c8a5a77aed187fa96476e0b68c17a89b62a49d51526a28b6ea43d9908fe708b"
+    },
+    {
+      "path": "test-runs/MATH-FULL-batch-20261105T165439Z-31f3d643/artifacts/contact/sheet-4.png",
+      "sha256": "5279236c8fabda55a8b8a043fce6c985a8d3b6b3a7c5796293dfa69acec0cbd7"
+    },
+    {
+      "path": "test-runs/MATH-FULL-batch-20261105T165439Z-31f3d643/artifacts/contact/sheet-5.png",
+      "sha256": "7ffbd648cb6b2b38dc9644b550396a0a31fbe5c88df344916ab92023da009484"
+    }
+  ],
+  "originals": [
+    {
+      "id": "full-layout-cd-cycle",
+      "kind": "oracle",
+      "path": "test-runs\\MATH-FULL-batch-20261105T165046Z-5b13a336\\artifacts\\oracle\\full-layout-cd-cycle.png",
+      "sha256": "e81468cae4236b75622e8cbd4e2511bca5b4264f131f6399f7d96febdaae385a",
+      "size": [
+        151,
+        138
+      ]
+    },
+    {
+      "id": "full-layout-cd-cycle",
+      "kind": "standalone-cpu",
+      "path": "test-runs\\MATH-FULL-batch-20261105T165046Z-5b13a336\\artifacts\\standalone-cpu\\full-layout-cd-cycle.png",
+      "sha256": "463870c931ce08861d47aff13e5a61338d403113ce995f50f7d2dd7fda5a5109",
+      "size": [
+        145,
+        156
+      ]
+    },
+    {
+      "id": "full-layout-cd-fraction-label",
+      "kind": "oracle",
+      "path": "test-runs\\MATH-FULL-batch-20261105T165046Z-5b13a336\\artifacts\\oracle\\full-layout-cd-fraction-label.png",
+      "sha256": "ec6d5cd45d23076707733c144146f13bd52b9b71208f8f25f3cb8936e9ec3eff",
+      "size": [
+        137,
+        63
+      ]
+    },
+    {
+      "id": "full-layout-cd-fraction-label",
+      "kind": "standalone-cpu",
+      "path": "test-runs\\MATH-FULL-batch-20261105T165046Z-5b13a336\\artifacts\\standalone-cpu\\full-layout-cd-fraction-label.png",
+      "sha256": "406d4205e8f5c6e8b32777e6215343e58dc1c18c8c4bd69f536c38eb2e9135e7",
+      "size": [
+        132,
+        82
+      ]
+    },
+    {
+      "id": "full-layout-cd-long-labels",
+      "kind": "oracle",
+      "path": "test-runs\\MATH-FULL-batch-20261105T165046Z-5b13a336\\artifacts\\oracle\\full-layout-cd-long-labels.png",
+      "sha256": "823aa47ad3a5da927d7bd8cf21c810817b64c3a36958791a09a8278406a66d89",
+      "size": [
+        185,
+        64
+      ]
+    },
+    {
+      "id": "full-layout-cd-long-labels",
+      "kind": "standalone-cpu",
+      "path": "test-runs\\MATH-FULL-batch-20261105T165046Z-5b13a336\\artifacts\\standalone-cpu\\full-layout-cd-long-labels.png",
+      "sha256": "8168f6ee774c30a26b130ce3e8c88d16d67a2d5f562e731d81ea2f2ecfe72ae1",
+      "size": [
+        179,
+        82
+      ]
+    },
+    {
+      "id": "full-layout-tag-right",
+      "kind": "oracle",
+      "path": "test-runs\\MATH-FULL-batch-20261105T165046Z-5b13a336\\artifacts\\oracle\\full-layout-tag-right.png",
+      "sha256": "b19eff35993e866250f702e43484e60c34073d622f79e1a8d792a7d573850b27",
+      "size": [
+        224,
+        49
+      ]
+    },
+    {
+      "id": "full-layout-tag-right",
+      "kind": "standalone-cpu",
+      "path": "test-runs\\MATH-FULL-batch-20261105T165046Z-5b13a336\\artifacts\\standalone-cpu\\full-layout-tag-right.png",
+      "sha256": "b0450f02c94f64217fa3e786d95bec8b774fde594c575eef7dc2088069d59c83",
+      "size": [
+        220,
+        41
+      ]
+    },
+    {
+      "id": "full-layout-tag-leqno-fleqn",
+      "kind": "oracle",
+      "path": "test-runs\\MATH-FULL-batch-20261105T165046Z-5b13a336\\artifacts\\oracle\\full-layout-tag-leqno-fleqn.png",
+      "sha256": "2402bc5e25f73bf0884b0cf5355d78bb110800afc08b32710e25299175df5ef2",
+      "size": [
+        224,
+        48
+      ]
+    },
+    {
+      "id": "full-layout-tag-leqno-fleqn",
+      "kind": "standalone-cpu",
+      "path": "test-runs\\MATH-FULL-batch-20261105T165046Z-5b13a336\\artifacts\\standalone-cpu\\full-layout-tag-leqno-fleqn.png",
+      "sha256": "7d713e69865a91131548b09e2c182da25670f2480d4483b32a1523863401c6b7",
+      "size": [
+        220,
+        34
+      ]
+    },
+    {
+      "id": "full-layout-row-auto-manual-notag",
+      "kind": "oracle",
+      "path": "test-runs\\MATH-FULL-batch-20261105T165046Z-5b13a336\\artifacts\\oracle\\full-layout-row-auto-manual-notag.png",
+      "sha256": "ea5a9e6b48c8bb352363cbbc8574602e18c73c0259aea5eb50edb08b4a3a9edb",
+      "size": [
+        345,
+        110
+      ]
+    },
+    {
+      "id": "full-layout-row-auto-manual-notag",
+      "kind": "standalone-cpu",
+      "path": "test-runs\\MATH-FULL-batch-20261105T165046Z-5b13a336\\artifacts\\standalone-cpu\\full-layout-row-auto-manual-notag.png",
+      "sha256": "72d06d2cb180bd854e13f1cd62929636ce8faaba55ce0a3021127e8d17c48ff9",
+      "size": [
+        340,
+        104
+      ]
+    },
+    {
+      "id": "full-layout-row-counter-offset",
+      "kind": "oracle",
+      "path": "test-runs\\MATH-FULL-batch-20261105T165046Z-5b13a336\\artifacts\\oracle\\full-layout-row-counter-offset.png",
+      "sha256": "131c17976fbe42fbc3d03ab7737628db70d877b3e536424fbaf2d6b064c3c106",
+      "size": [
+        325,
+        80
+      ]
+    },
+    {
+      "id": "full-layout-row-counter-offset",
+      "kind": "standalone-cpu",
+      "path": "test-runs\\MATH-FULL-batch-20261105T165046Z-5b13a336\\artifacts\\standalone-cpu\\full-layout-row-counter-offset.png",
+      "sha256": "0cccbbda46ec347c892bb2c4da7ed543215bd86c0b1704aec79de051f9187b81",
+      "size": [
+        320,
+        74
+      ]
+    },
+    {
+      "id": "full-layout-array-dashed-rules",
+      "kind": "oracle",
+      "path": "test-runs\\MATH-FULL-batch-20261105T165046Z-5b13a336\\artifacts\\oracle\\full-layout-array-dashed-rules.png",
+      "sha256": "fd9eafdff64b0d910f092669dc1684794b7fe0f0c770c4b2a63809333508c4a4",
+      "size": [
+        93,
+        72
+      ]
+    },
+    {
+      "id": "full-layout-array-dashed-rules",
+      "kind": "standalone-cpu",
+      "path": "test-runs\\MATH-FULL-batch-20261105T165046Z-5b13a336\\artifacts\\standalone-cpu\\full-layout-array-dashed-rules.png",
+      "sha256": "14975dec481f52c5e167f1585d34259c757ee4df693cf94dd3dcd97e9f50def1",
+      "size": [
+        87,
+        68
+      ]
+    },
+    {
+      "id": "full-layout-array-rule-padding",
+      "kind": "oracle",
+      "path": "test-runs\\MATH-FULL-batch-20261105T165046Z-5b13a336\\artifacts\\oracle\\full-layout-array-rule-padding.png",
+      "sha256": "d70a4365ce1c987d6dcbb5cec543c11cf15dd5465534a59359574a522579ad7d",
+      "size": [
+        117,
+        74
+      ]
+    },
+    {
+      "id": "full-layout-array-rule-padding",
+      "kind": "standalone-cpu",
+      "path": "test-runs\\MATH-FULL-batch-20261105T165046Z-5b13a336\\artifacts\\standalone-cpu\\full-layout-array-rule-padding.png",
+      "sha256": "e466ece851c1f546d974fb56d1137638dc5c11158992ac97bbfaaacf3f11f0e6",
+      "size": [
+        110,
+        68
+      ]
+    },
+    {
+      "id": "full-layout-moustache-stacks",
+      "kind": "oracle",
+      "path": "test-runs\\MATH-FULL-batch-20261105T165046Z-5b13a336\\artifacts\\oracle\\full-layout-moustache-stacks.png",
+      "sha256": "1e6da0df4c28dd93974caf4bdb9115cf7b0468e0b92756bad523065e6bdc131e",
+      "size": [
+        78,
+        96
+      ]
+    },
+    {
+      "id": "full-layout-moustache-stacks",
+      "kind": "standalone-cpu",
+      "path": "test-runs\\MATH-FULL-batch-20261105T165046Z-5b13a336\\artifacts\\standalone-cpu\\full-layout-moustache-stacks.png",
+      "sha256": "040c06e33f0750fbeeb3532b944be014980632c5b3f7368f2fc5930920df851e",
+      "size": [
+        73,
+        70
+      ]
+    },
+    {
+      "id": "full-layout-overbrace-both-scripts",
+      "kind": "oracle",
+      "path": "test-runs\\MATH-FULL-batch-20261105T165046Z-5b13a336\\artifacts\\oracle\\full-layout-overbrace-both-scripts.png",
+      "sha256": "2d100ac533b8af5c4b5ff4ca19e1196030b25b8104594aae4daf334e3d4400ed",
+      "size": [
+        85,
+        62
+      ]
+    },
+    {
+      "id": "full-layout-overbrace-both-scripts",
+      "kind": "standalone-cpu",
+      "path": "test-runs\\MATH-FULL-batch-20261105T165046Z-5b13a336\\artifacts\\standalone-cpu\\full-layout-overbrace-both-scripts.png",
+      "sha256": "2a1c44ccc1b8d74a873ca3cda6d0473d43f481c372b7351f2608898a2b1c37dd",
+      "size": [
+        81,
+        51
+      ]
+    },
+    {
+      "id": "full-layout-underbrace-both-source-quirk",
+      "kind": "oracle",
+      "path": "test-runs\\MATH-FULL-batch-20261105T165046Z-5b13a336\\artifacts\\oracle\\full-layout-underbrace-both-source-quirk.png",
+      "sha256": "91b69216818d9503347cd02f13dcb7a46b2c1ea786276dd4c6def56057a8bcd3",
+      "size": [
+        73,
+        71
+      ]
+    },
+    {
+      "id": "full-layout-underbrace-both-source-quirk",
+      "kind": "standalone-cpu",
+      "path": "test-runs\\MATH-FULL-batch-20261105T165046Z-5b13a336\\artifacts\\standalone-cpu\\full-layout-underbrace-both-source-quirk.png",
+      "sha256": "6c84d609f09e053a5b69fdfb7edcdfd8620fd1804fdbb2a45ec52641d7219e24",
+      "size": [
+        68,
+        57
+      ]
+    },
+    {
+      "id": "full-layout-inline-softbreak",
+      "kind": "oracle",
+      "path": "test-runs\\MATH-FULL-batch-20261105T165046Z-5b13a336\\artifacts\\oracle\\full-layout-inline-softbreak.png",
+      "sha256": "60ae73f007522acf936b457f5412c5d02bb9ea6fdeb05a0cfea3bc61d14ca1c7",
+      "size": [
+        84,
+        149
+      ]
+    },
+    {
+      "id": "full-layout-inline-softbreak",
+      "kind": "standalone-cpu",
+      "path": "test-runs\\MATH-FULL-batch-20261105T165046Z-5b13a336\\artifacts\\standalone-cpu\\full-layout-inline-softbreak.png",
+      "sha256": "3803a3992204773068f49e5ec308d0038310b271e5bbdc3757c9ff2053e7c36c",
+      "size": [
+        80,
+        133
+      ]
+    },
+    {
+      "id": "upstream-DashesAndQuotes",
+      "kind": "oracle",
+      "path": "test-runs\\MATH-FULL-batch-20261105T165046Z-5b13a336\\artifacts\\oracle\\upstream-DashesAndQuotes.png",
+      "sha256": "d6e7d739e41a3f2d46a141cfdf4ba521eea40cf671da81979b9c9c0fec33ff4a",
+      "size": [
+        359,
+        127
+      ]
+    },
+    {
+      "id": "upstream-DashesAndQuotes",
+      "kind": "standalone-cpu",
+      "path": "test-runs\\MATH-FULL-batch-20261105T165046Z-5b13a336\\artifacts\\standalone-cpu\\upstream-DashesAndQuotes.png",
+      "sha256": "a9bef0b26e2765e1675b8336a243b2504ae2b4a779fb273f40542f7019e000f8",
+      "size": [
+        355,
+        121
+      ]
+    },
+    {
+      "id": "upstream-Verb",
+      "kind": "oracle",
+      "path": "test-runs\\MATH-FULL-batch-20261105T165046Z-5b13a336\\artifacts\\oracle\\upstream-Verb.png",
+      "sha256": "6ad8268702adfe13c8a8b010a4486f9ae060dcf1a85cd1914f875f1c5723f455",
+      "size": [
+        338,
+        194
+      ]
+    },
+    {
+      "id": "upstream-Verb",
+      "kind": "standalone-cpu",
+      "path": "test-runs\\MATH-FULL-batch-20261105T165046Z-5b13a336\\artifacts\\standalone-cpu\\upstream-Verb.png",
+      "sha256": "9223baff03a8450a4d518dbea15bd49c8ad6d7e02d093416aeff595111330301",
+      "size": [
+        334,
+        188
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "cases": [
+        "full-layout-cd-cycle",
+        "full-layout-cd-fraction-label",
+        "full-layout-cd-long-labels"
+      ],
+      "conclusion": "Both A/B retain every object, arrow head/direction and label. Fraction label remains truly two-dimensional. Long label fits its arrow. Native export has more bottom whitespace; no clipping or loss."
+    },
+    {
+      "cases": [
+        "full-layout-tag-right",
+        "full-layout-row-auto-manual-notag",
+        "full-layout-row-counter-offset"
+      ],
+      "conclusion": "Formula/tag separation and row alignment match. Manual Q, suppressed middle-row number, automatic 1 and offset numbers 4/5 are all visible."
+    },
+    {
+      "cases": [
+        "full-layout-tag-leqno-fleqn"
+      ],
+      "conclusion": "A and B both visibly overlap the tiny numeric body and left tag because their source positions coincide. This is retained source behavior, not a newly hidden native defect."
+    },
+    {
+      "cases": [
+        "full-layout-array-dashed-rules",
+        "full-layout-array-rule-padding"
+      ],
+      "conclusion": "All cell text and dashed/solid separators present, with legible gap to rules. Native antialiasing differs; no cell/rule loss or cropping."
+    },
+    {
+      "cases": [
+        "full-layout-moustache-stacks"
+      ],
+      "conclusion": "Both delimiter stacks enclose the complete nested fraction and point in the same source orientations. Native baseline/export whitespace differs; no detached stack segment or clipped formula."
+    },
+    {
+      "cases": [
+        "full-layout-overbrace-both-scripts",
+        "full-layout-underbrace-both-source-quirk"
+      ],
+      "conclusion": "Overbrace keeps right n/m scripts; underbrace shows n below and omits m just as A. Brace silhouettes and placements are readable."
+    },
+    {
+      "cases": [
+        "full-layout-inline-softbreak"
+      ],
+      "conclusion": "Both A/B break after a+, b+, c+, d+ and keep e+f together. All five lines visible with clear spacing."
+    },
+    {
+      "cases": [
+        "upstream-DashesAndQuotes",
+        "upstream-Verb"
+      ],
+      "conclusion": "Typewriter quotes/dashes and verb syntax, explicit space glyphs, literal markup, script-size rows and curly single quotes remain visible. No system-font substitute appearance, dropped glyph, wrong dash ligature or clipping observed."
+    }
+  ],
+  "newSubstantiveDefects": [],
+  "visibleDifferences": [
+    "Native monochrome antialiasing differs from official browser subpixel text.",
+    "CD/native whitespace and export bounding extents differ; all selected mathematical content remains visible."
+  ],
+  "sourceBehaviorNote": "fleqn/leqno overlapping numeric body/tag and underbrace dual-script omission are visible in A as well as B, preserved by source-specific contracts.",
+  "globalGate": "Root owns final three-backend matrix and complete acceptance; this receipt concerns selected actual CPU PNGs only.",
+  "candidateSourceTreeSha256": "b658ff6849105e7b35932c9f17219d8662f24d323514fc8d25279ad2d102aa17",
+  "sourceInherited": [
+    {
+      "id": "full-layout-tag-leqno-fleqn",
+      "classification": "SOURCE_INHERITED",
+      "tex": "1\\tag*{2}",
+      "options": {
+        "font_size": 20,
+        "display_mode": true,
+        "content_width": 200,
+        "fleqn": true,
+        "leqno": true
+      },
+      "officialPng": {
+        "path": "test-runs/MATH-FULL-batch-20261105T165046Z-5b13a336/artifacts/oracle/full-layout-tag-leqno-fleqn.png",
+        "width": 224,
+        "height": 48
+      },
+      "nativePng": {
+        "path": "test-runs/MATH-FULL-batch-20261105T165046Z-5b13a336/artifacts/standalone-cpu/full-layout-tag-leqno-fleqn.png",
+        "width": 220,
+        "height": 34
+      },
+      "relationScreenshot": "test-runs/MATH-FULL-batch-20261105T165439Z-31f3d643/artifacts/contact/sheet-2.png",
+      "directOriginalPngsViewed": true,
+      "officialObservedRectangles": [
+        {
+          "text": "1",
+          "left": 552,
+          "top": 512,
+          "right": 562,
+          "bottom": 535
+        },
+        {
+          "text": "2",
+          "left": 552,
+          "top": 512,
+          "right": 562,
+          "bottom": 535
+        }
+      ],
+      "hostOrigin": [
+        512,
+        512
+      ],
+      "nativeLogicalBox": {
+        "width": 200,
+        "height": 12.8888,
+        "depth": 0
+      },
+      "nativeGlyphs": [
+        {
+          "text": "1",
+          "x": 40,
+          "y": 0,
+          "size": 20
+        },
+        {
+          "text": "2",
+          "x": 40,
+          "y": 0,
+          "size": 20
+        }
+      ],
+      "sourceProof": {
+        "stylesheet": ".local/katex-0.18.11/package/src/styles/katex.scss:654-675, positioned .katex-html; leqno tag left:0; fleqn padding-left:2em",
+        "hostWiring": "tools/capture_full_visual.cjs:25-27 sets font_size20 and equation_counter0; lines39-42 sets element width200 from options.content_width and passes displayMode/fleqn/leqno via oracleOptions to fixed katex.renderToString",
+        "positionDerivation": "Source host x512 + fleqn padding2*20 =552 for both normal body flow and tag left0 relative to positioned content. Native body/tag baseline x40 agrees.",
+        "counterAssessment": "Explicit starred tag has source autoTagCount0, text2 and no automatic number; therefore no missing equation_counter mapping is involved.",
+        "widthAssessment": "Both use real200px host width. The source text rectangles are exactly coincident; increasing width does not change fleqn left0/left-tag coincidence. Native is not forcing overlap based on a missing hostwidth."
+      },
+      "conclusion": "Both original PNGs actually show overlapped 1/2. It is a source CSS interaction, not a native-only regression or an unprojected host width/counter."
+    }
+  ]
+}

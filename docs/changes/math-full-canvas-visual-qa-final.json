@@ -1,0 +1,751 @@
+{
+  "schema": "math-full-canvas-visual-qa/v1",
+  "status": "FOLLOWUP_REQUIRED",
+  "candidateRun": "MATH-FULL-batch-20261105T165338Z-2dc25582",
+  "unitRun": "MATH-FULL-batch-20261105T165046Z-5b13a336",
+  "mathSourceSHA256": "b658ff6849105e7b35932c9f17219d8662f24d323514fc8d25279ad2d102aa17",
+  "mermaidSourceSHA256": "6094d419ff3c50d2c64fdd00051af2be087b25a7a239cb1dae0e9e09209fdff1",
+  "qaContactRuns": [
+    "MATH-FULL-batch-20261105T165537Z-d50a6770",
+    "MATH-FULL-batch-20261105T170154Z-0fbea1d0"
+  ],
+  "actuallyViewedOriginalImages": 56,
+  "actualViewMethod": "Actual functions.view_image of8 new-run contact sheets, composited on white and common scale per pair; no source PNG overwritten",
+  "rejectedFindings": [
+    {
+      "id": "css-synthetic-bold-italic",
+      "cases": [
+        "full-layout-css-digit-axes",
+        "html-font-axes"
+      ],
+      "observation": "Official numeral1 visibly bold italic; native numeral1 visibly bold upright. Descriptor italic700 and an equivalent native family-matcher reference did not prove actual source font style.",
+      "source": "katex.scss font axes; fonts.scss SansSerif has Italic andBold but noBoldItalic. Source style-first matching retains italic face and synthesizesbold.",
+      "requiredControl": "Independent physicalItalicTTF contour/slant positive, uprightBold negative, italicRegular insufficient-weight negative; no samefamilymatcher circular reference"
+    },
+    {
+      "id": "svg-concrete-viewport",
+      "cases": [
+        "image-totalheight"
+      ],
+      "observation": "Source SVG content retains natural2:1 aspect inside40x28 image viewport with letterboxing; native content is stretched40x28.",
+      "source": "includegraphics.ts sets CSS totalheight/width; source SVG viewBox default preserveAspectRatio xMidYMidmeet",
+      "requiredControl": "SVG defaultmeet/none andalign variants with actualpaintbbox+emptyletterbox; rasterimage may legitimatelystretch"
+    },
+    {
+      "id": "html-inline-cell-padding-baseline",
+      "cases": [
+        "html-paint",
+        "html-opacity"
+      ],
+      "observation": "Source blueborderbbox[12,4,51,67] vs native[10,10,49,43]; source redxbbox[22,31,41,48] vs native[20,25,39,43]. Native x touches/overruns bottom border; source font-cell and baseline underpadding are missing.",
+      "source": "html.ts enclosing span, inherited.katex fontcell; native apply_html was based on glyphink and duplicatedtop padding inbodyY",
+      "requiredControl": "Native publicfontBoundingBox fontcell, baseline-preservingpadding+border, actualRGBA inside/outside probes; B owns layout repair"
+    }
+  ],
+  "otherStandaloneObservations": {
+    "pmb-native-blur": "F retains visible slant and increased weight, no clipping observed.",
+    "full-layout-display-unbreakable-overflow": "All123456789 digits, fullbar anddenominator1 visible beyondlogicalcontainer.",
+    "overflow-lap": "All8 M glyphs visible; no leftcrop.",
+    "overflow-smash": "Numerator1,bar,denominator2 fullyvisible despitezero logicalheight.",
+    "upstream-Phantom": "Hidden contents remain absent, gaps and visibleblue2 retained, sourcehierarchy preserved.",
+    "full-overflow-container": "Fraction,hugeX,operators androoty visible with no physicalcrop.",
+    "full-emoji-source/full-emoji-text": "Actualyellowhand present inboth source/native, no tofu or blank/crop.",
+    "upstream-Reflectbox": "Mirrored letters/fractions/scripts all present andproperlyreflected.",
+    "upstream-Raisebox": "Raised/lowered contents androot/fractionhierarchies remain visible andcontained."
+  },
+  "MermaidObservations": {
+    "casesViewed": [
+      "math-flow-basic",
+      "math-flow-edge",
+      "math-flow-group",
+      "math-flow-literal",
+      "math-flow-matrix",
+      "math-flow-metadata",
+      "math-flow-mixed",
+      "math-flow-radical"
+    ],
+    "crossProfilesViewed": [
+      "auto/GPU math-flow-mixed",
+      "auto/GPU math-flow-group",
+      "auto/GPU math-flow-matrix"
+    ],
+    "nativeContentResult": "Allmathglyphs/fractions/scripts/matrix/root/index/edge-label/group-title/relations readable; no extra nativeviewportclipping orlostrelations inthese8cases.",
+    "knownSourceHostDifferences": [
+      {
+        "case": "math-flow-metadata",
+        "difference": "Source corruptsliteralTeX/newline; nativecorrectnu<y."
+      },
+      {
+        "case": "math-flow-group",
+        "difference": "SourceMathML showsitalicGroup while nativeTeXmathbf isbold upright."
+      },
+      {
+        "case": "math-flow-mixed",
+        "difference": "Sourceflexhost visiblyjoins surroundingwords while nativepreserves intendedspaces."
+      }
+    ]
+  },
+  "sourceOrTestsModifiedDuringQA": false,
+  "closedRunsModified": false,
+  "images": [
+    {
+      "path": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-batch-20261105T165046Z-5b13a336\\artifacts\\oracle\\image-totalheight.png",
+      "sha256": "bc5d9440b2b021e405ba5867c27b1bf0fb2dda307977f8bf90d035840d7ef962",
+      "id": "image-totalheight",
+      "label": "Official",
+      "group": "standalone",
+      "originalSize": [
+        64,
+        52
+      ]
+    },
+    {
+      "path": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-batch-20261105T165046Z-5b13a336\\artifacts\\standalone-cpu\\image-totalheight.png",
+      "sha256": "227683aa7d895fc1e03dd22ed6f862fd1f80c7351fda43c16f99c89e3ff615b1",
+      "id": "image-totalheight",
+      "label": "CPU",
+      "group": "standalone",
+      "originalSize": [
+        60,
+        48
+      ]
+    },
+    {
+      "path": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-batch-20261105T165046Z-5b13a336\\artifacts\\oracle\\image-datauri.png",
+      "sha256": "8cdeeb5372305dec402ea01332ce6635604d573d319da9bddb7d3fdd88bbdb3e",
+      "id": "image-datauri",
+      "label": "Official",
+      "group": "standalone",
+      "originalSize": [
+        64,
+        44
+      ]
+    },
+    {
+      "path": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-batch-20261105T165046Z-5b13a336\\artifacts\\standalone-cpu\\image-datauri.png",
+      "sha256": "8fec53806861e0687156ce33a7be5e55bde2d98371c80629404e566e0f31a21d",
+      "id": "image-datauri",
+      "label": "CPU",
+      "group": "standalone",
+      "originalSize": [
+        60,
+        40
+      ]
+    },
+    {
+      "path": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-batch-20261105T165046Z-5b13a336\\artifacts\\oracle\\html-paint.png",
+      "sha256": "fa8cf8daa2e4aed53a7080da39e0c36600135a7ac782f185c6bc5badf5db4a13",
+      "id": "html-paint",
+      "label": "Official",
+      "group": "standalone",
+      "originalSize": [
+        63,
+        74
+      ]
+    },
+    {
+      "path": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-batch-20261105T165046Z-5b13a336\\artifacts\\standalone-cpu\\html-paint.png",
+      "sha256": "bd99f574f0bfddec88f51b1bd6d32e5096f9f4e1b43972565e9ffce370b386dc",
+      "id": "html-paint",
+      "label": "CPU",
+      "group": "standalone",
+      "originalSize": [
+        59,
+        54
+      ]
+    },
+    {
+      "path": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-batch-20261105T165046Z-5b13a336\\artifacts\\oracle\\html-opacity.png",
+      "sha256": "33320e31bdbc4dd43359becc8af9045f7ed62a5516d0430a497625758e57ba69",
+      "id": "html-opacity",
+      "label": "Official",
+      "group": "standalone",
+      "originalSize": [
+        47,
+        72
+      ]
+    },
+    {
+      "path": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-batch-20261105T165046Z-5b13a336\\artifacts\\standalone-cpu\\html-opacity.png",
+      "sha256": "774cf7c0475582c46b92aebece12adaa5e7f716e1f0ed755bec8bf28396f6426",
+      "id": "html-opacity",
+      "label": "CPU",
+      "group": "standalone",
+      "originalSize": [
+        43,
+        39
+      ]
+    },
+    {
+      "path": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-batch-20261105T165046Z-5b13a336\\artifacts\\oracle\\full-layout-css-digit-axes.png",
+      "sha256": "6eba8eaa3ac3658ca1c5f2f8fcdf52d0d663d67f05e29eee6bab37d86a39aa14",
+      "id": "full-layout-css-digit-axes",
+      "label": "Official",
+      "group": "standalone",
+      "originalSize": [
+        34,
+        48
+      ]
+    },
+    {
+      "path": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-batch-20261105T165046Z-5b13a336\\artifacts\\standalone-cpu\\full-layout-css-digit-axes.png",
+      "sha256": "0fd917202dd0fe76c24cb949d8ccd509d97374bb291f26dc26379657e67c5f65",
+      "id": "full-layout-css-digit-axes",
+      "label": "CPU",
+      "group": "standalone",
+      "originalSize": [
+        31,
+        35
+      ]
+    },
+    {
+      "path": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-batch-20261105T165046Z-5b13a336\\artifacts\\oracle\\full-layout-css-mathnormal-axes.png",
+      "sha256": "b98a8f3a0bf0e5decd13a26e0ca2f7ff01a830d4d901b4e5651a54d2824f124c",
+      "id": "full-layout-css-mathnormal-axes",
+      "label": "Official",
+      "group": "standalone",
+      "originalSize": [
+        38,
+        48
+      ]
+    },
+    {
+      "path": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-batch-20261105T165046Z-5b13a336\\artifacts\\standalone-cpu\\full-layout-css-mathnormal-axes.png",
+      "sha256": "f15d6c313668ab8965a296a2fc1eef4818f3433cee8b56e4808dadeba3c89ae4",
+      "id": "full-layout-css-mathnormal-axes",
+      "label": "CPU",
+      "group": "standalone",
+      "originalSize": [
+        34,
+        30
+      ]
+    },
+    {
+      "path": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-batch-20261105T165046Z-5b13a336\\artifacts\\oracle\\html-font-axes.png",
+      "sha256": "92c445443d78d93e40f1845726bc816115697be75d4e4ff2cfa81b3267e834f5",
+      "id": "html-font-axes",
+      "label": "Official",
+      "group": "standalone",
+      "originalSize": [
+        124,
+        72
+      ]
+    },
+    {
+      "path": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-batch-20261105T165046Z-5b13a336\\artifacts\\standalone-cpu\\html-font-axes.png",
+      "sha256": "401fb1cfae3c4d64a9c0f63ca627fc47e3623270916800c67503b432fc04bd2b",
+      "id": "html-font-axes",
+      "label": "CPU",
+      "group": "standalone",
+      "originalSize": [
+        125,
+        49
+      ]
+    },
+    {
+      "path": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-batch-20261105T165046Z-5b13a336\\artifacts\\oracle\\pmb-native-blur.png",
+      "sha256": "71f036aa12a1707b87d483c879559fbce3f66df05a4cf77a9436f90c70161ab0",
+      "id": "pmb-native-blur",
+      "label": "Official",
+      "group": "standalone",
+      "originalSize": [
+        56,
+        72
+      ]
+    },
+    {
+      "path": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-batch-20261105T165046Z-5b13a336\\artifacts\\standalone-cpu\\pmb-native-blur.png",
+      "sha256": "dd361f59aa61580bf39cff7cf49441e960bd7483d86f9dbb4f0975bcfef73ad6",
+      "id": "pmb-native-blur",
+      "label": "CPU",
+      "group": "standalone",
+      "originalSize": [
+        52,
+        48
+      ]
+    },
+    {
+      "path": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-batch-20261105T165046Z-5b13a336\\artifacts\\oracle\\full-layout-display-unbreakable-overflow.png",
+      "sha256": "71998a18c4030cb7b3e6f320867cc69820a596f08a929a4573308caf62304d6d",
+      "id": "full-layout-display-unbreakable-overflow",
+      "label": "Official",
+      "group": "standalone",
+      "originalSize": [
+        118,
+        76
+      ]
+    },
+    {
+      "path": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-batch-20261105T165046Z-5b13a336\\artifacts\\standalone-cpu\\full-layout-display-unbreakable-overflow.png",
+      "sha256": "ce2a7a9f5052ac5f8da47a9b2c293f60ac41e579eb5b27ecd405f26ddfc9d229",
+      "id": "full-layout-display-unbreakable-overflow",
+      "label": "CPU",
+      "group": "standalone",
+      "originalSize": [
+        110,
+        62
+      ]
+    },
+    {
+      "path": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-batch-20261105T165046Z-5b13a336\\artifacts\\oracle\\overflow-lap.png",
+      "sha256": "126917fe8f8ba87fe7a4a9871e4bc6c17bf249fd0961343476dd0dbd0291286a",
+      "id": "overflow-lap",
+      "label": "Official",
+      "group": "standalone",
+      "originalSize": [
+        318,
+        71
+      ]
+    },
+    {
+      "path": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-batch-20261105T165046Z-5b13a336\\artifacts\\standalone-cpu\\overflow-lap.png",
+      "sha256": "9b8bcc9310ebc7ec6fe62886824b57b2303392731a39c7313ea76e6535d04df3",
+      "id": "overflow-lap",
+      "label": "CPU",
+      "group": "standalone",
+      "originalSize": [
+        313,
+        48
+      ]
+    },
+    {
+      "path": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-batch-20261105T165046Z-5b13a336\\artifacts\\oracle\\overflow-smash.png",
+      "sha256": "19d60f638951c3733511cdab0daf35033d62cf02be195f95b8a73d989dd52237",
+      "id": "overflow-smash",
+      "label": "Official",
+      "group": "standalone",
+      "originalSize": [
+        48,
+        87
+      ]
+    },
+    {
+      "path": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-batch-20261105T165046Z-5b13a336\\artifacts\\standalone-cpu\\overflow-smash.png",
+      "sha256": "291ae98e3285c5f8b8d35c2d2033735d33b83bb4eb1d91b33c9a7e5fd99bb626",
+      "id": "overflow-smash",
+      "label": "CPU",
+      "group": "standalone",
+      "originalSize": [
+        44,
+        69
+      ]
+    },
+    {
+      "path": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-batch-20261105T165046Z-5b13a336\\artifacts\\oracle\\upstream-Phantom.png",
+      "sha256": "10297dc8cb9234b92e551eed1218d72a11c8be2438fe53f4d04d09f918d51090",
+      "id": "upstream-Phantom",
+      "label": "Official",
+      "group": "standalone",
+      "originalSize": [
+        339,
+        161
+      ]
+    },
+    {
+      "path": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-batch-20261105T165046Z-5b13a336\\artifacts\\standalone-cpu\\upstream-Phantom.png",
+      "sha256": "6bd13439dc43f83fbddb1742af25212617adb558a6c1862d76ae073d99bbf38a",
+      "id": "upstream-Phantom",
+      "label": "CPU",
+      "group": "standalone",
+      "originalSize": [
+        335,
+        153
+      ]
+    },
+    {
+      "path": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-batch-20261105T165046Z-5b13a336\\artifacts\\oracle\\full-overflow-container.png",
+      "sha256": "322e3e43a7acab91ab60b4a50cb7217b5ee0c9110af55bccace12cd78d06dd92",
+      "id": "full-overflow-container",
+      "label": "Official",
+      "group": "standalone",
+      "originalSize": [
+        260,
+        100
+      ]
+    },
+    {
+      "path": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-batch-20261105T165046Z-5b13a336\\artifacts\\standalone-cpu\\full-overflow-container.png",
+      "sha256": "7bdee8b2f80786d8d57ece832fedc680816d140d52026c6e743bedb4af598d56",
+      "id": "full-overflow-container",
+      "label": "CPU",
+      "group": "standalone",
+      "originalSize": [
+        255,
+        88
+      ]
+    },
+    {
+      "path": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-batch-20261105T165046Z-5b13a336\\artifacts\\oracle\\full-emoji-source.png",
+      "sha256": "363de5402c536adb220e50c56d35d8d011435ad0ddf93a7e8d6962dc665a4f6f",
+      "id": "full-emoji-source",
+      "label": "Official",
+      "group": "standalone",
+      "originalSize": [
+        63,
+        58
+      ]
+    },
+    {
+      "path": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-batch-20261105T165046Z-5b13a336\\artifacts\\standalone-cpu\\full-emoji-source.png",
+      "sha256": "33cdf70da7fd0e6f1f5927ffd7610949531e9461b46d0eef2aafa61e9a568ecd",
+      "id": "full-emoji-source",
+      "label": "CPU",
+      "group": "standalone",
+      "originalSize": [
+        59,
+        49
+      ]
+    },
+    {
+      "path": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-batch-20261105T165046Z-5b13a336\\artifacts\\oracle\\full-emoji-text.png",
+      "sha256": "363de5402c536adb220e50c56d35d8d011435ad0ddf93a7e8d6962dc665a4f6f",
+      "id": "full-emoji-text",
+      "label": "Official",
+      "group": "standalone",
+      "originalSize": [
+        63,
+        58
+      ]
+    },
+    {
+      "path": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-batch-20261105T165046Z-5b13a336\\artifacts\\standalone-cpu\\full-emoji-text.png",
+      "sha256": "33cdf70da7fd0e6f1f5927ffd7610949531e9461b46d0eef2aafa61e9a568ecd",
+      "id": "full-emoji-text",
+      "label": "CPU",
+      "group": "standalone",
+      "originalSize": [
+        59,
+        49
+      ]
+    },
+    {
+      "path": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-batch-20261105T165338Z-2dc25582\\artifacts\\integration-oracle\\math-flow-basic.png",
+      "sha256": "318e1c56f715672777d392a5b99fc505f1175d5d44489c714479e25386f8f190",
+      "id": "math-flow-basic",
+      "label": "Official",
+      "group": "integration",
+      "originalSize": [
+        360,
+        70
+      ]
+    },
+    {
+      "path": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-batch-20261105T165338Z-2dc25582\\artifacts\\integration-cpu\\math-flow-basic.png",
+      "sha256": "03ed2ede0b08cceed3e3bdc37d1edc73e44e60df9971a72e32e4e22d10d644dc",
+      "id": "math-flow-basic",
+      "label": "CPU",
+      "group": "integration",
+      "originalSize": [
+        368,
+        85
+      ]
+    },
+    {
+      "path": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-batch-20261105T165338Z-2dc25582\\artifacts\\integration-oracle\\math-flow-edge.png",
+      "sha256": "9be06d7dbcafd5b0ebdea491e79bc095c9a2d4c3bf709fb28e874a6ce0eed148",
+      "id": "math-flow-edge",
+      "label": "Official",
+      "group": "integration",
+      "originalSize": [
+        437,
+        61
+      ]
+    },
+    {
+      "path": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-batch-20261105T165338Z-2dc25582\\artifacts\\integration-cpu\\math-flow-edge.png",
+      "sha256": "339aee0344a87a8421273e9c23c22efe8eabf5160f657c94910147dd4590558d",
+      "id": "math-flow-edge",
+      "label": "CPU",
+      "group": "integration",
+      "originalSize": [
+        445,
+        72
+      ]
+    },
+    {
+      "path": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-batch-20261105T165338Z-2dc25582\\artifacts\\integration-oracle\\math-flow-group.png",
+      "sha256": "4909923bd762e2f4b31708c5be16f22ab0d944679329c921b5a5ed92219243e2",
+      "id": "math-flow-group",
+      "label": "Official",
+      "group": "integration",
+      "originalSize": [
+        216,
+        172
+      ]
+    },
+    {
+      "path": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-batch-20261105T165338Z-2dc25582\\artifacts\\integration-cpu\\math-flow-group.png",
+      "sha256": "03a057ed9f68bd327129d9cda50b9eac50b900b37495d63bacb34fe802def38a",
+      "id": "math-flow-group",
+      "label": "CPU",
+      "group": "integration",
+      "originalSize": [
+        223,
+        211
+      ]
+    },
+    {
+      "path": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-batch-20261105T165338Z-2dc25582\\artifacts\\integration-oracle\\math-flow-literal.png",
+      "sha256": "d871601f95f9b3b968154e9e69dc479b4ccf43b96fb4311a262205e57111e93c",
+      "id": "math-flow-literal",
+      "label": "Official",
+      "group": "integration",
+      "originalSize": [
+        168,
+        56
+      ]
+    },
+    {
+      "path": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-batch-20261105T165338Z-2dc25582\\artifacts\\integration-cpu\\math-flow-literal.png",
+      "sha256": "d03afb559f2d304485d6ad4a4ee4038a158f528b64c92b695b685afdb0774358",
+      "id": "math-flow-literal",
+      "label": "CPU",
+      "group": "integration",
+      "originalSize": [
+        176,
+        64
+      ]
+    },
+    {
+      "path": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-batch-20261105T165338Z-2dc25582\\artifacts\\integration-oracle\\math-flow-matrix.png",
+      "sha256": "fa0e303d917c5547ed4d3cb9c78895e99eccd5036e721d16242dbe5c1680543b",
+      "id": "math-flow-matrix",
+      "label": "Official",
+      "group": "integration",
+      "originalSize": [
+        168,
+        161
+      ]
+    },
+    {
+      "path": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-batch-20261105T165338Z-2dc25582\\artifacts\\integration-cpu\\math-flow-matrix.png",
+      "sha256": "fbd0c1cb5da2d080c6052d76934a09b31616489593868386e56508a672c1c3e8",
+      "id": "math-flow-matrix",
+      "label": "CPU",
+      "group": "integration",
+      "originalSize": [
+        176,
+        174
+      ]
+    },
+    {
+      "path": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-batch-20261105T165338Z-2dc25582\\artifacts\\integration-oracle\\math-flow-metadata.png",
+      "sha256": "8494026974afe6b3453f94bbe4ec0b8732d21c3932dbf996eefead75702f1282",
+      "id": "math-flow-metadata",
+      "label": "Official",
+      "group": "integration",
+      "originalSize": [
+        168,
+        82
+      ]
+    },
+    {
+      "path": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-batch-20261105T165338Z-2dc25582\\artifacts\\integration-cpu\\math-flow-metadata.png",
+      "sha256": "b354c25e6e208f406f40c48d4fb6a5fc9109113374428a0fdf126ba0730cc2f7",
+      "id": "math-flow-metadata",
+      "label": "CPU",
+      "group": "integration",
+      "originalSize": [
+        176,
+        69
+      ]
+    },
+    {
+      "path": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-batch-20261105T165338Z-2dc25582\\artifacts\\integration-oracle\\math-flow-mixed.png",
+      "sha256": "7d0b813a60f42eb97a66134d5b614f89ebc005c40b146c673a8c77cff7be1a83",
+      "id": "math-flow-mixed",
+      "label": "Official",
+      "group": "integration",
+      "originalSize": [
+        168,
+        146
+      ]
+    },
+    {
+      "path": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-batch-20261105T165338Z-2dc25582\\artifacts\\integration-cpu\\math-flow-mixed.png",
+      "sha256": "35c138a4831751a2fb0968a1db1a45915dc290338ef259d4392495e6c884844c",
+      "id": "math-flow-mixed",
+      "label": "CPU",
+      "group": "integration",
+      "originalSize": [
+        176,
+        154
+      ]
+    },
+    {
+      "path": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-batch-20261105T165338Z-2dc25582\\artifacts\\integration-oracle\\math-flow-radical.png",
+      "sha256": "9298b1ca98b5de1dd5506fe2002da87faf15e55cea6bece42c912d1bb5c6aba0",
+      "id": "math-flow-radical",
+      "label": "Official",
+      "group": "integration",
+      "originalSize": [
+        168,
+        88
+      ]
+    },
+    {
+      "path": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-batch-20261105T165338Z-2dc25582\\artifacts\\integration-cpu\\math-flow-radical.png",
+      "sha256": "1d094df655a910ad33b2991b2d78c91cacb70cb936f1ad261189e5529ec2b6c7",
+      "id": "math-flow-radical",
+      "label": "CPU",
+      "group": "integration",
+      "originalSize": [
+        176,
+        89
+      ]
+    },
+    {
+      "path": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-batch-20261105T165338Z-2dc25582\\artifacts\\integration-auto\\math-flow-mixed.png",
+      "sha256": "1ce19e2d1ca1efe33d132e85dd121a1f641b9bb57446e286cb002ce6350c9c0e",
+      "id": "math-flow-mixed",
+      "label": "auto",
+      "group": "crossprofile",
+      "originalSize": [
+        176,
+        154
+      ]
+    },
+    {
+      "path": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-batch-20261105T165338Z-2dc25582\\artifacts\\integration-gpu\\math-flow-mixed.png",
+      "sha256": "1ce19e2d1ca1efe33d132e85dd121a1f641b9bb57446e286cb002ce6350c9c0e",
+      "id": "math-flow-mixed",
+      "label": "GPU",
+      "group": "crossprofile",
+      "originalSize": [
+        176,
+        154
+      ]
+    },
+    {
+      "path": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-batch-20261105T165338Z-2dc25582\\artifacts\\integration-auto\\math-flow-group.png",
+      "sha256": "30f091940be3fe7d5558387acf85161bc33a9bad015617d296c2bc3c7d123d24",
+      "id": "math-flow-group",
+      "label": "auto",
+      "group": "crossprofile",
+      "originalSize": [
+        223,
+        211
+      ]
+    },
+    {
+      "path": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-batch-20261105T165338Z-2dc25582\\artifacts\\integration-gpu\\math-flow-group.png",
+      "sha256": "30f091940be3fe7d5558387acf85161bc33a9bad015617d296c2bc3c7d123d24",
+      "id": "math-flow-group",
+      "label": "GPU",
+      "group": "crossprofile",
+      "originalSize": [
+        223,
+        211
+      ]
+    },
+    {
+      "path": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-batch-20261105T165338Z-2dc25582\\artifacts\\integration-auto\\math-flow-matrix.png",
+      "sha256": "d3968af58292b5470e44466136b46dcfc70170838c2c6485779cb64037e748ef",
+      "id": "math-flow-matrix",
+      "label": "auto",
+      "group": "crossprofile",
+      "originalSize": [
+        176,
+        174
+      ]
+    },
+    {
+      "path": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-batch-20261105T165338Z-2dc25582\\artifacts\\integration-gpu\\math-flow-matrix.png",
+      "sha256": "d3968af58292b5470e44466136b46dcfc70170838c2c6485779cb64037e748ef",
+      "id": "math-flow-matrix",
+      "label": "GPU",
+      "group": "crossprofile",
+      "originalSize": [
+        176,
+        174
+      ]
+    },
+    {
+      "path": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-batch-20261105T165046Z-5b13a336\\artifacts\\oracle\\upstream-Reflectbox.png",
+      "sha256": "b133d8105b91e9ed1ef79ebe8753da81262e66b667a6ccfba6e3e9aa13cab519",
+      "id": "upstream-Reflectbox",
+      "label": "Official",
+      "group": "standalone",
+      "originalSize": [
+        215,
+        165
+      ]
+    },
+    {
+      "path": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-batch-20261105T165046Z-5b13a336\\artifacts\\standalone-cpu\\upstream-Reflectbox.png",
+      "sha256": "58fb11e544f893c1bcc4b2515aa909265fbecfb530a81feec7ea46a36020c106",
+      "id": "upstream-Reflectbox",
+      "label": "CPU",
+      "group": "standalone",
+      "originalSize": [
+        210,
+        156
+      ]
+    },
+    {
+      "path": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-batch-20261105T165046Z-5b13a336\\artifacts\\oracle\\upstream-Raisebox.png",
+      "sha256": "71ce3dcdb3aee51d2ee82bd4fa5f11221e242d1441cad53c4606bdccd01f33a7",
+      "id": "upstream-Raisebox",
+      "label": "Official",
+      "group": "standalone",
+      "originalSize": [
+        363,
+        212
+      ]
+    },
+    {
+      "path": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-batch-20261105T165046Z-5b13a336\\artifacts\\standalone-cpu\\upstream-Raisebox.png",
+      "sha256": "286074a036bc1f4beee5327ad1c1c3a4ee06d179dd7c021754b4bc509ffe6487",
+      "id": "upstream-Raisebox",
+      "label": "CPU",
+      "group": "standalone",
+      "originalSize": [
+        357,
+        200
+      ]
+    }
+  ],
+  "contactSheets": [
+    {
+      "path": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-batch-20261105T165537Z-d50a6770\\artifacts\\contacts\\crossprofile-1.png",
+      "sha256": "a89de4b8f0dc7ce33befe5cb85fd938af90963e343a1b97b658f8936a3a03c90",
+      "actuallyViewed": true
+    },
+    {
+      "path": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-batch-20261105T165537Z-d50a6770\\artifacts\\contacts\\integration-1.png",
+      "sha256": "7f20922c7bce48644525fc397d205e017b389db8cb6c61644a233552b1c19d15",
+      "actuallyViewed": true
+    },
+    {
+      "path": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-batch-20261105T165537Z-d50a6770\\artifacts\\contacts\\integration-2.png",
+      "sha256": "0738587b4ab235be57bf8afcd491539a8f595bf3a8cfad66ee774771b35b6030",
+      "actuallyViewed": true
+    },
+    {
+      "path": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-batch-20261105T165537Z-d50a6770\\artifacts\\contacts\\standalone-1.png",
+      "sha256": "a1fa23bdea9cc93c665c363faf7e774ec393d56bc8ce167a4dfb8f37d24cf65d",
+      "actuallyViewed": true
+    },
+    {
+      "path": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-batch-20261105T165537Z-d50a6770\\artifacts\\contacts\\standalone-2.png",
+      "sha256": "472107fd526d964222312701574f5c3881e5a705fccb65bdf27d5ec018749125",
+      "actuallyViewed": true
+    },
+    {
+      "path": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-batch-20261105T165537Z-d50a6770\\artifacts\\contacts\\standalone-3.png",
+      "sha256": "5a22a659ae375e1c21eee1e440c24598fb5c80e8b60446187a44195d8b1de2c3",
+      "actuallyViewed": true
+    },
+    {
+      "path": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-batch-20261105T165537Z-d50a6770\\artifacts\\contacts\\standalone-4.png",
+      "sha256": "4f8b48656d482a63353cbe36b48a317e700a1fe914ec6240e58274c51a65607d",
+      "actuallyViewed": true
+    },
+    {
+      "path": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-batch-20261105T170154Z-0fbea1d0\\artifacts\\contacts\\standalone-1.png",
+      "sha256": "899e8b3120b5cbb39c2ae986886766bd8e83747ba38a1a67d6fbacf59546e3b8",
+      "actuallyViewed": true
+    }
+  ],
+  "nextStage": "RootauthorizedP3repairs; thisoldcandidateisnotaccepted despiteautomatedPASS; futureacceptedQA mustuse anewfilenameandcandidate."
+}

@@ -1,0 +1,71 @@
+{
+  "schema": "py-katex-layout-font-axis-audit/v1",
+  "status": "SOURCE_CONTRACT_CORRECT_NATIVE_PAINT_FOLLOWUP",
+  "rejectedVisualCandidate": "test-runs/MATH-FULL-batch-20261105T165046Z-5b13a336",
+  "sourceVersion": "KaTeX0.18.11",
+  "caseIds": [
+    "full-layout-css-digit-axes",
+    "html-font-axes"
+  ],
+  "sourceProof": [
+    "styles/katex.scss81-180: mathnormal fixes Math+italic, mathrm fixes normal shape only, mathbf fixes Main+bold, regular digit inherits outer family/shape/weight",
+    "buildCommon.makeOrd preserves source ordinal font class priority; bundled SansSerif has Regular/Bold/Italic but no BoldItalic TTF"
+  ],
+  "observedDescriptors": [
+    {
+      "case": "full-layout-css-digit-axes",
+      "glyph": "1",
+      "font": "SansSerif-Italic",
+      "font_style": "italic",
+      "font_weight": "700",
+      "size": 20
+    },
+    {
+      "case": "html-font-axes",
+      "glyph": "1",
+      "font": "SansSerif-Italic",
+      "font_style": "italic",
+      "font_weight": "700",
+      "size": 40
+    }
+  ],
+  "assessment": "Layout descriptor correctly retains source SansSerif+italic+bold axes. Upright native pixels cannot be excused by descriptor correctness; Canvas font matching/synthesis must be fixed and independently verified. No layout product change was needed.",
+  "independentPixelControlRecommendation": [
+    "Compare actual native digit ROI against official A and/or immutable SansSerif-Italic TTF outline, never another draw through the same family matcher.",
+    "Require italic700 to differ from uprightBold700 by signed upper/lower silhouette slope and to retain source italic contour direction.",
+    "Require italic700 to differ in real ink weight from italic400; same shape aliases must not make both references self-confirm a broken matcher."
+  ],
+  "ownership": {
+    "B": "Read-only layout metric/descriptor audit, no source/retained-test changes",
+    "C": "Canvas actual fontmatching and standalone independent pixel negatives; layout_html image/paint geometry"
+  },
+  "temporaryDiagnosticTests": "Two descriptor-only methods ran under MATH-FULL-record-20261105T165931Z-0cbae727 before root clarified no low-value duplicate tests. Both removed; original test file restored byte-for-byte and run retained as diagnostic only. No additional method count claimed.",
+  "identities": [
+    {
+      "path": "src/py_katex/layout.py",
+      "sha256": "9b443c70f3760cf2805ccdd375eb01aae8d8f1eaa68f15ea293261cca822d9d6"
+    },
+    {
+      "path": "tests/test_full_layout.py",
+      "sha256": "925acb68ffbf2d67ec85eca0a6fc744d9d4c4bc6f90cd515b963b2d10c40611b"
+    }
+  ],
+  "sourceAndTestStopWriting": true,
+  "finalVerification": {
+    "status": "PASS_FULL_CORE_STATIC_LOCAL",
+    "summary": "references/full-verification-summary.json",
+    "jointSourceSHA256": {
+      "math": "334c412c34ef675dbc223405622c8d4e19eb56b1ff3700c251cb663d4afdd445",
+      "mermaid": "6094d419ff3c50d2c64fdd00051af2be087b25a7a239cb1dae0e9e09209fdff1"
+    },
+    "runs": {
+      "unit": "test-runs/MATH-FULL-batch-20261105T171602Z-0d9b6942",
+      "visual": "test-runs/MATH-FULL-batch-20261105T171857Z-5071cad7",
+      "legacy": "test-runs/MATH-FULL-batch-20261105T171629Z-8b5ef28e",
+      "report": "test-runs/MATH-FULL-batch-20261105T172308Z-e0e12af6",
+      "htmlQa": "test-runs/MATH-FULL-batch-20261105T172348Z-4daa587b",
+      "manual1": "test-runs/MATH-FULL-batch-20261105T171936Z-a5ca8881",
+      "manual2": "test-runs/MATH-FULL-batch-20261105T172008Z-7055e775"
+    }
+  }
+}

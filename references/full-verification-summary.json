@@ -1,0 +1,276 @@
+{
+  "status": "PASS_FULL_CORE_STATIC_LOCAL",
+  "tests": {
+    "total": 973,
+    "groups": {
+      "math-parser": 67,
+      "math-macros": 53,
+      "math-layout": 65,
+      "math-canvas": 16,
+      "math-api": 6,
+      "math-evidence": 2,
+      "mermaid-math-integration": 17,
+      "f011-language": 40,
+      "f011-layout": 21,
+      "f011-canvas": 23,
+      "f011-api": 5,
+      "f012-language": 29,
+      "f012-layout": 19,
+      "f012-canvas": 18,
+      "f013-language": 63,
+      "f013-layout": 14,
+      "f013-styles": 16,
+      "f013-canvas": 33,
+      "tooling": 34,
+      "f014-language": 54,
+      "f014-layout": 39,
+      "f014-shapes": 18,
+      "f014-styles": 19,
+      "f014-canvas": 41,
+      "full-parser": 57,
+      "full-macros": 51,
+      "full-registry": 9,
+      "full-layout": 87,
+      "full-canvas": 34,
+      "full-integration": 13,
+      "full-api": 10
+    }
+  },
+  "registry": {
+    "functions": 312,
+    "environments": 33,
+    "registered": 345,
+    "sourceErrorOnly": 1,
+    "macros": 339,
+    "literalMacros": 319,
+    "dynamicMacros": 20,
+    "contexts": 684
+  },
+  "coreCorpus": {
+    "sourceClauses": 1245,
+    "expressions": 1909,
+    "expressionCounts": {
+      "PASS": 1909
+    },
+    "equivalencePairs": 217,
+    "scope": "Native acceptance/rejection, diagnostics/decision callbacks and positive visual equivalence. Not original Jest assertion parity."
+  },
+  "cases": 275,
+  "standaloneCases": 267,
+  "integrationCases": 8,
+  "profiles": [
+    "cpu",
+    "auto",
+    "gpu"
+  ],
+  "views": 825,
+  "source": {
+    "math": {
+      "sourceTreeSha256": "334c412c34ef675dbc223405622c8d4e19eb56b1ff3700c251cb663d4afdd445",
+      "files": {
+        "LICENSE": "032ce55c755fc606c357d51c4b23e00bf3b94b95a39b4ea3147c697af70b91f0",
+        "pyproject.toml": "6c99abd78be8366da840792b243000c240865ddce7d0748b1976343c9a97e93f",
+        "README.md": "850ec98170bc26321c7a6655a142a3169848edd0ed96fdc418ae0b03e5e90cda",
+        "references/licenses/katex-LICENSE": "766ccc1f306c885aa45542a9846bbd0a505b27a0374f146778171c2254ce18e3",
+        "src/py_katex/__init__.py": "2677e222983aba8ae299bf1802d4bde744cf490f26d16ea25ad5a6d97c2d8e78",
+        "src/py_katex/__main__.py": "129c13549612e5831dd4a6cad459cb489b332c95cd07387247222b67e0a10601",
+        "src/py_katex/_layout_paths.py": "5d390360023d8188d27c969d4f2925f1d7e8b7367f53a0df4e772b4925c5ce98",
+        "src/py_katex/canvas.py": "1570dc4bf23cddf9392dbfa8c1eab7d9db6bd4f32c1bcbfb1430ff1024c10fc6",
+        "src/py_katex/data/dynamic_macros.json": "48876577cbf9baea08d8c58030926ee5ddfcb391c14f18ba6ea2f915bfa54dc3",
+        "src/py_katex/data/font_metrics.json": "d22f8b60842365e99db240e6018e0dcfc99f748cf97b0e33cc67f6f8f95241f9",
+        "src/py_katex/data/fonts/KaTeX_AMS-Regular.ttf": "68534840bcfdd2bffb6f0e8deb48684dd01e7f04ea2813267577afb906de1d13",
+        "src/py_katex/data/fonts/KaTeX_Caligraphic-Bold.ttf": "07d8e303ce4fc12b4bb54f1004170dd190a1f3db45d400fe68060df3e0897268",
+        "src/py_katex/data/fonts/KaTeX_Caligraphic-Regular.ttf": "ed0b74372feefcbb9c0666b2e210da37b7e49fa7fbbf3eeb11db5f693dacfbb7",
+        "src/py_katex/data/fonts/KaTeX_Fraktur-Bold.ttf": "9163df9c7122432e6495b4229fa9071cf9ae86a758ae5efc4924ec2e1a6dbce1",
+        "src/py_katex/data/fonts/KaTeX_Fraktur-Regular.ttf": "1e6f9579e90e2cac37f8f60a597c436e075c114385652b7cbeb0dec0421291b3",
+        "src/py_katex/data/fonts/KaTeX_Main-Bold.ttf": "138ac28d1663b3037e9c5f52371fa5c63d8324f4a38d22cd573e6ea3a3fd0cf8",
+        "src/py_katex/data/fonts/KaTeX_Main-BoldItalic.ttf": "70ee1f64a20f2048c21940ef46d0144fd215baa953ca69afd1e31e98544f708f",
+        "src/py_katex/data/fonts/KaTeX_Main-Italic.ttf": "0d85ae7cc30f23790a7f1a58c4a112fdca8aae769b6ba11429af1d98b1b6cb3a",
+        "src/py_katex/data/fonts/KaTeX_Main-Regular.ttf": "d0332f52868370fd83ae7fa46470f90c8f2eab2fcf12bc4f88080b340c95a830",
+        "src/py_katex/data/fonts/KaTeX_Math-BoldItalic.ttf": "f9377ab0271cda59af24bcffbd46a4d0c8a3572ffafdbb38de2ad5ea7b0d5ee5",
+        "src/py_katex/data/fonts/KaTeX_Math-Italic.ttf": "08ce98e51b04d58945a301e639e02b6998af29fdfd61a7b8afdd07bbfc479d4a",
+        "src/py_katex/data/fonts/KaTeX_SansSerif-Bold.ttf": "1ece03f79f95277d57dc7f6b435a74e1379b0d46104a8530286b60ff49369ea0",
+        "src/py_katex/data/fonts/KaTeX_SansSerif-Italic.ttf": "3931dd81faed86ba021bb2bbdc36f5bed9a38d6b4f4077aca59b265aa1b02083",
+        "src/py_katex/data/fonts/KaTeX_SansSerif-Regular.ttf": "f36ea897e19f4a2e571d1e900e4e3710e438deb05a842486045ba0a3e616a4ad",
+        "src/py_katex/data/fonts/KaTeX_Script-Regular.ttf": "1c67f068fea8bb09bf099c088b1cf64bd27516a6e07f4684344873564bb66a67",
+        "src/py_katex/data/fonts/KaTeX_Size1-Regular.ttf": "95b6d2f1a50173bfedb8c63e1d1c99b10427d0a4df4201cb44513b226951a22b",
+        "src/py_katex/data/fonts/KaTeX_Size2-Regular.ttf": "a6b2099fb555c60e3a0db3a08842ebf1d732c6eb4e4bf44913613bed4fc4e39b",
+        "src/py_katex/data/fonts/KaTeX_Size3-Regular.ttf": "500e04d54f0d51666332c9d2089aa803be22aa878eca539e59fa53c6e522b082",
+        "src/py_katex/data/fonts/KaTeX_Size4-Regular.ttf": "c647367d1dd4e162468717d020e1fc0f1dc5c26ebfdffbe55261713bf88c5877",
+        "src/py_katex/data/fonts/KaTeX_Typewriter-Regular.ttf": "f01f3e87d9c6a61c0c081ceb577abd864eb00a612f7ac1620dd6915fad2ef5aa",
+        "src/py_katex/data/global_metrics.json": "10965c7c1c32d327094b603f1a2b8b71388c15c20a13f7318942462e7d668e97",
+        "src/py_katex/data/macros.json": "44e79b30918ae515b59d8b6a33ff09b1f27d36ace8a8b18f6ab69a364893ea78",
+        "src/py_katex/data/svg_paths.json": "7078030ac8644d25a359fb9c3389c313033fc0f20621dc82020335065b5a5903",
+        "src/py_katex/data/symbols.json": "0a3f6b8c180b29295fca59fd214dc49f96809840f4365f6d6150a21611007470",
+        "src/py_katex/function_modes.py": "009f91c422b2509c9b6295f082745957fa1f51adfe295722d5dccd2ee8fc98c3",
+        "src/py_katex/layout.py": "011e5af561b6b22b418efd0e4889c334d3cc5f9d3b2aeaa294589fc341348d87",
+        "src/py_katex/layout_display.py": "5920a206a8a3f158b0bdd5534c5a1ac94b8883a565450af7a6d1058dd8874697",
+        "src/py_katex/layout_html.py": "94ceb4e8787e75d8d5d21f61e92dcd8a64fe5783632d57321436ac0669aa6d81",
+        "src/py_katex/layout_metrics.py": "d47276a9a14978d2809f597f65950263f60a574768a72e27f3d1d3e4bd11c11f",
+        "src/py_katex/macro_context.py": "62ef2b474c796dc583a68ca54d5b27b25c529a706dfe6240aa75f5ef8872976d",
+        "src/py_katex/macros.py": "db83af02868d7c9abd99d52ae8c05906ba775ef83e5c6b3787265e584e633d28",
+        "src/py_katex/model.py": "137689921fe50dd0b53bfd35bc93ab51321e02970836a4b90f2a78e2b99cc652",
+        "src/py_katex/parser.py": "882a6453abce511e2620cc41a55a559bea3bd4fb7c5a8cc3dd88953fac038893",
+        "src/py_katex/parser_arrays.py": "428b98a75857dae77249cfac6f87d84d38c1a1d622386c8589f2aa9bdccc54c1",
+        "src/py_katex/parser_support.py": "d40c04570870af99fab6374e37b953cf3b995550704d3f6e13db59636edc2b07",
+        "src/py_katex/parser_unicode.py": "9abfb10a9edfb59311244e1893a89fcbe0b11ad997a0ebadc60a96151009e3c5",
+        "src/py_katex/py.typed": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "src/py_katex/resources.py": "98804265d043d15ab3c7a82b638610b3f10e2a3884c6cf6453787ea24f32366a",
+        "src/py_katex/unicode_scripts.py": "e4da87d793f4775d81970f180a2e51861e70bccbfa5bce4ec0ba786611abfacb",
+        "THIRD_PARTY_NOTICES.md": "c4086b6b62d078ef02612a97c9c4f711a512aaa876aa3f9f7d39e3ff4de74e1c"
+      }
+    },
+    "mermaid": {
+      "sourceTreeSha256": "6094d419ff3c50d2c64fdd00051af2be087b25a7a239cb1dae0e9e09209fdff1",
+      "files": {
+        "LICENSE": "d925ca50a75467a0a8d28c4f7236922346b52c782cd80840d0aec258eaf4f870",
+        "pyproject.toml": "b22851fdbde9339ce0ade1e09caa821ed6d89689801021e4efb8e4a753fe2081",
+        "README.md": "34a759cbfa26b9090aeb495ffc113279031d3493937e47b96ba38c1729762778",
+        "references/licenses/khroma-LICENSE": "66b333b0f66759a0b710459e03f7029abe17f4358114a128d2c972e642961b49",
+        "references/licenses/mermaid-LICENSE": "ec9fb67dcb25eccc416ed56e1aab819222c805a2a4bfe4cb19e7556bf2ffde80",
+        "references/licenses/roughjs-LICENSE": "dca9a392272606ac748ac0976a2a1133f14eef841c27beaa51a844d53c56a09d",
+        "src/py_mermaid/__init__.py": "8bfa0a155132d32d5716046ff71d353836148b94901c7a206e75145d0f402e68",
+        "src/py_mermaid/api.py": "8d9439400a45368d857ff97d01d2061489f2e9bf0611afd2c0a947a719eb9667",
+        "src/py_mermaid/config/__init__.py": "0a1a35bc6930e3ec4b021e68d66da16df4f0a576472bc4ec2410598579e6ab4f",
+        "src/py_mermaid/config/color_names.py": "53d1453fb57e005c66543e099172dd159a650522f6428c2bca32907ed20c6ca4",
+        "src/py_mermaid/config/colors.py": "37aa0d65e01bb10a253a90c2a66bfe5c003121b9726de4955b53c68e5be5bf3a",
+        "src/py_mermaid/config/elk.py": "cf9d99b7c7b334f26dc36b95ac1b0d34af089e193097e6e0d6f219bdadb06e02",
+        "src/py_mermaid/config/flowchart.py": "bcc7d8f8e2599d8bbd9433cc37e9665670a7d4feb58f469e23d46ff0090290ab",
+        "src/py_mermaid/config/source_keys.py": "0ae56a02cb58872c0f11a2bf49b26de413616807f1f832db56f0fbbd19b86141",
+        "src/py_mermaid/config/theme_rules.py": "fd2aa045a0ea00a2898fd7da25fa2ef50fee2dac447f980e4ddea9e7b3fb8c85",
+        "src/py_mermaid/config/themes.py": "96883a186702040397632e5726f6bb8a004dd57ea4ae3bd6c232531f4d046d61",
+        "src/py_mermaid/config/values.py": "a637721f11866e18a1f6de2595358eb80a427501094420ef914006376b114789",
+        "src/py_mermaid/diagrams/__init__.py": "9154145bccf3c978abe2ae3b6934ba969a756e9a6e77bdf2dbf3dbfd373cb619",
+        "src/py_mermaid/diagrams/flowchart/__init__.py": "648b1a3ca353ad86c12facbcb0d900aa2595a274b64b0d2c2a931c131c3c8a96",
+        "src/py_mermaid/diagrams/flowchart/lexical.py": "91fd1b80a853d01e1bbced1a7aafcdcc8e0c18a7009ba8617591e3fbeb1da42d",
+        "src/py_mermaid/diagrams/flowchart/parser.py": "36bed4508a1ae9d4a17f006b5e71ffb7313f47f42ead5414d89e28998379a4b4",
+        "src/py_mermaid/diagrams/flowchart/syntax.py": "47fe17165ba7dae86f628ebebd3038da7177c2592c7c00af006ff7075cc94d19",
+        "src/py_mermaid/geometry/__init__.py": "107fecdf0bc750e9300aae4cd28b545a61b180ef3065996c82d1faed6ae77b82",
+        "src/py_mermaid/geometry/edges/__init__.py": "26cbc445bdcf626c9e8e054330804c277fe6718ecc0bc86969a516b4048100d2",
+        "src/py_mermaid/geometry/edges/alignment.py": "ccbf30ce7b3749bf708bbd9078940bebed658113ec73cd6b4f353b82ce6b1c49",
+        "src/py_mermaid/geometry/edges/paths.py": "4cca5fd64b89dc9da1ce8b0b54a6681cb7f7a4ed7023c1e0aa944c7223f75739",
+        "src/py_mermaid/geometry/edges/pipeline.py": "368dca37a3f65dc5d71d7e32432452d3fd224e959022c15c909ac511f9154a74",
+        "src/py_mermaid/geometry/flowchart.py": "ea8ec1510211813e3829ea468dadb9a3ca91bd6f91a4462bf25696a47aa26a5e",
+        "src/py_mermaid/geometry/path_geometry.py": "d5d95b42c6f56b240a9918c9e34b29d5d6b1852a21fb8f9cc76c702ae8e1c7b4",
+        "src/py_mermaid/geometry/rough.py": "2b82b47819993fcba9d01a443e7887fd37d067ba76598ed1fe2dedf12f2cc86c",
+        "src/py_mermaid/geometry/shape_registry.py": "6b9cb66f463d2e2fed5aa4ba418c497c498870d6855825d7b71effdeffd1b27a",
+        "src/py_mermaid/geometry/shapes.py": "94fc76f11db69ddd8e5a67ae60deac9c7d8a840d90bfe38459a466c97c580f01",
+        "src/py_mermaid/layout/__init__.py": "6d1ecc869efa4cd9a7edd97fbd986cb719aa5509366da8775096b1fbd3074add",
+        "src/py_mermaid/layout/elk/__init__.py": "9baa94a4f1ce971d55a2f5008bd33c126764842ed68909c731f88d822c28498b",
+        "src/py_mermaid/layout/elk/compound.py": "379ef3b9a47d3ebf91583973be3365b5d24a65977d47463131a45aa41d65b446",
+        "src/py_mermaid/layout/elk/flowchart.py": "607e68f3a040c7fb75aaaf130a81e7d4a16442654b95b3fba55020f201940ef5",
+        "src/py_mermaid/layout/elk/options.py": "241b4b90902ff3d4f784351d20d11336af59be2d24309844f3c64aa758d46677",
+        "src/py_mermaid/model/__init__.py": "dc03b5bae51198aa7a4252ce4f65fb4717b4d1c241f1fed23dd0506f00743b3c",
+        "src/py_mermaid/model/flowchart.py": "af329696efea61fc83ecbc00e0a5c5b449bada99b4488f9db671a3948074ed1c",
+        "src/py_mermaid/parsing/__init__.py": "b927e8e23113a95e0258b2c5c085251b941dbb16f7cb78552319ab44b5785974",
+        "src/py_mermaid/parsing/preprocess.py": "9a6ebcfa5629b239e8c9516b25fe15e5d65f5cc11f8d111c9ef5d8c48e3a0d94",
+        "src/py_mermaid/parsing/yaml_json.py": "568345c47a13bfb65651dafa9b4fcec9a65b2ebd646fa470c8d9717dbecea465",
+        "src/py_mermaid/py.typed": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "src/py_mermaid/rendering/__init__.py": "ed89819539fa2b113c92aa2530d8598d7a1ba665a8127ab2c1641e6445415573",
+        "src/py_mermaid/rendering/labels/__init__.py": "5081ad1eea53fb7fde3208c095c5d409a90d144b9758c89f8c3177ef08345a55",
+        "src/py_mermaid/rendering/labels/math.py": "21303bbbffbc8d64c8437f08cc08313d71299e0e8b86d4f77d6a037495326280",
+        "src/py_mermaid/rendering/labels/plain.py": "fa0bd7c05a82a7412f5cce1fea62acc580b6389789510bc0b893d9eb4e88fac5",
+        "src/py_mermaid/rendering/labels/rich.py": "5a37e8b66844aa98d39d5ecc844a4636cd177158fe5e27678a0e5c62b876533f",
+        "src/py_mermaid/rendering/labels/sanitize.py": "3246bfd1a322ba481849d1ac9f77602787f8a08490089847f3b4f239ea266726",
+        "src/py_mermaid/rendering/skia/__init__.py": "60776be795ea6008f72da9be2517dd538cfb7f61f937930944bfa915c706df7a",
+        "src/py_mermaid/rendering/skia/session.py": "9ad6e38a6a5daf060664121b91ffe5dddff80bad8f64ba379f11d0e2df0cf5de",
+        "src/py_mermaid/rendering/styles/__init__.py": "1294d44dcafa9f89a808eae202d6cdcb20a0ffccfec7855ad84ace98f82b7c37",
+        "src/py_mermaid/rendering/styles/flowchart.py": "1be113a5c9853a98250b8fc1f6d9ede84915104b3b74c08593f07b06d2289e31",
+        "src/py_mermaid/resources/__init__.py": "900cc92343f24c7b2787454c1bbc6f87b3321eaeafbba0e0d87a41d29be8f4d5",
+        "src/py_mermaid/resources/geometry.py": "a9f5f89ff41be174162647b843b0aef8367e342e87f92b8626c2012142e4a7d0",
+        "src/py_mermaid/resources/svg.py": "c1fa49a8695a4e0e877c340a06348cbf0211385189a919725d2f34da0f666720",
+        "THIRD_PARTY_NOTICES.md": "b9c3537c1fba3a03d7612974137654115120b80f7afe0227108ba843484fd48c"
+      }
+    }
+  },
+  "knownSourceDifferences": {
+    "math-flow-metadata": "固定 Mermaid 元数据预处理把反斜线 n 破坏为换行，A 显示损坏字面量；Python 保留 TeX 并绘制 ν<y。此项是明确修正源异常，不声明与异常 A 图等价。",
+    "math-flow-group": "官方 MathML 宿主使用数学斜体 Unicode；原生 TeX 使用指定的粗体正体。数学内容与分组关系保留。",
+    "math-flow-mixed": "官方 flex/MathML 宿主折叠公式边界空格，Python 保留文本边界空格；内容与公式一致。",
+    "full-layout-tag-leqno-fleqn": "来源行为：在此 fleqn + leqno + tag* 输入中，官方 A 的两个数字坐标相同，原生 B 也保留重叠。已核实内容宽度、字体和编号投影，不是漏绘；人工原图/坐标证据见 math-full-layout-visual-qa-final.json。"
+  },
+  "legacy": {
+    "f011": {
+      "positiveCases": 12,
+      "profiles": 3,
+      "negativeSourceErrorAndExclusionCategoriesRetained": true
+    },
+    "f012": {
+      "positiveCases": 35,
+      "profiles": 3,
+      "negativeSourceErrorAndExclusionCategoriesRetained": true
+    },
+    "f013": {
+      "positiveCases": 50,
+      "profiles": 3,
+      "negativeSourceErrorAndExclusionCategoriesRetained": true
+    },
+    "f014": {
+      "positiveCases": 200,
+      "profiles": 3,
+      "negativeSourceErrorAndExclusionCategoriesRetained": true
+    }
+  },
+  "installationValidation": "DEFERRED_NOT_EXECUTED",
+  "manualQA": [
+    {
+      "receipt": "C:\\code\\py-visactor\\py-katex\\docs\\changes\\math-full-layout-visual-qa-accepted.json",
+      "identity": {
+        "sha256": "3135adc61eabaceaff82b6529a6069c94950fe99e0aa8ac2c9080dac990e7eaa",
+        "bytes": 18881
+      },
+      "candidateRun": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-batch-20261105T171602Z-0d9b6942"
+    },
+    {
+      "receipt": "C:\\code\\py-visactor\\py-katex\\docs\\changes\\math-full-canvas-visual-qa-accepted.json",
+      "identity": {
+        "sha256": "8a7ec1b9df6661d1497298663359f57e9f48045fce4e93892c5ab9131e91b491",
+        "bytes": 17318
+      },
+      "candidateRun": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-batch-20261105T171857Z-5071cad7"
+    }
+  ],
+  "unitRun": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-batch-20261105T171602Z-0d9b6942",
+  "visualRun": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-batch-20261105T171857Z-5071cad7",
+  "legacyRun": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-batch-20261105T171629Z-8b5ef28e",
+  "scope": "Fixed KaTeX core static rendering; original Jest markup/snapshot predicates, arbitrary DOM/host CSS and standalone contrib plugins are separately classified, not claimed as native parity.",
+  "generatedAt": "2026-11-06T01:23:25+08:00",
+  "schema": "py-katex-full-verification-summary/v1",
+  "runs": {
+    "unit": "test-runs/MATH-FULL-batch-20261105T171602Z-0d9b6942",
+    "visual": "test-runs/MATH-FULL-batch-20261105T171857Z-5071cad7",
+    "legacy": "test-runs/MATH-FULL-batch-20261105T171629Z-8b5ef28e",
+    "report": "test-runs/MATH-FULL-batch-20261105T172308Z-e0e12af6",
+    "htmlQa": "test-runs/MATH-FULL-batch-20261105T172348Z-4daa587b",
+    "manual1": "test-runs/MATH-FULL-batch-20261105T171936Z-a5ca8881",
+    "manual2": "test-runs/MATH-FULL-batch-20261105T172008Z-7055e775"
+  },
+  "jointCandidate": "test-runs/MATH-FULL-batch-20261105T171602Z-0d9b6942/artifacts/joint-candidate.json",
+  "jointSourceSHA256": {
+    "math": "334c412c34ef675dbc223405622c8d4e19eb56b1ff3700c251cb663d4afdd445",
+    "mermaid": "6094d419ff3c50d2c64fdd00051af2be087b25a7a239cb1dae0e9e09209fdff1"
+  },
+  "report": {
+    "url": "http://127.0.0.1:8765/MATH-FULL-batch-20261105T172308Z-e0e12af6/index.html",
+    "path": "py-mermaid/reports/MATH-FULL-batch-20261105T172308Z-e0e12af6",
+    "html": {
+      "sha256": "8a197796328ef10e5c3244bd613ce1957d44e8254a7b5c99dab142e5db6118ae",
+      "bytes": 5705477
+    },
+    "qaStatus": "PASS",
+    "qaViews": 825,
+    "desktopAndMobile": true,
+    "externalRequests": 0,
+    "currentSourceMatches": true
+  },
+  "postDocumentationAudit": "test-runs/MATH-FULL-batch-20261105T172451Z-dcedc8c2",
+  "historicalAlphaSummary": "references/verification-summary.json",
+  "firstFullFailure": "test-runs/MATH-batch-20261105T155834Z-e542e4f2",
+  "firstFixtureRecovery": "test-runs/MATH-FULL-historical-input-recovery-20261105T164058Z-d5c1c74b",
+  "manualRejectedCandidate": "references/full-manual-rejected-candidate.json",
+  "externalActions": {
+    "commit": false,
+    "push": false,
+    "publish": false
+  }
+}
