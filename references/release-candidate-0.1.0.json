@@ -5,7 +5,7 @@
   "tag": "py-visactor-katex-v0.1.0",
   "importPackage": "py_katex",
   "consoleCommand": "py-katex",
-  "status": "WINDOWS_REVIEWED_PENDING_CI_AND_PYPI",
+  "status": "PUBLISHED_DOWNLOAD_INSTALL_VERIFIED",
   "buildRun": "test-runs/RELEASE-batch-20261106T004856Z-3d638003",
   "artifactSet": {
     "py_visactor_katex-0.1.0-py3-none-any.whl": {
@@ -87,5 +87,6 @@
   "distributionMetadata": "twine check --strict PASS",
   "installationEvidenceSha256": "9cadae9e3851f5a878acd3eebeb14a1e24a92222476e485435de683ccad5c5c9",
   "pypiUploadExecuted": false,
-  "supersedes": "references/release-history/rejected-py-katex-release-candidate-0.1.0.json"
+  "supersedes": "references/release-history/rejected-py-katex-release-candidate-0.1.0.json",
+  "finalPublication": "references/release-publication-0.1.0.json"
 }

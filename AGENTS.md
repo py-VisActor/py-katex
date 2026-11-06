@@ -1,3 +1,5 @@
+> 2026-11-06 **py-visactor-katex 0.1.0 已正式发布到 PyPI/GitHub，实际下载及 Windows/Linux 安装已验证。** 当前入口 [发行状态](docs/RELEASE_STATUS.md) 和 [机器记录](references/release-publication-0.1.0.json)。导入仍为 `py_katex`；下方待授权/暂缓安装状态均是历史。正式 tag 为 `py-visactor-katex-v0.1.0`。
+
 > 2026-11-06 PyPI 拒绝 `py-katex` 相似名。正式发行名采用 `py-visactor-katex`，导入 `py_katex`/CLI `py-katex`/仓库名保持。新候选 tag 为 `py-visactor-katex-v0.1.0`；旧 v0.1.0 与其资产保留为名称被拒的历史，不覆盖。
 
 > 2026-11-06 用户授权 py-katex 正式发布。本轮版本 0.1.0：执行构建、仓库外 wheel/sdist 安装验证、GitHub commit/push/tag/Release、PyPI 发布及下载核验。此授权覆盖下文旧“暂缓安装/未授权发布”。数学算法和静态范围不扩展；旧验收对应原始候选，发行差异需单独保存。凭据不写入代码、日志或发行物。

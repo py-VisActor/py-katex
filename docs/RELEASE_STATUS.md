@@ -1,51 +1,51 @@
-# py-visactor-katex 0.1.0 发行状态
+# py-visactor-katex 0.1.0 已正式发布
 
-2026-11-06：PyPI 拒绝原发行名 `py-katex`，返回
-`This project name is too similar to an existing project`。
-当前发行名改为 **`py-visactor-katex`**，与组织已有 `py-visactor-elk` 命名一致。
-Python 导入名仍为 `py_katex`，控制台命令仍为 `py-katex`，GitHub 仓库仍为 `py-VisActor/py-katex`。
+2026-11-06：**PyPI 与 GitHub 正式发行均已完成，实际下载与安装复验通过。**
 
 ```shell
 python -m pip install py-visactor-katex==0.1.0
 ```
 
-当前阶段：重新构建新发行名的 wheel/sdist，并重新验证安装。**尚未声明 PyPI 已发布或新名已获准注册。**
-PyPI 查询 404 不代表名称可以注册；最终以账户侧 Pending Publisher 注册和真实上传结果为准。
+Python 导入为 `py_katex`，控制台命令为 `py-katex`，源码仓库为 `py-VisActor/py-katex`。
+需要 CPython 3.13，固定原生依赖 `py-skia-canvas==0.1.0a18`；已验证 Windows AMD64 和 Linux glibc 2.28+ x86_64。
 
-## 候选与历史
+- [PyPI 0.1.0](https://pypi.org/project/py-visactor-katex/0.1.0/)
+- [GitHub 正式发行](https://github.com/py-VisActor/py-katex/releases/tag/py-visactor-katex-v0.1.0)
+- [完整发布流水线](https://github.com/py-VisActor/py-katex/actions/runs/42139837741)
+- [机器发行记录](../references/release-publication-0.1.0.json)
 
-新候选 tag 为 `py-visactor-katex-v0.1.0`。原 `v0.1.0` 及其旧名资产保留为名称被拒的历史，
-不能用于新名发布，不覆盖旧资产、日志或验证结果。旧状态见
-[被拒名称的发行记录](releases/0.1.0-rejected-py-katex.md)，命名决策见
-[机器记录](../references/pypi-name-decision.json)。
+## 实际验证
 
-数学运行文件沿用已验收实现，版本仍为 `0.1.0`；与历史核心候选相比仅版本常量变化，
-发行名变更不会改变数学源码、字体或度量。原始 973 方法等核心验收保持原候选口径。
+本地构建的同一 wheel/sdist 上传 GitHub，下载核 SHA 后，在 Windows/Linux 干净环境分别安装；
+所有平台步骤成功后，GitHub OIDC 上传原字节到 PyPI，不重建、不覆盖。实际 PyPI 文件再下载核 SHA，
+在 Linux 以及本机 Windows 各自重新安装验证。Windows 的 CPU/auto/GPU、两种 CLI、五种导出通过；
+Linux 验证 CPU。每组 wheel/sdist 的 CPU 图均逐个核对真实输出，三份 CI ZIP 共 78 个实际文件见证；
+本机公开包两种安装各执行三后端共 78 个实际输出。
 
-## 发布流程
+45 个数学运行文件（含 20 字体）与既有核心验收逐 SHA 对照，唯一运行源码变化为版本号
+`0.1.0a0 -> 0.1.0`。发行名变更只影响分发元数据，不改变 `py_katex` 的代码、字体与原始度量。
+既有 973 个方法等核心静态证据保持历史候选口径，不改称新发行重跑。
 
-使用 `tools/plans/release-namespaced-build.json` 构建；严格检查元数据、45 个运行文件和 20 字体，
-对新 wheel/sdist 在仓库外、空 PATH、Python `-I` 下实际安装并执行 CPU/auto/GPU、五格式和 CLI。
-GitHub 上传本地已验收的原始文件。双平台 CI 下载同一组文件，在 Windows/Linux 重新验证
-wheel/sdist；两平台均成功后才尝试 OIDC 上传。上传后下载 PyPI 文件核 SHA、安装复验，
-最后提升新候选 GitHub Release 为正式版。
+## 发行字节
 
-PyPI Pending Publisher 必须使用：
+| 文件 | SHA256 | bytes |
+| --- | --- | --- |
+| `py_visactor_katex-0.1.0-py3-none-any.whl` | `d4724ae0b65b2cec07c4e51e48863e90808add37bbcc336baf6e1d576da7b09d` | 445187 |
+| `py_visactor_katex-0.1.0.tar.gz` | `a392b9fd4fe36f42e6845b59e47b04b898ec6cb02fb1beb20b8bc6ac2d19992d` | 745907 |
 
-| 字段 | 值 |
-| --- | --- |
-| Project name | `py-visactor-katex` |
-| GitHub owner | `py-VisActor` |
-| Repository | `py-katex` |
-| Workflow | `publish-pypi.yml` |
-| Environment | `pypi` |
+源码 tag 提交：`250c55bd3864d8c6615e79984f398341d03edc4e`；发行 manifest SHA256：`ce49d2f2663ddca492a5d7a5948a1549e70ed178f733f751e94d9f94d9e3248c`。
 
-只改变 Pending Publisher 的项目名，其余字段保持。账户入口：
-[PyPI Publishing](https://pypi.org/manage/account/publishing/)。不需要在聊天、代码或日志中提供 token。
+## 证据与复用
 
-## 新发行名本地验收
+- 新名称构建：`test-runs/RELEASE-batch-20261106T004856Z-3d638003`
+- GitHub 上传/下载：`test-runs/RELEASE-batch-20261106T005107Z-ed6ec48f`
+- 实际 PyPI/Windows 安装：`test-runs/RELEASE-batch-20261106T005313Z-d2918e05`
+- 完整交付归档：`test-runs/RELEASE-published-delivery-20261106T005617Z-c83b8ecf`
 
-运行 `test-runs/RELEASE-batch-20261106T004856Z-3d638003` 已成功闭合且源码未变。45 个运行文件与已验收数学实现对照通过，wheel/sdist 两个干净外部环境各执行 CPU/auto/GPU、13 个实际输出、两种 CLI；严格元数据及 16 个受影响 API 方法通过。
+`tools/release_collect_ci.py` 下载并校验实际 CI ZIP、每张图片和发布状态；`tools/release_pypi.py` 核对实际 PyPI 元数据与文件；`tools/release_artifacts.py` 验证 payload 并执行隔离安装。命令使用统一 `tools/workflow.py` 记录。
 
-- `py_visactor_katex-0.1.0-py3-none-any.whl`：SHA256 `d4724ae0b65b2cec07c4e51e48863e90808add37bbcc336baf6e1d576da7b09d`，445187 bytes。
-- `py_visactor_katex-0.1.0.tar.gz`：SHA256 `a392b9fd4fe36f42e6845b59e47b04b898ec6cb02fb1beb20b8bc6ac2d19992d`，745907 bytes。
+## 名称变更与历史
+
+PyPI 曾拒绝 `py-katex` 相似名，因此正式发行采用 `py-visactor-katex`。原 `v0.1.0` 及旧名资产保留为被拒名称的历史候选，未覆盖；正式 tag 是 `py-visactor-katex-v0.1.0`。旧失败/待授权状态见 [历史记录](releases/0.1.0-rejected-py-katex.md)。
+
+数学范围仍限固定 KaTeX 核心静态能力，独立 contrib（包括 mhchem）、任意宿主 CSS 和 HTML/MathML 输出不在该范围；详见 [核心静态验收](FULL_STATIC_ACCEPTANCE.md)。

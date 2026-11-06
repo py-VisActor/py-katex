@@ -12,6 +12,9 @@
   "oldAssetsRetained": true,
   "existingPotentiallySimilarProject": "PyKaTeX",
   "serverDidNotIdentifyConflictingProject": true,
-  "newNameRegistrationNotYetConfirmed": true,
-  "runtimeCodeChanged": false
+  "newNameRegistrationNotYetConfirmed": false,
+  "runtimeCodeChanged": false,
+  "newNameRegistered": true,
+  "newDistributionPublished": true,
+  "pypiURL": "https://pypi.org/project/py-visactor-katex/0.1.0/"
 }

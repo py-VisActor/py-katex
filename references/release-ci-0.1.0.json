@@ -1,7 +1,49 @@
 {
-  "schema": "py-katex-release-ci/v1",
+  "schema": "py-katex-publication-ci/v1",
+  "status": "PASS_PUBLISHED_DOWNLOAD_INSTALL_VERIFIED",
   "project": "py-visactor-katex",
   "version": "0.1.0",
-  "status": "PENDING_NEW_DISTRIBUTION_CI",
-  "oldNameResults": "references/release-history/rejected-py-katex-release-ci-0.1.0.json"
+  "sourceCommit": "250c55bd3864d8c6615e79984f398341d03edc4e",
+  "manifestSha256": "ce49d2f2663ddca492a5d7a5948a1549e70ed178f733f751e94d9f94d9e3248c",
+  "workflowRun": 42139837741,
+  "workflowURL": "https://github.com/py-VisActor/py-katex/actions/runs/42139837741",
+  "githubReleaseURL": "https://github.com/py-VisActor/py-katex/releases/tag/py-visactor-katex-v0.1.0",
+  "githubPrerelease": false,
+  "pypiURL": "https://pypi.org/project/py-visactor-katex/0.1.0/",
+  "distributions": {
+    "py_visactor_katex-0.1.0-py3-none-any.whl": {
+      "sha256": "d4724ae0b65b2cec07c4e51e48863e90808add37bbcc336baf6e1d576da7b09d",
+      "bytes": 445187
+    },
+    "py_visactor_katex-0.1.0.tar.gz": {
+      "sha256": "a392b9fd4fe36f42e6845b59e47b04b898ec6cb02fb1beb20b8bc6ac2d19992d",
+      "bytes": 745907
+    }
+  },
+  "artifacts": {
+    "release-validation-ubuntu-24.04": {
+      "status": "PASS",
+      "artifactId": 13468091341,
+      "archiveSha256": "9599d8faad1244de557223d5afe53aa558ec2764677486ac5073ee2cf8352f10",
+      "archiveBytes": 97050,
+      "externalInstallations": 2,
+      "actualVerifiedCpuSamples": 26
+    },
+    "release-validation-windows-2025": {
+      "status": "PASS",
+      "artifactId": 13467886350,
+      "archiveSha256": "226eb5be137a945cc205d7215edc299e951aa461901fa08834f46d4a102ccfd5",
+      "archiveBytes": 87495,
+      "externalInstallations": 2,
+      "actualVerifiedCpuSamples": 26
+    },
+    "published-download-installation-evidence": {
+      "status": "PASS",
+      "artifactId": 13466861663,
+      "archiveSha256": "941a16d00e85b18a5f0359568a914efe34221056b42d4604d4013f43640a1f15",
+      "archiveBytes": 1288583,
+      "externalInstallations": 2,
+      "actualVerifiedCpuSamples": 26
+    }
+  }
 }
