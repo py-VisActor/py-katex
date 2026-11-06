@@ -1,7 +1,7 @@
 {
-  "scope": "MATH-FULL",
-  "phase": "MATH-FULL-P5",
-  "status": "complete_local_core_static",
+  "scope": "RELEASE",
+  "phase": "RELEASE-PUBLISH",
+  "status": "awaiting_pypi_publisher_configuration",
   "plan": "docs/FULL_STATIC_MIGRATION.md",
   "interface": "docs/INTERFACES.md",
   "sourceVersion": "0.18.11",
@@ -97,7 +97,7 @@
   ],
   "fullKaTeXCompatibility": false,
   "postDocumentationAudit": "../py-katex/test-runs/MATH-FULL-batch-20261105T172451Z-dcedc8c2/run.json",
-  "currentScopeStatus": "complete_local_core_static",
+  "currentScopeStatus": "awaiting_pypi_publisher_configuration",
   "functionalStatus": "PASS_FULL_CORE_STATIC_LOCAL",
   "activePlan": "docs/FULL_STATIC_MIGRATION.md",
   "fullStaticStartingRun": "C:\\code\\py-visactor\\py-katex\\test-runs\\MATH-FULL-start-20261105T143333Z-c2e58342",
@@ -114,9 +114,17 @@
   "legacyTaskTablesHistorical": true,
   "release": {
     "version": "0.1.0",
-    "status": "preparing_reviewed_artifacts",
+    "status": "awaiting_pypi_publisher_configuration",
     "authorization": "User requested formal py-katex publication on 2026-11-06",
     "installationValidation": "authorized_for_release",
-    "historicalCoreStaticSummary": "references/full-verification-summary.json"
+    "historicalCoreStaticSummary": "references/full-verification-summary.json",
+    "sourceCommit": "79e8f8e830ac097a72dc794c9004fb9ec06e65c8",
+    "githubRelease": "https://github.com/py-VisActor/py-katex/releases/tag/v0.1.0",
+    "githubPrerelease": true,
+    "pypiPublished": false,
+    "platformValidation": "Windows/Linux wheel+sdist PASS",
+    "latestWorkflowRun": 42133486490,
+    "manifestSHA256": "a8f90a7630eb9c6515c9d828d3c82bee3c45fe5d51c73d15b3a68d64358dec08",
+    "evidence": "references/release-ci-0.1.0.json"
   }
 }

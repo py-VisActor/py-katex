@@ -1,3 +1,5 @@
+> 当前：**Windows/Linux wheel + sdist 安装验证通过，PyPI 尚未发布**。流水线 [42133486490](https://github.com/py-VisActor/py-katex/actions/runs/42133486490) 两个平台验证成功；上传步骤返回 `invalid-publisher`，需要 PyPI 账户添加项目专用 Pending Publisher。GitHub [v0.1.0 候选资产](https://github.com/py-VisActor/py-katex/releases/tag/v0.1.0) 已上传并独立下载核 SHA，保持 prerelease，待 PyPI 实际发布及下载复验后提升为正式版。
+
 # 0.1.0 正式发行
 
 2026-11-06 用户授权独立 py-katex 正式发布，包含必要的构建、安装验证、GitHub
@@ -46,3 +48,11 @@ README/CHANGELOG、控制台入口和发行工具。原 973 方法等证据保�
 - `py_katex-0.1.0.tar.gz` SHA256 `69d4e0cfb9791b1557144881123819a49ce8c64688d93bb706582854a2cf17cc`，742235 bytes。
 
 当前源码差异与文件分母见 [发行候选](../references/release-candidate-0.1.0.json)。GitHub/PyPI 仍以实际流水线结果为准。
+
+## 双平台实际发行证据
+
+[CI 机器记录](../references/release-ci-0.1.0.json)保存两平台 artifact ID、ZIP SHA、逐包 SHA、各 2 个外部安装及 26 个实际 CPU 输出。已下载 ZIP 并逐一核对全部输出文件 SHA，Node 不在 PATH，Python 使用 `-I`。未重建或覆盖已冻结 wheel/sdist。
+
+## 恢复发布
+
+在 PyPI [Publishing](https://pypi.org/manage/account/publishing/) 添加 Pending Publisher：project `py-katex`，owner `py-VisActor`，repository `py-katex`，workflow `publish-pypi.yml`，environment `pypi`。完成后仅重跑流水线 `42133486490` 的失败任务；双平台通过步骤无需重跑。上传后会核对实际 PyPI 字节并安装，最后提升 GitHub Release。
