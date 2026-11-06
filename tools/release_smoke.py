@@ -18,7 +18,7 @@ def main():
     from py_katex import render, typeset, MacroState, ParseError, ResourceBundle, image_resource
     from py_skia_canvas import Canvas, Image
     assert sys.flags.isolated, 'Run the installed smoke with python -I'
-    assert py_katex.__version__ == importlib.metadata.version('py-katex') == '0.1.0'
+    assert py_katex.__version__ == importlib.metadata.version('py-visactor-katex') == '0.1.0'
     assert Path(py_katex.__file__).resolve().is_relative_to(Path(sys.prefix).resolve())
     assert importlib.metadata.version('py-skia-canvas') == '0.1.0a18'
     args.out.mkdir(parents=True, exist_ok=False)
@@ -74,7 +74,7 @@ def main():
     visible_error = render(r'\frac{1}', backend=args.backend, throw_on_error=False)
     assert visible_error.box.diagnostics
     assert not any(name in sys.modules for name in ['py_mermaid', 'pyelk', 'skia'])
-    receipt = {'status': 'PASS', 'version': py_katex.__version__, 'installedModule': py_katex.__file__,
+    receipt = {'status': 'PASS', 'project': 'py-visactor-katex', 'version': py_katex.__version__, 'installedModule': py_katex.__file__,
                'isolated': True, 'python': sys.version, 'backend': args.backend,
                'nodeAvailable': bool(shutil.which('node')), 'bundledFonts': 20, 'samples': samples}
     (args.out / 'smoke.json').write_text(json.dumps(receipt, indent=2) + '\n', 'utf-8')

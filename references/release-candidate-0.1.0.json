@@ -1,16 +1,20 @@
 {
   "schema": "py-katex-release-candidate/v1",
+  "project": "py-visactor-katex",
   "version": "0.1.0",
+  "tag": "py-visactor-katex-v0.1.0",
+  "importPackage": "py_katex",
+  "consoleCommand": "py-katex",
   "status": "WINDOWS_REVIEWED_PENDING_CI_AND_PYPI",
-  "buildRun": "test-runs/RELEASE-batch-20261105T235223Z-5b497c88",
+  "buildRun": "test-runs/RELEASE-batch-20261106T004856Z-3d638003",
   "artifactSet": {
-    "py_katex-0.1.0-py3-none-any.whl": {
-      "sha256": "f13c78306cfb5bc89028fe05cdaf2c925c340c0bdce9f47525ccceab3b0cd684",
-      "bytes": 444990
+    "py_visactor_katex-0.1.0-py3-none-any.whl": {
+      "sha256": "d4724ae0b65b2cec07c4e51e48863e90808add37bbcc336baf6e1d576da7b09d",
+      "bytes": 445187
     },
-    "py_katex-0.1.0.tar.gz": {
-      "sha256": "69d4e0cfb9791b1557144881123819a49ce8c64688d93bb706582854a2cf17cc",
-      "bytes": 742235
+    "py_visactor_katex-0.1.0.tar.gz": {
+      "sha256": "a392b9fd4fe36f42e6845b59e47b04b898ec6cb02fb1beb20b8bc6ac2d19992d",
+      "bytes": 745907
     }
   },
   "runtimeFiles": 45,
@@ -18,11 +22,11 @@
   "runtimeDelta": "Only __version__ 0.1.0a0 -> 0.1.0; all other runtime bytes identical",
   "acceptedCoreStaticSummary": "references/full-verification-summary.json",
   "releaseSourceIdentity": {
-    "sourceTreeSha256": "828d231d8a4d8cc4a99a232f3866b54944a8917fc152ad84a2e1515aff4a9f37",
+    "sourceTreeSha256": "bc823ea52f95d3c80d11892ce66b7404cb822a4e24f935d7f3f41dca502d78ea",
     "files": {
       "LICENSE": "032ce55c755fc606c357d51c4b23e00bf3b94b95a39b4ea3147c697af70b91f0",
-      "pyproject.toml": "87691a29f584a8673b449ae5c4a051137d721ea35db39e3d245ca43629d6d235",
-      "README.md": "802c4ca6585f8ec9bbd9c3ba1f0b5d6bc6dc7655ff8b2ed5a2e59751373ea4a3",
+      "pyproject.toml": "6c25a34b0a12b7a3293e5bf4fd95d4122fa759f15e42e47ae79879bdaf3e2bd9",
+      "README.md": "15415bd4a143da36c39b18af03904dbf22123f123a5f17cb69ab2c412196fde0",
       "references/licenses/katex-LICENSE": "766ccc1f306c885aa45542a9846bbd0a505b27a0374f146778171c2254ce18e3",
       "src/py_katex/__init__.py": "3f86e089769bb4e50d9f92076ce564c0815a9eae1fefc980bab0f71161edd774",
       "src/py_katex/__main__.py": "129c13549612e5831dd4a6cad459cb489b332c95cd07387247222b67e0a10601",
@@ -81,6 +85,7 @@
   "smokeSamplesPerProfile": 13,
   "affectedApiMethods": 16,
   "distributionMetadata": "twine check --strict PASS",
-  "installationEvidenceSha256": "f2e0cee9c02479d426b06e32c88db698ffa5b21bd59bdb6d3ac2655a56202946",
-  "pypiUploadExecuted": false
+  "installationEvidenceSha256": "9cadae9e3851f5a878acd3eebeb14a1e24a92222476e485435de683ccad5c5c9",
+  "pypiUploadExecuted": false,
+  "supersedes": "references/release-history/rejected-py-katex-release-candidate-0.1.0.json"
 }

@@ -5,8 +5,8 @@ on:
       release_tag:
         description: Reviewed GitHub release tag
         type: choice
-        options: [v0.1.0]
-        default: v0.1.0
+        options: [py-visactor-katex-v0.1.0]
+        default: py-visactor-katex-v0.1.0
       manifest_sha256:
         description: SHA256 of the reviewed release-manifest.json asset
         type: string
@@ -40,7 +40,7 @@ jobs:
           MANIFEST_SHA: ${{ inputs.manifest_sha256 }}
         run: python tools/release_github.py download --tag "$RELEASE_TAG" --manifest-sha256 "$MANIFEST_SHA" --dist dist --out test-runs/release-download
       - name: Verify payload and clean external wheel and sdist installations
-        run: python tools/release_artifacts.py --wheel dist/py_katex-0.1.0-py3-none-any.whl --sdist dist/py_katex-0.1.0.tar.gz --install --backend cpu --out test-runs/release-validation
+        run: python tools/release_artifacts.py --wheel dist/py_visactor_katex-0.1.0-py3-none-any.whl --sdist dist/py_visactor_katex-0.1.0.tar.gz --install --backend cpu --out test-runs/release-validation
       - name: Collect actual render files from the isolated working directories
         run: |
           python - <<'PY'
@@ -73,7 +73,7 @@ jobs:
     runs-on: ubuntu-24.04
     environment:
       name: pypi
-      url: https://pypi.org/project/py-katex/0.1.0/
+      url: https://pypi.org/project/py-visactor-katex/0.1.0/
     permissions:
       contents: read
       id-token: write
@@ -115,7 +115,7 @@ jobs:
       - name: Verify actual PyPI download and external installation
         run: |
           python tools/release_pypi.py --manifest test-runs/release-download/release-manifest.json --out test-runs/pypi-download
-          python tools/release_artifacts.py --wheel test-runs/pypi-download/py_katex-0.1.0-py3-none-any.whl --sdist test-runs/pypi-download/py_katex-0.1.0.tar.gz --install --backend cpu --out test-runs/pypi-validation
+          python tools/release_artifacts.py --wheel test-runs/pypi-download/py_visactor_katex-0.1.0-py3-none-any.whl --sdist test-runs/pypi-download/py_visactor_katex-0.1.0.tar.gz --install --backend cpu --out test-runs/pypi-validation
       - name: Promote the verified stable GitHub Release
         env:
           GITHUB_TOKEN: ${{ github.token }}

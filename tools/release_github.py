@@ -5,12 +5,14 @@ import hashlib
 import json
 import os
 import subprocess
+import tomllib
 import urllib.error
 import urllib.parse
 import urllib.request
 
 REPOSITORY = 'py-VisActor/py-katex'
 API = 'https://api.github.com/repos/' + REPOSITORY
+PROJECT = tomllib.loads((Path(__file__).resolve().parents[1] / 'pyproject.toml').read_text('utf-8'))['project']['name']
 
 
 def credentials():
@@ -56,7 +58,7 @@ def download(tag, out, metadata_out, expected_manifest):
         raw = response.read()
     assert expected_manifest and hashlib.sha256(raw).hexdigest() == expected_manifest, 'Reviewed manifest fingerprint differs'
     manifest = json.loads(raw)
-    assert manifest['project'] == 'py-katex' and manifest['version'] == '0.1.0'
+    assert manifest['project'] == PROJECT and manifest['version'] == '0.1.0'
     assert manifest['tag'] == tag and len(manifest['distributions']) == 2
     # Pin validation to the checked-out release commit, not the current main branch.
     head = subprocess.check_output(['git', 'rev-parse', 'HEAD'], text=True).strip()
@@ -76,7 +78,7 @@ def download(tag, out, metadata_out, expected_manifest):
 def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('action', choices=['create', 'download', 'dispatch', 'promote', 'status'])
-    p.add_argument('--tag', default='v0.1.0')
+    p.add_argument('--tag', default=PROJECT + '-v0.1.0')
     p.add_argument('--out', type=Path, required=True)
     p.add_argument('--manifest', type=Path)
     p.add_argument('--dist', type=Path)
@@ -91,14 +93,14 @@ def main():
         if args.action == 'create':
             assert args.manifest and args.dist and args.notes
             manifest = json.loads(args.manifest.read_text('utf-8'))
-            assert manifest['tag'] == args.tag
+            assert manifest['tag'] == args.tag and manifest['project'] == PROJECT
             for name, identity in manifest['distributions'].items():
                 assert digest(args.dist / name) == identity['sha256']
             release = request(API + '/releases/tags/' + args.tag, missing=True)
             if release is None:
                 release = request(API + '/releases', method='POST', data={
                     'tag_name': args.tag, 'target_commitish': manifest['sourceCommit'],
-                    'name': 'py-katex 0.1.0', 'body': args.notes.read_text('utf-8'),
+                    'name': PROJECT + ' 0.1.0', 'body': args.notes.read_text('utf-8'),
                     'draft': False, 'prerelease': True, 'make_latest': 'false'})
             assert release['tag_name'] == args.tag
             files = [args.dist / name for name in manifest['distributions']] + [args.manifest]

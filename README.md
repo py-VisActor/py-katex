@@ -1,5 +1,7 @@
 # py-katex
 
+PyPI 发行名为 **`py-visactor-katex`**；Python 导入名为 `py_katex`，命令行为 `py-katex`。
+
 Python TeX 数学公式解析、二维排版与静态绘制，基于固定 **KaTeX 0.18.11** 核心移植。
 数学字体和原始度量随包提供，通过 `py-skia-canvas` 公开 API 输出 PNG、JPEG、WebP、SVG 和 PDF。
 生产运行不需要 Node、浏览器、JavaScript 引擎或联网字体。
@@ -7,7 +9,7 @@ Python TeX 数学公式解析、二维排版与静态绘制，基于固定 **KaT
 ## 安装
 
 ```shell
-python -m pip install py-katex==0.1.0
+python -m pip install py-visactor-katex==0.1.0
 ```
 
 需要 CPython **3.13**。原生依赖固定为 `py-skia-canvas==0.1.0a18`，其发行 wheel 支持

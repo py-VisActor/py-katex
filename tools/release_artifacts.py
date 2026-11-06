@@ -14,6 +14,8 @@ import venv
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
+PROJECT = tomllib.loads((ROOT / 'pyproject.toml').read_text('utf-8'))['project']['name']
+STEM = PROJECT.replace('-', '_')
 
 
 def sha(raw):
@@ -28,13 +30,13 @@ def runtime_files():
 
 def metadata(raw):
     item = email.message_from_bytes(raw)
-    assert item['Name'] == 'py-katex' and item['Version'] == '0.1.0'
+    assert item['Name'] == PROJECT and item['Version'] == '0.1.0'
     assert item['Requires-Python'] == '<3.14,>=3.13'
     assert item.get_all('Requires-Dist') == ['py-skia-canvas==0.1.0a18']
     assert item['License-Expression'] == 'MIT'
     assert len(item.get_all('License-File')) == 3
     description = item.get_payload()
-    assert 'pip install py-katex==0.1.0' in description
+    assert f'pip install {PROJECT}==0.1.0' in description
     assert 'https://github.com/py-VisActor/py-katex/blob/main/docs/RELEASE_STATUS.md' in description
 
 
@@ -51,7 +53,7 @@ def verify(wheel, sdist):
         names = z.namelist()
         actual = {name: z.read(name) for name in names if name.startswith('py_katex/')}
         assert actual == files, 'Wheel runtime payload differs from source'
-        info = 'py_katex-0.1.0.dist-info/'
+        info = STEM + '-0.1.0.dist-info/'
         metadata(z.read(info + 'METADATA'))
         assert 'py-katex = py_katex.__main__:main' in z.read(info + 'entry_points.txt').decode()
         assert 'Tag: py3-none-any' in z.read(info + 'WHEEL').decode()

@@ -1,0 +1,17 @@
+{
+  "schema": "py-katex-pypi-name-decision/v1",
+  "rejectedDistribution": "py-katex",
+  "serverMessage": "This project name is too similar to an existing project",
+  "newDistribution": "py-visactor-katex",
+  "importPackage": "py_katex",
+  "consoleCommand": "py-katex",
+  "repository": "py-VisActor/py-katex",
+  "newReleaseTag": "py-visactor-katex-v0.1.0",
+  "version": "0.1.0",
+  "oldReleaseTag": "v0.1.0",
+  "oldAssetsRetained": true,
+  "existingPotentiallySimilarProject": "PyKaTeX",
+  "serverDidNotIdentifyConflictingProject": true,
+  "newNameRegistrationNotYetConfirmed": true,
+  "runtimeCodeChanged": false
+}

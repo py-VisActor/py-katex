@@ -1,56 +1,7 @@
 {
   "schema": "py-katex-release-ci/v1",
+  "project": "py-visactor-katex",
   "version": "0.1.0",
-  "workflowRun": 42133486490,
-  "workflowURL": "https://github.com/py-VisActor/py-katex/actions/runs/42133486490",
-  "status": "BLOCKED_MISSING_PYPI_TRUSTED_PUBLISHER",
-  "platforms": {
-    "ubuntu-24.04": {
-      "status": "PASS",
-      "artifactId": 13464970532,
-      "archive": {
-        "sha256": "9f5f12bee7081bd9112d59879717fbe783d895250dea5e5cad14e00ff1e89af1",
-        "bytes": 96873
-      },
-      "externalInstallations": 2,
-      "cpuSamples": 26,
-      "distributionSet": {
-        "py_katex-0.1.0-py3-none-any.whl": {
-          "sha256": "f13c78306cfb5bc89028fe05cdaf2c925c340c0bdce9f47525ccceab3b0cd684",
-          "bytes": 444990
-        },
-        "py_katex-0.1.0.tar.gz": {
-          "sha256": "69d4e0cfb9791b1557144881123819a49ce8c64688d93bb706582854a2cf17cc",
-          "bytes": 742235
-        }
-      }
-    },
-    "windows-2025": {
-      "status": "PASS",
-      "artifactId": 13464148018,
-      "archive": {
-        "sha256": "87d250acf59758d4c6f11e297a6ddf9b6bc0590bf00480afed256f29202d2776",
-        "bytes": 87355
-      },
-      "externalInstallations": 2,
-      "cpuSamples": 26,
-      "distributionSet": {
-        "py_katex-0.1.0-py3-none-any.whl": {
-          "sha256": "f13c78306cfb5bc89028fe05cdaf2c925c340c0bdce9f47525ccceab3b0cd684",
-          "bytes": 444990
-        },
-        "py_katex-0.1.0.tar.gz": {
-          "sha256": "69d4e0cfb9791b1557144881123819a49ce8c64688d93bb706582854a2cf17cc",
-          "bytes": 742235
-        }
-      }
-    }
-  },
-  "publicationError": "invalid-publisher: valid token but no corresponding publisher",
-  "pypiReleaseAvailable": false,
-  "githubRelease": "https://github.com/py-VisActor/py-katex/releases/tag/v0.1.0",
-  "githubReleasePrerelease": true,
-  "manifestSHA256": "a8f90a7630eb9c6515c9d828d3c82bee3c45fe5d51c73d15b3a68d64358dec08",
-  "ciEvidenceRun": "test-runs/RELEASE-ci-evidence-20261106T000049Z-f7f62611",
-  "ciEvidenceSha256": "22bc180fa7a2dca8b6769ba5a142fce0f8dfd45f7b1f9aec9611529b2f008c6e"
+  "status": "PENDING_NEW_DISTRIBUTION_CI",
+  "oldNameResults": "references/release-history/rejected-py-katex-release-ci-0.1.0.json"
 }

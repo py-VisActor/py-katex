@@ -3,7 +3,7 @@ requires = ["setuptools==84.2.1", "wheel==0.48.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "py-katex"
+name = "py-visactor-katex"
 version = "0.1.0"
 description = "Native Python TeX math layout and static rendering with bundled KaTeX fonts"
 readme = "README.md"
