@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.1.1 — 2026-11-07
+
+Documentation maintenance release. The README/PyPI description now focuses on
+installation and a minimal example; user guides/API and maintainer/AI agent
+navigation are separate. Project documentation links target the user directory.
+Historical migration, verification and publication records are retained.
+
+Mathematics algorithms, bundled fonts/metrics and dependency constraints are
+unchanged. The runtime version identifier is updated for this release.
+
 ## 0.1.0 — 2026-11-06
 
 First stable release of the native Python static mathematics renderer, based on

@@ -12,7 +12,8 @@ import urllib.request
 
 REPOSITORY = 'py-VisActor/py-katex'
 API = 'https://api.github.com/repos/' + REPOSITORY
-PROJECT = tomllib.loads((Path(__file__).resolve().parents[1] / 'pyproject.toml').read_text('utf-8'))['project']['name']
+CONFIG = tomllib.loads((Path(__file__).resolve().parents[1] / 'pyproject.toml').read_text('utf-8'))['project']
+PROJECT, VERSION = CONFIG['name'], CONFIG['version']
 
 
 def credentials():
@@ -58,7 +59,7 @@ def download(tag, out, metadata_out, expected_manifest):
         raw = response.read()
     assert expected_manifest and hashlib.sha256(raw).hexdigest() == expected_manifest, 'Reviewed manifest fingerprint differs'
     manifest = json.loads(raw)
-    assert manifest['project'] == PROJECT and manifest['version'] == '0.1.0'
+    assert manifest['project'] == PROJECT and manifest['version'] == VERSION
     assert manifest['tag'] == tag and len(manifest['distributions']) == 2
     # Pin validation to the checked-out release commit, not the current main branch.
     head = subprocess.check_output(['git', 'rev-parse', 'HEAD'], text=True).strip()
@@ -78,7 +79,7 @@ def download(tag, out, metadata_out, expected_manifest):
 def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('action', choices=['create', 'download', 'dispatch', 'promote', 'status'])
-    p.add_argument('--tag', default=PROJECT + '-v0.1.0')
+    p.add_argument('--tag', default=PROJECT + '-v' + VERSION)
     p.add_argument('--out', type=Path, required=True)
     p.add_argument('--manifest', type=Path)
     p.add_argument('--dist', type=Path)
@@ -100,7 +101,7 @@ def main():
             if release is None:
                 release = request(API + '/releases', method='POST', data={
                     'tag_name': args.tag, 'target_commitish': manifest['sourceCommit'],
-                    'name': PROJECT + ' 0.1.0', 'body': args.notes.read_text('utf-8'),
+                    'name': PROJECT + ' ' + VERSION, 'body': args.notes.read_text('utf-8'),
                     'draft': False, 'prerelease': True, 'make_latest': 'false'})
             assert release['tag_name'] == args.tag
             files = [args.dist / name for name in manifest['distributions']] + [args.manifest]

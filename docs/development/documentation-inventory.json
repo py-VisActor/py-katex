@@ -1,0 +1,111 @@
+{
+  "schema": "py-visactor-documentation-inventory/v1",
+  "project": "py-katex",
+  "userEntry": "docs/README.md",
+  "developerEntry": "docs/development/README.md",
+  "agentEntry": "AGENTS.md",
+  "roles": {
+    "user": "Installation, API, examples and supported behavior",
+    "developer": "Repository maintenance, tools, architecture and agent rules",
+    "archive": "Historical plans or original archived text; not current instructions",
+    "evidence": "Frozen verification and source records; not current user guidance",
+    "legal": "License and attribution notices"
+  },
+  "counts": {
+    "developer": 11,
+    "user": 6,
+    "legal": 1,
+    "evidence": 3,
+    "archive": 1
+  },
+  "documents": [
+    {
+      "path": "AGENTS.md",
+      "audience": "developer"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "audience": "user"
+    },
+    {
+      "path": "README.md",
+      "audience": "user"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "audience": "legal"
+    },
+    {
+      "path": "docs/ACCEPTANCE.md",
+      "audience": "developer"
+    },
+    {
+      "path": "docs/API.md",
+      "audience": "user"
+    },
+    {
+      "path": "docs/AST.md",
+      "audience": "developer"
+    },
+    {
+      "path": "docs/EXECUTION_PLAN.md",
+      "audience": "developer"
+    },
+    {
+      "path": "docs/FULL_RUNS_AND_REPORTS.md",
+      "audience": "evidence"
+    },
+    {
+      "path": "docs/FULL_STATIC_ACCEPTANCE.md",
+      "audience": "evidence"
+    },
+    {
+      "path": "docs/FULL_STATIC_MIGRATION.md",
+      "audience": "developer"
+    },
+    {
+      "path": "docs/INTERFACES.md",
+      "audience": "developer"
+    },
+    {
+      "path": "docs/README.md",
+      "audience": "user"
+    },
+    {
+      "path": "docs/RELEASE_STATUS.md",
+      "audience": "developer"
+    },
+    {
+      "path": "docs/RUNS_AND_REPORTS.md",
+      "audience": "evidence"
+    },
+    {
+      "path": "docs/USER_GUIDE.md",
+      "audience": "user"
+    },
+    {
+      "path": "docs/development/README.md",
+      "audience": "developer"
+    },
+    {
+      "path": "docs/development/WORKFLOW.md",
+      "audience": "developer"
+    },
+    {
+      "path": "docs/releases/0.1.0-candidate.md",
+      "audience": "developer"
+    },
+    {
+      "path": "docs/releases/0.1.0-published.md",
+      "audience": "developer"
+    },
+    {
+      "path": "docs/releases/0.1.0-rejected-py-katex.md",
+      "audience": "archive"
+    },
+    {
+      "path": "docs/releases/0.1.1.md",
+      "audience": "user"
+    }
+  ]
+}

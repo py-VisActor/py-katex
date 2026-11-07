@@ -16,15 +16,16 @@ def main():
     manifest = json.loads(args.manifest.read_text('utf-8'))
     project = tomllib.loads((Path(__file__).resolve().parents[1] / 'pyproject.toml').read_text('utf-8'))['project']['name']
     assert manifest['project'] == project
+    version = manifest['version']
     args.out.mkdir(parents=True, exist_ok=False)
-    url = 'https://pypi.org/pypi/' + project + '/0.1.0/json'
+    url = 'https://pypi.org/pypi/' + project + '/' + version + '/json'
     with urllib.request.urlopen(url, timeout=60) as response:
         raw = response.read()
     (args.out / 'index.json').write_bytes(raw)
     index = json.loads(raw)
-    assert index['info']['name'] == project and index['info']['version'] == '0.1.0'
+    assert index['info']['name'] == project and index['info']['version'] == version
     assert index['info']['requires_dist'] == ['py-skia-canvas==0.1.0a18']
-    assert f'pip install {project}==0.1.0' in index['info']['description']
+    assert f'pip install {project}=={version}' in index['info']['description']
     assert set(manifest['distributions']) == {item['filename'] for item in index['urls']}
     for item in index['urls']:
         name = item['filename']
@@ -36,8 +37,8 @@ def main():
         assert hashlib.sha256(payload).hexdigest() == manifest['distributions'][name]['sha256']
         assert len(payload) == manifest['distributions'][name]['bytes']
         (args.out / name).write_bytes(payload)
-    result = {'status': 'PUBLISHED_DOWNLOAD_VERIFIED', 'project': project, 'version': '0.1.0',
-              'url': 'https://pypi.org/project/' + project + '/0.1.0/', 'distributions': manifest['distributions']}
+    result = {'status': 'PUBLISHED_DOWNLOAD_VERIFIED', 'project': project, 'version': version,
+              'url': 'https://pypi.org/project/' + project + '/' + version + '/', 'distributions': manifest['distributions']}
     (args.out / 'publication.json').write_text(json.dumps(result, indent=2) + '\n', 'utf-8')
     print(json.dumps(result))
 

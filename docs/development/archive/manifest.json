@@ -1,0 +1,13 @@
+{
+  "schema": "documentation-navigation-archive/v1",
+  "files": [
+    {
+      "originalPath": "AGENTS.md",
+      "archivePath": "AGENTS-2026-11-07.txt",
+      "bytes": 3512,
+      "sha256": "06e300d9cdb7c10deff08c1cb1a6fe124a9b4d722782dc13eb9bf79ff7540bea",
+      "originalLinkContext": "repository root",
+      "purpose": "Raw original navigation/instruction text preserved for historical context; not current agent instructions."
+    }
+  ]
+}

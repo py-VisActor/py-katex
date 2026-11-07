@@ -6,7 +6,7 @@ from .model import (Node,Options,MathBox,Glyph,Rule,Path,ParseError,RenderResult
 from .parser import parse
 from .layout import layout
 
-__version__='0.1.0'
+__version__='0.1.1'
 
 
 def typeset(tex,*,options=None,font_size=None,display_mode=None,color=None,macros=None,**settings):

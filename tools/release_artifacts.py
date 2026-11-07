@@ -16,6 +16,7 @@ import zipfile
 ROOT = Path(__file__).resolve().parents[1]
 PROJECT = tomllib.loads((ROOT / 'pyproject.toml').read_text('utf-8'))['project']['name']
 STEM = PROJECT.replace('-', '_')
+VERSION = tomllib.loads((ROOT / 'pyproject.toml').read_text('utf-8'))['project']['version']
 
 
 def sha(raw):
@@ -30,30 +31,30 @@ def runtime_files():
 
 def metadata(raw):
     item = email.message_from_bytes(raw)
-    assert item['Name'] == PROJECT and item['Version'] == '0.1.0'
+    assert item['Name'] == PROJECT and item['Version'] == VERSION
     assert item['Requires-Python'] == '<3.14,>=3.13'
     assert item.get_all('Requires-Dist') == ['py-skia-canvas==0.1.0a18']
     assert item['License-Expression'] == 'MIT'
     assert len(item.get_all('License-File')) == 3
     description = item.get_payload()
-    assert f'pip install {PROJECT}==0.1.0' in description
-    assert 'https://github.com/py-VisActor/py-katex/blob/main/docs/RELEASE_STATUS.md' in description
+    assert f'pip install {PROJECT}=={VERSION}' in description
+    assert 'https://github.com/py-VisActor/py-katex/blob/main/docs/README.md' in description
 
 
 def verify(wheel, sdist):
     version = tomllib.loads((ROOT / 'pyproject.toml').read_text('utf-8'))['project']['version']
-    assert version == '0.1.0'
+    assert version == VERSION
     files = runtime_files()
     accepted = json.loads((ROOT / 'references/full-verification-summary.json').read_text('utf-8'))['source']['math']['files']
     assert {'src/' + name for name in files} == {name for name in accepted if name.startswith('src/')}
     for name, raw in files.items():
-        old = raw.replace(b"__version__='0.1.0'", b"__version__='0.1.0a0'") if name == 'py_katex/__init__.py' else raw
+        old = raw.replace(("__version__='" + VERSION + "'").encode(), b"__version__='0.1.0a0'") if name == 'py_katex/__init__.py' else raw
         assert sha(old) == accepted['src/' + name], 'Unexpected runtime change since accepted candidate: ' + name
     with zipfile.ZipFile(wheel) as z:
         names = z.namelist()
         actual = {name: z.read(name) for name in names if name.startswith('py_katex/')}
         assert actual == files, 'Wheel runtime payload differs from source'
-        info = STEM + '-0.1.0.dist-info/'
+        info = STEM + '-' + VERSION + '.dist-info/'
         metadata(z.read(info + 'METADATA'))
         assert 'py-katex = py_katex.__main__:main' in z.read(info + 'entry_points.txt').decode()
         assert 'Tag: py3-none-any' in z.read(info + 'WHEEL').decode()
@@ -71,13 +72,13 @@ def verify(wheel, sdist):
         assert 'references/licenses/katex-LICENSE' in contents
         assert not any(name.startswith(('.local/', 'test-runs/', 'dist/', 'reports/')) for name in contents)
     return {'status': 'PASS', 'runtimeFiles': len(files), 'bundledFonts': sum(name.endswith('.ttf') for name in files),
-            'acceptedRuntimeDelta': 'Only __version__ 0.1.0a0 -> 0.1.0; all other runtime bytes identical',
+            'acceptedRuntimeDelta': 'Only __version__ 0.1.0a0 -> ' + VERSION + '; all other runtime bytes identical',
             'artifacts': {p.name: {'sha256': sha(p.read_bytes()), 'bytes': p.stat().st_size} for p in [wheel, sdist]}}
 
 
 def install(artifact, out, backends):
     # Preserve the external environment path as provenance; never import checkout src.
-    home = Path(tempfile.mkdtemp(prefix='py-katex-0.1.0-'))
+    home = Path(tempfile.mkdtemp(prefix='py-katex-' + VERSION + '-'))
     assert not home.resolve().is_relative_to(ROOT.parent.resolve())
     environment = home / 'venv'
     venv.EnvBuilder(with_pip=True).create(environment)
@@ -101,7 +102,7 @@ def install(artifact, out, backends):
     command('install-distribution', [python, '-I', '-m', 'pip', 'install', '--index-url', 'https://pypi.org/simple/', '--no-cache-dir', '--no-deps', artifact.resolve()])
     command('pip-check', [python, '-I', '-m', 'pip', 'check'])
     for backend in backends:
-        command('smoke-' + backend, [python, '-I', ROOT / 'tools/release_smoke.py', '--out', out / ('smoke-' + backend), '--backend', backend], no_path=True)
+        command('smoke-' + backend, [python, '-I', ROOT / 'tools/release_smoke.py', '--out', out / ('smoke-' + backend), '--backend', backend, '--expected-version', VERSION], no_path=True)
     command('module-cli', [python, '-I', '-m', 'py_katex', 'x^2+y^2=z^2', '--backend', 'cpu', '-o', out / 'module-cli.png'], no_path=True)
     executable = environment / ('Scripts/py-katex.exe' if os.name == 'nt' else 'bin/py-katex')
     command('installed-console-cli', [executable, 'x^2+y^2=z^2', '--backend', 'cpu', '-o', out / 'console-cli.svg'], no_path=True)

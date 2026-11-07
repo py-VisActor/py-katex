@@ -5,7 +5,7 @@ recursive-include references/licenses *
 recursive-include src/py_katex *.py *.json *.ttf py.typed
 recursive-include tests *.py *.json *.png *.svg *.ttf
 recursive-include tools *.py *.cjs *.mjs *.html *.json *.md
-recursive-include docs *.md *.json
+recursive-include docs *.md *.json *.txt
 global-exclude __pycache__ *.py[cod]
 prune .local
 prune .github

@@ -1,23 +1,69 @@
-> 2026-11-06 **py-visactor-katex 0.1.0 已正式发布到 PyPI/GitHub，实际下载及 Windows/Linux 安装已验证。** 当前入口 [发行状态](docs/RELEASE_STATUS.md) 和 [机器记录](references/release-publication-0.1.0.json)。导入仍为 `py_katex`；下方待授权/暂缓安装状态均是历史。正式 tag 为 `py-visactor-katex-v0.1.0`。
+# py-katex：AI agent 工作规范
 
-> 2026-11-06 PyPI 拒绝 `py-katex` 相似名。正式发行名采用 `py-visactor-katex`，导入 `py_katex`/CLI `py-katex`/仓库名保持。新候选 tag 为 `py-visactor-katex-v0.1.0`；旧 v0.1.0 与其资产保留为名称被拒的历史，不覆盖。
+## 1. 适用范围与职责
 
-> 2026-11-06 用户授权 py-katex 正式发布。本轮版本 0.1.0：执行构建、仓库外 wheel/sdist 安装验证、GitHub commit/push/tag/Release、PyPI 发布及下载核验。此授权覆盖下文旧“暂缓安装/未授权发布”。数学算法和静态范围不扩展；旧验收对应原始候选，发行差异需单独保存。凭据不写入代码、日志或发行物。
+本文件适用于本仓库。当前用户任务优先于历史计划和状态说明。
+发行名 `py-visactor-katex`，导入 `py_katex`，CLI `py-katex`。
+负责数学解析、排版、离线字体和静态绘制；不要擅自扩大为浏览器或 LaTeX 文档宿主。
+完整工作规程见[开发指南](docs/development/WORKFLOW.md)。
 
-> 2026-11-06 **固定 KaTeX 0.18.11 核心静态迁移已完成本地验收**：973 方法、684 上下文、1909 功能输入/217 等价关系、275 案例三后端与 297 历史流程图三后端通过。当前入口为 [完整验收](docs/FULL_STATIC_ACCEPTANCE.md)。安装验证暂缓，未提交推送发布；下方旧 alpha/未实现状态仅作历史。
+## 2. 开始工作
 
-> 2026-11-05 用户要求一次完成剩余核心静态 KaTeX 迁移，当前执行 [完整收口计划](docs/FULL_STATIC_MIGRATION.md)。旧 alpha 验收仅是历史起点，不能用于新候选。安装验证仍暂缓。
+先运行 `git status --short`，辨认并保留用户及其他 owner 的修改。
+按任务读取[开发索引](docs/development/README.md)及相关源码、接口和来源记录。
+用户用法查 [docs/README.md](docs/README.md)，接口任务再读 `docs/INTERFACES.md` 和 `docs/AST.md`。
+版本读取 `pyproject.toml`；任务阶段读取当前指令及其指定状态文件/运行记录。
+`docs/execution-state.json` 和旧验收只描述记录时的状态，不自动恢复旧任务或授权。
+跨仓/多人任务先明确文件 owner；需要变更公共模型或 API 时先协调。
 
-> 2026-11-05 本轮原生静态 alpha 已完成本地验收：712 个方法、69 个数学/集成案例 × 3 后端、297 个历史案例 × 3 后端通过。详见 [验收记录](docs/ACCEPTANCE.md)。完整 KaTeX 兼容仍有明确待补项；安装验证暂缓，未提交推送发布。下文阶段安排保留为历史。
+## 3. 仓库地图
 
-# py-katex 工作约束
+- `src/py_katex/`：公开 API、解析、宏、排版和 Canvas 绘制。
+- `src/py_katex/data/`：数学字体、度量和固定源数据。
+- `tests/`：功能、来源独立断言及绘制控制。
+- `references/`：来源映射、许可证和机器记录。
+- `docs/README.md`：用户目录；`docs/development/`：维护者/agent 目录。
+- `tools/`、`test-runs/`：开发工具和不可覆盖的闭合运行证据。
 
-当前任务：独立 Python 数学公式解析、排版和静态绘制，接入相邻 py-mermaid。来源固定 KaTeX 0.18.11 / d5bed9f38a8d747b9c4a12e18897a514707e1c26，Canvas 0.1.0a18。
+## 4. 常用命令
 
-生产不用 Node、浏览器、JS 解释器、DOM、skia-python 或 .local；只用 py-skia-canvas 公开 API。开发 oracle 可用锁定官方 JS。字体与字形度量随包离线提供并保留许可证。未支持语法必须明确异常，不吞错、不使用普通字符串/空图作为成功公式。
+在仓库根目录、受支持的 CPython 环境执行；依赖声明以 `pyproject.toml` 为准。
+先复用已有环境；任务确需开发安装时使用：
 
-继承本次会话的顺序：P0 来源/起点/合同 → P1 集中源码，机械检查 → P2 来源独立测试设计 → P3 保存首次失败、根因批修 → P4 同候选完整验证、人工看图、HTML 报告 → P5 文档交付。安装验证按用户要求暂缓；未授权发布/提交/推送。
+```sh
+python -m pip install -e .
+```
 
-本任务明确采用主协调 + 三个并行 worker，遵循相邻 py-mermaid/docs/PARALLEL_EXECUTION.md 的单文件 owner 和回执规则。主协调：model/API/数据提取/包元数据/来源/工具/报告/总状态；A：parser.py/macros.py；B：layout.py 与独立 layout 子模块；C：canvas.py 与 py-mermaid 标签数学接线。接口扩展先发给主协调，不抢写他人文件。P1 不先写行为测试，待主协调宣布 P2 后独立设计测试。
+文档改动检查本地链接、示例语法、API 与元数据，不因此构建或发布。
+实现改动先编译并运行相关组；下列只是命令示例，不是所有任务都要全跑：
 
-命令、失败和来源指纹保存在独立 test-runs；已有证据不覆盖。保持原项目脏树，不能重置既有 F01.4 成果。全 KaTeX 兼容率只能由完整清单与实际证据得出，不能把几个可见公式冒充全部命令/环境兼容。
+```sh
+python -m compileall -q src/py_katex
+python -m unittest discover -s tests -p test_api.py
+python -m unittest discover -s tests
+```
+
+最后一条为全量单测；来源 oracle、三后端和图像矩阵按当前验证计划单独运行。
+执行前核对 Python/依赖环境，不能用工作区路径回退冒充发行安装成功。
+
+## 5. 修改约束
+
+生产只使用公开 `py-skia-canvas` API，不引入 Node、浏览器、JS/DOM、skia-python 或 `.local` 依赖。
+固定来源 KaTeX 0.18.11；源提交和文件哈希以版本控制来源记录为准。
+字体、度量和移植算法保留来源与许可证；新增外部材料先核归属。
+Canvas、Context 和字体对象留在创建线程，跨线程只传纯值或 bytes。
+未知或未支持语法明确诊断，不用普通字符串、空图或吞错回退冒充成功。
+公开 API/纯值合同变更说明兼容影响，不抢写其他 owner 文件。
+测试预期独立取源；不能从当前 Python 输出反推正确结果或放宽标准掩盖缺陷。
+不重置脏树、不覆盖原始基准和闭合运行；遇到用户修改先辨明关系。
+
+## 6. 验证与完成条件
+
+按当前任务区分文档、源码、独立测试、首跑修复和同候选验证阶段。
+记录实际命令、环境、来源/候选哈希、退出码和失败；未执行的检查明确写出。
+修复保留首轮失败，相关组通过后再做必要的共享消费者或全量回归。
+绘制变化核真实原图、文字、关系、边界和可读性，不只看 trace 或测试数量。
+完成报告说明改动、验证及剩余限制；历史通过不等于新候选全部兼容。
+公共 README/PyPI 首页只放安装、用法、边界；迁移和证据通过开发索引保留。
+按任务需要自主完成可逆的本地准备和检查；不要为纯文档任务额外安装、构建或跑绘图矩阵。
+提交、推送和发布依据当前用户授权；不要由历史发行记录推导新的发布权限，也不重复请求已有授权。

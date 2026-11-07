@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "py-visactor-katex"
-version = "0.1.0"
+version = "0.1.1"
 description = "Native Python TeX math layout and static rendering with bundled KaTeX fonts"
 readme = "README.md"
 requires-python = ">=3.13,<3.14"
@@ -25,7 +25,7 @@ py-katex = "py_katex.__main__:main"
 
 [project.urls]
 Repository = "https://github.com/py-VisActor/py-katex"
-Documentation = "https://github.com/py-VisActor/py-katex/blob/main/README.md"
+Documentation = "https://github.com/py-VisActor/py-katex/blob/main/docs/README.md"
 Issues = "https://github.com/py-VisActor/py-katex/issues"
 Changelog = "https://github.com/py-VisActor/py-katex/blob/main/CHANGELOG.md"
 

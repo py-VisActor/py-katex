@@ -12,13 +12,14 @@ import sys
 def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('--out', type=Path, required=True)
+    p.add_argument('--expected-version', required=True)
     p.add_argument('--backend', choices=['cpu', 'auto', 'gpu'], default='cpu')
     args = p.parse_args()
     import py_katex
     from py_katex import render, typeset, MacroState, ParseError, ResourceBundle, image_resource
     from py_skia_canvas import Canvas, Image
     assert sys.flags.isolated, 'Run the installed smoke with python -I'
-    assert py_katex.__version__ == importlib.metadata.version('py-visactor-katex') == '0.1.0'
+    assert py_katex.__version__ == importlib.metadata.version('py-visactor-katex') == args.expected_version
     assert Path(py_katex.__file__).resolve().is_relative_to(Path(sys.prefix).resolve())
     assert importlib.metadata.version('py-skia-canvas') == '0.1.0a18'
     args.out.mkdir(parents=True, exist_ok=False)
