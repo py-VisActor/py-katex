@@ -1,0 +1,111 @@
+{
+  "schema": "py-katex-publication-ci/v1",
+  "status": "PASS_PUBLISHED_DOWNLOAD_INSTALL_VERIFIED",
+  "project": "py-visactor-katex",
+  "version": "0.1.1",
+  "sourceCommit": "c208c55cd8a055cad91c82e8d8547ddb67e6a13f",
+  "manifestSha256": "b42ccb515b43e468bf751a44e741dbefcdebefa94504aa7794c02506325c24f4",
+  "workflowRun": 42378104853,
+  "workflowURL": "https://github.com/py-VisActor/py-katex/actions/runs/42378104853",
+  "githubReleaseURL": "https://github.com/py-VisActor/py-katex/releases/tag/py-visactor-katex-v0.1.1",
+  "githubPrerelease": false,
+  "pypiURL": "https://pypi.org/project/py-visactor-katex/0.1.1/",
+  "distributions": {
+    "py_visactor_katex-0.1.1-py3-none-any.whl": {
+      "sha256": "6e0350843c315b87cfbfe1541c6639ffe1d7d449847c66111e911ef9538c69aa",
+      "bytes": 443531
+    },
+    "py_visactor_katex-0.1.1.tar.gz": {
+      "sha256": "7df84fbcf44f8b2a8335a776e19e18f5d2b3935e094435ad1927a8df4fd33738",
+      "bytes": 754628
+    }
+  },
+  "artifacts": {
+    "release-validation-windows-2025": {
+      "status": "PASS",
+      "artifactId": 13576850522,
+      "archiveSha256": "cf3e92ac7cd9aa3f6b0ef31e85e03358540fbb031624f60fb6a79d7b581f158e",
+      "archiveBytes": 87333,
+      "externalInstallations": 2,
+      "actualVerifiedCpuSamples": 26
+    },
+    "published-download-installation-evidence": {
+      "status": "PASS",
+      "artifactId": 13576572318,
+      "archiveSha256": "9057cf05562915e5554588d2cc000d7437c6c00bcf743192f5fd2b5084d5bfbe",
+      "archiveBytes": 1293551,
+      "externalInstallations": 2,
+      "actualVerifiedCpuSamples": 26
+    },
+    "release-validation-ubuntu-24.04": {
+      "status": "PASS",
+      "artifactId": 13576497270,
+      "archiveSha256": "bc7283b88f161d2d1972a32b33b4ba0de8485c2795d8a0242f40811ac71e46b5",
+      "archiveBytes": 96881,
+      "externalInstallations": 2,
+      "actualVerifiedCpuSamples": 26
+    }
+  },
+  "documentationMetadata": {
+    "status": "PUBLISHED_USER_DESCRIPTION_METADATA_AND_ASSET_BYTES_VERIFIED",
+    "project": "py-visactor-katex",
+    "version": "0.1.1",
+    "url": "https://pypi.org/pypi/py-visactor-katex/0.1.1/json",
+    "pypiURL": "https://pypi.org/project/py-visactor-katex/0.1.1/",
+    "projectUrls": {
+      "Changelog": "https://github.com/py-VisActor/py-katex/blob/main/CHANGELOG.md",
+      "Documentation": "https://github.com/py-VisActor/py-katex/blob/main/docs/README.md",
+      "Issues": "https://github.com/py-VisActor/py-katex/issues",
+      "Repository": "https://github.com/py-VisActor/py-katex"
+    },
+    "requiresDist": [
+      "py-skia-canvas==0.1.0a18"
+    ],
+    "descriptionEqualsReviewedReadme": true,
+    "pypiJsonSha256": "43792bf1de2f7d607b4ad868abc76211f55516226044253fe604e6d14573db36",
+    "distributions": {
+      "py_visactor_katex-0.1.1-py3-none-any.whl": {
+        "sha256": "6e0350843c315b87cfbfe1541c6639ffe1d7d449847c66111e911ef9538c69aa",
+        "bytes": 443531
+      },
+      "py_visactor_katex-0.1.1.tar.gz": {
+        "sha256": "7df84fbcf44f8b2a8335a776e19e18f5d2b3935e094435ad1927a8df4fd33738",
+        "bytes": 754628
+      }
+    }
+  },
+  "localActualPypiWindowsReadback": {
+    "status": "PASS",
+    "run": {
+      "path": "py-katex/test-runs/DOCS-RELEASE-katex-publication-readback-20261107T134412Z-ca80bcc0/run.json",
+      "bytes": 26403,
+      "sha256": "aed4c27e2c89644b59a956653082b5570042af5ecc18f3d15fa33205b743beaf"
+    },
+    "installationEvidence": {
+      "path": "py-katex/test-runs/DOCS-RELEASE-katex-publication-readback-20261107T134412Z-ca80bcc0/artifacts/pypi-installed/validation.json",
+      "bytes": 8803,
+      "sha256": "7e4d5ff247b9701aa780e84ad29e8d5f3795b1c204904475f4359f12532d1a5f"
+    }
+  },
+  "ciEvidence": {
+    "path": "py-katex/test-runs/DOCS-RELEASE-katex-publication-readback-20261107T134412Z-ca80bcc0/artifacts/ci/publication-ci.json",
+    "bytes": 1930,
+    "sha256": "6fd7cf65545c181b3648914c414f8cb4161e4701be0acbdc89171f075bededf9"
+  },
+  "publicMetadataEvidence": {
+    "path": "py-katex/test-runs/DOCS-RELEASE-public-metadata-complete-20261107T134709Z-c766222c/artifacts/verified-public-metadata.json",
+    "bytes": 2621,
+    "sha256": "5e4528ba1e879cf1afa6e3719e1e611601898c51b54350477e7c1d2720755837"
+  },
+  "releaseScope": "Documentation/navigation and release maintenance only; algorithms, fonts/data and dependency constraints unchanged. KATEX runtime version identifier alone updated.",
+  "retainedFailedPreparation": [
+    {
+      "run": "py-katex/test-runs/DOCS-RELEASE-build-20261107T133803Z-5c151254",
+      "reason": "KATEX runtime CRLF restoration required by strict original-byte check; workenv used old installed0.1.0. Superseded by rebuilt verified bytes and clean installs, never released bad candidate."
+    },
+    {
+      "run": "py-katex/test-runs/DOCS-RELEASE-public-metadata-20261107T134617Z-42ae4b44",
+      "reason": "VChart audit initially compared full Requires-Dist extras to production-only set; corrected to exact unchanged declared requirements. No package change."
+    }
+  ]
+}
