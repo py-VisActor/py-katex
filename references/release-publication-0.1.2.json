@@ -1,0 +1,32 @@
+{
+  "project": "py-visactor-katex",
+  "version": "0.1.2",
+  "tag": "py-visactor-katex-v0.1.2",
+  "sourceCommit": "989dd987b0ad1d498e2e6dbcf747878f59123a11",
+  "distributions": {
+    "py_visactor_katex-0.1.2-py3-none-any.whl": {
+      "sha256": "ae395b3ad6267431f5b789175e0a8a16ebe8c43b0ed922473aa2cfa6ba4ca10b",
+      "bytes": 443645
+    },
+    "py_visactor_katex-0.1.2.tar.gz": {
+      "sha256": "43405b850867abb6722b47a62f40c732f9996b15fb21377066482c61a7749ce0",
+      "bytes": 754701
+    }
+  },
+  "status": "PYPI_AND_GITHUB_VERIFIED",
+  "pypi": "https://pypi.org/project/py-visactor-katex/0.1.2/",
+  "githubRelease": "https://github.com/py-VisActor/py-katex/releases/tag/py-visactor-katex-v0.1.2",
+  "workflow": "https://github.com/py-VisActor/py-katex/actions/runs/44458085250",
+  "verifiedPlatforms": [
+    "macos-15",
+    "macos-15-intel",
+    "ubuntu-24.04",
+    "windows-2025"
+  ],
+  "verifiedDistributionKinds": [
+    "wheel",
+    "sdist"
+  ],
+  "verificationRunAttempt": 2,
+  "originalReadback": "PyPI returned 404 during index propagation. Only the failed readback/promotion job was retried."
+}

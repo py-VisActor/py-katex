@@ -32,7 +32,7 @@ python -m unittest discover -s tests
 | 旧 agent 入口 | [迁移前原文快照](archive/AGENTS-2026-11-07.txt)，保留字节；不是当前指令 |
 | 验证与证据 | [早期验收](../ACCEPTANCE.md)、[完整静态验收](../FULL_STATIC_ACCEPTANCE.md)、[运行与报告](../RUNS_AND_REPORTS.md)、[完整运行索引](../FULL_RUNS_AND_REPORTS.md) |
 | 发行 | [发行状态](../RELEASE_STATUS.md)、[发行说明目录](../releases/)、[变更记录目录](../changes/)、[Changelog](../../CHANGELOG.md) |
-| 当前维护发行 | [0.1.1 说明](../releases/0.1.1.md)；此前发行状态仍保留原始版本口径 |
+| 当前维护发行 | [0.1.2 说明](../releases/0.1.2.md)；此前发行状态仍保留原始版本口径 |
 | 归属 | [第三方声明](../../THIRD_PARTY_NOTICES.md)、`references/licenses/` |
 
 `test-runs/` 是开发证据输出；已有闭合运行、原图、失败日志和 manifest 不覆盖。README/PyPI 首页不承担运行台账职责。
