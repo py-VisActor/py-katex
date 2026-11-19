@@ -6,7 +6,7 @@ Python TeX 数学公式解析、排版与静态绘制，基于 KaTeX 0.18.11 核
 ## 安装
 
 ```sh
-python -m pip install py-visactor-katex==0.1.2
+python -m pip install py-visactor-katex==0.1.4
 ```
 
 发行名为 `py-visactor-katex`，导入名为 `py_katex`，命令行为 `py-katex`。

@@ -22,13 +22,14 @@ def main():
     version = manifest['version']
     args.out.mkdir(parents=True, exist_ok=False)
     url = 'https://pypi.org/pypi/' + project + '/' + version + '/json'
-    for attempt in range(12):
+    attempts = 24
+    for attempt in range(attempts):
         try:
             with urllib.request.urlopen(url, timeout=60) as response:
                 raw = response.read()
             break
         except urllib.error.HTTPError as error:
-            if error.code != 404 or attempt == 11:
+            if error.code != 404 or attempt == attempts - 1:
                 raise
             time.sleep(5)
     (args.out / 'index.json').write_bytes(raw)

@@ -16,7 +16,7 @@ import zipfile
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG = tomllib.loads((ROOT / 'pyproject.toml').read_text('utf-8'))['project']
 PROJECT = CONFIG['name']
-CANVAS = '0.1.0a21' if sys.platform == 'darwin' else '0.1.0a18'
+CANVAS = '0.1.4' if sys.platform == 'darwin' else '0.1.0a18'
 STEM = PROJECT.replace('-', '_')
 VERSION = tomllib.loads((ROOT / 'pyproject.toml').read_text('utf-8'))['project']['version']
 

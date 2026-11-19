@@ -27,7 +27,7 @@ def font_alias(key:str)->str:
     return 'PyKaTeX_'+key
 
 def _check_canvas_version(version):
-    expected = '0.1.0a21' if sys.platform == 'darwin' else '0.1.0a18'
+    expected = '0.1.4' if sys.platform == 'darwin' else '0.1.0a18'
     if version != expected:
         _error(f'Expected py-skia-canvas {expected}, found {version}', 'DEPENDENCY_VERSION')
 

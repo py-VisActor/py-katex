@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.4
+
+- 将 macOS 发行版本与 Canvas、ELK、VChart 和 Mermaid 统一为 0.1.4。
+
 ## 0.1.2
 
 - 支持 macOS 13+ 的 Apple Silicon 和 Intel，使用各自的 Canvas wheel 绘制和导出公式。
