@@ -1,0 +1,30 @@
+{
+  "project": "py-visactor-katex",
+  "version": "0.1.4",
+  "tag": "py-visactor-katex-v0.1.4",
+  "sourceCommit": "92b0a67a86cdc67f3c0805c9422474a2905144fd",
+  "distributions": {
+    "py_visactor_katex-0.1.4-py3-none-any.whl": {
+      "sha256": "20af787b77f86dee42a8396cf0657de7cb78443a002420a2cf73e25b8742d16b",
+      "bytes": 443642
+    },
+    "py_visactor_katex-0.1.4.tar.gz": {
+      "sha256": "a0917ff88fdaa66f6ed6407c7ba8815590ab6b9ed3542a040fd7bdcc25086dd3",
+      "bytes": 755234
+    }
+  },
+  "status": "PYPI_AND_GITHUB_VERIFIED",
+  "pypi": "https://pypi.org/project/py-visactor-katex/0.1.4/",
+  "githubRelease": "https://github.com/py-VisActor/py-katex/releases/tag/py-visactor-katex-v0.1.4",
+  "workflow": "https://github.com/py-VisActor/py-katex/actions/runs/44464835037",
+  "verifiedPlatforms": [
+    "macos-15",
+    "macos-15-intel",
+    "ubuntu-24.04",
+    "windows-2025"
+  ],
+  "verifiedDistributionKinds": [
+    "wheel",
+    "sdist"
+  ]
+}
