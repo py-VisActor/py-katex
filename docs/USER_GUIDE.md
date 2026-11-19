@@ -1,6 +1,6 @@
 # 使用指南
 
-安装方式见[项目首页](../README.md)。发行包名为 `py-visactor-katex`，导入名为 `py_katex`。
+安装方式见[项目首页](../README.md)。发行包名为 `py-visactor-katex`，导入名为 `py_katex`。使用 CPython 3.13，macOS 13+ 上使用与 Mac 架构一致的 Python。
 
 ## 渲染与导出
 

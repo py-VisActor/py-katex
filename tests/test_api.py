@@ -12,7 +12,10 @@ class PublicContracts(unittest.TestCase):
     def test_version_and_native_dependency_are_explicit(self):
         project=tomllib.loads((ROOT/'pyproject.toml').read_text('utf-8'))['project']
         self.assertEqual(project['version'],py_katex.__version__)
-        self.assertEqual(project['dependencies'],['py-skia-canvas==0.1.0a18'])
+        self.assertEqual(project['dependencies'], [
+            'py-skia-canvas==0.1.0a21; sys_platform == "darwin"',
+            'py-skia-canvas==0.1.0a18; sys_platform != "darwin"',
+        ])
         self.assertIn('data/fonts/*.ttf',tomllib.loads((ROOT/'pyproject.toml').read_text('utf-8'))['tool']['setuptools']['package-data']['py_katex'])
 
     def test_twenty_fonts_are_exact_pinned_offline_files(self):

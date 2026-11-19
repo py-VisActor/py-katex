@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.2
+
+- 支持 macOS 13+ 的 Apple Silicon 和 Intel，使用各自的 Canvas wheel 绘制和导出公式。
+
 ## 0.1.1 — 2026-11-07
 
 Documentation maintenance release. The README/PyPI description now focuses on

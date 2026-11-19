@@ -14,7 +14,9 @@ import venv
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
-PROJECT = tomllib.loads((ROOT / 'pyproject.toml').read_text('utf-8'))['project']['name']
+CONFIG = tomllib.loads((ROOT / 'pyproject.toml').read_text('utf-8'))['project']
+PROJECT = CONFIG['name']
+CANVAS = '0.1.0a21' if sys.platform == 'darwin' else '0.1.0a18'
 STEM = PROJECT.replace('-', '_')
 VERSION = tomllib.loads((ROOT / 'pyproject.toml').read_text('utf-8'))['project']['version']
 
@@ -33,7 +35,7 @@ def metadata(raw):
     item = email.message_from_bytes(raw)
     assert item['Name'] == PROJECT and item['Version'] == VERSION
     assert item['Requires-Python'] == '<3.14,>=3.13'
-    assert item.get_all('Requires-Dist') == ['py-skia-canvas==0.1.0a18']
+    assert item.get_all('Requires-Dist') == CONFIG['dependencies']
     assert item['License-Expression'] == 'MIT'
     assert len(item.get_all('License-File')) == 3
     description = item.get_payload()
@@ -47,9 +49,13 @@ def verify(wheel, sdist):
     files = runtime_files()
     accepted = json.loads((ROOT / 'references/full-verification-summary.json').read_text('utf-8'))['source']['math']['files']
     assert {'src/' + name for name in files} == {name for name in accepted if name.startswith('src/')}
+    changed = set()
     for name, raw in files.items():
-        old = raw.replace(("__version__='" + VERSION + "'").encode(), b"__version__='0.1.0a0'") if name == 'py_katex/__init__.py' else raw
-        assert sha(old) == accepted['src/' + name], 'Unexpected runtime change since accepted candidate: ' + name
+        if name == 'py_katex/__init__.py':
+            raw = raw.replace(("__version__='" + VERSION + "'").encode(), b"__version__='0.1.0a0'")
+        if sha(raw) != accepted['src/' + name]:
+            changed.add(name)
+    assert changed == {'py_katex/canvas.py'}, f'Unexpected runtime changes: {changed}'
     with zipfile.ZipFile(wheel) as z:
         names = z.namelist()
         actual = {name: z.read(name) for name in names if name.startswith('py_katex/')}
@@ -72,7 +78,7 @@ def verify(wheel, sdist):
         assert 'references/licenses/katex-LICENSE' in contents
         assert not any(name.startswith(('.local/', 'test-runs/', 'dist/', 'reports/')) for name in contents)
     return {'status': 'PASS', 'runtimeFiles': len(files), 'bundledFonts': sum(name.endswith('.ttf') for name in files),
-            'acceptedRuntimeDelta': 'Only __version__ 0.1.0a0 -> ' + VERSION + '; all other runtime bytes identical',
+            'acceptedRuntimeDelta': 'Version and Canvas adapter changed; remaining runtime files match the accepted candidate',
             'artifacts': {p.name: {'sha256': sha(p.read_bytes()), 'bytes': p.stat().st_size} for p in [wheel, sdist]}}
 
 
@@ -98,7 +104,7 @@ def install(artifact, out, backends):
         commands.append({'name': name, 'argv': [str(v) for v in argv], 'cwd': str(work), 'exitCode': result.returncode, 'emptyPath': no_path})
         assert result.returncode == 0, 'External command failed: ' + name + '; see ' + str(out)
 
-    command('install-native-dependency', [python, '-I', '-m', 'pip', 'install', '--index-url', 'https://pypi.org/simple/', '--no-cache-dir', '--only-binary=:all:', 'py-skia-canvas==0.1.0a18'])
+    command('install-native-dependency', [python, '-I', '-m', 'pip', 'install', '--index-url', 'https://pypi.org/simple/', '--no-cache-dir', '--only-binary=:all:', 'py-skia-canvas==' + CANVAS])
     command('install-distribution', [python, '-I', '-m', 'pip', 'install', '--index-url', 'https://pypi.org/simple/', '--no-cache-dir', '--no-deps', artifact.resolve()])
     command('pip-check', [python, '-I', '-m', 'pip', 'check'])
     for backend in backends:

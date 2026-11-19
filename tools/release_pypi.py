@@ -14,7 +14,8 @@ def main():
     p.add_argument('--out', type=Path, required=True)
     args = p.parse_args()
     manifest = json.loads(args.manifest.read_text('utf-8'))
-    project = tomllib.loads((Path(__file__).resolve().parents[1] / 'pyproject.toml').read_text('utf-8'))['project']['name']
+    config = tomllib.loads((Path(__file__).resolve().parents[1] / 'pyproject.toml').read_text('utf-8'))['project']
+    project = config['name']
     assert manifest['project'] == project
     version = manifest['version']
     args.out.mkdir(parents=True, exist_ok=False)
@@ -24,7 +25,7 @@ def main():
     (args.out / 'index.json').write_bytes(raw)
     index = json.loads(raw)
     assert index['info']['name'] == project and index['info']['version'] == version
-    assert index['info']['requires_dist'] == ['py-skia-canvas==0.1.0a18']
+    assert index['info']['requires_dist'] == config['dependencies']
     assert f'pip install {project}=={version}' in index['info']['description']
     assert set(manifest['distributions']) == {item['filename'] for item in index['urls']}
     for item in index['urls']:

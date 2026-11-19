@@ -21,7 +21,8 @@ def main():
     assert sys.flags.isolated, 'Run the installed smoke with python -I'
     assert py_katex.__version__ == importlib.metadata.version('py-visactor-katex') == args.expected_version
     assert Path(py_katex.__file__).resolve().is_relative_to(Path(sys.prefix).resolve())
-    assert importlib.metadata.version('py-skia-canvas') == '0.1.0a18'
+    canvas = '0.1.0a21' if sys.platform == 'darwin' else '0.1.0a18'
+    assert importlib.metadata.version('py-skia-canvas') == canvas
     args.out.mkdir(parents=True, exist_ok=False)
     fonts = list(importlib.resources.files('py_katex').joinpath('data/fonts').iterdir())
     assert len([f for f in fonts if f.name.endswith('.ttf')]) == 20

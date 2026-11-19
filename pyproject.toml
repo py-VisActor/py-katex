@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "py-visactor-katex"
-version = "0.1.1"
+version = "0.1.2"
 description = "Native Python TeX math layout and static rendering with bundled KaTeX fonts"
 readme = "README.md"
 requires-python = ">=3.13,<3.14"
@@ -18,7 +18,10 @@ classifiers = [
   "Topic :: Scientific/Engineering :: Mathematics",
   "Topic :: Multimedia :: Graphics",
 ]
-dependencies = ["py-skia-canvas==0.1.0a18"]
+dependencies = [
+    'py-skia-canvas==0.1.0a21; sys_platform == "darwin"',
+    'py-skia-canvas==0.1.0a18; sys_platform != "darwin"',
+]
 
 [project.scripts]
 py-katex = "py_katex.__main__:main"

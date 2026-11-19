@@ -6,7 +6,7 @@ SVG host, JavaScript engine or another drawing backend to lay out a formula.
 """
 from __future__ import annotations
 from importlib.resources import files,as_file
-import math,threading
+import math,sys,threading
 from .model import MathBox,Glyph,Rule,Path,ImageCommand,CommandGroup,ParseError,RenderResult
 
 _FONT_KEYS=frozenset({'AMS-Regular','Caligraphic-Bold','Caligraphic-Regular','Fraktur-Bold',
@@ -26,9 +26,15 @@ def font_alias(key:str)->str:
     if key not in _FONT_KEYS:_error(f'Unknown bundled KaTeX font: {key}','UNKNOWN_FONT')
     return 'PyKaTeX_'+key
 
+def _check_canvas_version(version):
+    expected = '0.1.0a21' if sys.platform == 'darwin' else '0.1.0a18'
+    if version != expected:
+        _error(f'Expected py-skia-canvas {expected}, found {version}', 'DEPENDENCY_VERSION')
+
+
 def _font(key:str):
     from py_skia_canvas import FontLibrary,__version__
-    if __version__!='0.1.0a18':_error('Expected py-skia-canvas 0.1.0a18','DEPENDENCY_VERSION')
+    _check_canvas_version(__version__)
     alias=font_alias(key)
     seen=getattr(_registered,'keys',None)
     if seen is None:seen=set();_registered.keys=seen
@@ -156,7 +162,7 @@ def measure_fallback(text,options,size,*,font='',style='normal',weight='normal')
     """
     from py_skia_canvas import Canvas,FontLibrary,__version__
     from .resources import font_covers
-    if __version__!='0.1.0a18':_error('Expected Canvas0.1.0a18','DEPENDENCY_VERSION')
+    _check_canvas_version(__version__)
     if not isinstance(text,str) or len(text)>20000 or not _finite(size) or not 0<size<=16384:_error('Invalid fallback request','INVALID_MEASUREMENT')
     from .resources import validate_font_resources
     validate_font_resources(options.fallback_fonts)
@@ -468,7 +474,7 @@ def render_box(box:MathBox,*,format:str='png',backend:str='auto',padding:float=8
     width=max(1,math.ceil(right-left+2*padding));height=max(1,math.ceil(bottom-top+2*padding))
     if max(width,height)>32768 or width*height*density*density>64_000_000:_error('Formula image budget exceeded','RENDER_BUDGET')
     from py_skia_canvas import Canvas,__version__
-    if __version__!='0.1.0a18':_error('Expected py-skia-canvas 0.1.0a18','DEPENDENCY_VERSION')
+    _check_canvas_version(__version__)
     canvas=Canvas(width,height)
     if backend=='cpu':canvas.gpu=False
     if backend=='gpu' and canvas.engine.get('renderer')!='GPU':_error('GPU required; Canvas selected CPU','GPU_UNAVAILABLE')

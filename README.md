@@ -6,11 +6,11 @@ Python TeX 数学公式解析、排版与静态绘制，基于 KaTeX 0.18.11 核
 ## 安装
 
 ```sh
-python -m pip install py-visactor-katex==0.1.1
+python -m pip install py-visactor-katex==0.1.2
 ```
 
 发行名为 `py-visactor-katex`，导入名为 `py_katex`，命令行为 `py-katex`。
-需要 CPython 3.13；当前原生依赖支持 Windows AMD64 和 Linux glibc 2.28+ x86_64。
+需要 CPython 3.13，支持 macOS 13+（Apple Silicon 和 Intel）、Windows AMD64 和 Linux x86_64（glibc 2.28+）。pip 会按平台安装 Canvas wheel。
 
 ## 最小示例
 
